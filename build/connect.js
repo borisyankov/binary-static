@@ -1,5 +1,5 @@
-module.exports = {
-    all: {
+module.exports = function(grunt) {
+    return {
         github: {
             options: {
                 hostname: '127.0.0.1',
@@ -12,7 +12,7 @@ module.exports = {
         dev: {
             options: {
                 hostname: '*',
-                port: 8443,
+                port: 443,
                 protocol: 'https',
                 base: 'dist',
                 keepalive: true,
