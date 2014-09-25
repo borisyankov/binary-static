@@ -30,7 +30,6 @@
 @mixin menu-left-margin { margin-left:255px; }
 @mixin menu-left {
   ul {
-    font-size:90%;
     li {
       list-style-image: none;
       margin: 0;
@@ -150,7 +149,6 @@
         padding: 0;
         text-decoration: none;
         color: $BIN_BLACK;
-        font-size: 90%;
         background: transparent;
       }
     }

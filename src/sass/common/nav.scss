@@ -10,7 +10,6 @@
 .tab-menu-wrap, #content .tab-menu-wrap {
   ul {
     margin: 0;
-    font-size: 85%;
     background-color: $BIN_LIGHT_GRAY;
     position: relative;
     display: block;
@@ -33,7 +32,6 @@
         margin-top: 1px;
         display: none;
         li.sub_item {
-            font-size: 100%;
             margin-right: 20px;
         }
       }
@@ -41,7 +39,6 @@
         margin-top: 1px;
         display: none;
         li.tm-li-2 {
-            font-size: 100%;
             margin-right: 20px;
         }
       }
@@ -123,7 +120,6 @@
             margin: 0;
             background-color: $BIN_LIGHT_GRAY;
             border-bottom: 1px solid $BIN_GRAY;
-            font-size: 100%;
             li {
                 margin-right: 2em;
                 color: $BIN_ORANGE;

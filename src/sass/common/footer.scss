@@ -2,15 +2,15 @@
   #footer-menu {
     background: $BIN_BLUE;
     h1 {
-      font-size: 80%;
+      font-size: 18px;
       text-transform: uppercase;
     }
     a {
-      font-size: 74%;
-      color: $BIN_WHITE;
+      font-size: 14.4px;
+      color: #ddd;
     }
     li {
-      line-height: 1;
+      line-height: 0.5;
     }
     #accounts_links {
       padding-bottom: 10px;
@@ -25,8 +25,8 @@
     #regulatory-text {
       line-height: 1.2em;
       text-align: justify;
-      color: $BIN_WHITE;
-      font-size: 64%;
+      color: #aaa;
+      font-size: 11.6px;
     }
     #iom_icon_footer {
       max-width: 90px;

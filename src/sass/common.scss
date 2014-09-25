@@ -14,9 +14,6 @@ body {
     background-repeat: repeat-x;
     padding:0px;
     margin:0px;
-    .ui-widget {
-        font-size: 0.9em;
-    }
     font-family: proxima-nova, arial;
 }
 html, body { width:100%;  overflow-x:hidden; }
@@ -31,7 +28,6 @@ a, a:visited {
     }
     .learn-more {
         font-weight: bold;
-        font-size: 0.8125em;
         padding-right: 15px;
         margin-top: 15px;
         background: url("pages/home/learn-more-arrow_1.png") no-repeat right;
@@ -45,7 +41,7 @@ h1, h2, h3, h4 {
     font-weight: bold;
 }
 h1 {
-    font-size: 34px;
+    font-size: 35px;
     font-weight: 700;
     color: $BIN_ORANGE;
     a {
@@ -59,7 +55,7 @@ h1.dark {
     }
 }
 h2 {
-    font-size: 22px;
+    font-size: 28px;
     color: $BIN_BLUE;
     a {
         color: $BIN_BLUE !important;
@@ -77,7 +73,7 @@ h3 {
     a {
         color: $BIN_BLACK !important;
     }
-    font-size: 20px;
+    font-size: 22.5px;
 }
 h4 {
     color: $BIN_BLACK;
@@ -165,6 +161,10 @@ textarea {
     height: 8em;
     width: 25em;
 }
+pre {
+    font-family: "Lucida Console", monospace;
+    font-size: 14.5px;
+}
 select.input {
     width: 46.2%;
 }
@@ -179,7 +179,7 @@ select.input {
 label {
     line-height: 25px;
 }
-// used for form label in grid structure 
+// used for form label in grid structure
 .form_label {
     text-align: right;
     line-height: 25px;
@@ -210,7 +210,6 @@ label {
     margin: 0 0 0 0%;
 }
 .errorrow, .errorfield {
-    font-size: 93%;
     font-style: italic;
     margin-top: 8px;
 }
@@ -224,7 +223,6 @@ label {
     margin: 0;
 }
 .comment {
-    font-size: 93%;
     font-style: italic;
 }
 .non_input {
@@ -239,7 +237,6 @@ label {
 }
 .form_link {
     display: block;
-    font-size: 76%;
     line-height: 0.8em;
 }
 fieldset .error-msg {
@@ -314,7 +311,6 @@ fieldset .error-msg {
 .error-msg {
     color: $BIN_RED;
     font-style: italic;
-    font-size: 93%;
 }
 .notice-msg {
     color: $BIN_BLACK;
@@ -407,7 +403,7 @@ ul.checked {
   }
 }
 .hint{
-    font-size: 14px;
+    font-size: 14.5px;
     color: #58595B;
     margin-top: 3px;
 }
