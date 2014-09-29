@@ -2,7 +2,7 @@ css:
   - 'sass'
   - 'autoprefixer'
   - 'cssmin'
-  - 'uncss'
+  - 'uncss'gitgr
 
 js:
   - 'concat'
