@@ -8,13 +8,15 @@
     %h1= "Titles"
     %div.grd-grid-6
       %pre
-<h1>Title</h1>
+        = preserve do
+          :escaped
+            <h1>Title</h1>
     %div.grd-grid-6
       %h1= "Title"
     .grd-clear
     %div.grd-grid-6
       %pre
-<h1 class="dark">Title</h1>
+          <h1 class="dark">Title</h1>
     %div.grd-grid-6
       %h1.dark= "Title"
     .grd-clear
