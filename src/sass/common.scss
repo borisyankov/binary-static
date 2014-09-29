@@ -37,50 +37,19 @@ p {
     margin: 1em 0;
     line-height: 1.4em;
 }
-h1, h2, h3, h4 {
+h1, h2, h3, h1 a, h2 a, h3 a {
     font-weight: bold;
+    color: $BIN_BLUE;
 }
 h1 {
     font-size: 35px;
-    font-weight: 700;
-    color: $BIN_ORANGE;
-    a {
-        color: $BIN_ORANGE !important;
-    }
 }
-h1.dark {
-    color: $BIN_BLACK;
-    a {
-        color: $BIN_BLACK !important;
-    }
-}
+
 h2 {
     font-size: 28px;
-    color: $BIN_BLUE;
-    a {
-        color: $BIN_BLUE !important;
-    }
-    em {
-        text-decoration: underline;
-    }
-    &.center {
-        text-align: center;
-        margin: 1.25em auto;
-    }
 }
 h3 {
-    color: $BIN_BLACK;
-    a {
-        color: $BIN_BLACK !important;
-    }
     font-size: 22.5px;
-}
-h4 {
-    color: $BIN_BLACK;
-    a {
-        color: $BIN_BLACK !important;
-    }
-    font-size: 18px;
 }
 select, input, button, textarea {
     background: $BIN_WHITE;
