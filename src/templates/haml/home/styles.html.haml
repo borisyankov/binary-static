@@ -4,11 +4,12 @@
 - my $lang = stash->{language};
 
 .grd-container
+  %h1="Styles"
   %div.grd-grid-12.grd-parent
     %h1= "Titles"
     %div.grd-grid-6
       %pre
-        :preserve
+        :preserve:escaped
           <h1>Title</h1>
     %div.grd-grid-6
       %h1= "Title"
