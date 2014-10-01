@@ -15,14 +15,14 @@
       font-size: $FONT_SIZE_S;
       border-spacing: 2px;
       border-collapse: collapse;
-      background: $BIN_GRAY;
+      background: $COLOR_GRAY;
       td {
-          border: 1px solid $BIN_GRAY_SHADE;
+          border: 1px solid $COLOR_GRAY_SHADE;
       }
       td.current {
           font-style: italic;
           font-weight: bold;
-          color: $BIN_RED;
+          color: $COLOR_RED;
       }
   }
 }

@@ -2,8 +2,8 @@
 
 #topbar {
   width: 100%;
-  background: $BIN_DARK_BLUE;
-  color: $BIN_WHITE;
+  background: $COLOR_DARK_BLUE;
+  color: $COLOR_WHITE;
   line-height: 1;
   text-align: right;
   padding: 3px 0;
@@ -29,7 +29,7 @@
       }
   }
   a {
-    color: $BIN_WHITE;
+    color: $COLOR_WHITE;
     white-space: nowrap;
     text-decoration: none;
   }
@@ -38,7 +38,7 @@
     z-index: 999999;
     position: absolute;
     display: none;
-    background: $BIN_DARK_BLUE;
+    background: $COLOR_DARK_BLUE;
     border-radius: 0 0 $BORDER_RADIUS $BORDER_RADIUS;
     margin: 1px 0 0 0;
     padding: 5px 10px 10px 10px;
@@ -62,11 +62,11 @@
 }
 
 #header {
-  background: $BIN_BLUE;
-  border-top: 2px solid $BIN_BLUE_SHADE;
-  border-bottom: 4px solid $BIN_ORANGE;
+  background: $COLOR_BLUE;
+  border-top: 2px solid $COLOR_BLUE_SHADE;
+  border-bottom: 4px solid $COLOR_ORANGE;
   a {
-    color: $BIN_WHITE;
+    color: $COLOR_WHITE;
     text-decoration: none;
   }
   #binary-logo-text {
@@ -109,7 +109,7 @@
   }
   #logout {
     text-align: right;
-    color: $BIN_WHITE;
+    color: $COLOR_WHITE;
     font-size: $FONT_SIZE_S;
     margin-top: 10px;
     a, a:visited {
@@ -148,7 +148,7 @@
         display: table-cell;
         height: 50px;
         max-width: 110px;
-        color: $BIN_WHITE;
+        color: $COLOR_WHITE;
         text-decoration: none;
         letter-spacing: 0;
         text-transform: uppercase;
@@ -158,7 +158,7 @@
     }
     li.active {
       a {
-        color: $BIN_ORANGE;
+        color: $COLOR_ORANGE;
       }
     }
   }
@@ -169,12 +169,12 @@
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: $BIN_YELLOW;
+  background-color: $COLOR_YELLOW;
   z-index: 999;
   text-align: center;
   .message {
     margin: 12px;
     font-style: italic;
-    color: $BIN_RED;
+    color: $COLOR_RED;
   }
 }

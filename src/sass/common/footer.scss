@@ -1,6 +1,6 @@
 #footer {
   #footer-menu {
-    background: $BIN_BLUE;
+    background: $COLOR_BLUE;
     h1 {
       font-size: $FONT_SIZE_N;
       text-transform: uppercase;
@@ -18,7 +18,7 @@
   }
 
   #footer-regulatory {
-    background: $BIN_DARK_BLUE;
+    background: $COLOR_DARK_BLUE;
     a, span {
       display: inline-block;
     }
@@ -49,13 +49,13 @@
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: $BIN_YELLOW;
+    background-color: $COLOR_YELLOW;
     z-index: 999;
     text-align: center;
     .message {
       margin: 12px;
       font-style: italic;
-      color: $BIN_RED;
+      color: $COLOR_RED;
     }
   }
 }

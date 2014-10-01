@@ -10,8 +10,8 @@ html {
     height: 100%;
 }
 body {
-    background: $BIN_WHITE;
-    color: $BIN_BLACK;
+    background: $COLOR_WHITE;
+    color: $COLOR_BLACK;
     font-size: $FONT_SIZE_N;
     min-height: 100%;
     position: relative;
@@ -26,7 +26,7 @@ h1, h2, h3, h4, li, p, a, span {
     text-rendering: optimizelegibility;
 }
 a, a:visited {
-    color: $BIN_BLUE;
+    color: $COLOR_BLUE;
     text-decoration: none;
     &:hover, &:active {
         text-decoration: underline;
@@ -44,7 +44,7 @@ p {
 }
 h1, h2, h3, h1 a, h2 a, h3 a, h1 a:visited, h2 a:visited, h3 a:visited {
     font-weight: bold;
-    color: $BIN_BLUE;
+    color: $COLOR_BLUE;
 }
 h1 {
     font-size: $FONT_SIZE_XXL;
@@ -57,8 +57,8 @@ h3 {
     font-size: $FONT_SIZE_L;
 }
 select, input, button, textarea {
-    background: $BIN_WHITE;
-    border: 1px solid $BIN_GRAY;
+    background: $COLOR_WHITE;
+    border: 1px solid $COLOR_GRAY;
     padding: 2px 3px 2px 3px;
 }
 button {
@@ -106,8 +106,8 @@ acronym, abbr {
     cursor: help;
 }
 span.button.button-disabled button.button-disabled {
-    color: $BIN_GRAY_SHADE;
-    background: $BIN_LIGHT_GRAY;
+    color: $COLOR_GRAY_SHADE;
+    background: $COLOR_LIGHT_GRAY;
     cursor: default;
 }
 form {
@@ -165,7 +165,7 @@ label {
     width: 94%;
 }
 #profit-table-form {
-    background: $BIN_WHITE;
+    background: $COLOR_WHITE;
     input {
         border: 1px solid #e4e4e4;
     }
@@ -174,13 +174,13 @@ label {
     width: 45%;
 }
 .row.focus input, .row.focus textarea {
-    background-color: $BIN_YELLOW;
+    background-color: $COLOR_YELLOW;
 }
 .errorrow, .errorfield {
-    color: $BIN_RED;
+    color: $COLOR_RED;
 }
 .text-only {
-    color: $BIN_DARK_GRAY;
+    color: $COLOR_DARK_GRAY;
 }
 .errorfield {
     margin: 0 0 0 0%;
@@ -202,14 +202,14 @@ label {
     font-style: italic;
 }
 .non_input {
-    color: $BIN_DARK_GRAY;
+    color: $COLOR_DARK_GRAY;
     line-height: 1.7em;
 }
 .non_input label {
     line-height: 1.6em;
 }
 .gray {
-    color: $BIN_DARK_GRAY;
+    color: $COLOR_DARK_GRAY;
 }
 .form_link {
     display: block;
@@ -245,13 +245,13 @@ fieldset .error-msg {
     clear: both;
 }
 .required_asterisk {
-    color: $BIN_ORANGE;
+    color: $COLOR_ORANGE;
 }
 .button {
     cursor: pointer;
     margin-bottom: 0.5em;
     &:hover {
-        color: $BIN_WHITE;
+        color: $COLOR_WHITE;
         text-decoration: none;
     }
     span, button {
@@ -265,8 +265,8 @@ fieldset .error-msg {
     cursor: pointer;
     margin-bottom: 0.5em;
     &:hover {
-        color: $BIN_GRAY_SHADE;
-        background: $BIN_LIGHT_GRAY;
+        color: $COLOR_GRAY_SHADE;
+        background: $COLOR_LIGHT_GRAY;
         text-decoration: none;
     }
     span, button {
@@ -275,22 +275,22 @@ fieldset .error-msg {
         white-space: nowrap;
         border: 0;
         font-weight: bold;
-        color: $BIN_GRAY_SHADE;
-        background: $BIN_LIGHT_GRAY;
+        color: $COLOR_GRAY_SHADE;
+        background: $COLOR_LIGHT_GRAY;
         cursor: default;
         &:hover, &:active {
-            color: $BIN_GRAY_SHADE;
-            background: $BIN_LIGHT_GRAY;
+            color: $COLOR_GRAY_SHADE;
+            background: $COLOR_LIGHT_GRAY;
         }
     }
 }
 .error-msg {
-    color: $BIN_RED;
+    color: $COLOR_RED;
     font-style: italic;
 }
 .notice-msg {
-    color: $BIN_BLACK;
-    background-color: $BIN_YELLOW;
+    color: $COLOR_BLACK;
+    background-color: $COLOR_YELLOW;
     padding: 10px;
 }
 /* hacks - avoid! */
@@ -325,8 +325,8 @@ ol {
     margin: 0;
     padding: 10px;
     text-align: center;
-    border: solid 1px $BIN_ORANGE;
-    background: $BIN_LIGHT_GRAY;
+    border: solid 1px $COLOR_ORANGE;
+    background: $COLOR_LIGHT_GRAY;
     z-index: 1000;
     max-width: 90%;
     .drag-handle {
@@ -345,8 +345,8 @@ ol {
     .inpage_popup_content_box {
         padding: 0;
         margin: 0;
-        background: $BIN_WHITE;
-        border: solid 2px $BIN_GRAY;
+        background: $COLOR_WHITE;
+        border: solid 2px $COLOR_GRAY;
         text-align: center;
     }
 }
@@ -385,7 +385,7 @@ ul.checked {
 }
 
 .separator-line {
-    border-bottom: 1px solid $BIN_GRAY;
+    border-bottom: 1px solid $COLOR_GRAY;
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -399,11 +399,11 @@ ul.checked {
 }
 
 .binary-topbar {
-    background: $BIN_DARK_BLUE;
+    background: $COLOR_DARK_BLUE;
 }
 
 .binary-msgbar {
-    background: $BIN_ORANGE;
+    background: $COLOR_ORANGE;
 }
 
 .binary-topbar, .binary-msgbar {
@@ -415,16 +415,16 @@ ul.checked {
 }
 
 .binary-header {
-    background: $BIN_BLUE;
-    border-bottom: 0.2em solid $BIN_ORANGE;
+    background: $COLOR_BLUE;
+    border-bottom: 0.2em solid $COLOR_ORANGE;
 }
 
 .binary-footer {
-    background: $BIN_BLUE;
+    background: $COLOR_BLUE;
 }
 
 .binary-sitemap {
-    background: $BIN_DARK_BLUE;
+    background: $COLOR_DARK_BLUE;
 }
 
 .binary-logo {
@@ -450,11 +450,11 @@ ul.checked {
 }
 
 button, .binary-button {
-    color: $BIN_WHITE;
+    color: $COLOR_WHITE;
     text-decoration: none;
     text-align: center;
     line-height: 100%;
-    background: $BIN_BLUE;
+    background: $COLOR_BLUE;
     border-radius: $BORDER_RADIUS;
     font-weight: bold;
     text-transform: uppercase;
@@ -462,9 +462,9 @@ button, .binary-button {
     display: inline-block;
     cursor: pointer;
     &:visited {
-        color: $BIN_WHITE;
+        color: $COLOR_WHITE;
     }
     &:hover, &:active {
-        background-color: $BIN_ORANGE;
+        background-color: $COLOR_ORANGE;
     }
 }

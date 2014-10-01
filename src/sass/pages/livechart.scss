@@ -29,12 +29,12 @@
           min-width: 7%;
           span.button {
               margin: 0 5px;
-              color: $BIN_BLACK;
+              color: $COLOR_BLACK;
               font-weight: bold;
-              border-bottom: 2px solid $BIN_GRAY_SHADE;
+              border-bottom: 2px solid $COLOR_GRAY_SHADE;
               &.current {
-                color: $BIN_ORANGE;
-                border-bottom: 4px solid $BIN_ORANGE;
+                color: $COLOR_ORANGE;
+                border-bottom: 4px solid $COLOR_ORANGE;
               }
           }
         }
@@ -44,7 +44,7 @@
 .chart-notice {
     text-align: left;
     font-size: $FONT_SIZE_S;
-    color: $BIN_DARK_GRAY;
+    color: $COLOR_DARK_GRAY;
     width: 90%;
     margin: 5px 0;
 }

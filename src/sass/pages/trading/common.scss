@@ -13,10 +13,10 @@
   .rbox-table-heading { padding:3px; }
   .rbox-heading {
     font-weight: bold;
-    background-color: $BIN_LIGHT_GRAY;
+    background-color: $COLOR_LIGHT_GRAY;
   }
   .rbox-content {
-    background-color: $BIN_WHITE;
+    background-color: $COLOR_WHITE;
     padding: 0.3em 0;
     table {
       td {
@@ -40,12 +40,12 @@
   z-index: 200;
   #ttcont {
     font-size: $FONT_SIZE_S;
-    background-color: $BIN_WHITE;
-    border: 1px solid $BIN_BLUE;
+    background-color: $COLOR_WHITE;
+    border: 1px solid $COLOR_BLUE;
     display: block;
     padding: 0.1em 1em;
     a, a:visited {
-      color: $BIN_GREEN;
+      color: $COLOR_GREEN;
       text-decoration: none;
       &:hover, &:active {
         text-decoration: underline;
@@ -123,7 +123,7 @@
   height: auto;
   h2 {
     a {
-      color: $BIN_BLUE;
+      color: $COLOR_BLUE;
       font-size: $FONT_SIZE_N;
       font-weight: bold;
       text-decoration: none;
@@ -138,13 +138,13 @@
   padding: 0 15px;
   height: 10em;
   h2 {
-    color: $BIN_BLUE;
+    color: $COLOR_BLUE;
     font-size: $FONT_SIZE_N;
     font-weight: bold;
     margin: 5px 15px;
     a {
       text-decoration: none;
-      color: $BIN_BLUE;
+      color: $COLOR_BLUE;
     }
   }
   p {
@@ -185,7 +185,7 @@
 }
 
 .disabled {
-  color: $BIN_GRAY_SHADE;
+  color: $COLOR_GRAY_SHADE;
 }
 
 .bigger {
@@ -199,11 +199,11 @@
 }
 
 .flipper.focus.win, .flipper.win {
-    background: linear-gradient(to bottom, transparent, $BIN_GREEN);
+    background: linear-gradient(to bottom, transparent, $COLOR_GREEN);
 }
 
 .flipper.focus.lose, .flipper.lose {
-    background: linear-gradient(to bottom, transparent, $BIN_RED);
+    background: linear-gradient(to bottom, transparent, $COLOR_RED);
 }
 
 #digit-contract-details{

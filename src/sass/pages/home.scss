@@ -76,7 +76,7 @@
       list-style: none;
       margin: 0 5px;
       float: left;
-      background: $BIN_GRAY;
+      background: $COLOR_GRAY;
       a {
 	border-radius: 2px;
         display: block;
@@ -88,11 +88,11 @@
       }
     }
     li.current a {
-      background: $BIN_ORANGE;
+      background: $COLOR_ORANGE;
     }
   }
   #open-account {
-    background: $BIN_ORANGE;
+    background: $COLOR_ORANGE;
     border-radius: 0 0 4px 4px;
     color: #FFFFFF;
     text-align: center;
@@ -100,7 +100,7 @@
     p {
       line-height: 2em;
       margin: 0;
-      background: $BIN_DARK_BLUE;
+      background: $COLOR_DARK_BLUE;
       font-size: $FONT_SIZE_S;
     }
     form {
@@ -121,7 +121,7 @@
     }
     input[type=submit] {
       @include link-button;
-      background: $BIN_BLUE;
+      background: $COLOR_BLUE;
       padding: 9px 10.83333%;
       border: 0;
       white-space: normal;
@@ -129,7 +129,7 @@
   }
   #help {
         clearfix { clear:both; visibility:hidden; content:'.' }
-        background: $BIN_LIGHT_GRAY;
+        background: $COLOR_LIGHT_GRAY;
         #new-trader, #experienced-trader {
           background: url("../images/pages/home/stripe_1.png") repeat;
           border-radius: 10px;
@@ -159,10 +159,10 @@
   #ticker-container {
       clear:both;
       #hometicker {
-        background: $BIN_GRAY;
+        background: $COLOR_GRAY;
         height: 38px;
-        border-bottom: 1px solid $BIN_GRAY_SHADE;
-        border-top: 1px solid $BIN_GRAY_SHADE;
+        border-bottom: 1px solid $COLOR_GRAY_SHADE;
+        border-top: 1px solid $COLOR_GRAY_SHADE;
         letter-spacing: 1px;
         white-space: nowrap;
         overflow: hidden;
@@ -175,28 +175,28 @@
             width: auto;
             line-height:1;
             a.ticker-link {
-                color: $BIN_BLACK;
+                color: $COLOR_BLACK;
             }
           }
         }
         span.fall {
-          color: $BIN_RED;
+          color: $COLOR_RED;
         }
         span.rise {
-          color: $BIN_GREEN;
+          color: $COLOR_GREEN;
         }
       }
   }
   #returns {
     margin:20px 0 0 0;
-    background: $BIN_WHITE;
+    background: $COLOR_WHITE;
     #prices {
         border-right:1px solid #DEDEDE;
     }
     #prices, #try-now {
       display:inline-block;
       text-align: center;
-      h1 { font-weight:100; color: $BIN_BLUE; padding:4px 0 4px 0; font-size:230%; }
+      h1 { font-weight:100; color: $COLOR_BLUE; padding:4px 0 4px 0; font-size:230%; }
     }
     #prices {
       padding-right:10px;

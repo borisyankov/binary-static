@@ -1,12 +1,12 @@
 @mixin chart-drop-down-content {
   margin-top:0;
-  border: 1px solid $BIN_GRAY_SHADE;
+  border: 1px solid $COLOR_GRAY_SHADE;
   .half-1, .half-2 {
     width: 47%;
     height: auto;
   }
   .half-1.with-separator {
-      border-right: 1px solid $BIN_GRAY_SHADE;
+      border-right: 1px solid $COLOR_GRAY_SHADE;
   }
   .tl, .tr, .bl, .br {
     display: none;
@@ -118,12 +118,12 @@
     padding-top: 2px;
   }
   select {
-    background: $BIN_WHITE;
-    border: 1px solid $BIN_GRAY;
+    background: $COLOR_WHITE;
+    border: 1px solid $COLOR_GRAY;
     margin-right: 5px;
   }
   input[type="text"] {
-    border: 1px solid $BIN_GRAY;
+    border: 1px solid $COLOR_GRAY;
     margin-right: 5px;
     width: 105px;
   }
@@ -227,9 +227,9 @@
     .popupbox {
         .rbox.rbox-bg-alt {
             margin: 0;
-            border: 1px solid $BIN_DARK_GRAY;
+            border: 1px solid $COLOR_DARK_GRAY;
             .rbox-heading h4 {
-                background-color: $BIN_GRAY;
+                background-color: $COLOR_GRAY;
             }
             ul.button-menu {
                 list-style: none;
@@ -286,7 +286,7 @@
   left: auto;
   top: 27px;
   position: absolute;
-  background-color: $BIN_WHITE;
+  background-color: $COLOR_WHITE;
   display: none;
   z-index: 999;
 }
@@ -304,9 +304,9 @@
 #intraday_interval {
   position: absolute;
   display: none;
-  background-color: $BIN_WHITE;
+  background-color: $COLOR_WHITE;
   padding: 0 0.7em 0.7em;
-  border: 1px solid $BIN_GRAY_SHADE;
+  border: 1px solid $COLOR_GRAY_SHADE;
   width: 8em;
   z-index: 2;
 }
@@ -336,14 +336,14 @@
 
 .desc_box {
   padding: 8px;
-  background-color: $BIN_WHITE;
-  border: 1px solid $BIN_GRAY;
+  background-color: $COLOR_WHITE;
+  border: 1px solid $COLOR_GRAY;
 }
 
 #chart_compare_underlying li {
   background: url("../images/pages/light_chart/linechart_legends_1.png");
   background-repeat: no-repeat;
-  background-color: $BIN_WHITE;
+  background-color: $COLOR_WHITE;
   padding: 0 15px;
 }
 
@@ -405,7 +405,7 @@
 #bet_details-table em {
   font-size: $FONT_SIZE_XS;
   font-weight: normal;
-  color: $BIN_BLACK;
+  color: $COLOR_BLACK;
 }
 
 #profit_loss,
@@ -425,7 +425,7 @@
 }
 
 .finder {
-  background-color: $BIN_WHITE;
+  background-color: $COLOR_WHITE;
   margin-bottom: 5px;
   position: relative;
   left: 1px;
@@ -435,8 +435,8 @@ h2.finder {
   padding: .4em 50px .4em 0;
   margin-right: 3px;
   margin-left: 3px;
-  border-top: 1px solid $BIN_GRAY;
-  color: $BIN_BLUE;
+  border-top: 1px solid $COLOR_GRAY;
+  color: $COLOR_BLUE;
 }
 
 #desc {
@@ -461,11 +461,11 @@ h2.finder {
     padding-top: 2px;
   }
   input {
-    border: 1px solid $BIN_GRAY;
+    border: 1px solid $COLOR_GRAY;
   }
   select {
-    border: 1px solid $BIN_GRAY;
-    background: $BIN_WHITE;
+    border: 1px solid $COLOR_GRAY;
+    background: $COLOR_WHITE;
   }
 }
 
@@ -593,7 +593,7 @@ form#rise_fall_form {
 
 #content #settings_message {
     font-weight: bold;
-    color: $BIN_ORANGE;
+    color: $COLOR_ORANGE;
 }
 
 #content #client_message.errorbox {

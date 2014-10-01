@@ -1,23 +1,23 @@
 #main-menu {
-  background-color: $BIN_LIGHT_GRAY;
-  border-bottom: 1px solid $BIN_GRAY;
+  background-color: $COLOR_LIGHT_GRAY;
+  border-bottom: 1px solid $COLOR_GRAY;
   margin-bottom: 40px;
   a.a-active, span.a-active {
-    color: $BIN_ORANGE;
+    color: $COLOR_ORANGE;
   }
 }
 
 .tab-menu-wrap, #content .tab-menu-wrap {
   ul {
     margin: 0;
-    background-color: $BIN_LIGHT_GRAY;
+    background-color: $COLOR_LIGHT_GRAY;
     position: relative;
     display: block;
     li {
       margin: 0 2em 0 0;
       display: inline-block;
       a {
-        color: $BIN_BLACK;
+        color: $COLOR_BLACK;
         line-height: 2;
         top: 1px;
         text-decoration: none;
@@ -25,7 +25,7 @@
         position: relative;
         text-transform: capitalize;
         a.a-active, span.a-active {
-          color: $BIN_WHITE;
+          color: $COLOR_WHITE;
         }
       }
       ul.sub_items {
@@ -57,11 +57,11 @@
           a, span {
             top:auto;
             border: 0;
-            color: $BIN_DARK_GRAY;
+            color: $COLOR_DARK_GRAY;
             display: inline-block;
           }
           a.a-active, span.a-active {
-            color: $BIN_ORANGE;
+            color: $COLOR_ORANGE;
           }
         }
       }
@@ -69,7 +69,7 @@
     li.active {
       @extend li.hover;
       a {
-        color: $BIN_ORANGE;
+        color: $COLOR_ORANGE;
         background: url("../images/common/nav/menu-sub-selection_1.png") no-repeat bottom;
       }
       ul {
@@ -114,15 +114,15 @@
     & > .tab-menu {
         width: 100%;
         height: 36px;
-        background-color: $BIN_LIGHT_GRAY;
-        border-bottom: 1px solid $BIN_GRAY;
+        background-color: $COLOR_LIGHT_GRAY;
+        border-bottom: 1px solid $COLOR_GRAY;
         ul.tm-ul {
             margin: 0;
-            background-color: $BIN_LIGHT_GRAY;
-            border-bottom: 1px solid $BIN_GRAY;
+            background-color: $COLOR_LIGHT_GRAY;
+            border-bottom: 1px solid $COLOR_GRAY;
             li {
                 margin-right: 2em;
-                color: $BIN_ORANGE;
+                color: $COLOR_ORANGE;
                 a {
                     &:hover {
                         text-decoration: none;
@@ -131,7 +131,7 @@
                 &.active {
                     background: none;
                     a {
-                        color: $BIN_ORANGE;
+                        color: $COLOR_ORANGE;
                         background: url("../images/common/nav/menu-sub-selection_1.png") no-repeat bottom;
                     }
                 }
@@ -140,11 +140,11 @@
         ul.tm-ul-2 {
           li.active {
             a.tm-a-2 {
-              color: $BIN_DARK_GRAY;
+              color: $COLOR_DARK_GRAY;
               background: none;
             }
             a.a-active {
-              color: $BIN_ORANGE;
+              color: $COLOR_ORANGE;
               background: none;
             }
           }

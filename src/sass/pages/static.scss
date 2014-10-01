@@ -11,13 +11,13 @@
             #section-1, #section-2, #section-3, #section-4, #section-5, #section-6 {
                 .heading {
                     font-weight: bold;
-                    color: $BIN_BLUE;
+                    color: $COLOR_BLUE;
                 }
             }
         }
     }
     .sidebar-button {
-        background: $BIN_LIGHT_GRAY;
+        background: $COLOR_LIGHT_GRAY;
         padding: 20px;
         a {
             @include link-button;
@@ -27,7 +27,7 @@
 }
 
 .code-sample, code {
-    background-color: $BIN_LIGHT_GRAY;
+    background-color: $COLOR_LIGHT_GRAY;
     overflow-x: auto;
     width: 90%;
     font-family: monospace;
