@@ -81,7 +81,7 @@
     input {
       display: inline;
       border-radius: $BORDER_RADIUS;
-      font-size: 11px;
+      font-size: $FONT_SIZE_XS;
       margin: 0 0 0 5px;
     }
     input[type=text], input[type=password] {
@@ -105,12 +105,12 @@
     display: inline-block;
     margin: 0 0 0 10px;
     line-height: 170%;
-    font-size: 70%;
+    font-size: $FONT_SIZE_S;
   }
   #logout {
     text-align: right;
     color: $BIN_WHITE;
-    font-size: 70%;
+    font-size: $FONT_SIZE_S;
     margin-top: 10px;
     a, a:visited {
       &:hover, &:active {

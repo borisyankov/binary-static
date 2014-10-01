@@ -29,7 +29,6 @@
                   text-align: center;
                   background-color: $BIN_LIGHT_GRAY;
                   font-weight: bold;
-                  font-size: 1.1em;
                 }
                 hr {
                   display: block;
@@ -86,7 +85,7 @@
       }
     }
     .unicode-info-icon {
-        font-size: 14px;
+        font-size: $FONT_SIZE_S;
     }
     #bet_calculation_container {
       margin: 0;
@@ -120,7 +119,7 @@
           .bet-error-box {
               margin: 0;
               padding: 1em;
-              font-size: 0.8em;
+              font-size: $FONT_SIZE_S;
               width: auto;
           }
           .rbox-heading {
@@ -205,7 +204,7 @@
       }
     }
     #bet_cost_container {
-      font-size: 0.8em;
+      font-size: $FONT_SIZE_S;
       display: inline-block;
       background: white;
       .rbox-wrap {
@@ -294,20 +293,20 @@
 }
 
 .stylized_cents {
-  font-size: 65%;
+  font-size: $FONT_SIZE_XS;
   vertical-align: text-top;
   margin-left: .02em;
   margin-right: 0.1em;
 }
 
 .stylized_currency {
-  font-size: 75%;
+  font-size: $FONT_SIZE_S;
   text-align: left;
 }
 
 .stylized_price {
   font-weight: bold;
-  font-size: 150%;
+  font-size: $FONT_SIZE_XL;
 }
 
 .price_moved_up {
@@ -332,7 +331,7 @@
 }
 
 .bet_cost b {
-  font-size: 128%;
+  font-size: $FONT_SIZE_L;
 }
 
 .bet_description {
@@ -340,7 +339,7 @@
   float: right;
   padding: 0 3px 3px 0;
   strong:first-child {
-      font-size: 130%;
+      font-size: $FONT_SIZE_L;
   }
 }
 
@@ -424,7 +423,7 @@ a.close {
     border-radius: 0;
     border-bottom-left-radius: 4px;
     background: $BIN_ORANGE;
-    font-size: 24px;
+    font-size: $FONT_SIZE_L;
     font-weight: bold;
     line-height: 0px;
     &:hover {
@@ -447,10 +446,6 @@ a.close {
 
     h2, h3, h4 {
         margin-top: 30px;
-    }
-
-    p, div {
-        font-size: 16px;
     }
 
     .bet_confirm_error_message {
@@ -492,7 +487,7 @@ a.close {
     }
 
     table {
-        font-size: 14px;
+        font-size: $FONT_SIZE_S;
     }
 
     & table .even {
@@ -500,7 +495,6 @@ a.close {
     }
 
     #confirmation_table {
-        font-size: 16px;
         border: none;
         margin: 0;
 
@@ -540,7 +534,6 @@ a.close {
     }
 }
 .standin {
-    font-size: 100%;
     font-weight: normal;
 }
 .profit {
@@ -566,7 +559,7 @@ a.close {
     width: 100%;
 
     a.visualization {
-        font-size: 14px;
+        font-size: $FONT_SIZE_S;
         font-weight: normal;
         text-decoration: underline;
     }

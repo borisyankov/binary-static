@@ -17,7 +17,7 @@
   input[type=button] {
     @include link-button;
     padding: 6px 15px 6px 15px;
-    font-size: 14px;
+    font-size: $FONT_SIZE_S;
   }
   #live_chart_options {
       display: block;
@@ -43,7 +43,7 @@
 }
 .chart-notice {
     text-align: left;
-    font-size: 80%;
+    font-size: $FONT_SIZE_S;
     color: $BIN_DARK_GRAY;
     width: 90%;
     margin: 5px 0;

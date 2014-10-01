@@ -2,11 +2,11 @@
   #footer-menu {
     background: $BIN_BLUE;
     h1 {
-      font-size: 18px;
+      font-size: $FONT_SIZE_N;
       text-transform: uppercase;
     }
     a {
-      font-size: 14.4px;
+      font-size: $FONT_SIZE_S;
       color: #ddd;
     }
     li {
@@ -26,7 +26,7 @@
       line-height: 1.2em;
       text-align: justify;
       color: #aaa;
-      font-size: 11.6px;
+      font-size: $FONT_SIZE_XS;
     }
     #iom_icon_footer {
       max-width: 90px;

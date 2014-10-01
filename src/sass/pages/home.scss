@@ -101,10 +101,10 @@
       line-height: 2em;
       margin: 0;
       background: $BIN_DARK_BLUE;
-      font-size: 72%;
+      font-size: $FONT_SIZE_S;
     }
     form {
-        font-size: 74%;
+        font-size: $FONT_SIZE_S;
     }
     #virtual-fields {
         input, select, textarea {

@@ -94,7 +94,6 @@
   float: right;
   margin: 0 20px 10px 0;
   width: 35%;
-  font-size: 100%;
   display: none;
 }
 
@@ -175,7 +174,6 @@
   position: relative;
   &#chart_compare_underlying, &#chart_period {
     background: none;
-    font-size: 0.9em;
     border: none;
     ul {
         li {
@@ -195,7 +193,7 @@
         li.tm-li {
             margin: 0;
             margin-right: 0.2em;
-            font-size:85%;
+            font-size: $FONT_SIZE_S;
             padding: 0;
             a.tm-a {
                 padding: 0 1em;
@@ -405,7 +403,7 @@
 }
 
 #bet_details-table em {
-  font-size: 60%;
+  font-size: $FONT_SIZE_XS;
   font-weight: normal;
   color: $BIN_BLACK;
 }
@@ -434,7 +432,6 @@
 }
 
 h2.finder {
-  font-size: 1.0em;
   padding: .4em 50px .4em 0;
   margin-right: 3px;
   margin-left: 3px;
@@ -482,7 +479,7 @@ h2.finder {
 
 .smaller-font table td,
 .smaller-font table th {
-  font-size: 0.85em;
+  font-size: $FONT_SIZE_S;
 }
 
 .left-align table td,
@@ -516,7 +513,6 @@ label#from_expiry_label {
 }
 
 div#price_table_notes {
-  font-size: 0.92em;
   padding-top: 15px;
 }
 
@@ -598,9 +594,6 @@ form#rise_fall_form {
 #content #settings_message {
     font-weight: bold;
     color: $BIN_ORANGE;
-    .success_msg {
-        font-size: 100%;
-    }
 }
 
 #content #client_message.errorbox {

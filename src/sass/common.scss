@@ -10,15 +10,15 @@ html {
     height: 100%;
 }
 body {
-    background: #FFFFFF;
-    color: #000000;
-    font-size:18px;
+    background: $BIN_WHITE;
+    color: $BIN_BLACK;
+    font-size: $FONT_SIZE_N;
     min-height: 100%;
     position: relative;
     background-position: bottom;
     background-repeat: repeat-x;
-    padding:0px;
-    margin:0px;
+    padding: 0;
+    margin: 0;
     font-family: proxima-nova, arial;
 }
 html, body { width:100%;  overflow-x:hidden; }
@@ -47,14 +47,14 @@ h1, h2, h3, h1 a, h2 a, h3 a, h1 a:visited, h2 a:visited, h3 a:visited {
     color: $BIN_BLUE;
 }
 h1 {
-    font-size: 35px;
+    font-size: $FONT_SIZE_XXL;
 }
 
 h2 {
-    font-size: 28px;
+    font-size: $FONT_SIZE_XL;
 }
 h3 {
-    font-size: 22.5px;
+    font-size: $FONT_SIZE_L;
 }
 select, input, button, textarea {
     background: $BIN_WHITE;
@@ -139,7 +139,7 @@ textarea {
 }
 pre {
     font-family: "Lucida Console", monospace;
-    font-size: 14.5px;
+    font-size: $FONT_SIZE_S;
 }
 select.input {
     width: 46.2%;
@@ -376,7 +376,7 @@ ul.checked {
   }
 }
 .hint{
-    font-size: 14.5px;
+    font-size: $FONT_SIZE_S;
     color: #58595B;
     margin-top: 3px;
 }

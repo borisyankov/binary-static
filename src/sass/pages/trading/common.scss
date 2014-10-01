@@ -14,11 +14,6 @@
   .rbox-heading {
     font-weight: bold;
     background-color: $BIN_LIGHT_GRAY;
-    h4 {
-      font-size: 1em;
-      margin: 0;
-      padding: 0.3em 8px;
-    }
   }
   .rbox-content {
     background-color: $BIN_WHITE;
@@ -44,7 +39,7 @@
   display: block;
   z-index: 200;
   #ttcont {
-    font-size: 0.8em;
+    font-size: $FONT_SIZE_S;
     background-color: $BIN_WHITE;
     border: 1px solid $BIN_BLUE;
     display: block;
@@ -129,7 +124,7 @@
   h2 {
     a {
       color: $BIN_BLUE;
-      font-size: 18px;
+      font-size: $FONT_SIZE_N;
       font-weight: bold;
       text-decoration: none;
     }
@@ -144,7 +139,7 @@
   height: 10em;
   h2 {
     color: $BIN_BLUE;
-    font-size: 18px;
+    font-size: $FONT_SIZE_N;
     font-weight: bold;
     margin: 5px 15px;
     a {
@@ -153,7 +148,7 @@
     }
   }
   p {
-    font-size: 14px;
+    font-size: $FONT_SIZE_S;
     margin: 10px 15px;
   }
 }
@@ -213,6 +208,6 @@
 
 #digit-contract-details{
     .sign {
-        font-size: 30px !important;
+        font-size: $FONT_SIZE_XL !important;
     }
 }
