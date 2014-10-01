@@ -5,9 +5,6 @@
 }
 
 @mixin section-background {
-  background: -moz-linear-gradient(top, $COLOR_WHITE 30%, $COLOR_LIGHT_GRAY 90%);
-  background: -webkit-linear-gradient(top, $COLOR_WHITE 30%, $COLOR_LIGHT_GRAY 90%);
-  background: -ms-linear-gradient(top, $COLOR_WHITE 30%, $COLOR_LIGHT_GRAY 90%);
   border-bottom: 1px solid transparent;
 }
 
@@ -104,8 +101,7 @@
     color: $COLOR_WHITE;
   }
   &:hover, &:active {
-    text-decoration: none;
-    background-color: #14602B;
+    background-color: $COLOR_DARK_BLUE;
   }
 }
 

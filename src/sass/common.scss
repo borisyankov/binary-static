@@ -5,10 +5,6 @@
     transition: all 0.3s ease;
 }
 
-/* theme elements */
-html {
-    height: 100%;
-}
 body {
     background: $COLOR_WHITE;
     color: $COLOR_LIGHT_BLACK;
@@ -21,10 +17,11 @@ body {
     margin: 0;
     font-family: proxima-nova, arial;
 }
-html, body { width:100%;  overflow-x:hidden; }
+
 h1, h2, h3, h4, li, p, a, span {
     text-rendering: optimizelegibility;
 }
+
 a, a:visited {
     color: $COLOR_BLUE;
     text-decoration: none;
@@ -35,17 +32,19 @@ a, a:visited {
         font-weight: bold;
         padding-right: 15px;
         margin-top: 15px;
-        background: url("pages/home/learn-more-arrow_1.png") no-repeat right;
     }
 }
+
 p {
     margin: 1em 0;
     line-height: 1.4em;
 }
+
 h1, h2, h3, h1 a, h2 a, h3 a, h1 a:visited, h2 a:visited, h3 a:visited {
     font-weight: bold;
     color: $COLOR_BLUE;
 }
+
 h1 {
     font-size: $FONT_SIZE_XXL;
 }
@@ -56,64 +55,66 @@ h2 {
 h3 {
     font-size: $FONT_SIZE_L;
 }
-select, input, button, textarea {
+
+select, textarea, input[type=text], input[type=email], input[type=password] {
     background: $COLOR_WHITE;
-    border: 1px solid $COLOR_GRAY;
-    padding: 2px 3px 2px 3px;
+    border: 1px solid $COLOR_BLUE;
+    border-radius: $BORDER_RADIUS;
+    padding: 0.2em 0.5em;
 }
+
 button {
     vertical-align: top;
 }
+
 input, button, textarea, select, optgroup, option {
     font-family: inherit;
     font-size: inherit;
     font-style: inherit;
     font-weight: inherit;
 }
+
 input, textarea {
     vertical-align: middle;
 }
+
 strong {
     font-weight: bold;
 }
+
 em {
     font-style: italic;
 }
-/*
-ul, ol {
-    margin: 0;
-    li {
-        margin: 0.5em 0 0;
-        line-height: 1.4em;
-        ul, ol {
-            margin: 0.8em 0 0 1em;
-        }
-    }
-}
-*/
+
 ol li {
     list-style-type: decimal;
     list-style-image: none;
 }
+
 img {
     vertical-align: middle;
     border: 0px;
 }
+
 hr {
     display: none;
 }
+
 acronym, abbr {
     cursor: help;
 }
+/*
 span.button.button-disabled button.button-disabled {
     color: $COLOR_GRAY_SHADE;
     background: $COLOR_LIGHT_GRAY;
     cursor: default;
 }
+*/
 form {
     margin: 0;
-    padding:0;
+    padding: 0;
 }
+
 fieldset {
     position: relative;
     border: 1px solid #E5E5E5;
@@ -133,17 +134,21 @@ fieldset {
         text-transform: capitalize;
     }
 }
+
 textarea {
     height: 8em;
     width: 25em;
 }
+
 pre {
     font-family: "Lucida Console", monospace;
     font-size: $FONT_SIZE_S;
 }
+
 select.input {
     width: 46.2%;
 }
+
 /* form styles */
 .extra_tooltip_container {
     float: left;
@@ -152,101 +157,124 @@ select.input {
     width: 40%;
     line-height: 1.7em;
 }
+
 label {
     line-height: 25px;
 }
+
 // used for form label in grid structure
 .form_label {
     text-align: right;
     line-height: 25px;
 }
+
 .extra_tooltip_container label {
     padding: 0;
     width: 94%;
 }
+
 #profit-table-form {
     background: $COLOR_WHITE;
     input {
         border: 1px solid #e4e4e4;
     }
 }
+
 .input {
     width: 45%;
 }
+
 .row.focus input, .row.focus textarea {
     background-color: $COLOR_YELLOW;
 }
+
 .errorrow, .errorfield {
     color: $COLOR_RED;
 }
+
 .text-only {
     color: $COLOR_DARK_GRAY;
 }
+
 .errorfield {
     margin: 0 0 0 0%;
 }
+
 .errorrow, .errorfield {
     font-style: italic;
     margin-top: 8px;
 }
+
 .last-row {
     margin-bottom: 0;
 }
+
 .form_button {
     text-align: center;
 }
+
 .form_button .errorfield {
     margin: 0;
 }
+
 .comment {
     font-style: italic;
 }
+
 .non_input {
     color: $COLOR_DARK_GRAY;
     line-height: 1.7em;
 }
+
 .non_input label {
     line-height: 1.6em;
 }
+
 .gray {
     color: $COLOR_DARK_GRAY;
 }
+
 .form_link {
     display: block;
     line-height: 0.8em;
 }
+
 fieldset .error-msg {
     width: 100%;
     text-align: center;
 }
-/* global styles */
-* {
-    margin: 0;
-}
+
 #popup {
     width: 95%;
     margin: 0 auto;
 }
+
 .clearfix {
-    clear:both;
-    visibility:hidden;
-    content:'.';
+    clear: both;
+    visibility: hidden;
+    content: '.';
 }
+
 .hidden {
     display: none;
 }
+
 .left {
     float: left;
 }
+
 .right {
     float: right;
 }
+
 .push {
     clear: both;
 }
+
 .required_asterisk {
     color: $COLOR_ORANGE;
 }
+/*
 .button {
     cursor: pointer;
     margin-bottom: 0.5em;
@@ -261,6 +289,7 @@ fieldset .error-msg {
         font-weight: bold;
     }
 }
+
 .button-disabled {
     cursor: pointer;
     margin-bottom: 0.5em;
@@ -284,16 +313,17 @@ fieldset .error-msg {
         }
     }
 }
+*/
 .error-msg {
     color: $COLOR_RED;
     font-style: italic;
 }
+
 .notice-msg {
     color: $COLOR_BLACK;
     background-color: $COLOR_YELLOW;
     padding: 10px;
 }
-/* hacks - avoid! */
 
 /* using pixel as we need it to make footer sticky */
 .scrollbar-measure {
@@ -305,9 +335,6 @@ fieldset .error-msg {
 }
 .indicate-loading {
     opacity: 0.6;
-    filter:alpha(opacity=60);
-    /* For IE */
-    clip: rect(0 0 0 0);
     margin: -1px;
     padding: 0;
     border: 0;
@@ -317,9 +344,11 @@ fieldset .error-msg {
     margin-right: auto;
     text-align: center;
 }
+
 ol {
     margin: 1.25em 0 1.25em 1.25em;
 }
+
 .inpage_popup_container {
     position: fixed;
     margin: 0;
@@ -350,6 +379,7 @@ ol {
         text-align: center;
     }
 }
+
 .paging-navigation {
     ul.paging-links {
         li {
@@ -449,7 +479,25 @@ ul.checked {
     width: 100%;
 }
 
-button, input[type=button], input[tye=submit], .binary-button {
+button, input[type=button], input[tye=submit], button.button {
+    color: $COLOR_BLUE;
+    text-decoration: none;
+    text-align: center;
+    line-height: 100%;
+    background: $COLOR_WHITE;
+    border-radius: $BORDER_RADIUS;
+    border: 2px solid $COLOR_BLUE;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 15px 10px 15px;
+    display: inline-block;
+    cursor: pointer;
+    &:hover, &:active {
+        color: $COLOR_WHITE;
+        background-color: $COLOR_BLUE;
+    }
+}
+/*button, input[type=button], input[tye=submit], .binary-button {
     color: $COLOR_WHITE;
     text-decoration: none;
     text-align: center;
@@ -468,3 +516,4 @@ button, input[type=button], input[tye=submit], .binary-button {
         background-color: $COLOR_ORANGE;
     }
 }
+*/
