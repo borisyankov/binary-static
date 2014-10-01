@@ -39,20 +39,16 @@ table
             text-align: left;
         }
         a.button-analyse, a.button-analyse:visited {
-            color: $COLOR_GREEN;
             background: none;
             display: inline;
             padding: 0;
             span {
                 font-weight: normal;
-                color: $COLOR_GREEN;
                 background: none;
                 text-transform: capitalize;
                 padding: 0;
                 &:hover, &:active {
                     background: none;
-                    color: $COLOR_GREEN;
-                    text-decoration: underline;
                 }
             }
         }
@@ -119,21 +115,14 @@ table
         color: $COLOR_RED;
     }
     a.button-analyse, a.button-analyse:visited {
-        color: $COLOR_GREEN;
         background: none;
         display: inline;
         padding: 0;
         span {
             font-weight: normal;
-            color: $COLOR_GREEN;
             background: none;
             text-transform: capitalize;
             padding: 0;
-            &:hover, &:active {
-                background: none;
-                color: $COLOR_GREEN;
-                text-decoration: underline;
-            }
         }
     }
 }

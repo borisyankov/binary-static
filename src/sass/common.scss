@@ -11,7 +11,7 @@ html {
 }
 body {
     background: $COLOR_WHITE;
-    color: $COLOR_BLACK;
+    color: $COLOR_LIGHT_BLACK;
     font-size: $FONT_SIZE_N;
     min-height: 100%;
     position: relative;
@@ -449,7 +449,7 @@ ul.checked {
     width: 100%;
 }
 
-button, .binary-button {
+button, input[type=button], input[tye=submit], .binary-button {
     color: $COLOR_WHITE;
     text-decoration: none;
     text-align: center;
