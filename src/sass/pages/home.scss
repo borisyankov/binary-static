@@ -108,7 +108,7 @@
     }
     #virtual-fields {
         input, select, textarea {
-            border-radius: 3px;
+            border-radius: $BORDER_RADIUS;
             width: 90%;
             padding: 0px;
         }

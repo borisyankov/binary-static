@@ -6,21 +6,27 @@
  *
  *  Colors are specified with examples where they are used
  */
-$BIN_BLACK                      : #000000;
-$BIN_WHITE                      : #FFFFFF;
-$BIN_ORANGE                     : #E98024; // header border bottom
-$BIN_RED                        : #CC0000; // spot fall color
-$BIN_YELLOW                     : #FEF1CF; // error background
 
-$BIN_LIGHT_BLUE                 : #29ABE2; // spot rise color
-$BIN_BLUE                       : #2a3052; // header color
-$BIN_BLUE_SHADE                 : #394171; // header top border color
-$BIN_DARK_BLUE                  : #15212d; // topbar color
+ // brand colors and derivatives
+$BIN_ORANGE        : #E98024;
+$BIN_LIGHT_BLUE    : #29ABE2;
+$BIN_BLUE          : #2a3052;
+$BIN_BLUE_SHADE    : #394171;
+$BIN_DARK_BLUE     : #15212d;
 
-$BIN_LIGHT_GRAY                 : #F2F2F2; // main menu background color
-$BIN_GRAY                       : #DEDEDE; // ticker background color
-$BIN_GRAY_SHADE                 : #C2C2C2; // ticker border color
-$BIN_DARK_GRAY                  : #808080; // table header border color
+// colors used for secondary purposes. to be used sparingly
+$BIN_BLACK         : #000000;
+$BIN_WHITE         : #FFFFFF;
+$BIN_RED           : #CC0000;
+$BIN_YELLOW        : #FEF1CF;
+$BIN_LIGHT_GRAY    : #F2F2F2;
+$BIN_GRAY          : #DEDEDE;
+$BIN_GRAY_SHADE    : #C2C2C2;
+$BIN_DARK_GRAY     : #808080;
+$BIN_GREEN         : #2E8836;
+$BIN_DARK_GREEN    : #14602B;
 
-$BIN_GREEN                      : #2E8836; // button/links color
-$BIN_DARK_GREEN                 : #14602B; // button hover color
+
+$BORDER_RADIUS: 3px;
+
+$FONT_SIZE_N: 18px;

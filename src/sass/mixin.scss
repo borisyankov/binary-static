@@ -94,8 +94,8 @@
   text-decoration: none;
   text-align: center;
   line-height:100%;
-  background: $BIN_GREEN;
-  border-radius: 4px;
+  background: $BIN_BLUE;
+  border-radius: $BORDER_RADIUS;
   font-weight: bold;
   text-transform: uppercase;
   padding: 10px 15px 10px 15px;
@@ -142,7 +142,7 @@
       border: none;
       list-style-image: none;
       background: $BIN_LIGHT_GRAY;
-      border-radius: 4px 4px 0 0;
+      border-radius: $BORDER_RADIUS $BORDER_RADIUS 0 0;
       margin: 0 6px 0 0;
       padding: 0 10px;
       a, a:visited {

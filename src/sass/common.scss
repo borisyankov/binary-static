@@ -1,6 +1,7 @@
 /* DO NOT include any rules for specific pages in this file. */
 
-* {
+*, *:after, *:before {
+    box-sizing: border-box;
     transition: all 0.3s ease;
 }
 
@@ -25,7 +26,7 @@ h1, h2, h3, h4, li, p, a, span {
     text-rendering: optimizelegibility;
 }
 a, a:visited {
-    color: $BIN_GREEN;
+    color: $BIN_BLUE;
     text-decoration: none;
     &:hover, &:active {
         text-decoration: underline;
@@ -418,6 +419,14 @@ ul.checked {
     border-bottom: 0.2em solid $BIN_ORANGE;
 }
 
+.binary-footer {
+    background: $BIN_BLUE;
+}
+
+.binary-sitemap {
+    background: $BIN_DARK_BLUE;
+}
+
 .binary-logo {
     display: block;
     background: url('https://static.binary.com/images/common/binary-logo-full.svg') no-repeat left center;
@@ -428,20 +437,34 @@ ul.checked {
 }
 
 .binary-content {
-    padding: 1em;
+    padding: 2em 0.5em;
 }
 
-.binary-article {
+.binary-readable {
     max-width: 700px;
-    merge: 0 auto;
+    margin: 0 auto;
 }
 
-.binary-article img {
+.binary-readable img {
     width: 100%;
 }
 
-@media all and (max-width: 759px) {
-    .binary-logo {
-        width: 3.1em;
+button, .binary-button {
+    color: $BIN_WHITE;
+    text-decoration: none;
+    text-align: center;
+    line-height: 100%;
+    background: $BIN_BLUE;
+    border-radius: $BORDER_RADIUS;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 15px 10px 15px;
+    display: inline-block;
+    cursor: pointer;
+    &:visited {
+        color: $BIN_WHITE;
+    }
+    &:hover, &:active {
+        background-color: $BIN_ORANGE;
     }
 }
