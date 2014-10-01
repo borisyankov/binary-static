@@ -5,6 +5,8 @@
 - );
 - my $lang = stash->{language};
 
+#ticker-container
+    #hometicker
 #banner
   .grd-container
     .grd-grid-9.grd-row-padding.grd-hide-mobile.grd-hide-phablet
@@ -118,8 +120,6 @@
           %p= l('No risk, $10K virtual money account')
           %a.pjaxload{:href => url_for('linkto_acopening.cgi?actype=virtual'), :class => 'button'}
             %span= l('Try it now')
-#ticker-container
-    #hometicker
 #returns
   .grd-container
     #prices.grd-grid-6.grd-grid-mobile-12.grd-parent
