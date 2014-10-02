@@ -1,0 +1,56 @@
+.binary-wrapper {
+    max-width: 1200px;
+    min-width: 760px;
+    margin: 0 auto;
+}
+
+.binary-topbar {
+    background: $COLOR_DARK_BLUE;
+}
+
+.binary-msgbar {
+    background: $COLOR_ORANGE;
+}
+
+.binary-topbar, .binary-msgbar {
+    padding: 0.5em 0;
+}
+
+.binary-topbar li {
+    display: inline-block;
+}
+
+.binary-header {
+    background: $COLOR_BLUE;
+    border-bottom: 0.2em solid $COLOR_ORANGE;
+}
+
+.binary-footer {
+    background: $COLOR_BLUE;
+}
+
+.binary-sitemap {
+    background: $COLOR_DARK_BLUE;
+}
+
+.binary-logo {
+    display: block;
+    background: url('https://static.binary.com/images/common/binary-logo-full.svg') no-repeat left center;
+}
+
+.binary-header, .binary-logo {
+    height: 4em;
+}
+
+.binary-content {
+    padding: 2em 0.5em;
+}
+
+.binary-readable {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.binary-readable img {
+    width: 100%;
+}

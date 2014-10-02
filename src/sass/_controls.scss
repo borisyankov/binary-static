@@ -1,0 +1,98 @@
+select, textarea, input[type=text], input[type=email], input[type=password] {
+    background: $COLOR_WHITE;
+    border: 1px solid $COLOR_BLUE;
+    border-radius: $BORDER_RADIUS;
+    padding: 0.2em 0.5em;
+}
+
+input, button, textarea, select, optgroup, option {
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+}
+
+input, textarea {
+    vertical-align: middle;
+}
+
+textarea {
+    height: 8em;
+    width: 25em;
+}
+
+.input {
+    width: 45%;
+}
+
+label {
+    line-height: 25px;
+}
+
+.row.focus input, .row.focus textarea {
+    background-color: $COLOR_YELLOW;
+}
+
+.errorrow, .errorfield {
+    color: $COLOR_RED;
+}
+
+.form_button {
+    text-align: center;
+}
+
+.form_button .errorfield {
+    margin: 0;
+}
+
+.non_input {
+    color: $COLOR_DARK_GRAY;
+    line-height: 1.7em;
+}
+
+.non_input label {
+    line-height: 1.6em;
+}
+
+.form_link {
+    display: block;
+    line-height: 0.8em;
+}
+
+fieldset .error-msg {
+    width: 100%;
+    text-align: center;
+}
+
+.error-msg {
+    color: $COLOR_RED;
+    font-style: italic;
+}
+
+.notice-msg {
+    color: $COLOR_BLACK;
+    background-color: $COLOR_YELLOW;
+    padding: 10px;
+}
+
+button, input[type=button], input[tye=submit], button.button, a.button {
+    color: $COLOR_BLUE;
+    text-decoration: none;
+    text-align: center;
+    line-height: 100%;
+    background: $COLOR_WHITE;
+    border-radius: $BORDER_RADIUS;
+    border: 2px solid $COLOR_BLUE;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 15px 10px 15px;
+    display: inline-block;
+    cursor: pointer;
+    &:hover, &:active {
+        color: $COLOR_WHITE;
+        background-color: $COLOR_BLUE;
+    }
+    &:focus {
+        outline: none;
+    }
+}

@@ -11,8 +11,6 @@ body {
     font-size: $FONT_SIZE_N;
     min-height: 100%;
     position: relative;
-    background-position: bottom;
-    background-repeat: repeat-x;
     padding: 0;
     margin: 0;
     font-family: proxima-nova, arial;
@@ -25,14 +23,10 @@ h1, h2, h3, h4, li, p, a, span {
 a, a:visited {
     color: $COLOR_BLUE;
     text-decoration: none;
-    &:hover, &:active {
-        text-decoration: underline;
-    }
-    .learn-more {
-        font-weight: bold;
-        padding-right: 15px;
-        margin-top: 15px;
-    }
+}
+
+a:hover, a:active {
+    text-decoration: underline;
 }
 
 p {
@@ -52,30 +46,9 @@ h1 {
 h2 {
     font-size: $FONT_SIZE_XL;
 }
+
 h3 {
     font-size: $FONT_SIZE_L;
-}
-
-select, textarea, input[type=text], input[type=email], input[type=password] {
-    background: $COLOR_WHITE;
-    border: 1px solid $COLOR_BLUE;
-    border-radius: $BORDER_RADIUS;
-    padding: 0.2em 0.5em;
-}
-
-button {
-    vertical-align: top;
-}
-
-input, button, textarea, select, optgroup, option {
-    font-family: inherit;
-    font-size: inherit;
-    font-style: inherit;
-    font-weight: inherit;
-}
-
-input, textarea {
-    vertical-align: middle;
 }
 
 strong {
@@ -103,50 +76,21 @@ hr {
 acronym, abbr {
     cursor: help;
 }
-/*
-span.button.button-disabled button.button-disabled {
-    color: $COLOR_GRAY_SHADE;
-    background: $COLOR_LIGHT_GRAY;
-    cursor: default;
-}
-*/
-form {
-    margin: 0;
-    padding: 0;
-}
 
 fieldset {
-    position: relative;
     border: 1px solid #E5E5E5;
     padding: 5px;
     @include section-background;
-    &#formlayout {
-        background:none;
-        border: 0;
-        .errorfield {
-            margin-left: 0;
-        }
-    }
     legend {
-        color:#444444;
-        padding: 0 0.8em 0 0.8em;
+        padding: 0 1em 0 1em;
         font-weight: bold;
         text-transform: capitalize;
     }
 }
 
-textarea {
-    height: 8em;
-    width: 25em;
-}
-
 pre {
     font-family: "Lucida Console", monospace;
     font-size: $FONT_SIZE_S;
-}
-
-select.input {
-    width: 46.2%;
 }
 
 /* form styles */
@@ -156,10 +100,6 @@ select.input {
     padding-right: 1em;
     width: 40%;
     line-height: 1.7em;
-}
-
-label {
-    line-height: 25px;
 }
 
 // used for form label in grid structure
@@ -209,39 +149,8 @@ label {
     margin-bottom: 0;
 }
 
-.form_button {
-    text-align: center;
-}
-
-.form_button .errorfield {
-    margin: 0;
-}
-
 .comment {
     font-style: italic;
-}
-
-.non_input {
-    color: $COLOR_DARK_GRAY;
-    line-height: 1.7em;
-}
-
-.non_input label {
-    line-height: 1.6em;
-}
-
-.gray {
-    color: $COLOR_DARK_GRAY;
-}
-
-.form_link {
-    display: block;
-    line-height: 0.8em;
-}
-
-fieldset .error-msg {
-    width: 100%;
-    text-align: center;
 }
 
 #popup {
@@ -419,101 +328,3 @@ ul.checked {
     margin-top: 10px;
     margin-bottom: 10px;
 }
-
-
-
-.binary-wrapper {
-    max-width: 1200px;
-    min-width: 760px;
-    margin: 0 auto;
-}
-
-.binary-topbar {
-    background: $COLOR_DARK_BLUE;
-}
-
-.binary-msgbar {
-    background: $COLOR_ORANGE;
-}
-
-.binary-topbar, .binary-msgbar {
-    padding: 0.5em 0;
-}
-
-.binary-topbar li {
-    display: inline-block;
-}
-
-.binary-header {
-    background: $COLOR_BLUE;
-    border-bottom: 0.2em solid $COLOR_ORANGE;
-}
-
-.binary-footer {
-    background: $COLOR_BLUE;
-}
-
-.binary-sitemap {
-    background: $COLOR_DARK_BLUE;
-}
-
-.binary-logo {
-    display: block;
-    background: url('https://static.binary.com/images/common/binary-logo-full.svg') no-repeat left center;
-}
-
-.binary-header, .binary-logo {
-    height: 4em;
-}
-
-.binary-content {
-    padding: 2em 0.5em;
-}
-
-.binary-readable {
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-.binary-readable img {
-    width: 100%;
-}
-
-button, input[type=button], input[tye=submit], button.button {
-    color: $COLOR_BLUE;
-    text-decoration: none;
-    text-align: center;
-    line-height: 100%;
-    background: $COLOR_WHITE;
-    border-radius: $BORDER_RADIUS;
-    border: 2px solid $COLOR_BLUE;
-    font-weight: bold;
-    text-transform: uppercase;
-    padding: 10px 15px 10px 15px;
-    display: inline-block;
-    cursor: pointer;
-    &:hover, &:active {
-        color: $COLOR_WHITE;
-        background-color: $COLOR_BLUE;
-    }
-}
-/*button, input[type=button], input[tye=submit], .binary-button {
-    color: $COLOR_WHITE;
-    text-decoration: none;
-    text-align: center;
-    line-height: 100%;
-    background: $COLOR_BLUE;
-    border-radius: $BORDER_RADIUS;
-    font-weight: bold;
-    text-transform: uppercase;
-    padding: 10px 15px 10px 15px;
-    display: inline-block;
-    cursor: pointer;
-    &:visited {
-        color: $COLOR_WHITE;
-    }
-    &:hover, &:active {
-        background-color: $COLOR_ORANGE;
-    }
-}
-*/

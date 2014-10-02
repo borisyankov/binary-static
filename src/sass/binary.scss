@@ -1,9 +1,12 @@
-@import "constants";
+@import 'constants';
 
 /* common styles */
 @import "reset";
 @import "mixin";
-@import "common";
+@import "common";    // main tag styles
+@import "controls";  // form elements and buttons
+@import "page";      // header, footer and page content styles
+@import "layout";    // only layout styles that are needeed
 
 /* main style */
 @import "common/header";
