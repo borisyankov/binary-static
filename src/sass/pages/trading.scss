@@ -312,11 +312,13 @@
 .price_moved_up {
   background-color: $COLOR_LIGHT_BLUE;
   color: $COLOR_WHITE;
+  border-radius: $BORDER_RADIUS;
 }
 
 .price_moved_down {
   background-color: $COLOR_RED;
   color: $COLOR_WHITE;
+  border-radius: $BORDER_RADIUS;
 }
 
 .bet_cost {

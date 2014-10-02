@@ -30,7 +30,6 @@
     li {
       list-style-image: none;
       margin: 0;
-      background: $COLOR_LIGHT_GRAY;
       line-height: 150%;
       border-bottom: 1px solid #FFFFFF;
       &:hover {
@@ -45,6 +44,7 @@
     }
     li.selected {
       background: $COLOR_BLUE;
+      border-radius: $BORDER_RADIUS;
       a {
         color: $COLOR_WHITE;
         text-decoration: none;
@@ -52,8 +52,6 @@
     }
   }
   .open-account {
-    background: $COLOR_LIGHT_GRAY;
-    padding: 20px;
     a {
       @include link-button;
       display: block;
@@ -64,7 +62,6 @@
 @mixin menu-right-margin { margin-right:255px; }
 @mixin menu-right {
   div {
-    background: $COLOR_LIGHT_GRAY;
     border-bottom: $COLOR_GRAY;
     margin-bottom: 20px;
     padding: 20px;

@@ -1,4 +1,4 @@
-select, textarea, input[type=text], input[type=email], input[type=password] {
+select, textarea, input:not([type=submit]), input:not([type=button])  {
     background: $COLOR_WHITE;
     border: 1px solid $COLOR_BLUE;
     border-radius: $BORDER_RADIUS;
@@ -57,11 +57,6 @@ label {
 .form_link {
     display: block;
     line-height: 0.8em;
-}
-
-fieldset .error-msg {
-    width: 100%;
-    text-align: center;
 }
 
 .error-msg {

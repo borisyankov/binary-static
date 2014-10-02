@@ -2,7 +2,7 @@
 
 *, *:after, *:before {
     box-sizing: border-box;
-    transition: all 0.3s ease;
+    transition: all 0.25s ease;
 }
 
 body {
@@ -23,6 +23,7 @@ h1, h2, h3, h4, li, p, a, span {
 a, a:visited {
     color: $COLOR_BLUE;
     text-decoration: none;
+    font-weight: bold;
 }
 
 a:hover, a:active {
@@ -75,17 +76,6 @@ hr {
 
 acronym, abbr {
     cursor: help;
-}
-
-fieldset {
-    border: 1px solid #E5E5E5;
-    padding: 5px;
-    @include section-background;
-    legend {
-        padding: 0 1em 0 1em;
-        font-weight: bold;
-        text-transform: capitalize;
-    }
 }
 
 pre {
