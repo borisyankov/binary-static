@@ -1,5 +1,14 @@
 @media all and (max-width: 759px) {
-    .binary-logo {
+    .logo {
         width: 3.1em;
+    }
+    .login-embed input {
+        display: none;
+    }
+}
+
+@media all and (max-width: 479px) {
+    .topbar {
+        flex-flow: column;
     }
 }

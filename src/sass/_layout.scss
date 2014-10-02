@@ -1,0 +1,90 @@
+body, .msgbar, .topbar, .header, .content, .sitemap,
+.msgbar-wrapper, .topbar-wrapper, .header-wrapper, .content-wrapper, .sitemap-wrapper, .footer-wrapper {
+    display: flex;
+}
+
+body {
+    flex-direction: column;
+}
+
+.msgbar-wrapper, .topbar-wrapper, .header-wrapper, .content-wrapper, .sitemap-wrapper, .footer-wrapper {
+    justify-content: center;
+}
+
+.msgbar, .topbar, .header, .content, .sitemap, .footer {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0.5em;
+}
+
+.msgbar {
+    align-items: center;
+    justify-content: center
+}
+
+.msg, .gmt-clock {
+    padding: .5em .5em .5em 0;
+}
+
+.topbar {
+    justify-content: space-between;
+}
+
+.msgbar, .topbar, .header, .sitemap {
+    flex-flow: row wrap;
+}
+
+.gmt-clock, .language-selector {
+    flex: 1;
+}
+
+.gmt-clock {
+    text-align: center;
+}
+
+.language-selector select {
+    width: 100%;
+}
+
+.login-embed > * {
+    display: flex;
+}
+
+.login-embed {
+    display: flex;
+    flex: 2;
+}
+
+.login-embed input {
+    flex: 2
+}
+
+.login-embed button {
+    flex: 1;
+}
+
+.login-embed input {
+    margin-right: 0.5em;
+}
+
+
+.header {
+    height: 4.1em;
+}
+
+.logo {
+    width: 100%;
+}
+
+.content {
+    flex: 1;
+    flex-direction: column;
+}
+
+.readable {
+    max-width: 700px;
+}
+
+.readable img {
+    width: 100%;
+}

@@ -87,7 +87,25 @@ button, input[type=button], input[tye=submit], button.button, a.button {
         color: $COLOR_WHITE;
         background-color: $COLOR_BLUE;
     }
-    &:focus {
+    &:focus, select {
         outline: none;
+    }
+}
+
+.login-button {
+    background: inherit;
+    color: $COLOR_WHITE;
+    border: 2px solid;
+    &:hover {
+        color: $COLOR_BLUE;
+        background: $COLOR_WHITE;
+        border-color: $COLOR_WHITE;        
+    }
+}
+
+.msg-button {
+    background: inherit;
+    &:hover {
+        background: $COLOR_BLUE;
     }
 }
