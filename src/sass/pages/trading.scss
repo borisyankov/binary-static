@@ -60,7 +60,7 @@
       z-index: 10;
       margin: 0;
       .tab-content {
-         border: 1px solid $COLOR_DARK_GRAY;
+         border: 1px solid $COLOR_GRAY;
          min-height: 369px;
       }
       .tab-content-wrapper, .tab-content {
@@ -73,7 +73,7 @@
             padding: 0;
             .tm-ul-2 {
               top: 27px;
-              margin-top: 0;
+              margin-top: 5px;
             }
             a.tm-a {
               padding: 0 5px 0 5px;
@@ -359,7 +359,7 @@
 .price_box {
   padding: 0;
   margin-top: 20;
-  border: 1px solid $COLOR_DARK_GRAY;
+  border: 1px solid $COLOR_GRAY;
   a {
     color: $COLOR_BLUE;
   }

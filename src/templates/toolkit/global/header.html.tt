@@ -29,7 +29,7 @@
                 <div class='grd-grid-3 grd-grid-mobile-2 grd-grid-phablet-1'>
                     <a id="logo" href="[% request.url_for('/') %]"[% target %]>
                         <div class='grd-grid-3 grd-grid-mobile-12 grd-grid-phablet-12 grd-no-gutter'>
-                            <img class='responsive' src="[% request.url_for('images/common/binary-logo-full.svg') %]"/>
+                            <img src="[% request.url_for('images/common/binary-logo-full.svg') %]"/>
                         </div>
                     </a>
                 </div>
