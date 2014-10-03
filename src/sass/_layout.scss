@@ -94,9 +94,8 @@ body {
     width: 100%;
 }
 
-.sitemap {
-    display: flex;
-    justify-content: space-between;
+.sitemal li {
+    flex: 1;
 }
 
 .sitemap li > * {

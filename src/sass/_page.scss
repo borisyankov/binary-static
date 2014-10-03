@@ -12,7 +12,7 @@
 }
 
 .footer-wrapper {
-    background: $COLOR_BLUE;
+    background: $COLOR_DARK_BLUE;
 }
 
 .topbar, .sitemap h3, .sitemap a, .sitemap a:visited, .footer {
@@ -20,7 +20,7 @@
 }
 
 .sitemap-wrapper {
-    background: $COLOR_DARK_BLUE;
+    background: $COLOR_BLUE;
 }
 
 .sitemap {
@@ -30,6 +30,14 @@
     a {
         font-size: $FONT_SIZE_S;
     }
+}
+
+.sitemap * {
+    font-weight: normal;
+}
+
+.regulatory {
+    font-size: $FONT_SIZE_XS;
 }
 
 .logo {

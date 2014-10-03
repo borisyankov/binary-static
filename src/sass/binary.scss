@@ -3,10 +3,11 @@
 /* common styles */
 @import "reset";
 @import "mixin";
-@import "common";    // main tag styles
-@import "controls";  // form elements and buttons
-@import "page";      // header, footer and page content styles
-@import "layout";    // only layout styles that are needeed
+@import "common";        // main tag styles
+@import "controls";      // form elements and buttons
+@import "page";          // header, footer and page content styles
+@import "layout";        // only layout styles that are needeed
+@import "compatibility"; // make old version not crappy, during refactoring
 
 /* main style */
 @import "common/header";
