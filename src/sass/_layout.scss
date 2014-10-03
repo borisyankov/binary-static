@@ -14,11 +14,18 @@ body {
 .msgbar, .topbar, .header, .content, .sitemap, .footer {
     max-width: 1200px;
     width: 100%;
+}
+
+.topbar {
+    padding: .25em;
+}
+
+.msgbar, .header, .content, .sitemap, .footer {
     padding: .5em;
 }
 
 .content {
-    padding: 2em .5em;
+    padding: 2.5em .5em;
 }
 
 .msgbar {
@@ -78,7 +85,7 @@ body {
 
 
 .header {
-    height: 4.1em;
+    height: 3em;
 }
 
 .logo {

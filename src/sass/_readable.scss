@@ -10,7 +10,7 @@
     }
 
     blockquote, img {
-        padding: .5em 10%;
+        padding: 0 10%;
     }
 
     blockquote p {
@@ -33,13 +33,13 @@
         margin: 0 auto;
     }
 
-    ul {
+    p ul {
         padding-left: 1.5em;
         list-style: disc outside none;
     }
 
-    ul li {
-        line-height: 1.5;
+    p ul li {
+        line-height: 1.3;
         margin-bottom: .5em;
     }
 }

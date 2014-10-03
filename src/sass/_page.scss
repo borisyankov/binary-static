@@ -42,5 +42,8 @@
 
 .logo {
     display: block;
-    background: url('https://static.binary.com/images/common/binary-logo-full.svg') no-repeat left center;
+    background-image: url('https://static.binary.com/images/common/binary-logo-full.svg');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
 }
