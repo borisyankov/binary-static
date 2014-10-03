@@ -14,7 +14,11 @@ body {
 .msgbar, .topbar, .header, .content, .sitemap, .footer {
     max-width: 1200px;
     width: 100%;
-    padding: 0.5em;
+    padding: .5em;
+}
+
+.content {
+    padding: 2em .5em;
 }
 
 .msgbar {
@@ -86,15 +90,7 @@ body {
     flex-direction: column;
 }
 
-.readable {
-    max-width: 700px;
-}
-
-.readable img {
-    width: 100%;
-}
-
-.sitemal li {
+.sitemap li {
     flex: 1;
 }
 

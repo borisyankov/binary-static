@@ -8,6 +8,7 @@
 @import "page";          // header, footer and page content styles
 @import "layout";        // only layout styles that are needeed
 @import "compatibility"; // make old version not crappy, during refactoring
+@import "readable";      // styling for articles nad long-form copy
 
 /* main style */
 @import "common/header";

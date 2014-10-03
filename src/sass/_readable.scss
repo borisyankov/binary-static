@@ -1,0 +1,45 @@
+.readable {
+    max-width: 700px;
+
+    header {
+        text-align: center;
+    }
+
+    h2 {
+        margin-top: 1.5em;
+    }
+
+    blockquote, img {
+        padding: .5em 10%;
+    }
+
+    blockquote p {
+        font-weight: bold;
+        text-align: center;
+        quotes: '\201D' '\201D' '\2019' '\2019';
+
+        &:before {
+            content: open-quote;
+        }
+
+        &:after {
+            content: close-quote;
+        }
+    }
+
+    img {
+        display: block;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    ul {
+        padding-left: 1.5em;
+        list-style: disc outside none;
+    }
+
+    ul li {
+        line-height: 1.5;
+        margin-bottom: .5em;
+    }
+}
