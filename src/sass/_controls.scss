@@ -2,7 +2,7 @@ select, textarea, input:not([type=submit]), input:not([type=button])  {
     background: $COLOR_WHITE;
     border: 1px solid $COLOR_BLUE;
     border-radius: $BORDER_RADIUS;
-    padding: 0.2em 0.5em;
+    padding: $CONTROL_PADDING;
 }
 
 input, button, textarea, select, optgroup, option {
@@ -80,7 +80,7 @@ button, input[type=button], input[tye=submit], button.button, a.button {
     border: 2px solid $COLOR_BLUE;
     font-weight: bold;
     text-transform: uppercase;
-    padding: 10px 15px 10px 15px;
+    padding: $CONTROL_PADDING;
     display: inline-block;
     cursor: pointer;
     &:hover, &:active {
@@ -99,7 +99,7 @@ button, input[type=button], input[tye=submit], button.button, a.button {
     &:hover {
         color: $COLOR_BLUE;
         background: $COLOR_WHITE;
-        border-color: $COLOR_WHITE;        
+        border-color: $COLOR_WHITE;
     }
 }
 
@@ -108,4 +108,8 @@ button, input[type=button], input[tye=submit], button.button, a.button {
     &:hover {
         background: $COLOR_BLUE;
     }
+}
+
+select {
+    -webkit-appearance: none;
 }

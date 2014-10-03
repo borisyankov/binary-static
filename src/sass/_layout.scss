@@ -30,6 +30,10 @@ body {
     justify-content: space-between;
 }
 
+.msgbar, .topbar {
+    font-size: $FONT_SIZE_S;
+}
+
 .msgbar, .topbar, .header, .sitemap {
     flex-flow: row wrap;
 }
@@ -53,6 +57,7 @@ body {
 .login-embed {
     display: flex;
     flex: 2;
+    max-width: 480px;
 }
 
 .login-embed input {
@@ -87,4 +92,32 @@ body {
 
 .readable img {
     width: 100%;
+}
+
+.sitemap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sitemap li > * {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+}
+
+.social, .licenses {
+    flex: 1;
+    display: flex;
+}
+
+.regulatory {
+    flex: 4;
+}
+
+.social a {
+    width: 20%;
 }

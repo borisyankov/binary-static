@@ -2,13 +2,13 @@
     .logo {
         width: 3.1em;
     }
-    .login-embed input {
-        display: none;
-    }
 }
 
 @media all and (max-width: 479px) {
-    .topbar {
-        flex-flow: column;
+    .login-embed {
+        flex: 1;
+    }
+    .login-embed input, .sitemap {
+        display: none;
     }
 }
