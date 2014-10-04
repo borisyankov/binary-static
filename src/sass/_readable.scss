@@ -9,37 +9,39 @@
         margin-top: 1.5em;
     }
 
-    blockquote, img {
-        padding: 0 10%;
-    }
-
-    blockquote p {
-        font-weight: bold;
-        text-align: center;
-        quotes: '\201D' '\201D' '\2019' '\2019';
-
-        &:before {
-            content: open-quote;
+    article {
+        blockquote, img {
+            padding: 0 10%;
         }
 
-        &:after {
-            content: close-quote;
+        blockquote p {
+            font-weight: bold;
+            text-align: center;
+            quotes: '\201D' '\201D' '\2019' '\2019';
+
+            &:before {
+                content: open-quote;
+            }
+
+            &:after {
+                content: close-quote;
+            }
         }
-    }
 
-    img {
-        display: block;
-        max-width: 100%;
-        margin: 0 auto;
-    }
+        img {
+            display: block;
+            max-width: 100%;
+            margin: 0 auto;
+        }
 
-    p ul {
-        padding-left: 1.5em;
-        list-style: disc outside none;
-    }
+        ul {
+            padding-left: 1.5em;
+            list-style: disc outside none;
+        }
 
-    p ul li {
-        line-height: 1.3;
-        margin-bottom: .5em;
+        li {
+            line-height: 1.3;
+            margin-bottom: .5em;
+        }
     }
 }
