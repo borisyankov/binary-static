@@ -1,10 +1,16 @@
 @media all and (max-width: 759px) {
+    html {
+        font-size: 16px;
+    }
     .logo {
         width: 3.1em;
     }
 }
 
 @media all and (max-width: 479px) {
+    html {
+        font-size: 14px;
+    }
     .login-embed {
         flex: 1;
     }

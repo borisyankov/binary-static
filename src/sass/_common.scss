@@ -5,6 +5,10 @@
     transition: all 0.25s ease;
 }
 
+html {
+    font-size: 18px; // base font-size, used with rem for responsive typography
+}
+
 body {
     background: $COLOR_WHITE;
     color: $COLOR_LIGHT_BLACK;
