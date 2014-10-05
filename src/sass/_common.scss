@@ -170,31 +170,7 @@ pre {
 .required_asterisk {
     color: $COLOR_ORANGE;
 }
-/*
-.button-disabled {
-    cursor: pointer;
-    margin-bottom: 0.5em;
-    &:hover {
-        color: $COLOR_GRAY_SHADE;
-        background: $COLOR_LIGHT_GRAY;
-        text-decoration: none;
-    }
-    span, button {
-        @include link-button;
-        overflow: visible;
-        white-space: nowrap;
-        border: 0;
-        font-weight: bold;
-        color: $COLOR_GRAY_SHADE;
-        background: $COLOR_LIGHT_GRAY;
-        cursor: default;
-        &:hover, &:active {
-            color: $COLOR_GRAY_SHADE;
-            background: $COLOR_LIGHT_GRAY;
-        }
-    }
-}
-*/
+
 .error-msg {
     color: $COLOR_RED;
     font-style: italic;

@@ -72,20 +72,16 @@
           > li {
             padding: 0;
             .tm-ul-2 {
-              top: 27px;
               margin-top: 5px;
             }
             a.tm-a {
-              padding: 0 5px 0 5px;
+              padding: 5px 10px;
               width: auto;
               font-size: 85%;
             }
           }
         }
       }
-    }
-    .unicode-info-icon {
-        font-size: $FONT_SIZE_S;
     }
     #bet_calculation_container {
       margin: 0;
@@ -366,7 +362,7 @@
 }
 
 .price_box_first {
-  margin-top: 26px;
+  margin-top: 40px;
   margin-bottom: 20px;
 }
 

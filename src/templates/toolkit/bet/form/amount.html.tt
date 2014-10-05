@@ -4,10 +4,10 @@
     </select>
 </span>
 <span class='grd-grid-7 grd-parent'>
-    <span class='grd-grid-3'>
+    <span class='grd-grid-4'>
         [%- IF currencies.size > 1 -%]
           <select id="bet_currency" name="currency">
-              [%- FOREACH currency IN currencies -%] 
+              [%- FOREACH currency IN currencies -%]
               <option value="[%- currency -%]" [% IF currency == selected_currency %] selected="selected" [% END %]>[%- currency -%]</option>
               [%- END -%]
           </select>

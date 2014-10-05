@@ -78,7 +78,7 @@ button, input[type=button], input[tye=submit], button.button, a.button {
     background: $COLOR_WHITE;
     border-radius: $BORDER_RADIUS;
     border: 2px solid $COLOR_BLUE;
-    font-weight: bold;
+    font-weight: normal;
     text-transform: uppercase;
     padding: $CONTROL_PADDING;
     display: inline-block;
@@ -116,4 +116,5 @@ select {
     background-position: right center;
     background-repeat: no-repeat;
     background-size: contain;
+    padding-right: 2em;
 }
