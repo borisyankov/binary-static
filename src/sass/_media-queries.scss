@@ -14,7 +14,10 @@
     .login-embed {
         flex: 1;
     }
-    .login-embed input, .sitemap {
+    .login-embed input, .sitemap, .footer {
         display: none;
+    }
+    .header-wrapper {
+        order: 5;
     }
 }
