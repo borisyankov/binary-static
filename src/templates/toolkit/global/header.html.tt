@@ -63,11 +63,7 @@
                             <input name="loginid" type="text" placeholder="[% l("Login ID") %]" />
                             <input name="password" type="password" placeholder="[% l("Password") %]" />
                             <input type="submit" value="[% l("Log in") %]" />
-                        </span>
-                        <span id="login-links">
-                            <a class="pjaxload" id="register" href="[% request.url_for('open_account.cgi') %]">[% l("Register") %]</a>
-                            <a class="pjaxload" id="lost-password" href="[% request.url_for('lost_password.cgi') %]">[% l("Lost password?") %]</a>
-                        </span>
+                        </span>                        
                     </form>
                 </div>
                 <div class='grd-grid-1 grd-hide grd-show-mobile grd-no-gutter-mobile grd-show-phablet'>

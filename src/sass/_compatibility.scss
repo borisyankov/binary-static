@@ -18,3 +18,15 @@
 .button {
     cursor: pointer;
 }
+
+#logo img {
+    height: 40px;
+}
+
+#login-links {
+    display: none;
+}
+
+#topbar {
+    font-size: $FONT_SIZE_S;
+}

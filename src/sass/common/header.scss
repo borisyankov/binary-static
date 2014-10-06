@@ -73,11 +73,8 @@
       margin-top: 10px;
   }
   #login-form {
+    margin-top: 5px;
     text-align: right;
-    #login-links {
-      margin: 5px 0 0 0;
-      display: block;
-    }
     input {
       display: inline;
       border-radius: $BORDER_RADIUS;
@@ -87,7 +84,7 @@
     input[type=text], input[type=password] {
       background: #FEFEFE;
       border: 0;
-      width: 50px;
+      width: 80px;
       color: $COLOR_BLACK;
       padding: 4px;
     }
@@ -146,13 +143,13 @@
       a {
         vertical-align: middle;
         display: table-cell;
-        height: 50px;
-        max-width: 110px;
+        height: 35px;
+        max-width: 150px;
         color: $COLOR_WHITE;
         text-decoration: none;
         letter-spacing: 0;
         text-transform: uppercase;
-        padding: 0px 5px;
+        padding: 0px 10px;
         word-wrap: break-word;
       }
     }
