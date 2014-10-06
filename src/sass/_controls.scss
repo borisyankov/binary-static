@@ -86,7 +86,7 @@ button, input[type=button], input[tye=submit], button.button, a.button {
         color: $COLOR_WHITE;
         background-color: $COLOR_BLUE;
     }
-    &:focus, select {
+    &:focus, select:focus {
         outline: none;
     }
 }
@@ -115,5 +115,7 @@ select, #tradingdate, .date-picker, .hasDatepicker {
     background-position: right center;
     background-repeat: no-repeat;
     background-size: contain;
+    background-color: inherit;
     padding-right: 2em;
+    cursor: pointer;
 }
