@@ -63,7 +63,6 @@
 
 #header {
   background: $COLOR_BLUE;
-  border-top: 2px solid $COLOR_BLUE_SHADE;
   border-bottom: 4px solid $COLOR_ORANGE;
   a {
     color: $COLOR_WHITE;
@@ -84,26 +83,13 @@
     input[type=text], input[type=password] {
       background: #FEFEFE;
       border: 0;
-      width: 80px;
+      width: 70px;
       color: $COLOR_BLACK;
       padding: 4px;
     }
-    input[type=submit] {
-      @include link-button;
-      border: 0;
-      text-transform: uppercase;
-      padding: 5px 3px;
-      word-break: break-all;
-      white-space: pre-wrap;
-      max-width: 60px;
-    }
+
   }
-  a#lost-password, a#register {
-    display: inline-block;
-    margin: 0 0 0 10px;
-    line-height: 170%;
-    font-size: $FONT_SIZE_S;
-  }
+
   #logout {
     text-align: right;
     color: $COLOR_WHITE;

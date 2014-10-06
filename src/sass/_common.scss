@@ -2,7 +2,7 @@
 
 *, *:after, *:before {
     box-sizing: border-box;
-    transition: all 0.25s ease;
+    transition: color 0.3s, background-color 0.3s;
 }
 
 html {
