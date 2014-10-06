@@ -319,7 +319,7 @@
 #chart_period {
   z-index: 2;
   li {
-    margin-right: 0px;
+    margin-left: 20px;
   }
 }
 
@@ -506,10 +506,6 @@ label#from_strike_label,
 label#from_strike_percent,
 label#from_expiry_label {
   width: auto;
-}
-
-.hasDatepicker {
-  width: 95px;
 }
 
 div#price_table_notes {
