@@ -23,7 +23,7 @@
                     <div class="rbox-content">
                         [% FOREACH underlying_input IN template_data.underlying_input %]
                             <div class="underlying_group">
-                                <h6 id="[% underlying_input.group_id %]">[% underlying_input.title %]</h6>
+                                <h3 id="[% underlying_input.group_id %]">[% underlying_input.title %]</h3>
                                 <ul id="opt_[% underlying_input.group_id %]" class="not-li[% IF underlying_input.selected %] selected[% END %]">
                                 [% FOREACH input IN underlying_input.inputs %]
                                     <li>[% input.input %] [% input.label %]</li>
