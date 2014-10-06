@@ -137,9 +137,8 @@
       background: $COLOR_LIGHT_GRAY;
       border-radius: $BORDER_RADIUS $BORDER_RADIUS 0 0;
       margin: 0 3px 0 0;
-      padding: 0 10px;
       a, a:visited {
-        padding: 0;
+        padding: 10px 20px;
         text-decoration: none;
         color: $COLOR_BLACK;
         background: transparent;
@@ -152,7 +151,6 @@
         background: none;
         color: $COLOR_WHITE;
         text-decoration: none;
-        padding: 0;
       }
       span.a-active {
           line-height: 2;

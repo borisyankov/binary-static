@@ -19,10 +19,10 @@
                     <label for="duration_amount">[% l('Duration') %]:</label>
                 </span>
                 <span id="expiry_type_duration" class='grd-grid-9 grd-parent'>
-                    <span class='grd-grid-4'>
+                    <span class='grd-grid-3'>
                         <input type="text" name="duration_amount" id="duration_amount" size="4" maxlength="5" value="[% duration_selected.duration_amount %]"/>
                     </span>
-                    <span class='grd-grid-5'>
+                    <span class='grd-grid-4'>
                         <select id="duration_units" name="duration_units">
                             [% FOREACH pair IN duration_options.pairs %]
                                 [% FOREACH duration_option IN pair.value %]
