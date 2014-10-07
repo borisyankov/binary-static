@@ -20,4 +20,17 @@
     .header-wrapper {
         order: 5;
     }
+    .sticky {
+        bottom: 0;
+    }
+    .msgbar-wrapper {
+        display: none;
+    }
+    .header-wrapper {
+        border-bottom: none;
+        border-top: 2px solid $COLOR_ORANGE;
+    }
+    .content-wrapper {
+        padding-top: 0;
+    }
 }

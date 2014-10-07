@@ -30,3 +30,8 @@
 #topbar {
     font-size: $FONT_SIZE_S;
 }
+
+#residence, #language_select select {
+    background-color: white;
+    padding: 2px 5px;
+}

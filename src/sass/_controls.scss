@@ -69,7 +69,7 @@ label {
     padding: 10px;
 }
 
-button, input[type=button], input[tye=submit], button.button, a.button {
+button, input[type=button], input[type=submit], button.button, a.button {
     color: $COLOR_BLUE;
     text-decoration: none;
     text-align: center;
@@ -79,16 +79,21 @@ button, input[type=button], input[tye=submit], button.button, a.button {
     border: 2px solid $COLOR_BLUE;
     font-weight: normal;
     text-transform: uppercase;
-    padding: $CONTROL_PADDING;
+    padding: 0 1em;
+    min-height: 2em;
     display: inline-block;
     cursor: pointer;
     &:hover, &:active {
         color: $COLOR_WHITE;
         background-color: $COLOR_BLUE;
     }
-    &:focus, select:focus {
+    &:focus {
         outline: none;
     }
+}
+
+select:focus {
+    outline: none;
 }
 
 .login-button, #login-fields input[type=submit] {
