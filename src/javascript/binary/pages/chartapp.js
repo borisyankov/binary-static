@@ -1,4 +1,4 @@
-﻿(function () {
+﻿onLoad.queue(function () {
     'use strict';
 
     var isMac = /Mac/i.test(navigator.platform),
@@ -26,4 +26,4 @@
             alert('The charting app is not available on mobile devices!');
         }
     });
-})();
+});

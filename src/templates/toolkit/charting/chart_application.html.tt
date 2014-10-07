@@ -14,10 +14,10 @@
             </div>
             <div class="grd-with-padding grd-centered center">
                 <a id="download-app" class="button" href="https://downloads.binary.com/binary-charts.jnlp">
-                    <span>[% l('Download')%]</span>
+                    [% l('Download')%]
                 </a>
                 <a id="install-java" class="button" href="#" style="display: none">
-                    <span>[% l('Install Java')%]</span>
+                    [% l('Install Java')%]
                 </a>
             </div>
         </fieldset>
