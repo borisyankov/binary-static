@@ -26,15 +26,15 @@ body {
 }
 
 .topbar {
-    padding: .25em 1.5em;
+    padding: .25em $PAGE_PADDING;
 }
 
-.msgbar, .header, .content, .sitemap, .footer {
-    padding: .5em 1.5em;
+.msgbar, .content, .sitemap, .footer {
+    padding: .5em $PAGE_PADDING;
 }
 
 .content {
-    padding: 2.5em 1.5em;
+    padding: 2.5em $PAGE_PADDING;
 }
 
 .msgbar {
@@ -71,8 +71,9 @@ body {
 .nav li {
     cursor: pointer;
     display: flex;
+    padding: 1em 0;    
+    flex-grow: 1;
     justify-content: center;
-    padding: 0.5em;
 }
 
 .nav2nd {
@@ -105,10 +106,12 @@ body {
 
 .header {
     height: 3em;
+    padding: 0 $PAGE_PADDING;
 }
 
-.logo {
-    width: 9em;
+.logo, .language-selector, .login-button {
+    height: 2.5em;
+    margin: .25em;
 }
 
 .content {

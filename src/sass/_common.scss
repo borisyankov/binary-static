@@ -306,6 +306,6 @@ ul.bulleted li {
     color: white;
 }
 
-.nav li:hover {
-    background: $COLOR_ORANGE;
+.nav li:hover, .language-selector:hover {
+    background-color: $COLOR_ORANGE;
 }
