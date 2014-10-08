@@ -63,8 +63,11 @@ body {
 }
 
 nav {
-    display: flex;
     flex: 1;
+}
+
+nav ul {
+    display: flex;
     justify-content: space-around;
 }
 
