@@ -39,11 +39,9 @@
 /* media queries */
 @import "media-queries";
 
-/* external stylesheets
- * ===================================== */
-/* date picker */
-@import "external/jquery.ui.timepicker.scss";
 
-/* Grid layout system */
+@import "external/syntax-highlighting";
+@import "external/jquery.ui.timepicker";
+
 @import "external/grid";
 @import "external/mmenu/jquery.mmenu.all";

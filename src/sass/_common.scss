@@ -84,6 +84,19 @@ pre {
     overflow: scroll;
 }
 
+.code-sample, code {
+    background-color: $COLOR_LIGHT_GRAY;
+    overflow-x: auto;
+    font-family: monospace;
+    white-space: pre;
+    line-height: 1.5;
+}
+
+pre {
+    padding: .5em 1em;
+    background-color: $COLOR_LIGHT_GRAY;
+}
+
 /* form styles */
 .extra_tooltip_container {
     float: left;
