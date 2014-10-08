@@ -87,12 +87,9 @@ button, input[type=button], input[type=submit], button.button, a.button {
         color: $COLOR_WHITE;
         background-color: $COLOR_BLUE;
     }
-    &:focus {
-        outline: none;
-    }
 }
 
-select:focus {
+button:focus, input:focus, a:focus, select:focus {
     outline: none;
 }
 

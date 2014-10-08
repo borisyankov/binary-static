@@ -62,6 +62,7 @@
 
 }
 
+// workaround for a bug in Firefox. Fix for the bug is to be released in Firefox 35
 @-moz-document url-prefix() {
     select {
         background-image: none;

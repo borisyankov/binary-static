@@ -118,8 +118,6 @@
     padding-top: 2px;
   }
   select {
-    background: $COLOR_WHITE;
-    border: 1px solid $COLOR_GRAY;
     margin-right: 5px;
   }
   input[type="text"] {
@@ -177,31 +175,41 @@
     border: none;
     ul {
         li {
-            @include chart-day-selector;
+            float: left;
+            list-style-image: none;
+            list-style-position: inherit;
+            label.button {
+              width: auto;
+              span.button {
+                background: transparent;
+                border: none;
+                border-bottom: 2px solid $COLOR_GRAY_SHADE;
+                border-radius: 0;
+                color: $COLOR_BLACK;
+                font-weight: normal;
+                &.disabled {
+                  color: $COLOR_ORANGE;
+                  font-weight: bold;
+                  border-bottom: 4px solid $COLOR_ORANGE;
+                }
+              }
+            }
         }
     }
   }
 }
 
-#form_chart_director h5 {
-  padding: 8px;
-}
-
 #form_chart_director {
-    ul.tm-ul {
-      margin: 0;
-        li.tm-li {
-            margin: 0;
-            margin-right: 0.2em;
-            font-size: $FONT_SIZE_S;
-            padding: 0;
-            a.tm-a {
-                padding: 0 1em;
-                display: block;
-                span {
-                    display: inline-block;
-                    right: 0;
-                }
+    li.tm-li {
+        margin: 0;
+        margin-right: 0.2em;
+        padding: $CONTROL_PADDING;
+        a.tm-a {
+            padding: 0 1em;
+            display: block;
+            span {
+                display: inline-block;
+                right: 0;
             }
         }
     }
