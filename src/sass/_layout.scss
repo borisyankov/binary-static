@@ -63,10 +63,14 @@ body {
 }
 
 nav {
-    display: flex;
     flex: 1;
+}
+
+nav ul {
+    display: flex;
     justify-content: space-around;
 }
+
 
 nav li {
     cursor: pointer;
@@ -74,14 +78,24 @@ nav li {
     padding: 1em 0;
     flex-grow: 1;
     justify-content: center;
+    flex-direction: column;
 }
 
 .nav2nd {
     display: none;
 }
 
-.nav1st:hover > ul {
-    //display: block;
+.nav2nd li {
+    text-align: center;
+    padding: 1em;
+}
+
+.nav2nd li:hover {
+    background: $COLOR_BLUE;
+}
+
+.nav1st li:hover > ul {
+    display: block;
 }
 
 
@@ -117,6 +131,7 @@ nav li {
 .logo {
     margin-left: 0;
     margin-right: 1em;
+    width: 195px;
 }
 
 .content {
