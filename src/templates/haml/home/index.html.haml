@@ -118,8 +118,7 @@
               %p= l('Make your trade')
         #how-it-works-4.grd-grid-3.grd-grid-phablet-12.grd-centered-phablet
           %p= l('No risk, $10K virtual money account')
-          %a.pjaxload{:href => url_for('linkto_acopening.cgi?actype=virtual'), :class => 'button'}
-          = l('Try it now')
+          %a.pjaxload{:href => url_for('linkto_acopening.cgi?actype=virtual'), :class => 'button'}= l('Try it now')
 #returns
   .grd-container
     #prices.grd-grid-6.grd-grid-mobile-12.grd-parent
@@ -134,13 +133,11 @@
         %h1= l('[_1]', '1000%')
         = l('return on trades you make')
       .button.grd-grid-12.grd-with-padding
-        %a.pjaxload{:href => url_for('trade.cgi'), :class =>  'button'}
-          %span= l('View prices')
+        %a.pjaxload{:href => url_for('trade.cgi'), :class =>  'button'}= l('View prices')
     #try-now.grd-grid-6.grd-grid-mobile-12.grd-parent
       .figures.grd-grid-6
         != l('More than [_1] trades available', '<h1>1,000,000</h1>')
       .figureses.grd-grid-6
         != l('Under [_1] for market-leading returns', '<h1>$1</h1>')
       .button.grd-grid-12.grd-with-padding
-        %a.pjaxload{:href => url_for('open_account.cgi'), :class => 'button'}
-          %span= l('Create free account')
+        %a.pjaxload{:href => url_for('open_account.cgi'), :class => 'button'}= l('Create free account')

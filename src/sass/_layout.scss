@@ -62,13 +62,13 @@ body {
     text-align: center;
 }
 
-.nav {
+nav {
     display: flex;
     flex: 1;
     justify-content: space-around;
 }
 
-.nav li {
+nav li {
     cursor: pointer;
     display: flex;
     padding: 1em 0;
@@ -80,7 +80,7 @@ body {
     display: none;
 }
 
-.nav > li:hover > ul {
+.nav1st:hover > ul {
     //display: block;
 }
 

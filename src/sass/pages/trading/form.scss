@@ -1,16 +1,9 @@
 form#profit-table-form,
 form#tradingform {
-    fieldset {
-        border: 0;
-        background-color: $COLOR_LIGHT_GRAY;
-        legend {
-            display: none;
-        }
-    }
     span {
         padding: 10px;
     }
-    div.row {
+    .row {
         clear: none;
         float: left;
         margin: -3px 8px 0 8px;
