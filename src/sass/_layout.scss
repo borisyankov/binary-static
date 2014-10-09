@@ -81,8 +81,14 @@ nav li {
     flex-direction: column;
 }
 
+.nav1st li {
+    text-align: center;
+}
+
 .nav2nd {
-    display: none;
+    opacity: 0;
+    position: absolute;
+    margin-top: 20px;
 }
 
 .nav2nd li {
@@ -95,9 +101,8 @@ nav li {
 }
 
 .nav1st li:hover > ul {
-    display: block;
+    opacity: 1;
 }
-
 
 .login-embed {
     display: flex;
