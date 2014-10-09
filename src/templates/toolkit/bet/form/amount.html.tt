@@ -15,7 +15,7 @@
           [% currencies.first %] <input type="hidden" name="currency" value="[%- currencies.first -%]" />
         [%- END -%]
     </span>
-    <span class='grd-grid-9'>
+    <span class='grd-grid-8'>
         <input id="amount" name="amount" size=7 value="[%- amount -%]">
     </span>
 </span>
