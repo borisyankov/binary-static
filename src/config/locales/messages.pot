@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: cgi/top_up_virtual.cgi:84
+#: cgi/top_up_virtual.cgi:85
 msgid " has been credited to your Virtual money account"
 msgstr ""
 
@@ -289,7 +289,7 @@ msgstr ""
 msgid "'Get X when you deposit Y' bonus code"
 msgstr ""
 
-#: web/bin/JavascriptCompress.pm:58
+#: web/bin/JavascriptCompress.pm:54
 msgid "(Bejing/CST -8 hours)"
 msgstr ""
 
@@ -301,7 +301,7 @@ msgstr ""
 msgid "(One) Touch trades"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:319
+#: cgi/subs/subs_BOMFeed_history.pm:320
 msgid "(delayed)"
 msgstr ""
 
@@ -361,7 +361,7 @@ msgstr ""
 msgid "2w"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:1382
+#: cgi/subs/subs_forms.pm:1385
 msgid "3 - 30 characters and alphanumeric only."
 msgstr ""
 
@@ -377,7 +377,7 @@ msgstr ""
 msgid "4. Choose your Payout"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:612
+#: cgi/subs/subs_forms.pm:615
 msgid "5 - 25 characters and alphanumeric only."
 msgstr ""
 
@@ -389,7 +389,7 @@ msgstr ""
 msgid "6h"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:1747
+#: cgi/subs/subs_forms.pm:1750
 msgid "<br>Your Cashier and Settings sections are locked as per your request</strong> - if you wish to unlock them, please enter the password."
 msgstr ""
 
@@ -397,7 +397,7 @@ msgstr ""
 msgid "<option value=\"\"></option><option value=\"01\">Jan</option><option value=\"02\">Feb</option><option value=\"03\">Mar</option><option value=\"04\">Apr</option><option value=\"05\">May</option><option value=\"06\">Jun</option><option value=\"07\">Jul</option><option value=\"08\">Aug</option><option value=\"09\">Sep</option><option value=\"10\">Oct</option><option value=\"11\">Nov</option><option value=\"12\">Dec</option>"
 msgstr ""
 
-#: cgi/lost_password.cgi:352
+#: cgi/lost_password.cgi:355
 msgid "<p style='color: red'> For security reasons this link will be invalidated after this.</p>Please confirm for which of these accounts you want to reset your password:"
 msgstr ""
 
@@ -426,7 +426,7 @@ msgid ""
 "    <p>Binary options trading is a high profit market where there's a place for everyone [including you] to take a cut of the pie!</p>"
 msgstr ""
 
-#: cgi/lost_password.cgi:413
+#: cgi/lost_password.cgi:416
 msgid "<p>Please take a moment to verify your identity by providing us with the correct answer to your secret question and date of birth, below.</p>"
 msgstr ""
 
@@ -436,7 +436,7 @@ msgid "<p>Sorry, an error has occurred. Please <a href=\"%1\">try accessing our 
 msgstr ""
 
 #. (localize('New Password Request')
-#: cgi/lost_password.cgi:125
+#: cgi/lost_password.cgi:128
 msgid "<p>Thank you. You're one step closer to being done!</p><p>All you need to do is follow the instructions in the email we just sent you.<br /> The e-mail subject-line reads, <strong>\"%1\"</strong>.</p><p>Remember, if you don't receive an email from us in the next few minutes, please check your junk/spam mail folder or <a href=\"%2\"><strong>contact us</strong></a> should you need further assistance.</p>"
 msgstr ""
 
@@ -524,7 +524,7 @@ msgid "<strong>Higher/Lower</strong> - where you can profit from the market endi
 msgstr ""
 
 #. ($website->display_name)
-#: cgi/paymentagent_withdraw.cgi:107 cgi/paymentagent_withdraw.cgi:92
+#: cgi/paymentagent_withdraw.cgi:109 cgi/paymentagent_withdraw.cgi:94
 msgid "<strong>IMPORTANT DISCLAIMER</strong> - %1 is not affiliated with any of the Payment Agents listed above. Each Payment Agent operates as an independent service provider and is not endorsed, guaranteed or otherwise approved by %1. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to check the credentials of Payment Agents before sending them any money. %1 shall not in any circumstance be held responsible for transactions made between customers and Payment Agents."
 msgstr ""
 
@@ -569,7 +569,7 @@ msgstr ""
 msgid "<strong>No surprises</strong> - you will never have margin calls, gap risk, slippage costs, hidden fees or commissions."
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:2825
+#: cgi/subs/subs_forms.pm:2828
 msgid "<strong>Note:</strong> to minimize the file size, please save the image in PNG or JPEG format."
 msgstr ""
 
@@ -719,7 +719,7 @@ msgstr ""
 msgid "A Phonegap mobile application for Binary.com"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:564 cgi/subs/subs_graphs_chartdirector.pm:498
+#: cgi/subs/subs_BOMFeed_history.pm:565 cgi/subs/subs_graphs_chartdirector.pm:498
 msgid "A Simple moving average line can be enhanced by putting a percentage envelope on either side of it. Our lines are displayed 20% above and 10% below the moving average line."
 msgstr ""
 
@@ -755,11 +755,11 @@ msgstr ""
 msgid "A derivative is a financial instrument whose value is determined by reference to an underlying market. Derivatives are commonly traded in the inter-bank market, and binaries are one of the simplest forms of derivatives."
 msgstr ""
 
-#: cgi/emailus.cgi:186
+#: cgi/emailus.cgi:187
 msgid "A member of our Customer Support Team will contact you shortly."
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:488 cgi/subs/subs_graphs_chartdirector.pm:443
+#: cgi/subs/subs_BOMFeed_history.pm:489 cgi/subs/subs_graphs_chartdirector.pm:443
 msgid "A momentum indicator showing the percent rate-of-change of a triple exponentially smoothed moving average. Like other oscillators, TRIX oscillates around a zero line."
 msgstr ""
 
@@ -779,7 +779,7 @@ msgstr ""
 msgid "A problem occurred"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:393
+#: cgi/subs/subs_BOMFeed_history.pm:394
 msgid "A problem occurred while connecting to the server. Please try again later."
 msgstr ""
 
@@ -799,7 +799,7 @@ msgstr ""
 msgid "A scanned copy of your passport or driver's licence."
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:525 cgi/subs/subs_graphs_chartdirector.pm:468
+#: cgi/subs/subs_BOMFeed_history.pm:526 cgi/subs/subs_graphs_chartdirector.pm:468
 msgid "A technical indicator which measures overbought/oversold levels in a very similar way to that of an Oscillator indicator, except that %R is plotted upside-down 0% to -100%. Readings in the range of 80 to 100% indicate that the security is oversold while readings in the 0 to 20% range suggest that it is overbought."
 msgstr ""
 
@@ -819,7 +819,7 @@ msgstr ""
 msgid "AUTHORISED PAYMENT AGENT? (this field visible from office only)"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:431
+#: cgi/subs/subs_BOMFeed_history.pm:432
 msgid "About"
 msgstr ""
 
@@ -877,7 +877,7 @@ msgstr ""
 msgid "Accounts"
 msgstr ""
 
-#: cgi/smartchart.cgi:15 cgi/subs/subs_BOMFeed_history.pm:328 cgi/subs/subs_BOMFeed_history.pm:512 cgi/subs/subs_graphs_chartdirector.pm:203
+#: cgi/smartchart.cgi:15 cgi/subs/subs_BOMFeed_history.pm:329 cgi/subs/subs_BOMFeed_history.pm:513 cgi/subs/subs_graphs_chartdirector.pm:203
 msgid "Accumulation/Distribution"
 msgstr ""
 
@@ -889,7 +889,7 @@ msgstr ""
 msgid "Acknowledgement of Money Transfer"
 msgstr ""
 
-#: cgi/paymentagent_withdraw.cgi:413
+#: cgi/paymentagent_withdraw.cgi:415
 msgid "Acknowledgement of Withdrawal Request"
 msgstr ""
 
@@ -905,15 +905,15 @@ msgstr ""
 msgid "Action"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:452
+#: cgi/subs/subs_BOMFeed_history.pm:453
 msgid "Add Lines"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:411
+#: cgi/subs/subs_BOMFeed_history.pm:412
 msgid "Add Overlay"
 msgstr ""
 
-#: cgi/f_writepartics.cgi:222 cgi/subs/subs_forms.pm:1514 cgi/subs/subs_forms.pm:756
+#: cgi/f_writepartics.cgi:222 cgi/subs/subs_forms.pm:1517 cgi/subs/subs_forms.pm:759
 msgid "Address"
 msgstr ""
 
@@ -960,7 +960,7 @@ msgstr ""
 msgid "All times are in GMT (Greenwich Mean Time)."
 msgstr ""
 
-#: cgi/paymentagent_withdraw.cgi:214 cgi/subs/subs_forms.pm:3863 cgi/subs/subs_forms.pm:4064
+#: cgi/paymentagent_withdraw.cgi:216 cgi/subs/subs_forms.pm:3863 cgi/subs/subs_forms.pm:4062
 msgid "Amount"
 msgstr ""
 
@@ -972,7 +972,7 @@ msgstr ""
 msgid "An Ends Between trade pays out if the market exit price is strictly higher than the low price target AND strictly lower than the high price target. An Ends Outside binary pays out if the market exit price is EITHER strictly higher than the high price target OR strictly lower than the low price target."
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:1546
+#: cgi/subs/subs_forms.pm:1549
 msgid "An additional password can be used to restrict access to the Cashier and Settings areas."
 msgstr ""
 
@@ -980,27 +980,27 @@ msgstr ""
 msgid "An automatically generated <a href=\"https://apigee.com/rmg/resources/binary1\" target=\"_blank\">Resource Summary</a> is also available."
 msgstr ""
 
-#: cgi/paymentagent_transfer.cgi:135 cgi/paymentagent_transfer.cgi:142 cgi/paymentagent_withdraw.cgi:225 cgi/paymentagent_withdraw.cgi:231
+#: cgi/paymentagent_transfer.cgi:135 cgi/paymentagent_transfer.cgi:142 cgi/paymentagent_withdraw.cgi:227 cgi/paymentagent_withdraw.cgi:233
 msgid "An error occurred while processing request. If this error persists, please contact customer support"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:552 cgi/subs/subs_graphs_chartdirector.pm:384
+#: cgi/subs/subs_BOMFeed_history.pm:553 cgi/subs/subs_graphs_chartdirector.pm:384
 msgid "An indicator based on the difference between two moving averages expressed as a percentage. The PPO is found by subtracting the longer moving average from the shorter moving average and then dividing the difference by the longer moving average."
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:463 cgi/subs/subs_graphs_chartdirector.pm:251
+#: cgi/subs/subs_BOMFeed_history.pm:464 cgi/subs/subs_graphs_chartdirector.pm:251
 msgid "An indicator that measures a security's volatility. High ATR values indicate high volatility and may be an indication of panic selling or panic buying. Low ATR readings indicate sideways movement by the stock."
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:567 cgi/subs/subs_graphs_chartdirector.pm:451
+#: cgi/subs/subs_BOMFeed_history.pm:568 cgi/subs/subs_graphs_chartdirector.pm:451
 msgid "An oscillator that attempts to combine information for several different time periods into one number. Three different time periods are used, typically a 7-day period, a 14-day period, and a 28-day period. The resulting oscillator is \"bounded\" in that it moves between 0 and 100 with 50 as the centre line. 70 and 30 are used as overbought/oversold levels."
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:485 cgi/subs/subs_graphs_chartdirector.pm:369
+#: cgi/subs/subs_BOMFeed_history.pm:486 cgi/subs/subs_graphs_chartdirector.pm:369
 msgid "An oscillator that measures the rate of price change (as opposed to the actual levels themselves). It is calculated by taking price differences for a fixed time interval. This positive or negative value is plotted around a zero line."
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:522 cgi/subs/subs_graphs_chartdirector.pm:429
+#: cgi/subs/subs_BOMFeed_history.pm:523 cgi/subs/subs_graphs_chartdirector.pm:429
 msgid "An oscillator used to identify overbought and oversold readings in RSI (Relative Strength Index). Because RSI can go for extended periods without becoming overbought (above 70) or oversold (below 30), StochRSI provides an alternative means to identify these extremities."
 msgstr ""
 
@@ -1012,7 +1012,7 @@ msgstr ""
 msgid "Another major award. This time we’re nominated by the online readers of Global Banking and Finance Review and judged by a panel of industry experts and analysts who recognise our 13 years of platform reliability, range of trades, pricing, customer service and extensive knowledge."
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:546
+#: cgi/subs/subs_forms.pm:549
 msgid "Answer to secret question"
 msgstr ""
 
@@ -1060,11 +1060,11 @@ msgstr ""
 msgid "Apply to become a %1 <a class=\"pjaxload\" href=\"%2\">payment agent</a>."
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:185 cgi/subs/subs_forms.pm:2303 web/bin/JavascriptCompress.pm:81
+#: cgi/subs/subs_forms.pm:188 cgi/subs/subs_forms.pm:2306 web/bin/JavascriptCompress.pm:77
 msgid "Apr"
 msgstr ""
 
-#: web/bin/JavascriptCompress.pm:93
+#: web/bin/JavascriptCompress.pm:89
 msgid "April"
 msgstr ""
 
@@ -1076,11 +1076,11 @@ msgstr ""
 msgid "Are you ready?"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:350
+#: cgi/subs/subs_BOMFeed_history.pm:351
 msgid "Are you sure you want to delete '#1'?"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:439
+#: cgi/subs/subs_BOMFeed_history.pm:440
 msgid "Are you sure you want to delete all workspaces?"
 msgstr ""
 
@@ -1092,11 +1092,11 @@ msgstr ""
 msgid "Are your site visitors interested in:"
 msgstr ""
 
-#: cgi/smartchart.cgi:17 cgi/subs/subs_BOMFeed_history.pm:469 cgi/subs/subs_graphs_chartdirector.pm:233
+#: cgi/smartchart.cgi:17 cgi/subs/subs_BOMFeed_history.pm:470 cgi/subs/subs_graphs_chartdirector.pm:233
 msgid "Aroon Up/Down"
 msgstr ""
 
-#: cgi/smartchart.cgi:16 cgi/subs/subs_BOMFeed_history.pm:470 cgi/subs/subs_graphs_chartdirector.pm:210
+#: cgi/smartchart.cgi:16 cgi/subs/subs_BOMFeed_history.pm:471 cgi/subs/subs_graphs_chartdirector.pm:210
 msgid "AroonOsc"
 msgstr ""
 
@@ -1128,7 +1128,7 @@ msgstr ""
 msgid "Asians"
 msgstr ""
 
-#: /home/git/translations/binary-static/src/templates/toolkit/resources/pricing_table.html.tt:50 cgi/subs/subs_BOMFeed_history.pm:374
+#: /home/git/translations/binary-static/src/templates/toolkit/resources/pricing_table.html.tt:50 cgi/subs/subs_BOMFeed_history.pm:375
 msgid "Ask"
 msgstr ""
 
@@ -1136,7 +1136,7 @@ msgstr ""
 msgid "Asset"
 msgstr ""
 
-#: /home/git/translations/binary-static/src/templates/haml/layouts/default/footer.html.haml:1 /home/git/translations/binary-static/src/templates/haml/resources/index.html.haml:1 /home/git/translations/binary-static/src/templates/toolkit/global/footer.html.tt:90 cgi/asset_index.cgi:110 cgi/asset_index.cgi:27 lib/BOM/Product/Contract.pm:2787 lib/BOM/Product/Contract.pm:2826 lib/BOM/Product/Pricing/Engine/Role/StandardMarkup.pm:177 lib/BOM/View/Menu.pm:147
+#: /home/git/translations/binary-static/src/templates/haml/layouts/default/footer.html.haml:1 /home/git/translations/binary-static/src/templates/haml/resources/index.html.haml:1 /home/git/translations/binary-static/src/templates/toolkit/global/footer.html.tt:90 cgi/asset_index.cgi:141 cgi/asset_index.cgi:28 lib/BOM/Product/Contract.pm:2788 lib/BOM/Product/Contract.pm:2827 lib/BOM/Product/Pricing/Engine/Role/StandardMarkup.pm:177 lib/BOM/View/Menu.pm:147
 msgid "Asset Index"
 msgstr ""
 
@@ -1145,11 +1145,11 @@ msgstr ""
 msgid "At a suitable stage in your application, when authorisation by a %1 end-user is required, re-direct the end-user's browser to this URL:"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:201 cgi/subs/subs_forms.pm:2319 web/bin/JavascriptCompress.pm:85
+#: cgi/subs/subs_forms.pm:204 cgi/subs/subs_forms.pm:2322 web/bin/JavascriptCompress.pm:81
 msgid "Aug"
 msgstr ""
 
-#: web/bin/JavascriptCompress.pm:97
+#: web/bin/JavascriptCompress.pm:93
 msgid "August"
 msgstr ""
 
@@ -1157,7 +1157,7 @@ msgstr ""
 msgid "Australia"
 msgstr ""
 
-#: cgi/f_onlineid.cgi:183 cgi/f_onlineid.cgi:187 cgi/subs/subs_forms.pm:3089 lib/BOM/View/Menu.pm:113
+#: cgi/f_onlineid.cgi:183 cgi/f_onlineid.cgi:187 cgi/subs/subs_forms.pm:3092 lib/BOM/View/Menu.pm:113
 msgid "Authenticate"
 msgstr ""
 
@@ -1169,7 +1169,7 @@ msgstr ""
 msgid "Authenticate your Account"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:999
+#: cgi/subs/subs_forms.pm:1002
 msgid "Authenticated"
 msgstr ""
 
@@ -1199,11 +1199,11 @@ msgstr ""
 msgid "Average Change = Average Close - Average Open, for the period selected"
 msgstr ""
 
-#: cgi/smartchart.cgi:18 cgi/subs/subs_BOMFeed_history.pm:554 cgi/subs/subs_graphs_chartdirector.pm:241
+#: cgi/smartchart.cgi:18 cgi/subs/subs_BOMFeed_history.pm:555 cgi/subs/subs_graphs_chartdirector.pm:241
 msgid "Avg Directional Index"
 msgstr ""
 
-#: cgi/smartchart.cgi:19 cgi/subs/subs_BOMFeed_history.pm:428 cgi/subs/subs_BOMFeed_history.pm:458 cgi/subs/subs_graphs_chartdirector.pm:249
+#: cgi/smartchart.cgi:19 cgi/subs/subs_BOMFeed_history.pm:429 cgi/subs/subs_BOMFeed_history.pm:459 cgi/subs/subs_graphs_chartdirector.pm:249
 msgid "Avg True Range"
 msgstr ""
 
@@ -1215,11 +1215,11 @@ msgstr ""
 msgid "BACK TO HOMEPAGE"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:419
+#: cgi/subs/subs_BOMFeed_history.pm:420
 msgid "BOM Charts Workspace"
 msgstr ""
 
-#: /home/git/translations/binary-static/src/templates/haml/get_started/benefits_of_trading_binaries.html.haml:1 /home/git/translations/binary-static/src/templates/haml/get_started/how_to_trade_binaries.html.haml:1 cgi/emailus.cgi:195 lib/BOM/View/Form.pm:402
+#: /home/git/translations/binary-static/src/templates/haml/get_started/benefits_of_trading_binaries.html.haml:1 /home/git/translations/binary-static/src/templates/haml/get_started/how_to_trade_binaries.html.haml:1 cgi/emailus.cgi:196 lib/BOM/View/Form.pm:402
 msgid "Back"
 msgstr ""
 
@@ -1256,15 +1256,15 @@ msgstr ""
 msgid "Banks, hedge funds and professional investors routinely trade binary options in over-the-counter derivatives markets. Many market professionals use and trust the %1 platform for high-volume flexible trades."
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:394
+#: cgi/subs/subs_BOMFeed_history.pm:395
 msgid "Bar HLC Chart"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:385
+#: cgi/subs/subs_BOMFeed_history.pm:386
 msgid "Bar OHLC Chart"
 msgstr ""
 
-#: /home/git/translations/binary-static/src/templates/toolkit/bet/form/barrier.html.tt:18 /home/git/translations/binary-static/src/templates/toolkit/resources/pricing_table_form.html.tt:59 cgi/oop/Controller/Bet.pm:2337 web/bin/JavascriptCompress.pm:121
+#: /home/git/translations/binary-static/src/templates/toolkit/bet/form/barrier.html.tt:18 /home/git/translations/binary-static/src/templates/toolkit/resources/pricing_table_form.html.tt:59 cgi/oop/Controller/Bet.pm:2337 web/bin/JavascriptCompress.pm:117
 msgid "Barrier"
 msgstr ""
 
@@ -1280,12 +1280,12 @@ msgstr ""
 msgid "Barrier Step format error"
 msgstr ""
 
-#: lib/BOM/Product/Contract.pm:2538
+#: lib/BOM/Product/Contract.pm:2539
 msgid "Barrier may not be adjusted."
 msgstr ""
 
 #. ($min_pips . ' pips away from the spot.')
-#: lib/BOM/Product/Contract.pm:2504
+#: lib/BOM/Product/Contract.pm:2505
 msgid "Barrier must be at least "
 msgstr ""
 
@@ -1305,7 +1305,7 @@ msgstr ""
 msgid "Barrier(s)"
 msgstr ""
 
-#: lib/BOM/Product/Contract.pm:2529
+#: lib/BOM/Product/Contract.pm:2530
 msgid "Barriers must be on either side of the spot."
 msgstr ""
 
@@ -1333,7 +1333,7 @@ msgstr ""
 msgid "Best Tracking with \"Forever Cookies\""
 msgstr ""
 
-#: cgi/emailus.cgi:99
+#: cgi/emailus.cgi:100
 msgid "Best regards,"
 msgstr ""
 
@@ -1361,7 +1361,7 @@ msgstr ""
 msgid "BetOnMarkets.com reaches $1 billion turnover since starting in 1999"
 msgstr ""
 
-#: /home/git/translations/binary-static/src/templates/toolkit/resources/pricing_table.html.tt:48 cgi/subs/subs_BOMFeed_history.pm:384
+#: /home/git/translations/binary-static/src/templates/toolkit/resources/pricing_table.html.tt:48 cgi/subs/subs_BOMFeed_history.pm:385
 msgid "Bid"
 msgstr ""
 
@@ -1451,43 +1451,43 @@ msgstr ""
 msgid "Blog"
 msgstr ""
 
-#: cgi/smartchart.cgi:20 cgi/subs/subs_BOMFeed_history.pm:527 cgi/subs/subs_graphs_chartdirector.pm:257
+#: cgi/smartchart.cgi:20 cgi/subs/subs_BOMFeed_history.pm:528 cgi/subs/subs_graphs_chartdirector.pm:257
 msgid "Bollinger Band Width"
 msgstr ""
 
-#: cgi/smartchart.cgi:54 cgi/subs/subs_BOMFeed_history.pm:424 cgi/subs/subs_graphs_chartdirector.pm:480
+#: cgi/smartchart.cgi:54 cgi/subs/subs_BOMFeed_history.pm:425 cgi/subs/subs_graphs_chartdirector.pm:480
 msgid "Bollinger Bands"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:378
+#: cgi/subs/subs_BOMFeed_history.pm:379
 msgid "Bollinger Bands Average"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:320
+#: cgi/subs/subs_BOMFeed_history.pm:321
 msgid "Bollinger Bands Lower"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:433
+#: cgi/subs/subs_BOMFeed_history.pm:434
 msgid "Bollinger Bands Upper"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:570 cgi/subs/subs_graphs_chartdirector.pm:482
+#: cgi/subs/subs_BOMFeed_history.pm:571 cgi/subs/subs_graphs_chartdirector.pm:482
 msgid "Bollinger Bands are lines displayed around a simple moving average line (default set to 20 periods). The upper line is displayed 2 standard deviations above the moving average, and the lower line is displayed 2 standard deviations below the moving average.By definition prices are high at the upper band and low at the lower band. This definition can aid in rigorous pattern recognition and is useful in comparing price action to the action of indicators to arrive at systematic trading decisions."
 msgstr ""
 
-#: cgi/c_template.cgi:62 cgi/subs/subs_forms.pm:626
+#: cgi/c_template.cgi:62 cgi/subs/subs_forms.pm:629
 msgid "Bonus Code"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:520
+#: cgi/subs/subs_forms.pm:523
 msgid "Brand of first car"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:395
+#: cgi/subs/subs_BOMFeed_history.pm:396
 msgid "Browse"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:3061
+#: cgi/subs/subs_forms.pm:3064
 msgid "Building Number"
 msgstr ""
 
@@ -1523,7 +1523,7 @@ msgstr ""
 msgid "Calculating"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:2762
+#: cgi/subs/subs_forms.pm:2765
 msgid "Call me now"
 msgstr ""
 
@@ -1561,7 +1561,7 @@ msgstr ""
 msgid "Can you customize a banner for my site?"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:417 cgi/subs/subs_graphs_chartdirector.pm:170
+#: cgi/subs/subs_BOMFeed_history.pm:418 cgi/subs/subs_graphs_chartdirector.pm:170
 msgid "Cancel"
 msgstr ""
 
@@ -1569,7 +1569,7 @@ msgstr ""
 msgid "Cancel Registration"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:346
+#: cgi/subs/subs_BOMFeed_history.pm:347
 msgid "Candlestick Chart"
 msgstr ""
 
@@ -1581,7 +1581,7 @@ msgstr ""
 msgid "Careers"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:335
+#: cgi/subs/subs_BOMFeed_history.pm:336
 msgid "Cascade"
 msgstr ""
 
@@ -1593,7 +1593,7 @@ msgstr ""
 msgid "Cashier"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:1648
+#: cgi/subs/subs_forms.pm:1651
 msgid "Cashier/Settings password"
 msgstr ""
 
@@ -1601,15 +1601,15 @@ msgstr ""
 msgid "Certain limits are imposed as to the acceptable levels for barrier/strike prices of contracts. Typically, the barrier/strike may not be too close nor too far from the current underlying market level."
 msgstr ""
 
-#: cgi/smartchart.cgi:21 cgi/subs/subs_BOMFeed_history.pm:549 cgi/subs/subs_graphs_chartdirector.pm:265
+#: cgi/smartchart.cgi:21 cgi/subs/subs_BOMFeed_history.pm:550 cgi/subs/subs_graphs_chartdirector.pm:265
 msgid "Chaikin Money Flow"
 msgstr ""
 
-#: cgi/smartchart.cgi:22 cgi/subs/subs_BOMFeed_history.pm:541 cgi/subs/subs_graphs_chartdirector.pm:273
+#: cgi/smartchart.cgi:22 cgi/subs/subs_BOMFeed_history.pm:542 cgi/subs/subs_graphs_chartdirector.pm:273
 msgid "Chaikin Oscillator"
 msgstr ""
 
-#: cgi/smartchart.cgi:23 cgi/subs/subs_BOMFeed_history.pm:511 cgi/subs/subs_graphs_chartdirector.pm:281
+#: cgi/smartchart.cgi:23 cgi/subs/subs_BOMFeed_history.pm:512 cgi/subs/subs_graphs_chartdirector.pm:281
 msgid "Chaikin Volatility"
 msgstr ""
 
@@ -1625,7 +1625,7 @@ msgstr ""
 msgid "Change Account Information"
 msgstr ""
 
-#: cgi/change_password.cgi:11 cgi/change_password.cgi:15 cgi/change_password.cgi:28 cgi/save_password.cgi:34 cgi/save_password.cgi:46 cgi/subs/subs_forms.pm:1913 cgi/subs/subs_forms.pm:2092
+#: cgi/change_password.cgi:11 cgi/change_password.cgi:15 cgi/change_password.cgi:28 cgi/save_password.cgi:34 cgi/save_password.cgi:46 cgi/subs/subs_forms.pm:1916 cgi/subs/subs_forms.pm:2095
 msgid "Change Password"
 msgstr ""
 
@@ -1641,7 +1641,7 @@ msgstr ""
 msgid "Chart Application"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:381
+#: cgi/subs/subs_BOMFeed_history.pm:382
 msgid "Chart Type"
 msgstr ""
 
@@ -1785,6 +1785,14 @@ msgstr ""
 msgid "Clients must fill into the account opening form all requested details that establish their identity."
 msgstr ""
 
+#: /home/git/translations/binary-static/src/templates/toolkit/legal/complaints_disputes.html.tt:10
+msgid "Clients registered with Regent Markets (IOM) Ltd can raise their unresolved disputes with the Isle of Man Gambling Supervision Commission at"
+msgstr ""
+
+#: /home/git/translations/binary-static/src/templates/toolkit/legal/complaints_disputes.html.tt:13
+msgid "Clients registered with Regent Markets (Malta) Ltd can raise their unresolved disputes with the Lotteries and Gaming Authority at"
+msgstr ""
+
 #: /home/git/translations/binary-static/src/templates/toolkit/legal/terms_and_conditions.html.tt:72 /home/git/translations/binary-static/src/templates/toolkit/legtrouble.html.tt:72
 msgid "Clients shall not hold or pool third party funds into their own account held with the Company."
 msgstr ""
@@ -1797,15 +1805,15 @@ msgstr ""
 msgid "Clients who wish to self-exclude should be aware that the self-exclusion period is a minimum of six months and are given the option to extend it to a total of at least five years, immediately without any cooling-off period. At the end of the self-exclusion period, the self-exclusion remains in place, unless positive action is taken by the client in order to trade again."
 msgstr ""
 
-#: /home/git/translations/binary-static/src/templates/toolkit/charting/daily_ohlc.html.tt:20 /home/git/translations/binary-static/src/templates/toolkit/charting/daily_ohlc.html.tt:48 /home/git/translations/binary-static/src/templates/toolkit/charting/legacy_chart_table.html.tt:15 cgi/subs/subs_BOMFeed_history.pm:354 cgi/subs/subs_BOMFeed_history.pm:451
+#: /home/git/translations/binary-static/src/templates/toolkit/charting/daily_ohlc.html.tt:20 /home/git/translations/binary-static/src/templates/toolkit/charting/daily_ohlc.html.tt:48 /home/git/translations/binary-static/src/templates/toolkit/charting/legacy_chart_table.html.tt:15 cgi/subs/subs_BOMFeed_history.pm:355 cgi/subs/subs_BOMFeed_history.pm:452
 msgid "Close"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:407
+#: cgi/subs/subs_BOMFeed_history.pm:408
 msgid "Close All"
 msgstr ""
 
-#: cgi/smartchart.cgi:24 cgi/subs/subs_BOMFeed_history.pm:454 cgi/subs/subs_graphs_chartdirector.pm:296
+#: cgi/smartchart.cgi:24 cgi/subs/subs_BOMFeed_history.pm:455 cgi/subs/subs_graphs_chartdirector.pm:296
 msgid "Close Location Value"
 msgstr ""
 
@@ -1868,7 +1876,7 @@ msgstr ""
 msgid "Commodities are resources that are grown or extracted from the ground, such as silver, gold and oil. On %1, they are priced in US dollars."
 msgstr ""
 
-#: cgi/smartchart.cgi:25 cgi/subs/subs_BOMFeed_history.pm:376 cgi/subs/subs_BOMFeed_history.pm:468 cgi/subs/subs_graphs_chartdirector.pm:303
+#: cgi/smartchart.cgi:25 cgi/subs/subs_BOMFeed_history.pm:377 cgi/subs/subs_BOMFeed_history.pm:469 cgi/subs/subs_graphs_chartdirector.pm:303
 msgid "Commodity Channel Index"
 msgstr ""
 
@@ -1888,7 +1896,7 @@ msgstr ""
 msgid "Confirm"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:340
+#: cgi/subs/subs_BOMFeed_history.pm:341
 msgid "Connection failure. Please try again later."
 msgstr ""
 
@@ -1900,7 +1908,7 @@ msgstr ""
 msgid "Contact"
 msgstr ""
 
-#: /home/git/translations/binary-static/src/templates/haml/layouts/default/footer.html.haml:1 /home/git/translations/binary-static/src/templates/haml/layouts/default/topbar.html.haml:1 /home/git/translations/binary-static/src/templates/haml/static/white_labels.html.haml:1 /home/git/translations/binary-static/src/templates/toolkit/email/common_email.html.tt:105 /home/git/translations/binary-static/src/templates/toolkit/global/footer.html.tt:174 /home/git/translations/binary-static/src/templates/toolkit/global/header.html.tt:14 /home/git/translations/binary-static/src/templates/toolkit/misc/contact_us.html.tt:6 cgi/contact.cgi:13 cgi/emailus.cgi:184 cgi/subs/subs_cashier.pm:90
+#: /home/git/translations/binary-static/src/templates/haml/layouts/default/footer.html.haml:1 /home/git/translations/binary-static/src/templates/haml/layouts/default/topbar.html.haml:1 /home/git/translations/binary-static/src/templates/haml/static/white_labels.html.haml:1 /home/git/translations/binary-static/src/templates/toolkit/email/common_email.html.tt:105 /home/git/translations/binary-static/src/templates/toolkit/global/footer.html.tt:174 /home/git/translations/binary-static/src/templates/toolkit/global/header.html.tt:14 /home/git/translations/binary-static/src/templates/toolkit/misc/contact_us.html.tt:6 cgi/contact.cgi:13 cgi/emailus.cgi:185 cgi/subs/subs_cashier.pm:90
 msgid "Contact Us"
 msgstr ""
 
@@ -1912,7 +1920,7 @@ msgstr ""
 msgid "Contact us"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:2429 cgi/subs/subs_forms.pm:2480
+#: cgi/subs/subs_forms.pm:2432 cgi/subs/subs_forms.pm:2483
 msgid "Continue"
 msgstr ""
 
@@ -1941,7 +1949,7 @@ msgid "Contract barrier must be positive."
 msgstr ""
 
 #. ($end_of_bo->date)
-#: lib/BOM/Product/Contract.pm:2901
+#: lib/BOM/Product/Contract.pm:2902
 msgid "Contract can not expire during the end-of-year holiday period. Select an expiry date after %1."
 msgstr ""
 
@@ -1957,20 +1965,20 @@ msgstr ""
 msgid "Contract expired"
 msgstr ""
 
-#: lib/BOM/Product/Contract.pm:2678
+#: lib/BOM/Product/Contract.pm:2679
 msgid "Contract has already expired."
 msgstr ""
 
-#: lib/BOM/Product/Contract.pm:1812
+#: lib/BOM/Product/Contract.pm:1813
 msgid "Contract market price is too close to final payout."
 msgstr ""
 
 #. ($eod_blackout_expiry->as_string)
-#: lib/BOM/Product/Contract.pm:2717
+#: lib/BOM/Product/Contract.pm:2718
 msgid "Contract may not expire within the last %1 of trading."
 msgstr ""
 
-#: lib/BOM/Product/Contract.pm:2687
+#: lib/BOM/Product/Contract.pm:2688
 msgid "Contract must expire during trading hours."
 msgstr ""
 
@@ -1983,7 +1991,7 @@ msgid "Contract period"
 msgstr ""
 
 #: /home/git/translations/binary-static/src/templates/haml/static/partner_api.html.haml:1
-msgid "Contract purchase (approved applications only"
+msgid "Contract purchase (approved applications only)"
 msgstr ""
 
 #: cgi/oop/Controller/Bet.pm:1468
@@ -2012,7 +2020,7 @@ msgid "Contracts on %1 which both start and end between %2 and %3 on the same da
 msgstr ""
 
 #. ($underlying->translated_display_name()
-#: lib/BOM/Product/Contract.pm:2703
+#: lib/BOM/Product/Contract.pm:2704
 msgid "Contracts on %1 with durations under 24 hours must expire on the same trading day."
 msgstr ""
 
@@ -2056,7 +2064,7 @@ msgstr ""
 msgid "Country"
 msgstr ""
 
-#: cgi/f_writepartics.cgi:220 cgi/subs/subs_forms.pm:1030 cgi/subs/subs_forms.pm:423
+#: cgi/f_writepartics.cgi:220 cgi/subs/subs_forms.pm:1033 cgi/subs/subs_forms.pm:426
 msgid "Country of Residence"
 msgstr ""
 
@@ -2076,7 +2084,7 @@ msgstr ""
 msgid "Credit/Debit Card"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:348
+#: cgi/subs/subs_BOMFeed_history.pm:349
 msgid "Crosshair"
 msgstr ""
 
@@ -2085,16 +2093,16 @@ msgid "Currencies"
 msgstr ""
 
 #. ($curr)
-#: lib/BOM/Platform/Model/Payment/CurrencyConversionTransfer.pm:194
+#: lib/BOM/Platform/Model/Payment/CurrencyConversionTransfer.pm:193
 msgid "Currency conversion from %1"
 msgstr ""
 
 #. ($curr)
-#: lib/BOM/Platform/Model/Payment/CurrencyConversionTransfer.pm:195
+#: lib/BOM/Platform/Model/Payment/CurrencyConversionTransfer.pm:194
 msgid "Currency conversion to %1"
 msgstr ""
 
-#: lib/BOM/Platform/Model/Payment/CurrencyConversionTransfer.pm:197
+#: lib/BOM/Platform/Model/Payment/CurrencyConversionTransfer.pm:196
 msgid "Currency conversion transfer"
 msgstr ""
 
@@ -2106,11 +2114,11 @@ msgstr ""
 msgid "Current Spot"
 msgstr ""
 
-#: lib/BOM/Product/Contract.pm:2402
+#: lib/BOM/Product/Contract.pm:2403
 msgid "Current market price is 0."
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:1815
+#: cgi/subs/subs_forms.pm:1818
 msgid "Current password"
 msgstr ""
 
@@ -2130,11 +2138,11 @@ msgstr ""
 msgid "Customer Funds"
 msgstr ""
 
-#: cgi/lost_password.cgi:304
+#: cgi/lost_password.cgi:307
 msgid "Customer Support has been informed of your Lost Login ID / Password request and will be contacting you soon. Thank you for your patience."
 msgstr ""
 
-#: /home/git/translations/binary-static/src/templates/toolkit/charting/light_chart.html.tt:6 cgi/subs/subs_BOMFeed_history.pm:370 lib/BOM/Product/Helper/PricingTableParameters.pm:297
+#: /home/git/translations/binary-static/src/templates/toolkit/charting/light_chart.html.tt:6 cgi/subs/subs_BOMFeed_history.pm:371 lib/BOM/Product/Helper/PricingTableParameters.pm:297
 msgid "Daily"
 msgstr ""
 
@@ -2168,15 +2176,15 @@ msgstr ""
 msgid "Date"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:1021 cgi/subs/subs_forms.pm:230 cgi/subs/subs_forms.pm:2349
+#: cgi/subs/subs_forms.pm:1024 cgi/subs/subs_forms.pm:233 cgi/subs/subs_forms.pm:2352
 msgid "Date of birth"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:406 web/bin/JavascriptCompress.pm:51
+#: cgi/subs/subs_BOMFeed_history.pm:407 web/bin/JavascriptCompress.pm:47
 msgid "Day"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:355
+#: cgi/subs/subs_BOMFeed_history.pm:356
 msgid "Day Bet"
 msgstr ""
 
@@ -2187,7 +2195,7 @@ msgstr ""
 #. ($client_to->salutation, $client_to->first_name, $client_to->last_name,)
 #. ($pa_client->salutation, $pa_client->first_name, $pa_client->last_name)
 #. (BOM::View::Language::translate_salutation($client->salutation)
-#: cgi/f_writepartics.cgi:211 cgi/paymentagent_transfer.cgi:267 cgi/paymentagent_withdraw.cgi:397
+#: cgi/f_writepartics.cgi:211 cgi/paymentagent_transfer.cgi:267 cgi/paymentagent_withdraw.cgi:399
 msgid "Dear %1 %2 %3,"
 msgstr ""
 
@@ -2207,7 +2215,7 @@ msgid "Dear %1 %2 %3, We would like to inform you that your Western Union withdr
 msgstr ""
 
 #. ($Name,)
-#: cgi/emailus.cgi:89
+#: cgi/emailus.cgi:90
 msgid "Dear %1,"
 msgstr ""
 
@@ -2274,11 +2282,11 @@ msgid ""
 "%1"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:217 cgi/subs/subs_forms.pm:2335 web/bin/JavascriptCompress.pm:89
+#: cgi/subs/subs_forms.pm:220 cgi/subs/subs_forms.pm:2338 web/bin/JavascriptCompress.pm:85
 msgid "Dec"
 msgstr ""
 
-#: web/bin/JavascriptCompress.pm:101
+#: web/bin/JavascriptCompress.pm:97
 msgid "December"
 msgstr ""
 
@@ -2290,19 +2298,19 @@ msgstr ""
 msgid "Define your position"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:430
+#: cgi/subs/subs_BOMFeed_history.pm:431
 msgid "Delete"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:409
+#: cgi/subs/subs_BOMFeed_history.pm:410
 msgid "Delete All"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:401
+#: cgi/subs/subs_BOMFeed_history.pm:402
 msgid "Delete All Lines"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:347
+#: cgi/subs/subs_BOMFeed_history.pm:348
 msgid "Delete all lines?"
 msgstr ""
 
@@ -2323,12 +2331,12 @@ msgstr ""
 msgid "Deposit Y or more and we will add an additional X to your account after five times X in trading volume is made. By way of example, if you claim a \"Deposit $100, get $20 bonus\" offer, then the $20 bonus will be credited as \"pending\" to your account once you deposit $100. Once you reach (5 * $20 = $100) in trading volume, the $20 bonus will be released to your account upon approval."
 msgstr ""
 
-#: /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:518
+#: /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:517
 msgid "Deposit to Payment Agent"
 msgstr ""
 
 #. ($type)
-#: lib/BOM/Platform/Model/Payment/LegacyPayment.pm:139
+#: lib/BOM/Platform/Model/Payment/LegacyPayment.pm:138
 msgid "Deposit using legacy method: %1"
 msgstr ""
 
@@ -2353,7 +2361,7 @@ msgid "Deposit via Western Union"
 msgstr ""
 
 #. ($mtcn)
-#: lib/BOM/Platform/Model/Payment/WesternUnion.pm:137
+#: lib/BOM/Platform/Model/Payment/WesternUnion.pm:136
 msgid "Deposit via Western Union (MTCN: %1)"
 msgstr ""
 
@@ -2362,7 +2370,7 @@ msgid "Deposit via bank wire"
 msgstr ""
 
 #. (1)
-#: /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:461
+#: /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:460
 msgid "Deposit: %1 working day"
 msgstr ""
 
@@ -2372,7 +2380,7 @@ msgstr ""
 msgid "Deposit: %1 working days"
 msgstr ""
 
-#: /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:195 /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:218 /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:246 /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:268 /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:290 /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:314 /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:338 /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:362 /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:385 /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:408 /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:436 /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:483 /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:504
+#: /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:195 /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:217 /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:245 /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:267 /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:289 /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:313 /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:337 /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:361 /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:384 /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:407 /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:435 /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:482 /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:503
 msgid "Deposit: Instant"
 msgstr ""
 
@@ -2388,11 +2396,11 @@ msgstr ""
 msgid "Description"
 msgstr ""
 
-#: cgi/smartchart.cgi:26 cgi/subs/subs_BOMFeed_history.pm:482 cgi/subs/subs_graphs_chartdirector.pm:317
+#: cgi/smartchart.cgi:26 cgi/subs/subs_BOMFeed_history.pm:483 cgi/subs/subs_graphs_chartdirector.pm:317
 msgid "Detrended Price Osc"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:413
+#: cgi/subs/subs_BOMFeed_history.pm:414
 msgid "Detrended Price Oscillator (DPO)"
 msgstr ""
 
@@ -2460,11 +2468,11 @@ msgstr ""
 msgid "Do you offer virtual-money accounts?"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:441
+#: cgi/subs/subs_BOMFeed_history.pm:442
 msgid "Do you want to decrease the timescale?"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:437
+#: cgi/subs/subs_BOMFeed_history.pm:438
 msgid "Do you want to increase the timescale?"
 msgstr ""
 
@@ -2492,11 +2500,11 @@ msgstr ""
 msgid "Donchain Channel"
 msgstr ""
 
-#: cgi/smartchart.cgi:27 cgi/subs/subs_BOMFeed_history.pm:498 cgi/subs/subs_graphs_chartdirector.pm:325
+#: cgi/smartchart.cgi:27 cgi/subs/subs_BOMFeed_history.pm:499 cgi/subs/subs_graphs_chartdirector.pm:325
 msgid "Donchian Channel Width"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:535 cgi/subs/subs_graphs_chartdirector.pm:491
+#: cgi/subs/subs_BOMFeed_history.pm:536 cgi/subs/subs_graphs_chartdirector.pm:491
 msgid "Donchian Channels plot the highest high and lowest low over the last period time intervals."
 msgstr ""
 
@@ -2508,7 +2516,7 @@ msgstr ""
 msgid "Dormant and Inactive Accounts"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:440
+#: cgi/subs/subs_BOMFeed_history.pm:441
 msgid "Dot Chart"
 msgstr ""
 
@@ -2559,7 +2567,7 @@ msgid "Duration"
 msgstr ""
 
 #. ($shortest->as_string, $longest->as_string)
-#: lib/BOM/Product/Contract.pm:2793
+#: lib/BOM/Product/Contract.pm:2794
 msgid "Duration must be between %1 and %2."
 msgstr ""
 
@@ -2571,7 +2579,7 @@ msgstr ""
 msgid "During the term of this Agreement, you may be entrusted with confidential information relating to the business, operations, or underlying technology of the Company and/or the Company's affiliate program. You agree to avoid disclosure or unauthorised use of the confidential information to third persons or outside parties unless you have the Company's prior written consent and that you will use the Confidential Information only for purposes necessary to further the purposes of this Agreement. Your obligations with regards to confidential information shall survive the termination of this Agreement."
 msgstr ""
 
-#: /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:226
+#: /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:225
 msgid "E-cash"
 msgstr ""
 
@@ -2600,7 +2608,7 @@ msgstr ""
 msgid "Earning tax free trading profits*"
 msgstr ""
 
-#: cgi/smartchart.cgi:28 cgi/subs/subs_BOMFeed_history.pm:536 cgi/subs/subs_graphs_chartdirector.pm:331
+#: cgi/smartchart.cgi:28 cgi/subs/subs_BOMFeed_history.pm:537 cgi/subs/subs_graphs_chartdirector.pm:331
 msgid "Ease of Movement"
 msgstr ""
 
@@ -2624,15 +2632,15 @@ msgstr ""
 msgid "Email"
 msgstr ""
 
-#: cgi/emailus.cgi:23 cgi/subs/subs_forms_output.pm:79
+#: cgi/emailus.cgi:24 cgi/subs/subs_forms_output.pm:79
 msgid "Email Us"
 msgstr ""
 
-#: cgi/f_writepartics.cgi:208 cgi/f_writepartics.cgi:219 cgi/subs/subs_forms.pm:1043 cgi/subs/subs_forms.pm:2157 cgi/subs/subs_forms.pm:453
+#: cgi/f_writepartics.cgi:208 cgi/f_writepartics.cgi:219 cgi/subs/subs_forms.pm:1046 cgi/subs/subs_forms.pm:2160 cgi/subs/subs_forms.pm:456
 msgid "Email address"
 msgstr ""
 
-#: /home/git/translations/binary-static/src/templates/toolkit/bet/form/duration.html.tt:5 cgi/analyse_contract.cgi:121 web/bin/JavascriptCompress.pm:118
+#: /home/git/translations/binary-static/src/templates/toolkit/bet/form/duration.html.tt:5 cgi/analyse_contract.cgi:121 web/bin/JavascriptCompress.pm:114
 msgid "End Time"
 msgstr ""
 
@@ -2662,7 +2670,7 @@ msgstr ""
 msgid "Enter the barrier in terms of the difference from the spot price. If you enter +0.005, then you will be purchasing a contract with a barrier 0.005 higher than the entry spot. The entry spot will be the next tick after your order has been received."
 msgstr ""
 
-#: cgi/analyse_contract.cgi:106 web/bin/JavascriptCompress.pm:117
+#: cgi/analyse_contract.cgi:106 web/bin/JavascriptCompress.pm:113
 msgid "Entry Spot"
 msgstr ""
 
@@ -2766,7 +2774,7 @@ msgstr ""
 msgid "Exponential"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:403
+#: cgi/subs/subs_BOMFeed_history.pm:404
 msgid "Exponential Moving Average"
 msgstr ""
 
@@ -2778,7 +2786,7 @@ msgstr ""
 msgid "FAQ"
 msgstr ""
 
-#: web/bin/JavascriptCompress.pm:56
+#: web/bin/JavascriptCompress.pm:52
 msgid "Failed to update trade description."
 msgstr ""
 
@@ -2794,31 +2802,31 @@ msgstr ""
 msgid "Fall Contract Return (%)"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:142
+#: cgi/subs/subs_forms.pm:145
 msgid "Family Name"
 msgstr ""
 
-#: cgi/smartchart.cgi:29 cgi/subs/subs_BOMFeed_history.pm:471 cgi/subs/subs_graphs_chartdirector.pm:338
+#: cgi/smartchart.cgi:29 cgi/subs/subs_BOMFeed_history.pm:472 cgi/subs/subs_graphs_chartdirector.pm:338
 msgid "Fast Stochastic"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:520
+#: cgi/subs/subs_forms.pm:523
 msgid "Favourite artist"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:520
+#: cgi/subs/subs_forms.pm:523
 msgid "Favourite dish"
 msgstr ""
 
-#: cgi/f_writepartics.cgi:231 cgi/subs/subs_forms.pm:1274 cgi/subs/subs_presentation.pm:47 cgi/subs/subs_presentation.pm:51
+#: cgi/f_writepartics.cgi:231 cgi/subs/subs_forms.pm:1277 cgi/subs/subs_presentation.pm:47 cgi/subs/subs_presentation.pm:51
 msgid "Fax"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:177 cgi/subs/subs_forms.pm:2295 web/bin/JavascriptCompress.pm:79
+#: cgi/subs/subs_forms.pm:180 cgi/subs/subs_forms.pm:2298 web/bin/JavascriptCompress.pm:75
 msgid "Feb"
 msgstr ""
 
-#: web/bin/JavascriptCompress.pm:91
+#: web/bin/JavascriptCompress.pm:87
 msgid "February"
 msgstr ""
 
@@ -2831,11 +2839,11 @@ msgstr ""
 msgid "Feel free to contact our friendly and helpful customer service experts. They're always available to answer your questions. You can contact us via live chat, email and telephone."
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:357
+#: cgi/subs/subs_BOMFeed_history.pm:358
 msgid "Fibonacci Fan"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:396
+#: cgi/subs/subs_BOMFeed_history.pm:397
 msgid "Fibonacci Retracement"
 msgstr ""
 
@@ -2867,11 +2875,11 @@ msgstr ""
 msgid "Find the right trade for every market condition."
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:102
+#: cgi/subs/subs_forms.pm:105
 msgid "First Name"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:1085 cgi/subs/subs_forms.pm:275
+#: cgi/subs/subs_forms.pm:1088 cgi/subs/subs_forms.pm:278
 msgid "First line of home address"
 msgstr ""
 
@@ -2928,7 +2936,7 @@ msgstr ""
 msgid "For security reasons, please note that Payment Agent accounts will only be able to deposit via Bank Wire."
 msgstr ""
 
-#: cgi/lost_password.cgi:47
+#: cgi/lost_password.cgi:50
 msgid "For security reasons, please start the 'Lost Password' procedure again."
 msgstr ""
 
@@ -2936,11 +2944,11 @@ msgstr ""
 msgid "For the third straight year, BetOnMarkets.com is voted 'Best Fixed-Odds Financial Trading Provider' by Shares Magazine UK. It’s the last time we win it because Shares Magazine stops awarding in this category."
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:317
+#: cgi/subs/subs_BOMFeed_history.pm:318
 msgid "Forest Chart"
 msgstr ""
 
-#: /home/git/translations/binary-static/src/templates/haml/get_started/glossary.html.haml:1 cgi/subs/subs_BOMFeed_history.pm:427
+#: /home/git/translations/binary-static/src/templates/haml/get_started/glossary.html.haml:1 cgi/subs/subs_BOMFeed_history.pm:428
 msgid "Forex"
 msgstr ""
 
@@ -2953,7 +2961,7 @@ msgstr ""
 msgid "Forward starting intraday and daily contracts are available on some %1"
 msgstr ""
 
-#: web/bin/JavascriptCompress.pm:129
+#: web/bin/JavascriptCompress.pm:125
 msgid "Fr"
 msgstr ""
 
@@ -2974,7 +2982,7 @@ msgstr ""
 msgid "Free gift"
 msgstr ""
 
-#: web/bin/JavascriptCompress.pm:76
+#: web/bin/JavascriptCompress.pm:72
 msgid "Friday"
 msgstr ""
 
@@ -2982,7 +2990,7 @@ msgstr ""
 msgid "Fridays"
 msgstr ""
 
-#: /home/git/translations/binary-static/src/templates/toolkit/resources/pricing_table_form.html.tt:103 /home/git/translations/binary-static/src/templates/toolkit/resources/pricing_table_form.html.tt:79 /home/git/translations/binary-static/src/templates/toolkit/resources/pricing_table_form.html.tt:80 web/bin/JavascriptCompress.pm:68
+#: /home/git/translations/binary-static/src/templates/toolkit/resources/pricing_table_form.html.tt:103 /home/git/translations/binary-static/src/templates/toolkit/resources/pricing_table_form.html.tt:79 /home/git/translations/binary-static/src/templates/toolkit/resources/pricing_table_form.html.tt:80 web/bin/JavascriptCompress.pm:64
 msgid "From"
 msgstr ""
 
@@ -3002,7 +3010,7 @@ msgstr ""
 msgid "From:"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:4100
+#: cgi/subs/subs_forms.pm:4098
 msgid "Further Instructions"
 msgstr ""
 
@@ -3011,7 +3019,7 @@ msgid "Further information"
 msgstr ""
 
 #. (300)
-#: cgi/paymentagent_withdraw.cgi:171 cgi/subs/subs_forms.pm:4123
+#: cgi/paymentagent_withdraw.cgi:173 cgi/subs/subs_forms.pm:4121
 msgid "Further instructions must not exceed %1 characters."
 msgstr ""
 
@@ -3019,7 +3027,7 @@ msgstr ""
 msgid "Further to this, the API interface is hosted by an API Proxy management provider, namely <a href=\"http://apigee.com\" target=\"_blank\">Apigee</a>. This service applies several services of benefit both to the application developer and to the API provider."
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:324
+#: cgi/subs/subs_BOMFeed_history.pm:325
 msgid "Futures"
 msgstr ""
 
@@ -3085,7 +3093,7 @@ msgstr ""
 msgid "Gift Certificate Withdrawal"
 msgstr ""
 
-#: cgi/top_up_virtual.cgi:17 cgi/top_up_virtual.cgi:20
+#: cgi/top_up_virtual.cgi:18 cgi/top_up_virtual.cgi:21
 msgid "Give Me More Money!"
 msgstr ""
 
@@ -3146,7 +3154,7 @@ msgstr ""
 msgid "Hello, World!"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:387
+#: cgi/subs/subs_BOMFeed_history.pm:388
 msgid "Help"
 msgstr ""
 
@@ -3154,11 +3162,11 @@ msgstr ""
 msgid "Hide last spot"
 msgstr ""
 
-#: /home/git/translations/binary-static/src/templates/toolkit/charting/daily_ohlc.html.tt:18 /home/git/translations/binary-static/src/templates/toolkit/charting/daily_ohlc.html.tt:46 /home/git/translations/binary-static/src/templates/toolkit/charting/legacy_chart_table.html.tt:13 /home/git/translations/binary-static/src/templates/toolkit/charting/ticker_data_table.html.tt:7 cgi/subs/subs_BOMFeed_history.pm:364
+#: /home/git/translations/binary-static/src/templates/toolkit/charting/daily_ohlc.html.tt:18 /home/git/translations/binary-static/src/templates/toolkit/charting/daily_ohlc.html.tt:46 /home/git/translations/binary-static/src/templates/toolkit/charting/legacy_chart_table.html.tt:13 /home/git/translations/binary-static/src/templates/toolkit/charting/ticker_data_table.html.tt:7 cgi/subs/subs_BOMFeed_history.pm:365
 msgid "High"
 msgstr ""
 
-#: web/bin/JavascriptCompress.pm:120
+#: web/bin/JavascriptCompress.pm:116
 msgid "High Barrier"
 msgstr ""
 
@@ -3178,7 +3186,7 @@ msgstr ""
 msgid "High returns"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:400
+#: cgi/subs/subs_BOMFeed_history.pm:401
 msgid "High/Low"
 msgstr ""
 
@@ -3198,7 +3206,7 @@ msgstr ""
 msgid "Higher/lower trades"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:514 cgi/subs/subs_graphs_chartdirector.pm:333
+#: cgi/subs/subs_BOMFeed_history.pm:515 cgi/subs/subs_graphs_chartdirector.pm:333
 msgid "Highlights the relationship between volume and price changes and is particularly useful for assessing the strength of a trend."
 msgstr ""
 
@@ -3282,7 +3290,7 @@ msgid "I forgot my password, what should I do?"
 msgstr ""
 
 #. ($tac_url)
-#: cgi/subs/subs_forms.pm:715
+#: cgi/subs/subs_forms.pm:718
 msgid "I have read and agree to the <a target=\"_blank\" href=\"%1\">terms and conditions</a> of the site."
 msgstr ""
 
@@ -3290,15 +3298,15 @@ msgstr ""
 msgid "I'm new to binaries, where do I start?"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:1001
+#: cgi/subs/subs_forms.pm:1004
 msgid "ID scans submitted"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:1300
+#: cgi/subs/subs_forms.pm:1303
 msgid "IP Address"
 msgstr ""
 
-#: cgi/f_writepartics.cgi:232 cgi/subs/subs_forms.pm:1531
+#: cgi/f_writepartics.cgi:232 cgi/subs/subs_forms.pm:1534
 msgid "IP Security"
 msgstr ""
 
@@ -3318,7 +3326,7 @@ msgstr ""
 msgid "If any provision of this Agreement is held to be void or unenforceable in whole or part, the impugned provision (or part thereof) shall be deemed to be deleted from this Agreement and the remaining provisions (including the remainder of the affected provision) shall continue to be valid and applicable."
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:2822
+#: cgi/subs/subs_forms.pm:2825
 msgid "If applicable, to expedite the processing of your query please include a screen capture of the page that requires our attention."
 msgstr ""
 
@@ -3453,7 +3461,7 @@ msgid "If you're in Asia, you may find %1 more attractive because they reset aro
 msgstr ""
 
 #: /home/git/translations/binary-static/src/templates/toolkit/legal/complaints_disputes.html.tt:7
-msgid "If your complaint relates to an outcome of a trade or a transaction and remains unresolved, it will turn into a dispute. Should you be unsatisfied with our response, you can choose to escalate your complaint to the regulator or to an alternative dispute resolution entity. Your disputes must be lodged within seven (7) days from the date the contract in question has been decided. No claims will be honoured after this period. You are solely responsible for the transactions made in your account."
+msgid "If your complaint relates to an outcome of a trade or a transaction and remains unresolved, it will turn into a dispute. Should you be unsatisfied with our response, you can choose to escalate your complaint to the regulator or to an alternative dispute resolution entity."
 msgstr ""
 
 #. (stash->{website_name}, url_for('contact.cgi')
@@ -3529,7 +3537,7 @@ msgstr ""
 msgid "In the case that any financial contracts are acquired or sold at prices that do not reflect fair market prices or that are acquired or sold at an abnormally low level of risk due to an undetected programming error, bug or glitch in our website software, the Company reserves the right to cancel or reverse such transactions upon notification to the Client of the nature of the computer error that led to the mispricing. Clients have a duty to report to the Company any problems or suspected system inadequacies that they may experience and may not abuse of system problems for profit. The Company will endeavour to resolve any such difficulties in the shortest time possible. Persons with insider knowledge of any financial market or instrument are prohibited from trading at this website."
 msgstr ""
 
-#: cgi/emailus.cgi:95
+#: cgi/emailus.cgi:96
 msgid "In the meantime, we hope that you will have found the site to be informative and that it will meet with your requirements for financial fixed-odds trading."
 msgstr ""
 
@@ -3537,7 +3545,7 @@ msgstr ""
 msgid "In these terms and conditions, Y represents the amount of funds that you must deposit and X represents the bonus amount that you will receive."
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:3166
+#: cgi/subs/subs_forms.pm:3169
 msgid "In what country do you want to offer your service"
 msgstr ""
 
@@ -3570,23 +3578,23 @@ msgstr ""
 msgid "Indicative Price"
 msgstr ""
 
-#: /home/git/translations/binary-static/src/templates/toolkit/charting/light_chart.html.tt:87 cgi/subs/subs_BOMFeed_history.pm:367 cgi/subs/subs_BOMFeed_history.pm:405
+#: /home/git/translations/binary-static/src/templates/toolkit/charting/light_chart.html.tt:87 cgi/subs/subs_BOMFeed_history.pm:368 cgi/subs/subs_BOMFeed_history.pm:406
 msgid "Indicator"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:472 cgi/subs/subs_graphs_chartdirector.pm:258
+#: cgi/subs/subs_BOMFeed_history.pm:473 cgi/subs/subs_graphs_chartdirector.pm:258
 msgid "Indicator that displays the width of Bollinger Bands."
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:537 cgi/subs/subs_graphs_chartdirector.pm:326
+#: cgi/subs/subs_BOMFeed_history.pm:538 cgi/subs/subs_graphs_chartdirector.pm:326
 msgid "Indicator that displays the width of Donchian Channels."
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:474 cgi/subs/subs_graphs_chartdirector.pm:275
+#: cgi/subs/subs_BOMFeed_history.pm:475 cgi/subs/subs_graphs_chartdirector.pm:275
 msgid "Indicator that is calculated by subtracting a 10 period exponential moving average from a 3 period moving average of the Accumulation Distribution Line."
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:516 cgi/subs/subs_graphs_chartdirector.pm:235
+#: cgi/subs/subs_BOMFeed_history.pm:517 cgi/subs/subs_graphs_chartdirector.pm:235
 msgid "Indicator that signals an upward trend when it rises above zero and a downward trend when it falls below zero. The farther away the oscillator is from the zero line, the stronger the trend."
 msgstr ""
 
@@ -3626,7 +3634,7 @@ msgstr ""
 msgid "Instrument:"
 msgstr ""
 
-#: /home/git/translations/binary-static/src/templates/toolkit/charting/light_chart.html.tt:21 cgi/subs/subs_BOMFeed_history.pm:410
+#: /home/git/translations/binary-static/src/templates/toolkit/charting/light_chart.html.tt:21 cgi/subs/subs_BOMFeed_history.pm:411
 msgid "Instruments"
 msgstr ""
 
@@ -3654,7 +3662,7 @@ msgstr ""
 msgid "Intraday"
 msgstr ""
 
-#: lib/BOM/Product/Contract.pm:1580
+#: lib/BOM/Product/Contract.pm:1581
 msgid "Intraday contracts may not cross market open."
 msgstr ""
 
@@ -3666,7 +3674,7 @@ msgstr ""
 msgid "Introduction"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:3078
+#: cgi/subs/subs_forms.pm:3081
 msgid "Invalid Building No./Name"
 msgstr ""
 
@@ -3674,23 +3682,23 @@ msgstr ""
 msgid "Invalid Input"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:3886 cgi/subs/subs_forms.pm:3892 cgi/subs/subs_forms.pm:4087 cgi/subs/subs_forms.pm:4093 lib/BOM/View/Form/Validation.pm:105 lib/BOM/View/Form/Validation.pm:113
+#: cgi/subs/subs_forms.pm:3886 cgi/subs/subs_forms.pm:3892 cgi/subs/subs_forms.pm:4085 cgi/subs/subs_forms.pm:4091 lib/BOM/View/Form/Validation.pm:105 lib/BOM/View/Form/Validation.pm:113
 msgid "Invalid amount"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:1292
+#: cgi/subs/subs_forms.pm:1295
 msgid "Invalid fax number."
 msgstr ""
 
-#: lib/BOM/Product/Contract.pm:2338
+#: lib/BOM/Product/Contract.pm:2339
 msgid "Invalid payout currency."
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:365
+#: cgi/subs/subs_BOMFeed_history.pm:366
 msgid "Invalid period input! Please input the period between 0 and #1"
 msgstr ""
 
-#: lib/BOM/Product/Contract.pm:2387
+#: lib/BOM/Product/Contract.pm:2388
 msgid "Invalid stake"
 msgstr ""
 
@@ -3698,19 +3706,19 @@ msgstr ""
 msgid "Invalid telephone number"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:1256 cgi/subs/subs_forms.pm:2646 cgi/subs/subs_forms.pm:3259 cgi/subs/subs_forms.pm:507
+#: cgi/subs/subs_forms.pm:1259 cgi/subs/subs_forms.pm:2649 cgi/subs/subs_forms.pm:3262 cgi/subs/subs_forms.pm:510
 msgid "Invalid telephone number (too long)."
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:1250 cgi/subs/subs_forms.pm:2640 cgi/subs/subs_forms.pm:3253 cgi/subs/subs_forms.pm:501
+#: cgi/subs/subs_forms.pm:1253 cgi/subs/subs_forms.pm:2643 cgi/subs/subs_forms.pm:3256 cgi/subs/subs_forms.pm:504
 msgid "Invalid telephone number (too short)."
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:1261 cgi/subs/subs_forms.pm:2634 cgi/subs/subs_forms.pm:3264 cgi/subs/subs_forms.pm:512
+#: cgi/subs/subs_forms.pm:1264 cgi/subs/subs_forms.pm:2637 cgi/subs/subs_forms.pm:3267 cgi/subs/subs_forms.pm:515
 msgid "Invalid telephone number."
 msgstr ""
 
-#: cgi/smartchart.cgi:116 cgi/smartchart.cgi:437
+#: cgi/smartchart.cgi:116 cgi/smartchart.cgi:438
 msgid "Invalid underlying"
 msgstr ""
 
@@ -3718,7 +3726,7 @@ msgstr ""
 msgid "Invalid value."
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:353
+#: cgi/subs/subs_BOMFeed_history.pm:354
 msgid "Invalid workspace name. Only use characters (A-Z,a-z,0-9, -, _ and whitespace)"
 msgstr ""
 
@@ -3728,6 +3736,10 @@ msgstr ""
 
 #: /home/git/translations/binary-static/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:5
 msgid "It is important that you read and understand the contents of these terms and conditions. By indicating your acceptance of these terms and conditions and continuing with your application to join our affiliate program, you are agreeing (subject to our approval of your application) to the terms and conditions below. If you do not agree with the terms and conditions (or are not authorised to do so) you should not continue with your application. You should be the owner of, or acting on behalf of the owner of the website, that is signing up for this affiliate program."
+msgstr ""
+
+#: /home/git/translations/binary-static/src/templates/toolkit/legal/complaints_disputes.html.tt:16
+msgid "It is important that you refer your disputes to the appropriate ADR for the claims to be valid."
 msgstr ""
 
 #: /home/git/translations/binary-static/src/templates/haml/static/devguide.html.haml:1
@@ -3754,15 +3766,15 @@ msgstr ""
 msgid "It’s time to expand. We set up a programming center in Cyberjaya – the Silicon Valley of Kuala Lumpur – to maintain and improve BetOnMarkets.com."
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:531 cgi/subs/subs_graphs_chartdirector.pm:243
+#: cgi/subs/subs_BOMFeed_history.pm:532 cgi/subs/subs_graphs_chartdirector.pm:243
 msgid "J. Welles Wilder has developed the Average Directional Index - ADX to define trend force, whether the trend will develop further or will gradually weaken. The indicator allows to analyse tendencies of the market and to make trading decisions in the market forex."
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:173 cgi/subs/subs_forms.pm:2291 web/bin/JavascriptCompress.pm:78
+#: cgi/subs/subs_forms.pm:176 cgi/subs/subs_forms.pm:2294 web/bin/JavascriptCompress.pm:74
 msgid "Jan"
 msgstr ""
 
-#: web/bin/JavascriptCompress.pm:90
+#: web/bin/JavascriptCompress.pm:86
 msgid "January"
 msgstr ""
 
@@ -3774,11 +3786,11 @@ msgstr ""
 msgid "Join our analysts LIVE twice a week for a comprehensive analysis of recent developments and trends in the global financial markets."
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:197 cgi/subs/subs_forms.pm:2315 web/bin/JavascriptCompress.pm:84
+#: cgi/subs/subs_forms.pm:200 cgi/subs/subs_forms.pm:2318 web/bin/JavascriptCompress.pm:80
 msgid "Jul"
 msgstr ""
 
-#: web/bin/JavascriptCompress.pm:96
+#: web/bin/JavascriptCompress.pm:92
 msgid "July"
 msgstr ""
 
@@ -3786,11 +3798,11 @@ msgstr ""
 msgid "Jump to"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:193 cgi/subs/subs_forms.pm:2311 web/bin/JavascriptCompress.pm:83
+#: cgi/subs/subs_forms.pm:196 cgi/subs/subs_forms.pm:2314 web/bin/JavascriptCompress.pm:79
 msgid "Jun"
 msgstr ""
 
-#: web/bin/JavascriptCompress.pm:95
+#: web/bin/JavascriptCompress.pm:91
 msgid "June"
 msgstr ""
 
@@ -3798,7 +3810,7 @@ msgstr ""
 msgid "Keep this value secure"
 msgstr ""
 
-#: cgi/paymentagent_withdraw.cgi:406
+#: cgi/paymentagent_withdraw.cgi:408
 msgid "Kind Regards,"
 msgstr ""
 
@@ -3810,7 +3822,7 @@ msgstr ""
 msgid "Large"
 msgstr ""
 
-#: /home/git/translations/binary-static/src/templates/toolkit/charting/ticker_data_table.html.tt:4 cgi/subs/subs_BOMFeed_history.pm:372
+#: /home/git/translations/binary-static/src/templates/toolkit/charting/ticker_data_table.html.tt:4 cgi/subs/subs_BOMFeed_history.pm:373
 msgid "Last"
 msgstr ""
 
@@ -3879,7 +3891,7 @@ msgstr ""
 msgid "Licence to use Marks"
 msgstr ""
 
-#: /home/git/translations/binary-static/src/templates/haml/charting/index.html.haml:1 /home/git/translations/binary-static/src/templates/haml/layouts/default/footer.html.haml:1 /home/git/translations/binary-static/src/templates/toolkit/global/footer.html.tt:138 cgi/smartchart.cgi:258 cgi/smartchart.cgi:266 lib/BOM/View/Menu.pm:215
+#: /home/git/translations/binary-static/src/templates/haml/charting/index.html.haml:1 /home/git/translations/binary-static/src/templates/haml/layouts/default/footer.html.haml:1 /home/git/translations/binary-static/src/templates/toolkit/global/footer.html.tt:138 cgi/smartchart.cgi:259 cgi/smartchart.cgi:267 lib/BOM/View/Menu.pm:215
 msgid "Light Charts"
 msgstr ""
 
@@ -3892,15 +3904,15 @@ msgstr ""
 msgid "Limit"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:337
+#: cgi/subs/subs_BOMFeed_history.pm:338
 msgid "Line"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:349
+#: cgi/subs/subs_BOMFeed_history.pm:350
 msgid "Line Chart"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:399
+#: cgi/subs/subs_BOMFeed_history.pm:400
 msgid "Line Dot Chart"
 msgstr ""
 
@@ -3909,7 +3921,7 @@ msgid "Links"
 msgstr ""
 
 #. (BOM::Platform::Runtime->instance->countries->localized_code2country($target_country, request()
-#: cgi/subs/subs_forms.pm:4043
+#: cgi/subs/subs_forms.pm:4041
 msgid "Listing only Payment Agents in %1."
 msgstr ""
 
@@ -3925,7 +3937,7 @@ msgstr ""
 msgid "Live Help"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:1545
+#: cgi/subs/subs_forms.pm:1548
 msgid "Lock Cashier and Settings sections"
 msgstr ""
 
@@ -3956,7 +3968,7 @@ msgstr ""
 msgid "Log-in to your %1 affiliate account and click on: Reports &rarr; Traffic Report."
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:380
+#: cgi/subs/subs_BOMFeed_history.pm:381
 msgid "Logarithmic Scale"
 msgstr ""
 
@@ -3964,7 +3976,7 @@ msgstr ""
 msgid "Login"
 msgstr ""
 
-#: /home/git/translations/binary-static/src/templates/haml/home/login.html.haml:1 /home/git/translations/binary-static/src/templates/haml/layouts/default/header.html.haml:1 /home/git/translations/binary-static/src/templates/toolkit/global/header.html.tt:66 cgi/subs/subs_forms.pm:2712 cgi/subs/subs_forms.pm:2835
+#: /home/git/translations/binary-static/src/templates/haml/home/login.html.haml:1 /home/git/translations/binary-static/src/templates/haml/layouts/default/header.html.haml:1 /home/git/translations/binary-static/src/templates/toolkit/global/header.html.tt:66 cgi/subs/subs_forms.pm:2715 cgi/subs/subs_forms.pm:2838
 msgid "Login ID"
 msgstr ""
 
@@ -3989,7 +4001,7 @@ msgstr ""
 msgid "Long-term partnership with the leading financial trading service"
 msgstr ""
 
-#: web/bin/JavascriptCompress.pm:133
+#: web/bin/JavascriptCompress.pm:129
 msgid "Loss"
 msgstr ""
 
@@ -3997,11 +4009,11 @@ msgstr ""
 msgid "Lost password?"
 msgstr ""
 
-#: /home/git/translations/binary-static/src/templates/toolkit/charting/daily_ohlc.html.tt:19 /home/git/translations/binary-static/src/templates/toolkit/charting/daily_ohlc.html.tt:47 /home/git/translations/binary-static/src/templates/toolkit/charting/legacy_chart_table.html.tt:14 /home/git/translations/binary-static/src/templates/toolkit/charting/ticker_data_table.html.tt:8 cgi/subs/subs_BOMFeed_history.pm:414
+#: /home/git/translations/binary-static/src/templates/toolkit/charting/daily_ohlc.html.tt:19 /home/git/translations/binary-static/src/templates/toolkit/charting/daily_ohlc.html.tt:47 /home/git/translations/binary-static/src/templates/toolkit/charting/legacy_chart_table.html.tt:14 /home/git/translations/binary-static/src/templates/toolkit/charting/ticker_data_table.html.tt:8 cgi/subs/subs_BOMFeed_history.pm:415
 msgid "Low"
 msgstr ""
 
-#: web/bin/JavascriptCompress.pm:119
+#: web/bin/JavascriptCompress.pm:115
 msgid "Low Barrier"
 msgstr ""
 
@@ -4025,11 +4037,11 @@ msgstr ""
 msgid "Lower Band = Average - 0.5 * Std Deviation"
 msgstr ""
 
-#: cgi/smartchart.cgi:30 cgi/subs/subs_BOMFeed_history.pm:361 cgi/subs/subs_BOMFeed_history.pm:561 cgi/subs/subs_graphs_chartdirector.pm:349
+#: cgi/smartchart.cgi:30 cgi/subs/subs_BOMFeed_history.pm:362 cgi/subs/subs_BOMFeed_history.pm:562 cgi/subs/subs_graphs_chartdirector.pm:349
 msgid "MACD"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:351
+#: cgi/subs/subs_BOMFeed_history.pm:352
 msgid "MACD Signal"
 msgstr ""
 
@@ -4054,11 +4066,11 @@ msgstr ""
 msgid "Make your trade"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:181 cgi/subs/subs_forms.pm:2299 web/bin/JavascriptCompress.pm:80
+#: cgi/subs/subs_forms.pm:184 cgi/subs/subs_forms.pm:2302 web/bin/JavascriptCompress.pm:76
 msgid "Mar"
 msgstr ""
 
-#: web/bin/JavascriptCompress.pm:92
+#: web/bin/JavascriptCompress.pm:88
 msgid "March"
 msgstr ""
 
@@ -4083,7 +4095,7 @@ msgid "Market exit price"
 msgstr ""
 
 #. ($safer_expiry->date)
-#: lib/BOM/Product/Contract.pm:2853
+#: lib/BOM/Product/Contract.pm:2854
 msgid "Market holiday during the contract period. Select an expiry date after %1."
 msgstr ""
 
@@ -4107,7 +4119,7 @@ msgstr ""
 msgid "Markets"
 msgstr ""
 
-#: cgi/smartchart.cgi:31 cgi/subs/subs_BOMFeed_history.pm:545 cgi/subs/subs_graphs_chartdirector.pm:361
+#: cgi/smartchart.cgi:31 cgi/subs/subs_BOMFeed_history.pm:546 cgi/subs/subs_graphs_chartdirector.pm:361
 msgid "Mass Index"
 msgstr ""
 
@@ -4115,7 +4127,7 @@ msgstr ""
 msgid "Matched Contract Bonus"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:3859 cgi/subs/subs_forms.pm:4060
+#: cgi/subs/subs_forms.pm:3859 cgi/subs/subs_forms.pm:4058
 msgid "Max"
 msgstr ""
 
@@ -4158,7 +4170,7 @@ msgstr ""
 msgid "Maximum withdrawal by all other means:"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:189 cgi/subs/subs_forms.pm:2307 web/bin/JavascriptCompress.pm:82 web/bin/JavascriptCompress.pm:94
+#: cgi/subs/subs_forms.pm:192 cgi/subs/subs_forms.pm:2310 web/bin/JavascriptCompress.pm:78 web/bin/JavascriptCompress.pm:90
 msgid "May"
 msgstr ""
 
@@ -4170,11 +4182,11 @@ msgstr ""
 msgid "Medium"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:520
+#: cgi/subs/subs_forms.pm:523
 msgid "Memorable date"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:519
+#: cgi/subs/subs_forms.pm:522
 msgid "Memorable town/city"
 msgstr ""
 
@@ -4183,11 +4195,11 @@ msgstr ""
 msgid "Mentioning error code %1 in any correspondence may help us resolve the issue more quickly."
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:2932
+#: cgi/subs/subs_forms.pm:2935
 msgid "Message"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:2953
+#: cgi/subs/subs_forms.pm:2956
 msgid "Message is too short."
 msgstr ""
 
@@ -4199,7 +4211,7 @@ msgstr ""
 msgid "Mid"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:3859 cgi/subs/subs_forms.pm:4060
+#: cgi/subs/subs_forms.pm:3859 cgi/subs/subs_forms.pm:4058
 msgid "Min"
 msgstr ""
 
@@ -4219,19 +4231,19 @@ msgstr ""
 msgid "Miss"
 msgstr ""
 
-#: lib/BOM/Product/Contract.pm:1541 lib/BOM/Product/Contract.pm:1594
+#: lib/BOM/Product/Contract.pm:1542 lib/BOM/Product/Contract.pm:1595
 msgid "Missing market data for contract period."
 msgstr ""
 
-#: lib/BOM/Product/Contract.pm:1480
+#: lib/BOM/Product/Contract.pm:1481
 msgid "Missing market data for entry spot."
 msgstr ""
 
-#: lib/BOM/Product/Contract.pm:1554 lib/BOM/Product/Contract.pm:1567
+#: lib/BOM/Product/Contract.pm:1555 lib/BOM/Product/Contract.pm:1568
 msgid "Missing market data for exit spot."
 msgstr ""
 
-#: web/bin/JavascriptCompress.pm:125
+#: web/bin/JavascriptCompress.pm:121
 msgid "Mo"
 msgstr ""
 
@@ -4239,11 +4251,11 @@ msgstr ""
 msgid "Mobile application"
 msgstr ""
 
-#: cgi/smartchart.cgi:32 cgi/subs/subs_BOMFeed_history.pm:358 cgi/subs/subs_BOMFeed_history.pm:493
+#: cgi/smartchart.cgi:32 cgi/subs/subs_BOMFeed_history.pm:359 cgi/subs/subs_BOMFeed_history.pm:494
 msgid "Momentum"
 msgstr ""
 
-#: web/bin/JavascriptCompress.pm:72
+#: web/bin/JavascriptCompress.pm:68
 msgid "Monday"
 msgstr ""
 
@@ -4275,11 +4287,11 @@ msgstr ""
 msgid "Monitor your portfolio in real time."
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:316 web/bin/JavascriptCompress.pm:52
+#: cgi/subs/subs_BOMFeed_history.pm:317 web/bin/JavascriptCompress.pm:48
 msgid "Month"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:329 lib/BOM/Product/Helper/PricingTableParameters.pm:307
+#: cgi/subs/subs_BOMFeed_history.pm:330 lib/BOM/Product/Helper/PricingTableParameters.pm:307
 msgid "Monthly"
 msgstr ""
 
@@ -4287,7 +4299,7 @@ msgstr ""
 msgid "Monthly Webinars"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:375
+#: cgi/subs/subs_BOMFeed_history.pm:376
 msgid "Months"
 msgstr ""
 
@@ -4300,11 +4312,11 @@ msgstr ""
 msgid "More than %1 trades available"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:519
+#: cgi/subs/subs_forms.pm:522
 msgid "Mother's maiden name"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:386
+#: cgi/subs/subs_BOMFeed_history.pm:387
 msgid "Mountain Chart"
 msgstr ""
 
@@ -4312,15 +4324,15 @@ msgstr ""
 msgid "Moving Average"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:466 cgi/subs/subs_graphs_chartdirector.pm:509
+#: cgi/subs/subs_BOMFeed_history.pm:467 cgi/subs/subs_graphs_chartdirector.pm:509
 msgid "Moving averages provide an objective measure of trend direction by smoothing out short-term price fluctuations.A Simple Moving Average is the unweighted mean of the n (set by period) previous periods (1 period is the selected timescale, i.e. 1 minute, 1 day etc.).All previous periods have equal weight in determining the SMA.Shorter length moving averages are more sensitive and signals trends much faster than longer length MAs, but also give more false signals. A longer length MA is more reliable but only picks up the big trend."
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:456 cgi/subs/subs_graphs_chartdirector.pm:517
+#: cgi/subs/subs_BOMFeed_history.pm:457 cgi/subs/subs_graphs_chartdirector.pm:517
 msgid "Moving averages provide an objective measure of trend direction by smoothing out short-term price fluctuations.For an Exponential Moving Average, the applied weight factor decreases exponential for periods further away in the past. It gives much more importance to recent observations while still not discarding older observations entirely.Shorter length moving averages are more sensitive and signals trends much faster than longer length MAs, but also give more false signals. A longer length MA is more reliable but only picks up the big trend."
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:480 cgi/subs/subs_graphs_chartdirector.pm:533
+#: cgi/subs/subs_BOMFeed_history.pm:481 cgi/subs/subs_graphs_chartdirector.pm:533
 msgid "Moving averages provide an objective measure of trend direction by smoothing out short-term price fluctuations.In a Weighted Moving Average, the previous periods have less weight for periods further away in the past. In an n-day WMA the latest day has weight n, the second latest n-1, etc, down to zero.Shorter length moving averages are more sensitive and signals trends much faster than longer length MAs, but also give more false signals. A longer length MA is more reliable but only picks up the big trend."
 msgstr ""
 
@@ -4352,19 +4364,19 @@ msgstr ""
 msgid "My Account"
 msgstr ""
 
-#: /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_agents_list.html.tt:2 /home/git/translations/binary-static/src/templates/toolkit/cashier/payment_agent_further_info.html.tt:3 cgi/subs/subs_forms.pm:1011
+#: /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_agents_list.html.tt:2 /home/git/translations/binary-static/src/templates/toolkit/cashier/payment_agent_further_info.html.tt:3 cgi/subs/subs_forms.pm:1014
 msgid "Name"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:2671 cgi/subs/subs_forms.pm:2891
+#: cgi/subs/subs_forms.pm:2674 cgi/subs/subs_forms.pm:2894
 msgid "Name is too short."
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:519
+#: cgi/subs/subs_forms.pm:522
 msgid "Name of first love"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:519
+#: cgi/subs/subs_forms.pm:522
 msgid "Name of your pet"
 msgstr ""
 
@@ -4380,19 +4392,19 @@ msgstr ""
 msgid "Network Status"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:382
+#: cgi/subs/subs_BOMFeed_history.pm:383
 msgid "New"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:1363
+#: cgi/subs/subs_forms.pm:1366
 msgid "New Cashier/Settings password"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:1839 cgi/subs/subs_forms.pm:1996
+#: cgi/subs/subs_forms.pm:1842 cgi/subs/subs_forms.pm:1999
 msgid "New Password"
 msgstr ""
 
-#: cgi/f_brokercgi/f_clientloginid_newpassword.cgi:74 cgi/lost_password.cgi:140 cgi/lost_password.cgi:255 cgi/lost_password.cgi:276 cgi/lost_password.cgi:301
+#: cgi/f_brokercgi/f_clientloginid_newpassword.cgi:74 cgi/lost_password.cgi:143 cgi/lost_password.cgi:258 cgi/lost_password.cgi:279 cgi/lost_password.cgi:304
 msgid "New Password Request"
 msgstr ""
 
@@ -4408,11 +4420,11 @@ msgstr ""
 msgid "Newer"
 msgstr ""
 
-#: /home/git/translations/binary-static/src/templates/haml/get_started/benefits_of_trading_binaries.html.haml:1 /home/git/translations/binary-static/src/templates/haml/get_started/how_to_trade_binaries.html.haml:1 web/bin/JavascriptCompress.pm:122
+#: /home/git/translations/binary-static/src/templates/haml/get_started/benefits_of_trading_binaries.html.haml:1 /home/git/translations/binary-static/src/templates/haml/get_started/how_to_trade_binaries.html.haml:1 web/bin/JavascriptCompress.pm:118
 msgid "Next"
 msgstr ""
 
-#: /home/git/translations/binary-static/src/templates/toolkit/container/confirm_box_popup.html.tt:7 cgi/subs/subs_BOMFeed_history.pm:327 cgi/subs/subs_forms.pm:3399 cgi/subs/subs_forms.pm:994
+#: /home/git/translations/binary-static/src/templates/toolkit/container/confirm_box_popup.html.tt:7 cgi/subs/subs_BOMFeed_history.pm:328 cgi/subs/subs_forms.pm:3399 cgi/subs/subs_forms.pm:997
 msgid "No"
 msgstr ""
 
@@ -4420,7 +4432,7 @@ msgstr ""
 msgid "No Data available"
 msgstr ""
 
-#: web/bin/JavascriptCompress.pm:139
+#: web/bin/JavascriptCompress.pm:135
 msgid "No Live price update"
 msgstr ""
 
@@ -4428,7 +4440,7 @@ msgstr ""
 msgid "No Touch trades"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:447
+#: cgi/subs/subs_BOMFeed_history.pm:448
 msgid "No data available to draw the requested chart. Please try our daily chart for this instrument."
 msgstr ""
 
@@ -4505,11 +4517,11 @@ msgstr ""
 msgid "Notification of Changes"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:213 cgi/subs/subs_forms.pm:2331 web/bin/JavascriptCompress.pm:88
+#: cgi/subs/subs_forms.pm:216 cgi/subs/subs_forms.pm:2334 web/bin/JavascriptCompress.pm:84
 msgid "Nov"
 msgstr ""
 
-#: web/bin/JavascriptCompress.pm:100
+#: web/bin/JavascriptCompress.pm:96
 msgid "November"
 msgstr ""
 
@@ -4530,7 +4542,7 @@ msgid "Number of ticks"
 msgstr ""
 
 #. ($min_tick, $max_tick)
-#: lib/BOM/Product/Contract.pm:2752
+#: lib/BOM/Product/Contract.pm:2753
 msgid "Number of ticks must be between %1 and %2"
 msgstr ""
 
@@ -4550,7 +4562,7 @@ msgstr ""
 msgid "OAuth2.0 is the emerging internet standard for this purpose. See <a href=\"http://oauth.net/2\" target=\"_blank\">http://oauth.net/2</a> for a formal definition, although we will guide you through the steps relevant to your platform."
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:421
+#: cgi/subs/subs_BOMFeed_history.pm:422
 msgid "OK"
 msgstr ""
 
@@ -4562,7 +4574,7 @@ msgstr ""
 msgid "ORIGINAL Utility bill (within last 3 months) ; or"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:209 cgi/subs/subs_forms.pm:2327 web/bin/JavascriptCompress.pm:87
+#: cgi/subs/subs_forms.pm:212 cgi/subs/subs_forms.pm:2330 web/bin/JavascriptCompress.pm:83
 msgid "Oct"
 msgstr ""
 
@@ -4575,7 +4587,7 @@ msgstr ""
 msgid "Octal Futures is a Perl web application which demonstrates how to authenticate and make server-side calls to the Binary.com API.  It is developed with <a target=\"_blank\" href=\"%1\">Mojolicious</a> and is open-sourced as <a target=\"_blank\" href=\"%2\">octalfutures</a> on github. Perl/Mojolicious developers are invited to participate in this project by forking the repository."
 msgstr ""
 
-#: web/bin/JavascriptCompress.pm:99
+#: web/bin/JavascriptCompress.pm:95
 msgid "October"
 msgstr ""
 
@@ -4636,11 +4648,11 @@ msgstr ""
 msgid "Only properly tagged clients can be assigned to an affiliate. Should an affiliate tag be improperly inserted into the affiliate site or not properly received by the MyAffiliates server the resulting client registration and purchases will not be assigned to the affiliate. Therefore it is the responsibility of the affiliate to ensure that all links are properly tagged."
 msgstr ""
 
-#: /home/git/translations/binary-static/src/templates/toolkit/charting/daily_ohlc.html.tt:17 /home/git/translations/binary-static/src/templates/toolkit/charting/daily_ohlc.html.tt:45 /home/git/translations/binary-static/src/templates/toolkit/charting/ticker_data_table.html.tt:6 cgi/subs/subs_BOMFeed_history.pm:342 cgi/subs/subs_BOMFeed_history.pm:422
+#: /home/git/translations/binary-static/src/templates/toolkit/charting/daily_ohlc.html.tt:17 /home/git/translations/binary-static/src/templates/toolkit/charting/daily_ohlc.html.tt:45 /home/git/translations/binary-static/src/templates/toolkit/charting/ticker_data_table.html.tt:6 cgi/subs/subs_BOMFeed_history.pm:343 cgi/subs/subs_BOMFeed_history.pm:423
 msgid "Open"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:678
+#: cgi/subs/subs_forms.pm:681
 msgid "Open Account"
 msgstr ""
 
@@ -4685,7 +4697,7 @@ msgstr ""
 msgid "Opens late (at %1)"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:503 cgi/subs/subs_graphs_chartdirector.pm:267
+#: cgi/subs/subs_BOMFeed_history.pm:504 cgi/subs/subs_graphs_chartdirector.pm:267
 msgid "Oscillator calculated from the daily readings of the Accumulation Distribution Line. The CMF is unlike a momentum oscillator in that it is not influenced by the daily price change. Instead, the indicator focuses on the location of the close relative to the range for the period (daily or weekly)."
 msgstr ""
 
@@ -4755,11 +4767,11 @@ msgstr ""
 msgid "Over one billion dollars in trades to date."
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:339
+#: cgi/subs/subs_BOMFeed_history.pm:340
 msgid "Overlay"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:388
+#: cgi/subs/subs_BOMFeed_history.pm:389
 msgid "Overlay Instruments"
 msgstr ""
 
@@ -4772,7 +4784,7 @@ msgstr ""
 msgid "Ownership, content and liability for affiliate sites are the sole responsibility of the affiliate. You will be solely responsible for the development, operation, and maintenance of your site and for all materials that appear on your site. You will indemnify and hold us harmless from all claims, damages, and expenses (including, without limitation to, attorneys' fees) relating to the development, operation, maintenance, and contents of your site."
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:915 cgi/subs/subs_forms.pm:918
+#: cgi/subs/subs_forms.pm:918 cgi/subs/subs_forms.pm:921
 msgid "P.O. Box is not accepted"
 msgstr ""
 
@@ -4780,7 +4792,7 @@ msgstr ""
 msgid "Page not found"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:408
+#: cgi/subs/subs_BOMFeed_history.pm:409
 msgid "Parabolic SAR"
 msgstr ""
 
@@ -4813,15 +4825,15 @@ msgstr ""
 msgid "Partners"
 msgstr ""
 
-#: /home/git/translations/binary-static/src/templates/haml/home/login.html.haml:1 /home/git/translations/binary-static/src/templates/haml/layouts/default/header.html.haml:1 /home/git/translations/binary-static/src/templates/toolkit/global/header.html.tt:67 cgi/subs/subs_forms.pm:595 lib/BOM/View/Menu.pm:89
+#: /home/git/translations/binary-static/src/templates/haml/home/login.html.haml:1 /home/git/translations/binary-static/src/templates/haml/layouts/default/header.html.haml:1 /home/git/translations/binary-static/src/templates/toolkit/global/header.html.tt:67 cgi/subs/subs_forms.pm:598 lib/BOM/View/Menu.pm:89
 msgid "Password"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:1357 cgi/subs/subs_forms.pm:1683
+#: cgi/subs/subs_forms.pm:1360 cgi/subs/subs_forms.pm:1686
 msgid "Password is too long, please enter at most 30 characters."
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:1351 cgi/subs/subs_forms.pm:1677
+#: cgi/subs/subs_forms.pm:1354 cgi/subs/subs_forms.pm:1680
 msgid "Password is too short, please enter at least 3 characters."
 msgstr ""
 
@@ -4829,7 +4841,7 @@ msgstr ""
 msgid "Password not given."
 msgstr ""
 
-#: cgi/lost_password.cgi:37 cgi/lost_password.cgi:40
+#: cgi/lost_password.cgi:40 cgi/lost_password.cgi:43
 msgid "Password reset"
 msgstr ""
 
@@ -4845,7 +4857,7 @@ msgstr ""
 msgid "Payment Agent Deposit"
 msgstr ""
 
-#: cgi/paymentagent_withdraw.cgi:23 cgi/paymentagent_withdraw.cgi:26 cgi/paymentagent_withdraw.cgi:67
+#: cgi/paymentagent_withdraw.cgi:25 cgi/paymentagent_withdraw.cgi:28 cgi/paymentagent_withdraw.cgi:69
 msgid "Payment Agent Withdrawal"
 msgstr ""
 
@@ -4853,7 +4865,7 @@ msgstr ""
 msgid "Payment Agent activity not currently authorized"
 msgstr ""
 
-#: cgi/paymentagent_transfer.cgi:34 cgi/paymentagent_transfer.cgi:38 cgi/paymentagent_transfer.cgi:63 lib/BOM/Platform/Model/Payment/PaymentAgentTransfer.pm:163
+#: cgi/paymentagent_transfer.cgi:34 cgi/paymentagent_transfer.cgi:38 cgi/paymentagent_transfer.cgi:63 lib/BOM/Platform/Model/Payment/PaymentAgentTransfer.pm:162
 msgid "Payment Agent transfer"
 msgstr ""
 
@@ -4861,7 +4873,7 @@ msgstr ""
 msgid "Payment Agents are not available for your account."
 msgstr ""
 
-#: cgi/paymentagent_transfer.cgi:47 cgi/paymentagent_withdraw.cgi:37
+#: cgi/paymentagent_transfer.cgi:47 cgi/paymentagent_withdraw.cgi:39
 msgid "Payment Agents are not available on this site."
 msgstr ""
 
@@ -4869,7 +4881,7 @@ msgstr ""
 msgid "Payment Methods"
 msgstr ""
 
-#: /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:510
+#: /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:509
 msgid "Payment agents"
 msgstr ""
 
@@ -4899,12 +4911,12 @@ msgstr ""
 msgid "Payout has moved in your favour from %1 to %2."
 msgstr ""
 
-#: lib/BOM/Product/Contract.pm:2360
+#: lib/BOM/Product/Contract.pm:2361
 msgid "Payout may not have more than two decimal places."
 msgstr ""
 
 #. (to_monetary_number_format($payout_min, 1)
-#: lib/BOM/Product/Contract.pm:1824
+#: lib/BOM/Product/Contract.pm:1825
 msgid "Payout must be between <strong>%1</strong> and <strong>%2</strong>."
 msgstr ""
 
@@ -4913,11 +4925,11 @@ msgstr ""
 msgid "Pending Bonus: %1"
 msgstr ""
 
-#: cgi/smartchart.cgi:33 cgi/subs/subs_BOMFeed_history.pm:483 cgi/subs/subs_graphs_chartdirector.pm:375
+#: cgi/smartchart.cgi:33 cgi/subs/subs_BOMFeed_history.pm:484 cgi/subs/subs_graphs_chartdirector.pm:375
 msgid "Performance"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:453
+#: cgi/subs/subs_BOMFeed_history.pm:454
 msgid "Period"
 msgstr ""
 
@@ -4929,7 +4941,7 @@ msgstr ""
 msgid "Phone Callback"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:345
+#: cgi/subs/subs_BOMFeed_history.pm:346
 msgid "Pick workspace file"
 msgstr ""
 
@@ -4957,7 +4969,7 @@ msgstr ""
 msgid "Please click on the \"Play\" button to start the video."
 msgstr ""
 
-#: cgi/paymentagent_transfer.cgi:99 cgi/paymentagent_withdraw.cgi:209
+#: cgi/paymentagent_transfer.cgi:99 cgi/paymentagent_withdraw.cgi:211
 msgid "Please confirm the transaction details in order to complete the transfer:"
 msgstr ""
 
@@ -4978,19 +4990,19 @@ msgstr ""
 msgid "Please enter a date that is at least 6 months from now."
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:1666 cgi/subs/subs_forms.pm:1791 cgi/subs/subs_forms.pm:1970 cgi/subs/subs_forms.pm:571
+#: cgi/subs/subs_forms.pm:1669 cgi/subs/subs_forms.pm:1794 cgi/subs/subs_forms.pm:1973 cgi/subs/subs_forms.pm:574
 msgid "Please enter a password."
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:1124 cgi/subs/subs_forms.pm:331
+#: cgi/subs/subs_forms.pm:1127 cgi/subs/subs_forms.pm:334
 msgid "Please enter a town or city."
 msgstr ""
 
-#: /home/git/translations/binary-static/src/templates/toolkit/account/currency_converter.html.tt:11 cgi/paymentagent_transfer.cgi:118 cgi/subs/subs_forms.pm:3880 cgi/subs/subs_forms.pm:4081
+#: /home/git/translations/binary-static/src/templates/toolkit/account/currency_converter.html.tt:11 cgi/paymentagent_transfer.cgi:118 cgi/subs/subs_forms.pm:3880 cgi/subs/subs_forms.pm:4079
 msgid "Please enter a valid amount."
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:3149
+#: cgi/subs/subs_forms.pm:3152
 msgid "Please enter a valid name."
 msgstr ""
 
@@ -5006,27 +5018,27 @@ msgstr ""
 msgid "Please enter the Login ID to transfer funds."
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:3182
+#: cgi/subs/subs_forms.pm:3185
 msgid "Please enter the country where you want to offer your service"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:1078 cgi/subs/subs_forms.pm:269
+#: cgi/subs/subs_forms.pm:1081 cgi/subs/subs_forms.pm:272
 msgid "Please enter the first line of your home address."
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:1062 cgi/subs/subs_forms.pm:2176 cgi/subs/subs_forms.pm:2701 cgi/subs/subs_forms.pm:2921 cgi/subs/subs_forms.pm:3223 cgi/subs/subs_forms.pm:470
+#: cgi/subs/subs_forms.pm:1065 cgi/subs/subs_forms.pm:2179 cgi/subs/subs_forms.pm:2704 cgi/subs/subs_forms.pm:2924 cgi/subs/subs_forms.pm:3226 cgi/subs/subs_forms.pm:473
 msgid "Please enter your email address."
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:119
+#: cgi/subs/subs_forms.pm:122
 msgid "Please enter your first name."
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:137
+#: cgi/subs/subs_forms.pm:140
 msgid "Please enter your last name."
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:2274
+#: cgi/subs/subs_forms.pm:2277
 msgid "Please enter your secret answer"
 msgstr ""
 
@@ -5034,11 +5046,11 @@ msgstr ""
 msgid "Please fill in the Login ID and Amount you wish to transfer to your Client in the form below:"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:2363 cgi/subs/subs_forms.pm:2369 cgi/subs/subs_forms.pm:2375 cgi/subs/subs_forms.pm:244 cgi/subs/subs_forms.pm:250 cgi/subs/subs_forms.pm:256 cgi/subs/subs_forms.pm:261 cgi/subs/subs_forms.pm:895
+#: cgi/subs/subs_forms.pm:2366 cgi/subs/subs_forms.pm:2372 cgi/subs/subs_forms.pm:2378 cgi/subs/subs_forms.pm:247 cgi/subs/subs_forms.pm:253 cgi/subs/subs_forms.pm:259 cgi/subs/subs_forms.pm:264 cgi/subs/subs_forms.pm:898
 msgid "Please input a valid date."
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:1399
+#: cgi/subs/subs_forms.pm:1402
 msgid "Please input it again to confirm"
 msgstr ""
 
@@ -5064,7 +5076,7 @@ msgid "Please note that to apply to become a Payment Agent, you must <a href=\"%
 msgstr ""
 
 #. ($contact_url)
-#: cgi/lost_password.cgi:281
+#: cgi/lost_password.cgi:284
 msgid "Please note that we have found no accounts registered with this e-mail address. If you can't recall the e-mail address used during account registration, please <a href=\"%1\"><strong>contact us</strong></a>."
 msgstr ""
 
@@ -5102,7 +5114,7 @@ msgstr ""
 msgid "Please provide the following contact information and we will call you free of charge as soon as a representative is free."
 msgstr ""
 
-#: cgi/paymentagent_withdraw.cgi:83 cgi/paymentagent_withdraw.cgi:98
+#: cgi/paymentagent_withdraw.cgi:100 cgi/paymentagent_withdraw.cgi:85
 msgid "Please provide us with the following information:"
 msgstr ""
 
@@ -5114,7 +5126,7 @@ msgstr ""
 msgid "Please remember at all times that trading binary options can be an exciting activity, but we have a moral duty to remind you of the risks you may run. Options trading can become a real addiction, as can any other activity pushed to its limits. We kindly ask you to engage in a careful self-analysis to check if you are at risk. To avoid the danger of such an addiction, it is important that you follow some basic principles and guidelines."
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:46
+#: cgi/subs/subs_forms.pm:49
 msgid "Please select"
 msgstr ""
 
@@ -5127,31 +5139,31 @@ msgstr ""
 msgid "Please send this email to %1."
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:1202 cgi/subs/subs_forms.pm:440 cgi/subs/subs_presentation.pm:77
+#: cgi/subs/subs_forms.pm:1205 cgi/subs/subs_forms.pm:443 cgi/subs/subs_presentation.pm:77
 msgid "Please specify your country."
 msgstr ""
 
-#: web/bin/JavascriptCompress.pm:57
+#: web/bin/JavascriptCompress.pm:53
 msgid "Please try again."
 msgstr ""
 
-#: cgi/lost_password.cgi:463 cgi/lost_password.cgi:576
+#: cgi/lost_password.cgi:466 cgi/lost_password.cgi:579
 msgid "Please type your chosen password twice into the fields below:"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:2977 cgi/subs/subs_forms.pm:3015
+#: cgi/subs/subs_forms.pm:2980 cgi/subs/subs_forms.pm:3018
 msgid "Please upload image (*.jpg, *.jpeg, *.png) only."
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:1168
+#: cgi/subs/subs_forms.pm:1171
 msgid "Please use only alphanumeric characters or spaces."
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:124 cgi/subs/subs_forms.pm:132 cgi/subs/subs_forms.pm:2676 cgi/subs/subs_forms.pm:2896
+#: cgi/subs/subs_forms.pm:127 cgi/subs/subs_forms.pm:135 cgi/subs/subs_forms.pm:2679 cgi/subs/subs_forms.pm:2899
 msgid "Please use only letters, spaces, hyphens, full-stops or apostrophes."
 msgstr ""
 
-#: web/bin/JavascriptCompress.pm:54
+#: web/bin/JavascriptCompress.pm:50
 msgid "Please wait.<br />Your request is being processed."
 msgstr ""
 
@@ -5159,19 +5171,19 @@ msgstr ""
 msgid "Portfolio"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:1175 cgi/subs/subs_forms.pm:364
+#: cgi/subs/subs_forms.pm:1178 cgi/subs/subs_forms.pm:367
 msgid "Postal Code / ZIP"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:1157 cgi/subs/subs_forms.pm:1163
+#: cgi/subs/subs_forms.pm:1160 cgi/subs/subs_forms.pm:1166
 msgid "Postcode is invalid."
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:386 cgi/subs/subs_forms.pm:944
+#: cgi/subs/subs_forms.pm:389 cgi/subs/subs_forms.pm:947
 msgid "Postcode is required for UK residents."
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:381
+#: cgi/subs/subs_forms.pm:384
 msgid "Postcode must be less than 20 characters long and may not contain \"+\"."
 msgstr ""
 
@@ -5195,11 +5207,11 @@ msgstr ""
 msgid "Prevailing market price cannot be determined at this time."
 msgstr ""
 
-#: lib/BOM/Product/Contract.pm:1493 lib/BOM/Product/Contract.pm:2927
+#: lib/BOM/Product/Contract.pm:1494 lib/BOM/Product/Contract.pm:2928
 msgid "Prevailing market price cannot be determined."
 msgstr ""
 
-#: web/bin/JavascriptCompress.pm:123
+#: web/bin/JavascriptCompress.pm:119
 msgid "Previous"
 msgstr ""
 
@@ -5211,7 +5223,7 @@ msgstr ""
 msgid "Price Band"
 msgstr ""
 
-#: cgi/smartchart.cgi:34 cgi/subs/subs_BOMFeed_history.pm:359 cgi/subs/subs_BOMFeed_history.pm:562 cgi/subs/subs_graphs_chartdirector.pm:382
+#: cgi/smartchart.cgi:34 cgi/subs/subs_BOMFeed_history.pm:360 cgi/subs/subs_BOMFeed_history.pm:563 cgi/subs/subs_graphs_chartdirector.pm:382
 msgid "Price Oscillator"
 msgstr ""
 
@@ -5232,11 +5244,11 @@ msgstr ""
 msgid "Pricing Table"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:343
+#: cgi/subs/subs_BOMFeed_history.pm:344
 msgid "Print"
 msgstr ""
 
-#: web/bin/JavascriptCompress.pm:62
+#: web/bin/JavascriptCompress.pm:58
 msgid "Print chart"
 msgstr ""
 
@@ -5252,7 +5264,7 @@ msgstr ""
 msgid "Prof"
 msgstr ""
 
-#: /home/git/translations/binary-static/src/templates/haml/get_started/glossary.html.haml:1 /home/git/translations/binary-static/src/templates/toolkit/bet/buy_success_ajax.html.tt:50 web/bin/JavascriptCompress.pm:134
+#: /home/git/translations/binary-static/src/templates/haml/get_started/glossary.html.haml:1 /home/git/translations/binary-static/src/templates/toolkit/bet/buy_success_ajax.html.tt:50 web/bin/JavascriptCompress.pm:130
 msgid "Profit"
 msgstr ""
 
@@ -5281,7 +5293,7 @@ msgstr ""
 msgid "Promoting the %1 Site"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:789
+#: cgi/subs/subs_forms.pm:792
 msgid "Promotional"
 msgstr ""
 
@@ -5289,7 +5301,7 @@ msgstr ""
 msgid "Proof of address"
 msgstr ""
 
-#: lib/BOM/Product/Contract.pm:2520
+#: lib/BOM/Product/Contract.pm:2521
 msgid "Proper barriers could not be determined."
 msgstr ""
 
@@ -5317,7 +5329,7 @@ msgstr ""
 msgid "Purchase Spot"
 msgstr ""
 
-#: cgi/analyse_contract.cgi:216 web/bin/JavascriptCompress.pm:115
+#: cgi/analyse_contract.cgi:216 web/bin/JavascriptCompress.pm:111
 msgid "Purchase Time"
 msgstr ""
 
@@ -5330,7 +5342,7 @@ msgstr ""
 msgid "Put a limit on your winnings. Once you have reached it put some aside and trade with the rest of the money."
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:338
+#: cgi/subs/subs_BOMFeed_history.pm:339
 msgid "Quote"
 msgstr ""
 
@@ -5338,7 +5350,7 @@ msgstr ""
 msgid "REST"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:326
+#: cgi/subs/subs_BOMFeed_history.pm:327
 msgid "Random"
 msgstr ""
 
@@ -5402,7 +5414,7 @@ msgstr ""
 msgid "Range"
 msgstr ""
 
-#: cgi/smartchart.cgi:35 cgi/subs/subs_BOMFeed_history.pm:392 cgi/subs/subs_BOMFeed_history.pm:533 cgi/subs/subs_graphs_chartdirector.pm:394
+#: cgi/smartchart.cgi:35 cgi/subs/subs_BOMFeed_history.pm:393 cgi/subs/subs_BOMFeed_history.pm:534 cgi/subs/subs_graphs_chartdirector.pm:394
 msgid "Rate of Change"
 msgstr ""
 
@@ -5419,7 +5431,7 @@ msgstr ""
 msgid "Read the answers to some common questions."
 msgstr ""
 
-#: /home/git/translations/binary-static/src/templates/toolkit/account/open_account.html.tt:12 cgi/lost_password.cgi:376
+#: /home/git/translations/binary-static/src/templates/toolkit/account/open_account.html.tt:12 cgi/lost_password.cgi:379
 msgid "Real money account"
 msgstr ""
 
@@ -5508,7 +5520,7 @@ msgstr ""
 msgid "Rel Change"
 msgstr ""
 
-#: cgi/smartchart.cgi:36 cgi/subs/subs_BOMFeed_history.pm:390 cgi/subs/subs_BOMFeed_history.pm:528 cgi/subs/subs_graphs_chartdirector.pm:402
+#: cgi/smartchart.cgi:36 cgi/subs/subs_BOMFeed_history.pm:391 cgi/subs/subs_BOMFeed_history.pm:529 cgi/subs/subs_graphs_chartdirector.pm:402
 msgid "Relative Strength Index"
 msgstr ""
 
@@ -5520,7 +5532,7 @@ msgstr ""
 msgid "Reload page"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:398
+#: cgi/subs/subs_BOMFeed_history.pm:399
 msgid "Remove Overlay"
 msgstr ""
 
@@ -5540,24 +5552,24 @@ msgstr ""
 msgid "Required"
 msgstr ""
 
-#: lib/BOM/Product/Contract.pm:2900
+#: lib/BOM/Product/Contract.pm:2901
 msgid "Resale of this contract is not offered due to end-of-year market holidays."
 msgstr ""
 
-#: lib/BOM/Product/Contract.pm:2852
+#: lib/BOM/Product/Contract.pm:2853
 msgid "Resale of this contract is not offered due to market holiday during contract period."
 msgstr ""
 
-#: lib/BOM/Product/Contract.pm:2873
+#: lib/BOM/Product/Contract.pm:2874
 msgid "Resale of this contract is not offered due to market holidays during contract period."
 msgstr ""
 
 #. ($shortest->as_string)
-#: lib/BOM/Product/Contract.pm:2783
+#: lib/BOM/Product/Contract.pm:2784
 msgid "Resale of this contract is not offered with less than %1 remaining."
 msgstr ""
 
-#: lib/BOM/Product/Contract.pm:2301 lib/BOM/Product/Contract.pm:2777 lib/BOM/Product/Contract.pm:2824 lib/BOM/Product/Pricing/Engine/Role/StandardMarkup.pm:171
+#: lib/BOM/Product/Contract.pm:2302 lib/BOM/Product/Contract.pm:2778 lib/BOM/Product/Contract.pm:2825 lib/BOM/Product/Pricing/Engine/Role/StandardMarkup.pm:171
 msgid "Resale of this contract is not offered."
 msgstr ""
 
@@ -5565,7 +5577,7 @@ msgstr ""
 msgid "Resale price"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:2220
+#: cgi/subs/subs_forms.pm:2223
 msgid "Reset password"
 msgstr ""
 
@@ -5581,11 +5593,11 @@ msgstr ""
 msgid "Result"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:362
+#: cgi/subs/subs_BOMFeed_history.pm:363
 msgid "Retracement Percentages"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:436
+#: cgi/subs/subs_BOMFeed_history.pm:437
 msgid "Retry"
 msgstr ""
 
@@ -5607,7 +5619,7 @@ msgstr ""
 msgid "Revoke Attorney"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:445
+#: cgi/subs/subs_BOMFeed_history.pm:446
 msgid "Right click to add studies, lines, overlays and more. You can save your work by choosing Workspace from the top menu"
 msgstr ""
 
@@ -5663,7 +5675,7 @@ msgstr ""
 msgid "Russia"
 msgstr ""
 
-#: web/bin/JavascriptCompress.pm:130
+#: web/bin/JavascriptCompress.pm:126
 msgid "Sa"
 msgstr ""
 
@@ -5675,47 +5687,47 @@ msgstr ""
 msgid "Sale Price"
 msgstr ""
 
-#: web/bin/JavascriptCompress.pm:77
+#: web/bin/JavascriptCompress.pm:73
 msgid "Saturday"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:377
+#: cgi/subs/subs_BOMFeed_history.pm:378
 msgid "Save"
 msgstr ""
 
-#: web/bin/JavascriptCompress.pm:67
+#: web/bin/JavascriptCompress.pm:63
 msgid "Save as CSV"
 msgstr ""
 
-#: web/bin/JavascriptCompress.pm:63
+#: web/bin/JavascriptCompress.pm:59
 msgid "Save as JPEG"
 msgstr ""
 
-#: web/bin/JavascriptCompress.pm:66
+#: web/bin/JavascriptCompress.pm:62
 msgid "Save as PDF"
 msgstr ""
 
-#: web/bin/JavascriptCompress.pm:64
+#: web/bin/JavascriptCompress.pm:60
 msgid "Save as PNG"
 msgstr ""
 
-#: web/bin/JavascriptCompress.pm:65
+#: web/bin/JavascriptCompress.pm:61
 msgid "Save as SVG"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:2959
+#: cgi/subs/subs_forms.pm:2962
 msgid "Screenshot"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:1107 cgi/subs/subs_forms.pm:295
+#: cgi/subs/subs_forms.pm:1110 cgi/subs/subs_forms.pm:298
 msgid "Second line of home address"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:527
+#: cgi/subs/subs_forms.pm:530
 msgid "Secret question"
 msgstr ""
 
-#: /home/git/translations/binary-static/src/templates/haml/static/partner_api.html.haml:1 /home/git/translations/binary-static/src/templates/haml/static/why_us.html.haml:1 cgi/subs/subs_forms.pm:770 cgi/subs/subs_forms_output.pm:221
+#: /home/git/translations/binary-static/src/templates/haml/static/partner_api.html.haml:1 /home/git/translations/binary-static/src/templates/haml/static/why_us.html.haml:1 cgi/subs/subs_forms.pm:773 cgi/subs/subs_forms_output.pm:221
 msgid "Security"
 msgstr ""
 
@@ -5727,7 +5739,7 @@ msgstr ""
 msgid "Security and Privacy"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:629
+#: cgi/subs/subs_forms.pm:632
 msgid "See Terms"
 msgstr ""
 
@@ -5739,7 +5751,7 @@ msgstr ""
 msgid "See our "
 msgstr ""
 
-#: /home/git/translations/binary-static/src/templates/haml/home/index.html.haml:1 cgi/subs/subs_forms.pm:393
+#: /home/git/translations/binary-static/src/templates/haml/home/index.html.haml:1 cgi/subs/subs_forms.pm:396
 msgid "Select Country"
 msgstr ""
 
@@ -5783,7 +5795,7 @@ msgstr ""
 msgid "Sell option"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:2996
+#: cgi/subs/subs_forms.pm:2999
 msgid "Send"
 msgstr ""
 
@@ -5795,11 +5807,11 @@ msgstr ""
 msgid "Send your funds to the payment agent. The deposited funds, less the agent's commission, will show up in your %1 account."
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:205 cgi/subs/subs_forms.pm:2323 web/bin/JavascriptCompress.pm:86
+#: cgi/subs/subs_forms.pm:208 cgi/subs/subs_forms.pm:2326 web/bin/JavascriptCompress.pm:82
 msgid "Sep"
 msgstr ""
 
-#: web/bin/JavascriptCompress.pm:98
+#: web/bin/JavascriptCompress.pm:94
 msgid "September"
 msgstr ""
 
@@ -5836,7 +5848,7 @@ msgstr ""
 msgid "Sharp prices"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:3188
+#: cgi/subs/subs_forms.pm:3191
 msgid "Short summary of your Payment Agent service"
 msgstr ""
 
@@ -5856,7 +5868,7 @@ msgstr ""
 msgid "Should these expenses not be covered by funds in your account we reserve the right to investigate other alternative means for obtaining payment for example: should your account have generated purchasing accounts we will hold payment of commission for these accounts until such a time as the account for damages has been cleared."
 msgstr ""
 
-#: cgi/emailus.cgi:98
+#: cgi/emailus.cgi:99
 msgid "Should you need any further assistance please do not hesitate to email"
 msgstr ""
 
@@ -5897,7 +5909,7 @@ msgstr ""
 msgid "Simple"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:322
+#: cgi/subs/subs_BOMFeed_history.pm:323
 msgid "Simple Moving Average"
 msgstr ""
 
@@ -5914,7 +5926,7 @@ msgstr ""
 msgid "Site"
 msgstr ""
 
-#: cgi/smartchart.cgi:37 cgi/subs/subs_BOMFeed_history.pm:490 cgi/subs/subs_graphs_chartdirector.pm:416
+#: cgi/smartchart.cgi:37 cgi/subs/subs_BOMFeed_history.pm:491 cgi/subs/subs_graphs_chartdirector.pm:416
 msgid "Slow Stochastic"
 msgstr ""
 
@@ -5995,7 +6007,7 @@ msgstr ""
 msgid "Sorry, our service is not available for residents of %1."
 msgstr ""
 
-#: cgi/paymentagent_withdraw.cgi:40
+#: cgi/paymentagent_withdraw.cgi:42
 msgid "Sorry, payments agents are unavailable at the weekend (UTC timezone)."
 msgstr ""
 
@@ -6004,7 +6016,7 @@ msgid "Sorry, payments are suspended due to system maintenance.  Please try agai
 msgstr ""
 
 #. ($ip_security,                    $ENV{'REMOTE_ADDR'})
-#: cgi/subs/subs_forms.pm:1608
+#: cgi/subs/subs_forms.pm:1611
 msgid "Sorry, the IP Security field you specified (%1) wouldn't let you in from your current IP address %2."
 msgstr ""
 
@@ -6013,20 +6025,20 @@ msgstr ""
 msgid "Sorry, the Login ID (%1) does not exist."
 msgstr ""
 
-#: cgi/paymentagent_withdraw.cgi:35
+#: cgi/paymentagent_withdraw.cgi:37
 msgid "Sorry, the Payment Agent Withdrawal is temporarily disabled due to system maintenance. Please try again in 30 minutes."
 msgstr ""
 
-#: cgi/paymentagent_withdraw.cgi:119
+#: cgi/paymentagent_withdraw.cgi:121
 msgid "Sorry, the Payment Agent does not exist."
 msgstr ""
 
-#: cgi/paymentagent_withdraw.cgi:125
+#: cgi/paymentagent_withdraw.cgi:127
 msgid "Sorry, the Payment Agent is unavailable for your region."
 msgstr ""
 
 #. ($pa_client->currency . " is unavailable for Payment Agent Withdrawal")
-#: cgi/paymentagent_withdraw.cgi:145
+#: cgi/paymentagent_withdraw.cgi:147
 msgid "Sorry, the Payment Agent's currency "
 msgstr ""
 
@@ -6063,7 +6075,7 @@ msgstr ""
 msgid "Sorry, there was a problem validating your personal information with our payment processor. Please contact our Customer Service."
 msgstr ""
 
-#: cgi/top_up_virtual.cgi:27
+#: cgi/top_up_virtual.cgi:28
 msgid "Sorry, this feature is available to virtual accounts only"
 msgstr ""
 
@@ -6075,7 +6087,7 @@ msgstr ""
 msgid "Sorry, withdrawals cannot be made on the day of your account opening. Please wait until tomorrow to make a withdrawal."
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:897
+#: cgi/subs/subs_forms.pm:900
 msgid "Sorry, you are too young to open an account."
 msgstr ""
 
@@ -6088,19 +6100,19 @@ msgstr ""
 msgid "Sorry, you cannot withdraw."
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:1762
+#: cgi/subs/subs_forms.pm:1765
 msgid "Sorry, you have entered an incorrect cashier password"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:1067 cgi/subs/subs_forms.pm:1600 cgi/subs/subs_forms.pm:2181 cgi/subs/subs_forms.pm:2706 cgi/subs/subs_forms.pm:2926 cgi/subs/subs_forms.pm:3228 cgi/subs/subs_forms.pm:475 cgi/subs/subs_forms.pm:871
+#: cgi/subs/subs_forms.pm:1070 cgi/subs/subs_forms.pm:1603 cgi/subs/subs_forms.pm:2184 cgi/subs/subs_forms.pm:2709 cgi/subs/subs_forms.pm:2929 cgi/subs/subs_forms.pm:3231 cgi/subs/subs_forms.pm:478 cgi/subs/subs_forms.pm:874
 msgid "Sorry, you have entered an incorrect email address."
 msgstr ""
 
-#: cgi/paymentagent_transfer.cgi:177 cgi/paymentagent_withdraw.cgi:295
+#: cgi/paymentagent_transfer.cgi:177 cgi/paymentagent_withdraw.cgi:297
 msgid "Sorry, you have exceeded the maximum allowable transactions for today."
 msgstr ""
 
-#: cgi/paymentagent_transfer.cgi:169 cgi/paymentagent_withdraw.cgi:266
+#: cgi/paymentagent_transfer.cgi:169 cgi/paymentagent_withdraw.cgi:268
 msgid "Sorry, you have exceeded the maximum allowable transfer amount for today."
 msgstr ""
 
@@ -6109,12 +6121,12 @@ msgstr ""
 msgid "Sorry, you have excluded yourself from the website until %1."
 msgstr ""
 
-#: cgi/top_up_virtual.cgi:63
+#: cgi/top_up_virtual.cgi:64
 msgid "Sorry, you have open positions. Please close out all open positions before requesting additional funds."
 msgstr ""
 
 #. ($min_with_currency)
-#: cgi/top_up_virtual.cgi:50
+#: cgi/top_up_virtual.cgi:51
 msgid "Sorry, your account balance is more than %1. You may not claim extra funds until such time as your account balance drops under %1."
 msgstr ""
 
@@ -6132,11 +6144,11 @@ msgid "Sorry, your account is not authorised for any further contract purchases.
 msgstr ""
 
 #. ($client->currency . ' is unavailable for Payment Agent Withdrawal')
-#: cgi/paymentagent_withdraw.cgi:138
+#: cgi/paymentagent_withdraw.cgi:140
 msgid "Sorry, your currency of "
 msgstr ""
 
-#: cgi/emailus.cgi:143
+#: cgi/emailus.cgi:144
 msgid "Sorry, your file is too large. The maximum file size is 1 Megabyte (1MB)."
 msgstr ""
 
@@ -6169,7 +6181,7 @@ msgid "Stake"
 msgstr ""
 
 #. (to_monetary_number_format($stake_min, 1)
-#: lib/BOM/Product/Contract.pm:1815
+#: lib/BOM/Product/Contract.pm:1816
 msgid "Stake must be between <strong>%1</strong> and <strong>%2</strong>."
 msgstr ""
 
@@ -6177,7 +6189,7 @@ msgstr ""
 msgid "Standard expiry"
 msgstr ""
 
-#: cgi/analyse_contract.cgi:100 web/bin/JavascriptCompress.pm:116
+#: cgi/analyse_contract.cgi:100 web/bin/JavascriptCompress.pm:112
 msgid "Start Time"
 msgstr ""
 
@@ -6189,20 +6201,20 @@ msgstr ""
 msgid "Start time"
 msgstr ""
 
-#: lib/BOM/Product/Contract.pm:2587 lib/BOM/Product/Transaction.pm:365
+#: lib/BOM/Product/Contract.pm:2588 lib/BOM/Product/Transaction.pm:365
 msgid "Start time is in the past"
 msgstr ""
 
-#: lib/BOM/Product/Contract.pm:2577
+#: lib/BOM/Product/Contract.pm:2578
 msgid "Start time is invalid."
 msgstr ""
 
-#: lib/BOM/Product/Contract.pm:2567
+#: lib/BOM/Product/Contract.pm:2568
 msgid "Start time must be before expiry time."
 msgstr ""
 
 #. ($forward_starting_blackout->as_string)
-#: lib/BOM/Product/Contract.pm:2620
+#: lib/BOM/Product/Contract.pm:2621
 msgid "Start time on forward-starting contracts must be more than %1 from now."
 msgstr ""
 
@@ -6210,7 +6222,7 @@ msgstr ""
 msgid "Start trading"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:1211 cgi/subs/subs_forms.pm:339
+#: cgi/subs/subs_forms.pm:1214 cgi/subs/subs_forms.pm:342
 msgid "State/Province"
 msgstr ""
 
@@ -6230,7 +6242,7 @@ msgstr ""
 msgid "Statistic"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:402
+#: cgi/subs/subs_BOMFeed_history.pm:403
 msgid "Statistics"
 msgstr ""
 
@@ -6263,31 +6275,31 @@ msgstr ""
 msgid "Step 3: Make your trade"
 msgstr ""
 
-#: cgi/smartchart.cgi:38 cgi/subs/subs_BOMFeed_history.pm:534 cgi/subs/subs_graphs_chartdirector.pm:427
+#: cgi/smartchart.cgi:38 cgi/subs/subs_BOMFeed_history.pm:535 cgi/subs/subs_graphs_chartdirector.pm:427
 msgid "StochRSI"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:334
+#: cgi/subs/subs_BOMFeed_history.pm:335
 msgid "Stochastic Fast"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:442
+#: cgi/subs/subs_BOMFeed_history.pm:443
 msgid "Stochastic Fast %D"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:373
+#: cgi/subs/subs_BOMFeed_history.pm:374
 msgid "Stochastic Fast %K"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:321
+#: cgi/subs/subs_BOMFeed_history.pm:322
 msgid "Stochastic Slow"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:323
+#: cgi/subs/subs_BOMFeed_history.pm:324
 msgid "Stochastic Slow %D"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:418
+#: cgi/subs/subs_BOMFeed_history.pm:419
 msgid "Stochastic Slow %K"
 msgstr ""
 
@@ -6311,7 +6323,7 @@ msgstr ""
 msgid "Study our live charts"
 msgstr ""
 
-#: web/bin/JavascriptCompress.pm:124
+#: web/bin/JavascriptCompress.pm:120
 msgid "Su"
 msgstr ""
 
@@ -6320,7 +6332,7 @@ msgstr ""
 msgid "Subject to your complying with the Company's instructions, with regards to tracking Clients accessing %1 via the Links on your Site or by quoting your affiliate IDs during signup, the Company shall use all reasonable endeavours to ensure that whenever a Client links to %1 through these Links or affiliate IDs and they subsequently place a contract or otherwise transact with the Company, the relevant Client is identified as originating from you or your Site. However, the Company shall not be liable to you in any way if the Company is unable to identify a Client as originating from you or your Site."
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:3444 cgi/subs/subs_forms.pm:3903 cgi/subs/subs_forms.pm:4134
+#: cgi/subs/subs_forms.pm:3444 cgi/subs/subs_forms.pm:3903 cgi/subs/subs_forms.pm:4132
 msgid "Submit"
 msgstr ""
 
@@ -6332,7 +6344,7 @@ msgstr ""
 msgid "Summary"
 msgstr ""
 
-#: web/bin/JavascriptCompress.pm:71
+#: web/bin/JavascriptCompress.pm:67
 msgid "Sunday"
 msgstr ""
 
@@ -6348,11 +6360,11 @@ msgstr ""
 msgid "Supported banks list is invalid"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:366
+#: cgi/subs/subs_BOMFeed_history.pm:367
 msgid "Switch to full screen mode"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:426
+#: cgi/subs/subs_BOMFeed_history.pm:427
 msgid "Switch to normal mode"
 msgstr ""
 
@@ -6364,7 +6376,7 @@ msgstr ""
 msgid "System problems prevent proper settlement at this time."
 msgstr ""
 
-#: cgi/smartchart.cgi:39 cgi/subs/subs_BOMFeed_history.pm:497 cgi/subs/subs_graphs_chartdirector.pm:441
+#: cgi/smartchart.cgi:39 cgi/subs/subs_BOMFeed_history.pm:498 cgi/subs/subs_graphs_chartdirector.pm:441
 msgid "TRIX"
 msgstr ""
 
@@ -6376,15 +6388,15 @@ msgstr ""
 msgid "Talk to us"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:336
+#: cgi/subs/subs_BOMFeed_history.pm:337
 msgid "Target"
 msgstr ""
 
-#: cgi/emailus.cgi:100
+#: cgi/emailus.cgi:101
 msgid "Team"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:547 cgi/subs/subs_graphs_chartdirector.pm:212
+#: cgi/subs/subs_BOMFeed_history.pm:548 cgi/subs/subs_graphs_chartdirector.pm:212
 msgid "Technical Indicator derived from subtracting Aroon Down from Aroon Up. As Aroon Up and Aroon Down oscillate between 0 and 100, the Aroon Oscillator oscillates between -100 and 100 with zero as the centre crossover line."
 msgstr ""
 
@@ -6396,7 +6408,7 @@ msgstr ""
 msgid "Tel"
 msgstr ""
 
-#: cgi/f_writepartics.cgi:230 cgi/subs/subs_forms.pm:1230 cgi/subs/subs_forms.pm:482
+#: cgi/f_writepartics.cgi:230 cgi/subs/subs_forms.pm:1233 cgi/subs/subs_forms.pm:485
 msgid "Telephone"
 msgstr ""
 
@@ -6421,7 +6433,7 @@ msgstr ""
 msgid "Test-run %1, and sharpen your trading skills, with a no-risk, no-commitment, virtual account."
 msgstr ""
 
-#: web/bin/JavascriptCompress.pm:128
+#: web/bin/JavascriptCompress.pm:124
 msgid "Th"
 msgstr ""
 
@@ -6434,11 +6446,11 @@ msgid "Thank You."
 msgstr ""
 
 #. ('https://' . $website->primary_url)
-#: cgi/emailus.cgi:93
+#: cgi/emailus.cgi:94
 msgid "Thank you for visiting %1 and for providing your feedback. We will endeavour to respond as soon as possible."
 msgstr ""
 
-#: cgi/emailus.cgi:185
+#: cgi/emailus.cgi:186
 msgid "Thank you for your message."
 msgstr ""
 
@@ -6497,7 +6509,7 @@ msgstr ""
 
 #. ($website->display_name)
 #. (request()
-#: cgi/f_writepartics.cgi:246 cgi/paymentagent_withdraw.cgi:408
+#: cgi/f_writepartics.cgi:246 cgi/paymentagent_withdraw.cgi:410
 msgid "The %1 team."
 msgstr ""
 
@@ -6553,7 +6565,7 @@ msgstr ""
 msgid "The Ask price represents the price at which the contract may be purchased at the present time."
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:3043
+#: cgi/subs/subs_forms.pm:3046
 msgid "The Authentication process verifies the information you have provided us during account registration. It will increase your trading limits and enable you to register more than one credit card.<br/><br/>In order to facilitate the process, please confirm your building no./name before clicking \"Authenticate\".<br/>"
 msgstr ""
 
@@ -6583,15 +6595,15 @@ msgstr ""
 msgid "The Binary.com website’s static content (CSS, Javascript) is available as the <a target=\"_blank\" href=\"%1\">binary-static</a> open-source project on github. Would you like to re-skin the Binary.com website, or improve browser compatibility, site rendering speed, or Javascript performance? Please fork the project and submit pull-requests of your suggested code changes."
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:500 cgi/subs/subs_graphs_chartdirector.pm:305
+#: cgi/subs/subs_BOMFeed_history.pm:501 cgi/subs/subs_graphs_chartdirector.pm:305
 msgid "The CCI is a timing system that is best applied to commodity contracts, which have cyclical or seasonal tendencies. CCI does not determine the length of cycles - it is designed to detect when such cycles begin and end through the use of a statistical analysis which incorporates a moving average and a divisor reflecting both the possible and actual trading ranges."
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:559 cgi/subs/subs_graphs_chartdirector.pm:298
+#: cgi/subs/subs_BOMFeed_history.pm:560 cgi/subs/subs_graphs_chartdirector.pm:298
 msgid "The CLV is an indicator based on the location of close related to low and high for the period. It is used to spot the tendency in the price movements."
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:556 cgi/subs/subs_graphs_chartdirector.pm:283
+#: cgi/subs/subs_BOMFeed_history.pm:557 cgi/subs/subs_graphs_chartdirector.pm:283
 msgid "The Chaikin Volatility function determines the volatility of a financial data series using the percent change in a moving average of the high versus low price over a given time."
 msgstr ""
 
@@ -6691,7 +6703,7 @@ msgstr ""
 msgid "The Data Protection laws and regulations place obligations on users of personal data and lay down principles for fair and lawful processing of this information. We are committed to safeguarding your privacy online. We only use your personal information to help us service your account, to improve our services to you, and to provide you with products you have requested. We do not sell your personal information to third parties, but we may provide your personal information to payment providers to facilitate transactions on your account."
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:492 cgi/subs/subs_graphs_chartdirector.pm:319
+#: cgi/subs/subs_BOMFeed_history.pm:493 cgi/subs/subs_graphs_chartdirector.pm:319
 msgid "The Detrended Price Oscillator compares closing price to a prior moving average, eliminating cycles longer than the moving average."
 msgstr ""
 
@@ -6711,7 +6723,7 @@ msgstr ""
 msgid "The JSON structure which supplied the access_token also included a refresh_token.  Supply this in the following call:"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:460 cgi/subs/subs_graphs_chartdirector.pm:363
+#: cgi/subs/subs_BOMFeed_history.pm:461 cgi/subs/subs_graphs_chartdirector.pm:363
 msgid "The Mass Index attempts to predict reversals by comparing the trading range (High minus Low) for each period. Reversals are signalled by a bulge in the index line."
 msgstr ""
 
@@ -6719,11 +6731,11 @@ msgstr ""
 msgid "The Mid price represents the average of the Bid and Ask."
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:477 cgi/subs/subs_graphs_chartdirector.pm:351
+#: cgi/subs/subs_BOMFeed_history.pm:478 cgi/subs/subs_graphs_chartdirector.pm:351
 msgid "The Moving Average Convergence/Divergence (MACD) indicator is a trend following indicator and is designed to identify trend changes.The MACD is an oscillator based on two exponential moving averages of a share price. Three lines are shown. The \"MACD\" line is calculated as the difference between the two moving averages (usually based on 12- and 26- day averages). The \"signal\" line is a 9-day smoothed average of the standard MACD line, and is sometimes referred to as the \"slow\" MACD line."
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:506 cgi/subs/subs_graphs_chartdirector.pm:377
+#: cgi/subs/subs_BOMFeed_history.pm:507 cgi/subs/subs_graphs_chartdirector.pm:377
 msgid "The Performance indicator displays a security's price performance as a percentage. This is sometimes called a \"normalized\" chart. The Performance indicator displays the percentage that the security has increased since the first period displayed. For example, if the Performance indicator is 10, it means that the security's price has increased 10% since the first period displayed on the left side of the chart. Similarly, a value of -10% means that the security's price has fallen by 10% since the first period displayed.Performance charts are helpful for comparing the price movements of different securities."
 msgstr ""
 
@@ -6731,11 +6743,11 @@ msgstr ""
 msgid "The Program"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:495 cgi/subs/subs_graphs_chartdirector.pm:396
+#: cgi/subs/subs_BOMFeed_history.pm:496 cgi/subs/subs_graphs_chartdirector.pm:396
 msgid "The Rate of Change indicator (ROC) is a way of showing how rapidly the price of a particular share (or other financial instrument) is moving. The theory is that if a price is rising (or falling) very quickly there will soon come a time when it is thought to be overbought (or oversold). When this occurs the price may still continue to rise (or fall), but not as rapidly as it was before."
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:519 cgi/subs/subs_graphs_chartdirector.pm:404
+#: cgi/subs/subs_BOMFeed_history.pm:520 cgi/subs/subs_graphs_chartdirector.pm:404
 msgid "The Relative Strength Index (RSI) measures a share price relative to itself and its recent history. It is calculated as the average of the prices for days where the price rose divided by the average of the prices for days where the price fell. The RSI ranges between 0 and 100.A 70+ level could indicate that a share is overbought, meaning that the speculator should consider selling. Or conversely oversold at the 30 level. The principle is that when there's a high proportion of daily movement in one direction it suggests an extreme, and prices are likely to reverse."
 msgstr ""
 
@@ -6743,7 +6755,7 @@ msgstr ""
 msgid "The Spread represents the difference between the Bid and Ask."
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:543 cgi/subs/subs_graphs_chartdirector.pm:340 cgi/subs/subs_graphs_chartdirector.pm:418
+#: cgi/subs/subs_BOMFeed_history.pm:544 cgi/subs/subs_graphs_chartdirector.pm:340 cgi/subs/subs_graphs_chartdirector.pm:418
 msgid "The Stochastic Oscillator is a momentum indicator that shows the location of the current close relative to the high/low range over a set number of periods. The Stochastic Oscillator is made up of two lines that oscillate between a vertical scale of 0 to 100. The %K is the main line and it is drawn as a solid line. The second is the %D line and is a moving average of %K. The %D line is drawn as a dotted line. The Fast Stochastic is the average of the last three %K and a Slow Stochastic is a three day average of the Fast Stochastic."
 msgstr ""
 
@@ -6912,7 +6924,7 @@ msgstr ""
 msgid "The market exit price is the price in effect at the end of the contract period."
 msgstr ""
 
-#: lib/BOM/Product/Contract.pm:2593
+#: lib/BOM/Product/Contract.pm:2594
 msgid "The market must be open at the start time."
 msgstr ""
 
@@ -7045,7 +7057,7 @@ msgstr ""
 msgid "The transactions performed on this site and the relationship between Clients and the Company are to be governed by and construed in accordance with the laws of the country of incorporation of the Company (the \"Jurisdiction\"), which shall be either of the Isle of Man, Malta, or Costa Rica. You agree that the Jurisdiction's courts will have sole jurisdiction to settle any disputes that may arise in relation thereto. For such purposes, you irrevocably submit to the jurisdiction of the courts of the Jurisdiction in relation to any such dispute and you agree that any claim you might have against the Company shall only be brought before the courts of the Jurisdiction. For further information on complaints and disputes, kindly refer to the Company’s Complaints and Disputes section."
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:1394 cgi/subs/subs_forms.pm:1586 cgi/subs/subs_forms.pm:1867 cgi/subs/subs_forms.pm:1950 cgi/subs/subs_forms.pm:2024 cgi/subs/subs_forms.pm:2122
+#: cgi/subs/subs_forms.pm:1397 cgi/subs/subs_forms.pm:1589 cgi/subs/subs_forms.pm:1870 cgi/subs/subs_forms.pm:1953 cgi/subs/subs_forms.pm:2027 cgi/subs/subs_forms.pm:2125
 msgid "The two passwords that you entered do not match."
 msgstr ""
 
@@ -7067,7 +7079,7 @@ msgid "Then, make your trade"
 msgstr ""
 
 #. ($client->residence)
-#: cgi/paymentagent_withdraw.cgi:75
+#: cgi/paymentagent_withdraw.cgi:77
 msgid "There are no Payment Agents in your country (%1)."
 msgstr ""
 
@@ -7114,7 +7126,7 @@ msgstr ""
 msgid "There was an error and we were unable to process your request."
 msgstr ""
 
-#: cgi/paymentagent_transfer.cgi:125 cgi/paymentagent_transfer.cgi:129 cgi/paymentagent_withdraw.cgi:156 cgi/paymentagent_withdraw.cgi:186
+#: cgi/paymentagent_transfer.cgi:125 cgi/paymentagent_transfer.cgi:129 cgi/paymentagent_withdraw.cgi:158 cgi/paymentagent_withdraw.cgi:188
 msgid "There was an error processing the request."
 msgstr ""
 
@@ -7171,11 +7183,11 @@ msgstr ""
 msgid "This Document"
 msgstr ""
 
-#: cgi/paymentagent_withdraw.cgi:199
+#: cgi/paymentagent_withdraw.cgi:201
 msgid "This Payment Agent cashier section is locked."
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:3288 cgi/top_up_virtual.cgi:73
+#: cgi/subs/subs_forms.pm:3291 cgi/top_up_virtual.cgi:74
 msgid "This URL is invalid."
 msgstr ""
 
@@ -7184,11 +7196,11 @@ msgstr ""
 msgid "This account is unavailable. For any questions please contact <a href=\"%1\">Customer Support</a>."
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:654
+#: cgi/subs/subs_forms.pm:657
 msgid "This bonus code has expired."
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:649
+#: cgi/subs/subs_forms.pm:652
 msgid "This bonus code is not available."
 msgstr ""
 
@@ -7204,7 +7216,7 @@ msgstr ""
 msgid "This contract cannot be properly validated at this time."
 msgstr ""
 
-#: lib/BOM/Product/Contract.pm:1680
+#: lib/BOM/Product/Contract.pm:1681
 msgid "This contract has already expired."
 msgstr ""
 
@@ -7233,11 +7245,11 @@ msgstr ""
 msgid "This contract is unavailable on this account."
 msgstr ""
 
-#: web/bin/JavascriptCompress.pm:132
+#: web/bin/JavascriptCompress.pm:128
 msgid "This contract lost"
 msgstr ""
 
-#: lib/BOM/Product/Contract.pm:2402
+#: lib/BOM/Product/Contract.pm:2403
 msgid "This contract offers no return."
 msgstr ""
 
@@ -7245,7 +7257,7 @@ msgstr ""
 msgid "This contract was not found among your open positions."
 msgstr ""
 
-#: web/bin/JavascriptCompress.pm:131
+#: web/bin/JavascriptCompress.pm:127
 msgid "This contract won"
 msgstr ""
 
@@ -7309,7 +7321,7 @@ msgstr ""
 msgid "This market closes early today at"
 msgstr ""
 
-#: lib/BOM/Product/Contract.pm:2593
+#: lib/BOM/Product/Contract.pm:2594
 msgid "This market is presently closed."
 msgstr ""
 
@@ -7337,7 +7349,7 @@ msgstr ""
 msgid "This promotion is only available to new Clients. Existing or former Clients do not qualify. It is only available once to each Client."
 msgstr ""
 
-#: lib/BOM/Product/Contract.pm:2302
+#: lib/BOM/Product/Contract.pm:2303
 msgid "This trade is not offered."
 msgstr ""
 
@@ -7361,15 +7373,15 @@ msgstr ""
 msgid "Throughout the term of this Agreement, you shall:"
 msgstr ""
 
-#: web/bin/JavascriptCompress.pm:75
+#: web/bin/JavascriptCompress.pm:71
 msgid "Thursday"
 msgstr ""
 
-#: /home/git/translations/binary-static/src/templates/haml/get_started/glossary.html.haml:1 cgi/subs/subs_BOMFeed_history.pm:332 cgi/subs/subs_BOMFeed_history.pm:371
+#: /home/git/translations/binary-static/src/templates/haml/get_started/glossary.html.haml:1 cgi/subs/subs_BOMFeed_history.pm:333 cgi/subs/subs_BOMFeed_history.pm:372
 msgid "Tick"
 msgstr ""
 
-#: cgi/smartchart.cgi:306
+#: cgi/smartchart.cgi:307
 msgid "Tick by Tick"
 msgstr ""
 
@@ -7381,7 +7393,7 @@ msgstr ""
 msgid "Tier"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:344
+#: cgi/subs/subs_BOMFeed_history.pm:345
 msgid "Tile"
 msgstr ""
 
@@ -7393,15 +7405,15 @@ msgstr ""
 msgid "Times are changing. We increase payouts so our clients can make the most of their winning trades."
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:412
+#: cgi/subs/subs_BOMFeed_history.pm:413
 msgid "Tip:"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:82
+#: cgi/subs/subs_forms.pm:85
 msgid "Title"
 msgstr ""
 
-#: web/bin/JavascriptCompress.pm:69
+#: web/bin/JavascriptCompress.pm:65
 msgid "To"
 msgstr ""
 
@@ -7440,7 +7452,7 @@ msgid "To get a summary of currently tradeable market symbols in the \"forex\" m
 msgstr ""
 
 #. (BOM::Platform::Runtime->instance->hosts->localhost->external_domain)
-#: cgi/emailus.cgi:191
+#: cgi/emailus.cgi:192
 msgid "To make sure that you can receive a reply, add the \"%1\" domain to your e-mail \"safe list\". If you do not receive a response in your \"inbox\" within 24 hours, check your \"bulk mail\" or \"junk mail\" folders."
 msgstr ""
 
@@ -7449,7 +7461,7 @@ msgstr ""
 msgid "To promote transparency and third-party analysis of our %1 time series, %2 provides access to tick-by-tick data for all the %1."
 msgstr ""
 
-#: cgi/lost_password.cgi:64
+#: cgi/lost_password.cgi:67
 msgid "To reset your password, enter the e-mail address you registered in the field below and click \"RESET PASSWORD\"."
 msgstr ""
 
@@ -7461,7 +7473,7 @@ msgstr ""
 msgid "To:"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:397
+#: cgi/subs/subs_BOMFeed_history.pm:398
 msgid "Today's Bet"
 msgstr ""
 
@@ -7470,7 +7482,7 @@ msgid "Toll-Free number"
 msgstr ""
 
 #. ($safer_expiry->date)
-#: lib/BOM/Product/Contract.pm:2874
+#: lib/BOM/Product/Contract.pm:2875
 msgid "Too many market holidays during the contract period. Select an expiry date after %1."
 msgstr ""
 
@@ -7502,7 +7514,7 @@ msgstr ""
 msgid "Tour"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:1132 cgi/subs/subs_forms.pm:314
+#: cgi/subs/subs_forms.pm:1135 cgi/subs/subs_forms.pm:317
 msgid "Town/City"
 msgstr ""
 
@@ -7587,7 +7599,7 @@ msgstr ""
 msgid "Trading Rules"
 msgstr ""
 
-#: /home/git/translations/binary-static/src/templates/haml/resources/index.html.haml:1 /home/git/translations/binary-static/src/templates/toolkit/legal/datafeed.html.tt:29 cgi/trading_times.cgi:15 lib/BOM/Product/Contract.pm:2270 lib/BOM/Product/Contract.pm:2639 lib/BOM/Product/Contract.pm:2654 lib/BOM/Product/Contract.pm:2670 lib/BOM/Product/Contract.pm:2843 lib/BOM/View/Menu.pm:154
+#: /home/git/translations/binary-static/src/templates/haml/resources/index.html.haml:1 /home/git/translations/binary-static/src/templates/toolkit/legal/datafeed.html.tt:29 cgi/trading_times.cgi:15 lib/BOM/Product/Contract.pm:2271 lib/BOM/Product/Contract.pm:2640 lib/BOM/Product/Contract.pm:2655 lib/BOM/Product/Contract.pm:2671 lib/BOM/Product/Contract.pm:2844 lib/BOM/View/Menu.pm:154
 msgid "Trading Times"
 msgstr ""
 
@@ -7604,37 +7616,37 @@ msgid "Trading financial contracts involves a high level of risk and may not be 
 msgstr ""
 
 #. ($blackout_time)
-#: lib/BOM/Product/Contract.pm:2608
+#: lib/BOM/Product/Contract.pm:2609
 msgid "Trading is available after the first %1 of the session."
 msgstr ""
 
-#: lib/BOM/Product/Contract.pm:2825
+#: lib/BOM/Product/Contract.pm:2826
 msgid "Trading is not offered for this duration."
 msgstr ""
 
-#: cgi/oop/Controller/Bet.pm:675 lib/BOM/Product/Contract.pm:2223 lib/BOM/Product/Contract.pm:2289
+#: cgi/oop/Controller/Bet.pm:675 lib/BOM/Product/Contract.pm:2224 lib/BOM/Product/Contract.pm:2290
 msgid "Trading is suspended at the moment."
 msgstr ""
 
 #. ($translated_name)
 #. ($underlying->translated_display_name()
-#: cgi/analyse_contract.cgi:70 lib/BOM/Product/Contract.pm:2231 lib/BOM/Product/Contract.pm:2240 lib/BOM/Product/Contract.pm:2268
+#: cgi/analyse_contract.cgi:70 lib/BOM/Product/Contract.pm:2232 lib/BOM/Product/Contract.pm:2241 lib/BOM/Product/Contract.pm:2269
 msgid "Trading on %1 is suspended at the moment."
 msgstr ""
 
 #. ($translated_name)
 #. ($self->underlying->translated_display_name()
 #. ($underlying->translated_display_name()
-#: lib/BOM/Product/Contract.pm:2251 lib/BOM/Product/Contract.pm:2258 lib/BOM/Product/Contract.pm:2935 lib/BOM/Product/Pricing/Engine/IntradayHistorical.pm:794
+#: lib/BOM/Product/Contract.pm:2252 lib/BOM/Product/Contract.pm:2259 lib/BOM/Product/Contract.pm:2936 lib/BOM/Product/Pricing/Engine/IntradayHistorical.pm:794
 msgid "Trading on %1 is suspended due to missing market data."
 msgstr ""
 
 #. ($eod_blackout_start->as_string)
-#: lib/BOM/Product/Contract.pm:2637
+#: lib/BOM/Product/Contract.pm:2638
 msgid "Trading suspended for the last %1 of the session."
 msgstr ""
 
-#: lib/BOM/Product/Contract.pm:2652
+#: lib/BOM/Product/Contract.pm:2653
 msgid "Trading suspended for the last 300s of the session."
 msgstr ""
 
@@ -7642,7 +7654,7 @@ msgstr ""
 msgid "Trading the financial markets can become addictive. Fill in the form below to limit your participation on the website or send a signed letter or fax to our customer support team. Limits will only be removed or altered after 7 days."
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:2463
+#: cgi/subs/subs_forms.pm:2466
 msgid "Transact in"
 msgstr ""
 
@@ -7655,7 +7667,7 @@ msgstr ""
 msgid "Transfer from another account"
 msgstr ""
 
-#: cgi/paymentagent_withdraw.cgi:211
+#: cgi/paymentagent_withdraw.cgi:213
 msgid "Transfer to"
 msgstr ""
 
@@ -7663,7 +7675,7 @@ msgstr ""
 msgid "Transfer to Login ID"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:4032
+#: cgi/subs/subs_forms.pm:4030
 msgid "Transfer to Payment Agent"
 msgstr ""
 
@@ -7693,7 +7705,7 @@ msgstr ""
 msgid "Triangular"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:539 cgi/subs/subs_graphs_chartdirector.pm:525
+#: cgi/subs/subs_BOMFeed_history.pm:540 cgi/subs/subs_graphs_chartdirector.pm:525
 msgid "Triangular moving averages place the majority of the weight on the middle portion of the price series. They are actually double-smoothed simple moving averages. The periods used in the simple moving averages varies depending on if you specify an odd or even number of time periods."
 msgstr ""
 
@@ -7709,11 +7721,11 @@ msgstr ""
 msgid "Try our downloadable charting application with an extensive range of indicators."
 msgstr ""
 
-#: web/bin/JavascriptCompress.pm:126
+#: web/bin/JavascriptCompress.pm:122
 msgid "Tu"
 msgstr ""
 
-#: web/bin/JavascriptCompress.pm:73
+#: web/bin/JavascriptCompress.pm:69
 msgid "Tuesday"
 msgstr ""
 
@@ -7729,7 +7741,7 @@ msgstr ""
 msgid "UK"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:369
+#: cgi/subs/subs_BOMFeed_history.pm:370
 msgid "UK Stocks"
 msgstr ""
 
@@ -7737,15 +7749,19 @@ msgstr ""
 msgid "UK and Manx residents will have their account opened with Regent Markets (IOM) Ltd."
 msgstr ""
 
+#: /home/git/translations/binary-static/src/templates/toolkit/legal/complaints_disputes.html.tt:13
+msgid "UK clients registered with Regent Markets (Malta) Ltd can submit their dispute with the alternative dispute resolution entity which is the Independent Betting Adjudication Service Ltd (IBAS) by filling the adjudication form on the ADR entity’s"
+msgstr ""
+
 #: /home/git/translations/binary-static/src/templates/toolkit/legal/us_patents.html.tt:3 cgi/us_patents.cgi:11
 msgid "US Patents"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:363
+#: cgi/subs/subs_BOMFeed_history.pm:364
 msgid "US Stocks"
 msgstr ""
 
-#: cgi/smartchart.cgi:40 cgi/subs/subs_BOMFeed_history.pm:434 cgi/subs/subs_BOMFeed_history.pm:529 cgi/subs/subs_graphs_chartdirector.pm:449
+#: cgi/smartchart.cgi:40 cgi/subs/subs_BOMFeed_history.pm:435 cgi/subs/subs_BOMFeed_history.pm:530 cgi/subs/subs_graphs_chartdirector.pm:449
 msgid "Ultimate Oscillator"
 msgstr ""
 
@@ -7757,7 +7773,7 @@ msgstr ""
 msgid "Unable to process your request"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:1001 cgi/subs/subs_forms.pm:1003
+#: cgi/subs/subs_forms.pm:1004 cgi/subs/subs_forms.pm:1006
 msgid "Unauthenticated"
 msgstr ""
 
@@ -7774,11 +7790,11 @@ msgstr ""
 msgid "Underlying"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:404
+#: cgi/subs/subs_BOMFeed_history.pm:405
 msgid "Unknown error while saving workspace '#1'."
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:1730
+#: cgi/subs/subs_forms.pm:1733
 msgid "Unlock Cashier/Settings sections"
 msgstr ""
 
@@ -7794,7 +7810,7 @@ msgstr ""
 msgid "Upcoming Events"
 msgstr ""
 
-#: /home/git/translations/binary-static/src/templates/toolkit/api/register.html.tt:25 cgi/subs/subs_forms.pm:1425
+#: /home/git/translations/binary-static/src/templates/toolkit/api/register.html.tt:25 cgi/subs/subs_forms.pm:1428
 msgid "Update"
 msgstr ""
 
@@ -7830,11 +7846,11 @@ msgstr ""
 msgid "Use the opportunity provided by our website to practice for free with our virtual money account facility. This will enable you to get used to the functionalities and rules of the website."
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:1533
+#: cgi/subs/subs_forms.pm:1536
 msgid "Use this feature to restrict access to your account from a specific IP address, or range of IP addresses.  For example, if you are certain that your IP address will always be in the range 213.45.0.0 - 213.45.255.255 then you would input 213.45.*.* into the IP address field.  This would ensure that persons outside of that IP network cannot access your account (even if they have the correct password)."
 msgstr ""
 
-#: cgi/emailus.cgi:106
+#: cgi/emailus.cgi:107
 msgid "User Support - Thank you"
 msgstr ""
 
@@ -7854,16 +7870,16 @@ msgstr ""
 msgid "Verification of identity"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:1872 cgi/subs/subs_forms.pm:2029
+#: cgi/subs/subs_forms.pm:1875 cgi/subs/subs_forms.pm:2032
 msgid "Verify new password"
-msgstr ""
-
-#: /home/git/translations/binary-static/src/templates/toolkit/legal/terms_and_conditions.html.tt:4
-msgid "Version 31. Last modified 2014-08-28."
 msgstr ""
 
 #: /home/git/translations/binary-static/src/templates/toolkit/legtrouble.html.tt:4
 msgid "Version 31. Last modified 2014-08-29."
+msgstr ""
+
+#: /home/git/translations/binary-static/src/templates/toolkit/legal/terms_and_conditions.html.tt:4
+msgid "Version 32. Last modified 2014-09-24."
 msgstr ""
 
 #: /home/git/translations/binary-static/src/templates/toolkit/resources/pricing_table_form.html.tt:87
@@ -7882,11 +7898,11 @@ msgstr ""
 msgid "View Rise/Fall contract prices across a range of markets."
 msgstr ""
 
-#: lib/BOM/Product/Contract.pm:2600 lib/BOM/Product/Contract.pm:2610
+#: lib/BOM/Product/Contract.pm:2601 lib/BOM/Product/Contract.pm:2611
 msgid "View Trading Times"
 msgstr ""
 
-#: cgi/top_up_virtual.cgi:95 cgi/top_up_virtual.cgi:96
+#: cgi/top_up_virtual.cgi:96 cgi/top_up_virtual.cgi:97
 msgid "View Updated Portfolio"
 msgstr ""
 
@@ -7939,7 +7955,7 @@ msgstr ""
 msgid "View your open positions."
 msgstr ""
 
-#: cgi/paymentagent_transfer.cgi:262 cgi/paymentagent_withdraw.cgi:387
+#: cgi/paymentagent_transfer.cgi:262 cgi/paymentagent_withdraw.cgi:389
 msgid "View your statement"
 msgstr ""
 
@@ -7955,7 +7971,7 @@ msgstr ""
 msgid "Virtual Money Account Opening"
 msgstr ""
 
-#: /home/git/translations/binary-static/src/templates/toolkit/account/open_account.html.tt:24 cgi/lost_password.cgi:374 cgi/subs/subs_forms.pm:997 cgi/subs/subs_homepage.pm:31
+#: /home/git/translations/binary-static/src/templates/toolkit/account/open_account.html.tt:24 cgi/lost_password.cgi:377 cgi/subs/subs_forms.pm:1000 cgi/subs/subs_homepage.pm:31
 msgid "Virtual money account"
 msgstr ""
 
@@ -7983,7 +7999,7 @@ msgstr ""
 msgid "Watch, earn and learn for FREE!"
 msgstr ""
 
-#: web/bin/JavascriptCompress.pm:127
+#: web/bin/JavascriptCompress.pm:123
 msgid "We"
 msgstr ""
 
@@ -7995,11 +8011,11 @@ msgstr ""
 msgid "We are fully licensed in the British Isles and Malta."
 msgstr ""
 
-#: web/bin/JavascriptCompress.pm:137
+#: web/bin/JavascriptCompress.pm:133
 msgid "We are not able to stream live prices at the moment. To enjoy live streaming of prices try refreshing the page, if you get this issue after repeated attempts try a different browser"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:445 web/bin/JavascriptCompress.pm:60
+#: cgi/subs/subs_forms.pm:448 web/bin/JavascriptCompress.pm:56
 msgid "We are not accepting accounts from residents of this country at the present time."
 msgstr ""
 
@@ -8068,7 +8084,7 @@ msgid "We want to make it as easy as possible for you to bring us prospects. And
 msgstr ""
 
 #. ($forgot_pass_url, $contact_url)
-#: cgi/lost_password.cgi:113
+#: cgi/lost_password.cgi:116
 msgid "We were unable to recover your Login ID or Password with the provided information. <a href=\"%1\">Return to Password Recovery</a>, or <a href=\"%2\"><strong>contact us</strong></a> should you need further assistance."
 msgstr ""
 
@@ -8097,11 +8113,11 @@ msgid ""
 msgstr ""
 
 #. ($currency, $amount, $client_name, $client_loginid, $paymentagent_loginid, $website->display_name)
-#: cgi/paymentagent_withdraw.cgi:402
+#: cgi/paymentagent_withdraw.cgi:404
 msgid "We would like to inform you that the withdrawal request of %1%2 by %3 %4 has been processed. The funds have been credited into your account %5 at %6."
 msgstr ""
 
-#: cgi/lost_password.cgi:69
+#: cgi/lost_password.cgi:72
 msgid "We'll then send you an e-mail asking you to verify your identity. If you don't receive the e-mail within a few minutes, please check your junk/spam mail folder."
 msgstr ""
 
@@ -8127,15 +8143,15 @@ msgstr ""
 msgid "Website exclusion is currently set to <strong>%1.</strong>"
 msgstr ""
 
-#: web/bin/JavascriptCompress.pm:74
+#: web/bin/JavascriptCompress.pm:70
 msgid "Wednesday"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:368
+#: cgi/subs/subs_BOMFeed_history.pm:369
 msgid "Week"
 msgstr ""
 
-#: web/bin/JavascriptCompress.pm:102
+#: web/bin/JavascriptCompress.pm:98
 msgid "Week of"
 msgstr ""
 
@@ -8143,7 +8159,7 @@ msgstr ""
 msgid "Weekend quotes"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:341 lib/BOM/Product/Helper/PricingTableParameters.pm:302
+#: cgi/subs/subs_BOMFeed_history.pm:342 lib/BOM/Product/Helper/PricingTableParameters.pm:302
 msgid "Weekly"
 msgstr ""
 
@@ -8151,7 +8167,7 @@ msgstr ""
 msgid "Weekly Live Trading Room"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:416
+#: cgi/subs/subs_BOMFeed_history.pm:417
 msgid "Weeks"
 msgstr ""
 
@@ -8163,11 +8179,11 @@ msgstr ""
 msgid "Weighted Close"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:331
+#: cgi/subs/subs_BOMFeed_history.pm:332
 msgid "Weighted Moving Average"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:509 cgi/subs/subs_graphs_chartdirector.pm:205
+#: cgi/subs/subs_BOMFeed_history.pm:510 cgi/subs/subs_graphs_chartdirector.pm:205
 msgid "Weighted volume indicator based on the one-day change in price divided by the current day's range. Generally, the ADI moves in the direction of price."
 msgstr ""
 
@@ -8335,11 +8351,11 @@ msgstr ""
 msgid "Will I need to install any software?"
 msgstr ""
 
-#: cgi/smartchart.cgi:41 cgi/subs/subs_BOMFeed_history.pm:550 cgi/subs/subs_graphs_chartdirector.pm:466
+#: cgi/smartchart.cgi:41 cgi/subs/subs_BOMFeed_history.pm:551 cgi/subs/subs_graphs_chartdirector.pm:466
 msgid "William's %R"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:318
+#: cgi/subs/subs_BOMFeed_history.pm:319
 msgid "Williams %R"
 msgstr ""
 
@@ -8359,7 +8375,7 @@ msgstr ""
 msgid "Win 80-100% on your stake if you are correct."
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:423
+#: cgi/subs/subs_BOMFeed_history.pm:424
 msgid "Windows"
 msgstr ""
 
@@ -8422,12 +8438,12 @@ msgstr ""
 msgid "Withdraw"
 msgstr ""
 
-#: /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:523
+#: /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:522
 msgid "Withdraw via Payment Agent"
 msgstr ""
 
 #. (1)
-#: /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:247 /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:291 /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:315 /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:339 /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:363 /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:386 /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:409 /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:437 /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:462
+#: /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:246 /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:290 /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:314 /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:338 /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:362 /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:385 /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:408 /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:436 /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:461
 msgid "Withdraw: %1 working day"
 msgstr ""
 
@@ -8438,7 +8454,7 @@ msgstr ""
 msgid "Withdraw: %1 working days"
 msgstr ""
 
-#: /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:219
+#: /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:218
 msgid "Withdraw: Not applicable"
 msgstr ""
 
@@ -8464,7 +8480,7 @@ msgid "Withdrawal limits"
 msgstr ""
 
 #. ($type)
-#: lib/BOM/Platform/Model/Payment/LegacyPayment.pm:141
+#: lib/BOM/Platform/Model/Payment/LegacyPayment.pm:140
 msgid "Withdrawal using legacy method: %1"
 msgstr ""
 
@@ -8489,7 +8505,7 @@ msgid "Withdrawal via Western Union"
 msgstr ""
 
 #. ($mtcn)
-#: lib/BOM/Platform/Model/Payment/WesternUnion.pm:138
+#: lib/BOM/Platform/Model/Payment/WesternUnion.pm:137
 msgid "Withdrawal via Western Union (MTCN: %1)"
 msgstr ""
 
@@ -8497,15 +8513,15 @@ msgstr ""
 msgid "Withdrawal via bank wire"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:429 cgi/subs/subs_BOMFeed_history.pm:450
+#: cgi/subs/subs_BOMFeed_history.pm:430 cgi/subs/subs_BOMFeed_history.pm:451
 msgid "Workspace"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:391
+#: cgi/subs/subs_BOMFeed_history.pm:392
 msgid "Workspace '#1' saved successfully."
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:435
+#: cgi/subs/subs_BOMFeed_history.pm:436
 msgid "Workspace name:"
 msgstr ""
 
@@ -8513,7 +8529,7 @@ msgstr ""
 msgid "World FX indices"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:420
+#: cgi/subs/subs_BOMFeed_history.pm:421
 msgid "World Indices"
 msgstr ""
 
@@ -8521,11 +8537,11 @@ msgstr ""
 msgid "Written limits and self-exclusion"
 msgstr ""
 
-#: web/bin/JavascriptCompress.pm:53
+#: web/bin/JavascriptCompress.pm:49
 msgid "Year"
 msgstr ""
 
-#: /home/git/translations/binary-static/src/templates/toolkit/container/confirm_box_popup.html.tt:5 cgi/subs/subs_BOMFeed_history.pm:389 cgi/subs/subs_forms.pm:3395 cgi/subs/subs_forms.pm:990
+#: /home/git/translations/binary-static/src/templates/toolkit/container/confirm_box_popup.html.tt:5 cgi/subs/subs_BOMFeed_history.pm:390 cgi/subs/subs_forms.pm:3395 cgi/subs/subs_forms.pm:993
 msgid "Yes"
 msgstr ""
 
@@ -8554,7 +8570,7 @@ msgstr ""
 msgid "You are not a Payment Agent"
 msgstr ""
 
-#: cgi/oop/Validation/Transaction/Payment/Deposit.pm:61
+#: cgi/oop/Validation/Transaction/Payment/Deposit.pm:53
 msgid "You are not allowed to make deposit."
 msgstr ""
 
@@ -8562,7 +8578,7 @@ msgstr ""
 msgid "You are not allowed to rebate any part commission payment onto your referrals and your affiliate account shall be revoked immediately, should the company realise you are engaged in such actions."
 msgstr ""
 
-#: cgi/paymentagent_withdraw.cgi:46
+#: cgi/paymentagent_withdraw.cgi:48
 msgid "You are not authorized for withdrawal via payment agent."
 msgstr ""
 
@@ -8596,10 +8612,6 @@ msgstr ""
 msgid "You can open your account"
 msgstr ""
 
-#: /home/git/translations/binary-static/src/templates/toolkit/legal/complaints_disputes.html.tt:10
-msgid "You can raise any unresolved disputes you might have with Regent Markets (Malta) Ltd with the Lotteries and Gaming Authority at complaints@lga.com.mt and any disputes with Regent Markets (IOM) Ltd with the alternative dispute resolution entity. The alternative dispute resolution entity for Regent Markets (IOM) Ltd is the Isle of Man Gambling Supervision Commission at gaming@gov.im. In the event of any differences between the English version of this website and any other language, the English version shall prevail."
-msgstr ""
-
 #: /home/git/translations/binary-static/src/templates/haml/get_started/how_to_trade_binaries.html.haml:1
 msgid "You can sell back long-term trades at any time to profit from changing market conditions."
 msgstr ""
@@ -8621,7 +8633,7 @@ msgstr ""
 msgid "You can try another <a href=\"%1\">payment option</a> or for additional assistance:"
 msgstr ""
 
-#: /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:512
+#: /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:511
 msgid "You can use an authorized payment agent to process deposits and withdrawals for e-cash methods or local currencies not supported by"
 msgstr ""
 
@@ -8636,12 +8648,12 @@ msgid "You cannot transfer to account %1, as their account is currently disabled
 msgstr ""
 
 #. ($contact_url)
-#: cgi/lost_password.cgi:335
+#: cgi/lost_password.cgi:338
 msgid "You clicked on an expired link. If you have already clicked on this link, it has been <b>disabled for security reasons</b>. Please re request change of password.<br /><br /> Your account is important to us. If you require further assistance, please contact our <a href=\"%1\" target=\"_blank\"><strong>Customer Support</strong></a>."
 msgstr ""
 
 #. ($contact_url)
-#: cgi/lost_password.cgi:398
+#: cgi/lost_password.cgi:401
 msgid "You clicked on an expired link. Please refer to the email with the subject line <strong>New Password Request</strong> and click on the link provided.<br /><br /> Your account is important to us. If you require further assistance, please contact our <a href=\"%1\" target=\"_blank\"><strong>Customer Support</strong></a>."
 msgstr ""
 
@@ -8684,11 +8696,11 @@ msgstr ""
 msgid "You have bought contracts with a combined purchase price of five times the bonus amount."
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:1319 cgi/subs/subs_forms.pm:1325 cgi/subs/subs_forms.pm:1330
+#: cgi/subs/subs_forms.pm:1322 cgi/subs/subs_forms.pm:1328 cgi/subs/subs_forms.pm:1333
 msgid "You have entered an invalid IP address."
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:2736 cgi/subs/subs_forms.pm:2860 cgi/subs/subs_forms.pm:3842
+#: cgi/subs/subs_forms.pm:2739 cgi/subs/subs_forms.pm:2863 cgi/subs/subs_forms.pm:3842
 msgid "You have entered an invalid login ID"
 msgstr ""
 
@@ -8742,7 +8754,7 @@ msgstr ""
 msgid "You may withdraw the bonus amount once you have exceeded an account turnover of 25 times the bonus amount value."
 msgstr ""
 
-#: web/bin/JavascriptCompress.pm:59
+#: web/bin/JavascriptCompress.pm:55
 msgid "You must accept the terms and conditions to open an account."
 msgstr ""
 
@@ -8750,7 +8762,7 @@ msgstr ""
 msgid "You must already have a valid \"Real money account\" with Binary.com."
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:449
+#: cgi/subs/subs_BOMFeed_history.pm:450
 msgid "You must be logged in to use the workspace feature.Account opening is free and takes only 30 seconds."
 msgstr ""
 
@@ -8859,7 +8871,7 @@ msgstr ""
 msgid "Your Email:"
 msgstr ""
 
-#: cgi/lost_password.cgi:45
+#: cgi/lost_password.cgi:48
 msgid "Your IP address appears to have changed.  This could be because you recently disconnected and then reconnected to your ISP."
 msgstr ""
 
@@ -8867,11 +8879,11 @@ msgstr ""
 msgid "Your Login ID"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:2741 cgi/subs/subs_forms.pm:2865
+#: cgi/subs/subs_forms.pm:2744 cgi/subs/subs_forms.pm:2868
 msgid "Your Login ID must start with either of the following:"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:2731 cgi/subs/subs_forms.pm:2855 cgi/subs/subs_forms.pm:3837
+#: cgi/subs/subs_forms.pm:2734 cgi/subs/subs_forms.pm:2858 cgi/subs/subs_forms.pm:3837
 msgid "Your Login ID should not contain spaces."
 msgstr ""
 
@@ -8896,10 +8908,6 @@ msgstr ""
 msgid "Your account has exceeded the trading limit with free promo code, please deposit if you wish to continue trading."
 msgstr ""
 
-#: cgi/oop/Validation/Transaction/Payment/Deposit.pm:53
-msgid "Your account is closed."
-msgstr ""
-
 #: cgi/oop/Validation/Transaction/Payment.pm:149
 msgid "Your account is disabled."
 msgstr ""
@@ -8919,7 +8927,7 @@ msgid "Your account is fully operational and you may begin depositing money and 
 msgstr ""
 
 #. (request()
-#: cgi/lost_password.cgi:467
+#: cgi/lost_password.cgi:470
 msgid "Your account is important to us. Please <a href=\"%1\">contact us</a> should you need further assistance."
 msgstr ""
 
@@ -8980,7 +8988,7 @@ msgstr ""
 msgid "Your cashier session has expired"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:2594
+#: cgi/subs/subs_forms.pm:2597
 msgid "Your country"
 msgstr ""
 
@@ -8996,7 +9004,7 @@ msgstr ""
 msgid "Your documents are expired."
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:2682 cgi/subs/subs_forms.pm:2902 cgi/subs/subs_forms.pm:3206
+#: cgi/subs/subs_forms.pm:2685 cgi/subs/subs_forms.pm:2905 cgi/subs/subs_forms.pm:3209
 msgid "Your email address"
 msgstr ""
 
@@ -9008,7 +9016,7 @@ msgstr ""
 msgid "Your funds are safe"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:1435 cgi/subs/subs_forms.pm:683 cgi/subs/subs_forms.pm:951
+#: cgi/subs/subs_forms.pm:1438 cgi/subs/subs_forms.pm:686 cgi/subs/subs_forms.pm:954
 msgid "Your information is incomplete or incorrect. Please correct the fields highlighted above."
 msgstr ""
 
@@ -9017,11 +9025,11 @@ msgstr ""
 msgid "Your money is always safe with %1. At all times, it is held in segregated AAA-rated banks, which is a condition of our trading licenses."
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:2652 cgi/subs/subs_forms.pm:2872
+#: cgi/subs/subs_forms.pm:2655 cgi/subs/subs_forms.pm:2875
 msgid "Your name"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:3130
+#: cgi/subs/subs_forms.pm:3133
 msgid "Your name/company"
 msgstr ""
 
@@ -9029,7 +9037,7 @@ msgstr ""
 msgid "Your new account balance is %s %s"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:1941
+#: cgi/subs/subs_forms.pm:1944
 msgid "Your old password is incorrect"
 msgstr ""
 
@@ -9048,25 +9056,25 @@ msgid "Your password has been changed."
 msgstr ""
 
 #. ($client->loginid)
-#: cgi/lost_password.cgi:636
+#: cgi/lost_password.cgi:639
 msgid "Your password has been successfully reset. Your login ID is <strong>%1</strong>.  Please log into your account using your new password."
 msgstr ""
 
 #. ($forgot_pass_url,                    $contact_url)
 #. (request()
-#: cgi/lost_password.cgi:146 cgi/lost_password.cgi:201
+#: cgi/lost_password.cgi:149 cgi/lost_password.cgi:204
 msgid "Your password recovery token has expired. Please click <a href=\"%1\"><strong>here</strong></a> to restart the password recovery process.<br /><br /> Your account is important to us. If you require further assistance, please contact our <a href=\"%2\"><strong>Customer Support</strong></a>."
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:1802 cgi/subs/subs_forms.pm:1981 cgi/subs/subs_forms.pm:582
+#: cgi/subs/subs_forms.pm:1805 cgi/subs/subs_forms.pm:1984 cgi/subs/subs_forms.pm:585
 msgid "Your password should be at least 5 characters."
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:1344 cgi/subs/subs_forms.pm:1671 cgi/subs/subs_forms.pm:1796 cgi/subs/subs_forms.pm:1975 cgi/subs/subs_forms.pm:576
+#: cgi/subs/subs_forms.pm:1347 cgi/subs/subs_forms.pm:1674 cgi/subs/subs_forms.pm:1799 cgi/subs/subs_forms.pm:1978 cgi/subs/subs_forms.pm:579
 msgid "Your password should contain only characters and digits."
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:1808 cgi/subs/subs_forms.pm:1987 cgi/subs/subs_forms.pm:588
+#: cgi/subs/subs_forms.pm:1811 cgi/subs/subs_forms.pm:1990 cgi/subs/subs_forms.pm:591
 msgid "Your password should not be more then 25 characters."
 msgstr ""
 
@@ -9074,7 +9082,7 @@ msgstr ""
 msgid "Your personal information is used primarily as a way of authenticating you as the proper owner of your account and as the person to whom withdrawal payments may be made. We collect personal data relating to you directly from you when you fill in the account opening form. In the event of any doubt as to the authenticity of your account details or of any withdrawal request, the company reserves the right to request further authentication information as may be deemed appropriate under the circumstances."
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:2615 cgi/subs/subs_forms.pm:3235
+#: cgi/subs/subs_forms.pm:2618 cgi/subs/subs_forms.pm:3238
 msgid "Your phone number"
 msgstr ""
 
@@ -9088,7 +9096,7 @@ msgid "Your request to transfer %1 %2 from %3 to %4 has been successfully proces
 msgstr ""
 
 #. ($currency, $amount, $client_loginid, $paymentagent->payment_agent_name)
-#: cgi/paymentagent_withdraw.cgi:382
+#: cgi/paymentagent_withdraw.cgi:384
 msgid "Your request to withdraw %1 %2 from your account %3 to Payment Agent %4 account has been successfully processed."
 msgstr ""
 
@@ -9096,7 +9104,7 @@ msgstr ""
 msgid "Your risks are known"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:563
+#: cgi/subs/subs_forms.pm:566
 msgid "Your secret answer is too short.  Please enter at least 4 characters."
 msgstr ""
 
@@ -9109,7 +9117,7 @@ msgstr ""
 msgid "Your transaction reference number is %1"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:3272
+#: cgi/subs/subs_forms.pm:3275
 msgid "Your website URL"
 msgstr ""
 
@@ -9127,7 +9135,7 @@ msgstr ""
 msgid "You’ll be surprised by the returns you can make."
 msgstr ""
 
-#: web/bin/JavascriptCompress.pm:70
+#: web/bin/JavascriptCompress.pm:66
 msgid "Zoom"
 msgstr ""
 
@@ -9175,7 +9183,7 @@ msgstr ""
 msgid "any restriction to its Clients from purchasing any contracts during certain hours."
 msgstr ""
 
-#: lib/BOM/Product/Contract.pm:2202
+#: lib/BOM/Product/Contract.pm:2203
 msgid "barrier"
 msgstr ""
 
@@ -9199,15 +9207,15 @@ msgstr ""
 msgid "contract start time"
 msgstr ""
 
-#: web/bin/JavascriptCompress.pm:107
+#: web/bin/JavascriptCompress.pm:103
 msgid "day"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:383 lib/BOM/Product/Model/ContractForm.pm:740 web/bin/JavascriptCompress.pm:108
+#: cgi/subs/subs_BOMFeed_history.pm:384 lib/BOM/Product/Model/ContractForm.pm:740 web/bin/JavascriptCompress.pm:104
 msgid "days"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:1488 cgi/subs/subs_forms.pm:743
+#: cgi/subs/subs_forms.pm:1491 cgi/subs/subs_forms.pm:746
 msgid "details"
 msgstr ""
 
@@ -9255,7 +9263,7 @@ msgstr ""
 msgid "here"
 msgstr ""
 
-#: lib/BOM/Product/Contract.pm:2202
+#: lib/BOM/Product/Contract.pm:2203
 msgid "high barrier"
 msgstr ""
 
@@ -9263,11 +9271,11 @@ msgstr ""
 msgid "homepage"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:356 web/bin/JavascriptCompress.pm:109
+#: cgi/subs/subs_BOMFeed_history.pm:357 web/bin/JavascriptCompress.pm:105
 msgid "hour"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:446 web/bin/JavascriptCompress.pm:110
+#: cgi/subs/subs_BOMFeed_history.pm:447 web/bin/JavascriptCompress.pm:106
 msgid "hours"
 msgstr ""
 
@@ -9275,15 +9283,15 @@ msgstr ""
 msgid "less"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:333 web/bin/JavascriptCompress.pm:55
+#: cgi/subs/subs_BOMFeed_history.pm:334 web/bin/JavascriptCompress.pm:51
 msgid "loading..."
 msgstr ""
 
-#: lib/BOM/Product/Contract.pm:2202
+#: lib/BOM/Product/Contract.pm:2203
 msgid "low barrier"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:3892 cgi/subs/subs_forms.pm:4093
+#: cgi/subs/subs_forms.pm:3892 cgi/subs/subs_forms.pm:4091
 msgid "maximum is"
 msgstr ""
 
@@ -9295,27 +9303,27 @@ msgstr ""
 msgid "minimum available duration"
 msgstr ""
 
-#: cgi/subs/subs_forms.pm:3886 cgi/subs/subs_forms.pm:4087
+#: cgi/subs/subs_forms.pm:3886 cgi/subs/subs_forms.pm:4085
 msgid "minimum is"
 msgstr ""
 
-#: lib/BOM/Product/Contract.pm:2199
+#: lib/BOM/Product/Contract.pm:2200
 msgid "minus"
 msgstr ""
 
-#: cgi/subs/subs_BOMFeed_history.pm:438 web/bin/JavascriptCompress.pm:111
+#: cgi/subs/subs_BOMFeed_history.pm:439 web/bin/JavascriptCompress.pm:107
 msgid "minute"
 msgstr ""
 
-#: cgi/smartchart.cgi:306 cgi/subs/subs_BOMFeed_history.pm:432 web/bin/JavascriptCompress.pm:112
+#: cgi/smartchart.cgi:307 cgi/subs/subs_BOMFeed_history.pm:433 web/bin/JavascriptCompress.pm:108
 msgid "minutes"
 msgstr ""
 
-#: web/bin/JavascriptCompress.pm:105
+#: web/bin/JavascriptCompress.pm:101
 msgid "month"
 msgstr ""
 
-#: web/bin/JavascriptCompress.pm:106
+#: web/bin/JavascriptCompress.pm:102
 msgid "months"
 msgstr ""
 
@@ -9347,7 +9355,7 @@ msgstr ""
 msgid "page for the exact time of settlement for all contracts. Other websites may adopt a different convention (for example some websites choose 4 o'clock NY time, or 5 o'clock London time). As a result, the open, high, low and closing prices displayed on our website may differ to those on other websites, due to the market-closing time convention."
 msgstr ""
 
-#: lib/BOM/Product/Contract.pm:2199
+#: lib/BOM/Product/Contract.pm:2200
 msgid "plus"
 msgstr ""
 
@@ -9383,11 +9391,11 @@ msgstr ""
 msgid "running"
 msgstr ""
 
-#: web/bin/JavascriptCompress.pm:113
+#: web/bin/JavascriptCompress.pm:109
 msgid "second"
 msgstr ""
 
-#: web/bin/JavascriptCompress.pm:114
+#: web/bin/JavascriptCompress.pm:110
 msgid "seconds"
 msgstr ""
 
@@ -9423,6 +9431,10 @@ msgstr ""
 msgid "trades"
 msgstr ""
 
+#: /home/git/translations/binary-static/src/templates/toolkit/legal/complaints_disputes.html.tt:13
+msgid "website"
+msgstr ""
+
 #: /home/git/translations/binary-static/src/templates/toolkit/legal/terms_and_conditions.html.tt:93 /home/git/translations/binary-static/src/templates/toolkit/legtrouble.html.tt:93
 msgid "when there is a breakdown in the means of communication normally employed in determining the price or value of any of the financial contracts or where the price or value of any of the financial contracts cannot be promptly or accurately ascertained."
 msgstr ""
@@ -9448,11 +9460,11 @@ msgstr ""
 msgid "withdrawal limits"
 msgstr ""
 
-#: web/bin/JavascriptCompress.pm:103
+#: web/bin/JavascriptCompress.pm:99
 msgid "year"
 msgstr ""
 
-#: web/bin/JavascriptCompress.pm:104
+#: web/bin/JavascriptCompress.pm:100
 msgid "years"
 msgstr ""
 

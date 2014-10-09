@@ -187,7 +187,7 @@ var get_random_download_symbols = function () {
             crossDomain:true,
             type: 'POST',
             url: '//archive.binary.com/d/tick-data-downloads.cgi',
-            data: {ajax_only : 1, action: 'get_symbols'},
+            data: {action: 'get_symbols'},
             async: true,
             dataType: "json"
         })
@@ -213,7 +213,7 @@ var random_symbol_change = function () {
                 crossDomain:true,
                 type: 'POST',
                 url: '//archive.binary.com/d/tick-data-downloads.cgi',
-                data: {ajax_only : 1, action: 'get_json', underlying: $(that).val()},
+                data: {action: 'get_json', underlying: $(that).val()},
                 async: true,
                 dataType: "json"
             })

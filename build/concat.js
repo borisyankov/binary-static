@@ -7,6 +7,7 @@ module.exports = {
             'dist/js/lib.js': [
                 'src/javascript/lib/jquery.js', 
                 'src/javascript/lib/highstock/highstock.js', 
+                'src/javascript/lib/highstock/highstock-exporting.js',
                 'src/javascript/lib/moment/moment.js', 
                 'src/javascript/lib/**/*.js'
              ],

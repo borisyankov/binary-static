@@ -7,7 +7,6 @@ $gridle-debug: true;
 // Prefix to be prepended to all generated class names in order to make them more specific.
 $gridle-class-prefix: "grd-";
 
-@import 'language_direction'; // importing it in grid as we use grid for backoffice sell popup also
 // Register default responsive states and generate css classes.
 @import 'gridle/gridle';
 @include gridle_register_default_states();

@@ -451,7 +451,7 @@ var BetSell = function() {
                                        }
                                    } else {
                                        from_date = that.get_date_from_seconds(time_obj['from_time'] - 5);
-                                       to_date = that.get_date_from_seconds(time_obj['to_time'] + 5);
+                                       to_date = that.get_date_from_seconds(time_obj['to_time']);
                                    }
 
                                    var display_marker = false;

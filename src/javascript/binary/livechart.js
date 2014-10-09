@@ -276,15 +276,13 @@ LiveChartTick.prototype.process_data = function(point) {
             epoch: parseInt(point[1]),
             quote: parseFloat(point[2])
         };
-        if (!this.config.to || tick.epoch <= this.config.to) {
-            this.chart.series[0].addPoint(
-                [tick.epoch * 1000, tick.quote], false, this.shift, false
-            );
-            this.spot = tick.quote;
-            // for tick trade charting purposes
-            if (tick.epoch > this.config.contract_start_time && ticks_array.length < this.config.how_many_ticks) {
-                    ticks_array.push(tick);
-            }
+        this.chart.series[0].addPoint(
+            [tick.epoch * 1000, tick.quote], false, this.shift, false
+        );
+        this.spot = tick.quote;
+        // for tick trade charting purposes
+        if (tick.epoch > this.config.contract_start_time && ticks_array.length < this.config.how_many_ticks) {
+                ticks_array.push(tick);
         }
     } else if (point[0] == 'contract') {
         this.process_contract(point[1]);
@@ -318,7 +316,7 @@ LiveChartOHLC.prototype.process_data = function(point) {
     if (type == 'ohlc') {
         this.process_ohlc(point);
     } else if (type == 'tick') {
-        if ( this.accept_ticks && (!this.config.to || point[0] < this.config.to)) {
+        if (this.accept_ticks) {
                 this.process_tick(point);
         }
     } else if (type == 'corp_action') {

@@ -4,9 +4,14 @@
         [% l("If you would like to file a complaint with regards to our service, kindly contact us. We shall investigate your enquiry and a response will be given to your enquiry.") %]
     </p>
     <p>
-        [% l("If your complaint relates to an outcome of a trade or a transaction and remains unresolved, it will turn into a dispute. Should you be unsatisfied with our response, you can choose to escalate your complaint to the regulator or to an alternative dispute resolution entity. Your disputes must be lodged within seven (7) days from the date the contract in question has been decided. No claims will be honoured after this period. You are solely responsible for the transactions made in your account.") %]
+        [% l("If your complaint relates to an outcome of a trade or a transaction and remains unresolved, it will turn into a dispute. Should you be unsatisfied with our response, you can choose to escalate your complaint to the regulator or to an alternative dispute resolution entity.") %]
     </p>
     <p>
-    [% l("You can raise any unresolved disputes you might have with Regent Markets (Malta) Ltd with the Lotteries and Gaming Authority at complaints@lga.com.mt and any disputes with Regent Markets (IOM) Ltd with the alternative dispute resolution entity. The alternative dispute resolution entity for Regent Markets (IOM) Ltd is the Isle of Man Gambling Supervision Commission at gaming@gov.im. In the event of any differences between the English version of this website and any other language, the English version shall prevail.") %]
+    [% l("Clients registered with Regent Markets (IOM) Ltd can raise their unresolved disputes with the Isle of Man Gambling Supervision Commission at") %] <a href="mailto:gaming@gov.im">gaming@gov.im</a>.
     </p>
+    <p>
+    [% l("Clients registered with Regent Markets (Malta) Ltd can raise their unresolved disputes with the Lotteries and Gaming Authority at") %] <a href="mailto:complaints@lga.com.mt">complaints@lga.com.mt</a>. [% l("UK clients registered with Regent Markets (Malta) Ltd can submit their dispute with the alternative dispute resolution entity which is the Independent Betting Adjudication Service Ltd (IBAS) by filling the adjudication form on the ADR entity’s") %] <a href="http://www.ibas-uk.com/adjudicationForm.php" target="_blank">[% l("website") %]</a>.
+    </p>
+    <p>
+        [% l("It is important that you refer your disputes to the appropriate ADR for the claims to be valid.") %]
 </div>

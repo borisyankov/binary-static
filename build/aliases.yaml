@@ -2,7 +2,6 @@ css:
   - 'sass'
   - 'autoprefixer'
   - 'cssmin'
-#  - 'uncss'
 
 js:
   - 'concat'
@@ -10,7 +9,7 @@ js:
 
 dev:
   - 'default'
-  - 'connect:dev'
+  - 'connect'
 
 deploy:
   - 'default'
@@ -18,7 +17,7 @@ deploy:
 
 custom:
   - 'default'
-  - 'connect:dev'
+  - 'connect'
 
 test:
   - 'jshint'

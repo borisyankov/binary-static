@@ -129,8 +129,8 @@ sub register {
 
             return {
                 libs           => [
-                    'https://www.binary.com/cdn/compressed_binary.9fb5fc413e777c4ff16738799074a63f.js',
                     $config->{static}->{url} .'js/lib.min.js',
+                    $config->{static}->{url} .'js/data.min.js',
                     $config->{static}->{url} .'js/binary.min.js'
                 ],
                 settings       => to_json(\%setting),
