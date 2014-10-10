@@ -62,18 +62,18 @@ body {
     text-align: center;
 }
 
-nav {
+.header nav {
     display: flex;
     flex: 1;
 }
 
-nav ul {
+.header nav ul {
     display: flex;
     justify-content: space-around;
 }
 
 
-nav li {
+.header nav li {
     cursor: pointer;
     display: flex;
     flex-grow: 1;
