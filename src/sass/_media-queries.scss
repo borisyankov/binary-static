@@ -3,10 +3,15 @@
         font-size: 16px;
     }
     .logo {
-        width: 39px;
+        width: 2.5em;
+        margin-right: 0;
     }
     .sitemap {
         display: none;
+    }
+    .nav2nd {
+        left: 0;
+        right: 0;
     }
 }
 @media all and (max-width: 479px) {
@@ -33,7 +38,7 @@
     .nav-resources,
     .nav-charts,
     .nav-help {
-        width: $HEADER_HEIGHT;
+        min-width: $HEADER_HEIGHT;
     }
     .nav-cashier,
     .nav-resources,
