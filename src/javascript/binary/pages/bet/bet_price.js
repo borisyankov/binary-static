@@ -132,6 +132,8 @@ var BetPrice = function() {
                 details += jqXHR.responseText;
             } else if (document.location.href.match(/^http:/) && (!details || details.match(/access/i))) {
                 details += '<ul>Please <a href="' + document.location.href.replace('http://', 'https://') + '">continue browsing using HTTPS secure protocol</a></ul>';
+            } else {
+                details += 'There was a problem accessing the server during purchase.';
             }
             var width = this.container().width(); // since the error message could be any size, set the continer size to a good value
             this.display_buy_error('<div style="width: ' + width + 'px;"><h3>Error</h3><p>' + details + ' </p></div>');
