@@ -275,6 +275,10 @@
   width: 20em;
 }
 
+#instrument-content, #settings-content, #band-content, #moving-average-content, #indicator-content {
+    font-size: $FONT_SIZE_S;
+}
+
 #intraday_interval {
     ul.not-li {
         margin: 0 0 0 1em;

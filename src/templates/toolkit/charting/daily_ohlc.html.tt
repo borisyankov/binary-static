@@ -9,7 +9,6 @@ unchanged
 
 <div class="grd-grid-10 grd-centered table-header grd-row-padding center-aligned">
     [% l('Daily Prices') %]
-    <hr>
 </div>
 
 <div class="grd-parent grd-grid-10 grd-centered table-header grd-row-padding">
@@ -38,7 +37,6 @@ unchanged
 
 <div class="grd-grid-10 grd-centered grd-row-padding table-header center-aligned">
     [% l('Summary') %]
-    <hr>
 </div>
 <div class="grd-parent grd-grid-10 grd-centered grd-row-padding table-header">
     <div class="grd-grid-2 grd-grid-mobile-3 center-aligned">[% l('Statistic') %]</div>

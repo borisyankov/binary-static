@@ -63,6 +63,7 @@ body {
 }
 
 nav {
+    display: flex;
     flex: 1;
 }
 
@@ -75,14 +76,22 @@ nav ul {
 nav li {
     cursor: pointer;
     display: flex;
-    padding: 1em 0;
     flex-grow: 1;
     justify-content: center;
     flex-direction: column;
 }
 
+.nav1st {
+    flex: 1;
+}
+
 .nav1st li {
     text-align: center;
+    height: $HEADER_HEIGHT;
+}
+
+.nav1st li div {
+    line-height: $HEADER_HEIGHT;
 }
 
 .nav2nd {
@@ -91,7 +100,6 @@ nav li {
     position: absolute;
     flex-direction: column;
     min-width: 200px;
-    margin-top: 1em;
 }
 
 .nav2nd li {
