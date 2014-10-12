@@ -100,6 +100,7 @@ body {
     position: absolute;
     flex-direction: column;
     min-width: 200px;
+    transform: translateY(100px);
 }
 
 .nav2nd li {
@@ -107,13 +108,10 @@ body {
     padding: 1em;
 }
 
-.nav2nd li:hover {
-    background: $COLOR_BLUE;
-}
-
 .nav1st li:hover > ul {
     opacity: 1;
     visibility: visible;
+    transform: translateY(0);
 }
 
 .login-embed {

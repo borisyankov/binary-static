@@ -4,7 +4,7 @@
 *:after,
 *:before {
     box-sizing: border-box;
-    transition: color 0.3s, background-color 0.3s, opacity 0.3s;
+    transition: all 0.3;
 
 }
 html {
@@ -335,12 +335,26 @@ ul.bulleted li {
 .header nav {
     color: white;
 }
+.nav1st li.active div {
+    color: $COLOR_BLUE;
+    background: $COLOR_WHITE;
+}
 .nav1st li:hover,
-.language-selector:hover,
-.nav2nd {
+.language-selector:hover {
     background-color: $COLOR_ORANGE;
 
 }
+.nav2nd {
+    color: $COLOR_BLUE;
+    background-color: $COLOR_WHITE;
+    box-shadow: 0 0 50px 0 rgba(0,0,0, .25);
+}
+
+.nav2nd li:hover {
+    color: $COLOR_WHITE;
+    background: $COLOR_BLUE;
+}
+
 .nav-trade,
 .nav-cashier,
 .nav-resources,
