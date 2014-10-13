@@ -4,7 +4,6 @@
 @import "mixin";
 @import "common";
 @import "layout";
-@import "controls";
 @import "page";
 @import "readable";
 @import "compatibility";
@@ -14,6 +13,11 @@
 @import "common/nav";
 @import "common/exception";
 @import "common/tooltip";
+
+@import "controls";
+@import "controls/form";
+@import "controls/button";
+@import "controls/tabs";
 
 @import "pages/home.scss";
 @import "pages/login.scss";

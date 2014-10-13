@@ -138,14 +138,14 @@ body {
     padding: 0 $PAGE_PADDING;
 }
 
-.logo, .language-selector, .login-button {
+.language-selector, .login-button {
     height: 2.5em;
-    margin: .25em 0;
+    margin: 1em .25em;
 }
 
 .logo {
-    margin-left: 0;
-    margin-right: 1em;
+    height: 2.5em;
+    margin: .25em 1em .25em 0;
     width: 195px;
 }
 
