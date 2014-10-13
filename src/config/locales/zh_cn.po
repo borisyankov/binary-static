@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: 1228\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2014-09-23 08:56+0200\n"
+"PO-Revision-Date: 2014-10-03 14:10+0200\n"
 "Last-Translator: Freddy Hew <hewfreddy@gmail.com>\n"
 "Language-Team: Simplified Chinese <https://hosted.weblate.org/projects/binary/static/zh_CN/>\n"
 "Language: zh_cn\n"
@@ -35,11 +35,6 @@ msgstr "“我与多家联盟公司合作，迄今为止，%1 是我所发现的
 msgid "$1 to $100,000 payouts, low-risk to high-leverage, and much more. We offer limitless profit opportunities."
 msgstr "从 1 美元至 10 万美元的目标收入供您选择，低风险与高利润率齐聚一身，更多优点不胜枚举！我们为您提供无限的获益机会。"
 
-#. ($unit)
-#: lib/BOM/Utility/TimeInterval.pm:124
-msgid "$value %1"
-msgstr "$值%1"
-
 #. ('100%')
 #. ('1000%')
 #: /home/git/translations/binary-static/src/templates/haml/home/index.html.haml:1
@@ -62,44 +57,44 @@ msgstr "%1加盟计划的条款和条件"
 #. ('%K')
 #. ('%D')
 #. (3)
-#: cgi/subs/subs_graphs_chartdirector.pm:220
-#: cgi/subs/subs_graphs_chartdirector.pm:238
-#: cgi/subs/subs_graphs_chartdirector.pm:246
-#: cgi/subs/subs_graphs_chartdirector.pm:254
-#: cgi/subs/subs_graphs_chartdirector.pm:261
-#: cgi/subs/subs_graphs_chartdirector.pm:270
-#: cgi/subs/subs_graphs_chartdirector.pm:287
-#: cgi/subs/subs_graphs_chartdirector.pm:290
-#: cgi/subs/subs_graphs_chartdirector.pm:309
-#: cgi/subs/subs_graphs_chartdirector.pm:322
-#: cgi/subs/subs_graphs_chartdirector.pm:328
-#: cgi/subs/subs_graphs_chartdirector.pm:335
-#: cgi/subs/subs_graphs_chartdirector.pm:344
+#: cgi/subs/subs_graphs_chartdirector.pm:221
+#: cgi/subs/subs_graphs_chartdirector.pm:239
+#: cgi/subs/subs_graphs_chartdirector.pm:247
+#: cgi/subs/subs_graphs_chartdirector.pm:255
+#: cgi/subs/subs_graphs_chartdirector.pm:262
+#: cgi/subs/subs_graphs_chartdirector.pm:271
+#: cgi/subs/subs_graphs_chartdirector.pm:288
+#: cgi/subs/subs_graphs_chartdirector.pm:291
+#: cgi/subs/subs_graphs_chartdirector.pm:310
+#: cgi/subs/subs_graphs_chartdirector.pm:323
+#: cgi/subs/subs_graphs_chartdirector.pm:329
+#: cgi/subs/subs_graphs_chartdirector.pm:336
 #: cgi/subs/subs_graphs_chartdirector.pm:345
-#: cgi/subs/subs_graphs_chartdirector.pm:355
+#: cgi/subs/subs_graphs_chartdirector.pm:346
 #: cgi/subs/subs_graphs_chartdirector.pm:356
 #: cgi/subs/subs_graphs_chartdirector.pm:357
-#: cgi/subs/subs_graphs_chartdirector.pm:372
-#: cgi/subs/subs_graphs_chartdirector.pm:388
+#: cgi/subs/subs_graphs_chartdirector.pm:358
+#: cgi/subs/subs_graphs_chartdirector.pm:373
 #: cgi/subs/subs_graphs_chartdirector.pm:389
 #: cgi/subs/subs_graphs_chartdirector.pm:390
-#: cgi/subs/subs_graphs_chartdirector.pm:399
-#: cgi/subs/subs_graphs_chartdirector.pm:408
-#: cgi/subs/subs_graphs_chartdirector.pm:422
+#: cgi/subs/subs_graphs_chartdirector.pm:391
+#: cgi/subs/subs_graphs_chartdirector.pm:400
+#: cgi/subs/subs_graphs_chartdirector.pm:409
 #: cgi/subs/subs_graphs_chartdirector.pm:423
-#: cgi/subs/subs_graphs_chartdirector.pm:433
-#: cgi/subs/subs_graphs_chartdirector.pm:446
-#: cgi/subs/subs_graphs_chartdirector.pm:455
+#: cgi/subs/subs_graphs_chartdirector.pm:424
+#: cgi/subs/subs_graphs_chartdirector.pm:434
+#: cgi/subs/subs_graphs_chartdirector.pm:447
 #: cgi/subs/subs_graphs_chartdirector.pm:456
 #: cgi/subs/subs_graphs_chartdirector.pm:457
-#: cgi/subs/subs_graphs_chartdirector.pm:472
-#: cgi/subs/subs_graphs_chartdirector.pm:486
-#: cgi/subs/subs_graphs_chartdirector.pm:493
-#: cgi/subs/subs_graphs_chartdirector.pm:502
-#: cgi/subs/subs_graphs_chartdirector.pm:512
-#: cgi/subs/subs_graphs_chartdirector.pm:520
-#: cgi/subs/subs_graphs_chartdirector.pm:528
-#: cgi/subs/subs_graphs_chartdirector.pm:536
+#: cgi/subs/subs_graphs_chartdirector.pm:458
+#: cgi/subs/subs_graphs_chartdirector.pm:473
+#: cgi/subs/subs_graphs_chartdirector.pm:487
+#: cgi/subs/subs_graphs_chartdirector.pm:494
+#: cgi/subs/subs_graphs_chartdirector.pm:503
+#: cgi/subs/subs_graphs_chartdirector.pm:513
+#: cgi/subs/subs_graphs_chartdirector.pm:521
+#: cgi/subs/subs_graphs_chartdirector.pm:529
+#: cgi/subs/subs_graphs_chartdirector.pm:537
 msgid "%1 Period"
 msgstr "%1期间"
 
@@ -216,7 +211,7 @@ msgid "%1 is the scope level that was granted."
 msgstr "%1是被授予的范围级别。"
 
 #. (1)
-#: cgi/subs/subs_graphs.pm:269
+#: cgi/subs/subs_graphs.pm:270
 msgid "%1 minute quotes"
 msgstr "%1 分钟行情"
 
@@ -331,7 +326,7 @@ msgstr "'免费 交易' 红利代码"
 msgid "'Get X when you deposit Y' bonus code"
 msgstr "‘存Y得X’红利代码"
 
-#: web/bin/JavascriptCompress.pm:54
+#: web/bin/GenerateStaticData.pm:54
 msgid "(Bejing/CST -8 hours)"
 msgstr "(北京/CST -8 营业时间)"
 
@@ -343,7 +338,7 @@ msgstr "（周一至周五）"
 msgid "(One) Touch trades"
 msgstr "(单一)触及交易"
 
-#: cgi/subs/subs_BOMFeed_history.pm:320
+#: lib/BOM/View/Charting.pm:397
 msgid "(delayed)"
 msgstr "（延时）"
 
@@ -439,7 +434,7 @@ msgstr "<br>根据您的请求，您的出纳和设置部分已被锁定</strong
 msgid "<option value=\"\"></option><option value=\"01\">Jan</option><option value=\"02\">Feb</option><option value=\"03\">Mar</option><option value=\"04\">Apr</option><option value=\"05\">May</option><option value=\"06\">Jun</option><option value=\"07\">Jul</option><option value=\"08\">Aug</option><option value=\"09\">Sep</option><option value=\"10\">Oct</option><option value=\"11\">Nov</option><option value=\"12\">Dec</option>"
 msgstr "<option value=\"\"></option><option value=\"01\">一月</option><option value=\"02\">二月</option><option value=\"03\">三月</option><option value=\"04\">四月</option><option value=\"05\">五月</option><option value=\"06\">六月</option><option value=\"07\">七月</option><option value=\"08\">八月</option><option value=\"09\">九月</option><option value=\"10\">十月</option><option value=\"11\">十一月</option><option value=\"12\">十二月</option>"
 
-#: cgi/lost_password.cgi:355
+#: cgi/lost_password.cgi:357
 msgid "<p style='color: red'> For security reasons this link will be invalidated after this.</p>Please confirm for which of these accounts you want to reset your password:"
 msgstr "<p style='color:red'> 出于安全考虑，此链接随后将失效。</p>请确认您要重置密码的帐户："
 
@@ -480,7 +475,7 @@ msgstr ""
 "<p>二元期权诞生后，迅速成为广受欢迎的交易产品。为顺应这种潮流，大量的二元期权平台应运而生。成为联盟成员后，您就可以从这个快速增长的新兴行业中盈利。</p> \n"
 " <p>二元期权交易是一个高利润市场，在这个市场中，每个人（包括您）都可以从这块大蛋糕中分一杯羹！</p>"
 
-#: cgi/lost_password.cgi:416
+#: cgi/lost_password.cgi:418
 msgid "<p>Please take a moment to verify your identity by providing us with the correct answer to your secret question and date of birth, below.</p>"
 msgstr "<p>请花几分钟在下面提交您密码保护问题的正确答案及您的生日，以验证您的 ID。</p>"
 
@@ -564,7 +559,7 @@ msgid "<strong>Benchmarked prices</strong> - %1 benchmarks its prices daily agai
 msgstr "<strong>基准价格</strong> - %1 每日都对比银行间衍生品市场来制定基准价格。"
 
 #. (to_monetary_number_format($limit_price)
-#: cgi/oop/Controller/Bet.pm:2113
+#: cgi/oop/Controller/Bet.pm:2114
 msgid "<strong>Better execution price!</strong><br />  The price has moved in your favour from %1 to %2."
 msgstr "<strong>更好的成交价！</strong><br />  该价格变动对您有利，从 %1 变为 %2。"
 
@@ -797,8 +792,7 @@ msgstr "<ul><li>进入 <strong>工具</strong> 菜单并选择 <strong>选项</s
 msgid "A Phonegap mobile application for Binary.com"
 msgstr "Binary.com 的 PhoneGap 移动应用"
 
-#: cgi/subs/subs_BOMFeed_history.pm:565
-#: cgi/subs/subs_graphs_chartdirector.pm:498
+#: cgi/subs/subs_graphs_chartdirector.pm:499 lib/BOM/View/Charting.pm:642
 msgid "A Simple moving average line can be enhanced by putting a percentage envelope on either side of it. Our lines are displayed 20% above and 10% below the moving average line."
 msgstr "简单的移动平均线可通过在其两边各添加一定的百分比的包络线而增强。我们的曲线显示为 20% 高于移动平均线，10% 低于移动平均线。"
 
@@ -838,8 +832,7 @@ msgstr "衍生是一种通过参照基础市场来定价的金融工具，通常
 msgid "A member of our Customer Support Team will contact you shortly."
 msgstr "我们的客户支持团队成员稍后将联系您。"
 
-#: cgi/subs/subs_BOMFeed_history.pm:489
-#: cgi/subs/subs_graphs_chartdirector.pm:443
+#: cgi/subs/subs_graphs_chartdirector.pm:444 lib/BOM/View/Charting.pm:566
 msgid "A momentum indicator showing the percent rate-of-change of a triple exponentially smoothed moving average. Like other oscillators, TRIX oscillates around a zero line."
 msgstr "一个动量指标，指示三重指数平滑移动平均数的百分比变动率。如同其它摆动指标，TRIX 在基准线周围摆动。"
 
@@ -860,7 +853,7 @@ msgstr "一个行业领导者评选团裁决BetOnMarkets.com击败其他二位�
 msgid "A problem occurred"
 msgstr "出现一个问题"
 
-#: cgi/subs/subs_BOMFeed_history.pm:394
+#: lib/BOM/View/Charting.pm:471
 msgid "A problem occurred while connecting to the server. Please try again later."
 msgstr "连接到服务器时出现问题。请稍后重新尝试。"
 
@@ -880,8 +873,7 @@ msgstr "当前有效护照，当前驾照(临时或永久)或身份证副本扫�
 msgid "A scanned copy of your passport or driver's licence."
 msgstr "您的护照或驾驶执照的扫描件。"
 
-#: cgi/subs/subs_BOMFeed_history.pm:526
-#: cgi/subs/subs_graphs_chartdirector.pm:468
+#: cgi/subs/subs_graphs_chartdirector.pm:469 lib/BOM/View/Charting.pm:603
 msgid "A technical indicator which measures overbought/oversold levels in a very similar way to that of an Oscillator indicator, except that %R is plotted upside-down 0% to -100%. Readings in the range of 80 to 100% indicate that the security is oversold while readings in the 0 to 20% range suggest that it is overbought."
 msgstr "一个技术指标，以十分类似于摆动指标的方式测量过多买进/过多卖出水平，不同的是威廉指标 %R 被倒过来描绘，介于 0% 至 -100% 之间。读数介于 80 至 100% 之间指示证券过多卖出，介于 0 至 20% 之间则指示过多买进。"
 
@@ -901,7 +893,7 @@ msgstr "API开发者指南"
 msgid "AUTHORISED PAYMENT AGENT? (this field visible from office only)"
 msgstr "授权支付代理人？（此字段仅对本公司办公室可见）"
 
-#: cgi/subs/subs_BOMFeed_history.pm:432
+#: lib/BOM/View/Charting.pm:509
 msgid "About"
 msgstr "关于"
 
@@ -920,7 +912,7 @@ msgid "Acceptance"
 msgstr "接受"
 
 #. (request()
-#: cgi/create_account.cgi:104
+#: cgi/create_account.cgi:105
 msgid "According to our terms and conditions, you may only register for one real money account through our site. If you have forgotten the Login ID or password of your existing account, please <a href=\"%1\">try our password recovery tool</a> or contact customer service."
 msgstr "根据我们的条款，您只能通过我们的网站注册一个真实资金账户。如果您忘记了现有账户的登录ID和密码，请 <a href=\"%1\">尝试我们的密码恢复工具</a>或联系我们的客服人员。"
 
@@ -943,7 +935,7 @@ msgstr "帐户管理及追踪"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/legal/terms_and_conditions.html.tt:121
 #: /home/git/translations/binary-static/src/templates/toolkit/legtrouble.html.tt:121
-#: cgi/create_account.cgi:197 cgi/create_account.cgi:291
+#: cgi/create_account.cgi:198 cgi/create_account.cgi:292
 #: cgi/open_account.cgi:13 cgi/subs/subs_forms_output.pm:24
 msgid "Account Opening"
 msgstr "帐户开设"
@@ -966,9 +958,8 @@ msgstr "帐户余额: "
 msgid "Accounts"
 msgstr "帐户"
 
-#: cgi/smartchart.cgi:15 cgi/subs/subs_BOMFeed_history.pm:329
-#: cgi/subs/subs_BOMFeed_history.pm:513
-#: cgi/subs/subs_graphs_chartdirector.pm:203
+#: cgi/smartchart.cgi:15 cgi/subs/subs_graphs_chartdirector.pm:204
+#: lib/BOM/View/Charting.pm:406 lib/BOM/View/Charting.pm:590
 msgid "Accumulation/Distribution"
 msgstr "累积/分配"
 
@@ -997,11 +988,11 @@ msgstr "通过本网站获得财务交易 合同必须按照网站页面上的�
 msgid "Action"
 msgstr "行动"
 
-#: cgi/subs/subs_BOMFeed_history.pm:453
+#: lib/BOM/View/Charting.pm:530
 msgid "Add Lines"
 msgstr "添加线"
 
-#: cgi/subs/subs_BOMFeed_history.pm:412
+#: lib/BOM/View/Charting.pm:489
 msgid "Add Overlay"
 msgstr "添加覆盖"
 
@@ -1081,28 +1072,23 @@ msgstr "也有提供自动生成的 <a href=\"https://apigee.com/rmg/resources/b
 msgid "An error occurred while processing request. If this error persists, please contact customer support"
 msgstr "处理申请时发生错误。如果问题持续出现，请联系客服支援部"
 
-#: cgi/subs/subs_BOMFeed_history.pm:553
-#: cgi/subs/subs_graphs_chartdirector.pm:384
+#: cgi/subs/subs_graphs_chartdirector.pm:385 lib/BOM/View/Charting.pm:630
 msgid "An indicator based on the difference between two moving averages expressed as a percentage. The PPO is found by subtracting the longer moving average from the shorter moving average and then dividing the difference by the longer moving average."
 msgstr "表示为百分比的基于两个移动平均数之间的差值的指标。通过从较短移动平均数减去较长移动平均数，然后将差值除以较长移动平均数而得出 PPO。"
 
-#: cgi/subs/subs_BOMFeed_history.pm:464
-#: cgi/subs/subs_graphs_chartdirector.pm:251
+#: cgi/subs/subs_graphs_chartdirector.pm:252 lib/BOM/View/Charting.pm:541
 msgid "An indicator that measures a security's volatility. High ATR values indicate high volatility and may be an indication of panic selling or panic buying. Low ATR readings indicate sideways movement by the stock."
 msgstr "测量证券波动性的指标。高 ATR 值指示高波动性，可能表明恐慌性抛售或买进。低 ATR 指示股票的侧面波动。"
 
-#: cgi/subs/subs_BOMFeed_history.pm:568
-#: cgi/subs/subs_graphs_chartdirector.pm:451
+#: cgi/subs/subs_graphs_chartdirector.pm:452 lib/BOM/View/Charting.pm:645
 msgid "An oscillator that attempts to combine information for several different time periods into one number. Three different time periods are used, typically a 7-day period, a 14-day period, and a 28-day period. The resulting oscillator is \"bounded\" in that it moves between 0 and 100 with 50 as the centre line. 70 and 30 are used as overbought/oversold levels."
 msgstr "一个摆动指标，试图将多个不同期间的信息合并到一个数字中表示出来。使用三个不同期间，通常为 7 天、14 天以及 28 天。产生的摆动指标是“界定的”，因其在 0 至 100 之间移动，以 50 为中心线。使用 70 和 30 作为过多买进/过多卖出水平。"
 
-#: cgi/subs/subs_BOMFeed_history.pm:486
-#: cgi/subs/subs_graphs_chartdirector.pm:369
+#: cgi/subs/subs_graphs_chartdirector.pm:370 lib/BOM/View/Charting.pm:563
 msgid "An oscillator that measures the rate of price change (as opposed to the actual levels themselves). It is calculated by taking price differences for a fixed time interval. This positive or negative value is plotted around a zero line."
 msgstr "摆动指标测量价格变动率（与其自身的实际水平相对比）。其通过某一固定时间间隔的价差来计算。沿基准线描绘出正值或负值。"
 
-#: cgi/subs/subs_BOMFeed_history.pm:523
-#: cgi/subs/subs_graphs_chartdirector.pm:429
+#: cgi/subs/subs_graphs_chartdirector.pm:430 lib/BOM/View/Charting.pm:600
 msgid "An oscillator used to identify overbought and oversold readings in RSI (Relative Strength Index). Because RSI can go for extended periods without becoming overbought (above 70) or oversold (below 30), StochRSI provides an alternative means to identify these extremities."
 msgstr "摆动指标用于确认 RSI（相对强度指数）中的过多买进或过多卖出读数。由于 RSI 可在不出现过多买进（高于 70）或过多卖出（低于 30）的情况下延长持续期, 因而随机 RSI 提供替代方法确认这些极端情况。"
 
@@ -1165,11 +1151,11 @@ msgid "Apply to become a %1 <a class=\"pjaxload\" href=\"%2\">payment agent</a>.
 msgstr "申请成为 %1<a class=\"pjaxload\" href=\"%2\">支付代理人</a>。"
 
 #: cgi/subs/subs_forms.pm:188 cgi/subs/subs_forms.pm:2306
-#: web/bin/JavascriptCompress.pm:77
+#: web/bin/GenerateStaticData.pm:77
 msgid "Apr"
 msgstr "四月"
 
-#: web/bin/JavascriptCompress.pm:89
+#: web/bin/GenerateStaticData.pm:89
 msgid "April"
 msgstr "四月"
 
@@ -1181,11 +1167,11 @@ msgstr "是否有任何费用？"
 msgid "Are you ready?"
 msgstr "准备好了吗？"
 
-#: cgi/subs/subs_BOMFeed_history.pm:351
+#: lib/BOM/View/Charting.pm:428
 msgid "Are you sure you want to delete '#1'?"
 msgstr "确定要删除“#1”？"
 
-#: cgi/subs/subs_BOMFeed_history.pm:440
+#: lib/BOM/View/Charting.pm:517
 msgid "Are you sure you want to delete all workspaces?"
 msgstr "确定要删除所有工作空间？"
 
@@ -1197,13 +1183,13 @@ msgstr "您确定要撤消此委托书吗？"
 msgid "Are your site visitors interested in:"
 msgstr "您的网站访问者是否有兴趣："
 
-#: cgi/smartchart.cgi:17 cgi/subs/subs_BOMFeed_history.pm:470
-#: cgi/subs/subs_graphs_chartdirector.pm:233
+#: cgi/smartchart.cgi:17 cgi/subs/subs_graphs_chartdirector.pm:234
+#: lib/BOM/View/Charting.pm:547
 msgid "Aroon Up/Down"
 msgstr "阿隆指标"
 
-#: cgi/smartchart.cgi:16 cgi/subs/subs_BOMFeed_history.pm:471
-#: cgi/subs/subs_graphs_chartdirector.pm:210
+#: cgi/smartchart.cgi:16 cgi/subs/subs_graphs_chartdirector.pm:211
+#: lib/BOM/View/Charting.pm:548
 msgid "AroonOsc"
 msgstr "阿隆摆动指标"
 
@@ -1232,12 +1218,12 @@ msgid "Asian options settle by comparing the <strong>last tick</strong> with the
 msgstr "通过把<strong>退出点</strong>与同期的平均点相比较来结算亚洲期权。"
 
 #: /home/git/translations/binary-static/src/templates/haml/get_started/types_of_trades.html.haml:1
-#: cgi/oop/Controller/Bet.pm:1206 cgi/oop/Controller/Bet.pm:1213
+#: cgi/oop/Controller/Bet.pm:1207 cgi/oop/Controller/Bet.pm:1214
 msgid "Asians"
 msgstr "亚洲"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/resources/pricing_table.html.tt:50
-#: cgi/subs/subs_BOMFeed_history.pm:375
+#: lib/BOM/View/Charting.pm:452
 msgid "Ask"
 msgstr "报价"
 
@@ -1250,7 +1236,7 @@ msgstr "资产"
 #: /home/git/translations/binary-static/src/templates/haml/resources/index.html.haml:1
 #: /home/git/translations/binary-static/src/templates/toolkit/global/footer.html.tt:90
 #: cgi/asset_index.cgi:141 cgi/asset_index.cgi:28
-#: lib/BOM/Product/Contract.pm:2788 lib/BOM/Product/Contract.pm:2827
+#: lib/BOM/Product/Contract.pm:2812 lib/BOM/Product/Contract.pm:2851
 #: lib/BOM/Product/Pricing/Engine/Role/StandardMarkup.pm:177
 #: lib/BOM/View/Menu.pm:147
 msgid "Asset Index"
@@ -1262,11 +1248,11 @@ msgid "At a suitable stage in your application, when authorisation by a %1 end-u
 msgstr "在您的应用程序中的适当阶段，如果需要由%1最终用户授权，重新引导最终用户的浏览器至以下URL："
 
 #: cgi/subs/subs_forms.pm:204 cgi/subs/subs_forms.pm:2322
-#: web/bin/JavascriptCompress.pm:81
+#: web/bin/GenerateStaticData.pm:81
 msgid "Aug"
 msgstr "八月"
 
-#: web/bin/JavascriptCompress.pm:93
+#: web/bin/GenerateStaticData.pm:93
 msgid "August"
 msgstr "八月"
 
@@ -1317,14 +1303,13 @@ msgstr "平均摆幅"
 msgid "Average Change = Average Close - Average Open, for the period selected"
 msgstr "平均摆幅=平均收市 – 平均开市（就所选期间）"
 
-#: cgi/smartchart.cgi:18 cgi/subs/subs_BOMFeed_history.pm:555
-#: cgi/subs/subs_graphs_chartdirector.pm:241
+#: cgi/smartchart.cgi:18 cgi/subs/subs_graphs_chartdirector.pm:242
+#: lib/BOM/View/Charting.pm:632
 msgid "Avg Directional Index"
 msgstr "平均方向性指数"
 
-#: cgi/smartchart.cgi:19 cgi/subs/subs_BOMFeed_history.pm:429
-#: cgi/subs/subs_BOMFeed_history.pm:459
-#: cgi/subs/subs_graphs_chartdirector.pm:249
+#: cgi/smartchart.cgi:19 cgi/subs/subs_graphs_chartdirector.pm:250
+#: lib/BOM/View/Charting.pm:506 lib/BOM/View/Charting.pm:536
 msgid "Avg True Range"
 msgstr "平均真实摆幅"
 
@@ -1336,7 +1321,7 @@ msgstr "备受赞誉的专利金融交易平台"
 msgid "BACK TO HOMEPAGE"
 msgstr "返回首页"
 
-#: cgi/subs/subs_BOMFeed_history.pm:420
+#: lib/BOM/View/Charting.pm:497
 msgid "BOM Charts Workspace"
 msgstr "BOM 图表工作空间"
 
@@ -1382,17 +1367,17 @@ msgstr "破产申报"
 msgid "Banks, hedge funds and professional investors routinely trade binary options in over-the-counter derivatives markets. Many market professionals use and trust the %1 platform for high-volume flexible trades."
 msgstr "二元期权是银行、对冲基金及专业投资者在衍生产品场外市场中进行交易的一种产品。很多市场专家使用和信任 %1 平台进行大量灵活的交易。"
 
-#: cgi/subs/subs_BOMFeed_history.pm:395
+#: lib/BOM/View/Charting.pm:472
 msgid "Bar HLC Chart"
 msgstr "条形 HLC 图"
 
-#: cgi/subs/subs_BOMFeed_history.pm:386
+#: lib/BOM/View/Charting.pm:463
 msgid "Bar OHLC Chart"
 msgstr "条形 OHLC 图"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/bet/form/barrier.html.tt:18
 #: /home/git/translations/binary-static/src/templates/toolkit/resources/pricing_table_form.html.tt:59
-#: cgi/oop/Controller/Bet.pm:2337 web/bin/JavascriptCompress.pm:117
+#: cgi/oop/Controller/Bet.pm:2338 web/bin/GenerateStaticData.pm:117
 msgid "Barrier"
 msgstr "目标"
 
@@ -1408,17 +1393,23 @@ msgstr "门槛步骤（%）超出范围的"
 msgid "Barrier Step format error"
 msgstr "从格式错误的障碍步骤"
 
-#: lib/BOM/Product/Contract.pm:2539
+#: lib/BOM/Product/Contract.pm:2563
+#, fuzzy
+#| msgid "Barrier outside acceptable range."
+msgid "Barrier is out of acceptable range."
+msgstr "输入的定界不在可接受范围内。"
+
+#: lib/BOM/Product/Contract.pm:2553
 msgid "Barrier may not be adjusted."
 msgstr "障碍可能无法调整。"
 
 #. ($min_pips . ' pips away from the spot.')
-#: lib/BOM/Product/Contract.pm:2505
+#: lib/BOM/Product/Contract.pm:2509
 msgid "Barrier must be at least "
 msgstr "障碍至少必须 "
 
 #: /home/git/translations/binary-static/src/templates/toolkit/bet/form/barrier.html.tt:15
-#: cgi/oop/Controller/Bet.pm:2336
+#: cgi/oop/Controller/Bet.pm:2337
 msgid "Barrier offset"
 msgstr "目标位移"
 
@@ -1434,7 +1425,7 @@ msgstr "门槛条款"
 msgid "Barrier(s)"
 msgstr "价位水平"
 
-#: lib/BOM/Product/Contract.pm:2530
+#: lib/BOM/Product/Contract.pm:2534
 msgid "Barriers must be on either side of the spot."
 msgstr "障碍必须放到点的两边之一。"
 
@@ -1493,7 +1484,7 @@ msgid "BetOnMarkets.com reaches $1 billion turnover since starting in 1999"
 msgstr "自从1999年开始以来,BetOnMarkets.com达到10亿的营业额"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/resources/pricing_table.html.tt:48
-#: cgi/subs/subs_BOMFeed_history.pm:385
+#: lib/BOM/View/Charting.pm:462
 msgid "Bid"
 msgstr "出价"
 
@@ -1585,30 +1576,29 @@ msgstr "Binary.com非凡的历史"
 msgid "Blog"
 msgstr "博客"
 
-#: cgi/smartchart.cgi:20 cgi/subs/subs_BOMFeed_history.pm:528
-#: cgi/subs/subs_graphs_chartdirector.pm:257
+#: cgi/smartchart.cgi:20 cgi/subs/subs_graphs_chartdirector.pm:258
+#: lib/BOM/View/Charting.pm:605
 msgid "Bollinger Band Width"
 msgstr "保力加通道宽度"
 
-#: cgi/smartchart.cgi:54 cgi/subs/subs_BOMFeed_history.pm:425
-#: cgi/subs/subs_graphs_chartdirector.pm:480
+#: cgi/smartchart.cgi:54 cgi/subs/subs_graphs_chartdirector.pm:481
+#: lib/BOM/View/Charting.pm:502
 msgid "Bollinger Bands"
 msgstr "布林带"
 
-#: cgi/subs/subs_BOMFeed_history.pm:379
+#: lib/BOM/View/Charting.pm:456
 msgid "Bollinger Bands Average"
 msgstr "布林带平均数"
 
-#: cgi/subs/subs_BOMFeed_history.pm:321
+#: lib/BOM/View/Charting.pm:398
 msgid "Bollinger Bands Lower"
 msgstr "布林带下部"
 
-#: cgi/subs/subs_BOMFeed_history.pm:434
+#: lib/BOM/View/Charting.pm:511
 msgid "Bollinger Bands Upper"
 msgstr "布林带上部"
 
-#: cgi/subs/subs_BOMFeed_history.pm:571
-#: cgi/subs/subs_graphs_chartdirector.pm:482
+#: cgi/subs/subs_graphs_chartdirector.pm:483 lib/BOM/View/Charting.pm:648
 msgid "Bollinger Bands are lines displayed around a simple moving average line (default set to 20 periods). The upper line is displayed 2 standard deviations above the moving average, and the lower line is displayed 2 standard deviations below the moving average.By definition prices are high at the upper band and low at the lower band. This definition can aid in rigorous pattern recognition and is useful in comparing price action to the action of indicators to arrive at systematic trading decisions."
 msgstr "布林线是在一个简单的移动平均线附近的出现的线条（默认设置为20周期）。上线在移动平均线上方2个标准偏差处显示，下线在移动平均线下方的2个标准偏差处显示。定义价格位于上线和下线之间，这种定义可以帮助进行严格的模式确认，非常有利于进行价格行为和指示行为之间进行比较，以获得系统化的交易决定。"
 
@@ -1620,7 +1610,7 @@ msgstr "奖金代码"
 msgid "Brand of first car"
 msgstr "第一辆车的品牌"
 
-#: cgi/subs/subs_BOMFeed_history.pm:396
+#: lib/BOM/View/Charting.pm:473
 msgid "Browse"
 msgstr "浏览"
 
@@ -1702,8 +1692,7 @@ msgstr "我是否可以让我的下线不要直接注册，而是通过我的链
 msgid "Can you customize a banner for my site?"
 msgstr "你是否能为我的网站定制一个横幅广告？"
 
-#: cgi/subs/subs_BOMFeed_history.pm:418
-#: cgi/subs/subs_graphs_chartdirector.pm:170
+#: cgi/subs/subs_graphs_chartdirector.pm:171 lib/BOM/View/Charting.pm:495
 msgid "Cancel"
 msgstr "取消"
 
@@ -1711,7 +1700,7 @@ msgstr "取消"
 msgid "Cancel Registration"
 msgstr "取消注册"
 
-#: cgi/subs/subs_BOMFeed_history.pm:347
+#: lib/BOM/View/Charting.pm:424
 msgid "Candlestick Chart"
 msgstr "烛形图"
 
@@ -1725,7 +1714,7 @@ msgstr "烛形图"
 msgid "Careers"
 msgstr "工作机会"
 
-#: cgi/subs/subs_BOMFeed_history.pm:336
+#: lib/BOM/View/Charting.pm:413
 msgid "Cascade"
 msgstr "重叠显示"
 
@@ -1747,18 +1736,18 @@ msgstr "出纳/设置部分密码"
 msgid "Certain limits are imposed as to the acceptable levels for barrier/strike prices of contracts. Typically, the barrier/strike may not be too close nor too far from the current underlying market level."
 msgstr "合约障碍/行使价格的可接受水平存在特定限制。一般来说，障碍或行使价格不能离当前标的市场水平太近或太远。"
 
-#: cgi/smartchart.cgi:21 cgi/subs/subs_BOMFeed_history.pm:550
-#: cgi/subs/subs_graphs_chartdirector.pm:265
+#: cgi/smartchart.cgi:21 cgi/subs/subs_graphs_chartdirector.pm:266
+#: lib/BOM/View/Charting.pm:627
 msgid "Chaikin Money Flow"
 msgstr "蔡金货币流"
 
-#: cgi/smartchart.cgi:22 cgi/subs/subs_BOMFeed_history.pm:542
-#: cgi/subs/subs_graphs_chartdirector.pm:273
+#: cgi/smartchart.cgi:22 cgi/subs/subs_graphs_chartdirector.pm:274
+#: lib/BOM/View/Charting.pm:619
 msgid "Chaikin Oscillator"
 msgstr "蔡金摆动指标"
 
-#: cgi/smartchart.cgi:23 cgi/subs/subs_BOMFeed_history.pm:512
-#: cgi/subs/subs_graphs_chartdirector.pm:281
+#: cgi/smartchart.cgi:23 cgi/subs/subs_graphs_chartdirector.pm:282
+#: lib/BOM/View/Charting.pm:589
 msgid "Chaikin Volatility"
 msgstr "蔡金波动"
 
@@ -1788,7 +1777,7 @@ msgstr "更改密码"
 msgid "Change in account settings"
 msgstr "帐户设置变更"
 
-#: cgi/analyse_contract.cgi:280 cgi/oop/Controller/Bet.pm:2142
+#: cgi/analyse_contract.cgi:280 cgi/oop/Controller/Bet.pm:2143
 msgid "Chart"
 msgstr "图表"
 
@@ -1798,7 +1787,7 @@ msgstr "图表"
 msgid "Chart Application"
 msgstr "图表应用程序"
 
-#: cgi/subs/subs_BOMFeed_history.pm:382
+#: lib/BOM/View/Charting.pm:459
 msgid "Chart Type"
 msgstr "图表类型"
 
@@ -1927,10 +1916,6 @@ msgstr "客户ID"
 msgid "Client's Liability"
 msgstr "客户的责任"
 
-#: lib/BOM/Utility/Validation/Error.pm:23
-msgid "Client-facing message"
-msgstr "客户须知"
-
 #: /home/git/translations/binary-static/src/templates/toolkit/legal/terms_and_conditions.html.tt:49
 #: /home/git/translations/binary-static/src/templates/toolkit/legtrouble.html.tt:49
 msgid "Clients agree to be fully and personally liable for the due settlement of every transaction entered into under their account with the Company. This includes any transactions entered into by members of the Client's family or entourage who have gained access to the account. Clients are responsible for ensuring that they alone control access to the account, and that no minors are granted access to trading on the website. In any case, Clients remains fully liable for any and all positions traded on their account, and for any credit card transactions entered into the site for their account. Each Client also indemnifies the Company in respect to all costs and losses of any kind, whatsoever as may be incurred by the Company as a result, direct or indirect, of the Client's failure to perform or settle such a transaction. Online Gambling debts are enforceable in law in the Isle of Man."
@@ -1951,11 +1936,11 @@ msgstr "顾客必须在开户表格中填写所需的所有识别身份之详情
 
 #: /home/git/translations/binary-static/src/templates/toolkit/legal/complaints_disputes.html.tt:10
 msgid "Clients registered with Regent Markets (IOM) Ltd can raise their unresolved disputes with the Isle of Man Gambling Supervision Commission at"
-msgstr ""
+msgstr "在丽晶市场（IOM）有限公司注册的客户可以在此向马恩岛博采监督委员会提诉他们悬而未决的纠纷"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/legal/complaints_disputes.html.tt:13
 msgid "Clients registered with Regent Markets (Malta) Ltd can raise their unresolved disputes with the Lotteries and Gaming Authority at"
-msgstr ""
+msgstr "在丽晶市场（马耳他）有限公司注册的客户可以在此向彩票和博彩管理局提诉他们悬而未决的纠纷"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/legal/terms_and_conditions.html.tt:72
 #: /home/git/translations/binary-static/src/templates/toolkit/legtrouble.html.tt:72
@@ -1973,16 +1958,16 @@ msgstr "愿意自我排除的客户应注意，自我排除期至少是6个月�
 #: /home/git/translations/binary-static/src/templates/toolkit/charting/daily_ohlc.html.tt:20
 #: /home/git/translations/binary-static/src/templates/toolkit/charting/daily_ohlc.html.tt:48
 #: /home/git/translations/binary-static/src/templates/toolkit/charting/legacy_chart_table.html.tt:15
-#: cgi/subs/subs_BOMFeed_history.pm:355 cgi/subs/subs_BOMFeed_history.pm:452
+#: lib/BOM/View/Charting.pm:432 lib/BOM/View/Charting.pm:529
 msgid "Close"
 msgstr "收盘"
 
-#: cgi/subs/subs_BOMFeed_history.pm:408
+#: lib/BOM/View/Charting.pm:485
 msgid "Close All"
 msgstr "关闭全部"
 
-#: cgi/smartchart.cgi:24 cgi/subs/subs_BOMFeed_history.pm:455
-#: cgi/subs/subs_graphs_chartdirector.pm:296
+#: cgi/smartchart.cgi:24 cgi/subs/subs_graphs_chartdirector.pm:297
+#: lib/BOM/View/Charting.pm:532
 msgid "Close Location Value"
 msgstr "收盘位置值"
 
@@ -1990,7 +1975,7 @@ msgstr "收盘位置值"
 msgid "Close of trading day."
 msgstr "交易日已收盘。"
 
-#: cgi/subs/subs_graphs_chartdirector.pm:1121
+#: cgi/subs/subs_graphs_chartdirector.pm:1122
 msgid "Closed"
 msgstr "收盘"
 
@@ -2045,9 +2030,8 @@ msgstr "大宗商品"
 msgid "Commodities are resources that are grown or extracted from the ground, such as silver, gold and oil. On %1, they are priced in US dollars."
 msgstr "期货商品是从基础数据中成长或摘取的宝贵资源，例如白银、黄金及石油。在 %1 以美元为单位。"
 
-#: cgi/smartchart.cgi:25 cgi/subs/subs_BOMFeed_history.pm:377
-#: cgi/subs/subs_BOMFeed_history.pm:469
-#: cgi/subs/subs_graphs_chartdirector.pm:303
+#: cgi/smartchart.cgi:25 cgi/subs/subs_graphs_chartdirector.pm:304
+#: lib/BOM/View/Charting.pm:454 lib/BOM/View/Charting.pm:546
 msgid "Commodity Channel Index"
 msgstr "商品通道指数"
 
@@ -2072,7 +2056,7 @@ msgstr "控诉与纠纷"
 msgid "Confirm"
 msgstr "确认"
 
-#: cgi/subs/subs_BOMFeed_history.pm:341
+#: lib/BOM/View/Charting.pm:418
 msgid "Connection failure. Please try again later."
 msgstr "连接失败。请稍后重新尝试。"
 
@@ -2132,7 +2116,7 @@ msgid "Contract barrier must be positive."
 msgstr "合约界线必须为正。"
 
 #. ($end_of_bo->date)
-#: lib/BOM/Product/Contract.pm:2902
+#: lib/BOM/Product/Contract.pm:2926
 msgid "Contract can not expire during the end-of-year holiday period. Select an expiry date after %1."
 msgstr "合约的到期日不能设置在年末节日期间。选择 %1 之后的一个到日期。"
 
@@ -2148,20 +2132,20 @@ msgstr "交易开始及价格"
 msgid "Contract expired"
 msgstr "合约已过期"
 
-#: lib/BOM/Product/Contract.pm:2679
+#: lib/BOM/Product/Contract.pm:2703
 msgid "Contract has already expired."
 msgstr "合约已经失效。"
 
-#: lib/BOM/Product/Contract.pm:1813
+#: lib/BOM/Product/Contract.pm:1816
 msgid "Contract market price is too close to final payout."
 msgstr "合同市场价位离最终支出太近。"
 
 #. ($eod_blackout_expiry->as_string)
-#: lib/BOM/Product/Contract.pm:2718
+#: lib/BOM/Product/Contract.pm:2742
 msgid "Contract may not expire within the last %1 of trading."
 msgstr "在交易的最后%1中，合约可能不会失效。"
 
-#: lib/BOM/Product/Contract.pm:2688
+#: lib/BOM/Product/Contract.pm:2712
 msgid "Contract must expire during trading hours."
 msgstr "合约必须在交易时间内失效。"
 
@@ -2179,7 +2163,7 @@ msgstr "合约期间"
 msgid "Contract purchase (approved applications only)"
 msgstr "购买合同(仅限于获批准的申请)"
 
-#: cgi/oop/Controller/Bet.pm:1468
+#: cgi/oop/Controller/Bet.pm:1469
 msgid "Contract purchases on this account must be on behalf of granters."
 msgstr "在此帐户进行合同采购交易者必须是授予人的代理。"
 
@@ -2206,7 +2190,7 @@ msgid "Contracts on %1 which both start and end between %2 and %3 on the same da
 msgstr "%1在同一天始于及结束于 %2 和 %3 之间的合约不可用。"
 
 #. ($underlying->translated_display_name()
-#: lib/BOM/Product/Contract.pm:2704
+#: lib/BOM/Product/Contract.pm:2728
 msgid "Contracts on %1 with durations under 24 hours must expire on the same trading day."
 msgstr "%1 中为期少于24小时的合约必需在购买当天失效。"
 
@@ -2274,7 +2258,7 @@ msgstr "信用卡/<wbr/>借记卡"
 msgid "Credit/Debit Card"
 msgstr "信用卡/借记卡"
 
-#: cgi/subs/subs_BOMFeed_history.pm:349
+#: lib/BOM/View/Charting.pm:426
 msgid "Crosshair"
 msgstr "十字线 （Crosshair）"
 
@@ -2304,7 +2288,7 @@ msgstr "货币报价四舍五入到5位数，所有的合约均以5位数货币�
 msgid "Current Spot"
 msgstr "现货"
 
-#: lib/BOM/Product/Contract.pm:2403
+#: lib/BOM/Product/Contract.pm:2406
 msgid "Current market price is 0."
 msgstr "当前市场价格是 0 。"
 
@@ -2329,18 +2313,18 @@ msgstr "当前签名护照或"
 msgid "Customer Funds"
 msgstr "客户基金"
 
-#: cgi/lost_password.cgi:307
+#: cgi/lost_password.cgi:309
 msgid "Customer Support has been informed of your Lost Login ID / Password request and will be contacting you soon. Thank you for your patience."
 msgstr "客户支持已收到了您丢失登录ID/密码的请求，并将尽快与您联系。非常感谢您的耐心等待。"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/charting/light_chart.html.tt:6
-#: cgi/subs/subs_BOMFeed_history.pm:371
 #: lib/BOM/Product/Helper/PricingTableParameters.pm:297
+#: lib/BOM/View/Charting.pm:448
 msgid "Daily"
 msgstr "毎日"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/charting/daily_ohlc.html.tt:11
-#: cgi/oop/Controller/Bet.pm:2165
+#: cgi/oop/Controller/Bet.pm:2166
 msgid "Daily Prices"
 msgstr "每日价格"
 
@@ -2380,11 +2364,11 @@ msgstr "日期"
 msgid "Date of birth"
 msgstr "出生日期"
 
-#: cgi/subs/subs_BOMFeed_history.pm:407 web/bin/JavascriptCompress.pm:47
+#: lib/BOM/View/Charting.pm:484 web/bin/GenerateStaticData.pm:47
 msgid "Day"
 msgstr "天"
 
-#: cgi/subs/subs_BOMFeed_history.pm:356
+#: lib/BOM/View/Charting.pm:433
 msgid "Day Bet"
 msgstr "日交易"
 
@@ -2521,11 +2505,11 @@ msgstr ""
 "%1"
 
 #: cgi/subs/subs_forms.pm:220 cgi/subs/subs_forms.pm:2338
-#: web/bin/JavascriptCompress.pm:85
+#: web/bin/GenerateStaticData.pm:85
 msgid "Dec"
 msgstr "十二月"
 
-#: web/bin/JavascriptCompress.pm:97
+#: web/bin/GenerateStaticData.pm:97
 msgid "December"
 msgstr "十二月"
 
@@ -2537,19 +2521,19 @@ msgstr "专门的联盟团队为您提供最佳服务"
 msgid "Define your position"
 msgstr "界定您的头寸"
 
-#: cgi/subs/subs_BOMFeed_history.pm:431
+#: lib/BOM/View/Charting.pm:508
 msgid "Delete"
 msgstr "删除"
 
-#: cgi/subs/subs_BOMFeed_history.pm:410
+#: lib/BOM/View/Charting.pm:487
 msgid "Delete All"
 msgstr "删除全部"
 
-#: cgi/subs/subs_BOMFeed_history.pm:402
+#: lib/BOM/View/Charting.pm:479
 msgid "Delete All Lines"
 msgstr "删除所有线"
 
-#: cgi/subs/subs_BOMFeed_history.pm:348
+#: lib/BOM/View/Charting.pm:425
 msgid "Delete all lines?"
 msgstr "删除所有线？"
 
@@ -2659,12 +2643,12 @@ msgstr "衍生工具"
 msgid "Description"
 msgstr "描述"
 
-#: cgi/smartchart.cgi:26 cgi/subs/subs_BOMFeed_history.pm:483
-#: cgi/subs/subs_graphs_chartdirector.pm:317
+#: cgi/smartchart.cgi:26 cgi/subs/subs_graphs_chartdirector.pm:318
+#: lib/BOM/View/Charting.pm:560
 msgid "Detrended Price Osc"
 msgstr "非趋势价格摆动指标"
 
-#: cgi/subs/subs_BOMFeed_history.pm:414
+#: lib/BOM/View/Charting.pm:491
 msgid "Detrended Price Oscillator (DPO)"
 msgstr "非趋势价格摆动指标 (DPO)"
 
@@ -2678,7 +2662,7 @@ msgstr "与其他数据源的差异"
 
 #: /home/git/translations/binary-static/src/templates/haml/get_started/random_markets.html.haml:1
 #: /home/git/translations/binary-static/src/templates/haml/get_started/types_of_trades.html.haml:1
-#: cgi/oop/Controller/Bet.pm:1221 cgi/oop/Controller/Bet.pm:1228
+#: cgi/oop/Controller/Bet.pm:1222 cgi/oop/Controller/Bet.pm:1229
 msgid "Digits"
 msgstr "数位"
 
@@ -2734,11 +2718,11 @@ msgstr "当疲惫或喝酒后不要参与。"
 msgid "Do you offer virtual-money accounts?"
 msgstr "你是否提供虚拟资金帐户？"
 
-#: cgi/subs/subs_BOMFeed_history.pm:442
+#: lib/BOM/View/Charting.pm:519
 msgid "Do you want to decrease the timescale?"
 msgstr "是否要减少时标？"
 
-#: cgi/subs/subs_BOMFeed_history.pm:438
+#: lib/BOM/View/Charting.pm:515
 msgid "Do you want to increase the timescale?"
 msgstr "增加时标？"
 
@@ -2758,21 +2742,20 @@ msgstr "是否要以其他语言开启Binary.com，或想对我们目前译文�
 msgid "Documents are required to verify your identity"
 msgstr "需要文件验证您的身份"
 
-#: lib/BOM/Product/Transaction.pm:869
+#: lib/BOM/Product/Transaction.pm:870
 msgid "Don't buy contract using master password!"
 msgstr "不要使用主密码购买合同！"
 
-#: cgi/smartchart.cgi:55 cgi/subs/subs_graphs_chartdirector.pm:490
+#: cgi/smartchart.cgi:55 cgi/subs/subs_graphs_chartdirector.pm:491
 msgid "Donchain Channel"
 msgstr "唐奇安通道指标"
 
-#: cgi/smartchart.cgi:27 cgi/subs/subs_BOMFeed_history.pm:499
-#: cgi/subs/subs_graphs_chartdirector.pm:325
+#: cgi/smartchart.cgi:27 cgi/subs/subs_graphs_chartdirector.pm:326
+#: lib/BOM/View/Charting.pm:576
 msgid "Donchian Channel Width"
 msgstr "唐奇安通道宽度"
 
-#: cgi/subs/subs_BOMFeed_history.pm:536
-#: cgi/subs/subs_graphs_chartdirector.pm:491
+#: cgi/subs/subs_graphs_chartdirector.pm:492 lib/BOM/View/Charting.pm:613
 msgid "Donchian Channels plot the highest high and lowest low over the last period time intervals."
 msgstr "唐奇安通道指标描绘上一期间的最高点和最低点。"
 
@@ -2785,7 +2768,7 @@ msgstr "别让它的名词吓退。Quotidian 即日常所发生的事。"
 msgid "Dormant and Inactive Accounts"
 msgstr "蛰伏性和非活跃性账户"
 
-#: cgi/subs/subs_BOMFeed_history.pm:441
+#: lib/BOM/View/Charting.pm:518
 msgid "Dot Chart"
 msgstr "点图"
 
@@ -2810,10 +2793,6 @@ msgstr ""
 msgid "Download the Random Markets raw tick data here."
 msgstr "在此下载随机市场原始高频数据。"
 
-#: cgi/tick-data-downloads.cgi:19
-msgid "Download tick data"
-msgstr "下载高频数据"
-
 #: /home/git/translations/binary-static/src/templates/toolkit/charting/chart_application.html.tt:5
 msgid "Downloadable application"
 msgstr "可下载之程序"
@@ -2822,7 +2801,7 @@ msgstr "可下载之程序"
 msgid "Dr"
 msgstr "博士"
 
-#: cgi/subs/subs_graphs_chartdirector.pm:173
+#: cgi/subs/subs_graphs_chartdirector.pm:174
 msgid "Draw Chart"
 msgstr "绘制图表"
 
@@ -2830,7 +2809,7 @@ msgstr "绘制图表"
 msgid "Due to new gaming regulations recently promulgated in Malta, we are required to obtain your residential address details.  We would be grateful if you could update your"
 msgstr "由于马尔他最近颁布新的条例，我们需要获得您的居住地址详情。如果您能更新您的"
 
-#: lib/BOM/Product/Transaction.pm:827
+#: lib/BOM/Product/Transaction.pm:828
 msgid "Due to regulatory requirements, you are required to authenticate your account in order to continue trading."
 msgstr "根据管理要求，您必须证明账户的真实性才能继续交易。"
 
@@ -2841,7 +2820,7 @@ msgid "Duration"
 msgstr "持续时间"
 
 #. ($shortest->as_string, $longest->as_string)
-#: lib/BOM/Product/Contract.pm:2794
+#: lib/BOM/Product/Contract.pm:2818
 msgid "Duration must be between %1 and %2."
 msgstr "持续时间须在%1 与 %2之间。"
 
@@ -2882,8 +2861,8 @@ msgstr "在空闲时间赚取第二收入"
 msgid "Earning tax free trading profits*"
 msgstr "赚取免税交易利润*"
 
-#: cgi/smartchart.cgi:28 cgi/subs/subs_BOMFeed_history.pm:537
-#: cgi/subs/subs_graphs_chartdirector.pm:331
+#: cgi/smartchart.cgi:28 cgi/subs/subs_graphs_chartdirector.pm:332
+#: lib/BOM/View/Charting.pm:614
 msgid "Ease of Movement"
 msgstr "轻松移动指标"
 
@@ -2919,7 +2898,7 @@ msgid "Email address"
 msgstr "电子邮件地址"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/bet/form/duration.html.tt:5
-#: cgi/analyse_contract.cgi:121 web/bin/JavascriptCompress.pm:114
+#: cgi/analyse_contract.cgi:121 web/bin/GenerateStaticData.pm:114
 msgid "End Time"
 msgstr "结束时间"
 
@@ -2927,7 +2906,7 @@ msgstr "结束时间"
 msgid "Ends Between/Ends Outside trades"
 msgstr "收于交易范围之内/之外"
 
-#: cgi/contract_demo.cgi:85 cgi/oop/Controller/Bet.pm:1189
+#: cgi/contract_demo.cgi:85 cgi/oop/Controller/Bet.pm:1190
 msgid "Ends Between/Outside"
 msgstr "收于范围之内/之外"
 
@@ -2945,11 +2924,11 @@ msgstr "确保您不会通过针对18周岁以下人士的信息来推广%1 。"
 msgid "Enter the barrier in terms of the difference from the spot price. If you enter +0.005, then you will be purchasing a contract with a barrier 0.005 higher than the entry spot. The entry spot will be the next tick after your order has been received"
 msgstr "输入以与现货价格差额为计的障碍。如果您输入 +0.005 ，那么您将以高于入市现价 0.005 的障碍水平购买交易。入市现价在收到您的订购之后将是下一个高频"
 
-#: cgi/oop/Controller/Bet.pm:2340
+#: cgi/oop/Controller/Bet.pm:2341
 msgid "Enter the barrier in terms of the difference from the spot price. If you enter +0.005, then you will be purchasing a contract with a barrier 0.005 higher than the entry spot. The entry spot will be the next tick after your order has been received."
 msgstr "输入以与现货价格差额为计的障碍。如果您输入 +0.005 ，那么您将以高于入市现价 0.005 的障碍水平购买交易。入市现价在收到您的订购之后将是下一个高频。"
 
-#: cgi/analyse_contract.cgi:106 web/bin/JavascriptCompress.pm:113
+#: cgi/analyse_contract.cgi:106 web/bin/GenerateStaticData.pm:113
 msgid "Entry Spot"
 msgstr "入市现价"
 
@@ -2962,7 +2941,7 @@ msgstr "入市现价"
 msgid "Entry spot price"
 msgstr "进场入市价"
 
-#: cgi/smartchart.cgi:56 cgi/subs/subs_graphs_chartdirector.pm:496
+#: cgi/smartchart.cgi:56 cgi/subs/subs_graphs_chartdirector.pm:497
 msgid "Envelop (SMA 20 +/- 10%)"
 msgstr "包容线 (SMA 20 +/- 10%)"
 
@@ -2970,7 +2949,7 @@ msgstr "包容线 (SMA 20 +/- 10%)"
 msgid "Equity Offering"
 msgstr "提供股票"
 
-#: cgi/create_account.cgi:111
+#: cgi/create_account.cgi:112
 msgid "Error : password field is blank !"
 msgstr "错误：密码字段为空！"
 
@@ -3055,11 +3034,11 @@ msgstr "到期价格"
 msgid "Explanation"
 msgstr "说明"
 
-#: cgi/smartchart.cgi:47 cgi/subs/subs_graphs_chartdirector.pm:515
+#: cgi/smartchart.cgi:47 cgi/subs/subs_graphs_chartdirector.pm:516
 msgid "Exponential"
 msgstr "指数曲线"
 
-#: cgi/subs/subs_BOMFeed_history.pm:404
+#: lib/BOM/View/Charting.pm:481
 msgid "Exponential Moving Average"
 msgstr "指数移动平均数"
 
@@ -3074,7 +3053,7 @@ msgstr "ExtJS 前端"
 msgid "FAQ"
 msgstr "常见问题"
 
-#: web/bin/JavascriptCompress.pm:52
+#: web/bin/GenerateStaticData.pm:52
 msgid "Failed to update trade description."
 msgstr "无法更新交易描述。"
 
@@ -3094,8 +3073,8 @@ msgstr "下跌交易收益(%)"
 msgid "Family Name"
 msgstr "姓"
 
-#: cgi/smartchart.cgi:29 cgi/subs/subs_BOMFeed_history.pm:472
-#: cgi/subs/subs_graphs_chartdirector.pm:338
+#: cgi/smartchart.cgi:29 cgi/subs/subs_graphs_chartdirector.pm:339
+#: lib/BOM/View/Charting.pm:549
 msgid "Fast Stochastic"
 msgstr "快速随机"
 
@@ -3113,11 +3092,11 @@ msgid "Fax"
 msgstr "传真"
 
 #: cgi/subs/subs_forms.pm:180 cgi/subs/subs_forms.pm:2298
-#: web/bin/JavascriptCompress.pm:75
+#: web/bin/GenerateStaticData.pm:75
 msgid "Feb"
 msgstr "二月"
 
-#: web/bin/JavascriptCompress.pm:87
+#: web/bin/GenerateStaticData.pm:87
 msgid "February"
 msgstr "二月"
 
@@ -3130,11 +3109,11 @@ msgstr "%1交易费用"
 msgid "Feel free to contact our friendly and helpful customer service experts. They're always available to answer your questions. You can contact us via live chat, email and telephone."
 msgstr "请随时联系我们友善和热情的客服专家。他们将全天候回答您的询问。您可通过在线聊天，电子邮件和电话跟我们联系。"
 
-#: cgi/subs/subs_BOMFeed_history.pm:358
+#: lib/BOM/View/Charting.pm:435
 msgid "Fibonacci Fan"
 msgstr "费波纳奇扇形线"
 
-#: cgi/subs/subs_BOMFeed_history.pm:397
+#: lib/BOM/View/Charting.pm:474
 msgid "Fibonacci Retracement"
 msgstr "斐波纳奇回撤理论"
 
@@ -3239,12 +3218,12 @@ msgstr "出于安全考虑，请重新开始“密码丢失”程序。"
 msgid "For the third straight year, BetOnMarkets.com is voted 'Best Fixed-Odds Financial Trading Provider' by Shares Magazine UK. It’s the last time we win it because Shares Magazine stops awarding in this category."
 msgstr "连续第三年，BetOnMarkets.com被英国股份杂志评为“最佳固定赔率金融交易提供商”。这是我们最后一次获奖，因为股票杂志已停止颁发这一类奖项。"
 
-#: cgi/subs/subs_BOMFeed_history.pm:318
+#: lib/BOM/View/Charting.pm:395
 msgid "Forest Chart"
 msgstr "林相图"
 
 #: /home/git/translations/binary-static/src/templates/haml/get_started/glossary.html.haml:1
-#: cgi/subs/subs_BOMFeed_history.pm:428
+#: lib/BOM/View/Charting.pm:505
 msgid "Forex"
 msgstr "外汇"
 
@@ -3257,7 +3236,7 @@ msgstr "忘记登录 ID 或密码?"
 msgid "Forward starting intraday and daily contracts are available on some %1"
 msgstr "一些 %1 提供预远期启动的一日间合约和每日合约"
 
-#: web/bin/JavascriptCompress.pm:125
+#: web/bin/GenerateStaticData.pm:125
 msgid "Fr"
 msgstr "星期五"
 
@@ -3279,7 +3258,7 @@ msgstr "免费合约红利"
 msgid "Free gift"
 msgstr "赠品"
 
-#: web/bin/JavascriptCompress.pm:72
+#: web/bin/GenerateStaticData.pm:72
 msgid "Friday"
 msgstr "周五"
 
@@ -3290,7 +3269,7 @@ msgstr "周五"
 #: /home/git/translations/binary-static/src/templates/toolkit/resources/pricing_table_form.html.tt:103
 #: /home/git/translations/binary-static/src/templates/toolkit/resources/pricing_table_form.html.tt:79
 #: /home/git/translations/binary-static/src/templates/toolkit/resources/pricing_table_form.html.tt:80
-#: web/bin/JavascriptCompress.pm:64
+#: web/bin/GenerateStaticData.pm:64
 msgid "From"
 msgstr "来自"
 
@@ -3329,7 +3308,7 @@ msgstr "详细说明必须不超过 %1 字符。"
 msgid "Further to this, the API interface is hosted by an API Proxy management provider, namely <a href=\"http://apigee.com\" target=\"_blank\">Apigee</a>. This service applies several services of benefit both to the application developer and to the API provider."
 msgstr "而且，应用程序编程界面(API)由一个API代理管理提供商托管，即<a href=\"http://apigee.com\" target=\"_blank\">Apigee</a>。此服务给应用程序开发员和API提供商提供了多个惠益服务。"
 
-#: cgi/subs/subs_BOMFeed_history.pm:325
+#: lib/BOM/View/Charting.pm:402
 msgid "Futures"
 msgstr "期货"
 
@@ -3360,7 +3339,7 @@ msgstr "优厚的佣金结构"
 msgid "Get %1 when you deposit %2."
 msgstr "当您存入 %2 时，将获得 %1。"
 
-#: cgi/oop/Controller/Bet.pm:1070
+#: cgi/oop/Controller/Bet.pm:1071
 msgid "Get Prices"
 msgstr "获得价格"
 
@@ -3470,7 +3449,7 @@ msgstr "你好，世界"
 msgid "Hello, World!"
 msgstr "你好，世界!"
 
-#: cgi/subs/subs_BOMFeed_history.pm:388
+#: lib/BOM/View/Charting.pm:465
 msgid "Help"
 msgstr "帮助"
 
@@ -3482,23 +3461,23 @@ msgstr "隐藏最后点"
 #: /home/git/translations/binary-static/src/templates/toolkit/charting/daily_ohlc.html.tt:46
 #: /home/git/translations/binary-static/src/templates/toolkit/charting/legacy_chart_table.html.tt:13
 #: /home/git/translations/binary-static/src/templates/toolkit/charting/ticker_data_table.html.tt:7
-#: cgi/subs/subs_BOMFeed_history.pm:365
+#: lib/BOM/View/Charting.pm:442
 msgid "High"
 msgstr "高"
 
-#: web/bin/JavascriptCompress.pm:116
+#: web/bin/GenerateStaticData.pm:116
 msgid "High Barrier"
 msgstr "高门槛"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/bet/form/barrier.html.tt:18
 #: /home/git/translations/binary-static/src/templates/toolkit/charting/livechart.html.tt:43
 #: /home/git/translations/binary-static/src/templates/toolkit/resources/pricing_table_form.html.tt:60
-#: cgi/oop/Controller/Bet.pm:2333
+#: cgi/oop/Controller/Bet.pm:2334
 msgid "High barrier"
 msgstr "价格上限"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/bet/form/barrier.html.tt:15
-#: cgi/oop/Controller/Bet.pm:2331
+#: cgi/oop/Controller/Bet.pm:2332
 msgid "High barrier offset"
 msgstr "价格上限位移"
 
@@ -3510,7 +3489,7 @@ msgstr "高转换价率和客户价值"
 msgid "High returns"
 msgstr "高回报"
 
-#: cgi/subs/subs_BOMFeed_history.pm:401
+#: lib/BOM/View/Charting.pm:478
 msgid "High/Low"
 msgstr "高/低"
 
@@ -3520,7 +3499,7 @@ msgstr "高于/低于"
 
 #: /home/git/translations/binary-static/src/templates/haml/get_started/random_markets.html.haml:1
 #: cgi/contract_demo.cgi:44 cgi/contract_demo.cgi:45 cgi/contract_guide.cgi:30
-#: cgi/oop/Controller/Bet.pm:1144 cgi/oop/Controller/Bet.pm:1151
+#: cgi/oop/Controller/Bet.pm:1145 cgi/oop/Controller/Bet.pm:1152
 msgid "Higher/Lower"
 msgstr "高于/低于"
 
@@ -3532,8 +3511,7 @@ msgstr "高于/低于交易"
 msgid "Higher/lower trades"
 msgstr "高于/低于交易"
 
-#: cgi/subs/subs_BOMFeed_history.pm:515
-#: cgi/subs/subs_graphs_chartdirector.pm:333
+#: cgi/subs/subs_graphs_chartdirector.pm:334 lib/BOM/View/Charting.pm:592
 msgid "Highlights the relationship between volume and price changes and is particularly useful for assessing the strength of a trend."
 msgstr "反映交易量与价格变动之间的关系，对于评估趋势强度尤其有用。"
 
@@ -3780,7 +3758,7 @@ msgstr "如果你选择的<strong>生效时间</strong>是“现在”，交易<
 msgid "If you select a specific <strong>end time</strong>, the <strong>end time</strong> is the selected time."
 msgstr "如果你选择了特定的<strong>结束时间</strong>，交易<strong>结束时间</strong>就是选择的时间。"
 
-#: lib/BOM/Product/Transaction.pm:1125
+#: lib/BOM/Product/Transaction.pm:1126
 msgid "If you wish to raise these limits, please authenticate your account."
 msgstr "如果您想提高这些限额，请验证您的账户。"
 
@@ -3794,10 +3772,8 @@ msgid "If you're in Asia, you may find %1 more attractive because they reset aro
 msgstr "如果您在亚洲，％1 将对您特别有吸引力，因为它约在亚洲市场收盘的时候重新设置。"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/legal/complaints_disputes.html.tt:7
-#, fuzzy
-#| msgid "If your complaint relates to an outcome of a trade or a transaction and remains unresolved, it will turn into a dispute. Should you be unsatisfied with our response, you can choose to escalate your complaint to the regulator or to an alternative dispute resolution entity. Your disputes must be lodged within seven (7) days from the date the contract in question has been decided. No claims will be honoured after this period. You are solely responsible for the transactions made in your account."
 msgid "If your complaint relates to an outcome of a trade or a transaction and remains unresolved, it will turn into a dispute. Should you be unsatisfied with our response, you can choose to escalate your complaint to the regulator or to an alternative dispute resolution entity."
-msgstr "如果您的投诉涉及交易或事务的结果，仍然没有得到解决，它会变成一个争议。如果您对我们的答复不满意，可以选择把您的投诉升级，向监管机构或另一解决纠纷的实体提出。您的纠纷提诉必须在有关合同问题作出决定后七（7）天内提出。超过将这一时期之任何提控将不会受理。您自行负责您账户所进行的交易。"
+msgstr "如果您的投诉涉及交易或事务的结果，仍然没有得到解决，它会变成一个争议。如果您对我们的答复不满意，可以选择把您的投诉升级，向监管机构或另一解决纠纷的实体提出。"
 
 #. (stash->{website_name}, url_for('contact.cgi')
 #: /home/git/translations/binary-static/src/templates/haml/get_started/what_is_binary_trading.html.haml:1
@@ -3808,7 +3784,7 @@ msgstr "如您是个别交易员，您将可领会到二元交易的简易，灵
 msgid "If you’re looking to build a career, and not a resume, talk to us, Binary.com. We’re one of the IT world’s most vibrant and progressive workplaces."
 msgstr "如果你想成就一番事业，而不是一份简历，请跟我们Binary.com谈。我们是IT世界中最具活力和进步的工作场所之一。"
 
-#: lib/BOM/Product/Transaction.pm:490
+#: lib/BOM/Product/Transaction.pm:491
 msgid "Illegal currency $currency for $broker"
 msgstr "非法货币$货币$经纪人"
 
@@ -3848,7 +3824,7 @@ msgstr "在香港的对冲基金经理和企业家Jean-Yves Sireau以典型的�
 msgid "In foreign exchange markets, traders can enter contracts based on the change in price of one currency as it relates to another currency. For example if a trader selects Rise in the EUR/USD market, they are predicting that the value of the Euro will rise in relation to the value of the US dollar."
 msgstr "在外汇市场中，交易者可以根据一个货币对另一个货币的价格变动进入交易合约。例如，如果交易者选择欧元/美元「上涨」，即预测欧元的价值相对美元的价值将会上涨。"
 
-#: lib/BOM/Product/Transaction.pm:891
+#: lib/BOM/Product/Transaction.pm:892
 msgid "In order for you to place contracts, we need to know your Residence (Country). Please update your settings."
 msgstr "为了让您能够制订交易，我们需要知道您的居住地（国家）。请更新您的设定。"
 
@@ -3887,7 +3863,7 @@ msgid "In what country do you want to offer your service"
 msgstr "您要提供服务的国家"
 
 #: cgi/contract_demo.cgi:73 cgi/contract_demo.cgi:86 cgi/contract_guide.cgi:56
-#: cgi/oop/Controller/Bet.pm:1195
+#: cgi/oop/Controller/Bet.pm:1196
 msgid "In/Out"
 msgstr "范围之内/之外"
 
@@ -3918,27 +3894,23 @@ msgid "Indicative Price"
 msgstr "指示价格"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/charting/light_chart.html.tt:87
-#: cgi/subs/subs_BOMFeed_history.pm:368 cgi/subs/subs_BOMFeed_history.pm:406
+#: lib/BOM/View/Charting.pm:445 lib/BOM/View/Charting.pm:483
 msgid "Indicator"
 msgstr "指标"
 
-#: cgi/subs/subs_BOMFeed_history.pm:473
-#: cgi/subs/subs_graphs_chartdirector.pm:258
+#: cgi/subs/subs_graphs_chartdirector.pm:259 lib/BOM/View/Charting.pm:550
 msgid "Indicator that displays the width of Bollinger Bands."
 msgstr "显示布林带宽度的指标。"
 
-#: cgi/subs/subs_BOMFeed_history.pm:538
-#: cgi/subs/subs_graphs_chartdirector.pm:326
+#: cgi/subs/subs_graphs_chartdirector.pm:327 lib/BOM/View/Charting.pm:615
 msgid "Indicator that displays the width of Donchian Channels."
 msgstr "显示唐奇安通道宽度的指标。"
 
-#: cgi/subs/subs_BOMFeed_history.pm:475
-#: cgi/subs/subs_graphs_chartdirector.pm:275
+#: cgi/subs/subs_graphs_chartdirector.pm:276 lib/BOM/View/Charting.pm:552
 msgid "Indicator that is calculated by subtracting a 10 period exponential moving average from a 3 period moving average of the Accumulation Distribution Line."
 msgstr "通过从累积分配线的 3 个期间移动平均数减去 10 个期间指数移动平均数而计算的指标。"
 
-#: cgi/subs/subs_BOMFeed_history.pm:517
-#: cgi/subs/subs_graphs_chartdirector.pm:235
+#: cgi/subs/subs_graphs_chartdirector.pm:236 lib/BOM/View/Charting.pm:594
 msgid "Indicator that signals an upward trend when it rises above zero and a downward trend when it falls below zero. The farther away the oscillator is from the zero line, the stronger the trend."
 msgstr "当指数大于零时指示上升趋势，小于零时指示下跌趋势。摆动指标离基准线越远，趋势越强。"
 
@@ -3979,7 +3951,7 @@ msgid "Instrument:"
 msgstr "工具:"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/charting/light_chart.html.tt:21
-#: cgi/subs/subs_BOMFeed_history.pm:411
+#: lib/BOM/View/Charting.pm:488
 msgid "Instruments"
 msgstr "工具"
 
@@ -4009,11 +3981,11 @@ msgstr "诠释"
 msgid "Intraday"
 msgstr "当日"
 
-#: lib/BOM/Product/Contract.pm:1581
+#: lib/BOM/Product/Contract.pm:1584
 msgid "Intraday contracts may not cross market open."
 msgstr "盘中合同可能不能跨越市场开放。"
 
-#: cgi/oop/Controller/Bet.pm:2177
+#: cgi/oop/Controller/Bet.pm:2178
 msgid "Intraday prices"
 msgstr "当天价格"
 
@@ -4042,15 +4014,15 @@ msgstr "无效金额"
 msgid "Invalid fax number."
 msgstr "无效传真号。"
 
-#: lib/BOM/Product/Contract.pm:2339
+#: lib/BOM/Product/Contract.pm:2342
 msgid "Invalid payout currency."
 msgstr "无效货币。"
 
-#: cgi/subs/subs_BOMFeed_history.pm:366
+#: lib/BOM/View/Charting.pm:443
 msgid "Invalid period input! Please input the period between 0 and #1"
 msgstr "无效期间输入！请输入在 0 和 #1 之间的期间"
 
-#: lib/BOM/Product/Contract.pm:2388
+#: lib/BOM/Product/Contract.pm:2391
 msgid "Invalid stake"
 msgstr "无效成本"
 
@@ -4081,7 +4053,7 @@ msgstr "无效标的"
 msgid "Invalid value."
 msgstr "无效值。"
 
-#: cgi/subs/subs_BOMFeed_history.pm:354
+#: lib/BOM/View/Charting.pm:431
 msgid "Invalid workspace name. Only use characters (A-Z,a-z,0-9, -, _ and whitespace)"
 msgstr "无效的工作空间名称。只可使用字符 [A-Z,a-z,0-9, -, _ 以及空格]"
 
@@ -4095,7 +4067,7 @@ msgstr "您务必阅读并了解本条款和条件。接受本条款和条件并
 
 #: /home/git/translations/binary-static/src/templates/toolkit/legal/complaints_disputes.html.tt:16
 msgid "It is important that you refer your disputes to the appropriate ADR for the claims to be valid."
-msgstr ""
+msgstr "你必须把你的争议交给适合的替代性纠纷调解机构，这样你的索赔才会有效，这是很重要的。"
 
 #: /home/git/translations/binary-static/src/templates/haml/static/devguide.html.haml:1
 msgid "It is not necessary to actually trade or to deposit funds to your account."
@@ -4122,17 +4094,16 @@ msgstr "项目"
 msgid "It’s time to expand. We set up a programming center in Cyberjaya – the Silicon Valley of Kuala Lumpur – to maintain and improve BetOnMarkets.com."
 msgstr "扩展的时候到了。我们在Cyberjaya- 吉隆坡的硅谷 - 成立了一个编程中心，旨在维持和提高BetOnMarkets.com 的效率。"
 
-#: cgi/subs/subs_BOMFeed_history.pm:532
-#: cgi/subs/subs_graphs_chartdirector.pm:243
+#: cgi/subs/subs_graphs_chartdirector.pm:244 lib/BOM/View/Charting.pm:609
 msgid "J. Welles Wilder has developed the Average Directional Index - ADX to define trend force, whether the trend will develop further or will gradually weaken. The indicator allows to analyse tendencies of the market and to make trading decisions in the market forex."
 msgstr "J. Welles Wilder 开发了平均方向指数 - ADX，用于定义趋势强度，即该趋势是否进一步发展还是逐渐减弱。该指标可用于分析市场的各种趋势，帮助在外汇市场中作出交易决定。"
 
 #: cgi/subs/subs_forms.pm:176 cgi/subs/subs_forms.pm:2294
-#: web/bin/JavascriptCompress.pm:74
+#: web/bin/GenerateStaticData.pm:74
 msgid "Jan"
 msgstr "一月"
 
-#: web/bin/JavascriptCompress.pm:86
+#: web/bin/GenerateStaticData.pm:86
 msgid "January"
 msgstr "一月"
 
@@ -4147,11 +4118,11 @@ msgid "Join our analysts LIVE twice a week for a comprehensive analysis of recen
 msgstr "加入我们每周两次的分析师「实时在线分析」(LIVE)，对全球金融市场的最新发展和趋势作全面分析。"
 
 #: cgi/subs/subs_forms.pm:200 cgi/subs/subs_forms.pm:2318
-#: web/bin/JavascriptCompress.pm:80
+#: web/bin/GenerateStaticData.pm:80
 msgid "Jul"
 msgstr "七月"
 
-#: web/bin/JavascriptCompress.pm:92
+#: web/bin/GenerateStaticData.pm:92
 msgid "July"
 msgstr "七月"
 
@@ -4161,11 +4132,11 @@ msgid "Jump to"
 msgstr "跳至"
 
 #: cgi/subs/subs_forms.pm:196 cgi/subs/subs_forms.pm:2314
-#: web/bin/JavascriptCompress.pm:79
+#: web/bin/GenerateStaticData.pm:79
 msgid "Jun"
 msgstr "六月"
 
-#: web/bin/JavascriptCompress.pm:91
+#: web/bin/GenerateStaticData.pm:91
 msgid "June"
 msgstr "六月"
 
@@ -4186,7 +4157,7 @@ msgid "Large"
 msgstr "大"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/charting/ticker_data_table.html.tt:4
-#: cgi/subs/subs_BOMFeed_history.pm:373
+#: lib/BOM/View/Charting.pm:450
 msgid "Last"
 msgstr "最近"
 
@@ -4194,7 +4165,7 @@ msgstr "最近"
 msgid "Last Digit Prediction"
 msgstr "最后的数字预测"
 
-#: cgi/oop/Controller/Bet.pm:2194
+#: cgi/oop/Controller/Bet.pm:2195
 msgid "Last Digit Stats"
 msgstr "最后的数字统计"
 
@@ -4274,15 +4245,15 @@ msgstr "就像%2,%1也是每天重新设定价格返回到1000。差别是%1每�
 msgid "Limit"
 msgstr "限制"
 
-#: cgi/subs/subs_BOMFeed_history.pm:338
+#: lib/BOM/View/Charting.pm:415
 msgid "Line"
 msgstr "线"
 
-#: cgi/subs/subs_BOMFeed_history.pm:350
+#: lib/BOM/View/Charting.pm:427
 msgid "Line Chart"
 msgstr "线图"
 
-#: cgi/subs/subs_BOMFeed_history.pm:400
+#: lib/BOM/View/Charting.pm:477
 msgid "Line Dot Chart"
 msgstr "线点图"
 
@@ -4343,7 +4314,7 @@ msgstr "登录您的 %1 联盟帐号并点击：营销 &rarr; 所有媒体。"
 msgid "Log-in to your %1 affiliate account and click on: Reports &rarr; Traffic Report."
 msgstr "登录您的 %1 联盟帐号并点击：报告 &rarr; 流量报告。"
 
-#: cgi/subs/subs_BOMFeed_history.pm:381
+#: lib/BOM/View/Charting.pm:458
 msgid "Logarithmic Scale"
 msgstr "对数刻度"
 
@@ -4363,10 +4334,6 @@ msgstr "登录 ID"
 msgid "Login ID (%1) does not exist."
 msgstr "登录 ID (%1) 不存在。"
 
-#: frontend/lib/BOM/Web/Home.pm:111
-msgid "Login ID not given."
-msgstr "未输入登录 ID 。"
-
 #: /home/git/translations/binary-static/src/templates/haml/home/login.html.haml:1
 msgid "Login Trouble"
 msgstr "登录故障"
@@ -4380,7 +4347,7 @@ msgstr "登录故障"
 msgid "Long-term partnership with the leading financial trading service"
 msgstr "与一流金融 交易 服务商的长期伙伴关系"
 
-#: web/bin/JavascriptCompress.pm:129
+#: web/bin/GenerateStaticData.pm:129
 msgid "Loss"
 msgstr "亏损"
 
@@ -4393,11 +4360,11 @@ msgstr "丢失密码？"
 #: /home/git/translations/binary-static/src/templates/toolkit/charting/daily_ohlc.html.tt:47
 #: /home/git/translations/binary-static/src/templates/toolkit/charting/legacy_chart_table.html.tt:14
 #: /home/git/translations/binary-static/src/templates/toolkit/charting/ticker_data_table.html.tt:8
-#: cgi/subs/subs_BOMFeed_history.pm:415
+#: lib/BOM/View/Charting.pm:492
 msgid "Low"
 msgstr "低"
 
-#: web/bin/JavascriptCompress.pm:115
+#: web/bin/GenerateStaticData.pm:115
 msgid "Low Barrier"
 msgstr "低门槛"
 
@@ -4408,12 +4375,12 @@ msgstr "低门槛只应为数字"
 #: /home/git/translations/binary-static/src/templates/toolkit/bet/form/barrier.html.tt:37
 #: /home/git/translations/binary-static/src/templates/toolkit/charting/livechart.html.tt:47
 #: /home/git/translations/binary-static/src/templates/toolkit/resources/pricing_table_form.html.tt:46
-#: cgi/oop/Controller/Bet.pm:2334
+#: cgi/oop/Controller/Bet.pm:2335
 msgid "Low barrier"
 msgstr "价格下限"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/bet/form/barrier.html.tt:34
-#: cgi/oop/Controller/Bet.pm:2332
+#: cgi/oop/Controller/Bet.pm:2333
 msgid "Low barrier offset"
 msgstr "价格下限位移"
 
@@ -4425,13 +4392,16 @@ msgstr "下方带"
 msgid "Lower Band = Average - 0.5 * Std Deviation"
 msgstr "下方带 = 平均线 - 0.5 * 标准偏差"
 
-#: cgi/smartchart.cgi:30 cgi/subs/subs_BOMFeed_history.pm:362
-#: cgi/subs/subs_BOMFeed_history.pm:562
-#: cgi/subs/subs_graphs_chartdirector.pm:349
+#: lib/BOM/Product/Contract.pm:2543
+msgid "Lower barrier is out of acceptable range. Please adjust the lower barrier."
+msgstr ""
+
+#: cgi/smartchart.cgi:30 cgi/subs/subs_graphs_chartdirector.pm:350
+#: lib/BOM/View/Charting.pm:439 lib/BOM/View/Charting.pm:639
 msgid "MACD"
 msgstr "MACD（平滑异同移动平均数）"
 
-#: cgi/subs/subs_BOMFeed_history.pm:352
+#: lib/BOM/View/Charting.pm:429
 msgid "MACD Signal"
 msgstr "MACD（平滑异同移动平均线）信号"
 
@@ -4459,11 +4429,11 @@ msgid "Make your trade"
 msgstr "执行交易"
 
 #: cgi/subs/subs_forms.pm:184 cgi/subs/subs_forms.pm:2302
-#: web/bin/JavascriptCompress.pm:76
+#: web/bin/GenerateStaticData.pm:76
 msgid "Mar"
 msgstr "三月"
 
-#: web/bin/JavascriptCompress.pm:88
+#: web/bin/GenerateStaticData.pm:88
 msgid "March"
 msgstr "三月"
 
@@ -4489,7 +4459,7 @@ msgid "Market exit price"
 msgstr "平仓价"
 
 #. ($safer_expiry->date)
-#: lib/BOM/Product/Contract.pm:2854
+#: lib/BOM/Product/Contract.pm:2878
 msgid "Market holiday during the contract period. Select an expiry date after %1."
 msgstr "该合约期间之市场假日。在 %1之后选择到期日。"
 
@@ -4515,8 +4485,8 @@ msgstr "营销及促销"
 msgid "Markets"
 msgstr "市场"
 
-#: cgi/smartchart.cgi:31 cgi/subs/subs_BOMFeed_history.pm:546
-#: cgi/subs/subs_graphs_chartdirector.pm:361
+#: cgi/smartchart.cgi:31 cgi/subs/subs_graphs_chartdirector.pm:362
+#: lib/BOM/View/Charting.pm:623
 msgid "Mass Index"
 msgstr "梅斯指数"
 
@@ -4572,7 +4542,7 @@ msgid "Maximum withdrawal by all other means:"
 msgstr "通过其它方式的最大提款金额："
 
 #: cgi/subs/subs_forms.pm:192 cgi/subs/subs_forms.pm:2310
-#: web/bin/JavascriptCompress.pm:78 web/bin/JavascriptCompress.pm:90
+#: web/bin/GenerateStaticData.pm:78 web/bin/GenerateStaticData.pm:90
 msgid "May"
 msgstr "五月"
 
@@ -4633,19 +4603,19 @@ msgstr "最低额度"
 msgid "Miss"
 msgstr "遗漏"
 
-#: lib/BOM/Product/Contract.pm:1542 lib/BOM/Product/Contract.pm:1595
+#: lib/BOM/Product/Contract.pm:1545 lib/BOM/Product/Contract.pm:1598
 msgid "Missing market data for contract period."
 msgstr "合约期间之遗漏市场数据。"
 
-#: lib/BOM/Product/Contract.pm:1481
+#: lib/BOM/Product/Contract.pm:1484
 msgid "Missing market data for entry spot."
 msgstr "进入点之遗漏市场数据。"
 
-#: lib/BOM/Product/Contract.pm:1555 lib/BOM/Product/Contract.pm:1568
+#: lib/BOM/Product/Contract.pm:1558 lib/BOM/Product/Contract.pm:1571
 msgid "Missing market data for exit spot."
 msgstr "退出点之遗漏市场数据。"
 
-#: web/bin/JavascriptCompress.pm:121
+#: web/bin/GenerateStaticData.pm:121
 msgid "Mo"
 msgstr "星期一"
 
@@ -4653,12 +4623,12 @@ msgstr "星期一"
 msgid "Mobile application"
 msgstr "移动应用"
 
-#: cgi/smartchart.cgi:32 cgi/subs/subs_BOMFeed_history.pm:359
-#: cgi/subs/subs_BOMFeed_history.pm:494
+#: cgi/smartchart.cgi:32 lib/BOM/View/Charting.pm:436
+#: lib/BOM/View/Charting.pm:571
 msgid "Momentum"
 msgstr "动量"
 
-#: web/bin/JavascriptCompress.pm:68
+#: web/bin/GenerateStaticData.pm:68
 msgid "Monday"
 msgstr "周一"
 
@@ -4691,12 +4661,12 @@ msgstr "价值状况条款"
 msgid "Monitor your portfolio in real time."
 msgstr "实时监测您的投资组合。"
 
-#: cgi/subs/subs_BOMFeed_history.pm:317 web/bin/JavascriptCompress.pm:48
+#: lib/BOM/View/Charting.pm:394 web/bin/GenerateStaticData.pm:48
 msgid "Month"
 msgstr "月份"
 
-#: cgi/subs/subs_BOMFeed_history.pm:330
 #: lib/BOM/Product/Helper/PricingTableParameters.pm:307
+#: lib/BOM/View/Charting.pm:407
 msgid "Monthly"
 msgstr "每月"
 
@@ -4704,7 +4674,7 @@ msgstr "每月"
 msgid "Monthly Webinars"
 msgstr "每月网络研讨会"
 
-#: cgi/subs/subs_BOMFeed_history.pm:376
+#: lib/BOM/View/Charting.pm:453
 msgid "Months"
 msgstr "月份"
 
@@ -4721,7 +4691,7 @@ msgstr "超过 %1 种交易供您选择"
 msgid "Mother's maiden name"
 msgstr "母亲婚前的姓氏"
 
-#: cgi/subs/subs_BOMFeed_history.pm:387
+#: lib/BOM/View/Charting.pm:464
 msgid "Mountain Chart"
 msgstr "山形图"
 
@@ -4729,18 +4699,15 @@ msgstr "山形图"
 msgid "Moving Average"
 msgstr "移动平均数"
 
-#: cgi/subs/subs_BOMFeed_history.pm:467
-#: cgi/subs/subs_graphs_chartdirector.pm:509
+#: cgi/subs/subs_graphs_chartdirector.pm:510 lib/BOM/View/Charting.pm:544
 msgid "Moving averages provide an objective measure of trend direction by smoothing out short-term price fluctuations.A Simple Moving Average is the unweighted mean of the n (set by period) previous periods (1 period is the selected timescale, i.e. 1 minute, 1 day etc.).All previous periods have equal weight in determining the SMA.Shorter length moving averages are more sensitive and signals trends much faster than longer length MAs, but also give more false signals. A longer length MA is more reliable but only picks up the big trend."
 msgstr "移动平均线通过消除短期价格波动，对趋势方向提供了一个客观的测量。简单移动品均线对之前时间段（1个时间段为所选的时间长短，比如1分钟、1天等）未进行加权。在决定SMA的时候，所有之前时间段都有同样的权重。长度较短的移动平均线更加敏感，要比较长的MA更快地显示出趋势。但是也会出现更多的错误信号。较长的MA更可靠，但只能显示重要趋势。"
 
-#: cgi/subs/subs_BOMFeed_history.pm:457
-#: cgi/subs/subs_graphs_chartdirector.pm:517
+#: cgi/subs/subs_graphs_chartdirector.pm:518 lib/BOM/View/Charting.pm:534
 msgid "Moving averages provide an objective measure of trend direction by smoothing out short-term price fluctuations.For an Exponential Moving Average, the applied weight factor decreases exponential for periods further away in the past. It gives much more importance to recent observations while still not discarding older observations entirely.Shorter length moving averages are more sensitive and signals trends much faster than longer length MAs, but also give more false signals. A longer length MA is more reliable but only picks up the big trend."
 msgstr "移动平均线通过消除短期价格波动，客观测量趋势方向。对于一个指数平均数指标而言，越远期的数字加权越小，越近期的数据加权月中，但较旧的数据也会给予一定的加权。较短天期的移动平均线更为敏感，要比较长天期的MA更快地显示趋势，但也会出现更多的错误信号。较长时长的MA更为可靠，但只能重大趋势。"
 
-#: cgi/subs/subs_BOMFeed_history.pm:481
-#: cgi/subs/subs_graphs_chartdirector.pm:533
+#: cgi/subs/subs_graphs_chartdirector.pm:534 lib/BOM/View/Charting.pm:558
 msgid "Moving averages provide an objective measure of trend direction by smoothing out short-term price fluctuations.In a Weighted Moving Average, the previous periods have less weight for periods further away in the past. In an n-day WMA the latest day has weight n, the second latest n-1, etc, down to zero.Shorter length moving averages are more sensitive and signals trends much faster than longer length MAs, but also give more false signals. A longer length MA is more reliable but only picks up the big trend."
 msgstr "移动平均线通过消除短期价格波动，对趋势方向提供了一个客观测量。在权重移动平均线中，前期的权重要比过去更早使其的权重小。在n天的WMA中，最新的日期权重为n，这一日期之前日期为n-1，最后一只减少到0。较短长度的移动平均线更加敏感，要比较长的MA更快地显示秋实，但也会出现更多的错误信号。较长的MA更可靠，但只能了解重大趋势。"
 
@@ -4805,7 +4772,7 @@ msgstr "净收益"
 msgid "Network Status"
 msgstr "网络状态"
 
-#: cgi/subs/subs_BOMFeed_history.pm:383
+#: lib/BOM/View/Charting.pm:460
 msgid "New"
 msgstr "新"
 
@@ -4818,8 +4785,8 @@ msgid "New Password"
 msgstr "新密码"
 
 #: cgi/f_brokercgi/f_clientloginid_newpassword.cgi:74
-#: cgi/lost_password.cgi:143 cgi/lost_password.cgi:258
-#: cgi/lost_password.cgi:279 cgi/lost_password.cgi:304
+#: cgi/lost_password.cgi:143 cgi/lost_password.cgi:259
+#: cgi/lost_password.cgi:280 cgi/lost_password.cgi:306
 msgid "New Password Request"
 msgstr "新密码请求"
 
@@ -4827,7 +4794,7 @@ msgstr "新密码请求"
 msgid "New To Trading?"
 msgstr "交易新手？"
 
-#: cgi/create_account.cgi:176
+#: cgi/create_account.cgi:177
 msgid "New account registration fail."
 msgstr "新帐户注册失败。"
 
@@ -4838,21 +4805,21 @@ msgstr "较新"
 
 #: /home/git/translations/binary-static/src/templates/haml/get_started/benefits_of_trading_binaries.html.haml:1
 #: /home/git/translations/binary-static/src/templates/haml/get_started/how_to_trade_binaries.html.haml:1
-#: web/bin/JavascriptCompress.pm:118
+#: web/bin/GenerateStaticData.pm:118
 msgid "Next"
 msgstr "下一页"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/container/confirm_box_popup.html.tt:7
-#: cgi/subs/subs_BOMFeed_history.pm:328 cgi/subs/subs_forms.pm:3399
-#: cgi/subs/subs_forms.pm:997
+#: cgi/subs/subs_forms.pm:3399 cgi/subs/subs_forms.pm:997
+#: lib/BOM/View/Charting.pm:405
 msgid "No"
 msgstr "无"
 
-#: cgi/subs/subs_graphs.pm:622
+#: cgi/subs/subs_graphs.pm:623
 msgid "No Data available"
 msgstr "无可用数据"
 
-#: web/bin/JavascriptCompress.pm:135
+#: web/bin/GenerateStaticData.pm:135
 msgid "No Live price update"
 msgstr "没实时价格更新"
 
@@ -4860,7 +4827,7 @@ msgstr "没实时价格更新"
 msgid "No Touch trades"
 msgstr "未触及交易"
 
-#: cgi/subs/subs_BOMFeed_history.pm:448
+#: lib/BOM/View/Charting.pm:525
 msgid "No data available to draw the requested chart. Please try our daily chart for this instrument."
 msgstr "无可用数据绘制请求的图表。请尝试该工具的每日图表。"
 
@@ -4904,7 +4871,7 @@ msgstr "附注："
 msgid "Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price."
 msgstr "注释：合同将在我们的服务器收到请求时以当时的市场价格出售。此价格可能会与指定的价格有差异。"
 
-#: cgi/oop/Controller/Bet.pm:1037
+#: cgi/oop/Controller/Bet.pm:1038
 msgid "Note: During summer time (daylight saving), GMT is one hour behind BST (British Summer Time)"
 msgstr "附注：在夏季时间（夏令时）内，格林威治标准时间 (GMT) 迟于 BST（英国夏季时间）一小时"
 
@@ -4944,11 +4911,11 @@ msgid "Notification of Changes"
 msgstr "变动通知"
 
 #: cgi/subs/subs_forms.pm:216 cgi/subs/subs_forms.pm:2334
-#: web/bin/JavascriptCompress.pm:84
+#: web/bin/GenerateStaticData.pm:84
 msgid "Nov"
 msgstr "十一月"
 
-#: web/bin/JavascriptCompress.pm:96
+#: web/bin/GenerateStaticData.pm:96
 msgid "November"
 msgstr "十一月"
 
@@ -4970,7 +4937,7 @@ msgid "Number of ticks"
 msgstr "跳动点数目"
 
 #. ($min_tick, $max_tick)
-#: lib/BOM/Product/Contract.pm:2753
+#: lib/BOM/Product/Contract.pm:2777
 msgid "Number of ticks must be between %1 and %2"
 msgstr "跳动点数目须在%1 与 %2之间"
 
@@ -4990,7 +4957,7 @@ msgstr "OAuth2令牌续期"
 msgid "OAuth2.0 is the emerging internet standard for this purpose. See <a href=\"http://oauth.net/2\" target=\"_blank\">http://oauth.net/2</a> for a formal definition, although we will guide you through the steps relevant to your platform."
 msgstr "OAuth2.0 是为达此目的而新兴的互联网标准。正式的定义可参阅<a href=\"http://oauth.net/2\" target=\"_blank\">http://oauth.net/2</a>，但关于您的平台，我们会指导您完成相关的步骤。"
 
-#: cgi/subs/subs_BOMFeed_history.pm:422
+#: lib/BOM/View/Charting.pm:499
 msgid "OK"
 msgstr "确定"
 
@@ -5003,7 +4970,7 @@ msgid "ORIGINAL Utility bill (within last 3 months) ; or"
 msgstr "原始费用单（最近 3 个月内）；或"
 
 #: cgi/subs/subs_forms.pm:212 cgi/subs/subs_forms.pm:2330
-#: web/bin/JavascriptCompress.pm:83
+#: web/bin/GenerateStaticData.pm:83
 msgid "Oct"
 msgstr "十月"
 
@@ -5016,7 +4983,7 @@ msgstr "八进制期货"
 msgid "Octal Futures is a Perl web application which demonstrates how to authenticate and make server-side calls to the Binary.com API.  It is developed with <a target=\"_blank\" href=\"%1\">Mojolicious</a> and is open-sourced as <a target=\"_blank\" href=\"%2\">octalfutures</a> on github. Perl/Mojolicious developers are invited to participate in this project by forking the repository."
 msgstr "八进制期货是验证并示范如何对对 Binary.com API 进行服务器端调用的Perl 互联网应用程序。以<a target=\"_blank\" href=\"%1\">Mojolicious</a>开发，且受开源为<a target=\"_blank\" href=\"%2\">八进制未来</a>于github上。Mojolicious 开发者被邀请通过派生存储库参与这个项目。"
 
-#: web/bin/JavascriptCompress.pm:95
+#: web/bin/GenerateStaticData.pm:95
 msgid "October"
 msgstr "十月"
 
@@ -5082,7 +5049,7 @@ msgstr "只有进行适当标签的客户方可分配至联盟。如果联盟标
 #: /home/git/translations/binary-static/src/templates/toolkit/charting/daily_ohlc.html.tt:17
 #: /home/git/translations/binary-static/src/templates/toolkit/charting/daily_ohlc.html.tt:45
 #: /home/git/translations/binary-static/src/templates/toolkit/charting/ticker_data_table.html.tt:6
-#: cgi/subs/subs_BOMFeed_history.pm:343 cgi/subs/subs_BOMFeed_history.pm:423
+#: lib/BOM/View/Charting.pm:420 lib/BOM/View/Charting.pm:500
 msgid "Open"
 msgstr "开盘"
 
@@ -5134,8 +5101,7 @@ msgstr "开设"
 msgid "Opens late (at %1)"
 msgstr "开市推迟（在 %1）"
 
-#: cgi/subs/subs_BOMFeed_history.pm:504
-#: cgi/subs/subs_graphs_chartdirector.pm:267
+#: cgi/subs/subs_graphs_chartdirector.pm:268 lib/BOM/View/Charting.pm:581
 msgid "Oscillator calculated from the daily readings of the Accumulation Distribution Line. The CMF is unlike a momentum oscillator in that it is not influenced by the daily price change. Instead, the indicator focuses on the location of the close relative to the range for the period (daily or weekly)."
 msgstr "基于每日累积分配线读数计算摆动指标。CMF 不同于动量摆动指标，因其不受日常价格变动的影响。相反，该指标着眼于相对于期间范围的（每日或每周）收盘位置。"
 
@@ -5213,11 +5179,11 @@ msgstr "我们的网站可以使用许多市场上的过滤系统进行过滤,�
 msgid "Over one billion dollars in trades to date."
 msgstr "迄今为止，交易额已超过十亿美元。"
 
-#: cgi/subs/subs_BOMFeed_history.pm:340
+#: lib/BOM/View/Charting.pm:417
 msgid "Overlay"
 msgstr "覆盖"
 
-#: cgi/subs/subs_BOMFeed_history.pm:389
+#: lib/BOM/View/Charting.pm:466
 msgid "Overlay Instruments"
 msgstr "覆盖工具"
 
@@ -5238,7 +5204,7 @@ msgstr "不接受邮政信箱"
 msgid "Page not found"
 msgstr "无法找到页面"
 
-#: cgi/subs/subs_BOMFeed_history.pm:409
+#: lib/BOM/View/Charting.pm:486
 msgid "Parabolic SAR"
 msgstr "抛物线状止损与反转 (SAR)"
 
@@ -5287,10 +5253,6 @@ msgstr "密码过长，请输入至多 30 个字符。"
 #: cgi/subs/subs_forms.pm:1354 cgi/subs/subs_forms.pm:1680
 msgid "Password is too short, please enter at least 3 characters."
 msgstr "密码过短，请输入至少 3 个字符。"
-
-#: frontend/lib/BOM/Web/Home.pm:113
-msgid "Password not given."
-msgstr "未输入密码。"
 
 #: cgi/lost_password.cgi:40 cgi/lost_password.cgi:43
 msgid "Password reset"
@@ -5365,16 +5327,16 @@ msgid "Payout Currency"
 msgstr "支付货币"
 
 #. (to_monetary_number_format($transaction_parameters->{payout})
-#: cgi/oop/Controller/Bet.pm:1556
+#: cgi/oop/Controller/Bet.pm:1557
 msgid "Payout has moved in your favour from %1 to %2."
 msgstr "该支出变动对您有利，从 %1 变为 %2。"
 
-#: lib/BOM/Product/Contract.pm:2361
+#: lib/BOM/Product/Contract.pm:2364
 msgid "Payout may not have more than two decimal places."
 msgstr "最高获利的小数点可能不会超过两位数。"
 
 #. (to_monetary_number_format($payout_min, 1)
-#: lib/BOM/Product/Contract.pm:1825
+#: lib/BOM/Product/Contract.pm:1828
 msgid "Payout must be between <strong>%1</strong> and <strong>%2</strong>."
 msgstr "最高获利必须介于 <strong>%1</strong> 和 <strong>%2</strong>之间。"
 
@@ -5383,12 +5345,12 @@ msgstr "最高获利必须介于 <strong>%1</strong> 和 <strong>%2</strong>之�
 msgid "Pending Bonus: %1"
 msgstr "待定奖金：%1"
 
-#: cgi/smartchart.cgi:33 cgi/subs/subs_BOMFeed_history.pm:484
-#: cgi/subs/subs_graphs_chartdirector.pm:375
+#: cgi/smartchart.cgi:33 cgi/subs/subs_graphs_chartdirector.pm:376
+#: lib/BOM/View/Charting.pm:561
 msgid "Performance"
 msgstr "表现"
 
-#: cgi/subs/subs_BOMFeed_history.pm:454
+#: lib/BOM/View/Charting.pm:531
 msgid "Period"
 msgstr "期间"
 
@@ -5400,7 +5362,7 @@ msgstr "Perl 模块"
 msgid "Phone Callback"
 msgstr "电话回拨"
 
-#: cgi/subs/subs_BOMFeed_history.pm:346
+#: lib/BOM/View/Charting.pm:423
 msgid "Pick workspace file"
 msgstr "选取工作空间文件"
 
@@ -5545,7 +5507,7 @@ msgid "Please note that to apply to become a Payment Agent, you must <a href=\"%
 msgstr "请注意，要申请成为支付代理人，您必须首先<a href=\"%1\">认证您的账户</a>。"
 
 #. ($contact_url)
-#: cgi/lost_password.cgi:284
+#: cgi/lost_password.cgi:285
 msgid "Please note that we have found no accounts registered with this e-mail address. If you can't recall the e-mail address used during account registration, please <a href=\"%1\"><strong>contact us</strong></a>."
 msgstr "请注意，我们未找到以此电子邮件地址注册的帐户。如果您忘记帐户注册时使用的电子邮件地址，请<a href=\"%1\"><strong>联系我们</strong></a>。"
 
@@ -5571,7 +5533,7 @@ msgstr "请将文件邮寄至："
 msgid "Please provide at least one self-exclusion setting."
 msgstr "请提供至少一个自我排除设置。"
 
-#: cgi/oop/Controller/Bet.pm:1671 cgi/oop/Controller/Bet.pm:1948
+#: cgi/oop/Controller/Bet.pm:1672 cgi/oop/Controller/Bet.pm:1949
 msgid "Please provide granter id(s)."
 msgstr "请提供授权人 ID 。"
 
@@ -5613,11 +5575,11 @@ msgstr "请传送此电子邮件至%1。"
 msgid "Please specify your country."
 msgstr "请指定你的国家。"
 
-#: web/bin/JavascriptCompress.pm:53
+#: web/bin/GenerateStaticData.pm:53
 msgid "Please try again."
 msgstr "请重试。"
 
-#: cgi/lost_password.cgi:466 cgi/lost_password.cgi:579
+#: cgi/lost_password.cgi:468 cgi/lost_password.cgi:581
 msgid "Please type your chosen password twice into the fields below:"
 msgstr "请在以下字段输入您选择的密码两次："
 
@@ -5634,7 +5596,7 @@ msgstr "请仅使用字母数字或空格。"
 msgid "Please use only letters, spaces, hyphens, full-stops or apostrophes."
 msgstr "请仅使用字母、空格、连字符、句号或省略号。"
 
-#: web/bin/JavascriptCompress.pm:50
+#: web/bin/GenerateStaticData.pm:50
 msgid "Please wait.<br />Your request is being processed."
 msgstr "请稍候。<br />您的请求正在处理中。"
 
@@ -5680,11 +5642,11 @@ msgstr "在您的证券组合中给出未清偿合约的最大总交易额。如
 msgid "Prevailing market price cannot be determined at this time."
 msgstr "现行市价无法在此时确定。"
 
-#: lib/BOM/Product/Contract.pm:1494 lib/BOM/Product/Contract.pm:2928
+#: lib/BOM/Product/Contract.pm:1497 lib/BOM/Product/Contract.pm:2952
 msgid "Prevailing market price cannot be determined."
 msgstr "现行市价无法确定。"
 
-#: web/bin/JavascriptCompress.pm:119
+#: web/bin/GenerateStaticData.pm:119
 msgid "Previous"
 msgstr "之前"
 
@@ -5698,14 +5660,13 @@ msgstr "价格"
 msgid "Price Band"
 msgstr "价格带"
 
-#: cgi/smartchart.cgi:34 cgi/subs/subs_BOMFeed_history.pm:360
-#: cgi/subs/subs_BOMFeed_history.pm:563
-#: cgi/subs/subs_graphs_chartdirector.pm:382
+#: cgi/smartchart.cgi:34 cgi/subs/subs_graphs_chartdirector.pm:383
+#: lib/BOM/View/Charting.pm:437 lib/BOM/View/Charting.pm:640
 msgid "Price Oscillator"
 msgstr "价格摆动指标"
 
 #. (to_monetary_number_format($transaction_parameters->{price})
-#: cgi/oop/Controller/Bet.pm:1551
+#: cgi/oop/Controller/Bet.pm:1552
 msgid "Price has moved in your favour from %1 to %2."
 msgstr "该价格变动对您有利，从 %1 变为 %2。"
 
@@ -5721,16 +5682,16 @@ msgstr "价格"
 #: /home/git/translations/binary-static/src/templates/haml/resources/index.html.haml:1
 #: /home/git/translations/binary-static/src/templates/toolkit/global/footer.html.tt:81
 #: /home/git/translations/binary-static/src/templates/toolkit/resources/pricing_table_form.html.tt:2
-#: cgi/oop/Controller/Bet.pm:2183 cgi/pricing_table.cgi:163
+#: cgi/oop/Controller/Bet.pm:2184 cgi/pricing_table.cgi:163
 #: lib/BOM/View/Menu.pm:168
 msgid "Pricing Table"
 msgstr "价格表"
 
-#: cgi/subs/subs_BOMFeed_history.pm:344
+#: lib/BOM/View/Charting.pm:421
 msgid "Print"
 msgstr "打印"
 
-#: web/bin/JavascriptCompress.pm:58
+#: web/bin/GenerateStaticData.pm:58
 msgid "Print chart"
 msgstr "打印图表"
 
@@ -5749,7 +5710,7 @@ msgstr "教授"
 
 #: /home/git/translations/binary-static/src/templates/haml/get_started/glossary.html.haml:1
 #: /home/git/translations/binary-static/src/templates/toolkit/bet/buy_success_ajax.html.tt:50
-#: web/bin/JavascriptCompress.pm:130
+#: web/bin/GenerateStaticData.pm:130
 msgid "Profit"
 msgstr "利润"
 
@@ -5759,10 +5720,10 @@ msgstr "利润"
 msgid "Profit Table"
 msgstr "利润表"
 
-#: cgi/oop/Controller/Bet.pm:1461 cgi/oop/Controller/Bet.pm:1660
-#: cgi/oop/Controller/Bet.pm:1901 cgi/oop/Controller/Bet.pm:1940
-#: cgi/oop/Controller/Bet.pm:2352 cgi/oop/Controller/Bet.pm:764
-#: cgi/oop/Controller/Bet.pm:870
+#: cgi/oop/Controller/Bet.pm:1462 cgi/oop/Controller/Bet.pm:1661
+#: cgi/oop/Controller/Bet.pm:1902 cgi/oop/Controller/Bet.pm:1941
+#: cgi/oop/Controller/Bet.pm:2353 cgi/oop/Controller/Bet.pm:765
+#: cgi/oop/Controller/Bet.pm:871
 msgid "Profit from your Predictions"
 msgstr "预测的收益"
 
@@ -5791,7 +5752,7 @@ msgstr "促销的"
 msgid "Proof of address"
 msgstr "地址证明"
 
-#: lib/BOM/Product/Contract.pm:2521
+#: lib/BOM/Product/Contract.pm:2526
 msgid "Proper barriers could not be determined."
 msgstr "无法确定正确的障碍。"
 
@@ -5804,7 +5765,7 @@ msgid "Provide us with the following documentation:"
 msgstr "请向我们提供下列文件："
 
 #: /home/git/translations/binary-static/src/templates/toolkit/account/portfolio.html.tt:26
-#: cgi/oop/Controller/Bet.pm:1422
+#: cgi/oop/Controller/Bet.pm:1423
 msgid "Purchase"
 msgstr "购买"
 
@@ -5823,12 +5784,12 @@ msgstr "购买价格"
 msgid "Purchase Spot"
 msgstr "购买价位"
 
-#: cgi/analyse_contract.cgi:216 web/bin/JavascriptCompress.pm:111
+#: cgi/analyse_contract.cgi:216 web/bin/GenerateStaticData.pm:111
 msgid "Purchase Time"
 msgstr "购买时间"
 
 #. ($currency, $max_daily_turnover_limit)
-#: lib/BOM/Product/Transaction.pm:1123
+#: lib/BOM/Product/Transaction.pm:1124
 msgid "Purchase of this contract would cause you to exceed your daily turnover limit of %1%2."
 msgstr "采购此交易将使您超出了%1%2的每日交易额。"
 
@@ -5836,7 +5797,7 @@ msgstr "采购此交易将使您超出了%1%2的每日交易额。"
 msgid "Put a limit on your winnings. Once you have reached it put some aside and trade with the rest of the money."
 msgstr "对您的盈利设置限额。一旦达到了限额就将部分金额存起来，用剩余的资金继续操作。"
 
-#: cgi/subs/subs_BOMFeed_history.pm:339
+#: lib/BOM/View/Charting.pm:416
 msgid "Quote"
 msgstr "报价"
 
@@ -5844,7 +5805,7 @@ msgstr "报价"
 msgid "REST"
 msgstr "表述性状态转移(REST)"
 
-#: cgi/subs/subs_BOMFeed_history.pm:327
+#: lib/BOM/View/Charting.pm:404
 msgid "Random"
 msgstr "随机"
 
@@ -5905,18 +5866,17 @@ msgstr "随机 nocturnes"
 msgid "Random quotidians"
 msgstr "随机 quotidians"
 
-#: cgi/subs/subs_graphs_chartdirector.pm:312
-#: cgi/subs/subs_graphs_chartdirector.pm:411
-#: cgi/subs/subs_graphs_chartdirector.pm:436
-#: cgi/subs/subs_graphs_chartdirector.pm:460
-#: cgi/subs/subs_graphs_chartdirector.pm:475
-#: cgi/subs/subs_graphs_chartdirector.pm:503
+#: cgi/subs/subs_graphs_chartdirector.pm:313
+#: cgi/subs/subs_graphs_chartdirector.pm:412
+#: cgi/subs/subs_graphs_chartdirector.pm:437
+#: cgi/subs/subs_graphs_chartdirector.pm:461
+#: cgi/subs/subs_graphs_chartdirector.pm:476
+#: cgi/subs/subs_graphs_chartdirector.pm:504
 msgid "Range"
 msgstr "幅度"
 
-#: cgi/smartchart.cgi:35 cgi/subs/subs_BOMFeed_history.pm:393
-#: cgi/subs/subs_BOMFeed_history.pm:534
-#: cgi/subs/subs_graphs_chartdirector.pm:394
+#: cgi/smartchart.cgi:35 cgi/subs/subs_graphs_chartdirector.pm:395
+#: lib/BOM/View/Charting.pm:470 lib/BOM/View/Charting.pm:611
 msgid "Rate of Change"
 msgstr "变动率"
 
@@ -5934,7 +5894,7 @@ msgid "Read the answers to some common questions."
 msgstr "阅读关于一些常见问题的回答。"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/account/open_account.html.tt:12
-#: cgi/lost_password.cgi:379
+#: cgi/lost_password.cgi:381
 msgid "Real money account"
 msgstr "真实货币帐户"
 
@@ -6032,9 +5992,8 @@ msgstr "注册"
 msgid "Rel Change"
 msgstr "相对变化"
 
-#: cgi/smartchart.cgi:36 cgi/subs/subs_BOMFeed_history.pm:391
-#: cgi/subs/subs_BOMFeed_history.pm:529
-#: cgi/subs/subs_graphs_chartdirector.pm:402
+#: cgi/smartchart.cgi:36 cgi/subs/subs_graphs_chartdirector.pm:403
+#: lib/BOM/View/Charting.pm:468 lib/BOM/View/Charting.pm:606
 msgid "Relative Strength Index"
 msgstr "相对强度指数"
 
@@ -6042,11 +6001,11 @@ msgstr "相对强度指数"
 msgid "Reload Cashier"
 msgstr "重新加载收银台"
 
-#: cgi/subs/subs_plack.pm:267
+#: cgi/subs/subs_plack.pm:268
 msgid "Reload page"
 msgstr "重新加载页面"
 
-#: cgi/subs/subs_BOMFeed_history.pm:399
+#: lib/BOM/View/Charting.pm:476
 msgid "Remove Overlay"
 msgstr "删除覆盖"
 
@@ -6066,25 +6025,25 @@ msgstr "表示任一给定交易日您可以购买的交易的最大数量。"
 msgid "Required"
 msgstr "必填"
 
-#: lib/BOM/Product/Contract.pm:2901
+#: lib/BOM/Product/Contract.pm:2925
 msgid "Resale of this contract is not offered due to end-of-year market holidays."
 msgstr "因为年底市场休假，该合约此时尚未提供转售。"
 
-#: lib/BOM/Product/Contract.pm:2853
+#: lib/BOM/Product/Contract.pm:2877
 msgid "Resale of this contract is not offered due to market holiday during contract period."
 msgstr "因为合约期内市场休假，该合约不提供转售。"
 
-#: lib/BOM/Product/Contract.pm:2874
+#: lib/BOM/Product/Contract.pm:2898
 msgid "Resale of this contract is not offered due to market holidays during contract period."
 msgstr "因为合约期内市场休假，该合约不提供转售。"
 
 #. ($shortest->as_string)
-#: lib/BOM/Product/Contract.pm:2784
+#: lib/BOM/Product/Contract.pm:2808
 msgid "Resale of this contract is not offered with less than %1 remaining."
 msgstr "不允许转售少于%1的合约。"
 
-#: lib/BOM/Product/Contract.pm:2302 lib/BOM/Product/Contract.pm:2778
-#: lib/BOM/Product/Contract.pm:2825
+#: lib/BOM/Product/Contract.pm:2305 lib/BOM/Product/Contract.pm:2802
+#: lib/BOM/Product/Contract.pm:2849
 #: lib/BOM/Product/Pricing/Engine/Role/StandardMarkup.pm:171
 msgid "Resale of this contract is not offered."
 msgstr "该合约不提供转售。"
@@ -6113,18 +6072,18 @@ msgstr "可靠的交易"
 msgid "Result"
 msgstr "结果"
 
-#: cgi/subs/subs_BOMFeed_history.pm:363
+#: lib/BOM/View/Charting.pm:440
 msgid "Retracement Percentages"
 msgstr "回撤百分比"
 
-#: cgi/subs/subs_BOMFeed_history.pm:437
+#: lib/BOM/View/Charting.pm:514
 msgid "Retry"
 msgstr "重新尝试"
 
 #: /home/git/translations/binary-static/src/templates/haml/get_started/glossary.html.haml:1
 #: /home/git/translations/binary-static/src/templates/haml/home/ticker.html.haml:1
 #: /home/git/translations/binary-static/src/templates/toolkit/bet/sell_success_ajax.html.tt:12
-#: cgi/oop/Controller/Bet.pm:470
+#: cgi/oop/Controller/Bet.pm:471
 msgid "Return"
 msgstr "回报"
 
@@ -6142,7 +6101,7 @@ msgstr "%1 与 %2 之交易能获取高于1000% 的回报。"
 msgid "Revoke Attorney"
 msgstr "撤销授权书"
 
-#: cgi/subs/subs_BOMFeed_history.pm:446
+#: lib/BOM/View/Charting.pm:523
 msgid "Right click to add studies, lines, overlays and more. You can save your work by choosing Workspace from the top menu"
 msgstr "右击以添加研究图、线图、覆盖图及更多。您可从顶部菜单选择“工作空间”(Workspace) 保存您的工作"
 
@@ -6173,7 +6132,7 @@ msgstr "上涨交易收益(%)"
 
 #: /home/git/translations/binary-static/src/templates/haml/get_started/random_markets.html.haml:1
 #: cgi/contract_demo.cgi:31 cgi/contract_guide.cgi:17
-#: cgi/oop/Controller/Bet.pm:1112 cgi/oop/Controller/Bet.pm:1119
+#: cgi/oop/Controller/Bet.pm:1113 cgi/oop/Controller/Bet.pm:1120
 msgid "Rise/Fall"
 msgstr "上升/下跌"
 
@@ -6203,7 +6162,7 @@ msgstr "风险免责声明"
 msgid "Russia"
 msgstr "俄罗斯"
 
-#: web/bin/JavascriptCompress.pm:126
+#: web/bin/GenerateStaticData.pm:126
 msgid "Sa"
 msgstr "星期六"
 
@@ -6218,31 +6177,31 @@ msgstr "出售日期"
 msgid "Sale Price"
 msgstr "销售价格"
 
-#: web/bin/JavascriptCompress.pm:73
+#: web/bin/GenerateStaticData.pm:73
 msgid "Saturday"
 msgstr "周六"
 
-#: cgi/subs/subs_BOMFeed_history.pm:378
+#: lib/BOM/View/Charting.pm:455
 msgid "Save"
 msgstr "保存"
 
-#: web/bin/JavascriptCompress.pm:63
+#: web/bin/GenerateStaticData.pm:63
 msgid "Save as CSV"
 msgstr "以CSV格式保存"
 
-#: web/bin/JavascriptCompress.pm:59
+#: web/bin/GenerateStaticData.pm:59
 msgid "Save as JPEG"
 msgstr "以JPEG格式保存"
 
-#: web/bin/JavascriptCompress.pm:62
+#: web/bin/GenerateStaticData.pm:62
 msgid "Save as PDF"
 msgstr "以PDG格式保存"
 
-#: web/bin/JavascriptCompress.pm:60
+#: web/bin/GenerateStaticData.pm:60
 msgid "Save as PNG"
 msgstr "以PNG格式保存"
 
-#: web/bin/JavascriptCompress.pm:61
+#: web/bin/GenerateStaticData.pm:61
 msgid "Save as SVG"
 msgstr "以SVG格式保存"
 
@@ -6344,11 +6303,11 @@ msgid "Send your funds to the payment agent. The deposited funds, less the agent
 msgstr "把款项寄送给支付代理。存款减去代理佣金的金额将会显示在您的%1账户中。"
 
 #: cgi/subs/subs_forms.pm:208 cgi/subs/subs_forms.pm:2326
-#: web/bin/JavascriptCompress.pm:82
+#: web/bin/GenerateStaticData.pm:82
 msgid "Sep"
 msgstr "九月"
 
-#: web/bin/JavascriptCompress.pm:94
+#: web/bin/GenerateStaticData.pm:94
 msgid "September"
 msgstr "九月"
 
@@ -6448,11 +6407,11 @@ msgstr "显示支付代理为："
 msgid "Sign Me Up"
 msgstr "我要注册"
 
-#: cgi/smartchart.cgi:46 cgi/subs/subs_graphs_chartdirector.pm:507
+#: cgi/smartchart.cgi:46 cgi/subs/subs_graphs_chartdirector.pm:508
 msgid "Simple"
 msgstr "简易"
 
-#: cgi/subs/subs_BOMFeed_history.pm:323
+#: lib/BOM/View/Charting.pm:400
 msgid "Simple Moving Average"
 msgstr "简单移动平均数"
 
@@ -6469,8 +6428,8 @@ msgstr "只需改变您的任一参数，交易价位即会立刻改变，让您
 msgid "Site"
 msgstr "网站"
 
-#: cgi/smartchart.cgi:37 cgi/subs/subs_BOMFeed_history.pm:491
-#: cgi/subs/subs_graphs_chartdirector.pm:416
+#: cgi/smartchart.cgi:37 cgi/subs/subs_graphs_chartdirector.pm:417
+#: lib/BOM/View/Charting.pm:568
 msgid "Slow Stochastic"
 msgstr "慢速随机"
 
@@ -6514,7 +6473,7 @@ msgstr "对不起，由于系统维护，汇款给代理人之支付暂停。请
 msgid "Sorry, access to the CASHIER SECTION is disabled for TRADING AGENT accounts. This is to protect you from accidentally attempting to place real money contracts via this account instead of using it to place trades for authorised third parties."
 msgstr "抱歉，交易代理账户无法访问出纳员部分。这样做是为了防止您意外通过该账户试图制订真实货币交易，而不是通过它为授权第三方进行交易。"
 
-#: cgi/oop/Controller/Bet.pm:701
+#: cgi/oop/Controller/Bet.pm:702
 msgid "Sorry, an error occured with this trade.  Please try again in a few minutes.  If the problem persists, please contact customer support."
 msgstr "对不起，此交易发生错误。请数分钟后再试。如果问题持续出现，请联系客服支援部。"
 
@@ -6536,7 +6495,7 @@ msgstr "对不起，在处理您的帐户时出错。"
 msgid "Sorry, broker %1 does not allow transfers from payment agents."
 msgstr "抱歉，经纪商 %1 不允许从付款代理处进行转账。"
 
-#: cgi/create_account.cgi:70
+#: cgi/create_account.cgi:71
 msgid "Sorry, new account opening is suspended for the time being."
 msgstr "对不起，目前暂停开设新帐户。"
 
@@ -6589,7 +6548,7 @@ msgid "Sorry, the Payment Agent's currency "
 msgstr "对不起，该支付代理人之货币 "
 
 #. ($max_payout_limit, $currency, $client_agg_payouts, $payout)
-#: lib/BOM/Product/Transaction.pm:1044
+#: lib/BOM/Product/Transaction.pm:1045
 msgid "Sorry, the aggregate payouts of contracts on your account cannot exceed %2%1. The current aggregate payout of contracts on your account is %2%3 therefore you cannot buy a contract that would pay out an additional %2%4."
 msgstr "抱歉，您账户的%合约(复数）总交易额不能超过%2%1。您账户当前的%合约总交易额为%2%3所以您不能购买一份会购买交易额%2%4的%合约(单数) 。"
 
@@ -6609,7 +6568,7 @@ msgstr "对不起，您可转换的最大金额为"
 msgid "Sorry, the page cannot be found."
 msgstr "抱歉，无法找到页面。"
 
-#: lib/BOM/Product/Transaction.pm:1010
+#: lib/BOM/Product/Transaction.pm:1011
 msgid "Sorry, the same contract cannot be purchased more than once. You already have an identical contract in your account."
 msgstr "对不起，对同一合约的购买不能超过一次。您的帐户中已有相同合约。"
 
@@ -6638,7 +6597,7 @@ msgid "Sorry, you are too young to open an account."
 msgstr "对不起，您的年龄太小，不可以开设帐户。"
 
 #. ($max_open_positions_limit)
-#: lib/BOM/Product/Transaction.pm:1028
+#: lib/BOM/Product/Transaction.pm:1029
 msgid "Sorry, you cannot hold more than %1 contracts at a given time. Please sell some of your existing contracts before buying any more."
 msgstr "对不起，在给定时间内您不可持有超过 %1 的合约。请在购买更多合约之前出售一些现有合约。"
 
@@ -6681,7 +6640,7 @@ msgid "Sorry, your account balance is more than %1. You may not claim extra fund
 msgstr "在您的帐户余额低于下列金额之前，您不可要求额外资金。"
 
 #. ("$currency$balance",                to_monetary_number_format($account_balance_limit, 1)
-#: lib/BOM/Product/Transaction.pm:952
+#: lib/BOM/Product/Transaction.pm:953
 msgid "Sorry, your account cash balance is too high (%1). <B>Your maximum account balance is %2 </b>. Please withdraw money from your account to bring down your cash balance under that amount. You may not trade until you do so."
 msgstr "对不起，您的帐户现金余额过高 (%1)。<B>您帐户最大余额是%2</b>。请从您的帐户中提款以使现金余额降至该金额以下。在此之前您不能交易。"
 
@@ -6689,7 +6648,7 @@ msgstr "对不起，您的帐户现金余额过高 (%1)。<B>您帐户最大余�
 msgid "Sorry, your account has got stuck in a previous transaction that did not complete. If this error persists, please contact customer support."
 msgstr "对不起，您的帐户正在进行上次未完成的交易。如果此错误持续出现，请联系客服支援部。"
 
-#: lib/BOM/Product/Transaction.pm:913
+#: lib/BOM/Product/Transaction.pm:914
 msgid "Sorry, your account is not authorised for any further contract purchases."
 msgstr "很抱歉，您的账户未授权进一步购买任何合约。"
 
@@ -6732,7 +6691,7 @@ msgid "Stake"
 msgstr "资金"
 
 #. (to_monetary_number_format($stake_min, 1)
-#: lib/BOM/Product/Contract.pm:1816
+#: lib/BOM/Product/Contract.pm:1819
 msgid "Stake must be between <strong>%1</strong> and <strong>%2</strong>."
 msgstr "交易额必须介于<strong>%1</strong>和<strong>%2</strong>之间。"
 
@@ -6740,7 +6699,7 @@ msgstr "交易额必须介于<strong>%1</strong>和<strong>%2</strong>之间。"
 msgid "Standard expiry"
 msgstr "标准期满"
 
-#: cgi/analyse_contract.cgi:100 web/bin/JavascriptCompress.pm:112
+#: cgi/analyse_contract.cgi:100 web/bin/GenerateStaticData.pm:112
 msgid "Start Time"
 msgstr "开始时间"
 
@@ -6754,20 +6713,20 @@ msgstr "网上交易风险"
 msgid "Start time"
 msgstr "（开始时间）"
 
-#: lib/BOM/Product/Contract.pm:2588 lib/BOM/Product/Transaction.pm:365
+#: lib/BOM/Product/Contract.pm:2612 lib/BOM/Product/Transaction.pm:365
 msgid "Start time is in the past"
 msgstr "开始时间是在过去"
 
-#: lib/BOM/Product/Contract.pm:2578
+#: lib/BOM/Product/Contract.pm:2602
 msgid "Start time is invalid."
 msgstr "开始时间无效。"
 
-#: lib/BOM/Product/Contract.pm:2568
+#: lib/BOM/Product/Contract.pm:2592
 msgid "Start time must be before expiry time."
 msgstr "起始时间必须早于终止时间。"
 
 #. ($forward_starting_blackout->as_string)
-#: lib/BOM/Product/Contract.pm:2621
+#: lib/BOM/Product/Contract.pm:2645
 msgid "Start time on forward-starting contracts must be more than %1 from now."
 msgstr "从现在开始，远期启动合约之起始时间必须超过 %1。"
 
@@ -6797,7 +6756,7 @@ msgstr "静态内容"
 msgid "Statistic"
 msgstr "统计"
 
-#: cgi/subs/subs_BOMFeed_history.pm:403
+#: lib/BOM/View/Charting.pm:480
 msgid "Statistics"
 msgstr "统计"
 
@@ -6806,7 +6765,7 @@ msgstr "统计"
 msgid "Stay informed. %1 offers daily market reports and market research, as well as frequent trading webinars."
 msgstr "通过 %1 的每日市场报告及市场调查，还有经常都在进行的交易讨论会保持灵通消息。"
 
-#: cgi/contract_demo.cgi:72 cgi/oop/Controller/Bet.pm:1179
+#: cgi/contract_demo.cgi:72 cgi/oop/Controller/Bet.pm:1180
 msgid "Stays Between/Goes Outside"
 msgstr "保持在范围之内/超出范围之外"
 
@@ -6831,32 +6790,32 @@ msgstr "步骤 2：获取交易报价"
 msgid "Step 3: Make your trade"
 msgstr "步骤 3：执行交易"
 
-#: cgi/smartchart.cgi:38 cgi/subs/subs_BOMFeed_history.pm:535
-#: cgi/subs/subs_graphs_chartdirector.pm:427
+#: cgi/smartchart.cgi:38 cgi/subs/subs_graphs_chartdirector.pm:428
+#: lib/BOM/View/Charting.pm:612
 msgid "StochRSI"
 msgstr "随机 RSI"
 
-#: cgi/subs/subs_BOMFeed_history.pm:335
+#: lib/BOM/View/Charting.pm:412
 msgid "Stochastic Fast"
 msgstr "随机快速"
 
-#: cgi/subs/subs_BOMFeed_history.pm:443
+#: lib/BOM/View/Charting.pm:520
 msgid "Stochastic Fast %D"
 msgstr "随机快速 %D"
 
-#: cgi/subs/subs_BOMFeed_history.pm:374
+#: lib/BOM/View/Charting.pm:451
 msgid "Stochastic Fast %K"
 msgstr "随机快速 %K"
 
-#: cgi/subs/subs_BOMFeed_history.pm:322
+#: lib/BOM/View/Charting.pm:399
 msgid "Stochastic Slow"
 msgstr "随机慢速"
 
-#: cgi/subs/subs_BOMFeed_history.pm:324
+#: lib/BOM/View/Charting.pm:401
 msgid "Stochastic Slow %D"
 msgstr "随机慢速 %D"
 
-#: cgi/subs/subs_BOMFeed_history.pm:419
+#: lib/BOM/View/Charting.pm:496
 msgid "Stochastic Slow %K"
 msgstr "随机慢速 %K"
 
@@ -6880,7 +6839,7 @@ msgstr "股市指数测量了股市里所选的公司价值。"
 msgid "Study our live charts"
 msgstr "观察我们的实时图表"
 
-#: web/bin/JavascriptCompress.pm:120
+#: web/bin/GenerateStaticData.pm:120
 msgid "Su"
 msgstr "星期日"
 
@@ -6903,7 +6862,7 @@ msgstr "这些材料可能会被复制或以非商业目的而进行有限分配
 msgid "Summary"
 msgstr "摘要"
 
-#: web/bin/JavascriptCompress.pm:67
+#: web/bin/GenerateStaticData.pm:67
 msgid "Sunday"
 msgstr "周日"
 
@@ -6919,11 +6878,11 @@ msgstr "支持的银行（这一领域只从办公室可见） **"
 msgid "Supported banks list is invalid"
 msgstr "支持的银行名单是无效的"
 
-#: cgi/subs/subs_BOMFeed_history.pm:367
+#: lib/BOM/View/Charting.pm:444
 msgid "Switch to full screen mode"
 msgstr "切换到全展模式"
 
-#: cgi/subs/subs_BOMFeed_history.pm:427
+#: lib/BOM/View/Charting.pm:504
 msgid "Switch to normal mode"
 msgstr "切换到普通模式"
 
@@ -6935,8 +6894,8 @@ msgstr "系统时间"
 msgid "System problems prevent proper settlement at this time."
 msgstr "系统问题，避免在此时进行结算。"
 
-#: cgi/smartchart.cgi:39 cgi/subs/subs_BOMFeed_history.pm:498
-#: cgi/subs/subs_graphs_chartdirector.pm:441
+#: cgi/smartchart.cgi:39 cgi/subs/subs_graphs_chartdirector.pm:442
+#: lib/BOM/View/Charting.pm:575
 msgid "TRIX"
 msgstr "TRIX（三重指数平滑移动平均数）"
 
@@ -6948,7 +6907,7 @@ msgstr "表"
 msgid "Talk to us"
 msgstr "跟我们交谈"
 
-#: cgi/subs/subs_BOMFeed_history.pm:337
+#: lib/BOM/View/Charting.pm:414
 msgid "Target"
 msgstr "目标"
 
@@ -6956,8 +6915,7 @@ msgstr "目标"
 msgid "Team"
 msgstr "团队"
 
-#: cgi/subs/subs_BOMFeed_history.pm:548
-#: cgi/subs/subs_graphs_chartdirector.pm:212
+#: cgi/subs/subs_graphs_chartdirector.pm:213 lib/BOM/View/Charting.pm:625
 msgid "Technical Indicator derived from subtracting Aroon Down from Aroon Up. As Aroon Up and Aroon Down oscillate between 0 and 100, the Aroon Oscillator oscillates between -100 and 100 with zero as the centre crossover line."
 msgstr "技术指标由阿隆上升线减去阿隆下行线得出。随着阿隆上升线和下行线在 0 到 100 之间摆动，阿隆摆动指标在 -100 和 100 之间摆动，以零作为中间跨界线。"
 
@@ -7000,7 +6958,7 @@ msgstr "条款和条件"
 msgid "Test-run %1, and sharpen your trading skills, with a no-risk, no-commitment, virtual account."
 msgstr "立即试用 %1，锻炼您的交易技能，体验无风险、无承诺的虚拟账户。"
 
-#: web/bin/JavascriptCompress.pm:124
+#: web/bin/GenerateStaticData.pm:124
 msgid "Th"
 msgstr "星期四"
 
@@ -7170,18 +7128,15 @@ msgstr "此 Binary.com 移动应用以<a target=\"_blank\" href=\"%1\">Phonegap<
 msgid "The Binary.com website’s static content (CSS, Javascript) is available as the <a target=\"_blank\" href=\"%1\">binary-static</a> open-source project on github. Would you like to re-skin the Binary.com website, or improve browser compatibility, site rendering speed, or Javascript performance? Please fork the project and submit pull-requests of your suggested code changes."
 msgstr "Binary.com网站的静态内容（CSS，Javascript）可在github以<a target=\"_blank\" href=\"%1\">二进制静态</a>开源项目中使用。你是否想重新设定Binary.com网站的设计版面，或提高浏览器的兼容性，网站的成像速度，或者Javascript性能？请用把项目抓住(fork)并提交您所建议的代码更改之拉(pull)请求。"
 
-#: cgi/subs/subs_BOMFeed_history.pm:501
-#: cgi/subs/subs_graphs_chartdirector.pm:305
+#: cgi/subs/subs_graphs_chartdirector.pm:306 lib/BOM/View/Charting.pm:578
 msgid "The CCI is a timing system that is best applied to commodity contracts, which have cyclical or seasonal tendencies. CCI does not determine the length of cycles - it is designed to detect when such cycles begin and end through the use of a statistical analysis which incorporates a moving average and a divisor reflecting both the possible and actual trading ranges."
 msgstr "CCI 是一个用于商品契约的最佳定时系统，提供周期或季节趋势。CCI 不确定周期长度，通过使用整合移动平均数和除数的统计分析，反映可能和实际的交易范围，其旨在用于探测周期何时开始和结束。"
 
-#: cgi/subs/subs_BOMFeed_history.pm:560
-#: cgi/subs/subs_graphs_chartdirector.pm:298
+#: cgi/subs/subs_graphs_chartdirector.pm:299 lib/BOM/View/Charting.pm:637
 msgid "The CLV is an indicator based on the location of close related to low and high for the period. It is used to spot the tendency in the price movements."
 msgstr "CLV 是基于与期间的交易高点和低点相关的收盘位置的指标。其用于找出价格变动趋势。"
 
-#: cgi/subs/subs_BOMFeed_history.pm:557
-#: cgi/subs/subs_graphs_chartdirector.pm:283
+#: cgi/subs/subs_graphs_chartdirector.pm:284 lib/BOM/View/Charting.pm:634
 msgid "The Chaikin Volatility function determines the volatility of a financial data series using the percent change in a moving average of the high versus low price over a given time."
 msgstr "利用给定时间内的高低价格移动平均数的变化百分比，蔡金波动函数确定金融数据系列的波动性。"
 
@@ -7287,8 +7242,7 @@ msgstr "Cyberjaya 的 Cyberview Lodge Resort 度假酒店"
 msgid "The Data Protection laws and regulations place obligations on users of personal data and lay down principles for fair and lawful processing of this information. We are committed to safeguarding your privacy online. We only use your personal information to help us service your account, to improve our services to you, and to provide you with products you have requested. We do not sell your personal information to third parties, but we may provide your personal information to payment providers to facilitate transactions on your account."
 msgstr "数据保护法律及法规对个人信息的使用者设定了义务，并规定了公平合法处理这些信息的原则。我们承诺保护你的在线隐私。我们仅使用你的个人信息服务你的账户、改善对你的服务和为你提供要求的产品。我们不会向第三方销售你的信息，但是我们可能会向支付提供者提供你个人信息以方便交易。"
 
-#: cgi/subs/subs_BOMFeed_history.pm:493
-#: cgi/subs/subs_graphs_chartdirector.pm:319
+#: cgi/subs/subs_graphs_chartdirector.pm:320 lib/BOM/View/Charting.pm:570
 msgid "The Detrended Price Oscillator compares closing price to a prior moving average, eliminating cycles longer than the moving average."
 msgstr "非趋势价格摆动指标对比收盘价格和先前的移动平均数，消除长于移动平均数的周期。"
 
@@ -7309,8 +7263,7 @@ msgstr "英镑指数是加权指数，衡量英镑兑换5种全球货币（美�
 msgid "The JSON structure which supplied the access_token also included a refresh_token.  Supply this in the following call:"
 msgstr "提供access_token的JSON结构还包括refresh_token。 在下面的调用提供这个："
 
-#: cgi/subs/subs_BOMFeed_history.pm:461
-#: cgi/subs/subs_graphs_chartdirector.pm:363
+#: cgi/subs/subs_graphs_chartdirector.pm:364 lib/BOM/View/Charting.pm:538
 msgid "The Mass Index attempts to predict reversals by comparing the trading range (High minus Low) for each period. Reversals are signalled by a bulge in the index line."
 msgstr "梅斯指数试图通过对比每个期间的交易范围（高减低）预测逆转。逆转表现为指数曲线中的突起。"
 
@@ -7318,13 +7271,11 @@ msgstr "梅斯指数试图通过对比每个期间的交易范围（高减低）
 msgid "The Mid price represents the average of the Bid and Ask."
 msgstr "中间价代表出价和报价之间的平均数。"
 
-#: cgi/subs/subs_BOMFeed_history.pm:478
-#: cgi/subs/subs_graphs_chartdirector.pm:351
+#: cgi/subs/subs_graphs_chartdirector.pm:352 lib/BOM/View/Charting.pm:555
 msgid "The Moving Average Convergence/Divergence (MACD) indicator is a trend following indicator and is designed to identify trend changes.The MACD is an oscillator based on two exponential moving averages of a share price. Three lines are shown. The \"MACD\" line is calculated as the difference between the two moving averages (usually based on 12- and 26- day averages). The \"signal\" line is a 9-day smoothed average of the standard MACD line, and is sometimes referred to as the \"slow\" MACD line."
 msgstr "指数平滑异动移动平均线（MACD)指数是一个趋势跟踪指数，用于判断趋势变化。MACD是一个震荡指标，以一个股票价格的两个价格指数平均数指标为基础。共显示三条线。MACD线计算的是两个移动平均线之间的差（通常是12日和26日平均线）。而\"信号\"线则是标准MACD线的9日平滑平均线，有时候也被称为\"缓慢\" MACD线。"
 
-#: cgi/subs/subs_BOMFeed_history.pm:507
-#: cgi/subs/subs_graphs_chartdirector.pm:377
+#: cgi/subs/subs_graphs_chartdirector.pm:378 lib/BOM/View/Charting.pm:584
 msgid "The Performance indicator displays a security's price performance as a percentage. This is sometimes called a \"normalized\" chart. The Performance indicator displays the percentage that the security has increased since the first period displayed. For example, if the Performance indicator is 10, it means that the security's price has increased 10% since the first period displayed on the left side of the chart. Similarly, a value of -10% means that the security's price has fallen by 10% since the first period displayed.Performance charts are helpful for comparing the price movements of different securities."
 msgstr "绩效指标以百分数的形式显示一个股票的价格绩效，有时候又被称为\"标准化\"表格。绩效指标在首期显示后股票上涨的百分比。比如，如果效益指标为10，意味着股票价格在左侧表格显示首期后上涨了10%。同理，-10%的值意味着价格的股票自首期显示后下降了10%。绩效表格非常有助于比较不同股票的价格变动。"
 
@@ -7332,13 +7283,11 @@ msgstr "绩效指标以百分数的形式显示一个股票的价格绩效，有
 msgid "The Program"
 msgstr "计划"
 
-#: cgi/subs/subs_BOMFeed_history.pm:496
-#: cgi/subs/subs_graphs_chartdirector.pm:396
+#: cgi/subs/subs_graphs_chartdirector.pm:397 lib/BOM/View/Charting.pm:573
 msgid "The Rate of Change indicator (ROC) is a way of showing how rapidly the price of a particular share (or other financial instrument) is moving. The theory is that if a price is rising (or falling) very quickly there will soon come a time when it is thought to be overbought (or oversold). When this occurs the price may still continue to rise (or fall), but not as rapidly as it was before."
 msgstr "变动率指标 (ROC) 是表示特定股票（或其它金融工具）的价格变动速率的方式。根据该理论，若价格快速上升（或下跌），将会很快出现对其过多买进（或过多卖出）的时间期间。当发生这样的情况时，价格可能仍然持续上升（或下跌），但不再象之前一样迅速。"
 
-#: cgi/subs/subs_BOMFeed_history.pm:520
-#: cgi/subs/subs_graphs_chartdirector.pm:404
+#: cgi/subs/subs_graphs_chartdirector.pm:405 lib/BOM/View/Charting.pm:597
 msgid "The Relative Strength Index (RSI) measures a share price relative to itself and its recent history. It is calculated as the average of the prices for days where the price rose divided by the average of the prices for days where the price fell. The RSI ranges between 0 and 100.A 70+ level could indicate that a share is overbought, meaning that the speculator should consider selling. Or conversely oversold at the 30 level. The principle is that when there's a high proportion of daily movement in one direction it suggests an extreme, and prices are likely to reverse."
 msgstr "相对强弱指标(RSI)衡量的股票与其自身比较的价格及其最近的历史。它的计算是用价格上涨时的多日价格平均数除以价格下降时的价格平均数。RSI范围为0至100。当达到70+的水平即显示股票超买，意味着空方可能考虑出售股票。相反，在30水平值时为超卖。这其中的原则是，当某天出现某个方向的高比例移动，就意味着一个极限，价格很可能出现反转。"
 
@@ -7346,9 +7295,8 @@ msgstr "相对强弱指标(RSI)衡量的股票与其自身比较的价格及其�
 msgid "The Spread represents the difference between the Bid and Ask."
 msgstr "差价代表出价和报价之间的差距。"
 
-#: cgi/subs/subs_BOMFeed_history.pm:544
-#: cgi/subs/subs_graphs_chartdirector.pm:340
-#: cgi/subs/subs_graphs_chartdirector.pm:418
+#: cgi/subs/subs_graphs_chartdirector.pm:341
+#: cgi/subs/subs_graphs_chartdirector.pm:419 lib/BOM/View/Charting.pm:621
 msgid "The Stochastic Oscillator is a momentum indicator that shows the location of the current close relative to the high/low range over a set number of periods. The Stochastic Oscillator is made up of two lines that oscillate between a vertical scale of 0 to 100. The %K is the main line and it is drawn as a solid line. The second is the %D line and is a moving average of %K. The %D line is drawn as a dotted line. The Fast Stochastic is the average of the last three %K and a Slow Stochastic is a three day average of the Fast Stochastic."
 msgstr "随机摆动指标是一个动量指标，指示相对于一系列期间内的高/低范围的当前收盘位置。随机摆动指标由两条线组成，这两条线在垂直刻度 0 至 100 之间摆动，%K 是主线，标示为实线。第二条线是 %D 线，是 %K 的移动平均数。%D 线标示为虚线。快速随机是最后三条 %K 线的平均数，慢速随机是快速随机的三天平均值。"
 
@@ -7373,8 +7321,8 @@ msgstr "反洗黑钱程序对客户提供以下的效果："
 msgid "The average is the average of the ticks, including the first and the last tick."
 msgstr "平均价位是逐笔交易，包括第一和最后一个交易点的平均值。"
 
-#: cgi/subs/subs_graphs_chartdirector.pm:262
-#: cgi/subs/subs_graphs_chartdirector.pm:487
+#: cgi/subs/subs_graphs_chartdirector.pm:263
+#: cgi/subs/subs_graphs_chartdirector.pm:488
 msgid "The bandwidth to compute the indicator"
 msgstr "指标计算的带宽"
 
@@ -7435,7 +7383,7 @@ msgstr "对于超过 24 个月无交易记录的所有客户账户，本公司�
 msgid "The content on this website is subject to change at any time without notice and is provided for the sole purpose of assisting traders in making independent investment decisions.  %1 has taken reasonable measures to ensure the accuracy of the information on the website, however, the company does not guarantee its accuracy and will not accept liability for any loss or damage which may arise directly or indirectly from the content or your inability to access the website, for any delay in or failure of the transmission or the receipt of any instruction or notification sent through this website."
 msgstr "网站上的内容可在任何时候不经通知发生改变，仅为了帮助交易员做出独立的投资决策的目的。%1 采取了合理措施确保网站信息的准确性，但是公司并不保证准确性，也不为因网站内容及你无法登陆网站导致的任何直接或间接损失或损害或延迟或未能通过网站传输或收到任何指示和通知而承担责任。"
 
-#: lib/BOM/Product/Transaction.pm:663
+#: lib/BOM/Product/Transaction.pm:664
 msgid "The contract has expired"
 msgstr "该交易已失效"
 
@@ -7449,7 +7397,7 @@ msgid "The contract must expire on a trading day."
 msgstr "该合约必须在交易日失效。"
 
 #. ($currency,                        to_monetary_number_format($amount)
-#: lib/BOM/Product/Transaction.pm:706
+#: lib/BOM/Product/Transaction.pm:707
 msgid "The contract payout has changed from %1%2 to %1%3."
 msgstr "合同支出已从%1%2 改成 %1%3。"
 
@@ -7458,7 +7406,7 @@ msgid "The contract period is the timeframe of a trade. It is also called the du
 msgstr "合约时期是一个交易的时间框位。也称为期间。"
 
 #. ($currency,                        to_monetary_number_format($amount)
-#: lib/BOM/Product/Transaction.pm:699
+#: lib/BOM/Product/Transaction.pm:700
 msgid "The contract price has changed from %1%2 to %1%3."
 msgstr "合同价格已从从 %1%2 变为 %1%3。"
 
@@ -7474,11 +7422,11 @@ msgstr "您奖金的货币类型将与您首次存款的货币类型相同。"
 msgid "The database is not yet updated with settlement data."
 msgstr "数据库未进行结算数据更新。"
 
-#: cgi/subs/subs_graphs_chartdirector.pm:312
-#: cgi/subs/subs_graphs_chartdirector.pm:411
-#: cgi/subs/subs_graphs_chartdirector.pm:436
-#: cgi/subs/subs_graphs_chartdirector.pm:460
-#: cgi/subs/subs_graphs_chartdirector.pm:475
+#: cgi/subs/subs_graphs_chartdirector.pm:313
+#: cgi/subs/subs_graphs_chartdirector.pm:412
+#: cgi/subs/subs_graphs_chartdirector.pm:437
+#: cgi/subs/subs_graphs_chartdirector.pm:461
+#: cgi/subs/subs_graphs_chartdirector.pm:476
 msgid "The distance between the middle line and the upper and lower threshold lines"
 msgstr "中间线与上限线和下限线之间的距离"
 
@@ -7528,7 +7476,7 @@ msgstr "首个跳动点即在我们服务器处理合约后之首个跳动点。
 msgid "The market exit price is the price in effect at the end of the contract period."
 msgstr "市场平仓价为合约交易终止时的有效价格。"
 
-#: lib/BOM/Product/Contract.pm:2594
+#: lib/BOM/Product/Contract.pm:2618
 msgid "The market must be open at the start time."
 msgstr "开始时市场必须已经开市。"
 
@@ -7547,12 +7495,12 @@ msgstr "客户可能招致的最大损失就是其向本公司支付的投资成
 msgid "The most important benefit of using OAuth2.0 is that the end-users, who already have valid logins at %1, are able to leverage new applications to execute various trading activities, without these applications needing to know or \"see\" the end-users security credentials."
 msgstr "使用OAuth2.0的最重要的好处是,在 ％1 已经拥有有效的登录名之最终用户将能够利用新的应用程序，以执行各种交易活动，而这些应用程序无需知道或“看到”最终用户的安全凭据。"
 
-#: cgi/subs/subs_graphs_chartdirector.pm:357
-#: cgi/subs/subs_graphs_chartdirector.pm:390
+#: cgi/subs/subs_graphs_chartdirector.pm:358
+#: cgi/subs/subs_graphs_chartdirector.pm:391
 msgid "The moving average period of the signal line"
 msgstr "单线的移动平均数周期"
 
-#: cgi/subs/subs_plack.pm:279
+#: cgi/subs/subs_plack.pm:280
 msgid "The page has timed out. This may be due to a slow Internet connection, or to excess load on our servers.  Please try again in a few moments."
 msgstr "此页已超时。这可能因为互联网连接速度慢，或因为我们的服务器负载过高。请稍后重新尝试。"
 
@@ -7564,59 +7512,59 @@ msgstr "该专利意味着 Regent Markets 为公认的二元投注先驱。这�
 msgid "The payout is the amount paid to an options trader if their prediction is correct."
 msgstr "目标收入即交易者预测正确所获得的金额。"
 
-#: cgi/subs/subs_graphs_chartdirector.pm:355
 #: cgi/subs/subs_graphs_chartdirector.pm:356
-#: cgi/subs/subs_graphs_chartdirector.pm:388
+#: cgi/subs/subs_graphs_chartdirector.pm:357
 #: cgi/subs/subs_graphs_chartdirector.pm:389
-#: cgi/subs/subs_graphs_chartdirector.pm:455
+#: cgi/subs/subs_graphs_chartdirector.pm:390
 #: cgi/subs/subs_graphs_chartdirector.pm:456
 #: cgi/subs/subs_graphs_chartdirector.pm:457
-#: cgi/subs/subs_graphs_chartdirector.pm:502
-#: cgi/subs/subs_graphs_chartdirector.pm:512
-#: cgi/subs/subs_graphs_chartdirector.pm:520
-#: cgi/subs/subs_graphs_chartdirector.pm:528
-#: cgi/subs/subs_graphs_chartdirector.pm:536
+#: cgi/subs/subs_graphs_chartdirector.pm:458
+#: cgi/subs/subs_graphs_chartdirector.pm:503
+#: cgi/subs/subs_graphs_chartdirector.pm:513
+#: cgi/subs/subs_graphs_chartdirector.pm:521
+#: cgi/subs/subs_graphs_chartdirector.pm:529
+#: cgi/subs/subs_graphs_chartdirector.pm:537
 msgid "The period for the moving average"
 msgstr "移动平均数周期"
 
 #. ('%K')
 #. ('%D')
-#: cgi/subs/subs_graphs_chartdirector.pm:344
 #: cgi/subs/subs_graphs_chartdirector.pm:345
-#: cgi/subs/subs_graphs_chartdirector.pm:422
+#: cgi/subs/subs_graphs_chartdirector.pm:346
 #: cgi/subs/subs_graphs_chartdirector.pm:423
+#: cgi/subs/subs_graphs_chartdirector.pm:424
 msgid "The period to compute the %1 line"
 msgstr "%1 线计算期间"
 
-#: cgi/subs/subs_graphs_chartdirector.pm:223
-#: cgi/subs/subs_graphs_chartdirector.pm:238
-#: cgi/subs/subs_graphs_chartdirector.pm:246
-#: cgi/subs/subs_graphs_chartdirector.pm:254
-#: cgi/subs/subs_graphs_chartdirector.pm:261
-#: cgi/subs/subs_graphs_chartdirector.pm:270
-#: cgi/subs/subs_graphs_chartdirector.pm:309
-#: cgi/subs/subs_graphs_chartdirector.pm:322
-#: cgi/subs/subs_graphs_chartdirector.pm:328
-#: cgi/subs/subs_graphs_chartdirector.pm:372
-#: cgi/subs/subs_graphs_chartdirector.pm:399
-#: cgi/subs/subs_graphs_chartdirector.pm:408
-#: cgi/subs/subs_graphs_chartdirector.pm:433
-#: cgi/subs/subs_graphs_chartdirector.pm:446
-#: cgi/subs/subs_graphs_chartdirector.pm:472
-#: cgi/subs/subs_graphs_chartdirector.pm:486
-#: cgi/subs/subs_graphs_chartdirector.pm:493
+#: cgi/subs/subs_graphs_chartdirector.pm:224
+#: cgi/subs/subs_graphs_chartdirector.pm:239
+#: cgi/subs/subs_graphs_chartdirector.pm:247
+#: cgi/subs/subs_graphs_chartdirector.pm:255
+#: cgi/subs/subs_graphs_chartdirector.pm:262
+#: cgi/subs/subs_graphs_chartdirector.pm:271
+#: cgi/subs/subs_graphs_chartdirector.pm:310
+#: cgi/subs/subs_graphs_chartdirector.pm:323
+#: cgi/subs/subs_graphs_chartdirector.pm:329
+#: cgi/subs/subs_graphs_chartdirector.pm:373
+#: cgi/subs/subs_graphs_chartdirector.pm:400
+#: cgi/subs/subs_graphs_chartdirector.pm:409
+#: cgi/subs/subs_graphs_chartdirector.pm:434
+#: cgi/subs/subs_graphs_chartdirector.pm:447
+#: cgi/subs/subs_graphs_chartdirector.pm:473
+#: cgi/subs/subs_graphs_chartdirector.pm:487
+#: cgi/subs/subs_graphs_chartdirector.pm:494
 msgid "The period to compute the indicator"
 msgstr "指标计算期间"
 
-#: cgi/subs/subs_graphs_chartdirector.pm:291
+#: cgi/subs/subs_graphs_chartdirector.pm:292
 msgid "The period to compute the rate of change of the smoothed range"
 msgstr "平滑范围变动率计算期间"
 
-#: cgi/subs/subs_graphs_chartdirector.pm:335
+#: cgi/subs/subs_graphs_chartdirector.pm:336
 msgid "The period to smooth the indicator"
 msgstr "指标平滑期间"
 
-#: cgi/subs/subs_graphs_chartdirector.pm:287
+#: cgi/subs/subs_graphs_chartdirector.pm:288
 msgid "The period to smooth the range"
 msgstr "范围平滑期间"
 
@@ -7633,18 +7581,18 @@ msgid "The profit is the difference between the purchase price (the stake) and t
 msgstr "利润即赢利交易中所得之获利和购买价格（成本）之间的差别。"
 
 #. ($currency)
-#: lib/BOM/Product/Transaction.pm:482
+#: lib/BOM/Product/Transaction.pm:483
 msgid "The provided currency %1 is invalid."
 msgstr "所提供的货币%1无效。"
 
 #. ($currency)
-#: lib/BOM/Product/Transaction.pm:474
+#: lib/BOM/Product/Transaction.pm:475
 msgid "The provided currency %1 is not the default currency"
 msgstr "所提供的货币%1不是预设货币"
 
 #. ($email)
 #. ($new_email)
-#: cgi/create_account.cgi:100 cgi/f_writepartics.cgi:116
+#: cgi/create_account.cgi:101 cgi/f_writepartics.cgi:116
 msgid "The provided email address %1 is already in use by another Login ID."
 msgstr "所提供的电邮地址%1已被另一登录 ID 使用。"
 
@@ -7652,7 +7600,7 @@ msgstr "所提供的电邮地址%1已被另一登录 ID 使用。"
 msgid "The random index is a stock index whose price is simulated using random numbers. Unlike real market stock indices whose prices depend on the prices of the individual stocks listed on an Exchange, the random stock index only relies on factors like volatility, previous index price (previous simulated price) and a random number to determine the price of the index. Due to the use of random numbers, the price (or direction) of the index cannot be predicted with certainty and thus behaves like a real market index. When the index is appended with a number, the number is the percentage volatility used in calculating the index price. For instance, the Random Index 25 uses a volatility of 25% in the calculation of the index price. The index started at 1000 on 16 May 2004."
 msgstr "“随机指数”是股票指数，其价由随机数字虚拟而成。不同于真实市场之股票指数价位基于一个兑换市场所展示的个别股票价位，随机股票指数只根据波动性，之前的指数价位（前次的虚拟价位）和一个随机号码来设定指数价位。因为所使用的是随机数字，指数价格（或走势）无法准确预测，因此它的表现与真实市场相似。当指数配上了一个数字，该数字将被采用为计算指数价位的百分比波动性。比如说，随即指数25采用25%的波动性来计算指数价位。在2004 年 5 月 16 日该指数始于1000。"
 
-#: cgi/subs/subs_graphs_chartdirector.pm:503
+#: cgi/subs/subs_graphs_chartdirector.pm:504
 msgid "The ratio above and below the moving average"
 msgstr "高于和低于移动平均数的比率"
 
@@ -7702,7 +7650,7 @@ msgstr "通过本网站完成的交易以及客户和本公司之间的关系由
 msgid "The two passwords that you entered do not match."
 msgstr "两次输入的密码不匹配。"
 
-#: lib/BOM/Product/Transaction.pm:693
+#: lib/BOM/Product/Transaction.pm:694
 msgid "The underlying market has moved too much since you priced the contract. "
 msgstr "自从您为交易定价后，标的市场已发生太大变化。 "
 
@@ -7816,8 +7764,8 @@ msgid "This Agreement may be terminated forthwith by either party on written not
 msgstr "如果一方重大违反本协议条款，且在能够补救的情况下于收到关于违约的书面通知后十五天内未能对该等违约进行补救，另一方可以通过书面通知的方式立即终止本协议。"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:128
-msgid "This Agreement shall be governed by and construed in accordance with the laws of the Bahamas (the \"Jurisdiction\"), you agree that the Jurisdiction's courts will have sole jurisdiction to settle any disputes that may arise in relation thereto. For such purposes, you irrevocably submit to the jurisdiction of the courts of the Jurisdiction in relation to any such dispute and you agree that any claim you might have against the Company shall only be brought before the courts of the Jurisdiction. In the event of any differences between the English version of this website and any other language, the English version shall prevail."
-msgstr "本协议受巴哈马联邦（“司法管辖地”）的法律管辖并依其解释。您同意，司法管辖地法院拥有就本协议产生的任何相关纠纷的专属司法管辖权。为此，您不可撤销地同意将该等纠纷的司法管辖权提交司法管辖地法院；并同意，您对公司享有的任何请求权只能在司法管辖地法院提起。本网站英语版与任何其他语言版存在不一致时，以英语版为准。"
+msgid "This Agreement shall be governed by and construed in accordance with the laws of Jersey (the \"Jurisdiction\"), you agree that the Jurisdiction's courts will have sole jurisdiction to settle any disputes that may arise in relation thereto. For such purposes, you irrevocably submit to the jurisdiction of the courts of the Jurisdiction in relation to any such dispute and you agree that any claim you might have against the Company shall only be brought before the courts of the Jurisdiction. In the event of any differences between the English version of this website and any other language, the English version shall prevail."
+msgstr "本协议受泽西（“司法管辖地”）的法律管辖并依其解释。您同意，司法管辖地法院拥有就本协议产生的任何相关纠纷的专属司法管辖权。为此，您不可撤销地同意将该等纠纷的司法管辖权提交司法管辖地法院；并同意，您对公司享有的任何请求权只能在司法管辖地法院提起。本网站英语版与任何其他语言版存在不一致时，以英语版为准。"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:112
 msgid "This Agreement shall commence on the date that the Company notifies you that your application to join the Company affiliates program has been successful and shall continue until terminated in accordance with this clause."
@@ -7856,11 +7804,11 @@ msgstr "这个调用会返回相同的JSON结构，可以从API控制台设备�
 msgid "This client cashier section is locked."
 msgstr "此客户的出纳部分已锁定。"
 
-#: lib/BOM/Product/Transaction.pm:778
+#: lib/BOM/Product/Transaction.pm:779
 msgid "This contract cannot be properly validated at this time."
 msgstr "此时该  交易 无法正确生效。"
 
-#: lib/BOM/Product/Contract.pm:1681
+#: lib/BOM/Product/Contract.pm:1684
 msgid "This contract has already expired."
 msgstr "合约已经失效。"
 
@@ -7877,7 +7825,7 @@ msgid "This contract has expired."
 msgstr "此交易已失效。"
 
 #. (to_monetary_number_format($custom_limit)
-#: lib/BOM/Product/Transaction.pm:855
+#: lib/BOM/Product/Transaction.pm:856
 msgid "This contract is limited to "
 msgstr "此交易只限于 "
 
@@ -7885,23 +7833,23 @@ msgstr "此交易只限于 "
 msgid "This contract is no longer offered."
 msgstr "该合约不再出售。"
 
-#: lib/BOM/Product/Transaction.pm:853
+#: lib/BOM/Product/Transaction.pm:854
 msgid "This contract is unavailable on this account."
 msgstr "此帐户不可使用该交易。"
 
-#: web/bin/JavascriptCompress.pm:128
+#: web/bin/GenerateStaticData.pm:128
 msgid "This contract lost"
 msgstr "此交易亏损"
 
-#: lib/BOM/Product/Contract.pm:2403
+#: lib/BOM/Product/Contract.pm:2406
 msgid "This contract offers no return."
 msgstr "该合约没有回利。"
 
-#: lib/BOM/Product/Transaction.pm:1349
+#: lib/BOM/Product/Transaction.pm:1350
 msgid "This contract was not found among your open positions."
 msgstr "在您的敞口头寸中未找到该交易。"
 
-#: web/bin/JavascriptCompress.pm:127
+#: web/bin/GenerateStaticData.pm:127
 msgid "This contract won"
 msgstr "此交易获利"
 
@@ -7918,10 +7866,6 @@ msgstr "此功能对虚拟货币帐户不可用"
 msgid "This is a $_ log"
 msgstr "这是个$_ log"
 
-#: frontend/lib/BOM/Web/Home.pm:19
-msgid "This is a log"
-msgstr "这是个 log"
-
 #. (BOM::Platform::Context::request()
 #: cgi/oop/Validation/Transaction/Payment.pm:115
 msgid "This is a virtual-money account. Please click <a class=\"pjaxload\" href=\"%1\">here</a> to open a real-money account and deposit funds."
@@ -7934,7 +7878,7 @@ msgstr "这是一个自动消息，提醒您下列情况：有一个来自 IP �
 
 #: /home/git/translations/binary-static/src/templates/toolkit/bet/form/barrier.html.tt:23
 #: /home/git/translations/binary-static/src/templates/toolkit/bet/form/barrier.html.tt:42
-#: cgi/oop/Controller/Bet.pm:2344
+#: cgi/oop/Controller/Bet.pm:2345
 msgid "This is an indicative barrier. Actual barrier will be the entry spot plus the barrier offset."
 msgstr "这是一个指示性的界线。实际的界线将是进入点加界线抵消。"
 
@@ -7967,7 +7911,7 @@ msgstr "这是为了确认您 %2 上的帐户 %1 的电子邮件地址已从 %3 
 msgid "This market closes early today at"
 msgstr "此市场今日在下列时间关闭"
 
-#: lib/BOM/Product/Contract.pm:2594
+#: lib/BOM/Product/Contract.pm:2618
 msgid "This market is presently closed."
 msgstr "本市场目前已收市。"
 
@@ -7997,7 +7941,7 @@ msgstr "本要约不能和其他任何要约一起使用。"
 msgid "This promotion is only available to new Clients. Existing or former Clients do not qualify. It is only available once to each Client."
 msgstr "本推广方案仅适用于新客户。现有或以往客户不符合条件。每一客户仅能获得一次。"
 
-#: lib/BOM/Product/Contract.pm:2303
+#: lib/BOM/Product/Contract.pm:2306
 msgid "This trade is not offered."
 msgstr "不提供此交易。"
 
@@ -8021,12 +7965,12 @@ msgstr "本网站由Regent Markets (IOM) Ltd.,在英国经营，地址为：Firs
 msgid "Throughout the term of this Agreement, you shall:"
 msgstr "在整个协议期间，您应当："
 
-#: web/bin/JavascriptCompress.pm:71
+#: web/bin/GenerateStaticData.pm:71
 msgid "Thursday"
 msgstr "周四"
 
 #: /home/git/translations/binary-static/src/templates/haml/get_started/glossary.html.haml:1
-#: cgi/subs/subs_BOMFeed_history.pm:333 cgi/subs/subs_BOMFeed_history.pm:372
+#: lib/BOM/View/Charting.pm:410 lib/BOM/View/Charting.pm:449
 msgid "Tick"
 msgstr "跳动点"
 
@@ -8034,7 +7978,7 @@ msgstr "跳动点"
 msgid "Tick by Tick"
 msgstr "逐笔"
 
-#: cgi/oop/Controller/Bet.pm:1127 cgi/oop/Controller/Bet.pm:1134
+#: cgi/oop/Controller/Bet.pm:1128 cgi/oop/Controller/Bet.pm:1135
 msgid "Ticks"
 msgstr "跳动点"
 
@@ -8042,7 +7986,7 @@ msgstr "跳动点"
 msgid "Tier"
 msgstr "层级"
 
-#: cgi/subs/subs_BOMFeed_history.pm:345
+#: lib/BOM/View/Charting.pm:422
 msgid "Tile"
 msgstr "平铺显示"
 
@@ -8055,7 +7999,7 @@ msgstr "时间"
 msgid "Times are changing. We increase payouts so our clients can make the most of their winning trades."
 msgstr "时代在变。我们增加了支付，以便我们的客户可以从所赢得交易中获取最大的收益。"
 
-#: cgi/subs/subs_BOMFeed_history.pm:413
+#: lib/BOM/View/Charting.pm:490
 msgid "Tip:"
 msgstr "提示："
 
@@ -8063,7 +8007,7 @@ msgstr "提示："
 msgid "Title"
 msgstr "职务"
 
-#: web/bin/JavascriptCompress.pm:65
+#: web/bin/GenerateStaticData.pm:65
 msgid "To"
 msgstr "要"
 
@@ -8123,7 +8067,7 @@ msgstr "如需在线联系我们的客服代表，请点击Live Help(在线帮�
 msgid "To:"
 msgstr "要:"
 
-#: cgi/subs/subs_BOMFeed_history.pm:398
+#: lib/BOM/View/Charting.pm:475
 msgid "Today's Bet"
 msgstr "今日预测"
 
@@ -8132,7 +8076,7 @@ msgid "Toll-Free number"
 msgstr "免费号码"
 
 #. ($safer_expiry->date)
-#: lib/BOM/Product/Contract.pm:2875
+#: lib/BOM/Product/Contract.pm:2899
 msgid "Too many market holidays during the contract period. Select an expiry date after %1."
 msgstr "该合约期间有太多市场假日。在 %1之后选择到期日。"
 
@@ -8154,7 +8098,7 @@ msgstr "触及/未触及"
 
 #: /home/git/translations/binary-static/src/templates/haml/get_started/random_markets.html.haml:1
 #: cgi/contract_demo.cgi:58 cgi/contract_demo.cgi:59 cgi/contract_guide.cgi:43
-#: cgi/oop/Controller/Bet.pm:1159 cgi/oop/Controller/Bet.pm:1166
+#: cgi/oop/Controller/Bet.pm:1160 cgi/oop/Controller/Bet.pm:1167
 msgid "Touch/No Touch"
 msgstr "触及/未触及"
 
@@ -8265,9 +8209,9 @@ msgstr "交易规则"
 
 #: /home/git/translations/binary-static/src/templates/haml/resources/index.html.haml:1
 #: /home/git/translations/binary-static/src/templates/toolkit/legal/datafeed.html.tt:29
-#: cgi/trading_times.cgi:15 lib/BOM/Product/Contract.pm:2271
-#: lib/BOM/Product/Contract.pm:2640 lib/BOM/Product/Contract.pm:2655
-#: lib/BOM/Product/Contract.pm:2671 lib/BOM/Product/Contract.pm:2844
+#: cgi/trading_times.cgi:15 lib/BOM/Product/Contract.pm:2274
+#: lib/BOM/Product/Contract.pm:2664 lib/BOM/Product/Contract.pm:2679
+#: lib/BOM/Product/Contract.pm:2695 lib/BOM/Product/Contract.pm:2868
 #: lib/BOM/View/Menu.pm:154
 msgid "Trading Times"
 msgstr "交易时间"
@@ -8285,41 +8229,41 @@ msgid "Trading financial contracts involves a high level of risk and may not be 
 msgstr "财务交易 合约交易涉及较高风险，不适合所有人。在决定进行财务交易交易之前，您应该仔细考虑您的投资目标、经验级别和风险偏好。您应该注意与财务交易相关的所有风险，如有疑问请向独立财务顾问咨询。"
 
 #. ($blackout_time)
-#: lib/BOM/Product/Contract.pm:2609
+#: lib/BOM/Product/Contract.pm:2633
 msgid "Trading is available after the first %1 of the session."
 msgstr "该合约到交易时段第一个 %1 后可用。"
 
-#: lib/BOM/Product/Contract.pm:2826
+#: lib/BOM/Product/Contract.pm:2850
 msgid "Trading is not offered for this duration."
 msgstr "不在此段期间提供交易。"
 
-#: cgi/oop/Controller/Bet.pm:675 lib/BOM/Product/Contract.pm:2224
-#: lib/BOM/Product/Contract.pm:2290
+#: cgi/oop/Controller/Bet.pm:676 lib/BOM/Product/Contract.pm:2227
+#: lib/BOM/Product/Contract.pm:2293
 msgid "Trading is suspended at the moment."
 msgstr "当前交易暂停。"
 
 #. ($translated_name)
 #. ($underlying->translated_display_name()
-#: cgi/analyse_contract.cgi:70 lib/BOM/Product/Contract.pm:2232
-#: lib/BOM/Product/Contract.pm:2241 lib/BOM/Product/Contract.pm:2269
+#: cgi/analyse_contract.cgi:70 lib/BOM/Product/Contract.pm:2235
+#: lib/BOM/Product/Contract.pm:2244 lib/BOM/Product/Contract.pm:2272
 msgid "Trading on %1 is suspended at the moment."
 msgstr "%1 的当前交易暂停。"
 
 #. ($translated_name)
 #. ($self->underlying->translated_display_name()
 #. ($underlying->translated_display_name()
-#: lib/BOM/Product/Contract.pm:2252 lib/BOM/Product/Contract.pm:2259
-#: lib/BOM/Product/Contract.pm:2936
+#: lib/BOM/Product/Contract.pm:2255 lib/BOM/Product/Contract.pm:2262
+#: lib/BOM/Product/Contract.pm:2960
 #: lib/BOM/Product/Pricing/Engine/IntradayHistorical.pm:794
 msgid "Trading on %1 is suspended due to missing market data."
 msgstr "由于市场数据丢失，%1 交易暂停。"
 
 #. ($eod_blackout_start->as_string)
-#: lib/BOM/Product/Contract.pm:2638
+#: lib/BOM/Product/Contract.pm:2662
 msgid "Trading suspended for the last %1 of the session."
 msgstr "该合约交易时段最后 %1 暂停。"
 
-#: lib/BOM/Product/Contract.pm:2653
+#: lib/BOM/Product/Contract.pm:2677
 msgid "Trading suspended for the last 300s of the session."
 msgstr "该合约交易时段最后300秒暂停。"
 
@@ -8374,12 +8318,11 @@ msgstr "转至：%1<br/>登录 ID：%2<br/>金额：%3 %4"
 msgid "Translations"
 msgstr "翻译"
 
-#: cgi/smartchart.cgi:48 cgi/subs/subs_graphs_chartdirector.pm:523
+#: cgi/smartchart.cgi:48 cgi/subs/subs_graphs_chartdirector.pm:524
 msgid "Triangular"
 msgstr "三角"
 
-#: cgi/subs/subs_BOMFeed_history.pm:540
-#: cgi/subs/subs_graphs_chartdirector.pm:525
+#: cgi/subs/subs_graphs_chartdirector.pm:526 lib/BOM/View/Charting.pm:617
 msgid "Triangular moving averages place the majority of the weight on the middle portion of the price series. They are actually double-smoothed simple moving averages. The periods used in the simple moving averages varies depending on if you specify an odd or even number of time periods."
 msgstr "三重移动平均数主要着重价格系列的中间部分。它们实际是双重平滑简单移动平均数。取决于您指定的期间是奇数数量还是偶数数量，简单移动平均数中使用的期间各不相同。"
 
@@ -8397,11 +8340,11 @@ msgstr "立即体验"
 msgid "Try our downloadable charting application with an extensive range of indicators."
 msgstr "使用我们可以下载的图表应用程序与广泛的指标。"
 
-#: web/bin/JavascriptCompress.pm:122
+#: web/bin/GenerateStaticData.pm:122
 msgid "Tu"
 msgstr "星期二"
 
-#: web/bin/JavascriptCompress.pm:69
+#: web/bin/GenerateStaticData.pm:69
 msgid "Tuesday"
 msgstr "周二"
 
@@ -8419,7 +8362,7 @@ msgstr "典型价格"
 msgid "UK"
 msgstr "英国"
 
-#: cgi/subs/subs_BOMFeed_history.pm:370
+#: lib/BOM/View/Charting.pm:447
 msgid "UK Stocks"
 msgstr "英国股票"
 
@@ -8429,26 +8372,21 @@ msgstr "英国和曼岛居民在Regent Markets (IOM) 有限责任公司开设账
 
 #: /home/git/translations/binary-static/src/templates/toolkit/legal/complaints_disputes.html.tt:13
 msgid "UK clients registered with Regent Markets (Malta) Ltd can submit their dispute with the alternative dispute resolution entity which is the Independent Betting Adjudication Service Ltd (IBAS) by filling the adjudication form on the ADR entity’s"
-msgstr ""
+msgstr "在丽晶市场（马耳他）有限公司注册的英国客户可以通过在替代性争端解决机构里填写仲裁表格，向此机构，即独立博彩仲裁服务有限公司（IBAS）提交他们的纠纷"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/legal/us_patents.html.tt:3
 #: cgi/us_patents.cgi:11
 msgid "US Patents"
 msgstr "美国专利"
 
-#: cgi/subs/subs_BOMFeed_history.pm:364
+#: lib/BOM/View/Charting.pm:441
 msgid "US Stocks"
 msgstr "美国股票"
 
-#: cgi/smartchart.cgi:40 cgi/subs/subs_BOMFeed_history.pm:435
-#: cgi/subs/subs_BOMFeed_history.pm:530
-#: cgi/subs/subs_graphs_chartdirector.pm:449
+#: cgi/smartchart.cgi:40 cgi/subs/subs_graphs_chartdirector.pm:450
+#: lib/BOM/View/Charting.pm:512 lib/BOM/View/Charting.pm:607
 msgid "Ultimate Oscillator"
 msgstr "终极摆动指标"
-
-#: frontend/lib/BOM/Web/Home.pm:237
-msgid "Unable to contact the server"
-msgstr "无法联系服务商"
 
 #: /home/git/translations/binary-static/src/templates/haml/exception.html.haml:1
 msgid "Unable to process your request"
@@ -8471,7 +8409,7 @@ msgstr "未成年人投注"
 msgid "Underlying"
 msgstr "基础产品"
 
-#: cgi/subs/subs_BOMFeed_history.pm:405
+#: lib/BOM/View/Charting.pm:482
 msgid "Unknown error while saving workspace '#1'."
 msgstr "保存工作空间“#1”时出现未知错误。"
 
@@ -8562,10 +8500,8 @@ msgid "Version 31. Last modified 2014-08-29."
 msgstr "版本31。最后修改时间2014-08-29。"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/legal/terms_and_conditions.html.tt:4
-#, fuzzy
-#| msgid "Version 31. Last modified 2014-08-28."
 msgid "Version 32. Last modified 2014-09-24."
-msgstr "版本31。最后修改时间2014-08-28。"
+msgstr "版本32。最后修改时间2014-09-24。"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/resources/pricing_table_form.html.tt:87
 msgid "Vertical"
@@ -8576,8 +8512,8 @@ msgid "Vertical Grid"
 msgstr "垂直网格"
 
 #: cgi/daily_prices.cgi:66 cgi/daily_prices.cgi:68 cgi/intraday_prices.cgi:57
-#: cgi/intraday_prices.cgi:59 cgi/oop/Controller/Bet.pm:1258
-#: cgi/oop/Controller/Bet.pm:1274
+#: cgi/intraday_prices.cgi:59 cgi/oop/Controller/Bet.pm:1259
+#: cgi/oop/Controller/Bet.pm:1275
 msgid "View"
 msgstr "查看"
 
@@ -8585,7 +8521,7 @@ msgstr "查看"
 msgid "View Rise/Fall contract prices across a range of markets."
 msgstr "在一系列的市场中查看上升/下跌合同价格。"
 
-#: lib/BOM/Product/Contract.pm:2601 lib/BOM/Product/Contract.pm:2611
+#: lib/BOM/Product/Contract.pm:2625 lib/BOM/Product/Contract.pm:2635
 msgid "View Trading Times"
 msgstr "查看交易时间"
 
@@ -8660,7 +8596,7 @@ msgid "Virtual Money Account Opening"
 msgstr "虚拟货币帐户开设"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/account/open_account.html.tt:24
-#: cgi/lost_password.cgi:377 cgi/subs/subs_forms.pm:1000
+#: cgi/lost_password.cgi:379 cgi/subs/subs_forms.pm:1000
 #: cgi/subs/subs_homepage.pm:31
 msgid "Virtual money account"
 msgstr "虚拟货币帐户"
@@ -8690,7 +8626,7 @@ msgstr "保证条款"
 msgid "Watch, earn and learn for FREE!"
 msgstr "「免费」观看，赚取和学习！"
 
-#: web/bin/JavascriptCompress.pm:123
+#: web/bin/GenerateStaticData.pm:123
 msgid "We"
 msgstr "星期三"
 
@@ -8702,11 +8638,11 @@ msgstr "我们承诺确保您个人数据和交易的安全："
 msgid "We are fully licensed in the British Isles and Malta."
 msgstr "我们在不列颠群岛及马耳他已获得全面授权。"
 
-#: web/bin/JavascriptCompress.pm:133
+#: web/bin/GenerateStaticData.pm:133
 msgid "We are not able to stream live prices at the moment. To enjoy live streaming of prices try refreshing the page, if you get this issue after repeated attempts try a different browser"
 msgstr "当前我们不能够串流实时价格。要享受价格的实时串流请尝试刷新页面，如果经过反复尝试您还是面对此问题，请尝试不同的浏览器"
 
-#: cgi/subs/subs_forms.pm:448 web/bin/JavascriptCompress.pm:56
+#: cgi/subs/subs_forms.pm:448 web/bin/GenerateStaticData.pm:56
 msgid "We are not accepting accounts from residents of this country at the present time."
 msgstr "目前不接受来自该国居民的帐户。"
 
@@ -8843,15 +8779,15 @@ msgstr "网站"
 msgid "Website exclusion is currently set to <strong>%1.</strong>"
 msgstr "网站排除当前设置为 <strong>[%1。</strong>"
 
-#: web/bin/JavascriptCompress.pm:70
+#: web/bin/GenerateStaticData.pm:70
 msgid "Wednesday"
 msgstr "周三"
 
-#: cgi/subs/subs_BOMFeed_history.pm:369
+#: lib/BOM/View/Charting.pm:446
 msgid "Week"
 msgstr "周"
 
-#: web/bin/JavascriptCompress.pm:98
+#: web/bin/GenerateStaticData.pm:98
 msgid "Week of"
 msgstr "周"
 
@@ -8859,8 +8795,8 @@ msgstr "周"
 msgid "Weekend quotes"
 msgstr "周末报价"
 
-#: cgi/subs/subs_BOMFeed_history.pm:342
 #: lib/BOM/Product/Helper/PricingTableParameters.pm:302
+#: lib/BOM/View/Charting.pm:419
 msgid "Weekly"
 msgstr "每周"
 
@@ -8868,11 +8804,11 @@ msgstr "每周"
 msgid "Weekly Live Trading Room"
 msgstr "每周一次的现场交易室"
 
-#: cgi/subs/subs_BOMFeed_history.pm:417
+#: lib/BOM/View/Charting.pm:494
 msgid "Weeks"
 msgstr "周"
 
-#: cgi/smartchart.cgi:49 cgi/subs/subs_graphs_chartdirector.pm:531
+#: cgi/smartchart.cgi:49 cgi/subs/subs_graphs_chartdirector.pm:532
 msgid "Weighted"
 msgstr "加权"
 
@@ -8880,12 +8816,11 @@ msgstr "加权"
 msgid "Weighted Close"
 msgstr "加权收盘价"
 
-#: cgi/subs/subs_BOMFeed_history.pm:332
+#: lib/BOM/View/Charting.pm:409
 msgid "Weighted Moving Average"
 msgstr "加权移动平均数"
 
-#: cgi/subs/subs_BOMFeed_history.pm:510
-#: cgi/subs/subs_graphs_chartdirector.pm:205
+#: cgi/subs/subs_graphs_chartdirector.pm:206 lib/BOM/View/Charting.pm:587
 msgid "Weighted volume indicator based on the one-day change in price divided by the current day's range. Generally, the ADI moves in the direction of price."
 msgstr "基于一天价格变动除以当天范围计算加权交易量指标。通常，ADI 沿价格方向移动。"
 
@@ -9062,12 +8997,12 @@ msgstr "我为什么应成为二元期权交易的联盟成员？"
 msgid "Will I need to install any software?"
 msgstr "我需要安装任何软件吗？"
 
-#: cgi/smartchart.cgi:41 cgi/subs/subs_BOMFeed_history.pm:551
-#: cgi/subs/subs_graphs_chartdirector.pm:466
+#: cgi/smartchart.cgi:41 cgi/subs/subs_graphs_chartdirector.pm:467
+#: lib/BOM/View/Charting.pm:628
 msgid "William's %R"
 msgstr "威廉指标"
 
-#: cgi/subs/subs_BOMFeed_history.pm:319
+#: lib/BOM/View/Charting.pm:396
 msgid "Williams %R"
 msgstr "威廉指标"
 
@@ -9087,7 +9022,7 @@ msgstr "如果您预测正确，即可获得交易成本 10%-1000% 的回报。�
 msgid "Win 80-100% on your stake if you are correct."
 msgstr "如果您预测正确，即可获得交易成本 80-100% 的回报。"
 
-#: cgi/subs/subs_BOMFeed_history.pm:424
+#: lib/BOM/View/Charting.pm:501
 msgid "Windows"
 msgstr "窗口"
 
@@ -9254,15 +9189,15 @@ msgstr "通过西联汇款提款(MTCN: %1)"
 msgid "Withdrawal via bank wire"
 msgstr "通过银行电汇提款"
 
-#: cgi/subs/subs_BOMFeed_history.pm:430 cgi/subs/subs_BOMFeed_history.pm:451
+#: lib/BOM/View/Charting.pm:507 lib/BOM/View/Charting.pm:528
 msgid "Workspace"
 msgstr "工作空间"
 
-#: cgi/subs/subs_BOMFeed_history.pm:392
+#: lib/BOM/View/Charting.pm:469
 msgid "Workspace '#1' saved successfully."
 msgstr "工作空间“#1”成功保存。"
 
-#: cgi/subs/subs_BOMFeed_history.pm:436
+#: lib/BOM/View/Charting.pm:513
 msgid "Workspace name:"
 msgstr "工作空间名称："
 
@@ -9270,7 +9205,7 @@ msgstr "工作空间名称："
 msgid "World FX indices"
 msgstr "全球外汇兑换指数"
 
-#: cgi/subs/subs_BOMFeed_history.pm:421
+#: lib/BOM/View/Charting.pm:498
 msgid "World Indices"
 msgstr "全球指数"
 
@@ -9278,13 +9213,13 @@ msgstr "全球指数"
 msgid "Written limits and self-exclusion"
 msgstr "书写之限制和自我排斥"
 
-#: web/bin/JavascriptCompress.pm:49
+#: web/bin/GenerateStaticData.pm:49
 msgid "Year"
 msgstr "年"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/container/confirm_box_popup.html.tt:5
-#: cgi/subs/subs_BOMFeed_history.pm:390 cgi/subs/subs_forms.pm:3395
-#: cgi/subs/subs_forms.pm:993
+#: cgi/subs/subs_forms.pm:3395 cgi/subs/subs_forms.pm:993
+#: lib/BOM/View/Charting.pm:467
 msgid "Yes"
 msgstr "是"
 
@@ -9306,7 +9241,7 @@ msgstr "您还有权要求我们告知您我们处理的有关您的个人信息
 msgid "You and we are independent contractors, and nothing in this Agreement will create any partnership, joint venture, agency, franchise, sales representative, or employment relationship between the parties. You will have no authority to make or accept any offers or representations on our behalf. You will not make any statement, whether on your site or otherwise, that reasonably would contradict anything in this paragraph."
 msgstr "您与我们都为独立订约人，本协议的任何规定均不得建立双方之间任何合作伙伴关系、合资、代理、特许经营、销售代表或雇佣关系。您无权代表我方做出或接受任何要约或陈述。您不得作出有理由认为与本条内容不一致的声明（无论在您的网站上）。"
 
-#: cgi/oop/Controller/Bet.pm:2116
+#: cgi/oop/Controller/Bet.pm:2117
 msgid "You are being given the better price."
 msgstr "正在为您获取更好的价格。"
 
@@ -9392,12 +9327,12 @@ msgid "You cannot transfer to account %1, as their account is currently disabled
 msgstr "您不能转帐至帐户%1，因为此帐户目前禁用。"
 
 #. ($contact_url)
-#: cgi/lost_password.cgi:338
+#: cgi/lost_password.cgi:340
 msgid "You clicked on an expired link. If you have already clicked on this link, it has been <b>disabled for security reasons</b>. Please re request change of password.<br /><br /> Your account is important to us. If you require further assistance, please contact our <a href=\"%1\" target=\"_blank\"><strong>Customer Support</strong></a>."
 msgstr "你点击了一个过期连接。如果你已经点击了本链接，该连接已经<b>由于安全原因而禁用</b>。请重新申请修改密码。<br /><br /> 你的账户对我们非常重要，如需更多帮助，请联系我们的 <a href=\"%1\" target=\"_blank\"><strong>客户支持</strong></a>."
 
 #. ($contact_url)
-#: cgi/lost_password.cgi:401
+#: cgi/lost_password.cgi:403
 msgid "You clicked on an expired link. Please refer to the email with the subject line <strong>New Password Request</strong> and click on the link provided.<br /><br /> Your account is important to us. If you require further assistance, please contact our <a href=\"%1\" target=\"_blank\"><strong>Customer Support</strong></a>."
 msgstr "您点击了一个过期连接。请参考主题为 <strong>新密码请求</strong>的邮件，点击里面所提供的链接。<br/><br/>您的账户对我们很重要，如需更多帮助，请联系我们的<a href=\"%1\" target=\"_blank\"><strong>客户支持</strong></a>。"
 
@@ -9450,9 +9385,9 @@ msgstr "您已输入一个无效 IP 地址。"
 msgid "You have entered an invalid login ID"
 msgstr "您已输入一个无效登录 ID"
 
-#: lib/BOM/Product/Transaction.pm:1098 lib/BOM/Product/Transaction.pm:1230
-#: lib/BOM/Product/Transaction.pm:1258 lib/BOM/Product/Transaction.pm:1286
-#: lib/BOM/Product/Transaction.pm:1320
+#: lib/BOM/Product/Transaction.pm:1099 lib/BOM/Product/Transaction.pm:1231
+#: lib/BOM/Product/Transaction.pm:1259 lib/BOM/Product/Transaction.pm:1287
+#: lib/BOM/Product/Transaction.pm:1321
 msgid "You have exceeded the daily limit for contracts of this type."
 msgstr "您没有以本货币购买任何交易。"
 
@@ -9505,7 +9440,7 @@ msgstr "您可以随时提取存入的Y，用于请求红利以及由该红利�
 msgid "You may withdraw the bonus amount once you have exceeded an account turnover of 25 times the bonus amount value."
 msgstr "一旦您账户的周转额超过红利总数的25倍，您就可以提现账户中的红利。"
 
-#: web/bin/JavascriptCompress.pm:55
+#: web/bin/GenerateStaticData.pm:55
 msgid "You must accept the terms and conditions to open an account."
 msgstr "您必须接受帐户开设条款和条件。"
 
@@ -9513,7 +9448,7 @@ msgstr "您必须接受帐户开设条款和条件。"
 msgid "You must already have a valid \"Real money account\" with Binary.com."
 msgstr "您必须已经在 Binary.com 拥有有效的“真实金钱帐户”。"
 
-#: cgi/subs/subs_BOMFeed_history.pm:450
+#: lib/BOM/View/Charting.pm:527
 msgid "You must be logged in to use the workspace feature.Account opening is free and takes only 30 seconds."
 msgstr "你必须登录后使用工作区功能。账户将免费打开，只需要30秒。"
 
@@ -9650,7 +9585,7 @@ msgid "Your account balance"
 msgstr "您的帐户余额"
 
 #. ($currency,                to_monetary_number_format($balance)
-#: lib/BOM/Product/Transaction.pm:963
+#: lib/BOM/Product/Transaction.pm:964
 msgid "Your account balance (%1%2) is insufficient to buy this contract (%1%3)."
 msgstr "您的账户余额(%1%2)不足以买入该交易 (%1%3)。"
 
@@ -9658,7 +9593,7 @@ msgstr "您的账户余额(%1%2)不足以买入该交易 (%1%3)。"
 msgid "Your account does not require authentication at this time."
 msgstr "现时您的账户不需要认证。"
 
-#: lib/BOM/Product/Transaction.pm:1202
+#: lib/BOM/Product/Transaction.pm:1203
 msgid "Your account has exceeded the trading limit with free promo code, please deposit if you wish to continue trading."
 msgstr "您的帐户已超过免费推广代码的交易限制，如果要继续交易，请存款。"
 
@@ -9681,7 +9616,7 @@ msgid "Your account is fully operational and you may begin depositing money and 
 msgstr "您的账户完全可用，您可以开始充值并买入交易。"
 
 #. (request()
-#: cgi/lost_password.cgi:470
+#: cgi/lost_password.cgi:472
 msgid "Your account is important to us. Please <a href=\"%1\">contact us</a> should you need further assistance."
 msgstr "您的帐户对我们很重要。若需进一步帮助，请 <a href=\"%1\">联系我们</a>。"
 
@@ -9789,7 +9724,7 @@ msgstr "您的姓名"
 msgid "Your name/company"
 msgstr "您的姓名/公司"
 
-#: cgi/oop/Controller/Bet.pm:2076
+#: cgi/oop/Controller/Bet.pm:2077
 msgid "Your new account balance is %s %s"
 msgstr "您的新帐户余额为 %s %s"
 
@@ -9798,7 +9733,7 @@ msgid "Your old password is incorrect"
 msgstr "您的旧密码不正确"
 
 #. ($reference_number, $executed_price)
-#: cgi/oop/Controller/Bet.pm:2121
+#: cgi/oop/Controller/Bet.pm:2122
 msgid "Your order (Reference # <span id=\"reference_no\">%1</span>) has been executed at %2."
 msgstr "您的订单 (参考 # <span id=\"参考_编号\">%1</span>)已经于%2生效。"
 
@@ -9812,13 +9747,13 @@ msgid "Your password has been changed."
 msgstr "您的密码已更改。"
 
 #. ($client->loginid)
-#: cgi/lost_password.cgi:639
+#: cgi/lost_password.cgi:641
 msgid "Your password has been successfully reset. Your login ID is <strong>%1</strong>.  Please log into your account using your new password."
 msgstr "你的密码已成功重置。你的登录ID为<strong>%1</strong>，请用新密码登录你的账户。"
 
 #. ($forgot_pass_url,                    $contact_url)
 #. (request()
-#: cgi/lost_password.cgi:149 cgi/lost_password.cgi:204
+#: cgi/lost_password.cgi:149 cgi/lost_password.cgi:205
 msgid "Your password recovery token has expired. Please click <a href=\"%1\"><strong>here</strong></a> to restart the password recovery process.<br /><br /> Your account is important to us. If you require further assistance, please contact our <a href=\"%2\"><strong>Customer Support</strong></a>."
 msgstr "你的密码恢复令牌已经过期，请点击<a href=\"%1\"><strong>这里</strong></a>重新开始密码恢复程序。<br /><br /> 你的账户对我们很重要，如需更多帮助，请联系我们的<a href=\"%2\"><strong>客户支持</strong></a>."
 
@@ -9873,7 +9808,7 @@ msgid "Your settings have been updated successfully."
 msgstr "您的设置已成功更新。"
 
 #. ($tradeRef)
-#: cgi/oop/Controller/Bet.pm:1513 cgi/oop/Controller/Bet.pm:2080
+#: cgi/oop/Controller/Bet.pm:1514 cgi/oop/Controller/Bet.pm:2081
 msgid "Your transaction reference number is %1"
 msgstr "您的交易参考号是%1"
 
@@ -9895,7 +9830,7 @@ msgstr "您的提款限额为<strong>EUR %1</strong> (其它货币为 %2 ）。"
 msgid "You’ll be surprised by the returns you can make."
 msgstr "来了解您可获得之收益，您将大吃一惊。"
 
-#: web/bin/JavascriptCompress.pm:66
+#: web/bin/GenerateStaticData.pm:66
 msgid "Zoom"
 msgstr "缩放"
 
@@ -9947,11 +9882,11 @@ msgstr "由于该人士的本网站活动导致本公司遭受任何金钱、财
 msgid "any restriction to its Clients from purchasing any contracts during certain hours."
 msgstr "对客户在特定时段买入任何合约的限制。"
 
-#: lib/BOM/Product/Contract.pm:2203
+#: lib/BOM/Product/Contract.pm:2206
 msgid "barrier"
 msgstr "目标"
 
-#: cgi/oop/Controller/Bet.pm:1561
+#: cgi/oop/Controller/Bet.pm:1562
 msgid "better trade"
 msgstr "更佳交易"
 
@@ -9971,12 +9906,12 @@ msgstr "请与我们联系"
 msgid "contract start time"
 msgstr "合约开始时间"
 
-#: web/bin/JavascriptCompress.pm:103
+#: web/bin/GenerateStaticData.pm:103
 msgid "day"
 msgstr "天"
 
-#: cgi/subs/subs_BOMFeed_history.pm:384
-#: lib/BOM/Product/Model/ContractForm.pm:740 web/bin/JavascriptCompress.pm:104
+#: lib/BOM/Product/Model/ContractForm.pm:740 lib/BOM/View/Charting.pm:461
+#: web/bin/GenerateStaticData.pm:104
 msgid "days"
 msgstr "天"
 
@@ -10012,7 +9947,7 @@ msgstr "入市现价加上%plural(%1,1 点, %d 点)"
 msgid "equivalent"
 msgstr "相当于"
 
-#: cgi/oop/Controller/Bet.pm:2153
+#: cgi/oop/Controller/Bet.pm:2154
 msgid "explanation"
 msgstr "说明"
 
@@ -10028,19 +9963,19 @@ msgstr "详细的编码说明。"
 msgid "here"
 msgstr "这里"
 
-#: lib/BOM/Product/Contract.pm:2203
+#: lib/BOM/Product/Contract.pm:2206
 msgid "high barrier"
 msgstr "价格上限"
 
-#: cgi/subs/subs_plack.pm:272
+#: cgi/subs/subs_plack.pm:273
 msgid "homepage"
 msgstr "首页"
 
-#: cgi/subs/subs_BOMFeed_history.pm:357 web/bin/JavascriptCompress.pm:105
+#: lib/BOM/View/Charting.pm:434 web/bin/GenerateStaticData.pm:105
 msgid "hour"
 msgstr "小时"
 
-#: cgi/subs/subs_BOMFeed_history.pm:447 web/bin/JavascriptCompress.pm:106
+#: lib/BOM/View/Charting.pm:524 web/bin/GenerateStaticData.pm:106
 msgid "hours"
 msgstr "小时"
 
@@ -10048,11 +9983,11 @@ msgstr "小时"
 msgid "less"
 msgstr "减"
 
-#: cgi/subs/subs_BOMFeed_history.pm:334 web/bin/JavascriptCompress.pm:51
+#: lib/BOM/View/Charting.pm:411 web/bin/GenerateStaticData.pm:51
 msgid "loading..."
 msgstr "加载中..."
 
-#: lib/BOM/Product/Contract.pm:2203
+#: lib/BOM/Product/Contract.pm:2206
 msgid "low barrier"
 msgstr "价格下限"
 
@@ -10076,24 +10011,24 @@ msgstr "最短可用期限"
 msgid "minimum is"
 msgstr "最少为"
 
-#: lib/BOM/Product/Contract.pm:2200
+#: lib/BOM/Product/Contract.pm:2203
 msgid "minus"
 msgstr "减去"
 
-#: cgi/subs/subs_BOMFeed_history.pm:439 web/bin/JavascriptCompress.pm:107
+#: lib/BOM/View/Charting.pm:516 web/bin/GenerateStaticData.pm:107
 msgid "minute"
 msgstr "分钟"
 
-#: cgi/smartchart.cgi:307 cgi/subs/subs_BOMFeed_history.pm:433
-#: web/bin/JavascriptCompress.pm:108
+#: cgi/smartchart.cgi:307 lib/BOM/View/Charting.pm:510
+#: web/bin/GenerateStaticData.pm:108
 msgid "minutes"
 msgstr "分钟"
 
-#: web/bin/JavascriptCompress.pm:101
+#: web/bin/GenerateStaticData.pm:101
 msgid "month"
 msgstr "月份"
 
-#: web/bin/JavascriptCompress.pm:102
+#: web/bin/GenerateStaticData.pm:102
 msgid "months"
 msgstr "月份"
 
@@ -10128,7 +10063,7 @@ msgstr "或请尝试以下的网站地图"
 msgid "page for the exact time of settlement for all contracts. Other websites may adopt a different convention (for example some websites choose 4 o'clock NY time, or 5 o'clock London time). As a result, the open, high, low and closing prices displayed on our website may differ to those on other websites, due to the market-closing time convention."
 msgstr "在准确的结算时间对所有的交易的页面。 其他网站可能会有不同的惯例（比如一些网站选择了纽约时间4点，或伦敦时间5点）。由于不同的收盘时间惯例，在我们网站上展示的开盘、高或低或收盘价可能跟其他网站不一致。"
 
-#: lib/BOM/Product/Contract.pm:2200
+#: lib/BOM/Product/Contract.pm:2203
 msgid "plus"
 msgstr "加"
 
@@ -10136,7 +10071,7 @@ msgstr "加"
 msgid "quote delayed by at least %1 minutes"
 msgstr "报价至少延迟%1分钟"
 
-#: cgi/subs/subs_graphs_chartdirector.pm:646
+#: cgi/subs/subs_graphs_chartdirector.pm:647
 msgid "range"
 msgstr "范围"
 
@@ -10164,11 +10099,11 @@ msgstr "上涨/下跌"
 msgid "running"
 msgstr "运转"
 
-#: web/bin/JavascriptCompress.pm:109
+#: web/bin/GenerateStaticData.pm:109
 msgid "second"
 msgstr "秒钟"
 
-#: web/bin/JavascriptCompress.pm:110
+#: web/bin/GenerateStaticData.pm:110
 msgid "seconds"
 msgstr "秒钟"
 
@@ -10205,8 +10140,6 @@ msgid "trades"
 msgstr "交易"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/legal/complaints_disputes.html.tt:13
-#, fuzzy
-#| msgid "Website"
 msgid "website"
 msgstr "网站"
 
@@ -10237,11 +10170,11 @@ msgstr "此HTTP标题"
 msgid "withdrawal limits"
 msgstr "提款限额"
 
-#: web/bin/JavascriptCompress.pm:99
+#: web/bin/GenerateStaticData.pm:99
 msgid "year"
 msgstr "年"
 
-#: web/bin/JavascriptCompress.pm:100
+#: web/bin/GenerateStaticData.pm:100
 msgid "years"
 msgstr "年"
 
@@ -12142,6 +12075,27 @@ msgstr "对不起，通过此 IP 网络的访问已禁用，请联系「客户�
 #: Message for API Error 'LOGIN_TOO_MANY_FAILED_ATTEMPTS'
 msgid "Sorry, you have already had too many unsuccessful attempts. Please try again in 5 minutes."
 msgstr "对不起，您的失败尝试次数过多。请5分钟后再尝试。"
+
+#~ msgid "$value %1"
+#~ msgstr "$值%1"
+
+#~ msgid "Client-facing message"
+#~ msgstr "客户须知"
+
+#~ msgid "Download tick data"
+#~ msgstr "下载高频数据"
+
+#~ msgid "Login ID not given."
+#~ msgstr "未输入登录 ID 。"
+
+#~ msgid "Password not given."
+#~ msgstr "未输入密码。"
+
+#~ msgid "This is a log"
+#~ msgstr "这是个 log"
+
+#~ msgid "Unable to contact the server"
+#~ msgstr "无法联系服务商"
 
 #~ msgid "You can raise any unresolved disputes you might have with Regent Markets (Malta) Ltd with the Lotteries and Gaming Authority at complaints@lga.com.mt and any disputes with Regent Markets (IOM) Ltd with the alternative dispute resolution entity. The alternative dispute resolution entity for Regent Markets (IOM) Ltd is the Isle of Man Gambling Supervision Commission at gaming@gov.im. In the event of any differences between the English version of this website and any other language, the English version shall prevail."
 #~ msgstr "您可以通过complaints@lga.com.mt把跟丽晶市场（马耳他）有限公司之间的任何未解决纠纷向彩票和博彩管理局提出，以及把跟丽晶市场（IOM）有限公司的任何纠纷向替代性解决纠纷机构提出。丽晶市场（IOM）有限公司的替代性解决纠纷实体是马恩岛赌博监督委员会，邮箱号是 gaming@gov.im。在网站中任何英文版本和其他语言之间有差异时，将以英文版本为准。"

@@ -7,11 +7,15 @@
         [% l("If your complaint relates to an outcome of a trade or a transaction and remains unresolved, it will turn into a dispute. Should you be unsatisfied with our response, you can choose to escalate your complaint to the regulator or to an alternative dispute resolution entity.") %]
     </p>
     <p>
-    [% l("Clients registered with Regent Markets (IOM) Ltd can raise their unresolved disputes with the Isle of Man Gambling Supervision Commission at") %] <a href="mailto:gaming@gov.im">gaming@gov.im</a>.
+    [% l("Clients registered with Regent Markets (C.R.) S.A. can raise their unresolved disputes with management by submitting an email to complaints@binary.com.") %]
     </p>
     <p>
-    [% l("Clients registered with Regent Markets (Malta) Ltd can raise their unresolved disputes with the Lotteries and Gaming Authority at") %] <a href="mailto:complaints@lga.com.mt">complaints@lga.com.mt</a>. [% l("UK clients registered with Regent Markets (Malta) Ltd can submit their dispute with the alternative dispute resolution entity which is the Independent Betting Adjudication Service Ltd (IBAS) by filling the adjudication form on the ADR entity’s") %] <a href="http://www.ibas-uk.com/adjudicationForm.php" target="_blank">[% l("website") %]</a>.
+    [% l("Clients registered with Regent Markets (IOM) Ltd can raise their unresolved disputes with the Isle of Man Gambling Supervision Commission at gaming@gov.im.") %]
+    </p>
+    <p>
+    [% l("Clients registered with Regent Markets (Malta) Ltd can raise their unresolved disputes with the Lotteries and Gaming Authority at") %] complaints@lga.com.mt. [% l("UK clients registered with Regent Markets (Malta) Ltd can submit their dispute with the alternative dispute resolution entity which is the Independent Betting Adjudication Service Ltd (IBAS) by filling the adjudication form on the ADR entity’s") %] <a href="http://www.ibas-uk.com/adjudicationForm.php" target="_blank">[% l("website") %]</a>.
     </p>
     <p>
         [% l("It is important that you refer your disputes to the appropriate ADR for the claims to be valid.") %]
+    </p>
 </div>

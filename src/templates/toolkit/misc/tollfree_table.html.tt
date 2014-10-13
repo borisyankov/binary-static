@@ -20,7 +20,7 @@
         <div class="grd-grid-12 grd-row-padding table-header">
             [% l('Other contact numbers') %]
         </div>
-        [% FOREACH type IN other_numbers.keys %]
+        [% FOREACH type IN other_numbers.keys.sort %]
         <div class="grd-parent grd-grid-12 grd-row-padding table-body table-body-lines">
             <div class="grd-grid-3">[% type %]</div>
             <div itemprop="[% other_numbers.$type.itemprop %]" class="grd-grid-9">

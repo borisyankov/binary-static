@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: I 18N\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2014-09-23 11:23+0200\n"
+"PO-Revision-Date: 2014-10-07 08:48+0200\n"
 "Last-Translator: Putri Kumala <putri@regentmarkets.com>\n"
 "Language-Team: Indonesian <https://hosted.weblate.org/projects/binary/static/id/>\n"
 "Language: id\n"
@@ -34,11 +34,6 @@ msgstr "\"Saya sudah bergabung dengan beberapa perusahaan afiliasi dan menemukan
 msgid "$1 to $100,000 payouts, low-risk to high-leverage, and much more. We offer limitless profit opportunities."
 msgstr "Hasil dari $1 hingga $100,000, resiko rendah hingga keuntungan tinggi dan banyak lagi. Kami menawarkan kesempatan profit tanpa batas."
 
-#. ($unit)
-#: lib/BOM/Utility/TimeInterval.pm:124
-msgid "$value %1"
-msgstr "$value %1"
-
 #. ('100%')
 #. ('1000%')
 #: /home/git/translations/binary-static/src/templates/haml/home/index.html.haml:1
@@ -61,44 +56,44 @@ msgstr "Syarat dan Ketentuan Program Affiliasi %1"
 #. ('%K')
 #. ('%D')
 #. (3)
-#: cgi/subs/subs_graphs_chartdirector.pm:220
-#: cgi/subs/subs_graphs_chartdirector.pm:238
-#: cgi/subs/subs_graphs_chartdirector.pm:246
-#: cgi/subs/subs_graphs_chartdirector.pm:254
-#: cgi/subs/subs_graphs_chartdirector.pm:261
-#: cgi/subs/subs_graphs_chartdirector.pm:270
-#: cgi/subs/subs_graphs_chartdirector.pm:287
-#: cgi/subs/subs_graphs_chartdirector.pm:290
-#: cgi/subs/subs_graphs_chartdirector.pm:309
-#: cgi/subs/subs_graphs_chartdirector.pm:322
-#: cgi/subs/subs_graphs_chartdirector.pm:328
-#: cgi/subs/subs_graphs_chartdirector.pm:335
-#: cgi/subs/subs_graphs_chartdirector.pm:344
+#: cgi/subs/subs_graphs_chartdirector.pm:221
+#: cgi/subs/subs_graphs_chartdirector.pm:239
+#: cgi/subs/subs_graphs_chartdirector.pm:247
+#: cgi/subs/subs_graphs_chartdirector.pm:255
+#: cgi/subs/subs_graphs_chartdirector.pm:262
+#: cgi/subs/subs_graphs_chartdirector.pm:271
+#: cgi/subs/subs_graphs_chartdirector.pm:288
+#: cgi/subs/subs_graphs_chartdirector.pm:291
+#: cgi/subs/subs_graphs_chartdirector.pm:310
+#: cgi/subs/subs_graphs_chartdirector.pm:323
+#: cgi/subs/subs_graphs_chartdirector.pm:329
+#: cgi/subs/subs_graphs_chartdirector.pm:336
 #: cgi/subs/subs_graphs_chartdirector.pm:345
-#: cgi/subs/subs_graphs_chartdirector.pm:355
+#: cgi/subs/subs_graphs_chartdirector.pm:346
 #: cgi/subs/subs_graphs_chartdirector.pm:356
 #: cgi/subs/subs_graphs_chartdirector.pm:357
-#: cgi/subs/subs_graphs_chartdirector.pm:372
-#: cgi/subs/subs_graphs_chartdirector.pm:388
+#: cgi/subs/subs_graphs_chartdirector.pm:358
+#: cgi/subs/subs_graphs_chartdirector.pm:373
 #: cgi/subs/subs_graphs_chartdirector.pm:389
 #: cgi/subs/subs_graphs_chartdirector.pm:390
-#: cgi/subs/subs_graphs_chartdirector.pm:399
-#: cgi/subs/subs_graphs_chartdirector.pm:408
-#: cgi/subs/subs_graphs_chartdirector.pm:422
+#: cgi/subs/subs_graphs_chartdirector.pm:391
+#: cgi/subs/subs_graphs_chartdirector.pm:400
+#: cgi/subs/subs_graphs_chartdirector.pm:409
 #: cgi/subs/subs_graphs_chartdirector.pm:423
-#: cgi/subs/subs_graphs_chartdirector.pm:433
-#: cgi/subs/subs_graphs_chartdirector.pm:446
-#: cgi/subs/subs_graphs_chartdirector.pm:455
+#: cgi/subs/subs_graphs_chartdirector.pm:424
+#: cgi/subs/subs_graphs_chartdirector.pm:434
+#: cgi/subs/subs_graphs_chartdirector.pm:447
 #: cgi/subs/subs_graphs_chartdirector.pm:456
 #: cgi/subs/subs_graphs_chartdirector.pm:457
-#: cgi/subs/subs_graphs_chartdirector.pm:472
-#: cgi/subs/subs_graphs_chartdirector.pm:486
-#: cgi/subs/subs_graphs_chartdirector.pm:493
-#: cgi/subs/subs_graphs_chartdirector.pm:502
-#: cgi/subs/subs_graphs_chartdirector.pm:512
-#: cgi/subs/subs_graphs_chartdirector.pm:520
-#: cgi/subs/subs_graphs_chartdirector.pm:528
-#: cgi/subs/subs_graphs_chartdirector.pm:536
+#: cgi/subs/subs_graphs_chartdirector.pm:458
+#: cgi/subs/subs_graphs_chartdirector.pm:473
+#: cgi/subs/subs_graphs_chartdirector.pm:487
+#: cgi/subs/subs_graphs_chartdirector.pm:494
+#: cgi/subs/subs_graphs_chartdirector.pm:503
+#: cgi/subs/subs_graphs_chartdirector.pm:513
+#: cgi/subs/subs_graphs_chartdirector.pm:521
+#: cgi/subs/subs_graphs_chartdirector.pm:529
+#: cgi/subs/subs_graphs_chartdirector.pm:537
 msgid "%1 Period"
 msgstr "%1 Periode"
 
@@ -215,7 +210,7 @@ msgid "%1 is the scope level that was granted."
 msgstr "%1 adalah scope level yang telah dijamin."
 
 #. (1)
-#: cgi/subs/subs_graphs.pm:269
+#: cgi/subs/subs_graphs.pm:270
 msgid "%1 minute quotes"
 msgstr "%1 menit kutipan"
 
@@ -330,7 +325,7 @@ msgstr "kode bonus 'Gratis Kontrak'"
 msgid "'Get X when you deposit Y' bonus code"
 msgstr "kode bonus 'Dapatkan X jika mendeposit Y'"
 
-#: web/bin/JavascriptCompress.pm:54
+#: web/bin/GenerateStaticData.pm:54
 msgid "(Bejing/CST -8 hours)"
 msgstr "(Bejing/CST -8 jam)"
 
@@ -342,7 +337,7 @@ msgstr "(Senin hingga Jumat)"
 msgid "(One) Touch trades"
 msgstr "Kontrak (Sekali) Sentuh"
 
-#: cgi/subs/subs_BOMFeed_history.pm:320
+#: lib/BOM/View/Charting.pm:397
 msgid "(delayed)"
 msgstr "(tertunda)"
 
@@ -438,7 +433,7 @@ msgstr "<br>Bagian kasir dan pengaturan akun anda sudah dikunci</strong> - jika 
 msgid "<option value=\"\"></option><option value=\"01\">Jan</option><option value=\"02\">Feb</option><option value=\"03\">Mar</option><option value=\"04\">Apr</option><option value=\"05\">May</option><option value=\"06\">Jun</option><option value=\"07\">Jul</option><option value=\"08\">Aug</option><option value=\"09\">Sep</option><option value=\"10\">Oct</option><option value=\"11\">Nov</option><option value=\"12\">Dec</option>"
 msgstr "<option value=\"\"></option><option value=\"01\">Jan</option><option value=\"02\">Feb</option><option value=\"03\">Mar</option><option value=\"04\">Apr</option><option value=\"05\">Mei</option><option value=\"06\">Jun</option><option value=\"07\">Jul</option><option value=\"08\">Ags</option><option value=\"09\">Sep</option><option value=\"10\">Okt</option><option value=\"11\">Nop</option><option value=\"12\">Des</option>"
 
-#: cgi/lost_password.cgi:355
+#: cgi/lost_password.cgi:357
 msgid "<p style='color: red'> For security reasons this link will be invalidated after this.</p>Please confirm for which of these accounts you want to reset your password:"
 msgstr "<p style='color: red'> Untuk alasan keamanan link berikut akan berakhir setelah digunakan.</p>Pastikan akun mana yang akan anda reset ulang:"
 
@@ -479,7 +474,7 @@ msgstr ""
 "<p>Hanya dalam waktu singkat sejak dikeluarkan, opsi binary merupakan produk terpopuler di dunia trading. Banyak platform trading opsi binary menyediakan fasilitas pada trend yang sedang berkembang saat ini. Dengan menjadi afiliasi sekarang maka anda akan memperoleh keuntungan dari perkembangan pesat ketertarikan masyarakan pada industri baru ini.</p> \n"
 " <p>Trading opsi binary adalah profit tinggi market dimana tersedia untuk siapa saja [termasuk anda] untuk mengambil bagian!</p>"
 
-#: cgi/lost_password.cgi:416
+#: cgi/lost_password.cgi:418
 msgid "<p>Please take a moment to verify your identity by providing us with the correct answer to your secret question and date of birth, below.</p>"
 msgstr "<p>Silakan lengkapi pembuktian identitas anda dengan mengajukan jawaban pada pertanyaan rahasia dan tanggal lahir dibawah ini.</p>"
 
@@ -563,7 +558,7 @@ msgid "<strong>Benchmarked prices</strong> - %1 benchmarks its prices daily agai
 msgstr "<strong>Harga diacukan</strong> - %1 mengacu harga harian sesuai dengan market derivatif antar bank."
 
 #. (to_monetary_number_format($limit_price)
-#: cgi/oop/Controller/Bet.pm:2113
+#: cgi/oop/Controller/Bet.pm:2114
 msgid "<strong>Better execution price!</strong><br />  The price has moved in your favour from %1 to %2."
 msgstr "<strong>Harga eksekusi lebih baik!</strong><br /> Harga telah bergerak dari %1 ke %2."
 
@@ -796,8 +791,7 @@ msgstr "<ul><li>Kunjungi menu <strong>Tools</strong> dan pilih <strong>Options</
 msgid "A Phonegap mobile application for Binary.com"
 msgstr "Sebuah aplikasi mobile Phonegap untuk Binary.com"
 
-#: cgi/subs/subs_BOMFeed_history.pm:565
-#: cgi/subs/subs_graphs_chartdirector.pm:498
+#: cgi/subs/subs_graphs_chartdirector.pm:499 lib/BOM/View/Charting.pm:642
 msgid "A Simple moving average line can be enhanced by putting a percentage envelope on either side of it. Our lines are displayed 20% above and 10% below the moving average line."
 msgstr "Garis simpel pergerakan rata-rata dapat ditingkatkan dengan meletakan sampul persentasi dari segala sisi. Garis kami ditampilkan 20% ke atas dan 10% ke bawah dari garis pergerakan rata-rata."
 
@@ -837,8 +831,7 @@ msgstr "Derivatif adalah instrumen financial dimana nilai adalah ditentukan oleh
 msgid "A member of our Customer Support Team will contact you shortly."
 msgstr "Anggota Tim Customer Support kami akan menghubungi anda sebentar lagi."
 
-#: cgi/subs/subs_BOMFeed_history.pm:489
-#: cgi/subs/subs_graphs_chartdirector.pm:443
+#: cgi/subs/subs_graphs_chartdirector.pm:444 lib/BOM/View/Charting.pm:566
 msgid "A momentum indicator showing the percent rate-of-change of a triple exponentially smoothed moving average. Like other oscillators, TRIX oscillates around a zero line."
 msgstr "Sebuah indikator mementum yang memperlihatkan perubahan harga persen pada pergerakan rata-rata  triple exponentially smoothed. Seperti oscillator lainnya, TRIX bergerak mengelilingi baris nol."
 
@@ -859,7 +852,7 @@ msgstr "Sebuah panel pemimpin industri menganugerahkan BetOnMarkets.com sebagai 
 msgid "A problem occurred"
 msgstr "Masalah terjadi"
 
-#: cgi/subs/subs_BOMFeed_history.pm:394
+#: lib/BOM/View/Charting.pm:471
 msgid "A problem occurred while connecting to the server. Please try again later."
 msgstr "Masalah terdeteksi pada saat menghubungi server. Silakan coba kembali sebentar lagi."
 
@@ -879,8 +872,7 @@ msgstr "Salinan paspor, SIM atau KTP yang masih berlaku"
 msgid "A scanned copy of your passport or driver's licence."
 msgstr "Salinan scan KTP atau SIM atau Paspor anda."
 
-#: cgi/subs/subs_BOMFeed_history.pm:526
-#: cgi/subs/subs_graphs_chartdirector.pm:468
+#: cgi/subs/subs_graphs_chartdirector.pm:469 lib/BOM/View/Charting.pm:603
 msgid "A technical indicator which measures overbought/oversold levels in a very similar way to that of an Oscillator indicator, except that %R is plotted upside-down 0% to -100%. Readings in the range of 80 to 100% indicate that the security is oversold while readings in the 0 to 20% range suggest that it is overbought."
 msgstr "Sebuah indikator teknis yang mengukur tingkat lebih pembelian/lebih penjualan  menggunakan cara yang hampir sama dengan indikator Oscillator, bedanya %R memetakan terbalik 0% hingga -100%. Pembacaan dalam jarak 80 hingga 100% mengindikasikan keamanan adalah lebih terjual dan pembacaan jarak antara 0 hingga 20% memperlihatkan lebih terbeli."
 
@@ -900,7 +892,7 @@ msgstr "Panduan Pengembang API"
 msgid "AUTHORISED PAYMENT AGENT? (this field visible from office only)"
 msgstr "AGEN PEMBAYARAN SAH? (bagian ini hanya dapat dilihat dari kantor saja)"
 
-#: cgi/subs/subs_BOMFeed_history.pm:432
+#: lib/BOM/View/Charting.pm:509
 msgid "About"
 msgstr "Tentang"
 
@@ -919,7 +911,7 @@ msgid "Acceptance"
 msgstr "Penerimaan"
 
 #. (request()
-#: cgi/create_account.cgi:104
+#: cgi/create_account.cgi:105
 msgid "According to our terms and conditions, you may only register for one real money account through our site. If you have forgotten the Login ID or password of your existing account, please <a href=\"%1\">try our password recovery tool</a> or contact customer service."
 msgstr "Menurut syarat dan ketentuan, anda hanya dapat mendaftar satu akun uang riil pada situs kami. Jika anda lupa Login ID atau kata sandi akun anda, silahkan <a href=\"%1\">coba alat pembuat kata sandi baru</a> atau hubungi customer service."
 
@@ -942,7 +934,7 @@ msgstr "Pengelolaan Akun dan Pelacakan"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/legal/terms_and_conditions.html.tt:121
 #: /home/git/translations/binary-static/src/templates/toolkit/legtrouble.html.tt:121
-#: cgi/create_account.cgi:197 cgi/create_account.cgi:291
+#: cgi/create_account.cgi:198 cgi/create_account.cgi:292
 #: cgi/open_account.cgi:13 cgi/subs/subs_forms_output.pm:24
 msgid "Account Opening"
 msgstr "Pendaftaran Akun"
@@ -965,9 +957,8 @@ msgstr "Saldo akun Anda: "
 msgid "Accounts"
 msgstr "Akun"
 
-#: cgi/smartchart.cgi:15 cgi/subs/subs_BOMFeed_history.pm:329
-#: cgi/subs/subs_BOMFeed_history.pm:513
-#: cgi/subs/subs_graphs_chartdirector.pm:203
+#: cgi/smartchart.cgi:15 cgi/subs/subs_graphs_chartdirector.pm:204
+#: lib/BOM/View/Charting.pm:406 lib/BOM/View/Charting.pm:590
 msgid "Accumulation/Distribution"
 msgstr "Akumulasi/Distribusi"
 
@@ -996,11 +987,11 @@ msgstr "Akusisi kontrak trading finansial pada situs ini harus disesuaikan denga
 msgid "Action"
 msgstr "Aksi"
 
-#: cgi/subs/subs_BOMFeed_history.pm:453
+#: lib/BOM/View/Charting.pm:530
 msgid "Add Lines"
 msgstr "Tambahkan baris"
 
-#: cgi/subs/subs_BOMFeed_history.pm:412
+#: lib/BOM/View/Charting.pm:489
 msgid "Add Overlay"
 msgstr "Tambah Arsiran"
 
@@ -1080,28 +1071,23 @@ msgstr "Juga tersedia penyediaan otomatis <a href=\"https://apigee.com/rmg/resou
 msgid "An error occurred while processing request. If this error persists, please contact customer support"
 msgstr "Telah terjadi error pada saat memproses permintaan. Jika error ini masih terjadi, silahkan hubungi customer support"
 
-#: cgi/subs/subs_BOMFeed_history.pm:553
-#: cgi/subs/subs_graphs_chartdirector.pm:384
+#: cgi/subs/subs_graphs_chartdirector.pm:385 lib/BOM/View/Charting.pm:630
 msgid "An indicator based on the difference between two moving averages expressed as a percentage. The PPO is found by subtracting the longer moving average from the shorter moving average and then dividing the difference by the longer moving average."
 msgstr "Indikator perbedaan antara 2 pergerakan rata-rata dalam persentasi.PPO didapatkan dengan mengurankan pergerakan rata-rata yang lebih besar dengan yang lebih kecil dan dibagi dengan pergerakan rata-rata yang lebih besar."
 
-#: cgi/subs/subs_BOMFeed_history.pm:464
-#: cgi/subs/subs_graphs_chartdirector.pm:251
+#: cgi/subs/subs_graphs_chartdirector.pm:252 lib/BOM/View/Charting.pm:541
 msgid "An indicator that measures a security's volatility. High ATR values indicate high volatility and may be an indication of panic selling or panic buying. Low ATR readings indicate sideways movement by the stock."
 msgstr "Sebuah indikator yang mengukur keamanan volatility. Nilai tinggi ATR mengindikasikan volatility tinggi dan dapat mengindikasikan kebingungan pada penjualan dan pembelian. ATR rendah dapat membaca indikasi pergerakan dua arah oleh stock."
 
-#: cgi/subs/subs_BOMFeed_history.pm:568
-#: cgi/subs/subs_graphs_chartdirector.pm:451
+#: cgi/subs/subs_graphs_chartdirector.pm:452 lib/BOM/View/Charting.pm:645
 msgid "An oscillator that attempts to combine information for several different time periods into one number. Three different time periods are used, typically a 7-day period, a 14-day period, and a 28-day period. The resulting oscillator is \"bounded\" in that it moves between 0 and 100 with 50 as the centre line. 70 and 30 are used as overbought/oversold levels."
 msgstr "Sebuah Oskilator yang mencoba untuk mengabungkan informasi untuk periode-periode waktu yang beragam ke satu nomor. Tiga metode digunakan, periode 7 hari , periode 14 hari dan periode 28 hari. Hasil Oskilator digerakan antara 0 dan 100 dengan 50 sebagai garis tengah. 70 dan 30 adalah pembelian lanjutan/penjualan lanjutan."
 
-#: cgi/subs/subs_BOMFeed_history.pm:486
-#: cgi/subs/subs_graphs_chartdirector.pm:369
+#: cgi/subs/subs_graphs_chartdirector.pm:370 lib/BOM/View/Charting.pm:563
 msgid "An oscillator that measures the rate of price change (as opposed to the actual levels themselves). It is calculated by taking price differences for a fixed time interval. This positive or negative value is plotted around a zero line."
 msgstr "Sebuah oscillator yang mengukur dasar perubahan harga (berlawanan dengan level sebenarnya). Ia dihitung dengan mengambil perbedaan harga sebagai interval waktu tetap. Nilai positif atau negatif diplotkan disekeliling baris nol."
 
-#: cgi/subs/subs_BOMFeed_history.pm:523
-#: cgi/subs/subs_graphs_chartdirector.pm:429
+#: cgi/subs/subs_graphs_chartdirector.pm:430 lib/BOM/View/Charting.pm:600
 msgid "An oscillator used to identify overbought and oversold readings in RSI (Relative Strength Index). Because RSI can go for extended periods without becoming overbought (above 70) or oversold (below 30), StochRSI provides an alternative means to identify these extremities."
 msgstr "Sebuah oskilator yang digunakan untuk mengenali pembacaan kelebihan beli dan kelebihan jual dalam RSI (Relative Strength Index). Karena RSI dapat melanjutkan periode lebih jauh tanpa mengalami terlebih beli (diatas 70) atau terlebih jual (dibawah 30), StochRSI menyediakan metode alternatif untuk mengenali perubahan ini."
 
@@ -1164,11 +1150,11 @@ msgid "Apply to become a %1 <a class=\"pjaxload\" href=\"%2\">payment agent</a>.
 msgstr "Mendaftar sebagai %1 <a class=\"pjaxload\" href=\"%2\">agen pembayaran</a>."
 
 #: cgi/subs/subs_forms.pm:188 cgi/subs/subs_forms.pm:2306
-#: web/bin/JavascriptCompress.pm:77
+#: web/bin/GenerateStaticData.pm:77
 msgid "Apr"
 msgstr "Apr"
 
-#: web/bin/JavascriptCompress.pm:89
+#: web/bin/GenerateStaticData.pm:89
 msgid "April"
 msgstr "April"
 
@@ -1180,11 +1166,11 @@ msgstr "Apa ada biaya?"
 msgid "Are you ready?"
 msgstr "Anda sudah bersedia?"
 
-#: cgi/subs/subs_BOMFeed_history.pm:351
+#: lib/BOM/View/Charting.pm:428
 msgid "Are you sure you want to delete '#1'?"
 msgstr "Apakah anda pasti ingin menghapus '#1'?"
 
-#: cgi/subs/subs_BOMFeed_history.pm:440
+#: lib/BOM/View/Charting.pm:517
 msgid "Are you sure you want to delete all workspaces?"
 msgstr "Apakah anda yakin ingin menghapus seluruh workspaces?"
 
@@ -1196,13 +1182,13 @@ msgstr "Apakah anda yakin ingin membatalkan surat kuasa?"
 msgid "Are your site visitors interested in:"
 msgstr "Apakah pengunjung website anda tertarik untuk:"
 
-#: cgi/smartchart.cgi:17 cgi/subs/subs_BOMFeed_history.pm:470
-#: cgi/subs/subs_graphs_chartdirector.pm:233
+#: cgi/smartchart.cgi:17 cgi/subs/subs_graphs_chartdirector.pm:234
+#: lib/BOM/View/Charting.pm:547
 msgid "Aroon Up/Down"
 msgstr "Aroon Naik/Turun"
 
-#: cgi/smartchart.cgi:16 cgi/subs/subs_BOMFeed_history.pm:471
-#: cgi/subs/subs_graphs_chartdirector.pm:210
+#: cgi/smartchart.cgi:16 cgi/subs/subs_graphs_chartdirector.pm:211
+#: lib/BOM/View/Charting.pm:548
 msgid "AroonOsc"
 msgstr "AroonOsc"
 
@@ -1231,12 +1217,12 @@ msgid "Asian options settle by comparing the <strong>last tick</strong> with the
 msgstr "Opsi Asian diselesaikan dengan membandingkan <strong>tik terakhir</strong> dengan jumlah rata-rata tik selama periode kontrak."
 
 #: /home/git/translations/binary-static/src/templates/haml/get_started/types_of_trades.html.haml:1
-#: cgi/oop/Controller/Bet.pm:1206 cgi/oop/Controller/Bet.pm:1213
+#: cgi/oop/Controller/Bet.pm:1207 cgi/oop/Controller/Bet.pm:1214
 msgid "Asians"
 msgstr "Asian"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/resources/pricing_table.html.tt:50
-#: cgi/subs/subs_BOMFeed_history.pm:375
+#: lib/BOM/View/Charting.pm:452
 msgid "Ask"
 msgstr "Tanya"
 
@@ -1249,7 +1235,7 @@ msgstr "Aset"
 #: /home/git/translations/binary-static/src/templates/haml/resources/index.html.haml:1
 #: /home/git/translations/binary-static/src/templates/toolkit/global/footer.html.tt:90
 #: cgi/asset_index.cgi:141 cgi/asset_index.cgi:28
-#: lib/BOM/Product/Contract.pm:2788 lib/BOM/Product/Contract.pm:2827
+#: lib/BOM/Product/Contract.pm:2812 lib/BOM/Product/Contract.pm:2851
 #: lib/BOM/Product/Pricing/Engine/Role/StandardMarkup.pm:177
 #: lib/BOM/View/Menu.pm:147
 msgid "Asset Index"
@@ -1261,11 +1247,11 @@ msgid "At a suitable stage in your application, when authorisation by a %1 end-u
 msgstr "Sesuai dengan tingkatan aplikasi anda, setelah otorisasi oleh %1 diperlukan, browser pengguna akan diarahkan kepada URL berikut:"
 
 #: cgi/subs/subs_forms.pm:204 cgi/subs/subs_forms.pm:2322
-#: web/bin/JavascriptCompress.pm:81
+#: web/bin/GenerateStaticData.pm:81
 msgid "Aug"
 msgstr "Agustus"
 
-#: web/bin/JavascriptCompress.pm:93
+#: web/bin/GenerateStaticData.pm:93
 msgid "August"
 msgstr "Agustus"
 
@@ -1316,14 +1302,13 @@ msgstr "Perubahan Rata-Rata"
 msgid "Average Change = Average Close - Average Open, for the period selected"
 msgstr "Perubahan Rata-Rata = Rata-Rata Penutupan - Rata-Rata Pembukaan, untuk periode yang dipilih"
 
-#: cgi/smartchart.cgi:18 cgi/subs/subs_BOMFeed_history.pm:555
-#: cgi/subs/subs_graphs_chartdirector.pm:241
+#: cgi/smartchart.cgi:18 cgi/subs/subs_graphs_chartdirector.pm:242
+#: lib/BOM/View/Charting.pm:632
 msgid "Avg Directional Index"
 msgstr "Indeks Rata-Rata Direksi"
 
-#: cgi/smartchart.cgi:19 cgi/subs/subs_BOMFeed_history.pm:429
-#: cgi/subs/subs_BOMFeed_history.pm:459
-#: cgi/subs/subs_graphs_chartdirector.pm:249
+#: cgi/smartchart.cgi:19 cgi/subs/subs_graphs_chartdirector.pm:250
+#: lib/BOM/View/Charting.pm:506 lib/BOM/View/Charting.pm:536
 msgid "Avg True Range"
 msgstr "Jarak Rata-Rata"
 
@@ -1335,7 +1320,7 @@ msgstr "Dipatenkan sebagai platform trading finansial"
 msgid "BACK TO HOMEPAGE"
 msgstr "KEMBALI KE HALAMAN DEPAN"
 
-#: cgi/subs/subs_BOMFeed_history.pm:420
+#: lib/BOM/View/Charting.pm:497
 msgid "BOM Charts Workspace"
 msgstr "Lembar kerja grafik BOM"
 
@@ -1381,17 +1366,17 @@ msgstr "Data Kepailitan"
 msgid "Banks, hedge funds and professional investors routinely trade binary options in over-the-counter derivatives markets. Many market professionals use and trust the %1 platform for high-volume flexible trades."
 msgstr "Berbagai bank, pengelola dana dan investor profesional secara rutin bertrading binary pada market derivatif over-the-counter. Bayak ahli market menggunakan dan mempercayai platform %1 untuk trading fleksibel dengan volume tinggi."
 
-#: cgi/subs/subs_BOMFeed_history.pm:395
+#: lib/BOM/View/Charting.pm:472
 msgid "Bar HLC Chart"
 msgstr "Chart Bar HLC"
 
-#: cgi/subs/subs_BOMFeed_history.pm:386
+#: lib/BOM/View/Charting.pm:463
 msgid "Bar OHLC Chart"
 msgstr "Chart Bar OHLC"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/bet/form/barrier.html.tt:18
 #: /home/git/translations/binary-static/src/templates/toolkit/resources/pricing_table_form.html.tt:59
-#: cgi/oop/Controller/Bet.pm:2337 web/bin/JavascriptCompress.pm:117
+#: cgi/oop/Controller/Bet.pm:2338 web/bin/GenerateStaticData.pm:117
 msgid "Barrier"
 msgstr "Batasan"
 
@@ -1407,17 +1392,23 @@ msgstr "Batasan (%) diluar batas"
 msgid "Barrier Step format error"
 msgstr "Format langkah batasan salah"
 
-#: lib/BOM/Product/Contract.pm:2539
+#: lib/BOM/Product/Contract.pm:2563
+#, fuzzy
+#| msgid "Barrier outside acceptable range."
+msgid "Barrier is out of acceptable range."
+msgstr "Batasan diluar rentang yang diterima."
+
+#: lib/BOM/Product/Contract.pm:2553
 msgid "Barrier may not be adjusted."
 msgstr "Batasan tidak dapat dirubah."
 
 #. ($min_pips . ' pips away from the spot.')
-#: lib/BOM/Product/Contract.pm:2505
+#: lib/BOM/Product/Contract.pm:2509
 msgid "Barrier must be at least "
 msgstr "Batasan setidaknya "
 
 #: /home/git/translations/binary-static/src/templates/toolkit/bet/form/barrier.html.tt:15
-#: cgi/oop/Controller/Bet.pm:2336
+#: cgi/oop/Controller/Bet.pm:2337
 msgid "Barrier offset"
 msgstr "Batasan offset"
 
@@ -1433,7 +1424,7 @@ msgstr "Terma Batasan"
 msgid "Barrier(s)"
 msgstr "Batas"
 
-#: lib/BOM/Product/Contract.pm:2530
+#: lib/BOM/Product/Contract.pm:2534
 msgid "Barriers must be on either side of the spot."
 msgstr "Batasan harus berada di kedua sisi spot."
 
@@ -1492,7 +1483,7 @@ msgid "BetOnMarkets.com reaches $1 billion turnover since starting in 1999"
 msgstr "BetOnMarkets.com mencapai $1 milyar omset sejak tahun 1999"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/resources/pricing_table.html.tt:48
-#: cgi/subs/subs_BOMFeed_history.pm:385
+#: lib/BOM/View/Charting.pm:462
 msgid "Bid"
 msgstr "Bid"
 
@@ -1584,30 +1575,29 @@ msgstr "Sejarah Binary.com yang luar biasa"
 msgid "Blog"
 msgstr "Blog"
 
-#: cgi/smartchart.cgi:20 cgi/subs/subs_BOMFeed_history.pm:528
-#: cgi/subs/subs_graphs_chartdirector.pm:257
+#: cgi/smartchart.cgi:20 cgi/subs/subs_graphs_chartdirector.pm:258
+#: lib/BOM/View/Charting.pm:605
 msgid "Bollinger Band Width"
 msgstr "Lebar Ben Bollinger"
 
-#: cgi/smartchart.cgi:54 cgi/subs/subs_BOMFeed_history.pm:425
-#: cgi/subs/subs_graphs_chartdirector.pm:480
+#: cgi/smartchart.cgi:54 cgi/subs/subs_graphs_chartdirector.pm:481
+#: lib/BOM/View/Charting.pm:502
 msgid "Bollinger Bands"
 msgstr "Gelang Bollinger"
 
-#: cgi/subs/subs_BOMFeed_history.pm:379
+#: lib/BOM/View/Charting.pm:456
 msgid "Bollinger Bands Average"
 msgstr "Bollinger Bands Average"
 
-#: cgi/subs/subs_BOMFeed_history.pm:321
+#: lib/BOM/View/Charting.pm:398
 msgid "Bollinger Bands Lower"
 msgstr "Bollinger Bands Lower"
 
-#: cgi/subs/subs_BOMFeed_history.pm:434
+#: lib/BOM/View/Charting.pm:511
 msgid "Bollinger Bands Upper"
 msgstr "Bollinger Bands Upper"
 
-#: cgi/subs/subs_BOMFeed_history.pm:571
-#: cgi/subs/subs_graphs_chartdirector.pm:482
+#: cgi/subs/subs_graphs_chartdirector.pm:483 lib/BOM/View/Charting.pm:648
 msgid "Bollinger Bands are lines displayed around a simple moving average line (default set to 20 periods). The upper line is displayed 2 standard deviations above the moving average, and the lower line is displayed 2 standard deviations below the moving average.By definition prices are high at the upper band and low at the lower band. This definition can aid in rigorous pattern recognition and is useful in comparing price action to the action of indicators to arrive at systematic trading decisions."
 msgstr "Bollinger Bands adalah garis-garis yang ditampilkan mengelilingi garis simple moving average (tersusun secara default kepada 20 periode). Garis atas menampilkan 2 standard deviasi diatas moving average, dan garis bawah menampilkan 2 standard deviasi dibawah moving average.Dengan batasan harga yang tinggi pada upper band dan rendah pada lower band. Batasan ini dapat membantu dalam pengakuan pola tajam dan berguna untuk membandingkan harga aksi dengan indikator aksi yang akan sampai pada keputusan trading sistematis."
 
@@ -1619,7 +1609,7 @@ msgstr "Kode Bonus (jika ada)"
 msgid "Brand of first car"
 msgstr "Merek mobil"
 
-#: cgi/subs/subs_BOMFeed_history.pm:396
+#: lib/BOM/View/Charting.pm:473
 msgid "Browse"
 msgstr "Layari"
 
@@ -1701,8 +1691,7 @@ msgstr "Bisakah saya menawarkan referral saya insentif untuk mendaftar melalui l
 msgid "Can you customize a banner for my site?"
 msgstr "Dapatkan anda memberikan banner khusus untuk website saya?"
 
-#: cgi/subs/subs_BOMFeed_history.pm:418
-#: cgi/subs/subs_graphs_chartdirector.pm:170
+#: cgi/subs/subs_graphs_chartdirector.pm:171 lib/BOM/View/Charting.pm:495
 msgid "Cancel"
 msgstr "Membatalkan"
 
@@ -1710,7 +1699,7 @@ msgstr "Membatalkan"
 msgid "Cancel Registration"
 msgstr "Batalkan Registrasi"
 
-#: cgi/subs/subs_BOMFeed_history.pm:347
+#: lib/BOM/View/Charting.pm:424
 msgid "Candlestick Chart"
 msgstr "Diagram Lilin"
 
@@ -1724,7 +1713,7 @@ msgstr "Batang lilin"
 msgid "Careers"
 msgstr "Karir"
 
-#: cgi/subs/subs_BOMFeed_history.pm:336
+#: lib/BOM/View/Charting.pm:413
 msgid "Cascade"
 msgstr "Riam"
 
@@ -1746,18 +1735,18 @@ msgstr "Password Kasir/Pengaturan"
 msgid "Certain limits are imposed as to the acceptable levels for barrier/strike prices of contracts. Typically, the barrier/strike may not be too close nor too far from the current underlying market level."
 msgstr "Beberapa batasan tertentu akan dikenakan pada batasan atau tingkat harga kontrak. Pada dasarnya batasan atau tingkat adalah tidak terlalu dekat atau terlalu jauh dari tingkat harga market terkini."
 
-#: cgi/smartchart.cgi:21 cgi/subs/subs_BOMFeed_history.pm:550
-#: cgi/subs/subs_graphs_chartdirector.pm:265
+#: cgi/smartchart.cgi:21 cgi/subs/subs_graphs_chartdirector.pm:266
+#: lib/BOM/View/Charting.pm:627
 msgid "Chaikin Money Flow"
 msgstr "Aliran Uang Chaikin"
 
-#: cgi/smartchart.cgi:22 cgi/subs/subs_BOMFeed_history.pm:542
-#: cgi/subs/subs_graphs_chartdirector.pm:273
+#: cgi/smartchart.cgi:22 cgi/subs/subs_graphs_chartdirector.pm:274
+#: lib/BOM/View/Charting.pm:619
 msgid "Chaikin Oscillator"
 msgstr "Chaikin Oskilator"
 
-#: cgi/smartchart.cgi:23 cgi/subs/subs_BOMFeed_history.pm:512
-#: cgi/subs/subs_graphs_chartdirector.pm:281
+#: cgi/smartchart.cgi:23 cgi/subs/subs_graphs_chartdirector.pm:282
+#: lib/BOM/View/Charting.pm:589
 msgid "Chaikin Volatility"
 msgstr "Chaikin Volatility"
 
@@ -1787,7 +1776,7 @@ msgstr "Ubah Kata Sandi"
 msgid "Change in account settings"
 msgstr "Perubahan pengaturan akun"
 
-#: cgi/analyse_contract.cgi:280 cgi/oop/Controller/Bet.pm:2142
+#: cgi/analyse_contract.cgi:280 cgi/oop/Controller/Bet.pm:2143
 msgid "Chart"
 msgstr "Grafik"
 
@@ -1797,7 +1786,7 @@ msgstr "Grafik"
 msgid "Chart Application"
 msgstr "Aplikasi Chart"
 
-#: cgi/subs/subs_BOMFeed_history.pm:382
+#: lib/BOM/View/Charting.pm:459
 msgid "Chart Type"
 msgstr "Tipe Diagram"
 
@@ -1926,10 +1915,6 @@ msgstr "Klien ID"
 msgid "Client's Liability"
 msgstr "Kewajiban Klien"
 
-#: lib/BOM/Utility/Validation/Error.pm:23
-msgid "Client-facing message"
-msgstr "Pesan yang diterika klien"
-
 #: /home/git/translations/binary-static/src/templates/toolkit/legal/terms_and_conditions.html.tt:49
 #: /home/git/translations/binary-static/src/templates/toolkit/legtrouble.html.tt:49
 msgid "Clients agree to be fully and personally liable for the due settlement of every transaction entered into under their account with the Company. This includes any transactions entered into by members of the Client's family or entourage who have gained access to the account. Clients are responsible for ensuring that they alone control access to the account, and that no minors are granted access to trading on the website. In any case, Clients remains fully liable for any and all positions traded on their account, and for any credit card transactions entered into the site for their account. Each Client also indemnifies the Company in respect to all costs and losses of any kind, whatsoever as may be incurred by the Company as a result, direct or indirect, of the Client's failure to perform or settle such a transaction. Online Gambling debts are enforceable in law in the Isle of Man."
@@ -1950,11 +1935,11 @@ msgstr "Klien harus mengisi formulir pendaftaran akun sesuai dengan identitas me
 
 #: /home/git/translations/binary-static/src/templates/toolkit/legal/complaints_disputes.html.tt:10
 msgid "Clients registered with Regent Markets (IOM) Ltd can raise their unresolved disputes with the Isle of Man Gambling Supervision Commission at"
-msgstr ""
+msgstr "Klien yang terdaftar pada Regent Markets (IOM) Ltd dapat meningkatkan sengketa yang belum terselesaikan dengan Komisi Pengawasan Trading Isle of Man di"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/legal/complaints_disputes.html.tt:13
 msgid "Clients registered with Regent Markets (Malta) Ltd can raise their unresolved disputes with the Lotteries and Gaming Authority at"
-msgstr ""
+msgstr "Klien terdaftar Regent Markets (Malta) Ltd dapat meningkatkan sengketa yang belum terselesaikan dengan Lotteries dan Gaming Authority di"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/legal/terms_and_conditions.html.tt:72
 #: /home/git/translations/binary-static/src/templates/toolkit/legtrouble.html.tt:72
@@ -1972,16 +1957,16 @@ msgstr "Klien yang ingin mengecualikan diri harus menyadari bahwa periode pengec
 #: /home/git/translations/binary-static/src/templates/toolkit/charting/daily_ohlc.html.tt:20
 #: /home/git/translations/binary-static/src/templates/toolkit/charting/daily_ohlc.html.tt:48
 #: /home/git/translations/binary-static/src/templates/toolkit/charting/legacy_chart_table.html.tt:15
-#: cgi/subs/subs_BOMFeed_history.pm:355 cgi/subs/subs_BOMFeed_history.pm:452
+#: lib/BOM/View/Charting.pm:432 lib/BOM/View/Charting.pm:529
 msgid "Close"
 msgstr "Tutup"
 
-#: cgi/subs/subs_BOMFeed_history.pm:408
+#: lib/BOM/View/Charting.pm:485
 msgid "Close All"
 msgstr "Tutup Semua"
 
-#: cgi/smartchart.cgi:24 cgi/subs/subs_BOMFeed_history.pm:455
-#: cgi/subs/subs_graphs_chartdirector.pm:296
+#: cgi/smartchart.cgi:24 cgi/subs/subs_graphs_chartdirector.pm:297
+#: lib/BOM/View/Charting.pm:532
 msgid "Close Location Value"
 msgstr "Tutup Lokasi Nilai"
 
@@ -1989,7 +1974,7 @@ msgstr "Tutup Lokasi Nilai"
 msgid "Close of trading day."
 msgstr "Penutupan Trading."
 
-#: cgi/subs/subs_graphs_chartdirector.pm:1121
+#: cgi/subs/subs_graphs_chartdirector.pm:1122
 msgid "Closed"
 msgstr "Tutup"
 
@@ -2044,9 +2029,8 @@ msgstr "Komoditi"
 msgid "Commodities are resources that are grown or extracted from the ground, such as silver, gold and oil. On %1, they are priced in US dollars."
 msgstr "Komoditas adalah sumber yang berkembang dan disaring dari tanah seperti silver, gold dan oil. Di %1 mereka memiliki harga dalam dolar Amerika."
 
-#: cgi/smartchart.cgi:25 cgi/subs/subs_BOMFeed_history.pm:377
-#: cgi/subs/subs_BOMFeed_history.pm:469
-#: cgi/subs/subs_graphs_chartdirector.pm:303
+#: cgi/smartchart.cgi:25 cgi/subs/subs_graphs_chartdirector.pm:304
+#: lib/BOM/View/Charting.pm:454 lib/BOM/View/Charting.pm:546
 msgid "Commodity Channel Index"
 msgstr "Indeks Terusan Komoditas"
 
@@ -2071,7 +2055,7 @@ msgstr "Keluhan dan Perselisihan"
 msgid "Confirm"
 msgstr "Lanjutkan"
 
-#: cgi/subs/subs_BOMFeed_history.pm:341
+#: lib/BOM/View/Charting.pm:418
 msgid "Connection failure. Please try again later."
 msgstr "Sambungan gagal. Silakan coba beberapa saat lagi."
 
@@ -2131,7 +2115,7 @@ msgid "Contract barrier must be positive."
 msgstr "Batasan kontrak harus bernilai positif."
 
 #. ($end_of_bo->date)
-#: lib/BOM/Product/Contract.pm:2902
+#: lib/BOM/Product/Contract.pm:2926
 msgid "Contract can not expire during the end-of-year holiday period. Select an expiry date after %1."
 msgstr "Kontrak tidak dapat berakhir pada periode liburan. Pilih waktu berakhir setelah %1."
 
@@ -2147,20 +2131,20 @@ msgstr "Penemuan kontrak dan harga"
 msgid "Contract expired"
 msgstr "Kontrak berakhir"
 
-#: lib/BOM/Product/Contract.pm:2679
+#: lib/BOM/Product/Contract.pm:2703
 msgid "Contract has already expired."
 msgstr "Kontrak telah berakhir."
 
-#: lib/BOM/Product/Contract.pm:1813
+#: lib/BOM/Product/Contract.pm:1816
 msgid "Contract market price is too close to final payout."
 msgstr "Harga kontrak berbeda tipis dengan hasil akhir."
 
 #. ($eod_blackout_expiry->as_string)
-#: lib/BOM/Product/Contract.pm:2718
+#: lib/BOM/Product/Contract.pm:2742
 msgid "Contract may not expire within the last %1 of trading."
 msgstr "Kontrak tidak dapat berakhir dalam %1 terakhir trading."
 
-#: lib/BOM/Product/Contract.pm:2688
+#: lib/BOM/Product/Contract.pm:2712
 msgid "Contract must expire during trading hours."
 msgstr "Kontrak hanya dapat berakhir selama waktu trading."
 
@@ -2178,7 +2162,7 @@ msgstr "Masa kontrak"
 msgid "Contract purchase (approved applications only)"
 msgstr "Pembelian kontrak (yang disetujui saja)"
 
-#: cgi/oop/Controller/Bet.pm:1468
+#: cgi/oop/Controller/Bet.pm:1469
 msgid "Contract purchases on this account must be on behalf of granters."
 msgstr "Kontrak yang dibeli pada akun ini adalah atas nama pemberi kuasa."
 
@@ -2205,7 +2189,7 @@ msgid "Contracts on %1 which both start and end between %2 and %3 on the same da
 msgstr "Kontrak pada %1 yang dimulai dan berakhir antara %2 hingga %3 pada hari yang sama adalah tidak tersedia."
 
 #. ($underlying->translated_display_name()
-#: lib/BOM/Product/Contract.pm:2704
+#: lib/BOM/Product/Contract.pm:2728
 msgid "Contracts on %1 with durations under 24 hours must expire on the same trading day."
 msgstr "Kontrak pada %1 dengan durasi kurang dari 24 jam harus berakhir pada hari trading yang sama."
 
@@ -2273,7 +2257,7 @@ msgstr "Kredit/<wbr/>Debit"
 msgid "Credit/Debit Card"
 msgstr "Kartu Kredit/Debit"
 
-#: cgi/subs/subs_BOMFeed_history.pm:349
+#: lib/BOM/View/Charting.pm:426
 msgid "Crosshair"
 msgstr "Crosshair"
 
@@ -2303,7 +2287,7 @@ msgstr "Kutipan mata uang disederhanakan menjadi 5 digit dan semua kontrak yang 
 msgid "Current Spot"
 msgstr "Spot saat ini"
 
-#: lib/BOM/Product/Contract.pm:2403
+#: lib/BOM/Product/Contract.pm:2406
 msgid "Current market price is 0."
 msgstr "Harga terkini market adalah 0."
 
@@ -2328,18 +2312,18 @@ msgstr "KTP atau Paspor yang masih berlaku"
 msgid "Customer Funds"
 msgstr "Dana Pelanggan"
 
-#: cgi/lost_password.cgi:307
+#: cgi/lost_password.cgi:309
 msgid "Customer Support has been informed of your Lost Login ID / Password request and will be contacting you soon. Thank you for your patience."
 msgstr "Customer Support telah diberitahu mengenai permintaan lupa Login ID/Kata sandi anda dan akan menghubungi anda sesegera mungkin. Terima kasih atas kesabaran anda."
 
 #: /home/git/translations/binary-static/src/templates/toolkit/charting/light_chart.html.tt:6
-#: cgi/subs/subs_BOMFeed_history.pm:371
 #: lib/BOM/Product/Helper/PricingTableParameters.pm:297
+#: lib/BOM/View/Charting.pm:448
 msgid "Daily"
 msgstr "Harian"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/charting/daily_ohlc.html.tt:11
-#: cgi/oop/Controller/Bet.pm:2165
+#: cgi/oop/Controller/Bet.pm:2166
 msgid "Daily Prices"
 msgstr "Harga Harian"
 
@@ -2379,11 +2363,11 @@ msgstr "Tanggal"
 msgid "Date of birth"
 msgstr "Tanggal lahir"
 
-#: cgi/subs/subs_BOMFeed_history.pm:407 web/bin/JavascriptCompress.pm:47
+#: lib/BOM/View/Charting.pm:484 web/bin/GenerateStaticData.pm:47
 msgid "Day"
 msgstr "Hari"
 
-#: cgi/subs/subs_BOMFeed_history.pm:356
+#: lib/BOM/View/Charting.pm:433
 msgid "Day Bet"
 msgstr "Kontrak harian"
 
@@ -2522,11 +2506,11 @@ msgstr ""
 "%1"
 
 #: cgi/subs/subs_forms.pm:220 cgi/subs/subs_forms.pm:2338
-#: web/bin/JavascriptCompress.pm:85
+#: web/bin/GenerateStaticData.pm:85
 msgid "Dec"
 msgstr "Des"
 
-#: web/bin/JavascriptCompress.pm:97
+#: web/bin/GenerateStaticData.pm:97
 msgid "December"
 msgstr "Desember"
 
@@ -2538,19 +2522,19 @@ msgstr "Tim Afiliasi yang berdedikasi untuk memberikan bantuan terbaik"
 msgid "Define your position"
 msgstr "Tentukan posisi anda"
 
-#: cgi/subs/subs_BOMFeed_history.pm:431
+#: lib/BOM/View/Charting.pm:508
 msgid "Delete"
 msgstr "Hapus"
 
-#: cgi/subs/subs_BOMFeed_history.pm:410
+#: lib/BOM/View/Charting.pm:487
 msgid "Delete All"
 msgstr "Hapus Semua"
 
-#: cgi/subs/subs_BOMFeed_history.pm:402
+#: lib/BOM/View/Charting.pm:479
 msgid "Delete All Lines"
 msgstr "Hapus Semua Garis"
 
-#: cgi/subs/subs_BOMFeed_history.pm:348
+#: lib/BOM/View/Charting.pm:425
 msgid "Delete all lines?"
 msgstr "Hapus semua garis?"
 
@@ -2660,12 +2644,12 @@ msgstr "Derivatif"
 msgid "Description"
 msgstr "Deskripsi"
 
-#: cgi/smartchart.cgi:26 cgi/subs/subs_BOMFeed_history.pm:483
-#: cgi/subs/subs_graphs_chartdirector.pm:317
+#: cgi/smartchart.cgi:26 cgi/subs/subs_graphs_chartdirector.pm:318
+#: lib/BOM/View/Charting.pm:560
 msgid "Detrended Price Osc"
 msgstr "Detrended Price Osc"
 
-#: cgi/subs/subs_BOMFeed_history.pm:414
+#: lib/BOM/View/Charting.pm:491
 msgid "Detrended Price Oscillator (DPO)"
 msgstr "% Oskilator Harga"
 
@@ -2679,7 +2663,7 @@ msgstr "Perbedaan dengan data feed lain"
 
 #: /home/git/translations/binary-static/src/templates/haml/get_started/random_markets.html.haml:1
 #: /home/git/translations/binary-static/src/templates/haml/get_started/types_of_trades.html.haml:1
-#: cgi/oop/Controller/Bet.pm:1221 cgi/oop/Controller/Bet.pm:1228
+#: cgi/oop/Controller/Bet.pm:1222 cgi/oop/Controller/Bet.pm:1229
 msgid "Digits"
 msgstr "Digit"
 
@@ -2735,11 +2719,11 @@ msgstr "Jangan melakukan trading jika anda dalam keadaan lelah atau di bawah pen
 msgid "Do you offer virtual-money accounts?"
 msgstr "Apakah anda menawarkan akun uang virtual?"
 
-#: cgi/subs/subs_BOMFeed_history.pm:442
+#: lib/BOM/View/Charting.pm:519
 msgid "Do you want to decrease the timescale?"
 msgstr "Apakah anda ingin mengurangkan jadwal waktu?"
 
-#: cgi/subs/subs_BOMFeed_history.pm:438
+#: lib/BOM/View/Charting.pm:515
 msgid "Do you want to increase the timescale?"
 msgstr "Apakah anda ingin menaikkan jadwal waktu?"
 
@@ -2759,21 +2743,20 @@ msgstr "Apakah anda ingin melihat Binary.com dalam bahasa lain, atau anda dapat 
 msgid "Documents are required to verify your identity"
 msgstr "Dokumen yang diperlukan untuk memverifikasi identitas anda"
 
-#: lib/BOM/Product/Transaction.pm:869
+#: lib/BOM/Product/Transaction.pm:870
 msgid "Don't buy contract using master password!"
 msgstr "Jangan membeli kontrak menggunakan master password!"
 
-#: cgi/smartchart.cgi:55 cgi/subs/subs_graphs_chartdirector.pm:490
+#: cgi/smartchart.cgi:55 cgi/subs/subs_graphs_chartdirector.pm:491
 msgid "Donchain Channel"
 msgstr "Terusan Donchain"
 
-#: cgi/smartchart.cgi:27 cgi/subs/subs_BOMFeed_history.pm:499
-#: cgi/subs/subs_graphs_chartdirector.pm:325
+#: cgi/smartchart.cgi:27 cgi/subs/subs_graphs_chartdirector.pm:326
+#: lib/BOM/View/Charting.pm:576
 msgid "Donchian Channel Width"
 msgstr "Lebar Terusan Donchian"
 
-#: cgi/subs/subs_BOMFeed_history.pm:536
-#: cgi/subs/subs_graphs_chartdirector.pm:491
+#: cgi/subs/subs_graphs_chartdirector.pm:492 lib/BOM/View/Charting.pm:613
 msgid "Donchian Channels plot the highest high and lowest low over the last period time intervals."
 msgstr "Donchian Channel memetakan tinggi tertinggi dan rendah terendah pada jarak periode waktu terakhir."
 
@@ -2786,7 +2769,7 @@ msgstr "Jangan menyerah karena nama. Quotidian hanya berarti sesuatu yang biasa 
 msgid "Dormant and Inactive Accounts"
 msgstr "Akun Dormant dan Tidak Aktif"
 
-#: cgi/subs/subs_BOMFeed_history.pm:441
+#: lib/BOM/View/Charting.pm:518
 msgid "Dot Chart"
 msgstr "Diagram titik"
 
@@ -2811,10 +2794,6 @@ msgstr ""
 msgid "Download the Random Markets raw tick data here."
 msgstr "Ambil data per tik market random disini."
 
-#: cgi/tick-data-downloads.cgi:19
-msgid "Download tick data"
-msgstr "Download data tik"
-
 #: /home/git/translations/binary-static/src/templates/toolkit/charting/chart_application.html.tt:5
 msgid "Downloadable application"
 msgstr "Download aplikasi"
@@ -2823,7 +2802,7 @@ msgstr "Download aplikasi"
 msgid "Dr"
 msgstr "Dr"
 
-#: cgi/subs/subs_graphs_chartdirector.pm:173
+#: cgi/subs/subs_graphs_chartdirector.pm:174
 msgid "Draw Chart"
 msgstr "Gambar Grafik"
 
@@ -2831,7 +2810,7 @@ msgstr "Gambar Grafik"
 msgid "Due to new gaming regulations recently promulgated in Malta, we are required to obtain your residential address details.  We would be grateful if you could update your"
 msgstr "Berhubung peraturan baru bertransaksi Malta, kami diminta untuk mendapatkan alamat lengkap anda. Kami sangat menghargai jika anda dapat memperbaharui"
 
-#: lib/BOM/Product/Transaction.pm:827
+#: lib/BOM/Product/Transaction.pm:828
 msgid "Due to regulatory requirements, you are required to authenticate your account in order to continue trading."
 msgstr "Sesuai dengan peraturan yang berlaku, Anda diminta untuk membuktikan kebenaran akun Anda sebelum melanjutkan trading."
 
@@ -2842,7 +2821,7 @@ msgid "Duration"
 msgstr "Durasi"
 
 #. ($shortest->as_string, $longest->as_string)
-#: lib/BOM/Product/Contract.pm:2794
+#: lib/BOM/Product/Contract.pm:2818
 msgid "Duration must be between %1 and %2."
 msgstr "Durasi harus antara %1 dan %2."
 
@@ -2883,8 +2862,8 @@ msgstr "Memperoleh penghasilan tambahan"
 msgid "Earning tax free trading profits*"
 msgstr "Memperoleh pendapatan bebas pajak*"
 
-#: cgi/smartchart.cgi:28 cgi/subs/subs_BOMFeed_history.pm:537
-#: cgi/subs/subs_graphs_chartdirector.pm:331
+#: cgi/smartchart.cgi:28 cgi/subs/subs_graphs_chartdirector.pm:332
+#: lib/BOM/View/Charting.pm:614
 msgid "Ease of Movement"
 msgstr "Pergerakan lancar"
 
@@ -2920,7 +2899,7 @@ msgid "Email address"
 msgstr "Alamat email"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/bet/form/duration.html.tt:5
-#: cgi/analyse_contract.cgi:121 web/bin/JavascriptCompress.pm:114
+#: cgi/analyse_contract.cgi:121 web/bin/GenerateStaticData.pm:114
 msgid "End Time"
 msgstr "Waktu akhir"
 
@@ -2928,7 +2907,7 @@ msgstr "Waktu akhir"
 msgid "Ends Between/Ends Outside trades"
 msgstr "Kontrak Berakhir Antara/Berakhir Keluar"
 
-#: cgi/contract_demo.cgi:85 cgi/oop/Controller/Bet.pm:1189
+#: cgi/contract_demo.cgi:85 cgi/oop/Controller/Bet.pm:1190
 msgid "Ends Between/Outside"
 msgstr "Berakhir Antara/Di Luar"
 
@@ -2946,11 +2925,11 @@ msgstr "Pastikan anda tidak mempromosikan %1 kepada pihak dibawah umur 18 tahun.
 msgid "Enter the barrier in terms of the difference from the spot price. If you enter +0.005, then you will be purchasing a contract with a barrier 0.005 higher than the entry spot. The entry spot will be the next tick after your order has been received"
 msgstr "Masukan batasan yang merupakan selisih harga spot. Jika Anda memasukan +0.005, maka Anda akan membeli kontrak dengan batasan 0.005 lebih tinggi dari spot masuk. Spot masuk adalah tik setelah kontrak Anda diproses"
 
-#: cgi/oop/Controller/Bet.pm:2340
+#: cgi/oop/Controller/Bet.pm:2341
 msgid "Enter the barrier in terms of the difference from the spot price. If you enter +0.005, then you will be purchasing a contract with a barrier 0.005 higher than the entry spot. The entry spot will be the next tick after your order has been received."
 msgstr "Masukan batasan yang merupakan selisih harga spot. Jika Anda memasukan +0.005, maka Anda akan membeli kontrak dengan batasan 0.005 lebih tinggi dari spot masuk. Spot masuk adalah tik setelah kontrak Anda diproses."
 
-#: cgi/analyse_contract.cgi:106 web/bin/JavascriptCompress.pm:113
+#: cgi/analyse_contract.cgi:106 web/bin/GenerateStaticData.pm:113
 msgid "Entry Spot"
 msgstr "Spot entri"
 
@@ -2963,7 +2942,7 @@ msgstr "Spot awal"
 msgid "Entry spot price"
 msgstr "Harga spot awal"
 
-#: cgi/smartchart.cgi:56 cgi/subs/subs_graphs_chartdirector.pm:496
+#: cgi/smartchart.cgi:56 cgi/subs/subs_graphs_chartdirector.pm:497
 msgid "Envelop (SMA 20 +/- 10%)"
 msgstr "Sampul (SMA 20 +/- 10%)"
 
@@ -2971,7 +2950,7 @@ msgstr "Sampul (SMA 20 +/- 10%)"
 msgid "Equity Offering"
 msgstr "Penawaran Ekuitas"
 
-#: cgi/create_account.cgi:111
+#: cgi/create_account.cgi:112
 msgid "Error : password field is blank !"
 msgstr "Error : kolom password kosong !"
 
@@ -3056,11 +3035,11 @@ msgstr "Harga akhir"
 msgid "Explanation"
 msgstr "Penjelasan"
 
-#: cgi/smartchart.cgi:47 cgi/subs/subs_graphs_chartdirector.pm:515
+#: cgi/smartchart.cgi:47 cgi/subs/subs_graphs_chartdirector.pm:516
 msgid "Exponential"
 msgstr "Eksponensial"
 
-#: cgi/subs/subs_BOMFeed_history.pm:404
+#: lib/BOM/View/Charting.pm:481
 msgid "Exponential Moving Average"
 msgstr "Pergerakan Rata-Rata Eksponensial"
 
@@ -3075,7 +3054,7 @@ msgstr "Bagian Depan ExtJS"
 msgid "FAQ"
 msgstr "Pertanyaan Umum"
 
-#: web/bin/JavascriptCompress.pm:52
+#: web/bin/GenerateStaticData.pm:52
 msgid "Failed to update trade description."
 msgstr "Gagal memperbarui deskripsi kontrak."
 
@@ -3095,8 +3074,8 @@ msgstr "Laba Kontrak Turun (%)"
 msgid "Family Name"
 msgstr "Nama Belakang"
 
-#: cgi/smartchart.cgi:29 cgi/subs/subs_BOMFeed_history.pm:472
-#: cgi/subs/subs_graphs_chartdirector.pm:338
+#: cgi/smartchart.cgi:29 cgi/subs/subs_graphs_chartdirector.pm:339
+#: lib/BOM/View/Charting.pm:549
 msgid "Fast Stochastic"
 msgstr "Stochastic Cepat"
 
@@ -3114,11 +3093,11 @@ msgid "Fax"
 msgstr "Fax"
 
 #: cgi/subs/subs_forms.pm:180 cgi/subs/subs_forms.pm:2298
-#: web/bin/JavascriptCompress.pm:75
+#: web/bin/GenerateStaticData.pm:75
 msgid "Feb"
 msgstr "Peb"
 
-#: web/bin/JavascriptCompress.pm:87
+#: web/bin/GenerateStaticData.pm:87
 msgid "February"
 msgstr "Pebruari"
 
@@ -3131,11 +3110,11 @@ msgstr "Biaya transaksi %1"
 msgid "Feel free to contact our friendly and helpful customer service experts. They're always available to answer your questions. You can contact us via live chat, email and telephone."
 msgstr "Jangan ragu untuk menghubungi customer service berpengalaman yang kami miliki. Mereka selalu tersedia untuk menjawab pertanyaan anda. Anda dapat menghubungi kami melalui live chat, email dan telepon."
 
-#: cgi/subs/subs_BOMFeed_history.pm:358
+#: lib/BOM/View/Charting.pm:435
 msgid "Fibonacci Fan"
 msgstr "Fibonacci Fan"
 
-#: cgi/subs/subs_BOMFeed_history.pm:397
+#: lib/BOM/View/Charting.pm:474
 msgid "Fibonacci Retracement"
 msgstr "Fibonacci Retracement"
 
@@ -3240,12 +3219,12 @@ msgstr "Untuk alasan keamanan, silakan coba prosedur 'Kehilangan Password' kemba
 msgid "For the third straight year, BetOnMarkets.com is voted 'Best Fixed-Odds Financial Trading Provider' by Shares Magazine UK. It’s the last time we win it because Shares Magazine stops awarding in this category."
 msgstr "Tiga kali berturut-turut, BetOnMarkets.com dinobatkan sebagai 'Penyedia Trading Financial Fixed-Odds Terbaik' oleh Shares Magazine UK."
 
-#: cgi/subs/subs_BOMFeed_history.pm:318
+#: lib/BOM/View/Charting.pm:395
 msgid "Forest Chart"
 msgstr "Grafik Forest"
 
 #: /home/git/translations/binary-static/src/templates/haml/get_started/glossary.html.haml:1
-#: cgi/subs/subs_BOMFeed_history.pm:428
+#: lib/BOM/View/Charting.pm:505
 msgid "Forex"
 msgstr "Forex"
 
@@ -3258,7 +3237,7 @@ msgstr "Lupa Login ID atau Kata Sandi?"
 msgid "Forward starting intraday and daily contracts are available on some %1"
 msgstr "Intraday dengan waktu mulai di hadapan tersedia pada beberapa %1"
 
-#: web/bin/JavascriptCompress.pm:125
+#: web/bin/GenerateStaticData.pm:125
 msgid "Fr"
 msgstr "Jum"
 
@@ -3280,7 +3259,7 @@ msgstr "Bonus Gratis Kontrak"
 msgid "Free gift"
 msgstr "Bonus"
 
-#: web/bin/JavascriptCompress.pm:72
+#: web/bin/GenerateStaticData.pm:72
 msgid "Friday"
 msgstr "Jumat"
 
@@ -3291,7 +3270,7 @@ msgstr "Jumat"
 #: /home/git/translations/binary-static/src/templates/toolkit/resources/pricing_table_form.html.tt:103
 #: /home/git/translations/binary-static/src/templates/toolkit/resources/pricing_table_form.html.tt:79
 #: /home/git/translations/binary-static/src/templates/toolkit/resources/pricing_table_form.html.tt:80
-#: web/bin/JavascriptCompress.pm:64
+#: web/bin/GenerateStaticData.pm:64
 msgid "From"
 msgstr "Dari"
 
@@ -3330,7 +3309,7 @@ msgstr "Instruksi Tambahan tidak boleh melebihi %1 perkataan."
 msgid "Further to this, the API interface is hosted by an API Proxy management provider, namely <a href=\"http://apigee.com\" target=\"_blank\">Apigee</a>. This service applies several services of benefit both to the application developer and to the API provider."
 msgstr "Informasi lanjut, API disediakan oleh manajemen penyedia API Proxy yaitu <a href=\"http://apigee.com\" target=\"_blank\">Apigee</a>. Layanan ini menyediakan berbagai manfaat baik untuk pembangun aplikasi dan juga penyedia API."
 
-#: cgi/subs/subs_BOMFeed_history.pm:325
+#: lib/BOM/View/Charting.pm:402
 msgid "Futures"
 msgstr "Fasilitas"
 
@@ -3361,7 +3340,7 @@ msgstr "Struktur Persentasi Komisi"
 msgid "Get %1 when you deposit %2."
 msgstr "Dapat %1 jika anda mendeposit %2."
 
-#: cgi/oop/Controller/Bet.pm:1070
+#: cgi/oop/Controller/Bet.pm:1071
 msgid "Get Prices"
 msgstr "Dapatkan Harga"
 
@@ -3471,7 +3450,7 @@ msgstr "Halo, Dunia"
 msgid "Hello, World!"
 msgstr "Halo, Dunia!"
 
-#: cgi/subs/subs_BOMFeed_history.pm:388
+#: lib/BOM/View/Charting.pm:465
 msgid "Help"
 msgstr "Bantuan"
 
@@ -3483,23 +3462,23 @@ msgstr "Tutup spot akhir"
 #: /home/git/translations/binary-static/src/templates/toolkit/charting/daily_ohlc.html.tt:46
 #: /home/git/translations/binary-static/src/templates/toolkit/charting/legacy_chart_table.html.tt:13
 #: /home/git/translations/binary-static/src/templates/toolkit/charting/ticker_data_table.html.tt:7
-#: cgi/subs/subs_BOMFeed_history.pm:365
+#: lib/BOM/View/Charting.pm:442
 msgid "High"
 msgstr "Tinggi"
 
-#: web/bin/JavascriptCompress.pm:116
+#: web/bin/GenerateStaticData.pm:116
 msgid "High Barrier"
 msgstr "Batasan Tinggi"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/bet/form/barrier.html.tt:18
 #: /home/git/translations/binary-static/src/templates/toolkit/charting/livechart.html.tt:43
 #: /home/git/translations/binary-static/src/templates/toolkit/resources/pricing_table_form.html.tt:60
-#: cgi/oop/Controller/Bet.pm:2333
+#: cgi/oop/Controller/Bet.pm:2334
 msgid "High barrier"
 msgstr "Batasan Tinggi"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/bet/form/barrier.html.tt:15
-#: cgi/oop/Controller/Bet.pm:2331
+#: cgi/oop/Controller/Bet.pm:2332
 msgid "High barrier offset"
 msgstr "Batasan offset tinggi"
 
@@ -3513,7 +3492,7 @@ msgstr "Konversi tinggi dan menghargai Pelanggan"
 msgid "High returns"
 msgstr "Laba tinggi"
 
-#: cgi/subs/subs_BOMFeed_history.pm:401
+#: lib/BOM/View/Charting.pm:478
 msgid "High/Low"
 msgstr "Tinggi/Rendah"
 
@@ -3523,7 +3502,7 @@ msgstr "Lebih Tinggi/Rendah"
 
 #: /home/git/translations/binary-static/src/templates/haml/get_started/random_markets.html.haml:1
 #: cgi/contract_demo.cgi:44 cgi/contract_demo.cgi:45 cgi/contract_guide.cgi:30
-#: cgi/oop/Controller/Bet.pm:1144 cgi/oop/Controller/Bet.pm:1151
+#: cgi/oop/Controller/Bet.pm:1145 cgi/oop/Controller/Bet.pm:1152
 msgid "Higher/Lower"
 msgstr "Lebih Tinggi/Rendah"
 
@@ -3535,8 +3514,7 @@ msgstr "Kontrak Lebih Tinggi/Rendah"
 msgid "Higher/lower trades"
 msgstr "Kontrak Lebih Tinggi/Rendah"
 
-#: cgi/subs/subs_BOMFeed_history.pm:515
-#: cgi/subs/subs_graphs_chartdirector.pm:333
+#: cgi/subs/subs_graphs_chartdirector.pm:334 lib/BOM/View/Charting.pm:592
 msgid "Highlights the relationship between volume and price changes and is particularly useful for assessing the strength of a trend."
 msgstr "Memperlihatkan hubungan antara volume dan perubahan harga dimana biasanya digunakan untuk menaksir kekuatan trend."
 
@@ -3783,7 +3761,7 @@ msgstr "Jika anda memilih <strong>waktu mulai</strong> \"Sekarang\", maka <stron
 msgid "If you select a specific <strong>end time</strong>, the <strong>end time</strong> is the selected time."
 msgstr "Jika anda memilih <strong>waktu berakhir</strong> tertentu, maka <strong>waktu berakhir</strong> adalah waktu yang dipilih."
 
-#: lib/BOM/Product/Transaction.pm:1125
+#: lib/BOM/Product/Transaction.pm:1126
 msgid "If you wish to raise these limits, please authenticate your account."
 msgstr "Jika anda ingin meningkatkan batasan ini, silahkan otentikasi akun anda."
 
@@ -3797,10 +3775,8 @@ msgid "If you're in Asia, you may find %1 more attractive because they reset aro
 msgstr "Jika anda berada di negara Asia, anda mungkin menemukan %1 lebih menarik karena market tersebut direset ulang sekitar waktu penutupan market Asia."
 
 #: /home/git/translations/binary-static/src/templates/toolkit/legal/complaints_disputes.html.tt:7
-#, fuzzy
-#| msgid "If your complaint relates to an outcome of a trade or a transaction and remains unresolved, it will turn into a dispute. Should you be unsatisfied with our response, you can choose to escalate your complaint to the regulator or to an alternative dispute resolution entity. Your disputes must be lodged within seven (7) days from the date the contract in question has been decided. No claims will be honoured after this period. You are solely responsible for the transactions made in your account."
 msgid "If your complaint relates to an outcome of a trade or a transaction and remains unresolved, it will turn into a dispute. Should you be unsatisfied with our response, you can choose to escalate your complaint to the regulator or to an alternative dispute resolution entity."
-msgstr "Jika keluhan anda berkaitan dengan hasil trading atau transaksi masih belum terselesaikan, hal ini merupakan perselisihan. Jika anda tidak puas dengan tanggapan kami, anda dapat memilih untuk membawa keluhan anda kepada regulator atau lembaga penyelesaian alternatif. Perselisihan anda harus diajukan dalam tempo tujuh (7) hari dari tanggal kontrak tersebut diselesaikan. Tidak ada klaim akan ditanggapi setelah periode tersebut. Anda bertanggung jawab sepenuhnya atas transaksi yang dilakukan pada akun anda."
+msgstr "Jika keluhan anda berkaitan dengan hasil trading atau transaksi masih belum terselesaikan, hal ini merupakan perselisihan. Jika anda tidak puas dengan tanggapan kami, anda dapat memilih untuk membawa keluhan anda kepada regulator atau lembaga penyelesaian alternatif."
 
 #. (stash->{website_name}, url_for('contact.cgi')
 #: /home/git/translations/binary-static/src/templates/haml/get_started/what_is_binary_trading.html.haml:1
@@ -3811,7 +3787,7 @@ msgstr "Jika anda adalah trader individual, anda akan menyukai kesederhanaan, fl
 msgid "If you’re looking to build a career, and not a resume, talk to us, Binary.com. We’re one of the IT world’s most vibrant and progressive workplaces."
 msgstr "Jika anda mencari tempat untuk membangun karir dan bukan hanya sekedar membuat lamaran kerja, hubungi kami di Binary.com. Kami adalah salah satu perusahaan IT tempat bekerja paling dinamis dan progrefif."
 
-#: lib/BOM/Product/Transaction.pm:490
+#: lib/BOM/Product/Transaction.pm:491
 msgid "Illegal currency $currency for $broker"
 msgstr "Mata uang ilegal $currency untuk $broker"
 
@@ -3851,7 +3827,7 @@ msgstr "Dengan gaya klasik Silicon Valley, seorang manager pengelola dana berjiw
 msgid "In foreign exchange markets, traders can enter contracts based on the change in price of one currency as it relates to another currency. For example if a trader selects Rise in the EUR/USD market, they are predicting that the value of the Euro will rise in relation to the value of the US dollar."
 msgstr "Pada market valuta asing, para trader dapat membeli kontrak berdasarkan pertukaran harga dari satu mata uang ke mata uang lainnya. Sebagai conth jika trader memilih kontrak Naik pada market EUR/USD, hal ini berarti mereka menganalisa nilai mata uang Euro akan lebih tinggi dari harga mata uang dolar AS."
 
-#: lib/BOM/Product/Transaction.pm:891
+#: lib/BOM/Product/Transaction.pm:892
 msgid "In order for you to place contracts, we need to know your Residence (Country). Please update your settings."
 msgstr "Untuk melakukan pembelian kontrak, kami perlu mengetahui domisili (Negara) anda. Silahkan perbarui bagian pengaturan."
 
@@ -3890,7 +3866,7 @@ msgid "In what country do you want to offer your service"
 msgstr "Pada negara mana anda ingin menawarkan layanan anda"
 
 #: cgi/contract_demo.cgi:73 cgi/contract_demo.cgi:86 cgi/contract_guide.cgi:56
-#: cgi/oop/Controller/Bet.pm:1195
+#: cgi/oop/Controller/Bet.pm:1196
 msgid "In/Out"
 msgstr "Di Dalam/Luar"
 
@@ -3921,27 +3897,23 @@ msgid "Indicative Price"
 msgstr "Harga Indikatif"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/charting/light_chart.html.tt:87
-#: cgi/subs/subs_BOMFeed_history.pm:368 cgi/subs/subs_BOMFeed_history.pm:406
+#: lib/BOM/View/Charting.pm:445 lib/BOM/View/Charting.pm:483
 msgid "Indicator"
 msgstr "Meteran"
 
-#: cgi/subs/subs_BOMFeed_history.pm:473
-#: cgi/subs/subs_graphs_chartdirector.pm:258
+#: cgi/subs/subs_graphs_chartdirector.pm:259 lib/BOM/View/Charting.pm:550
 msgid "Indicator that displays the width of Bollinger Bands."
 msgstr "Indikator yang menampilkan lebar Bollinger Bands"
 
-#: cgi/subs/subs_BOMFeed_history.pm:538
-#: cgi/subs/subs_graphs_chartdirector.pm:326
+#: cgi/subs/subs_graphs_chartdirector.pm:327 lib/BOM/View/Charting.pm:615
 msgid "Indicator that displays the width of Donchian Channels."
 msgstr "Indikator yang menampilkan lebar Saluran Donchian."
 
-#: cgi/subs/subs_BOMFeed_history.pm:475
-#: cgi/subs/subs_graphs_chartdirector.pm:275
+#: cgi/subs/subs_graphs_chartdirector.pm:276 lib/BOM/View/Charting.pm:552
 msgid "Indicator that is calculated by subtracting a 10 period exponential moving average from a 3 period moving average of the Accumulation Distribution Line."
 msgstr "Indikator yang dihitung dengan mengurangkan 10 periode pergerakan rata-rata eksponesial dari 3 periode pergerakan rata-rata Garis Akumulasi Distribusi."
 
-#: cgi/subs/subs_BOMFeed_history.pm:517
-#: cgi/subs/subs_graphs_chartdirector.pm:235
+#: cgi/subs/subs_graphs_chartdirector.pm:236 lib/BOM/View/Charting.pm:594
 msgid "Indicator that signals an upward trend when it rises above zero and a downward trend when it falls below zero. The farther away the oscillator is from the zero line, the stronger the trend."
 msgstr "Petunjuk dimana signal bergerak cenderung naik diatas nol dan cenderung jatuh dibawah nol. Semakin jauh jarak oskilator dari baris nol maka kecenderungan semakin kuat."
 
@@ -3982,7 +3954,7 @@ msgid "Instrument:"
 msgstr "Instrumen:"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/charting/light_chart.html.tt:21
-#: cgi/subs/subs_BOMFeed_history.pm:411
+#: lib/BOM/View/Charting.pm:488
 msgid "Instruments"
 msgstr "Instrument"
 
@@ -4012,11 +3984,11 @@ msgstr "Interpretasi"
 msgid "Intraday"
 msgstr "Intraday"
 
-#: lib/BOM/Product/Contract.pm:1581
+#: lib/BOM/Product/Contract.pm:1584
 msgid "Intraday contracts may not cross market open."
 msgstr "Kontrak intraday mungkin tidak melewati pembukaan market."
 
-#: cgi/oop/Controller/Bet.pm:2177
+#: cgi/oop/Controller/Bet.pm:2178
 msgid "Intraday prices"
 msgstr "Harga-harga Intraday"
 
@@ -4045,15 +4017,15 @@ msgstr "Jumlah tidak berlaku"
 msgid "Invalid fax number."
 msgstr "Nomor fax tidak berlaku."
 
-#: lib/BOM/Product/Contract.pm:2339
+#: lib/BOM/Product/Contract.pm:2342
 msgid "Invalid payout currency."
 msgstr "Mata uang hasil tidak berlaku."
 
-#: cgi/subs/subs_BOMFeed_history.pm:366
+#: lib/BOM/View/Charting.pm:443
 msgid "Invalid period input! Please input the period between 0 and #1"
 msgstr "Data untuk periode salah! Tolong masukan data di antara 0 dan 1"
 
-#: lib/BOM/Product/Contract.pm:2388
+#: lib/BOM/Product/Contract.pm:2391
 msgid "Invalid stake"
 msgstr "Modal salah"
 
@@ -4084,7 +4056,7 @@ msgstr "Underlying salah"
 msgid "Invalid value."
 msgstr "Nilai tidak berlaku."
 
-#: cgi/subs/subs_BOMFeed_history.pm:354
+#: lib/BOM/View/Charting.pm:431
 msgid "Invalid workspace name. Only use characters (A-Z,a-z,0-9, -, _ and whitespace)"
 msgstr "Nama area kerja tidak berlaku. Silakan gunakan hanya huruf (A-Z,a-z,0-9, -, _ dan whitespace)"
 
@@ -4098,7 +4070,7 @@ msgstr "Adalah penting bagi anda untuk membaca dan memahami isi dari terma dan k
 
 #: /home/git/translations/binary-static/src/templates/toolkit/legal/complaints_disputes.html.tt:16
 msgid "It is important that you refer your disputes to the appropriate ADR for the claims to be valid."
-msgstr ""
+msgstr "Adalah penting bahwa anda merujuk perselisihan anda ke ADR yang sesuai untuk klaim untuk menjadi valid."
 
 #: /home/git/translations/binary-static/src/templates/haml/static/devguide.html.haml:1
 msgid "It is not necessary to actually trade or to deposit funds to your account."
@@ -4125,17 +4097,16 @@ msgstr "Bagian"
 msgid "It’s time to expand. We set up a programming center in Cyberjaya – the Silicon Valley of Kuala Lumpur – to maintain and improve BetOnMarkets.com."
 msgstr "Sudah saatnya untuk memperluas. Kami mendirikan pusat pemrograman di Cyberjaya - Silicon Valley Kuala Lumpur - untuk mempertahankan dan meningkatkan BetOnMarkets.com."
 
-#: cgi/subs/subs_BOMFeed_history.pm:532
-#: cgi/subs/subs_graphs_chartdirector.pm:243
+#: cgi/subs/subs_graphs_chartdirector.pm:244 lib/BOM/View/Charting.pm:609
 msgid "J. Welles Wilder has developed the Average Directional Index - ADX to define trend force, whether the trend will develop further or will gradually weaken. The indicator allows to analyse tendencies of the market and to make trading decisions in the market forex."
 msgstr "J. Welles Wilder telah mengembangkan Average Directional Index - ADX untuk mendefinisikan paksaan trend, apakah trend akan berkembang lebih lanjut atau akan berangsur-angsur melemah. Indikator ini dapat menganalisa kecenderungan market dan membuat keputusan trading pada market forex."
 
 #: cgi/subs/subs_forms.pm:176 cgi/subs/subs_forms.pm:2294
-#: web/bin/JavascriptCompress.pm:74
+#: web/bin/GenerateStaticData.pm:74
 msgid "Jan"
 msgstr "Jan"
 
-#: web/bin/JavascriptCompress.pm:86
+#: web/bin/GenerateStaticData.pm:86
 msgid "January"
 msgstr "Januari"
 
@@ -4150,11 +4121,11 @@ msgid "Join our analysts LIVE twice a week for a comprehensive analysis of recen
 msgstr "Ikuti analis kami secara LIVE dua kali seminggu untuk memperoleh analisa menyeluruh pada perkembangan dan trend terbaru di dunia market financial."
 
 #: cgi/subs/subs_forms.pm:200 cgi/subs/subs_forms.pm:2318
-#: web/bin/JavascriptCompress.pm:80
+#: web/bin/GenerateStaticData.pm:80
 msgid "Jul"
 msgstr "Jul"
 
-#: web/bin/JavascriptCompress.pm:92
+#: web/bin/GenerateStaticData.pm:92
 msgid "July"
 msgstr "Juli"
 
@@ -4164,11 +4135,11 @@ msgid "Jump to"
 msgstr "Langsung ke"
 
 #: cgi/subs/subs_forms.pm:196 cgi/subs/subs_forms.pm:2314
-#: web/bin/JavascriptCompress.pm:79
+#: web/bin/GenerateStaticData.pm:79
 msgid "Jun"
 msgstr "Juni"
 
-#: web/bin/JavascriptCompress.pm:91
+#: web/bin/GenerateStaticData.pm:91
 msgid "June"
 msgstr "Juni"
 
@@ -4189,7 +4160,7 @@ msgid "Large"
 msgstr "besar"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/charting/ticker_data_table.html.tt:4
-#: cgi/subs/subs_BOMFeed_history.pm:373
+#: lib/BOM/View/Charting.pm:450
 msgid "Last"
 msgstr "Akhir"
 
@@ -4197,7 +4168,7 @@ msgstr "Akhir"
 msgid "Last Digit Prediction"
 msgstr "Analisa Digit Terakhir"
 
-#: cgi/oop/Controller/Bet.pm:2194
+#: cgi/oop/Controller/Bet.pm:2195
 msgid "Last Digit Stats"
 msgstr "Statistik Digit Terakhir"
 
@@ -4277,15 +4248,15 @@ msgstr "Seperti %2, %1 direset ulang ke harga 1000 setiap hari. Bedanya adalah %
 msgid "Limit"
 msgstr "Batas"
 
-#: cgi/subs/subs_BOMFeed_history.pm:338
+#: lib/BOM/View/Charting.pm:415
 msgid "Line"
 msgstr "Garis"
 
-#: cgi/subs/subs_BOMFeed_history.pm:350
+#: lib/BOM/View/Charting.pm:427
 msgid "Line Chart"
 msgstr "Diagram Garis"
 
-#: cgi/subs/subs_BOMFeed_history.pm:400
+#: lib/BOM/View/Charting.pm:477
 msgid "Line Dot Chart"
 msgstr "Diagram Garis"
 
@@ -4346,7 +4317,7 @@ msgstr "Masuk kedalam akun afiliasi %1 anda dan klik pada: Pemasaran &rarr; Semu
 msgid "Log-in to your %1 affiliate account and click on: Reports &rarr; Traffic Report."
 msgstr "Masuk kedalam akun afiliasi %1 anda dan klik pada: Laporan &rarr; Laporan Trafik."
 
-#: cgi/subs/subs_BOMFeed_history.pm:381
+#: lib/BOM/View/Charting.pm:458
 msgid "Logarithmic Scale"
 msgstr "Skala Log"
 
@@ -4366,10 +4337,6 @@ msgstr "Login ID"
 msgid "Login ID (%1) does not exist."
 msgstr "Login ID (%1) tidak tersedia."
 
-#: frontend/lib/BOM/Web/Home.pm:111
-msgid "Login ID not given."
-msgstr "Login ID tidak diberikan."
-
 #: /home/git/translations/binary-static/src/templates/haml/home/login.html.haml:1
 msgid "Login Trouble"
 msgstr "Kesulitan Akses"
@@ -4383,7 +4350,7 @@ msgstr "Masalah Login"
 msgid "Long-term partnership with the leading financial trading service"
 msgstr "Kemitraan jangka panjang bersama penyedia layanan trading finansial terkemuka"
 
-#: web/bin/JavascriptCompress.pm:129
+#: web/bin/GenerateStaticData.pm:129
 msgid "Loss"
 msgstr "Rugi"
 
@@ -4396,11 +4363,11 @@ msgstr "Lupa kata sandi?"
 #: /home/git/translations/binary-static/src/templates/toolkit/charting/daily_ohlc.html.tt:47
 #: /home/git/translations/binary-static/src/templates/toolkit/charting/legacy_chart_table.html.tt:14
 #: /home/git/translations/binary-static/src/templates/toolkit/charting/ticker_data_table.html.tt:8
-#: cgi/subs/subs_BOMFeed_history.pm:415
+#: lib/BOM/View/Charting.pm:492
 msgid "Low"
 msgstr "Rendah"
 
-#: web/bin/JavascriptCompress.pm:115
+#: web/bin/GenerateStaticData.pm:115
 msgid "Low Barrier"
 msgstr "Batasan Rendah"
 
@@ -4411,12 +4378,12 @@ msgstr "Batasan rendah hanya terdiri dari angka"
 #: /home/git/translations/binary-static/src/templates/toolkit/bet/form/barrier.html.tt:37
 #: /home/git/translations/binary-static/src/templates/toolkit/charting/livechart.html.tt:47
 #: /home/git/translations/binary-static/src/templates/toolkit/resources/pricing_table_form.html.tt:46
-#: cgi/oop/Controller/Bet.pm:2334
+#: cgi/oop/Controller/Bet.pm:2335
 msgid "Low barrier"
 msgstr "Batasan rendah"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/bet/form/barrier.html.tt:34
-#: cgi/oop/Controller/Bet.pm:2332
+#: cgi/oop/Controller/Bet.pm:2333
 msgid "Low barrier offset"
 msgstr "Batasan offset rendah"
 
@@ -4428,13 +4395,16 @@ msgstr "Garis Bawah"
 msgid "Lower Band = Average - 0.5 * Std Deviation"
 msgstr "Garis Bawah = Rata-rata - 0.5 Std Deviasi"
 
-#: cgi/smartchart.cgi:30 cgi/subs/subs_BOMFeed_history.pm:362
-#: cgi/subs/subs_BOMFeed_history.pm:562
-#: cgi/subs/subs_graphs_chartdirector.pm:349
+#: lib/BOM/Product/Contract.pm:2543
+msgid "Lower barrier is out of acceptable range. Please adjust the lower barrier."
+msgstr ""
+
+#: cgi/smartchart.cgi:30 cgi/subs/subs_graphs_chartdirector.pm:350
+#: lib/BOM/View/Charting.pm:439 lib/BOM/View/Charting.pm:639
 msgid "MACD"
 msgstr "Moving Average Convergence/Divergence"
 
-#: cgi/subs/subs_BOMFeed_history.pm:352
+#: lib/BOM/View/Charting.pm:429
 msgid "MACD Signal"
 msgstr "Signal MACD"
 
@@ -4462,11 +4432,11 @@ msgid "Make your trade"
 msgstr "Lakukan trading anda"
 
 #: cgi/subs/subs_forms.pm:184 cgi/subs/subs_forms.pm:2302
-#: web/bin/JavascriptCompress.pm:76
+#: web/bin/GenerateStaticData.pm:76
 msgid "Mar"
 msgstr "Mar"
 
-#: web/bin/JavascriptCompress.pm:88
+#: web/bin/GenerateStaticData.pm:88
 msgid "March"
 msgstr "Maret"
 
@@ -4493,7 +4463,7 @@ msgid "Market exit price"
 msgstr "Harga akhir market"
 
 #. ($safer_expiry->date)
-#: lib/BOM/Product/Contract.pm:2854
+#: lib/BOM/Product/Contract.pm:2878
 msgid "Market holiday during the contract period. Select an expiry date after %1."
 msgstr "Terdapat hari libur selama periode kontrak. Pilih tanggal berakhir setelah %1."
 
@@ -4519,8 +4489,8 @@ msgstr "Pemasaran dan Promosi"
 msgid "Markets"
 msgstr "Berbagai Market"
 
-#: cgi/smartchart.cgi:31 cgi/subs/subs_BOMFeed_history.pm:546
-#: cgi/subs/subs_graphs_chartdirector.pm:361
+#: cgi/smartchart.cgi:31 cgi/subs/subs_graphs_chartdirector.pm:362
+#: lib/BOM/View/Charting.pm:623
 msgid "Mass Index"
 msgstr "Indeks Massa"
 
@@ -4576,7 +4546,7 @@ msgid "Maximum withdrawal by all other means:"
 msgstr "Maksimum jumlah penarikan:"
 
 #: cgi/subs/subs_forms.pm:192 cgi/subs/subs_forms.pm:2310
-#: web/bin/JavascriptCompress.pm:78 web/bin/JavascriptCompress.pm:90
+#: web/bin/GenerateStaticData.pm:78 web/bin/GenerateStaticData.pm:90
 msgid "May"
 msgstr "Mei"
 
@@ -4637,19 +4607,19 @@ msgstr "Minimal"
 msgid "Miss"
 msgstr "Nona"
 
-#: lib/BOM/Product/Contract.pm:1542 lib/BOM/Product/Contract.pm:1595
+#: lib/BOM/Product/Contract.pm:1545 lib/BOM/Product/Contract.pm:1598
 msgid "Missing market data for contract period."
 msgstr "Gangguan data market selama periode kontrak."
 
-#: lib/BOM/Product/Contract.pm:1481
+#: lib/BOM/Product/Contract.pm:1484
 msgid "Missing market data for entry spot."
 msgstr "Gangguan data market pada spot awal."
 
-#: lib/BOM/Product/Contract.pm:1555 lib/BOM/Product/Contract.pm:1568
+#: lib/BOM/Product/Contract.pm:1558 lib/BOM/Product/Contract.pm:1571
 msgid "Missing market data for exit spot."
 msgstr "Gangguan data market pada spot akhir."
 
-#: web/bin/JavascriptCompress.pm:121
+#: web/bin/GenerateStaticData.pm:121
 msgid "Mo"
 msgstr "Sen"
 
@@ -4657,12 +4627,12 @@ msgstr "Sen"
 msgid "Mobile application"
 msgstr "Aplikasi mobile"
 
-#: cgi/smartchart.cgi:32 cgi/subs/subs_BOMFeed_history.pm:359
-#: cgi/subs/subs_BOMFeed_history.pm:494
+#: cgi/smartchart.cgi:32 lib/BOM/View/Charting.pm:436
+#: lib/BOM/View/Charting.pm:571
 msgid "Momentum"
 msgstr "Momentum"
 
-#: web/bin/JavascriptCompress.pm:68
+#: web/bin/GenerateStaticData.pm:68
 msgid "Monday"
 msgstr "Senin"
 
@@ -4695,12 +4665,12 @@ msgstr "Terma Moneyness"
 msgid "Monitor your portfolio in real time."
 msgstr "Monitor portofolio anda tepat waktu."
 
-#: cgi/subs/subs_BOMFeed_history.pm:317 web/bin/JavascriptCompress.pm:48
+#: lib/BOM/View/Charting.pm:394 web/bin/GenerateStaticData.pm:48
 msgid "Month"
 msgstr "Bulan"
 
-#: cgi/subs/subs_BOMFeed_history.pm:330
 #: lib/BOM/Product/Helper/PricingTableParameters.pm:307
+#: lib/BOM/View/Charting.pm:407
 msgid "Monthly"
 msgstr "Bulanan"
 
@@ -4708,7 +4678,7 @@ msgstr "Bulanan"
 msgid "Monthly Webinars"
 msgstr "Webinar Bulanan"
 
-#: cgi/subs/subs_BOMFeed_history.pm:376
+#: lib/BOM/View/Charting.pm:453
 msgid "Months"
 msgstr "Bulan"
 
@@ -4725,7 +4695,7 @@ msgstr "Lebih dari %1 kontrak tersedia"
 msgid "Mother's maiden name"
 msgstr "Nama Ibu"
 
-#: cgi/subs/subs_BOMFeed_history.pm:387
+#: lib/BOM/View/Charting.pm:464
 msgid "Mountain Chart"
 msgstr "Diagram Gunung"
 
@@ -4733,18 +4703,15 @@ msgstr "Diagram Gunung"
 msgid "Moving Average"
 msgstr "Moving Average"
 
-#: cgi/subs/subs_BOMFeed_history.pm:467
-#: cgi/subs/subs_graphs_chartdirector.pm:509
+#: cgi/subs/subs_graphs_chartdirector.pm:510 lib/BOM/View/Charting.pm:544
 msgid "Moving averages provide an objective measure of trend direction by smoothing out short-term price fluctuations.A Simple Moving Average is the unweighted mean of the n (set by period) previous periods (1 period is the selected timescale, i.e. 1 minute, 1 day etc.).All previous periods have equal weight in determining the SMA.Shorter length moving averages are more sensitive and signals trends much faster than longer length MAs, but also give more false signals. A longer length MA is more reliable but only picks up the big trend."
 msgstr "Moving average berfungsi untuk menentukan trend yang akan terjadi dengan memuluskan harga fluktuasi jangka pendek.Simple Moving Average adalah menambahkan harga n (disusun berdasarkan periode) periode sebelumnya (1 periode adalah pilihan timescale yaitu 1 menit, 1 hari dll.).Semua periode sebelumnya memiliki ukuran yang sama dalam menentukan SMA.Moving average pendek lebih sensitif dan trend signalnya lebih cepat dibandingkan MA panjang tapi juga sering memberikan signal palsu. MA dengan ukuran lebih panjang adalah dapat dipercayai namun hanya dicapai pada trend besar."
 
-#: cgi/subs/subs_BOMFeed_history.pm:457
-#: cgi/subs/subs_graphs_chartdirector.pm:517
+#: cgi/subs/subs_graphs_chartdirector.pm:518 lib/BOM/View/Charting.pm:534
 msgid "Moving averages provide an objective measure of trend direction by smoothing out short-term price fluctuations.For an Exponential Moving Average, the applied weight factor decreases exponential for periods further away in the past. It gives much more importance to recent observations while still not discarding older observations entirely.Shorter length moving averages are more sensitive and signals trends much faster than longer length MAs, but also give more false signals. A longer length MA is more reliable but only picks up the big trend."
 msgstr "Moving average berfungsi untuk menentukan trend yang akan terjadi dengan memuluskan harga fluktuasi jangka pendek.Untuk Exponential Moving Average, faktor pemberat yang digunakan menurun secara exponential untuk periode sebelumnya. Hal ini lebih menumpukan perhatian pada pengamatan terkini dimana tidak mengabaikan pengamatan sebelumnya.Moving average pendek lebih sensitif dan trend signalnya lebih cepat dibandingkan MA panjang tapi juga sering memberikan signal palsu. MA dengan ukuran lebih panjang adalah dapat dipercayai namun hanya dicapai pada trend besar."
 
-#: cgi/subs/subs_BOMFeed_history.pm:481
-#: cgi/subs/subs_graphs_chartdirector.pm:533
+#: cgi/subs/subs_graphs_chartdirector.pm:534 lib/BOM/View/Charting.pm:558
 msgid "Moving averages provide an objective measure of trend direction by smoothing out short-term price fluctuations.In a Weighted Moving Average, the previous periods have less weight for periods further away in the past. In an n-day WMA the latest day has weight n, the second latest n-1, etc, down to zero.Shorter length moving averages are more sensitive and signals trends much faster than longer length MAs, but also give more false signals. A longer length MA is more reliable but only picks up the big trend."
 msgstr "Moving average berfungsi untuk menentukan trend yang akan terjadi dengan memuluskan harga fluktuasi jangka pendek.Dalam Weighted Moving Average, periode sebelumnya lebih ringan dibandingkan dengan periode jauh sebelumnya. Dalam sebuah n-hari WMA hari terkini memiliki berat n, kedua terkini adalah n-1, dan seterusnya hingga menurun pada nol.Moving average pendek lebih sensitif dan trend signalnya lebih cepat dibandingkan MA panjang tapi juga sering memberikan signal palsu. MA dengan ukuran lebih panjang adalah dapat dipercayai namun hanya dicapai pada trend besar."
 
@@ -4808,7 +4775,7 @@ msgstr "Laba bersih"
 msgid "Network Status"
 msgstr "Status Network"
 
-#: cgi/subs/subs_BOMFeed_history.pm:383
+#: lib/BOM/View/Charting.pm:460
 msgid "New"
 msgstr "Baru"
 
@@ -4821,8 +4788,8 @@ msgid "New Password"
 msgstr "Kata Sandi Baru"
 
 #: cgi/f_brokercgi/f_clientloginid_newpassword.cgi:74
-#: cgi/lost_password.cgi:143 cgi/lost_password.cgi:258
-#: cgi/lost_password.cgi:279 cgi/lost_password.cgi:304
+#: cgi/lost_password.cgi:143 cgi/lost_password.cgi:259
+#: cgi/lost_password.cgi:280 cgi/lost_password.cgi:306
 msgid "New Password Request"
 msgstr "Permohonan Kata Sandi Baru"
 
@@ -4830,7 +4797,7 @@ msgstr "Permohonan Kata Sandi Baru"
 msgid "New To Trading?"
 msgstr "Baru pada dunia trading?"
 
-#: cgi/create_account.cgi:176
+#: cgi/create_account.cgi:177
 msgid "New account registration fail."
 msgstr "Pendaftaran account baru gagal."
 
@@ -4841,21 +4808,21 @@ msgstr "Terbaru"
 
 #: /home/git/translations/binary-static/src/templates/haml/get_started/benefits_of_trading_binaries.html.haml:1
 #: /home/git/translations/binary-static/src/templates/haml/get_started/how_to_trade_binaries.html.haml:1
-#: web/bin/JavascriptCompress.pm:118
+#: web/bin/GenerateStaticData.pm:118
 msgid "Next"
 msgstr "Lanjutkan"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/container/confirm_box_popup.html.tt:7
-#: cgi/subs/subs_BOMFeed_history.pm:328 cgi/subs/subs_forms.pm:3399
-#: cgi/subs/subs_forms.pm:997
+#: cgi/subs/subs_forms.pm:3399 cgi/subs/subs_forms.pm:997
+#: lib/BOM/View/Charting.pm:405
 msgid "No"
 msgstr "Tidak"
 
-#: cgi/subs/subs_graphs.pm:622
+#: cgi/subs/subs_graphs.pm:623
 msgid "No Data available"
 msgstr "tidak ada data yang ada"
 
-#: web/bin/JavascriptCompress.pm:135
+#: web/bin/GenerateStaticData.pm:135
 msgid "No Live price update"
 msgstr "Tidak tersedia harga Live"
 
@@ -4863,7 +4830,7 @@ msgstr "Tidak tersedia harga Live"
 msgid "No Touch trades"
 msgstr "Kontrak tidak menyentuh"
 
-#: cgi/subs/subs_BOMFeed_history.pm:448
+#: lib/BOM/View/Charting.pm:525
 msgid "No data available to draw the requested chart. Please try our daily chart for this instrument."
 msgstr "Tidak ditemukan data untuk menampilkan chart yang anda inginkan. Silakan coba gunakan chart harian kami untuk instrumen ini."
 
@@ -4907,7 +4874,7 @@ msgstr "Nota:"
 msgid "Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price."
 msgstr "Nota: Kontrak akan dijual pada harga terkini market ketika permintaan diterima oleh server kami. Harga ini mungkin berbeda dari harga yang diindikasikan."
 
-#: cgi/oop/Controller/Bet.pm:1037
+#: cgi/oop/Controller/Bet.pm:1038
 msgid "Note: During summer time (daylight saving), GMT is one hour behind BST (British Summer Time)"
 msgstr "Nota: Selama musim panas, GMT adalah satu jam lebih lambat dari BST (British Summer Time)"
 
@@ -4947,11 +4914,11 @@ msgid "Notification of Changes"
 msgstr "Pemberitahuan Perubahan"
 
 #: cgi/subs/subs_forms.pm:216 cgi/subs/subs_forms.pm:2334
-#: web/bin/JavascriptCompress.pm:84
+#: web/bin/GenerateStaticData.pm:84
 msgid "Nov"
 msgstr "Nov"
 
-#: web/bin/JavascriptCompress.pm:96
+#: web/bin/GenerateStaticData.pm:96
 msgid "November"
 msgstr "Nopember"
 
@@ -4973,7 +4940,7 @@ msgid "Number of ticks"
 msgstr "Jumlah tik"
 
 #. ($min_tick, $max_tick)
-#: lib/BOM/Product/Contract.pm:2753
+#: lib/BOM/Product/Contract.pm:2777
 msgid "Number of ticks must be between %1 and %2"
 msgstr "Durasi harus antara %1 hingga %2"
 
@@ -4993,7 +4960,7 @@ msgstr "Pembaruan Token OAuth2"
 msgid "OAuth2.0 is the emerging internet standard for this purpose. See <a href=\"http://oauth.net/2\" target=\"_blank\">http://oauth.net/2</a> for a formal definition, although we will guide you through the steps relevant to your platform."
 msgstr "OAuth2.0 adalah internet standard untuk tujuan ini. Lihat <a href=\"http://oauth.net/2\" target=\"_blank\">http://oauth.net/2</a> untuk definisi formal, walaupun kami akan memandu anda melalui langkah-langkah yang relevan dengan platform Anda."
 
-#: cgi/subs/subs_BOMFeed_history.pm:422
+#: lib/BOM/View/Charting.pm:499
 msgid "OK"
 msgstr "OK"
 
@@ -5006,7 +4973,7 @@ msgid "ORIGINAL Utility bill (within last 3 months) ; or"
 msgstr "Tagihan utilitas ASLI (dalam tempo 3 bulan) atau"
 
 #: cgi/subs/subs_forms.pm:212 cgi/subs/subs_forms.pm:2330
-#: web/bin/JavascriptCompress.pm:83
+#: web/bin/GenerateStaticData.pm:83
 msgid "Oct"
 msgstr "Oktober"
 
@@ -5019,7 +4986,7 @@ msgstr "Oktal Futures"
 msgid "Octal Futures is a Perl web application which demonstrates how to authenticate and make server-side calls to the Binary.com API.  It is developed with <a target=\"_blank\" href=\"%1\">Mojolicious</a> and is open-sourced as <a target=\"_blank\" href=\"%2\">octalfutures</a> on github. Perl/Mojolicious developers are invited to participate in this project by forking the repository."
 msgstr "Oktal Futures adalah sebuah aplikasi web Perl yang memperlihatkan bagaimana cara untuk mengotentikasi dan membuat panggilan bagian server ke dalam API Binary.com. Hal ini dikembangkan dengan <a target=\"_blank\" href=\"%1\">Mojolicious</a> dan diopen-sourcekan sebagai <a target=\"_blank\" href=\"%2\">octalfutures</a> pada github. Pengembang Perl/Mojolicious diundang untuk berpartisipasi dalam proyek ini dengan mengambil repositori."
 
-#: web/bin/JavascriptCompress.pm:95
+#: web/bin/GenerateStaticData.pm:95
 msgid "October"
 msgstr "Oktober"
 
@@ -5085,7 +5052,7 @@ msgstr "Hanya klien yang ditandai dengan benar akan menjadi afiliasi anda. Jika 
 #: /home/git/translations/binary-static/src/templates/toolkit/charting/daily_ohlc.html.tt:17
 #: /home/git/translations/binary-static/src/templates/toolkit/charting/daily_ohlc.html.tt:45
 #: /home/git/translations/binary-static/src/templates/toolkit/charting/ticker_data_table.html.tt:6
-#: cgi/subs/subs_BOMFeed_history.pm:343 cgi/subs/subs_BOMFeed_history.pm:423
+#: lib/BOM/View/Charting.pm:420 lib/BOM/View/Charting.pm:500
 msgid "Open"
 msgstr "Awal"
 
@@ -5137,8 +5104,7 @@ msgstr "Dibuka"
 msgid "Opens late (at %1)"
 msgstr "Dibuka lambat (pada %1)"
 
-#: cgi/subs/subs_BOMFeed_history.pm:504
-#: cgi/subs/subs_graphs_chartdirector.pm:267
+#: cgi/subs/subs_graphs_chartdirector.pm:268 lib/BOM/View/Charting.pm:581
 msgid "Oscillator calculated from the daily readings of the Accumulation Distribution Line. The CMF is unlike a momentum oscillator in that it is not influenced by the daily price change. Instead, the indicator focuses on the location of the close relative to the range for the period (daily or weekly)."
 msgstr "Oscillator dihitung dari pembacaan harian Accumulation Distribution Line. CMF tidak seperti momentum oscillator dimana tidak dipengaruhi oleh perubahan harga harian. Melainkan, indicator menitikberatkan pada lokasi penutupan relative pada range dalam periode (harian atau mingguan)."
 
@@ -5216,11 +5182,11 @@ msgstr "Situs kami dapat disaring dengan menggunakan sejumlah sistem penyaringan
 msgid "Over one billion dollars in trades to date."
 msgstr "Lebih dari sejuta dolar kontrak terjual."
 
-#: cgi/subs/subs_BOMFeed_history.pm:340
+#: lib/BOM/View/Charting.pm:417
 msgid "Overlay"
 msgstr "Arsiran"
 
-#: cgi/subs/subs_BOMFeed_history.pm:389
+#: lib/BOM/View/Charting.pm:466
 msgid "Overlay Instruments"
 msgstr "Peralatan Arsiran"
 
@@ -5241,7 +5207,7 @@ msgstr "Tidak menerima P.O. Box"
 msgid "Page not found"
 msgstr "Halaman tidak ditemukan"
 
-#: cgi/subs/subs_BOMFeed_history.pm:409
+#: lib/BOM/View/Charting.pm:486
 msgid "Parabolic SAR"
 msgstr "Parabola SAR"
 
@@ -5290,10 +5256,6 @@ msgstr "Password terlalu panjang, silahkan masukkan maksimal 30 karakter."
 #: cgi/subs/subs_forms.pm:1354 cgi/subs/subs_forms.pm:1680
 msgid "Password is too short, please enter at least 3 characters."
 msgstr "Password terlalu pendek, silahkan masukkan minimal 3 karakter."
-
-#: frontend/lib/BOM/Web/Home.pm:113
-msgid "Password not given."
-msgstr "Kata sandi tidak diberikan."
 
 #: cgi/lost_password.cgi:40 cgi/lost_password.cgi:43
 msgid "Password reset"
@@ -5368,16 +5330,16 @@ msgid "Payout Currency"
 msgstr "Mata uang hasil"
 
 #. (to_monetary_number_format($transaction_parameters->{payout})
-#: cgi/oop/Controller/Bet.pm:1556
+#: cgi/oop/Controller/Bet.pm:1557
 msgid "Payout has moved in your favour from %1 to %2."
 msgstr "Harga telah berubah dari %1 ke %2."
 
-#: lib/BOM/Product/Contract.pm:2361
+#: lib/BOM/Product/Contract.pm:2364
 msgid "Payout may not have more than two decimal places."
 msgstr "Hasil tidak dapat lebih dari dua desimal."
 
 #. (to_monetary_number_format($payout_min, 1)
-#: lib/BOM/Product/Contract.pm:1825
+#: lib/BOM/Product/Contract.pm:1828
 msgid "Payout must be between <strong>%1</strong> and <strong>%2</strong>."
 msgstr "Hasil harus diantara <strong>%1</strong> hingga <strong>%2</strong>."
 
@@ -5386,12 +5348,12 @@ msgstr "Hasil harus diantara <strong>%1</strong> hingga <strong>%2</strong>."
 msgid "Pending Bonus: %1"
 msgstr "Bonus Belum Disetujui: %1"
 
-#: cgi/smartchart.cgi:33 cgi/subs/subs_BOMFeed_history.pm:484
-#: cgi/subs/subs_graphs_chartdirector.pm:375
+#: cgi/smartchart.cgi:33 cgi/subs/subs_graphs_chartdirector.pm:376
+#: lib/BOM/View/Charting.pm:561
 msgid "Performance"
 msgstr "Penampilan"
 
-#: cgi/subs/subs_BOMFeed_history.pm:454
+#: lib/BOM/View/Charting.pm:531
 msgid "Period"
 msgstr "Masa"
 
@@ -5403,7 +5365,7 @@ msgstr "Modul Perl"
 msgid "Phone Callback"
 msgstr "Telepon Callback"
 
-#: cgi/subs/subs_BOMFeed_history.pm:346
+#: lib/BOM/View/Charting.pm:423
 msgid "Pick workspace file"
 msgstr "Pilih file workspace"
 
@@ -5548,7 +5510,7 @@ msgid "Please note that to apply to become a Payment Agent, you must <a href=\"%
 msgstr "Untuk memohon sebagai Agen Pembayaran, anda harus melengkapi bagian <a href=\"%1\">Pembuktian Akun</a> terlebihdahulu."
 
 #. ($contact_url)
-#: cgi/lost_password.cgi:284
+#: cgi/lost_password.cgi:285
 msgid "Please note that we have found no accounts registered with this e-mail address. If you can't recall the e-mail address used during account registration, please <a href=\"%1\"><strong>contact us</strong></a>."
 msgstr "Kami tidak menemukan akun yang didaftarkan menggunakan alamat email ini. Jika anda lupa alamat email yang anda daftarkan, silakan <a href=\"%1\"><strong>hubungi kami</strong></a>."
 
@@ -5574,7 +5536,7 @@ msgstr "Silakan hantar melalui pos dokumen tersebut ke:"
 msgid "Please provide at least one self-exclusion setting."
 msgstr "Silakan sediakan setidaknya satu susunan pengecualian diri."
 
-#: cgi/oop/Controller/Bet.pm:1671 cgi/oop/Controller/Bet.pm:1948
+#: cgi/oop/Controller/Bet.pm:1672 cgi/oop/Controller/Bet.pm:1949
 msgid "Please provide granter id(s)."
 msgstr "Mohon informasian ID granter."
 
@@ -5616,11 +5578,11 @@ msgstr "Silahkan kirim email ini ke %1."
 msgid "Please specify your country."
 msgstr "Silahkan tentukan negara anda."
 
-#: web/bin/JavascriptCompress.pm:53
+#: web/bin/GenerateStaticData.pm:53
 msgid "Please try again."
 msgstr "Silahkan coba kembali."
 
-#: cgi/lost_password.cgi:466 cgi/lost_password.cgi:579
+#: cgi/lost_password.cgi:468 cgi/lost_password.cgi:581
 msgid "Please type your chosen password twice into the fields below:"
 msgstr "Silakan ketik password pilihan anda dua kali kedalam kolom berikut:"
 
@@ -5637,7 +5599,7 @@ msgstr "Silakan hanya pergunakan gabungan angka dan huruf atau spasi."
 msgid "Please use only letters, spaces, hyphens, full-stops or apostrophes."
 msgstr "Silahkan pergunakan huruf, spasi, tanda penghubung, titik atau tanda apostrof."
 
-#: web/bin/JavascriptCompress.pm:50
+#: web/bin/GenerateStaticData.pm:50
 msgid "Please wait.<br />Your request is being processed."
 msgstr "Silahkan tunggu.<br />Permohonan anda sedang diproses."
 
@@ -5683,11 +5645,11 @@ msgstr "Mewakili jumlah maksimum hasil kontrak pada portopolio Anda. Jika jumlah
 msgid "Prevailing market price cannot be determined at this time."
 msgstr "Harga market terkini tidak dapat ditentukan pada saat ini."
 
-#: lib/BOM/Product/Contract.pm:1494 lib/BOM/Product/Contract.pm:2928
+#: lib/BOM/Product/Contract.pm:1497 lib/BOM/Product/Contract.pm:2952
 msgid "Prevailing market price cannot be determined."
 msgstr "Harga terkini market tidak dapat ditentukan."
 
-#: web/bin/JavascriptCompress.pm:119
+#: web/bin/GenerateStaticData.pm:119
 msgid "Previous"
 msgstr "Sebelumnya"
 
@@ -5701,14 +5663,13 @@ msgstr "Harga"
 msgid "Price Band"
 msgstr "Ben Harga"
 
-#: cgi/smartchart.cgi:34 cgi/subs/subs_BOMFeed_history.pm:360
-#: cgi/subs/subs_BOMFeed_history.pm:563
-#: cgi/subs/subs_graphs_chartdirector.pm:382
+#: cgi/smartchart.cgi:34 cgi/subs/subs_graphs_chartdirector.pm:383
+#: lib/BOM/View/Charting.pm:437 lib/BOM/View/Charting.pm:640
 msgid "Price Oscillator"
 msgstr "Price Oscillator"
 
 #. (to_monetary_number_format($transaction_parameters->{price})
-#: cgi/oop/Controller/Bet.pm:1551
+#: cgi/oop/Controller/Bet.pm:1552
 msgid "Price has moved in your favour from %1 to %2."
 msgstr "Harga telah bergerak dari %1 ke %2."
 
@@ -5724,16 +5685,16 @@ msgstr "OHLC"
 #: /home/git/translations/binary-static/src/templates/haml/resources/index.html.haml:1
 #: /home/git/translations/binary-static/src/templates/toolkit/global/footer.html.tt:81
 #: /home/git/translations/binary-static/src/templates/toolkit/resources/pricing_table_form.html.tt:2
-#: cgi/oop/Controller/Bet.pm:2183 cgi/pricing_table.cgi:163
+#: cgi/oop/Controller/Bet.pm:2184 cgi/pricing_table.cgi:163
 #: lib/BOM/View/Menu.pm:168
 msgid "Pricing Table"
 msgstr "Tabel Harga"
 
-#: cgi/subs/subs_BOMFeed_history.pm:344
+#: lib/BOM/View/Charting.pm:421
 msgid "Print"
 msgstr "Cetak"
 
-#: web/bin/JavascriptCompress.pm:58
+#: web/bin/GenerateStaticData.pm:58
 msgid "Print chart"
 msgstr "Cetak grafik"
 
@@ -5752,7 +5713,7 @@ msgstr "Prof"
 
 #: /home/git/translations/binary-static/src/templates/haml/get_started/glossary.html.haml:1
 #: /home/git/translations/binary-static/src/templates/toolkit/bet/buy_success_ajax.html.tt:50
-#: web/bin/JavascriptCompress.pm:130
+#: web/bin/GenerateStaticData.pm:130
 msgid "Profit"
 msgstr "Keuntungan"
 
@@ -5762,10 +5723,10 @@ msgstr "Keuntungan"
 msgid "Profit Table"
 msgstr "Tabel Laba Rugi"
 
-#: cgi/oop/Controller/Bet.pm:1461 cgi/oop/Controller/Bet.pm:1660
-#: cgi/oop/Controller/Bet.pm:1901 cgi/oop/Controller/Bet.pm:1940
-#: cgi/oop/Controller/Bet.pm:2352 cgi/oop/Controller/Bet.pm:764
-#: cgi/oop/Controller/Bet.pm:870
+#: cgi/oop/Controller/Bet.pm:1462 cgi/oop/Controller/Bet.pm:1661
+#: cgi/oop/Controller/Bet.pm:1902 cgi/oop/Controller/Bet.pm:1941
+#: cgi/oop/Controller/Bet.pm:2353 cgi/oop/Controller/Bet.pm:765
+#: cgi/oop/Controller/Bet.pm:871
 msgid "Profit from your Predictions"
 msgstr "Keuntungan dari prediksi Anda"
 
@@ -5794,7 +5755,7 @@ msgstr "Promosi"
 msgid "Proof of address"
 msgstr "Bukti alamat"
 
-#: lib/BOM/Product/Contract.pm:2521
+#: lib/BOM/Product/Contract.pm:2526
 msgid "Proper barriers could not be determined."
 msgstr "Batasan tepat tidak dapat ditentukan."
 
@@ -5807,7 +5768,7 @@ msgid "Provide us with the following documentation:"
 msgstr "Berikan kami dokumentasi berikut:"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/account/portfolio.html.tt:26
-#: cgi/oop/Controller/Bet.pm:1422
+#: cgi/oop/Controller/Bet.pm:1423
 msgid "Purchase"
 msgstr "Beli"
 
@@ -5826,12 +5787,12 @@ msgstr "Harga Beli"
 msgid "Purchase Spot"
 msgstr "Spot Beli"
 
-#: cgi/analyse_contract.cgi:216 web/bin/JavascriptCompress.pm:111
+#: cgi/analyse_contract.cgi:216 web/bin/GenerateStaticData.pm:111
 msgid "Purchase Time"
 msgstr "Waktu Beli"
 
 #. ($currency, $max_daily_turnover_limit)
-#: lib/BOM/Product/Transaction.pm:1123
+#: lib/BOM/Product/Transaction.pm:1124
 msgid "Purchase of this contract would cause you to exceed your daily turnover limit of %1%2."
 msgstr "Dengan membeli kontrak ini maka Anda akan melebihi batasan pembelian kontrak harian yaitu %1%2."
 
@@ -5839,7 +5800,7 @@ msgstr "Dengan membeli kontrak ini maka Anda akan melebihi batasan pembelian kon
 msgid "Put a limit on your winnings. Once you have reached it put some aside and trade with the rest of the money."
 msgstr "Batasi keuntungan anda. Setelah anda mencapai target, sisihkan dan bertrading menggunakan sisa dana yang ada."
 
-#: cgi/subs/subs_BOMFeed_history.pm:339
+#: lib/BOM/View/Charting.pm:416
 msgid "Quote"
 msgstr "Kuota"
 
@@ -5847,7 +5808,7 @@ msgstr "Kuota"
 msgid "REST"
 msgstr "REST"
 
-#: cgi/subs/subs_BOMFeed_history.pm:327
+#: lib/BOM/View/Charting.pm:404
 msgid "Random"
 msgstr "Secara Acak"
 
@@ -5908,18 +5869,17 @@ msgstr "Random nocturne"
 msgid "Random quotidians"
 msgstr "Random quotidian"
 
-#: cgi/subs/subs_graphs_chartdirector.pm:312
-#: cgi/subs/subs_graphs_chartdirector.pm:411
-#: cgi/subs/subs_graphs_chartdirector.pm:436
-#: cgi/subs/subs_graphs_chartdirector.pm:460
-#: cgi/subs/subs_graphs_chartdirector.pm:475
-#: cgi/subs/subs_graphs_chartdirector.pm:503
+#: cgi/subs/subs_graphs_chartdirector.pm:313
+#: cgi/subs/subs_graphs_chartdirector.pm:412
+#: cgi/subs/subs_graphs_chartdirector.pm:437
+#: cgi/subs/subs_graphs_chartdirector.pm:461
+#: cgi/subs/subs_graphs_chartdirector.pm:476
+#: cgi/subs/subs_graphs_chartdirector.pm:504
 msgid "Range"
 msgstr "Jarak"
 
-#: cgi/smartchart.cgi:35 cgi/subs/subs_BOMFeed_history.pm:393
-#: cgi/subs/subs_BOMFeed_history.pm:534
-#: cgi/subs/subs_graphs_chartdirector.pm:394
+#: cgi/smartchart.cgi:35 cgi/subs/subs_graphs_chartdirector.pm:395
+#: lib/BOM/View/Charting.pm:470 lib/BOM/View/Charting.pm:611
 msgid "Rate of Change"
 msgstr "Harga perubahan"
 
@@ -5937,7 +5897,7 @@ msgid "Read the answers to some common questions."
 msgstr "Baca berbagai jawaban dari pertanyaan umum."
 
 #: /home/git/translations/binary-static/src/templates/toolkit/account/open_account.html.tt:12
-#: cgi/lost_password.cgi:379
+#: cgi/lost_password.cgi:381
 msgid "Real money account"
 msgstr "Akun Uang Riil"
 
@@ -6035,9 +5995,8 @@ msgstr "Pendaftaran"
 msgid "Rel Change"
 msgstr "Perubahan Rel"
 
-#: cgi/smartchart.cgi:36 cgi/subs/subs_BOMFeed_history.pm:391
-#: cgi/subs/subs_BOMFeed_history.pm:529
-#: cgi/subs/subs_graphs_chartdirector.pm:402
+#: cgi/smartchart.cgi:36 cgi/subs/subs_graphs_chartdirector.pm:403
+#: lib/BOM/View/Charting.pm:468 lib/BOM/View/Charting.pm:606
 msgid "Relative Strength Index"
 msgstr "Indeks Kekuatan Relatif"
 
@@ -6045,11 +6004,11 @@ msgstr "Indeks Kekuatan Relatif"
 msgid "Reload Cashier"
 msgstr "Akses Ulang Kasir"
 
-#: cgi/subs/subs_plack.pm:267
+#: cgi/subs/subs_plack.pm:268
 msgid "Reload page"
 msgstr "Reload halaman"
 
-#: cgi/subs/subs_BOMFeed_history.pm:399
+#: lib/BOM/View/Charting.pm:476
 msgid "Remove Overlay"
 msgstr "Memindahkan Arsiran"
 
@@ -6069,25 +6028,25 @@ msgstr "Mewakili jumlah maksimum pembelian kontrak dalam satu hari trading."
 msgid "Required"
 msgstr "Harus diisi"
 
-#: lib/BOM/Product/Contract.pm:2901
+#: lib/BOM/Product/Contract.pm:2925
 msgid "Resale of this contract is not offered due to end-of-year market holidays."
 msgstr "Penjualan kembali untuk kontrak ini tidak ditawarkan berhubung liburan market akhir tahun."
 
-#: lib/BOM/Product/Contract.pm:2853
+#: lib/BOM/Product/Contract.pm:2877
 msgid "Resale of this contract is not offered due to market holiday during contract period."
 msgstr "Penjualan kembali untuk kontrak ini tidak ditawarkan berhubung liburan market selama kontrak berlangsung."
 
-#: lib/BOM/Product/Contract.pm:2874
+#: lib/BOM/Product/Contract.pm:2898
 msgid "Resale of this contract is not offered due to market holidays during contract period."
 msgstr "Penjualan kembali untuk kontrak ini tidak ditawarkan berhubung liburan selama periode kontrak."
 
 #. ($shortest->as_string)
-#: lib/BOM/Product/Contract.pm:2784
+#: lib/BOM/Product/Contract.pm:2808
 msgid "Resale of this contract is not offered with less than %1 remaining."
 msgstr "Penjualan kembali untuk kontrak ini ditawarkan kurang dari %1 hari."
 
-#: lib/BOM/Product/Contract.pm:2302 lib/BOM/Product/Contract.pm:2778
-#: lib/BOM/Product/Contract.pm:2825
+#: lib/BOM/Product/Contract.pm:2305 lib/BOM/Product/Contract.pm:2802
+#: lib/BOM/Product/Contract.pm:2849
 #: lib/BOM/Product/Pricing/Engine/Role/StandardMarkup.pm:171
 msgid "Resale of this contract is not offered."
 msgstr "Penjualan kembali untuk kontrak ini tidak ditawarkan."
@@ -6116,18 +6075,18 @@ msgstr "Tanggung Jawab Trading"
 msgid "Result"
 msgstr "Hasil"
 
-#: cgi/subs/subs_BOMFeed_history.pm:363
+#: lib/BOM/View/Charting.pm:440
 msgid "Retracement Percentages"
 msgstr "Retracement Persen"
 
-#: cgi/subs/subs_BOMFeed_history.pm:437
+#: lib/BOM/View/Charting.pm:514
 msgid "Retry"
 msgstr "Mencoba lagi"
 
 #: /home/git/translations/binary-static/src/templates/haml/get_started/glossary.html.haml:1
 #: /home/git/translations/binary-static/src/templates/haml/home/ticker.html.haml:1
 #: /home/git/translations/binary-static/src/templates/toolkit/bet/sell_success_ajax.html.tt:12
-#: cgi/oop/Controller/Bet.pm:470
+#: cgi/oop/Controller/Bet.pm:471
 msgid "Return"
 msgstr "Laba"
 
@@ -6145,7 +6104,7 @@ msgstr "Laba diatas 1000% pada kontrak %1 dan %2."
 msgid "Revoke Attorney"
 msgstr "Batalkan Kuasa"
 
-#: cgi/subs/subs_BOMFeed_history.pm:446
+#: lib/BOM/View/Charting.pm:523
 msgid "Right click to add studies, lines, overlays and more. You can save your work by choosing Workspace from the top menu"
 msgstr "Klik kanan untuk menambahkan pelajari, baris, overlay dan lainnya. Anda dapat menyimpan hasil kerja anda dengan memilih Workspace dari menu atas"
 
@@ -6176,7 +6135,7 @@ msgstr "Laba Kontrak Naik (%)"
 
 #: /home/git/translations/binary-static/src/templates/haml/get_started/random_markets.html.haml:1
 #: cgi/contract_demo.cgi:31 cgi/contract_guide.cgi:17
-#: cgi/oop/Controller/Bet.pm:1112 cgi/oop/Controller/Bet.pm:1119
+#: cgi/oop/Controller/Bet.pm:1113 cgi/oop/Controller/Bet.pm:1120
 msgid "Rise/Fall"
 msgstr "Naik/Turun"
 
@@ -6206,7 +6165,7 @@ msgstr "Sanggahan Resiko"
 msgid "Russia"
 msgstr "Rusia"
 
-#: web/bin/JavascriptCompress.pm:126
+#: web/bin/GenerateStaticData.pm:126
 msgid "Sa"
 msgstr "Sab"
 
@@ -6221,31 +6180,31 @@ msgstr "Tanggal Jual"
 msgid "Sale Price"
 msgstr "Harga Jual"
 
-#: web/bin/JavascriptCompress.pm:73
+#: web/bin/GenerateStaticData.pm:73
 msgid "Saturday"
 msgstr "Sabtu"
 
-#: cgi/subs/subs_BOMFeed_history.pm:378
+#: lib/BOM/View/Charting.pm:455
 msgid "Save"
 msgstr "Simpan"
 
-#: web/bin/JavascriptCompress.pm:63
+#: web/bin/GenerateStaticData.pm:63
 msgid "Save as CSV"
 msgstr "Simpan dalam CSV"
 
-#: web/bin/JavascriptCompress.pm:59
+#: web/bin/GenerateStaticData.pm:59
 msgid "Save as JPEG"
 msgstr "Simpan dalam JPEG"
 
-#: web/bin/JavascriptCompress.pm:62
+#: web/bin/GenerateStaticData.pm:62
 msgid "Save as PDF"
 msgstr "Simpan dalam PDF"
 
-#: web/bin/JavascriptCompress.pm:60
+#: web/bin/GenerateStaticData.pm:60
 msgid "Save as PNG"
 msgstr "Simpan dalam PNG"
 
-#: web/bin/JavascriptCompress.pm:61
+#: web/bin/GenerateStaticData.pm:61
 msgid "Save as SVG"
 msgstr "Simpan dalam SVG"
 
@@ -6347,11 +6306,11 @@ msgid "Send your funds to the payment agent. The deposited funds, less the agent
 msgstr "Kirim dana anda kepada agen pembayaran. Jumlah deposit berdasarkan nilai tukar yang berlaku dan akan dikreditkan kedalam akun %1 anda."
 
 #: cgi/subs/subs_forms.pm:208 cgi/subs/subs_forms.pm:2326
-#: web/bin/JavascriptCompress.pm:82
+#: web/bin/GenerateStaticData.pm:82
 msgid "Sep"
 msgstr "Sep"
 
-#: web/bin/JavascriptCompress.pm:94
+#: web/bin/GenerateStaticData.pm:94
 msgid "September"
 msgstr "September"
 
@@ -6451,11 +6410,11 @@ msgstr "Lihat agen pembayaran untuk:"
 msgid "Sign Me Up"
 msgstr "Daftar"
 
-#: cgi/smartchart.cgi:46 cgi/subs/subs_graphs_chartdirector.pm:507
+#: cgi/smartchart.cgi:46 cgi/subs/subs_graphs_chartdirector.pm:508
 msgid "Simple"
 msgstr "Sederhana"
 
-#: cgi/subs/subs_BOMFeed_history.pm:323
+#: lib/BOM/View/Charting.pm:400
 msgid "Simple Moving Average"
 msgstr "Simple Moving Average"
 
@@ -6472,8 +6431,8 @@ msgstr "Hanya dengan merubah parameter anda dan kontrak akan berubah secara lang
 msgid "Site"
 msgstr "Situs"
 
-#: cgi/smartchart.cgi:37 cgi/subs/subs_BOMFeed_history.pm:491
-#: cgi/subs/subs_graphs_chartdirector.pm:416
+#: cgi/smartchart.cgi:37 cgi/subs/subs_graphs_chartdirector.pm:417
+#: lib/BOM/View/Charting.pm:568
 msgid "Slow Stochastic"
 msgstr "Stokastik Pelan"
 
@@ -6517,7 +6476,7 @@ msgstr "Maaf, Transfer Agen Pembayaran dihentikan untuk sementara berhubung perb
 msgid "Sorry, access to the CASHIER SECTION is disabled for TRADING AGENT accounts. This is to protect you from accidentally attempting to place real money contracts via this account instead of using it to place trades for authorised third parties."
 msgstr "Maaf, pengaksesan BAGIAN KASIR adalah tidak dibenarkan bagi akun AGEN TRADING. Hal ini untuk melindungi anda dari kemungkinan membeli kontrak pada akun riil ini dan bukan membeli kontrak menggunakan akun agen trading."
 
-#: cgi/oop/Controller/Bet.pm:701
+#: cgi/oop/Controller/Bet.pm:702
 msgid "Sorry, an error occured with this trade.  Please try again in a few minutes.  If the problem persists, please contact customer support."
 msgstr "Maaf, telah terjadi error pada trading ini. Silahkan coba kembali beberapa menit lagi. Jika masalah ini masih berlangsung, silahkan hubungi customer support."
 
@@ -6539,7 +6498,7 @@ msgstr "Maaf, error terjadi ketika memproses rekening anda."
 msgid "Sorry, broker %1 does not allow transfers from payment agents."
 msgstr "Maaf, akun %1 tidak menyediakan layanan transfer agen pembayaran."
 
-#: cgi/create_account.cgi:70
+#: cgi/create_account.cgi:71
 msgid "Sorry, new account opening is suspended for the time being."
 msgstr "Maaf, pendaftaran akun dibatalkan untuk sementara."
 
@@ -6592,7 +6551,7 @@ msgid "Sorry, the Payment Agent's currency "
 msgstr "Maaf, mata uang agen pembayaran"
 
 #. ($max_payout_limit, $currency, $client_agg_payouts, $payout)
-#: lib/BOM/Product/Transaction.pm:1044
+#: lib/BOM/Product/Transaction.pm:1045
 msgid "Sorry, the aggregate payouts of contracts on your account cannot exceed %2%1. The current aggregate payout of contracts on your account is %2%3 therefore you cannot buy a contract that would pay out an additional %2%4."
 msgstr "Maaf, jumlah rata-rata hasil kontrak pada akun anda tidak dapat melebihi %2%1. Jumlah rata-rata hasil kontrak pada akun anda saat ini adalah %2%3 maka anda tidak dapat membeli kontrak dengan hasil melebihi %2%4."
 
@@ -6612,7 +6571,7 @@ msgstr "Maaf, jumlah maksimum yang anda bisa konversikan adalah"
 msgid "Sorry, the page cannot be found."
 msgstr "Maaf, halaman tidak ditemukan."
 
-#: lib/BOM/Product/Transaction.pm:1010
+#: lib/BOM/Product/Transaction.pm:1011
 msgid "Sorry, the same contract cannot be purchased more than once. You already have an identical contract in your account."
 msgstr "Maaf, anda tidak dapat membeli kontrak yang sama. Anda telah membeli kontrak tersebut sebelumnya."
 
@@ -6641,7 +6600,7 @@ msgid "Sorry, you are too young to open an account."
 msgstr "Maaf, anda dibawah umur untuk mendaftar akun."
 
 #. ($max_open_positions_limit)
-#: lib/BOM/Product/Transaction.pm:1028
+#: lib/BOM/Product/Transaction.pm:1029
 msgid "Sorry, you cannot hold more than %1 contracts at a given time. Please sell some of your existing contracts before buying any more."
 msgstr "Maaf, anda tidak dapat memiliki lebih dari %1 kontrak dalam jangka waktu yang diberikan. Silahkan jual beberapa kontrak yang telah kadaluarsa sebelum membeli kontrak baru lagi."
 
@@ -6684,7 +6643,7 @@ msgid "Sorry, your account balance is more than %1. You may not claim extra fund
 msgstr "Maaf, sisa dana tunai anda lebih dari %1. Anda tidak dapat mengisi dana tambahan hingga saldo akun anda kurang dari %1."
 
 #. ("$currency$balance",                to_monetary_number_format($account_balance_limit, 1)
-#: lib/BOM/Product/Transaction.pm:952
+#: lib/BOM/Product/Transaction.pm:953
 msgid "Sorry, your account cash balance is too high (%1). <B>Your maximum account balance is %2 </b>. Please withdraw money from your account to bring down your cash balance under that amount. You may not trade until you do so."
 msgstr "Maaf, saldo Anda melebihi (%1). <B>Saldo maksimum Anda adalah %2 </b>. Silahkan lakukan penarikan untuk mengurangi saldo Anda. Anda tidak dapat melanjutkan trading sebelum melakukan hal tersebut."
 
@@ -6692,7 +6651,7 @@ msgstr "Maaf, saldo Anda melebihi (%1). <B>Saldo maksimum Anda adalah %2 </b>. S
 msgid "Sorry, your account has got stuck in a previous transaction that did not complete. If this error persists, please contact customer support."
 msgstr "Maaf, akun anda telah terperangkap berhubung transaksi sebelumnya tidak terselesaikan. Jika pesan error ini terus berlangsung, silahkan hubungi customer support."
 
-#: lib/BOM/Product/Transaction.pm:913
+#: lib/BOM/Product/Transaction.pm:914
 msgid "Sorry, your account is not authorised for any further contract purchases."
 msgstr "Maaf, akun anda tidak dapat membeli kontrak selanjutnya."
 
@@ -6735,7 +6694,7 @@ msgid "Stake"
 msgstr "Modal"
 
 #. (to_monetary_number_format($stake_min, 1)
-#: lib/BOM/Product/Contract.pm:1816
+#: lib/BOM/Product/Contract.pm:1819
 msgid "Stake must be between <strong>%1</strong> and <strong>%2</strong>."
 msgstr "Modal harus antara <strong>%1</strong> hingga <strong>%2</strong>."
 
@@ -6743,7 +6702,7 @@ msgstr "Modal harus antara <strong>%1</strong> hingga <strong>%2</strong>."
 msgid "Standard expiry"
 msgstr "Standar berakhir"
 
-#: cgi/analyse_contract.cgi:100 web/bin/JavascriptCompress.pm:112
+#: cgi/analyse_contract.cgi:100 web/bin/GenerateStaticData.pm:112
 msgid "Start Time"
 msgstr "Waktu Mulai"
 
@@ -6757,20 +6716,20 @@ msgstr "Mulai Trading"
 msgid "Start time"
 msgstr "Waktu mulai"
 
-#: lib/BOM/Product/Contract.pm:2588 lib/BOM/Product/Transaction.pm:365
+#: lib/BOM/Product/Contract.pm:2612 lib/BOM/Product/Transaction.pm:365
 msgid "Start time is in the past"
 msgstr "Waktu mulai adalah dimasa lalu"
 
-#: lib/BOM/Product/Contract.pm:2578
+#: lib/BOM/Product/Contract.pm:2602
 msgid "Start time is invalid."
 msgstr "Waktu mulai salah."
 
-#: lib/BOM/Product/Contract.pm:2568
+#: lib/BOM/Product/Contract.pm:2592
 msgid "Start time must be before expiry time."
 msgstr "Waktu mulai harus sebelum waktu berakhir."
 
 #. ($forward_starting_blackout->as_string)
-#: lib/BOM/Product/Contract.pm:2621
+#: lib/BOM/Product/Contract.pm:2645
 msgid "Start time on forward-starting contracts must be more than %1 from now."
 msgstr "Waktu mulai pada kontrak mendatang harus lebih dari %1 dari sekarang."
 
@@ -6800,7 +6759,7 @@ msgstr "Konten Statik"
 msgid "Statistic"
 msgstr "Statistik"
 
-#: cgi/subs/subs_BOMFeed_history.pm:403
+#: lib/BOM/View/Charting.pm:480
 msgid "Statistics"
 msgstr "Statistik"
 
@@ -6809,7 +6768,7 @@ msgstr "Statistik"
 msgid "Stay informed. %1 offers daily market reports and market research, as well as frequent trading webinars."
 msgstr "Pengetahuan terkini. %1 menawarkan laporan dan penelitian market harian termasuk berbagai webinar."
 
-#: cgi/contract_demo.cgi:72 cgi/oop/Controller/Bet.pm:1179
+#: cgi/contract_demo.cgi:72 cgi/oop/Controller/Bet.pm:1180
 msgid "Stays Between/Goes Outside"
 msgstr "Tetap Antara/Bergerak Keluar"
 
@@ -6834,32 +6793,32 @@ msgstr "Langkah 2: Dapatkan harga kontrak anda"
 msgid "Step 3: Make your trade"
 msgstr "Langkah 3: Lakukan Trading"
 
-#: cgi/smartchart.cgi:38 cgi/subs/subs_BOMFeed_history.pm:535
-#: cgi/subs/subs_graphs_chartdirector.pm:427
+#: cgi/smartchart.cgi:38 cgi/subs/subs_graphs_chartdirector.pm:428
+#: lib/BOM/View/Charting.pm:612
 msgid "StochRSI"
 msgstr "StochRSI"
 
-#: cgi/subs/subs_BOMFeed_history.pm:335
+#: lib/BOM/View/Charting.pm:412
 msgid "Stochastic Fast"
 msgstr "Stokastik Cepat"
 
-#: cgi/subs/subs_BOMFeed_history.pm:443
+#: lib/BOM/View/Charting.pm:520
 msgid "Stochastic Fast %D"
 msgstr "Stochastic Fast %D"
 
-#: cgi/subs/subs_BOMFeed_history.pm:374
+#: lib/BOM/View/Charting.pm:451
 msgid "Stochastic Fast %K"
 msgstr "Stochastic Fast %K"
 
-#: cgi/subs/subs_BOMFeed_history.pm:322
+#: lib/BOM/View/Charting.pm:399
 msgid "Stochastic Slow"
 msgstr "Stokastik Lambat"
 
-#: cgi/subs/subs_BOMFeed_history.pm:324
+#: lib/BOM/View/Charting.pm:401
 msgid "Stochastic Slow %D"
 msgstr "Stokastik Lambat %D"
 
-#: cgi/subs/subs_BOMFeed_history.pm:419
+#: lib/BOM/View/Charting.pm:496
 msgid "Stochastic Slow %K"
 msgstr "Stochastic Slow %K"
 
@@ -6883,7 +6842,7 @@ msgstr "Indeks bursa saham mengukur nilai beberapa perusahaan pada bursa saham."
 msgid "Study our live charts"
 msgstr "Pelajari live chart kami"
 
-#: web/bin/JavascriptCompress.pm:120
+#: web/bin/GenerateStaticData.pm:120
 msgid "Su"
 msgstr "Mgg"
 
@@ -6906,7 +6865,7 @@ msgstr "Bahan tersebut dapat disalin dan didistribusikan secara terbatas untuk t
 msgid "Summary"
 msgstr "Ringkasan"
 
-#: web/bin/JavascriptCompress.pm:67
+#: web/bin/GenerateStaticData.pm:67
 msgid "Sunday"
 msgstr "Minggu"
 
@@ -6922,11 +6881,11 @@ msgstr "Bank yang tersedia (fasilitas ini hanya tersedia dari kantor saja) **"
 msgid "Supported banks list is invalid"
 msgstr "Daftar bank yang digunakan salah"
 
-#: cgi/subs/subs_BOMFeed_history.pm:367
+#: lib/BOM/View/Charting.pm:444
 msgid "Switch to full screen mode"
 msgstr "Pindah ke mode layar penuh"
 
-#: cgi/subs/subs_BOMFeed_history.pm:427
+#: lib/BOM/View/Charting.pm:504
 msgid "Switch to normal mode"
 msgstr "Pindah ke mode normal"
 
@@ -6938,8 +6897,8 @@ msgstr "Waktu Sistem"
 msgid "System problems prevent proper settlement at this time."
 msgstr "Masalah penerimaan data mencegah penyelesaian yang tepat saat ini."
 
-#: cgi/smartchart.cgi:39 cgi/subs/subs_BOMFeed_history.pm:498
-#: cgi/subs/subs_graphs_chartdirector.pm:441
+#: cgi/smartchart.cgi:39 cgi/subs/subs_graphs_chartdirector.pm:442
+#: lib/BOM/View/Charting.pm:575
 msgid "TRIX"
 msgstr "TRIX"
 
@@ -6951,7 +6910,7 @@ msgstr "Tabel"
 msgid "Talk to us"
 msgstr "Hubungi kami"
 
-#: cgi/subs/subs_BOMFeed_history.pm:337
+#: lib/BOM/View/Charting.pm:414
 msgid "Target"
 msgstr "Sasaran"
 
@@ -6959,8 +6918,7 @@ msgstr "Sasaran"
 msgid "Team"
 msgstr "Tim"
 
-#: cgi/subs/subs_BOMFeed_history.pm:548
-#: cgi/subs/subs_graphs_chartdirector.pm:212
+#: cgi/subs/subs_graphs_chartdirector.pm:213 lib/BOM/View/Charting.pm:625
 msgid "Technical Indicator derived from subtracting Aroon Down from Aroon Up. As Aroon Up and Aroon Down oscillate between 0 and 100, the Aroon Oscillator oscillates between -100 and 100 with zero as the centre crossover line."
 msgstr "Teknikal Indikator diperoleh pada penyaringan Aroon Down dari Aroon Up. Sebagaimana Aroon Up dan Aroon Down berayun antara 0 dan 100, Oskilator Aroon berayun antara 100 dan 100 dimana kosong menjadi garis tengah penyebrang."
 
@@ -7003,7 +6961,7 @@ msgstr "Syarat dan Kondisi"
 msgid "Test-run %1, and sharpen your trading skills, with a no-risk, no-commitment, virtual account."
 msgstr "Coba %1, dan asah keterampilan trading anda, tanpa resiko, tanpa komitmen, akun virtual."
 
-#: web/bin/JavascriptCompress.pm:124
+#: web/bin/GenerateStaticData.pm:124
 msgid "Th"
 msgstr "Kam"
 
@@ -7173,18 +7131,15 @@ msgstr "Aplikasi mobile Binary.com dikembangkan menggunakan <a target=\"_blank\"
 msgid "The Binary.com website’s static content (CSS, Javascript) is available as the <a target=\"_blank\" href=\"%1\">binary-static</a> open-source project on github. Would you like to re-skin the Binary.com website, or improve browser compatibility, site rendering speed, or Javascript performance? Please fork the project and submit pull-requests of your suggested code changes."
 msgstr "Statik konten Binary.com (CSS, Javascript) tersedia pada proyek open-source <a target=\"_blank\" href=\"%1\">binary-statik</a> pada github. Apakah anda ingin merubah website Binary.com atau memperbaiki kecocokan browser, kecepatan website atau tampilan Javascript?. Silahkan lihat proyek dan kirimkan kritik dan saran perubahan kode anda."
 
-#: cgi/subs/subs_BOMFeed_history.pm:501
-#: cgi/subs/subs_graphs_chartdirector.pm:305
+#: cgi/subs/subs_graphs_chartdirector.pm:306 lib/BOM/View/Charting.pm:578
 msgid "The CCI is a timing system that is best applied to commodity contracts, which have cyclical or seasonal tendencies. CCI does not determine the length of cycles - it is designed to detect when such cycles begin and end through the use of a statistical analysis which incorporates a moving average and a divisor reflecting both the possible and actual trading ranges."
 msgstr "CCI adalah sistem waktu yang sangat cocok digunakan pada komoditi kontrak, yang memiliki siklis atau tergantung pada musim. CCI tidak menentukan panjangnya perputaran - iya didisain untuk mendeteksi ketika perputaran dimulai dan diakhiri menggunakan analisa statistik yang merupakan penggabungan moving average dan pembagi mencerminkan kedua-dua kemungkinan dan jarak trading yang sesungguhnya."
 
-#: cgi/subs/subs_BOMFeed_history.pm:560
-#: cgi/subs/subs_graphs_chartdirector.pm:298
+#: cgi/subs/subs_graphs_chartdirector.pm:299 lib/BOM/View/Charting.pm:637
 msgid "The CLV is an indicator based on the location of close related to low and high for the period. It is used to spot the tendency in the price movements."
 msgstr "CLV adalah indikator berdasarkan lokasi penutupan yang berhubungan pada rendah dan tinggi untuk sebuah periode. Iya digunakan untuk melacak kecenderungan pada pergerakan harga."
 
-#: cgi/subs/subs_BOMFeed_history.pm:557
-#: cgi/subs/subs_graphs_chartdirector.pm:283
+#: cgi/subs/subs_graphs_chartdirector.pm:284 lib/BOM/View/Charting.pm:634
 msgid "The Chaikin Volatility function determines the volatility of a financial data series using the percent change in a moving average of the high versus low price over a given time."
 msgstr "Fasilitas Volatility Chaikin menentukan volatility pada rangkaian data keuangan menggunakan persentasi perubahan pada moving average dari harga tinggi melawan harga rendah pada waktu yang diberikan."
 
@@ -7290,8 +7245,7 @@ msgstr "The Cyberview Lodge Resort di Cyberjaya"
 msgid "The Data Protection laws and regulations place obligations on users of personal data and lay down principles for fair and lawful processing of this information. We are committed to safeguarding your privacy online. We only use your personal information to help us service your account, to improve our services to you, and to provide you with products you have requested. We do not sell your personal information to third parties, but we may provide your personal information to payment providers to facilitate transactions on your account."
 msgstr "Akta perlindungan data pribadi adalah sangat ditekankan dalam memproses informasi ini. Kami berkomitmen untuk menjaga kerahasiaan data pribadi anda. Kami hanya akan menggunakan data pribadi anda untuk membantu kami melayani keperluan akun anda, meningkatkan layanan yang kami miliki untuk anda dan memberikan produk atau layanan yang anda perlukan. Kami tidak menjual informasi data pribadi anda kepada pihak ke tiga namun demikian kami mungkin akan memberikan data anda kepada penyedia pembayaran untuk memproses transaksi pada akun anda."
 
-#: cgi/subs/subs_BOMFeed_history.pm:493
-#: cgi/subs/subs_graphs_chartdirector.pm:319
+#: cgi/subs/subs_graphs_chartdirector.pm:320 lib/BOM/View/Charting.pm:570
 msgid "The Detrended Price Oscillator compares closing price to a prior moving average, eliminating cycles longer than the moving average."
 msgstr "Detrended Price Oscillator membandingkan harga penutupan dengan moving average sebelumnya, menghapuskan perputaran lebih lama dari moving average."
 
@@ -7312,8 +7266,7 @@ msgstr "Indeks GBP adalah Indeks yang ditimbang dengan mengukur nilai Pound Ingg
 msgid "The JSON structure which supplied the access_token also included a refresh_token.  Supply this in the following call:"
 msgstr "Struktur JSON yang memasok akses_token termasuk token_terbaru. Sediakan ini pada panggilan berikut:"
 
-#: cgi/subs/subs_BOMFeed_history.pm:461
-#: cgi/subs/subs_graphs_chartdirector.pm:363
+#: cgi/subs/subs_graphs_chartdirector.pm:364 lib/BOM/View/Charting.pm:538
 msgid "The Mass Index attempts to predict reversals by comparing the trading range (High minus Low) for each period. Reversals are signalled by a bulge in the index line."
 msgstr "Mass Index mencoba untuk memprediksikan perubahan dengan membandingkan jarak trading (Tinggi dikurangi Rendah) untuk setiap periode. Percobaan adalah ditandakan oleh pertambahan pada garis index."
 
@@ -7321,13 +7274,11 @@ msgstr "Mass Index mencoba untuk memprediksikan perubahan dengan membandingkan j
 msgid "The Mid price represents the average of the Bid and Ask."
 msgstr "Harga Mid mewakili harga rata-rata Bid dan Ask."
 
-#: cgi/subs/subs_BOMFeed_history.pm:478
-#: cgi/subs/subs_graphs_chartdirector.pm:351
+#: cgi/subs/subs_graphs_chartdirector.pm:352 lib/BOM/View/Charting.pm:555
 msgid "The Moving Average Convergence/Divergence (MACD) indicator is a trend following indicator and is designed to identify trend changes.The MACD is an oscillator based on two exponential moving averages of a share price. Three lines are shown. The \"MACD\" line is calculated as the difference between the two moving averages (usually based on 12- and 26- day averages). The \"signal\" line is a 9-day smoothed average of the standard MACD line, and is sometimes referred to as the \"slow\" MACD line."
 msgstr "Indikator Moving Average Convergence/Divergence (MACD) adalah indikator yang mengikuti trend dan didesign untuk mengenali perubahan trend. MACD adalah sebuah osilator berdasarkan pada dua eksponensial pergerakan rata-rata dari sebuah harga saham. Terbagi atas tiga bagian. Garis \"MACD\" dihitung sebagai perbandingan antara dua rata-rata pergerakan (bisanya berdasarkan 12- dan 26- rata-rata hari). Baris \"signal\" adalah 9-hari rata-rata penghalusan dari baris MACD dan terkadang disebut sebagai baris \"slow\" MACD."
 
-#: cgi/subs/subs_BOMFeed_history.pm:507
-#: cgi/subs/subs_graphs_chartdirector.pm:377
+#: cgi/subs/subs_graphs_chartdirector.pm:378 lib/BOM/View/Charting.pm:584
 msgid "The Performance indicator displays a security's price performance as a percentage. This is sometimes called a \"normalized\" chart. The Performance indicator displays the percentage that the security has increased since the first period displayed. For example, if the Performance indicator is 10, it means that the security's price has increased 10% since the first period displayed on the left side of the chart. Similarly, a value of -10% means that the security's price has fallen by 10% since the first period displayed.Performance charts are helpful for comparing the price movements of different securities."
 msgstr "Performance indicator menampilkan harga keamanan performance sebagai persentasi. Hal ini kadangkala disebut dengan \"normalized\" chart. Performance indicator menampilkan peningkatan persentasi keamanan sejak periode pertama ditampilkan. Sebagai contoh, jika Performance indicator adalah 10, hal ini berarti harga keamanan meningkat 10% sejak peride pertama ditampilkan pada bagian kiri chart. Begitu juga jika nilai -10%, hal ini berarti harga keamanan telah jatuh 10% sejak periode pertama ditampilkan. Performance chart sangat membantu dalam hal membandingkan pergerakan harga pada securities berbeda."
 
@@ -7335,13 +7286,11 @@ msgstr "Performance indicator menampilkan harga keamanan performance sebagai per
 msgid "The Program"
 msgstr "Program"
 
-#: cgi/subs/subs_BOMFeed_history.pm:496
-#: cgi/subs/subs_graphs_chartdirector.pm:396
+#: cgi/subs/subs_graphs_chartdirector.pm:397 lib/BOM/View/Charting.pm:573
 msgid "The Rate of Change indicator (ROC) is a way of showing how rapidly the price of a particular share (or other financial instrument) is moving. The theory is that if a price is rising (or falling) very quickly there will soon come a time when it is thought to be overbought (or oversold). When this occurs the price may still continue to rise (or fall), but not as rapidly as it was before."
 msgstr "Indikator Rate of Change (ROC) adalah sebuah indikator yang memperlihatkan pergerakan cepat harga sebuah saham (instrumen keuangan lainnya). Teorinya adalah jika harga naik (atau turun) sangat cepat maka akan berlaku waktu dimana akan diperkirakan terjadi lebih penjualan (atau lebih pembelian). Ketika hal ini terjadi maka harga kemungkinan akan terus meningkat (atau menurun) tapi tidak sedrastis sebelumnya."
 
-#: cgi/subs/subs_BOMFeed_history.pm:520
-#: cgi/subs/subs_graphs_chartdirector.pm:404
+#: cgi/subs/subs_graphs_chartdirector.pm:405 lib/BOM/View/Charting.pm:597
 msgid "The Relative Strength Index (RSI) measures a share price relative to itself and its recent history. It is calculated as the average of the prices for days where the price rose divided by the average of the prices for days where the price fell. The RSI ranges between 0 and 100.A 70+ level could indicate that a share is overbought, meaning that the speculator should consider selling. Or conversely oversold at the 30 level. The principle is that when there's a high proportion of daily movement in one direction it suggests an extreme, and prices are likely to reverse."
 msgstr "Relative Strength Index (RSI) mengukur perbandingan harga saham antara RSI sendiri terhadap harga saat ini. RSI sendiri merupakan indikator yang membandingkan momentum harga yakni antara nilai pada saat ini terhadap daya tarik kerugian yang terjadi. Nilai daripada RSI berada pada kisaran 0 hingga 100. Level 70+ mengindikasikan saham terbeli lebih, maksudnya spekulator harus mempertimbangkan untuk menjual. Atau sebaliknya terlalu banyak menjual pada level 30 . Prinsipnya adalah ketika terjadi perbandingan cukup tinggi pada pergerakan harian dalam satu arah yang menyarankan terlalu tinggi dan harga mungkin menjadi sebaliknya."
 
@@ -7349,9 +7298,8 @@ msgstr "Relative Strength Index (RSI) mengukur perbandingan harga saham antara R
 msgid "The Spread represents the difference between the Bid and Ask."
 msgstr "Spread mewakili jumlah selisih antara Bid dan Ask."
 
-#: cgi/subs/subs_BOMFeed_history.pm:544
-#: cgi/subs/subs_graphs_chartdirector.pm:340
-#: cgi/subs/subs_graphs_chartdirector.pm:418
+#: cgi/subs/subs_graphs_chartdirector.pm:341
+#: cgi/subs/subs_graphs_chartdirector.pm:419 lib/BOM/View/Charting.pm:621
 msgid "The Stochastic Oscillator is a momentum indicator that shows the location of the current close relative to the high/low range over a set number of periods. The Stochastic Oscillator is made up of two lines that oscillate between a vertical scale of 0 to 100. The %K is the main line and it is drawn as a solid line. The second is the %D line and is a moving average of %K. The %D line is drawn as a dotted line. The Fast Stochastic is the average of the last three %K and a Slow Stochastic is a three day average of the Fast Stochastic."
 msgstr "Stochastic Oscillator adalah sebuah indikator momentum yang digunakan untuk menunjukkan posisi closing relatif terhadap range transaksi dalam satu periode tertentu. Nilai kisaran pada indikator ini adalah 0 hingga 100. %K adalah inti dari indikator dan digambarkan sebagai garis tebal. Kedua adalah garis %D merupakan pergerakan rata-rata %K. Garis %D digambarkan sebagai titik. Fast Stochastic adalah pergerakan rata-rata 3 periode terakhir %K dan Slow Stochastic adalah rata-rata Fast Stochastic selama tiga hari."
 
@@ -7376,8 +7324,8 @@ msgstr "Proses anti pencucian uang mempunyai efek sebagai berikut pada klien:"
 msgid "The average is the average of the ticks, including the first and the last tick."
 msgstr "Rata rata adalah jumlah rata rata tik, termasuk tik awal dan akhir."
 
-#: cgi/subs/subs_graphs_chartdirector.pm:262
-#: cgi/subs/subs_graphs_chartdirector.pm:487
+#: cgi/subs/subs_graphs_chartdirector.pm:263
+#: cgi/subs/subs_graphs_chartdirector.pm:488
 msgid "The bandwidth to compute the indicator"
 msgstr "Bandwidth untuk menghitung indikator"
 
@@ -7438,7 +7386,7 @@ msgstr "Perusahaan berhak untuk mengenakan biaya tidak aktif sebesar USD/EUR/AUD
 msgid "The content on this website is subject to change at any time without notice and is provided for the sole purpose of assisting traders in making independent investment decisions.  %1 has taken reasonable measures to ensure the accuracy of the information on the website, however, the company does not guarantee its accuracy and will not accept liability for any loss or damage which may arise directly or indirectly from the content or your inability to access the website, for any delay in or failure of the transmission or the receipt of any instruction or notification sent through this website."
 msgstr "Isi dari website ini dapat dirubah sewaktu waktu tanpa pemberitahuan dan hanya disediakan untuk membantu para trader untuk mengambil keputusan melakukan investasi. %1 akan memastikan keakuratan informasi yang terdapat pada website namun demikian Perusahaan tidak menjamin keakuratan tersebut dan tidak akan menanggung kerugian atau kerusakan yang ditimbulkan oleh informasi tersebut atau jika anda mengalami masalah didalam mengakses website baik itu berhubung penundaan atau keterlambatan transmisi atau penerimaan berita atau instruksi yang dikirimkan melalui website ini."
 
-#: lib/BOM/Product/Transaction.pm:663
+#: lib/BOM/Product/Transaction.pm:664
 msgid "The contract has expired"
 msgstr "Kontrak telah berakhir"
 
@@ -7452,7 +7400,7 @@ msgid "The contract must expire on a trading day."
 msgstr "Kontrak harus berakhir pada hari trading."
 
 #. ($currency,                        to_monetary_number_format($amount)
-#: lib/BOM/Product/Transaction.pm:706
+#: lib/BOM/Product/Transaction.pm:707
 msgid "The contract payout has changed from %1%2 to %1%3."
 msgstr "Hasil kontrak telah berubah dari %1%2 ke %1%3."
 
@@ -7461,7 +7409,7 @@ msgid "The contract period is the timeframe of a trade. It is also called the du
 msgstr "Periode kontrak adalah jangka waktu trading. Yang juga disebut sebagai durasi."
 
 #. ($currency,                        to_monetary_number_format($amount)
-#: lib/BOM/Product/Transaction.pm:699
+#: lib/BOM/Product/Transaction.pm:700
 msgid "The contract price has changed from %1%2 to %1%3."
 msgstr "Harga kontrak telah berubah dari %1%2 ke %1%3."
 
@@ -7477,11 +7425,11 @@ msgstr "Mata uang bonus anda akan sama dengan mata uang deposit pertama anda."
 msgid "The database is not yet updated with settlement data."
 msgstr "Database belum diperbarui dengan data penyelesaian."
 
-#: cgi/subs/subs_graphs_chartdirector.pm:312
-#: cgi/subs/subs_graphs_chartdirector.pm:411
-#: cgi/subs/subs_graphs_chartdirector.pm:436
-#: cgi/subs/subs_graphs_chartdirector.pm:460
-#: cgi/subs/subs_graphs_chartdirector.pm:475
+#: cgi/subs/subs_graphs_chartdirector.pm:313
+#: cgi/subs/subs_graphs_chartdirector.pm:412
+#: cgi/subs/subs_graphs_chartdirector.pm:437
+#: cgi/subs/subs_graphs_chartdirector.pm:461
+#: cgi/subs/subs_graphs_chartdirector.pm:476
 msgid "The distance between the middle line and the upper and lower threshold lines"
 msgstr "Jarak antara tengah, atas dan bawah garis permulaan"
 
@@ -7531,7 +7479,7 @@ msgstr "Tik awal adalah tik pertama setelah kontrak diproses oleh server kami."
 msgid "The market exit price is the price in effect at the end of the contract period."
 msgstr "Harga akhir market adalah harga pada akhir periode kontrak."
 
-#: lib/BOM/Product/Contract.pm:2594
+#: lib/BOM/Product/Contract.pm:2618
 msgid "The market must be open at the start time."
 msgstr "Market harus dibuka pada waktu mulai."
 
@@ -7550,12 +7498,12 @@ msgstr "Kerugian maksimal yang mungkin ditanggung oleh klien adalah sejumlah dan
 msgid "The most important benefit of using OAuth2.0 is that the end-users, who already have valid logins at %1, are able to leverage new applications to execute various trading activities, without these applications needing to know or \"see\" the end-users security credentials."
 msgstr "Manfaat paling penting OAuth2.0 adalah bagi pengguna yang sudah memiliki login pada %1 dimana dapat mempengaruhi aplikasi baru untuk melakukan aktifitas trading tanpa memerlukan aplikasi ini untuk mengetahui atau \"melihat\" keterangan pengamanan pengguna."
 
-#: cgi/subs/subs_graphs_chartdirector.pm:357
-#: cgi/subs/subs_graphs_chartdirector.pm:390
+#: cgi/subs/subs_graphs_chartdirector.pm:358
+#: cgi/subs/subs_graphs_chartdirector.pm:391
 msgid "The moving average period of the signal line"
 msgstr "Pergerakan rata-rata periode dari garis signal"
 
-#: cgi/subs/subs_plack.pm:279
+#: cgi/subs/subs_plack.pm:280
 msgid "The page has timed out. This may be due to a slow Internet connection, or to excess load on our servers.  Please try again in a few moments."
 msgstr "Halaman memiliki batas waktu. Hal ini mungkin disebabkan oleh koneksi internet yang sangat lambat, atau kelebihan muatan pada server kami.  Silahkan coba beberapa saat lagi."
 
@@ -7567,59 +7515,59 @@ msgstr "Paten berarti Regent Markets diakui sebagai perintis trading binary. Pat
 msgid "The payout is the amount paid to an options trader if their prediction is correct."
 msgstr "Hasil adalah jumlah yang dibayarkan pada opsi trader jika analisa tepat."
 
-#: cgi/subs/subs_graphs_chartdirector.pm:355
 #: cgi/subs/subs_graphs_chartdirector.pm:356
-#: cgi/subs/subs_graphs_chartdirector.pm:388
+#: cgi/subs/subs_graphs_chartdirector.pm:357
 #: cgi/subs/subs_graphs_chartdirector.pm:389
-#: cgi/subs/subs_graphs_chartdirector.pm:455
+#: cgi/subs/subs_graphs_chartdirector.pm:390
 #: cgi/subs/subs_graphs_chartdirector.pm:456
 #: cgi/subs/subs_graphs_chartdirector.pm:457
-#: cgi/subs/subs_graphs_chartdirector.pm:502
-#: cgi/subs/subs_graphs_chartdirector.pm:512
-#: cgi/subs/subs_graphs_chartdirector.pm:520
-#: cgi/subs/subs_graphs_chartdirector.pm:528
-#: cgi/subs/subs_graphs_chartdirector.pm:536
+#: cgi/subs/subs_graphs_chartdirector.pm:458
+#: cgi/subs/subs_graphs_chartdirector.pm:503
+#: cgi/subs/subs_graphs_chartdirector.pm:513
+#: cgi/subs/subs_graphs_chartdirector.pm:521
+#: cgi/subs/subs_graphs_chartdirector.pm:529
+#: cgi/subs/subs_graphs_chartdirector.pm:537
 msgid "The period for the moving average"
 msgstr "Periode untuk pergerakan rata-rata"
 
 #. ('%K')
 #. ('%D')
-#: cgi/subs/subs_graphs_chartdirector.pm:344
 #: cgi/subs/subs_graphs_chartdirector.pm:345
-#: cgi/subs/subs_graphs_chartdirector.pm:422
+#: cgi/subs/subs_graphs_chartdirector.pm:346
 #: cgi/subs/subs_graphs_chartdirector.pm:423
+#: cgi/subs/subs_graphs_chartdirector.pm:424
 msgid "The period to compute the %1 line"
 msgstr "Periode untuk mengkomputasi garis %1"
 
-#: cgi/subs/subs_graphs_chartdirector.pm:223
-#: cgi/subs/subs_graphs_chartdirector.pm:238
-#: cgi/subs/subs_graphs_chartdirector.pm:246
-#: cgi/subs/subs_graphs_chartdirector.pm:254
-#: cgi/subs/subs_graphs_chartdirector.pm:261
-#: cgi/subs/subs_graphs_chartdirector.pm:270
-#: cgi/subs/subs_graphs_chartdirector.pm:309
-#: cgi/subs/subs_graphs_chartdirector.pm:322
-#: cgi/subs/subs_graphs_chartdirector.pm:328
-#: cgi/subs/subs_graphs_chartdirector.pm:372
-#: cgi/subs/subs_graphs_chartdirector.pm:399
-#: cgi/subs/subs_graphs_chartdirector.pm:408
-#: cgi/subs/subs_graphs_chartdirector.pm:433
-#: cgi/subs/subs_graphs_chartdirector.pm:446
-#: cgi/subs/subs_graphs_chartdirector.pm:472
-#: cgi/subs/subs_graphs_chartdirector.pm:486
-#: cgi/subs/subs_graphs_chartdirector.pm:493
+#: cgi/subs/subs_graphs_chartdirector.pm:224
+#: cgi/subs/subs_graphs_chartdirector.pm:239
+#: cgi/subs/subs_graphs_chartdirector.pm:247
+#: cgi/subs/subs_graphs_chartdirector.pm:255
+#: cgi/subs/subs_graphs_chartdirector.pm:262
+#: cgi/subs/subs_graphs_chartdirector.pm:271
+#: cgi/subs/subs_graphs_chartdirector.pm:310
+#: cgi/subs/subs_graphs_chartdirector.pm:323
+#: cgi/subs/subs_graphs_chartdirector.pm:329
+#: cgi/subs/subs_graphs_chartdirector.pm:373
+#: cgi/subs/subs_graphs_chartdirector.pm:400
+#: cgi/subs/subs_graphs_chartdirector.pm:409
+#: cgi/subs/subs_graphs_chartdirector.pm:434
+#: cgi/subs/subs_graphs_chartdirector.pm:447
+#: cgi/subs/subs_graphs_chartdirector.pm:473
+#: cgi/subs/subs_graphs_chartdirector.pm:487
+#: cgi/subs/subs_graphs_chartdirector.pm:494
 msgid "The period to compute the indicator"
 msgstr "Periode untuk mengkomputasi indikator"
 
-#: cgi/subs/subs_graphs_chartdirector.pm:291
+#: cgi/subs/subs_graphs_chartdirector.pm:292
 msgid "The period to compute the rate of change of the smoothed range"
 msgstr "Periode untuk mengkomputasi nilai perubahan dari jarak yang dihaluskan"
 
-#: cgi/subs/subs_graphs_chartdirector.pm:335
+#: cgi/subs/subs_graphs_chartdirector.pm:336
 msgid "The period to smooth the indicator"
 msgstr "Periode untuk menghaluskan indikator"
 
-#: cgi/subs/subs_graphs_chartdirector.pm:287
+#: cgi/subs/subs_graphs_chartdirector.pm:288
 msgid "The period to smooth the range"
 msgstr "Periode untuk menghaluskan jarak"
 
@@ -7636,18 +7584,18 @@ msgid "The profit is the difference between the purchase price (the stake) and t
 msgstr "Keuntungan adalah selisih antara harga beli (modal) dengan hasil pada kontrak yang memberi untung."
 
 #. ($currency)
-#: lib/BOM/Product/Transaction.pm:482
+#: lib/BOM/Product/Transaction.pm:483
 msgid "The provided currency %1 is invalid."
 msgstr "Mata uang yang disediakan %1 tidak berlaku."
 
 #. ($currency)
-#: lib/BOM/Product/Transaction.pm:474
+#: lib/BOM/Product/Transaction.pm:475
 msgid "The provided currency %1 is not the default currency"
 msgstr "Mata uang %1 bukan merupakan mata uang asal"
 
 #. ($email)
 #. ($new_email)
-#: cgi/create_account.cgi:100 cgi/f_writepartics.cgi:116
+#: cgi/create_account.cgi:101 cgi/f_writepartics.cgi:116
 msgid "The provided email address %1 is already in use by another Login ID."
 msgstr "Alamat email %1 sudah pernah digunakan oleh Login ID lain."
 
@@ -7655,7 +7603,7 @@ msgstr "Alamat email %1 sudah pernah digunakan oleh Login ID lain."
 msgid "The random index is a stock index whose price is simulated using random numbers. Unlike real market stock indices whose prices depend on the prices of the individual stocks listed on an Exchange, the random stock index only relies on factors like volatility, previous index price (previous simulated price) and a random number to determine the price of the index. Due to the use of random numbers, the price (or direction) of the index cannot be predicted with certainty and thus behaves like a real market index. When the index is appended with a number, the number is the percentage volatility used in calculating the index price. For instance, the Random Index 25 uses a volatility of 25% in the calculation of the index price. The index started at 1000 on 16 May 2004."
 msgstr "Random index adalah index saham yang harganya disimulasi menggunakan angka acak. Tidak seperti harga index pada bursa saham umumnya dimana harga adalah tergantung kepada harga saham individu yang terdaftar pada bursa saham, random index adalah tergantung kepada beberapa faktor seperti volatilitas, harga index sebelumnya (harga yang disimulasikan sebelumnya) dan angka random atau acak yang digunakan untuk menentukan harga index. Berhubung penggunaan angka acak, harga (arah) index tidak dapat diprediksikan secara pasti dimana kondisi ini sama dengan bursa saham. Angka yang terdapat pada masing-masing index adalah mewakili jumlah volatilitas yang digunakan dalam menentukan harga index tersebut. Misalnya Random Index 25 adalah menggunakan 25% volatilitas dalam perhitungan harga index. Index ini dimulai pada harga 1000 sejak 16 Mei 2004."
 
-#: cgi/subs/subs_graphs_chartdirector.pm:503
+#: cgi/subs/subs_graphs_chartdirector.pm:504
 msgid "The ratio above and below the moving average"
 msgstr "Ration atas dan bawah pergerakan rata-rata"
 
@@ -7705,7 +7653,7 @@ msgstr "Transaksi yang dilakukan di situs ini dan hubungan antara klien dan peru
 msgid "The two passwords that you entered do not match."
 msgstr "Kedua-dua password yang Anda masukkan tidak cocok."
 
-#: lib/BOM/Product/Transaction.pm:693
+#: lib/BOM/Product/Transaction.pm:694
 msgid "The underlying market has moved too much since you priced the contract. "
 msgstr "Market dasar telah bergerak terlalu banyak setelah anda menghitung harga. "
 
@@ -7819,8 +7767,8 @@ msgid "This Agreement may be terminated forthwith by either party on written not
 msgstr "Perjanjian ini dapat segera diakhiri oleh salah satu pihak dengan pemberitahuan tertulis kepada pihak lain jika pihak lain melakukan pelanggaran terhadap ketentuan-ketentuan perjanjian dan jika kasus pelanggaran tidak dapat diselesaikan atau tidak dikoreksi dalam tempo 15 hari sejak diterimanya pemberitahuan tertulis tentang pelanggaran tersebut."
 
 #: /home/git/translations/binary-static/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:128
-msgid "This Agreement shall be governed by and construed in accordance with the laws of the Bahamas (the \"Jurisdiction\"), you agree that the Jurisdiction's courts will have sole jurisdiction to settle any disputes that may arise in relation thereto. For such purposes, you irrevocably submit to the jurisdiction of the courts of the Jurisdiction in relation to any such dispute and you agree that any claim you might have against the Company shall only be brought before the courts of the Jurisdiction. In the event of any differences between the English version of this website and any other language, the English version shall prevail."
-msgstr "Perjanjian ini akan diatur oleh dan ditafsirkan sesuai dengan hukum Bahama (sebagai \"Yurisdiksi\"), anda setuju bahwa pengadilan Yurisdiksi akan memiliki kewenangan tunggal untuk menyelesaikan setiap perselisihan yang mungkin timbul dalam kaitan tersebut. Untuk tujuan tersebut, Anda dapat ditarik kembali tunduk kepada yurisdiksi pengadilan dari Yurisdiksi dalam kaitannya dengan sengketa tersebut dan Anda setuju bahwa klaim apapun Anda mungkin memiliki terhadap Perusahaan hanya akan dibawa ke pengadilan Yurisdiksi. Dalam hal terjadi perbedaan antara versi bahasa Inggris dari situs ini dan bahasa lain, versi bahasa Inggris adalah yang berlaku."
+msgid "This Agreement shall be governed by and construed in accordance with the laws of Jersey (the \"Jurisdiction\"), you agree that the Jurisdiction's courts will have sole jurisdiction to settle any disputes that may arise in relation thereto. For such purposes, you irrevocably submit to the jurisdiction of the courts of the Jurisdiction in relation to any such dispute and you agree that any claim you might have against the Company shall only be brought before the courts of the Jurisdiction. In the event of any differences between the English version of this website and any other language, the English version shall prevail."
+msgstr "Perjanjian ini akan diatur oleh dan ditafsirkan sesuai dengan hukum Jersey (sebagai \"Yurisdiksi\"), anda setuju bahwa pengadilan Yurisdiksi akan memiliki kewenangan tunggal untuk menyelesaikan setiap perselisihan yang mungkin timbul dalam kaitan tersebut. Untuk tujuan tersebut, Anda dapat ditarik kembali tunduk kepada yurisdiksi pengadilan dari Yurisdiksi dalam kaitannya dengan sengketa tersebut dan Anda setuju bahwa klaim apapun Anda mungkin memiliki terhadap Perusahaan hanya akan dibawa ke pengadilan Yurisdiksi. Dalam hal terjadi perbedaan antara versi bahasa Inggris dari situs ini dan bahasa lain, versi bahasa Inggris adalah yang berlaku."
 
 #: /home/git/translations/binary-static/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:112
 msgid "This Agreement shall commence on the date that the Company notifies you that your application to join the Company affiliates program has been successful and shall continue until terminated in accordance with this clause."
@@ -7859,11 +7807,11 @@ msgstr "Panggilan ini akan memberi struktur JSON yang sama yang bisa dilihat pad
 msgid "This client cashier section is locked."
 msgstr "Bagian kasir akun ini dibatalkan."
 
-#: lib/BOM/Product/Transaction.pm:778
+#: lib/BOM/Product/Transaction.pm:779
 msgid "This contract cannot be properly validated at this time."
 msgstr "Kontrak tidak dapat divalidasi untuk saat ini."
 
-#: lib/BOM/Product/Contract.pm:1681
+#: lib/BOM/Product/Contract.pm:1684
 msgid "This contract has already expired."
 msgstr "Kontrak ini telah berakhir."
 
@@ -7880,7 +7828,7 @@ msgid "This contract has expired."
 msgstr "Kontrak berikut telah berakhir."
 
 #. (to_monetary_number_format($custom_limit)
-#: lib/BOM/Product/Transaction.pm:855
+#: lib/BOM/Product/Transaction.pm:856
 msgid "This contract is limited to "
 msgstr "Kontrak ini terbatas ke "
 
@@ -7888,23 +7836,23 @@ msgstr "Kontrak ini terbatas ke "
 msgid "This contract is no longer offered."
 msgstr "Kontrak ini sudah tidak ditawarkan."
 
-#: lib/BOM/Product/Transaction.pm:853
+#: lib/BOM/Product/Transaction.pm:854
 msgid "This contract is unavailable on this account."
 msgstr "Kontrak ini tidak tersedia pada akun ini."
 
-#: web/bin/JavascriptCompress.pm:128
+#: web/bin/GenerateStaticData.pm:128
 msgid "This contract lost"
 msgstr "Kontrak ini rugi"
 
-#: lib/BOM/Product/Contract.pm:2403
+#: lib/BOM/Product/Contract.pm:2406
 msgid "This contract offers no return."
 msgstr "Kontrak ini tidak memberi hasil."
 
-#: lib/BOM/Product/Transaction.pm:1349
+#: lib/BOM/Product/Transaction.pm:1350
 msgid "This contract was not found among your open positions."
 msgstr "Kontrak tidak ditemukan pada posisi yang masih berjalan."
 
-#: web/bin/JavascriptCompress.pm:127
+#: web/bin/GenerateStaticData.pm:127
 msgid "This contract won"
 msgstr "Kontrak ini untung"
 
@@ -7921,10 +7869,6 @@ msgstr "Fasilitas ini tidak tersedia untuk Akun Uang Virtual"
 msgid "This is a $_ log"
 msgstr "Ini adalah $_ log"
 
-#: frontend/lib/BOM/Web/Home.pm:19
-msgid "This is a log"
-msgstr "Ini adalah log"
-
 #. (BOM::Platform::Context::request()
 #: cgi/oop/Validation/Transaction/Payment.pm:115
 msgid "This is a virtual-money account. Please click <a class=\"pjaxload\" href=\"%1\">here</a> to open a real-money account and deposit funds."
@@ -7937,7 +7881,7 @@ msgstr "Ini adalah pesan otomatis untuk mengingatkan Anda bahwa telah terjadi ke
 
 #: /home/git/translations/binary-static/src/templates/toolkit/bet/form/barrier.html.tt:23
 #: /home/git/translations/binary-static/src/templates/toolkit/bet/form/barrier.html.tt:42
-#: cgi/oop/Controller/Bet.pm:2344
+#: cgi/oop/Controller/Bet.pm:2345
 msgid "This is an indicative barrier. Actual barrier will be the entry spot plus the barrier offset."
 msgstr "Ini adalah batasan indikatif. Batasan aktual adalah spot masuk ditambah batasan offset."
 
@@ -7970,7 +7914,7 @@ msgstr "Ini adalah untuk mengkonfirmasi bahwa alamat email Anda untuk %1 pada %2
 msgid "This market closes early today at"
 msgstr "Market ini ditutup awal pada"
 
-#: lib/BOM/Product/Contract.pm:2594
+#: lib/BOM/Product/Contract.pm:2618
 msgid "This market is presently closed."
 msgstr "Market ini sedang ditutup."
 
@@ -8000,7 +7944,7 @@ msgstr "Penawaran ini tidak dapat digunakan bersamaan pada penawaran lainnya."
 msgid "This promotion is only available to new Clients. Existing or former Clients do not qualify. It is only available once to each Client."
 msgstr "Promosi ini hanya berlaku untuk pembukaan akun baru. Dan hanya dapat diperoleh sekali saja untuk setiap Pelanggan."
 
-#: lib/BOM/Product/Contract.pm:2303
+#: lib/BOM/Product/Contract.pm:2306
 msgid "This trade is not offered."
 msgstr "Kontrak ini tidak ditawarkan."
 
@@ -8024,12 +7968,12 @@ msgstr "Website ini dipasarkan di negara Inggris oleh Regent Markets (IOM) Ltd, 
 msgid "Throughout the term of this Agreement, you shall:"
 msgstr "Sepanjang jangka waktu Perjanjian ini, anda harus:"
 
-#: web/bin/JavascriptCompress.pm:71
+#: web/bin/GenerateStaticData.pm:71
 msgid "Thursday"
 msgstr "Kamis"
 
 #: /home/git/translations/binary-static/src/templates/haml/get_started/glossary.html.haml:1
-#: cgi/subs/subs_BOMFeed_history.pm:333 cgi/subs/subs_BOMFeed_history.pm:372
+#: lib/BOM/View/Charting.pm:410 lib/BOM/View/Charting.pm:449
 msgid "Tick"
 msgstr "Tik"
 
@@ -8037,7 +7981,7 @@ msgstr "Tik"
 msgid "Tick by Tick"
 msgstr "Tick demi Tick"
 
-#: cgi/oop/Controller/Bet.pm:1127 cgi/oop/Controller/Bet.pm:1134
+#: cgi/oop/Controller/Bet.pm:1128 cgi/oop/Controller/Bet.pm:1135
 msgid "Ticks"
 msgstr "Hasil Tik"
 
@@ -8045,7 +7989,7 @@ msgstr "Hasil Tik"
 msgid "Tier"
 msgstr "Tingkat"
 
-#: cgi/subs/subs_BOMFeed_history.pm:345
+#: lib/BOM/View/Charting.pm:422
 msgid "Tile"
 msgstr "Ubinan"
 
@@ -8058,7 +8002,7 @@ msgstr "Waktu"
 msgid "Times are changing. We increase payouts so our clients can make the most of their winning trades."
 msgstr "Dengan perubahan waktu. Kami meningkatkan hasil sehingga klien kami dapat menikmati keuntungan trading mereka."
 
-#: cgi/subs/subs_BOMFeed_history.pm:413
+#: lib/BOM/View/Charting.pm:490
 msgid "Tip:"
 msgstr "Tip:"
 
@@ -8066,7 +8010,7 @@ msgstr "Tip:"
 msgid "Title"
 msgstr "Gelar"
 
-#: web/bin/JavascriptCompress.pm:65
+#: web/bin/GenerateStaticData.pm:65
 msgid "To"
 msgstr "Kepada"
 
@@ -8128,7 +8072,7 @@ msgstr "Untuk berbicara langsung dengan wakil Customer Service kami secara onlin
 msgid "To:"
 msgstr "Hingga:"
 
-#: cgi/subs/subs_BOMFeed_history.pm:398
+#: lib/BOM/View/Charting.pm:475
 msgid "Today's Bet"
 msgstr "Kontrak Hari Ini"
 
@@ -8137,7 +8081,7 @@ msgid "Toll-Free number"
 msgstr "Nomor bebas pulsa"
 
 #. ($safer_expiry->date)
-#: lib/BOM/Product/Contract.pm:2875
+#: lib/BOM/Product/Contract.pm:2899
 msgid "Too many market holidays during the contract period. Select an expiry date after %1."
 msgstr "Terlalu banyak hari libur selama periode kontrak. Silahkan pilih waktu berakhir setelah %1."
 
@@ -8159,7 +8103,7 @@ msgstr "Menyentuh/Tidak"
 
 #: /home/git/translations/binary-static/src/templates/haml/get_started/random_markets.html.haml:1
 #: cgi/contract_demo.cgi:58 cgi/contract_demo.cgi:59 cgi/contract_guide.cgi:43
-#: cgi/oop/Controller/Bet.pm:1159 cgi/oop/Controller/Bet.pm:1166
+#: cgi/oop/Controller/Bet.pm:1160 cgi/oop/Controller/Bet.pm:1167
 msgid "Touch/No Touch"
 msgstr "Menyentuh/Tidak"
 
@@ -8270,9 +8214,9 @@ msgstr "Rencana Trading"
 
 #: /home/git/translations/binary-static/src/templates/haml/resources/index.html.haml:1
 #: /home/git/translations/binary-static/src/templates/toolkit/legal/datafeed.html.tt:29
-#: cgi/trading_times.cgi:15 lib/BOM/Product/Contract.pm:2271
-#: lib/BOM/Product/Contract.pm:2640 lib/BOM/Product/Contract.pm:2655
-#: lib/BOM/Product/Contract.pm:2671 lib/BOM/Product/Contract.pm:2844
+#: cgi/trading_times.cgi:15 lib/BOM/Product/Contract.pm:2274
+#: lib/BOM/Product/Contract.pm:2664 lib/BOM/Product/Contract.pm:2679
+#: lib/BOM/Product/Contract.pm:2695 lib/BOM/Product/Contract.pm:2868
 #: lib/BOM/View/Menu.pm:154
 msgid "Trading Times"
 msgstr "Waktu Trading"
@@ -8290,41 +8234,41 @@ msgid "Trading financial contracts involves a high level of risk and may not be 
 msgstr "Kontrak trading finansial memiliki resiko tinggi dan mungkin tidak cocok bagi semua orang. Sebelum memutuskan untuk melakukan pembelian kontrak finansial, anda perlu mengetahui resiko yang akan anda alami. Anda harus mengetahui semua resiko yang terlibat pada trading finansial dan meminta saran pada penyedia konsultasi bebas jika anda memiliki keraguan."
 
 #. ($blackout_time)
-#: lib/BOM/Product/Contract.pm:2609
+#: lib/BOM/Product/Contract.pm:2633
 msgid "Trading is available after the first %1 of the session."
 msgstr "Trading hanya tersedia setelah %1 sesi pertama."
 
-#: lib/BOM/Product/Contract.pm:2826
+#: lib/BOM/Product/Contract.pm:2850
 msgid "Trading is not offered for this duration."
 msgstr "Trading tidak ditawarkan untuk durasi ini."
 
-#: cgi/oop/Controller/Bet.pm:675 lib/BOM/Product/Contract.pm:2224
-#: lib/BOM/Product/Contract.pm:2290
+#: cgi/oop/Controller/Bet.pm:676 lib/BOM/Product/Contract.pm:2227
+#: lib/BOM/Product/Contract.pm:2293
 msgid "Trading is suspended at the moment."
 msgstr "Trading dihentikan untuk sementara."
 
 #. ($translated_name)
 #. ($underlying->translated_display_name()
-#: cgi/analyse_contract.cgi:70 lib/BOM/Product/Contract.pm:2232
-#: lib/BOM/Product/Contract.pm:2241 lib/BOM/Product/Contract.pm:2269
+#: cgi/analyse_contract.cgi:70 lib/BOM/Product/Contract.pm:2235
+#: lib/BOM/Product/Contract.pm:2244 lib/BOM/Product/Contract.pm:2272
 msgid "Trading on %1 is suspended at the moment."
 msgstr "Trading pada %1 dihentikan untuk sementara."
 
 #. ($translated_name)
 #. ($self->underlying->translated_display_name()
 #. ($underlying->translated_display_name()
-#: lib/BOM/Product/Contract.pm:2252 lib/BOM/Product/Contract.pm:2259
-#: lib/BOM/Product/Contract.pm:2936
+#: lib/BOM/Product/Contract.pm:2255 lib/BOM/Product/Contract.pm:2262
+#: lib/BOM/Product/Contract.pm:2960
 #: lib/BOM/Product/Pricing/Engine/IntradayHistorical.pm:794
 msgid "Trading on %1 is suspended due to missing market data."
 msgstr "Trading pada %1 dihentikan sementara berhubung gangguan data market."
 
 #. ($eod_blackout_start->as_string)
-#: lib/BOM/Product/Contract.pm:2638
+#: lib/BOM/Product/Contract.pm:2662
 msgid "Trading suspended for the last %1 of the session."
 msgstr "Trading dihentikan hingga sedi terakhir %1."
 
-#: lib/BOM/Product/Contract.pm:2653
+#: lib/BOM/Product/Contract.pm:2677
 msgid "Trading suspended for the last 300s of the session."
 msgstr "Trading dihentikan untuk 300 sesi terakhir."
 
@@ -8379,12 +8323,11 @@ msgstr "Transfer ke: %1<br/>Login ID: %2<br/>Jumlah: %3 %4"
 msgid "Translations"
 msgstr "Translasi"
 
-#: cgi/smartchart.cgi:48 cgi/subs/subs_graphs_chartdirector.pm:523
+#: cgi/smartchart.cgi:48 cgi/subs/subs_graphs_chartdirector.pm:524
 msgid "Triangular"
 msgstr "3 Sudut"
 
-#: cgi/subs/subs_BOMFeed_history.pm:540
-#: cgi/subs/subs_graphs_chartdirector.pm:525
+#: cgi/subs/subs_graphs_chartdirector.pm:526 lib/BOM/View/Charting.pm:617
 msgid "Triangular moving averages place the majority of the weight on the middle portion of the price series. They are actually double-smoothed simple moving averages. The periods used in the simple moving averages varies depending on if you specify an odd or even number of time periods."
 msgstr "Moving average Triangular penekanan pemberatnya ada pada tengah-tengah periode. Mereka sebenarnya mengalami dua kali pelicinan moving average sederhana. Periode  yang digunakan pada moving average sederhana adalah tergantung pada jika merincikan angka ganjil atau genap dari periode waktu."
 
@@ -8402,11 +8345,11 @@ msgstr "Coba sekarang"
 msgid "Try our downloadable charting application with an extensive range of indicators."
 msgstr "Coba aplikasi charting terbaru kami yang memiliki berbagai pilihan indikator."
 
-#: web/bin/JavascriptCompress.pm:122
+#: web/bin/GenerateStaticData.pm:122
 msgid "Tu"
 msgstr "Kam"
 
-#: web/bin/JavascriptCompress.pm:69
+#: web/bin/GenerateStaticData.pm:69
 msgid "Tuesday"
 msgstr "Selasa"
 
@@ -8424,7 +8367,7 @@ msgstr "Harga Umum"
 msgid "UK"
 msgstr "UK"
 
-#: cgi/subs/subs_BOMFeed_history.pm:370
+#: lib/BOM/View/Charting.pm:447
 msgid "UK Stocks"
 msgstr "Saham UK"
 
@@ -8434,26 +8377,21 @@ msgstr "Warga Inggris dan Manx akan memiliki akun mereka didaftar dengan Regent 
 
 #: /home/git/translations/binary-static/src/templates/toolkit/legal/complaints_disputes.html.tt:13
 msgid "UK clients registered with Regent Markets (Malta) Ltd can submit their dispute with the alternative dispute resolution entity which is the Independent Betting Adjudication Service Ltd (IBAS) by filling the adjudication form on the ADR entity’s"
-msgstr ""
+msgstr "Klien UK terdaftar pada Regent Markets (Malta) Ltd dapat mengajukan perselisihannya dengan entitas alternatif penyelesaian sengketa yang merupakan Independent Betting Adjudication Service Ltd (IBAS) dengan mengisi formulir ajudikasi pada entitas ADR"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/legal/us_patents.html.tt:3
 #: cgi/us_patents.cgi:11
 msgid "US Patents"
 msgstr "Hak Paten AS"
 
-#: cgi/subs/subs_BOMFeed_history.pm:364
+#: lib/BOM/View/Charting.pm:441
 msgid "US Stocks"
 msgstr "Saham US"
 
-#: cgi/smartchart.cgi:40 cgi/subs/subs_BOMFeed_history.pm:435
-#: cgi/subs/subs_BOMFeed_history.pm:530
-#: cgi/subs/subs_graphs_chartdirector.pm:449
+#: cgi/smartchart.cgi:40 cgi/subs/subs_graphs_chartdirector.pm:450
+#: lib/BOM/View/Charting.pm:512 lib/BOM/View/Charting.pm:607
 msgid "Ultimate Oscillator"
 msgstr "Oskilator Gabungan"
-
-#: frontend/lib/BOM/Web/Home.pm:237
-msgid "Unable to contact the server"
-msgstr "Tidak dapat menghubungi server"
 
 #: /home/git/translations/binary-static/src/templates/haml/exception.html.haml:1
 msgid "Unable to process your request"
@@ -8476,7 +8414,7 @@ msgstr "Trading Dibawah Umur"
 msgid "Underlying"
 msgstr "Yang mendasari"
 
-#: cgi/subs/subs_BOMFeed_history.pm:405
+#: lib/BOM/View/Charting.pm:482
 msgid "Unknown error while saving workspace '#1'."
 msgstr "Error tidak dikenal saat menyimpan workspace '#1'."
 
@@ -8567,10 +8505,8 @@ msgid "Version 31. Last modified 2014-08-29."
 msgstr "Versi 31. Diubah terakhir 28-08-2014."
 
 #: /home/git/translations/binary-static/src/templates/toolkit/legal/terms_and_conditions.html.tt:4
-#, fuzzy
-#| msgid "Version 31. Last modified 2014-08-28."
 msgid "Version 32. Last modified 2014-09-24."
-msgstr "Versi 31. Diubah terakhir 28-08-2014."
+msgstr "Versi 32. Diubah terakhir pada 24-09-2014."
 
 #: /home/git/translations/binary-static/src/templates/toolkit/resources/pricing_table_form.html.tt:87
 msgid "Vertical"
@@ -8581,8 +8517,8 @@ msgid "Vertical Grid"
 msgstr "Garis Vertical"
 
 #: cgi/daily_prices.cgi:66 cgi/daily_prices.cgi:68 cgi/intraday_prices.cgi:57
-#: cgi/intraday_prices.cgi:59 cgi/oop/Controller/Bet.pm:1258
-#: cgi/oop/Controller/Bet.pm:1274
+#: cgi/intraday_prices.cgi:59 cgi/oop/Controller/Bet.pm:1259
+#: cgi/oop/Controller/Bet.pm:1275
 msgid "View"
 msgstr "Lihat"
 
@@ -8590,7 +8526,7 @@ msgstr "Lihat"
 msgid "View Rise/Fall contract prices across a range of markets."
 msgstr "Lihat harga kontrak Naik/Turun pada berbagai pilihan market."
 
-#: lib/BOM/Product/Contract.pm:2601 lib/BOM/Product/Contract.pm:2611
+#: lib/BOM/Product/Contract.pm:2625 lib/BOM/Product/Contract.pm:2635
 msgid "View Trading Times"
 msgstr "Lihat Waktu Trading"
 
@@ -8665,7 +8601,7 @@ msgid "Virtual Money Account Opening"
 msgstr "Pendaftaran Akun Uang Virtual"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/account/open_account.html.tt:24
-#: cgi/lost_password.cgi:377 cgi/subs/subs_forms.pm:1000
+#: cgi/lost_password.cgi:379 cgi/subs/subs_forms.pm:1000
 #: cgi/subs/subs_homepage.pm:31
 msgid "Virtual money account"
 msgstr "Akun Uang Virtual"
@@ -8695,7 +8631,7 @@ msgstr "Jaminan"
 msgid "Watch, earn and learn for FREE!"
 msgstr "Lihat, dapatkan dan pelajari secara GRATIS!"
 
-#: web/bin/JavascriptCompress.pm:123
+#: web/bin/GenerateStaticData.pm:123
 msgid "We"
 msgstr "Rab"
 
@@ -8707,11 +8643,11 @@ msgstr "Kami bertekad untuk memastikan keamanan data pribadi dan transaksi anda:
 msgid "We are fully licensed in the British Isles and Malta."
 msgstr "Kami sepenuhnya memiliki ijin dari British Isles dan Malta."
 
-#: web/bin/JavascriptCompress.pm:133
+#: web/bin/GenerateStaticData.pm:133
 msgid "We are not able to stream live prices at the moment. To enjoy live streaming of prices try refreshing the page, if you get this issue after repeated attempts try a different browser"
 msgstr "Kami tidak dapat memberikan striming harga live untuk saat ini. Untuk menikmati striming harga live silahkan coba merefresh halaman, atau coba browser lain"
 
-#: cgi/subs/subs_forms.pm:448 web/bin/JavascriptCompress.pm:56
+#: cgi/subs/subs_forms.pm:448 web/bin/GenerateStaticData.pm:56
 msgid "We are not accepting accounts from residents of this country at the present time."
 msgstr "Saat ini kami tidak menerima pembukaan account dari penduduk negara berikut."
 
@@ -8848,15 +8784,15 @@ msgstr "Situs web"
 msgid "Website exclusion is currently set to <strong>%1.</strong>"
 msgstr "Pengecualian website saat ini adalah <strong>%1.</strong>"
 
-#: web/bin/JavascriptCompress.pm:70
+#: web/bin/GenerateStaticData.pm:70
 msgid "Wednesday"
 msgstr "Rabu"
 
-#: cgi/subs/subs_BOMFeed_history.pm:369
+#: lib/BOM/View/Charting.pm:446
 msgid "Week"
 msgstr "Minggu"
 
-#: web/bin/JavascriptCompress.pm:98
+#: web/bin/GenerateStaticData.pm:98
 msgid "Week of"
 msgstr "Minggu ke"
 
@@ -8864,8 +8800,8 @@ msgstr "Minggu ke"
 msgid "Weekend quotes"
 msgstr "Kutipan akhir pekan"
 
-#: cgi/subs/subs_BOMFeed_history.pm:342
 #: lib/BOM/Product/Helper/PricingTableParameters.pm:302
+#: lib/BOM/View/Charting.pm:419
 msgid "Weekly"
 msgstr "Mingguan"
 
@@ -8873,11 +8809,11 @@ msgstr "Mingguan"
 msgid "Weekly Live Trading Room"
 msgstr "Kelas Trading Mingguan Live"
 
-#: cgi/subs/subs_BOMFeed_history.pm:417
+#: lib/BOM/View/Charting.pm:494
 msgid "Weeks"
 msgstr "Mingguan"
 
-#: cgi/smartchart.cgi:49 cgi/subs/subs_graphs_chartdirector.pm:531
+#: cgi/smartchart.cgi:49 cgi/subs/subs_graphs_chartdirector.pm:532
 msgid "Weighted"
 msgstr "Menimbang"
 
@@ -8885,12 +8821,11 @@ msgstr "Menimbang"
 msgid "Weighted Close"
 msgstr "Menimbang Ditutup"
 
-#: cgi/subs/subs_BOMFeed_history.pm:332
+#: lib/BOM/View/Charting.pm:409
 msgid "Weighted Moving Average"
 msgstr "Weighted Moving Average"
 
-#: cgi/subs/subs_BOMFeed_history.pm:510
-#: cgi/subs/subs_graphs_chartdirector.pm:205
+#: cgi/subs/subs_graphs_chartdirector.pm:206 lib/BOM/View/Charting.pm:587
 msgid "Weighted volume indicator based on the one-day change in price divided by the current day's range. Generally, the ADI moves in the direction of price."
 msgstr "Volume indikator Weighted adalah berdasarkan pada perubahan satu hari volume pada harga dibagi oleh jarak hari terkini. Secara umum, pergerakan ADI berdasarkan pergerakan harga."
 
@@ -9067,12 +9002,12 @@ msgstr "Mengapa saya harus menjadi afiliasi trading opsi binary?"
 msgid "Will I need to install any software?"
 msgstr "Apakah saya perlu menginstal software?"
 
-#: cgi/smartchart.cgi:41 cgi/subs/subs_BOMFeed_history.pm:551
-#: cgi/subs/subs_graphs_chartdirector.pm:466
+#: cgi/smartchart.cgi:41 cgi/subs/subs_graphs_chartdirector.pm:467
+#: lib/BOM/View/Charting.pm:628
 msgid "William's %R"
 msgstr "William's %R"
 
-#: cgi/subs/subs_BOMFeed_history.pm:319
+#: lib/BOM/View/Charting.pm:396
 msgid "Williams %R"
 msgstr "Williams %R"
 
@@ -9092,7 +9027,7 @@ msgstr "Laba 10-1000% dari modal jika analisa anda tepat. Tingkatkan hasil denga
 msgid "Win 80-100% on your stake if you are correct."
 msgstr "Dapatkan keuntungan dari 80-100% modal jika analisa tepat."
 
-#: cgi/subs/subs_BOMFeed_history.pm:424
+#: lib/BOM/View/Charting.pm:501
 msgid "Windows"
 msgstr "Windows"
 
@@ -9257,15 +9192,15 @@ msgstr "Penarikan melalui Western Union (MTCN: %1)"
 msgid "Withdrawal via bank wire"
 msgstr "Penarikan melalui bank transfer"
 
-#: cgi/subs/subs_BOMFeed_history.pm:430 cgi/subs/subs_BOMFeed_history.pm:451
+#: lib/BOM/View/Charting.pm:507 lib/BOM/View/Charting.pm:528
 msgid "Workspace"
 msgstr "Area Kerja"
 
-#: cgi/subs/subs_BOMFeed_history.pm:392
+#: lib/BOM/View/Charting.pm:469
 msgid "Workspace '#1' saved successfully."
 msgstr "Workspace '#1' telah sukses tersimpan."
 
-#: cgi/subs/subs_BOMFeed_history.pm:436
+#: lib/BOM/View/Charting.pm:513
 msgid "Workspace name:"
 msgstr "Nama ruang kerja:"
 
@@ -9273,7 +9208,7 @@ msgstr "Nama ruang kerja:"
 msgid "World FX indices"
 msgstr "Indeks World FX"
 
-#: cgi/subs/subs_BOMFeed_history.pm:421
+#: lib/BOM/View/Charting.pm:498
 msgid "World Indices"
 msgstr "Bursa Saham Dunia"
 
@@ -9281,13 +9216,13 @@ msgstr "Bursa Saham Dunia"
 msgid "Written limits and self-exclusion"
 msgstr "Batas tertulis dan pengecualian diri"
 
-#: web/bin/JavascriptCompress.pm:49
+#: web/bin/GenerateStaticData.pm:49
 msgid "Year"
 msgstr "Tahun"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/container/confirm_box_popup.html.tt:5
-#: cgi/subs/subs_BOMFeed_history.pm:390 cgi/subs/subs_forms.pm:3395
-#: cgi/subs/subs_forms.pm:993
+#: cgi/subs/subs_forms.pm:3395 cgi/subs/subs_forms.pm:993
+#: lib/BOM/View/Charting.pm:467
 msgid "Yes"
 msgstr "Ya"
 
@@ -9309,7 +9244,7 @@ msgstr "Anda juga berhak untuk memperoleh data pribadi yang telah anda ajukan ke
 msgid "You and we are independent contractors, and nothing in this Agreement will create any partnership, joint venture, agency, franchise, sales representative, or employment relationship between the parties. You will have no authority to make or accept any offers or representations on our behalf. You will not make any statement, whether on your site or otherwise, that reasonably would contradict anything in this paragraph."
 msgstr "Anda dan kami merupakan kontraktor bebas dan tidak terdapat dalam perjanjian ini yang akan membuat satu kemitraan, usaha patungan, agen, waralaba, perwakilan penjualan, atau hubungan kerja antara kedua belah pihak. Anda tidak akan memiliki otoritas untuk membuat atau menerima tawaran atau mengatas namakan kami."
 
-#: cgi/oop/Controller/Bet.pm:2116
+#: cgi/oop/Controller/Bet.pm:2117
 msgid "You are being given the better price."
 msgstr "Anda diberikan harga yang lebih baik."
 
@@ -9395,12 +9330,12 @@ msgid "You cannot transfer to account %1, as their account is currently disabled
 msgstr "Anda tidak dapat mentransfer ke account %1, berhubung akun ini dibatalkan untuk sementara."
 
 #. ($contact_url)
-#: cgi/lost_password.cgi:338
+#: cgi/lost_password.cgi:340
 msgid "You clicked on an expired link. If you have already clicked on this link, it has been <b>disabled for security reasons</b>. Please re request change of password.<br /><br /> Your account is important to us. If you require further assistance, please contact our <a href=\"%1\" target=\"_blank\"><strong>Customer Support</strong></a>."
 msgstr "Anda mengklik pada link yang telah berakhir. Jika anda sudah pernah mengklik link ini, link tersebut dibatalkan berhubung <b>alasan keamanan</b>. Silakan ajukan permohonan ulang untuk sandi baru.<br /><br /> Akun Anda adalah penting bagi kami. Jika Anda memerlukan bantuan selanjutnya, silakan hubungi <a href=\"%1\" target=\"_blank\"><strong>Customer Support</strong></a> kami."
 
 #. ($contact_url)
-#: cgi/lost_password.cgi:401
+#: cgi/lost_password.cgi:403
 msgid "You clicked on an expired link. Please refer to the email with the subject line <strong>New Password Request</strong> and click on the link provided.<br /><br /> Your account is important to us. If you require further assistance, please contact our <a href=\"%1\" target=\"_blank\"><strong>Customer Support</strong></a>."
 msgstr "Link sudah tidak berlaku. Silahkan lihat email dengan subjek <strong>Permohonan Kata Sandi Baru</strong> dan klik pada link yang diberikan.<br /><br /> Akun anda sangat penting bagi kami. Jika anda memerlukan bantuan lebih lanjut, silahkan hubungi <a href=\"%1\" target=\"_blank\"><strong>Customer Support</strong></a>."
 
@@ -9453,9 +9388,9 @@ msgstr "Alamat IP yang anda masukkan salah."
 msgid "You have entered an invalid login ID"
 msgstr "Anda telah memasukkan login ID yang salah"
 
-#: lib/BOM/Product/Transaction.pm:1098 lib/BOM/Product/Transaction.pm:1230
-#: lib/BOM/Product/Transaction.pm:1258 lib/BOM/Product/Transaction.pm:1286
-#: lib/BOM/Product/Transaction.pm:1320
+#: lib/BOM/Product/Transaction.pm:1099 lib/BOM/Product/Transaction.pm:1231
+#: lib/BOM/Product/Transaction.pm:1259 lib/BOM/Product/Transaction.pm:1287
+#: lib/BOM/Product/Transaction.pm:1321
 msgid "You have exceeded the daily limit for contracts of this type."
 msgstr "Anda telah melebihi batasan harian kontrak untuk jenis ini."
 
@@ -9508,7 +9443,7 @@ msgstr "Anda dapat menarik dana Y yang anda depositkan untuk memperoleh bonus da
 msgid "You may withdraw the bonus amount once you have exceeded an account turnover of 25 times the bonus amount value."
 msgstr "Bonus hanya dapat dicairkan jika anda telah melebihi total pembelian kontrak sebesar 25 kali jumlah bonus."
 
-#: web/bin/JavascriptCompress.pm:55
+#: web/bin/GenerateStaticData.pm:55
 msgid "You must accept the terms and conditions to open an account."
 msgstr "Anda harus menyetujui terma dan kondisi untuk mendaftar akun."
 
@@ -9516,7 +9451,7 @@ msgstr "Anda harus menyetujui terma dan kondisi untuk mendaftar akun."
 msgid "You must already have a valid \"Real money account\" with Binary.com."
 msgstr "Anda perlu memiliki \"Akun Uang Riil\" pada Binary.com."
 
-#: cgi/subs/subs_BOMFeed_history.pm:450
+#: lib/BOM/View/Charting.pm:527
 msgid "You must be logged in to use the workspace feature.Account opening is free and takes only 30 seconds."
 msgstr "Anda perlu masuk untuk mengakses fasilitas workspace. Pendaftaran akun adalah gratis dan hanya memerlukan waktu 30 detik."
 
@@ -9653,7 +9588,7 @@ msgid "Your account balance"
 msgstr "Saldo akun Anda"
 
 #. ($currency,                to_monetary_number_format($balance)
-#: lib/BOM/Product/Transaction.pm:963
+#: lib/BOM/Product/Transaction.pm:964
 msgid "Your account balance (%1%2) is insufficient to buy this contract (%1%3)."
 msgstr "Saldo anda (%1%2) tidak mencukupi untuk membeli kontrak (%1%3) ini."
 
@@ -9661,7 +9596,7 @@ msgstr "Saldo anda (%1%2) tidak mencukupi untuk membeli kontrak (%1%3) ini."
 msgid "Your account does not require authentication at this time."
 msgstr "Akun Anda tidak memerlukan otentikasi untuk saat ini."
 
-#: lib/BOM/Product/Transaction.pm:1202
+#: lib/BOM/Product/Transaction.pm:1203
 msgid "Your account has exceeded the trading limit with free promo code, please deposit if you wish to continue trading."
 msgstr "Akun anda telah melebihi batasan trading menggunakan kode bonus, silakan mendeposit untuk melanjutkan trading."
 
@@ -9684,7 +9619,7 @@ msgid "Your account is fully operational and you may begin depositing money and 
 msgstr "Akun anda saat ini sepenuhnya aktif, anda dapat mulai melakukan deposit, trading dan melakukan penarikan dana."
 
 #. (request()
-#: cgi/lost_password.cgi:470
+#: cgi/lost_password.cgi:472
 msgid "Your account is important to us. Please <a href=\"%1\">contact us</a> should you need further assistance."
 msgstr "Akun Anda adalah penting bagi kami. Silakan <a href=\"%1\">hubungi kami</a> jika anda memerlukan bantuan."
 
@@ -9792,7 +9727,7 @@ msgstr "Nama anda"
 msgid "Your name/company"
 msgstr "Nama anda/perusahaan"
 
-#: cgi/oop/Controller/Bet.pm:2076
+#: cgi/oop/Controller/Bet.pm:2077
 msgid "Your new account balance is %s %s"
 msgstr "Saldo akun Anda adalah %s %s"
 
@@ -9801,7 +9736,7 @@ msgid "Your old password is incorrect"
 msgstr "Password lama anda salah"
 
 #. ($reference_number, $executed_price)
-#: cgi/oop/Controller/Bet.pm:2121
+#: cgi/oop/Controller/Bet.pm:2122
 msgid "Your order (Reference # <span id=\"reference_no\">%1</span>) has been executed at %2."
 msgstr "Order anda (referensi # <span id=\"reference_no\">%1</span>) telah terproses pada %2."
 
@@ -9815,13 +9750,13 @@ msgid "Your password has been changed."
 msgstr "Password telah diubah."
 
 #. ($client->loginid)
-#: cgi/lost_password.cgi:639
+#: cgi/lost_password.cgi:641
 msgid "Your password has been successfully reset. Your login ID is <strong>%1</strong>.  Please log into your account using your new password."
 msgstr "Kata Sandi Anda telah berhasil dirubah. Login ID anda adalah <strong>%1</strong>. Silakan akses akun Anda menggunakan kata sandi baru."
 
 #. ($forgot_pass_url,                    $contact_url)
 #. (request()
-#: cgi/lost_password.cgi:149 cgi/lost_password.cgi:204
+#: cgi/lost_password.cgi:149 cgi/lost_password.cgi:205
 msgid "Your password recovery token has expired. Please click <a href=\"%1\"><strong>here</strong></a> to restart the password recovery process.<br /><br /> Your account is important to us. If you require further assistance, please contact our <a href=\"%2\"><strong>Customer Support</strong></a>."
 msgstr "Token permohonan sandi telah berakhir. Silakan klik <a href=\"%1\"><strong>di sini</strong></a> untuk mengulang proses pembuatan sandi baru.<br /><br /> Akun Anda adalah penting bagi kami. Jika Anda memerlukan bantuan selanjutnya, silakan hubungi <a href=\"%2\"><strong>Customer Support</strong></a> kami."
 
@@ -9876,7 +9811,7 @@ msgid "Your settings have been updated successfully."
 msgstr "Pengaturan anda telah sukses diperbarui."
 
 #. ($tradeRef)
-#: cgi/oop/Controller/Bet.pm:1513 cgi/oop/Controller/Bet.pm:2080
+#: cgi/oop/Controller/Bet.pm:1514 cgi/oop/Controller/Bet.pm:2081
 msgid "Your transaction reference number is %1"
 msgstr "Nomor referensi transaksi Anda adalah %1"
 
@@ -9898,7 +9833,7 @@ msgstr "Batas penarikan anda <strong>EUR %1</strong> (atau %2 pada mata uang lai
 msgid "You’ll be surprised by the returns you can make."
 msgstr "Anda akan terkejut dengan laba yang dapat anda hasilkan."
 
-#: web/bin/JavascriptCompress.pm:66
+#: web/bin/GenerateStaticData.pm:66
 msgid "Zoom"
 msgstr "Zoom"
 
@@ -9950,11 +9885,11 @@ msgstr "contohnya Perusahaan mungkin menderita kerugian berupa uang, fiskal atau
 msgid "any restriction to its Clients from purchasing any contracts during certain hours."
 msgstr "batasan manapun pada klien dari membeli kontrak selama jam-jam tertentu."
 
-#: lib/BOM/Product/Contract.pm:2203
+#: lib/BOM/Product/Contract.pm:2206
 msgid "barrier"
 msgstr "batasan"
 
-#: cgi/oop/Controller/Bet.pm:1561
+#: cgi/oop/Controller/Bet.pm:1562
 msgid "better trade"
 msgstr "kontrak lebih baik"
 
@@ -9974,12 +9909,12 @@ msgstr "hubungi kami"
 msgid "contract start time"
 msgstr "waktu mulai kontrak"
 
-#: web/bin/JavascriptCompress.pm:103
+#: web/bin/GenerateStaticData.pm:103
 msgid "day"
 msgstr "hari"
 
-#: cgi/subs/subs_BOMFeed_history.pm:384
-#: lib/BOM/Product/Model/ContractForm.pm:740 web/bin/JavascriptCompress.pm:104
+#: lib/BOM/Product/Model/ContractForm.pm:740 lib/BOM/View/Charting.pm:461
+#: web/bin/GenerateStaticData.pm:104
 msgid "days"
 msgstr "hari"
 
@@ -10015,7 +9950,7 @@ msgstr "spot masuk ditambah %1 pip"
 msgid "equivalent"
 msgstr "setara"
 
-#: cgi/oop/Controller/Bet.pm:2153
+#: cgi/oop/Controller/Bet.pm:2154
 msgid "explanation"
 msgstr "penjelasan"
 
@@ -10031,19 +9966,19 @@ msgstr "untuk instruksi lengkap coding."
 msgid "here"
 msgstr "di sini"
 
-#: lib/BOM/Product/Contract.pm:2203
+#: lib/BOM/Product/Contract.pm:2206
 msgid "high barrier"
 msgstr "batasan tinggi"
 
-#: cgi/subs/subs_plack.pm:272
+#: cgi/subs/subs_plack.pm:273
 msgid "homepage"
 msgstr "homepage"
 
-#: cgi/subs/subs_BOMFeed_history.pm:357 web/bin/JavascriptCompress.pm:105
+#: lib/BOM/View/Charting.pm:434 web/bin/GenerateStaticData.pm:105
 msgid "hour"
 msgstr "jam"
 
-#: cgi/subs/subs_BOMFeed_history.pm:447 web/bin/JavascriptCompress.pm:106
+#: lib/BOM/View/Charting.pm:524 web/bin/GenerateStaticData.pm:106
 msgid "hours"
 msgstr "jam"
 
@@ -10051,11 +9986,11 @@ msgstr "jam"
 msgid "less"
 msgstr "kurang"
 
-#: cgi/subs/subs_BOMFeed_history.pm:334 web/bin/JavascriptCompress.pm:51
+#: lib/BOM/View/Charting.pm:411 web/bin/GenerateStaticData.pm:51
 msgid "loading..."
 msgstr "pemuatan..."
 
-#: lib/BOM/Product/Contract.pm:2203
+#: lib/BOM/Product/Contract.pm:2206
 msgid "low barrier"
 msgstr "batasan rendah"
 
@@ -10079,24 +10014,24 @@ msgstr "durasi minimal yang tersedia"
 msgid "minimum is"
 msgstr "minimum adalah"
 
-#: lib/BOM/Product/Contract.pm:2200
+#: lib/BOM/Product/Contract.pm:2203
 msgid "minus"
 msgstr "berkurang"
 
-#: cgi/subs/subs_BOMFeed_history.pm:439 web/bin/JavascriptCompress.pm:107
+#: lib/BOM/View/Charting.pm:516 web/bin/GenerateStaticData.pm:107
 msgid "minute"
 msgstr "menit"
 
-#: cgi/smartchart.cgi:307 cgi/subs/subs_BOMFeed_history.pm:433
-#: web/bin/JavascriptCompress.pm:108
+#: cgi/smartchart.cgi:307 lib/BOM/View/Charting.pm:510
+#: web/bin/GenerateStaticData.pm:108
 msgid "minutes"
 msgstr "menit"
 
-#: web/bin/JavascriptCompress.pm:101
+#: web/bin/GenerateStaticData.pm:101
 msgid "month"
 msgstr "bulan"
 
-#: web/bin/JavascriptCompress.pm:102
+#: web/bin/GenerateStaticData.pm:102
 msgid "months"
 msgstr "bulan"
 
@@ -10129,7 +10064,7 @@ msgstr "atau silahkan coba peta situs berikut"
 msgid "page for the exact time of settlement for all contracts. Other websites may adopt a different convention (for example some websites choose 4 o'clock NY time, or 5 o'clock London time). As a result, the open, high, low and closing prices displayed on our website may differ to those on other websites, due to the market-closing time convention."
 msgstr "halaman untuk waktu tepat penyelesaian seluruh kontrak. Website lain mungkin menggunakan konvensi berbeda (sebagai contoh beberapa website menggunakan jam 4 waktu New York atau jam 5 waktu London). Hal ini menyebabkan harga open, high, low dan close pada website kami akan mengalami perbedaan dengan website lainnya berhubung konvensi waktu penutupan market."
 
-#: lib/BOM/Product/Contract.pm:2200
+#: lib/BOM/Product/Contract.pm:2203
 msgid "plus"
 msgstr "ditambah"
 
@@ -10137,7 +10072,7 @@ msgstr "ditambah"
 msgid "quote delayed by at least %1 minutes"
 msgstr "kutipan tertunda paling tidak %1 menit"
 
-#: cgi/subs/subs_graphs_chartdirector.pm:646
+#: cgi/subs/subs_graphs_chartdirector.pm:647
 msgid "range"
 msgstr "rentang"
 
@@ -10165,11 +10100,11 @@ msgstr "naik/turun"
 msgid "running"
 msgstr "berjalan"
 
-#: web/bin/JavascriptCompress.pm:109
+#: web/bin/GenerateStaticData.pm:109
 msgid "second"
 msgstr "detik"
 
-#: web/bin/JavascriptCompress.pm:110
+#: web/bin/GenerateStaticData.pm:110
 msgid "seconds"
 msgstr "detik"
 
@@ -10206,10 +10141,8 @@ msgid "trades"
 msgstr "target harga"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/legal/complaints_disputes.html.tt:13
-#, fuzzy
-#| msgid "Website"
 msgid "website"
-msgstr "Situs web"
+msgstr "situs web"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/legal/terms_and_conditions.html.tt:93
 #: /home/git/translations/binary-static/src/templates/toolkit/legtrouble.html.tt:93
@@ -10238,11 +10171,11 @@ msgstr "dengan header HTTP ini"
 msgid "withdrawal limits"
 msgstr "pencairan terkini anda"
 
-#: web/bin/JavascriptCompress.pm:99
+#: web/bin/GenerateStaticData.pm:99
 msgid "year"
 msgstr "tahun"
 
-#: web/bin/JavascriptCompress.pm:100
+#: web/bin/GenerateStaticData.pm:100
 msgid "years"
 msgstr "tahun"
 
@@ -12143,6 +12076,27 @@ msgstr "Maaf, pengaksesan menggunakan alamat IP jaringan ini telah dibatalkan."
 #: Message for API Error 'LOGIN_TOO_MANY_FAILED_ATTEMPTS'
 msgid "Sorry, you have already had too many unsuccessful attempts. Please try again in 5 minutes."
 msgstr "Maaf, Anda telah gagal mengakses beberapa kali. Silakan coba kembali dalam waktu 5 menit lagi."
+
+#~ msgid "$value %1"
+#~ msgstr "$value %1"
+
+#~ msgid "Client-facing message"
+#~ msgstr "Pesan yang diterika klien"
+
+#~ msgid "Download tick data"
+#~ msgstr "Download data tik"
+
+#~ msgid "Login ID not given."
+#~ msgstr "Login ID tidak diberikan."
+
+#~ msgid "Password not given."
+#~ msgstr "Kata sandi tidak diberikan."
+
+#~ msgid "This is a log"
+#~ msgstr "Ini adalah log"
+
+#~ msgid "Unable to contact the server"
+#~ msgstr "Tidak dapat menghubungi server"
 
 #~ msgid "You can raise any unresolved disputes you might have with Regent Markets (Malta) Ltd with the Lotteries and Gaming Authority at complaints@lga.com.mt and any disputes with Regent Markets (IOM) Ltd with the alternative dispute resolution entity. The alternative dispute resolution entity for Regent Markets (IOM) Ltd is the Isle of Man Gambling Supervision Commission at gaming@gov.im. In the event of any differences between the English version of this website and any other language, the English version shall prevail."
 #~ msgstr "Anda dapat membawa permasalahan yang belum terselesaikan yang mungkin anda miliki dengan Regent Markets (Malta) Ltd kepada Lotteries dan Gaming Authority melalui email di complaints@lga.com.mt dan permasalahan dengan Regent Markets (IOM) Ltd sebagai lembaga alternatif penyelesaian perkara. Alternatif entitas penyelesaian perkara bagi Regent Markets (IOM) Ltd adalah Komisi Pengawasan Trading Isle of Man di gaming@gov.im. Dalam hal terjadi perbedaan antara versi bahasa Inggris pada situs ini dengan bahasa lain, maka versi bahasa Inggris yang akan berlaku."
