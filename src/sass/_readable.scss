@@ -1,6 +1,8 @@
-.readable {
+.readable, .narrow {
     max-width: 700px;
+}
 
+.readable {
     header {
         text-align: center;
     }

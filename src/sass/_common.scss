@@ -146,10 +146,11 @@ pre {
     background-color: $COLOR_YELLOW;
 
 }
+
 .errorrow,
 .errorfield {
     color: $COLOR_RED;
-
+    font-style: italic;
 }
 .text-only {
     color: $COLOR_DARK_GRAY;
@@ -161,7 +162,6 @@ pre {
 }
 .errorrow,
 .errorfield {
-    font-style: italic;
     margin-top: 8px;
 
 }
