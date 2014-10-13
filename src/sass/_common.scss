@@ -367,3 +367,17 @@ ul.bulleted li {
 .nav-trade {
     font-weight: bold;
 }
+
+#dobdd {
+    border-radius: $BORDER_RADIUS 0 0 $BORDER_RADIUS;
+}
+
+#dobmm {
+    border-radius: 0;
+    border-left: 0;
+    border-right: 0;
+}
+
+#dobyy {
+    border-radius: 0 $BORDER_RADIUS $BORDER_RADIUS 0;
+}

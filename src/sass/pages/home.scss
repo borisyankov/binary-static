@@ -78,10 +78,10 @@
       float: left;
       background: $COLOR_GRAY;
       a {
-	border-radius: 2px;
+	    border-radius: $BORDER_RADIUS;
         display: block;
         padding: 5px;
-	line-height:5px;
+	    line-height:5px;
         &:hover {
             text-decoration: none;
         }
@@ -93,7 +93,7 @@
   }
   #open-account {
     background: $COLOR_ORANGE;
-    border-radius: 0 0 4px 4px;
+    border-radius: 0 0 $BORDER_RADIUS $BORDER_RADIUS;
     color: #FFFFFF;
     text-align: center;
     padding: 0 0 10px;
@@ -132,7 +132,7 @@
         background: $COLOR_LIGHT_GRAY;
         #new-trader, #experienced-trader {
           background: url("../images/pages/home/stripe_1.png") repeat;
-          border-radius: 10px;
+          border-radius: $BORDER_RADIUS;
           img.responsive {
             width: 50%;
           }
