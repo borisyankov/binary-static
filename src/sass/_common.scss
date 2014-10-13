@@ -347,7 +347,7 @@ ul.bulleted li {
 .nav2nd {
     color: $COLOR_BLUE;
     background-color: $COLOR_WHITE;
-    box-shadow: 0 0 50px 0 rgba(0,0,0, .25);
+    box-shadow: $BOX_SHADOW;
 }
 
 .nav2nd li:hover {

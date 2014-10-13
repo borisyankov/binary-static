@@ -104,20 +104,28 @@
 
 @mixin tab-list {
     border: none;
-    border-radius: 0;
-    padding: 0;
-    margin-left: 0;
     background: none;
-    border-bottom: 1px solid $COLOR_DARK_GRAY;
+    li:first-child {
+        border-top-left-radius: $BORDER_RADIUS;
+        border-bottom-left-radius: $BORDER_RADIUS;
+    }
+    li:last-child {
+        border-top-right-radius: $BORDER_RADIUS;
+        border-bottom-right-radius: $BORDER_RADIUS;
+        border-right: none;
+    }
     li {
       border: none;
-      list-style-image: none;
+      float: left;
+      border-right: 1px solid rgba(0,0,0,.05);
+      display: inline-block;
       background: $COLOR_LIGHT_GRAY;
-      border-radius: $BORDER_RADIUS $BORDER_RADIUS 0 0;
+
       a, a:visited {
-        padding: 10px 20px;
+        padding: 5px 10px;
+        line-height: 2;
         text-decoration: none;
-        color: $COLOR_BLACK;
+        color: $COLOR_BLUE;
         background: transparent;
       }
     }
@@ -140,7 +148,6 @@
         background: none;
         a {
           color: $COLOR_BLACK;
-          padding-top: 0;
           text-decoration: none;
           width: auto;
         }
