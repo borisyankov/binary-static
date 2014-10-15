@@ -1,6 +1,3 @@
-// for IE (before 10) we use a jquery plugin called jQuery.XDomainRequest. Explained here,
-//http://stackoverflow.com/questions/11487216/cors-with-jquery-and-xdomainrequest-in-ie8-9
-//
 $(document).ajaxSuccess(function () {
     var contents = new Contents(page.client);
     contents.on_load();
