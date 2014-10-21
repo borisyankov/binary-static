@@ -70,7 +70,6 @@ var PricingDetails = function() {
                         data: { controller_action: 'vcal_weights',
                             underlying_symbol: underlying_symbol,
                         year: year,
-                        skin: page.settings.get('skin')
                         },
                         success: function(vcal_weights) {
                             cache[cache_key] = vcal_weights;

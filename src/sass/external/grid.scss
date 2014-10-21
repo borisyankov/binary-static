@@ -2,8 +2,6 @@
 
 /* Gridle settings */
 
-// DEBUG - Set false in production environment.
-$gridle-debug: true;
 // Prefix to be prepended to all generated class names in order to make them more specific.
 $gridle-class-prefix: "grd-";
 

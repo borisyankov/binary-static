@@ -342,11 +342,6 @@ var BetForm = function () {
                         params += '&type=' + type;
                     }
 
-                    var skin = page.url.param('skin');
-                    if(skin) {
-                        params += '&skin=' + skin;
-                    }
-
                     var expiry_type = BetForm.attributes.model.expiry_type();
                     if (expiry_type) {
                         params += '&expiry_type=' + expiry_type;

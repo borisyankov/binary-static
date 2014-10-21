@@ -1,7 +1,6 @@
 <div id="bet_cal_buy" class="div_wrapper default"[%- IF fields.start_hidden -%] style="display:none"[%- END -%]>
 <form class="orderform" id="orderform_[% fields.display_id %]" name="orderform" action="[% fields.url %]" method="post" autocomplete="off">
     <input type="hidden" name="display_id" value="[% fields.display_id %]" />
-    <input type="hidden" name="skin" value="[% fields.skin %]" />
     <input type="hidden" name="H" value="[% fields.H %]" />
     <input type="hidden" name="L" value="[% fields.L %]" />
     <input type="hidden" name="type" value="[% fields.bet_type %]" />
