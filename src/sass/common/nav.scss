@@ -64,9 +64,8 @@
     }
     li.active {
       @extend li.hover;
-      a {
-        color: $COLOR_ORANGE;
-        background: url("../images/common/nav/menu-sub-selection_1.png") no-repeat bottom;
+      > a {
+          box-shadow: inset 0px -4px 0px 0px $COLOR_BLUE;
       }
       ul {
         z-index: 1;
@@ -123,8 +122,8 @@
                 &.active {
                     background: none;
                     a {
-                        color: $COLOR_ORANGE;
-                        background: url("../images/common/nav/menu-sub-selection_1.png") no-repeat bottom;
+                        color: $COLOR_WHITE;
+                        background: $COLOR_BLUE;
                     }
                 }
             }

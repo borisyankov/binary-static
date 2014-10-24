@@ -112,14 +112,13 @@
     li:last-child {
         border-top-right-radius: $BORDER_RADIUS;
         border-bottom-right-radius: $BORDER_RADIUS;
-        border-right: none;
     }
     li {
-      border: none;
+      border-top: 1px solid $COLOR_BLUE;
+      border-bottom: 1px solid $COLOR_BLUE;
+      border-right: 1px solid $COLOR_BLUE;
       float: left;
-      border-right: 1px solid rgba(0,0,0,.05);
       display: inline-block;
-      background: $COLOR_LIGHT_GRAY;
 
       a, a:visited {
         padding: 5px 10px;
@@ -128,6 +127,9 @@
         color: $COLOR_BLUE;
         background: transparent;
       }
+    }
+    li:first-child {
+        border-left: 1px solid $COLOR_BLUE;
     }
     li.active, li.ui-tabs-active {
       background: $COLOR_BLUE;
