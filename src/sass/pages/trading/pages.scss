@@ -576,7 +576,6 @@ form#rise_fall_form {
     .tm-li {
         &.active {
             .tooltipx {
-                background: url("../images/common/tooltips_1.png") no-repeat 0 0.3em;
                 img {
                     width: 1.1em;
                     visibility: hidden;
@@ -585,7 +584,6 @@ form#rise_fall_form {
         }
         &.hover {
             .tooltipx {
-                background: url("../images/common/tooltips_1.png") no-repeat 0 0.3em;
                 img {
                     width: 1.1em;
                 }
