@@ -220,13 +220,11 @@ sub _main_menu_trading {
     my %translated_display_name = (
         forex => 'Forex',
         indices => 'Indices',
-        stocks => 'Stocks',
         commodities => 'Commodities',
-        sectors => 'Sectors',
         random  => 'Randoms',
         smarties => 'Smart Indices',
     );
-    foreach my $market ('forex', 'indices', 'stocks', 'commodities', 'sectors', 'random') {
+    foreach my $market ('forex', 'indices', 'commodities', 'random') {
         push @{$trading_menu->{sub_items}}, {
             id         => 'topMenuMarket_' . $market,
             url        => $self->c->url_for('/trade.cgi')->query({market => $market}),

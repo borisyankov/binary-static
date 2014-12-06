@@ -135,7 +135,7 @@ var pjax_config = function() {
 
 var init_pjax = function () {
     var document_location = document.URL;
-    if(!/f_brokercgi/.test(document_location)) { //No Pjax for backoffice.
+    if(!/backoffice/.test(document_location)) { //No Pjax for backoffice.
         pjax.connect(pjax_config());
     }
 };

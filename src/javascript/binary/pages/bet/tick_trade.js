@@ -19,6 +19,8 @@ var TickDisplay = function() {
             $self.contract_type = data.contract_type;
             $self.set_barrier = ($self.contract_type.match('DIGIT')) ? false : true;
             $self.display_decimal = 0;
+            var submarket = data.submarket;
+            var tick_frequency = submarket === 'smart_opi' ? 3 : 2;
 
             if (typeof data.decimal !== 'undefined') {
                 $self.number_of_decimal = parseInt(data.decimal) + 1; //calculated barrier is rounded to one more decimal place
@@ -36,7 +38,7 @@ var TickDisplay = function() {
 
             $self.initialize_chart({
                 plot_from: data.previous_tick_epoch * 1000,
-                plot_to: new Date((parseInt(data.contract_start) + parseInt(($self.number_of_ticks+2)*2)) * 1000).getTime(),
+                plot_to: new Date((parseInt(data.contract_start) + parseInt(($self.number_of_ticks+2)*tick_frequency)) * 1000).getTime(),
                 minimize: minimize,
             });
         },

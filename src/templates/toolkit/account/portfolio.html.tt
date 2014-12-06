@@ -33,7 +33,9 @@
                     [%
                             contract_info = bet_info(open_bet, currency);
                             total_in = total_in + open_bet.buy_price;
-                            total_value_now = total_value_now + contract_info.indicative_price;
+                            IF contract_info.indicative_price.defined;
+                                total_value_now = total_value_now + contract_info.indicative_price;
+                            END;
                     %]
                     <div class="grd-parent grd-grid-12 grd-row-padding table-body table-body-lines">
                             <div class="grd-grid-2 grd-hide-mobile grd-grid-phablet-2">[% open_bet.buy_id %]</div>

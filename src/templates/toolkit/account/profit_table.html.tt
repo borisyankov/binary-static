@@ -39,7 +39,7 @@
     <div class="grd-parent grd-grid-12 table-body table-body-lines grd-row-padding">
         <div class="grd-grid-4 grd-hide-mobile grd-grid-phablet-3">
             <div class="grd-grid-6 grd-hide-phablet">[% contract.purchase_date.datetime %]</div>
-            <div class="grd-grid-6 grd-grid-phablet-12">[% contract.id %]</div>
+            <div class="grd-grid-6 grd-grid-phablet-12">[% contract.txn_id %]</div>
             <div class="grd-hide grd-show-phablet grd-grid-phablet-12">
                     <br/>[% l('Purchase Date'); %]:
             </div>

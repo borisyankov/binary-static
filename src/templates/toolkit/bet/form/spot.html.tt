@@ -3,7 +3,7 @@
         <label for="spot">[% l('Spot') %]:</label>
     </span>
     <span class='grd-grid-3 grd-no-gutter-right'>
-        <span id="spot"></span>
+        <span id="spot">[% current_spot %]</span>
     </span>
     <span class='grd-grid-4 grd-no-gutter-left'>
         <span id="spot_spark"></span>
