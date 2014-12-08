@@ -1,0 +1,22 @@
+
+.error {
+    color: $COLOR_WHITE;
+    background: $COLOR_RED;
+    border-radius: $BORDER_RADIUS;
+    padding: .25em .5em;
+    display: none;
+}
+
+.error:after {
+    bottom: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-bottom-color: #d63969;
+    border-width: 5px;
+    right: 30px;
+    margin-left: -5px;
+}

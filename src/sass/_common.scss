@@ -8,13 +8,12 @@
 
 }
 html {
-    font-size: 18px;
+    font-size: 17px;
     // base font-size, used with rem for responsive typography
 
 }
 body {
     background: $COLOR_WHITE;
-    color: $COLOR_LIGHT_BLACK;
     font-size: $FONT_SIZE_N;
     min-height: 100%;
     position: relative;
@@ -22,6 +21,9 @@ body {
     margin: 0;
     font-family: museo-sans, arial;
 
+}
+body, input, select {
+    color: $COLOR_LIGHT_BLACK;
 }
 a,
 a:visited {
@@ -36,9 +38,8 @@ a:active {
 
 }
 p {
-    margin: 1.5em 0;
+    margin: 0.5em 0;
     line-height: 1.3;
-
 }
 h1,
 h2,
@@ -50,13 +51,10 @@ h1 a:visited,
 h2 a:visited,
 h3 a:visited,
 legend {
-    font-weight: bold;
-    color: $COLOR_BLUE;
-
+    color: $COLOR_TEXT;
 }
 h1 {
     font-size: $FONT_SIZE_XXL;
-
 }
 h2 {
     font-size: $FONT_SIZE_XL;
@@ -128,13 +126,6 @@ pre {
     width: 94%;
 
 }
-#profit-table-form {
-    background: $COLOR_WHITE;
-    input {
-        border: 1px solid #e4e4e4;
-    }
-
-}
 .input {
     width: 45%;
 
@@ -144,7 +135,6 @@ pre {
     background-color: $COLOR_YELLOW;
 
 }
-
 .errorrow,
 .errorfield {
     color: $COLOR_RED;
@@ -346,13 +336,13 @@ ul.bulleted li {
     color: $COLOR_BLUE;
     background-color: $COLOR_WHITE;
     box-shadow: $BOX_SHADOW;
-}
 
+}
 .nav2nd li:hover {
     color: $COLOR_WHITE;
     background: $COLOR_BLUE;
-}
 
+}
 .nav-trade,
 .nav-cashier,
 .nav-resources,
@@ -364,18 +354,5 @@ ul.bulleted li {
 }
 .nav-trade {
     font-weight: bold;
-}
 
-#dobdd {
-    border-radius: $BORDER_RADIUS 0 0 $BORDER_RADIUS;
-}
-
-#dobmm {
-    border-radius: 0;
-    border-left: 0;
-    border-right: 0;
-}
-
-#dobyy {
-    border-radius: 0 $BORDER_RADIUS $BORDER_RADIUS 0;
 }

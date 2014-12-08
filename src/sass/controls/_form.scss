@@ -10,10 +10,24 @@ input, textarea {
     vertical-align: middle;
 }
 
-select, textarea, input:not([type=submit]), input:not([type=button])  {
-    border: 1px solid $COLOR_BLUE;
-    border-radius: $BORDER_RADIUS;
+select, textarea, input[type=text], input[type=email], input[type=password], input[type=tel] {
     padding: $CONTROL_PADDING;
+    height: 2em;
+}
+
+select, textarea, input[type=text], input[type=email], input[type=password], input[type=tel], .dob  {
+    border: 1px solid $COLOR_CONTROL_BORDER;
+    border-radius: $BORDER_RADIUS;
+    vertical-align: bottom;
+
+    &:hover {
+        border-color: $COLOR_BLUE !important;
+        box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+    }
+    &:focus {
+        border-color: grey !important;
+        box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+    }
 }
 
 textarea {
@@ -22,22 +36,31 @@ textarea {
 }
 
 select, #tradingdate, .date-picker, .hasDatepicker, .arrow-expand-collapse, .down-arrow-1 {
-    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjEwMHB4IiBoZWlnaHQ9IjEwMHB4IiB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTAwIDEwMCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxwYXRoIGZpbGw9IiMwMDAwMDAiIGQ9Ik01MC4xMTEgNzIuNjU5Yy0xLjA2MSAwLTIuMDc4LTAuNDIyLTIuODI5LTEuMTcyTDE3LjI3NSA0MS40NzRjLTEuNTYyLTEuNTYyLTEuNTYyLTQuMDk1IDAuMDAxLTUuNjU3IGMxLjU2My0xLjU2MiA0LjA5Ni0xLjU2MiA1LjcgMGwyNy4xNzggMjcuMTg1bDI3LjE3OC0yNy4xODVjMS41NjItMS41NjIgNC4wOTUtMS41NjIgNS43IDAgYzEuNTYyIDEuNiAxLjYgNC4xIDAgNS42NTdMNTIuOTQgNzEuNDg3QzUyLjE4OSA3Mi4yIDUxLjIgNzIuNyA1MC4xIDcyLjY1OXoiLz4KPC9zdmc+Cg==);
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjEwMHB4IiBoZWlnaHQ9IjEwMHB4IiB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTAwIDEwMCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cGF0aCBmaWxsPSIjY2NjIiBkPSJNNTAuMTExIDcyLjY1OWMtMS4wNjEgMC0yLjA3OC0wLjQyMi0yLjgyOS0xLjE3MkwxNy4yNzUgNDEuNDc0Yy0xLjU2Mi0xLjU2Mi0xLjU2Mi00LjA5NSAwLjAwMS01LjY1NyBjMS41NjMtMS41NjIgNC4wOTYtMS41NjIgNS43IDBsMjcuMTc4IDI3LjE4NWwyNy4xNzgtMjcuMTg1YzEuNTYyLTEuNTYyIDQuMDk1LTEuNTYyIDUuNyAwIGMxLjU2MiAxLjYgMS42IDQuMSAwIDUuNjU3TDUyLjk0IDcxLjQ4N0M1Mi4xODkgNzIuMiA1MS4yIDcyLjcgNTAuMSA3Mi42NTl6Ii8+DQo8L3N2Zz4NCg==);
 }
 
 select, #tradingdate, .date-picker, .hasDatepicker, .down-arrow {
     -webkit-appearance: none;
     background-position: right center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 1.5em;
     background-color: inherit;
-    padding-right: 2em;
+    padding-right: 1.5em;
     cursor: pointer;
 }
 
-.error {
-    color: $COLOR_WHITE;
-    background: $COLOR_RED;
-    border-radius: $BORDER_RADIUS;
-    padding: .125em .5em;
+.thin-form {
+    max-width: 320px;
+    margin: auto;
+}
+
+.thin-form input, .thin-form button, .thin-form select {
+    width: 100%;
+}
+
+.dob {
+    display: inline-block;
+}
+.dob select {
+    border: none;
 }

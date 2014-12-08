@@ -7,20 +7,16 @@
 }
 
 .header-wrapper {
-    background: $COLOR_BLUE;
+    background: #a2aab2;
     //border-bottom: 2px solid $COLOR_ORANGE;
 }
 
-.footer-wrapper {
-    background: $COLOR_DARK_BLUE;
-}
-
-.topbar, .sitemap h3, .sitemap a, .sitemap a:visited, .footer {
+.topbar {
     color: rgba(255, 255, 255, .5);
 }
 
-.sitemap-wrapper {
-    background: $COLOR_BLUE;
+.sitemap h3, .sitemap a, .sitemap a:visited, .footer {
+    color: rgba(0, 0, 0, .5);
 }
 
 .sitemap {
@@ -40,10 +36,6 @@
     font-size: $FONT_SIZE_XS;
 }
 
-.logo {
-    display: block;
-    background-image: url('https://static.binary.com/images/common/binary-logo-full.svg');
-    background-repeat: no-repeat;
-    background-position: left center;
-    background-size: cover;
+.logo img {
+    width: 100%;
 }

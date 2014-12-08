@@ -8,6 +8,10 @@
 
 // Brand colors and derivatives
 
+$COLOR_TEXT: #474747;
+$COLOR_CONTROL_BORDER: #ccc;
+$COLOR_ACTIVE: #ff992a;
+
 $COLOR_ORANGE        : #E98024;
 $COLOR_LIGHT_BLUE    : #29ABE2;
 $COLOR_BLUE          : #414a80; // #2a3052;
@@ -31,8 +35,8 @@ $COLOR_GRAY_SHADE    : #C2C2C2;
 $COLOR_DARK_GRAY     : gray;
 $COLOR_GREEN         : #2E8836;
 
-$BORDER_RADIUS: 3px;
-$CONTROL_PADDING: .25em .5em;
+$BORDER_RADIUS: 1px;
+$CONTROL_PADDING: .33333em;
 $CONTROL_PADDING_L: .5em 1em;
 $PAGE_PADDING: .5em;
 $HEADER_HEIGHT: 3em;
