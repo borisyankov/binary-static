@@ -10,12 +10,12 @@ input, textarea {
     vertical-align: middle;
 }
 
-select, textarea, input[type=text], input[type=email], input[type=password], input[type=tel] {
+select, textarea, input[type=text], input[type=email], input[type=password], input[type=tel], input[type=number] {
     padding: $CONTROL_PADDING;
     height: 2em;
 }
 
-select, textarea, input[type=text], input[type=email], input[type=password], input[type=tel], .dob  {
+select, textarea, input[type=text], input[type=email], input[type=password], input[type=tel], input[type=number], .dob  {
     border: 1px solid $COLOR_CONTROL_BORDER;
     border-radius: $BORDER_RADIUS;
     vertical-align: bottom;
