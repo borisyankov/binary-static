@@ -1,5 +1,5 @@
-body, .msgbar, .topbar, .header, .content, .sitemap,
-.msgbar-wrapper, .topbar-wrapper, .header-wrapper, .content-wrapper, .sitemap-wrapper, .footer-wrapper {
+body, .msgbar, .header, .content, .sitemap,
+.msgbar-wrapper, .header-wrapper, .content-wrapper, .sitemap-wrapper, .footer-wrapper {
     display: flex;
 }
 
@@ -16,17 +16,13 @@ body {
     padding-top: 80px;
 }
 
-.msgbar-wrapper, .topbar-wrapper, .header-wrapper, .content-wrapper, .sitemap-wrapper, .footer-wrapper {
+.msgbar-wrapper, .header-wrapper, .content-wrapper, .sitemap-wrapper, .footer-wrapper {
     justify-content: center;
 }
 
-.msgbar, .topbar, .header, .content, .sitemap, .footer {
+.msgbar, .header, .content, .sitemap, .footer {
     max-width: 1200px;
     width: 100%;
-}
-
-.topbar {
-    padding: .25em $PAGE_PADDING;
 }
 
 .msgbar, .content, .sitemap, .footer {
@@ -46,15 +42,12 @@ body {
     padding: .5em .5em .5em 0;
 }
 
-.topbar {
-    justify-content: space-between;
-}
 
-.msgbar, .topbar {
+.msgbar {
     font-size: $FONT_SIZE_S;
 }
 
-.msgbar, .topbar, .header, .sitemap {
+.msgbar, .header, .sitemap {
     flex-flow: row wrap;
 }
 

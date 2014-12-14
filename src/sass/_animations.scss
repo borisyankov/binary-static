@@ -1,0 +1,12 @@
+@keyframes spinning {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+@-webkit-keyframes spinning {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+.progress-spinner {
+    -webkit-animation: spinning 1s infinite linear;
+    animation: spinning 1s infinite linear;
+}

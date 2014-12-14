@@ -41,11 +41,12 @@ select, #tradingdate, .date-picker, .hasDatepicker, .arrow-expand-collapse, .dow
 
 select, #tradingdate, .date-picker, .hasDatepicker, .down-arrow {
     -webkit-appearance: none;
+    -moz-appearance: none;
     background-position: right center;
     background-repeat: no-repeat;
-    background-size: 1.5em;
+    background-size: 1.25em;
     background-color: inherit;
-    padding-right: 1.5em;
+    padding-right: 1em;
     cursor: pointer;
 }
 
