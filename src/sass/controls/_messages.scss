@@ -4,7 +4,7 @@
     background: $COLOR_RED;
     border-radius: $BORDER_RADIUS;
     padding: .25em .5em;
-    display: none;
+    position: relative;
 }
 
 .error:after {
@@ -17,6 +17,6 @@
     pointer-events: none;
     border-bottom-color: #d63969;
     border-width: 5px;
-    right: 30px;
+    left: 30px;
     margin-left: -5px;
 }

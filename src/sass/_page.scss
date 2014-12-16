@@ -3,7 +3,7 @@
 }
 
 .header-wrapper {
-    background: #a2aab2;
+    background: #a0aab4;
     //border-bottom: 2px solid $COLOR_ORANGE;
 }
 
@@ -11,10 +11,6 @@
     color: rgba(0, 0, 0, .5);
 }
 
-.sitemap-wrapper {
-    border-top: 1px solid #e8eced;
-    background: #f8f8f8;
-}
 
 .sitemap {
     h3 {
@@ -30,7 +26,9 @@
 }
 
 .footer-wrapper {
+    border-top: 1px solid #e8eced;
     background: #f8f8f8;
+    padding: 2em 0;
 }
 
 .regulatory {
@@ -49,7 +47,7 @@
     height: 100%;
     width: 100%;
     z-index: 10;
-    background-color: rgba(255,255,255,.5);
+    background-color: rgba(160,170,180,.5);
 }
 
 .dialog {
@@ -63,6 +61,6 @@
 .progress-spinner {
     display: inline-block;
     width: 25px;
-    width: 25px;
+    height: 25px;
     background: url(/images/logo.svg);
 }

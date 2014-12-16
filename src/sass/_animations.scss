@@ -10,3 +10,24 @@
     -webkit-animation: spinning 1s infinite linear;
     animation: spinning 1s infinite linear;
 }
+
+.overlay {
+    opacity: 1;
+    transition: opacity .3s, height 0;
+}
+
+.overlay.hidden {
+    opacity: 0;
+    transition: opacity .3s, height 0 .3s;
+    height: 0;
+}
+
+.overlay .dialog {
+    transition: transform .3s, height 0;
+    transform: scale(1);
+}
+
+.overlay.hidden .dialog {
+    transition: transform .3s, height 0 .3s;
+    transform: scale(.9);
+}
