@@ -65,3 +65,26 @@ select, #tradingdate, .date-picker, .hasDatepicker, .down-arrow {
 .dob select {
     border: none;
 }
+
+.thin-form, .wide-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.wide-form p {
+    display: flex;
+    flex-direction: row;
+}
+
+.wide-form p > * {
+    flex: 1;
+    margin-right: .5em;
+}
+
+.wide-form p > :last-child {
+    margin-right: 0;
+}
+
+#mrms {
+    flex: initial;
+}
