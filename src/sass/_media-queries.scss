@@ -9,6 +9,9 @@
         left: 0;
         right: 0;
     }
+    .adcopy {
+        display: none;
+    }
 }
 @media all and (max-width: 479px) {
     html {
@@ -56,5 +59,14 @@
     }
     .nav2nd li {
         font-size: 1.5em;
+    }
+    .wide-form p {
+        flex-ddirection: column;
+    }
+    .wide-form p > * {
+        margin-right: 0;
+    }
+    .login-button {
+        padding: 0 1em;
     }
 }

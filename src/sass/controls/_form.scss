@@ -1,4 +1,3 @@
-
 input, button, textarea, select, optgroup, option {
     font-family: inherit;
     font-size: inherit;
@@ -39,9 +38,14 @@ select, #tradingdate, .date-picker, .hasDatepicker, .arrow-expand-collapse, .dow
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjEwMHB4IiBoZWlnaHQ9IjEwMHB4IiB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTAwIDEwMCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cGF0aCBmaWxsPSIjY2NjIiBkPSJNNTAuMTExIDcyLjY1OWMtMS4wNjEgMC0yLjA3OC0wLjQyMi0yLjgyOS0xLjE3MkwxNy4yNzUgNDEuNDc0Yy0xLjU2Mi0xLjU2Mi0xLjU2Mi00LjA5NSAwLjAwMS01LjY1NyBjMS41NjMtMS41NjIgNC4wOTYtMS41NjIgNS43IDBsMjcuMTc4IDI3LjE4NWwyNy4xNzgtMjcuMTg1YzEuNTYyLTEuNTYyIDQuMDk1LTEuNTYyIDUuNyAwIGMxLjU2MiAxLjYgMS42IDQuMSAwIDUuNjU3TDUyLjk0IDcxLjQ4N0M1Mi4xODkgNzIuMiA1MS4yIDcyLjcgNTAuMSA3Mi42NTl6Ii8+DQo8L3N2Zz4NCg==);
 }
 
-select, #tradingdate, .date-picker, .hasDatepicker, .down-arrow {
+select::-ms-expand {
+    display: none;
+}
+select {
     -webkit-appearance: none;
     -moz-appearance: none;
+}
+select, #tradingdate, .date-picker, .hasDatepicker, .down-arrow {
     background-position: right center;
     background-repeat: no-repeat;
     background-size: 1.25em;
@@ -60,25 +64,29 @@ select, #tradingdate, .date-picker, .hasDatepicker, .down-arrow {
 }
 
 .dob {
-    display: inline-block;
+    display: flex;
 }
+
 .dob select {
     border: none;
+    flex: 1;
 }
 
 .thin-form, .wide-form {
     display: flex;
     flex-direction: column;
+    flex: 1;
 }
 
 .wide-form p {
     display: flex;
     flex-direction: row;
+    margin: 0;
 }
 
 .wide-form p > * {
     flex: 1;
-    margin-right: .5em;
+    margin: 0 .5em .5em 0;
 }
 
 .wide-form p > :last-child {

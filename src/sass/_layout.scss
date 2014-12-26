@@ -13,7 +13,7 @@ body {
 }
 
 .content-wrapper {
-    padding-top: 80px;
+    padding-top: 50px;
     padding-bottom: 2em;
 }
 
@@ -26,12 +26,12 @@ body {
     width: 100%;
 }
 
-.msgbar, .content, .footer {
+.footer {
     padding: .5em $PAGE_PADDING;
 }
 
 .content {
-    padding: 2.5em $PAGE_PADDING;
+    flex-direction: column;
 }
 
 .msgbar {
@@ -141,11 +141,6 @@ body {
     height: 2.5em;
     margin: .25em 1em .25em 0;
     width: 2.5em;
-}
-
-.content {
-    flex: 1;
-    flex-direction: column;
 }
 
 .sitemap li {

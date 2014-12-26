@@ -14,13 +14,10 @@ html {
 }
 body {
     background: $COLOR_WHITE;
-    font-size: $FONT_SIZE_N;
     min-height: 100%;
     position: relative;
     padding: 0;
     margin: 0;
-    font-family: museo-sans, arial;
-
 }
 body, input, select {
     color: $COLOR_LIGHT_BLACK;
@@ -37,10 +34,6 @@ a:active {
     text-decoration: underline;
 
 }
-p {
-    margin: 0 0 0.5em 0;
-    line-height: 1.3;
-}
 h1,
 h2,
 h3,
@@ -52,18 +45,6 @@ h2 a:visited,
 h3 a:visited,
 legend {
     color: $COLOR_TEXT;
-}
-h1 {
-    font-size: $FONT_SIZE_XXL;
-}
-h2 {
-    font-size: $FONT_SIZE_XL;
-
-}
-h3,
-legend {
-    font-size: $FONT_SIZE_L;
-
 }
 strong {
     font-weight: bold;
@@ -89,7 +70,6 @@ abbr {
 
 }
 pre {
-    font-family: "Lucida Console", monospace;
     border-left: 5px solid $COLOR_BLUE;
 }
 .code-sample,
@@ -223,10 +203,6 @@ pre {
     text-align: center;
 
 }
-ol {
-    margin: 1.25em 0 1.25em 1.25em;
-
-}
 .inpage_popup_container {
     position: fixed;
     margin: 0;
@@ -298,7 +274,6 @@ ul.bulleted li {
 
 }
 .hint {
-    font-size: $FONT_SIZE_S;
     color: #58595b;
     margin-top: 3px;
 }
