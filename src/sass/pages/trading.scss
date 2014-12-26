@@ -203,7 +203,7 @@
       display: inline-block;
       background: white;
       .rbox-wrap {
-        border-bottom: 1px solid $COLOR_GRAY_SHADE;
+        border-bottom: 1px solid $COLOR_GRAY;
       }
       form {
         width: 40%;
@@ -222,7 +222,7 @@
           background: $COLOR_LIGHT_GRAY;
         }
         .rbox {
-          border: 1px solid $COLOR_GRAY_SHADE;
+          border: 1px solid $COLOR_GRAY;
           position: relative;
           margin-bottom: 3em;
         }
@@ -401,7 +401,7 @@
 
 /* added for the underlying highlight */
 .is_intraday {
-    background-color: $COLOR_GRAY_SHADE;
+    background-color: $COLOR_GRAY;
 }
 
 a.close {

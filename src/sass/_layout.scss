@@ -130,6 +130,7 @@ body {
 .header {
     height: 3em;
     padding: 0 $PAGE_PADDING;
+    flex-direction: row;
 }
 
 .language-selector, .login-button {

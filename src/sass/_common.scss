@@ -24,7 +24,7 @@ body, input, select {
 }
 a,
 a:visited {
-    color: $COLOR_BLUE;
+    color: $COLOR_DARK_GRAY;
     text-decoration: none;
     font-weight: bold;
 
@@ -313,7 +313,7 @@ ul.bulleted li {
 }
 .nav2nd li:hover {
     color: white;
-    background: #a0aab4;
+    background: $COLOR_GRAY;
 
 }
 .nav-trade,

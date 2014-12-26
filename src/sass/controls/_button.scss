@@ -1,6 +1,10 @@
+button.important {
+    background: $COLOR_ACTIVE;
+}
+
 button, input[type=button], input[type=submit], button.button, a.button {
     color: white;
-    background: $COLOR_ACTIVE;
+    background: $COLOR_GRAY;
     text-decoration: none;
     text-align: center;
     line-height: 2;

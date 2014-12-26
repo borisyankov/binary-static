@@ -5,7 +5,7 @@
     color: #000;
     background: #FFF1CF;
     border-radius: $BORDER_RADIUS;
-    border: 1px solid $COLOR_GRAY_SHADE;
+    border: 1px solid $COLOR_GRAY;
     box-shadow: 0 3px 5px rgba( 0, 0, 0, .3 );
     position: absolute;
     z-index: 100;
@@ -17,7 +17,7 @@
     height: 0;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
-    border-top: 10px solid $COLOR_GRAY_SHADE;
+    border-top: 10px solid $COLOR_GRAY;
     border-top-color: #FFF1CF;
     content: '';
     position: absolute;
@@ -28,8 +28,8 @@
 #tooltip.top:after
 {
     border-top-color: transparent;
-    border-bottom: 10px solid $COLOR_GRAY_SHADE;
-    border-bottom-color: $COLOR_GRAY_SHADE;
+    border-bottom: 10px solid $COLOR_GRAY;
+    border-bottom-color: $COLOR_GRAY;
     top: -20px;
     bottom: auto;
 }

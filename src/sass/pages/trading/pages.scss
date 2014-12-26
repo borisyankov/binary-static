@@ -1,12 +1,12 @@
 @mixin chart-drop-down-content {
   margin-top:0;
-  border: 1px solid $COLOR_GRAY_SHADE;
+  border: 1px solid $COLOR_GRAY;
   .half-1, .half-2 {
     width: 47%;
     height: auto;
   }
   .half-1.with-separator {
-      border-right: 1px solid $COLOR_GRAY_SHADE;
+      border-right: 1px solid $COLOR_GRAY;
   }
   .tl, .tr, .bl, .br {
     display: none;
@@ -183,7 +183,7 @@
               span.button {
                 background: transparent;
                 border: none;
-                border-bottom: 2px solid $COLOR_GRAY_SHADE;
+                border-bottom: 2px solid $COLOR_GRAY;
                 border-radius: 0;
                 color: $COLOR_BLACK;
                 font-weight: normal;
@@ -318,7 +318,7 @@
   display: none;
   background-color: $COLOR_WHITE;
   padding: 0 0.7em 0.7em;
-  border: 1px solid $COLOR_GRAY_SHADE;
+  border: 1px solid $COLOR_GRAY;
   width: 8em;
   z-index: 2;
 }

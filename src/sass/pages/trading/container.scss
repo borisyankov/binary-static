@@ -129,7 +129,7 @@ table.half-2 {
 
 #WhiteBoxMessage.errorbox {
   text-align: center;
-  border: 1px solid $COLOR_GRAY_SHADE;
+  border: 1px solid $COLOR_GRAY;
   background-image: none;
   .rbox-content {
     background: none;
@@ -185,7 +185,7 @@ table.half-2 {
 }
 
 .rbox-wrap .rbox-wrap {
-  border: 1px solid $COLOR_GRAY_SHADE !important;
+  border: 1px solid $COLOR_GRAY !important;
 }
 
 .errorbox h3 {
