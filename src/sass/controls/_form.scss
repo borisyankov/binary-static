@@ -9,6 +9,11 @@ input, textarea {
     vertical-align: middle;
 }
 
+input[type=text], input[type=email], input[type=password], input[type=tel], input[type=number] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
 select, textarea, input[type=text], input[type=email], input[type=password], input[type=tel], input[type=number] {
     padding: $CONTROL_PADDING;
     height: 2em;

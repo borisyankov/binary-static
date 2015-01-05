@@ -22,7 +22,7 @@
         <div class='grd-grid-12'>
             <div class='content-with-height'>
                 <h2><a class="pjaxload" href="[% request.url_for('linkto_acopening.cgi', {actype => 'virtual'}) %]">[% l('Virtual money account') %]</a></h2>
-                <p>[% l('Want to practice some trading before you try for real?') %] 
+                <p>[% l('Want to practice some trading before you try for real?') %]
                 [% l('You may prefer to open a <a class="pjaxload" href="[_1]">virtual money</a> account to practice trading. It\'s free, and will give you experience and confidence in trading strategies.',request.url_for("linkto_acopening.cgi", {actype => "virtual"})) %]
                 </p>
             </div>

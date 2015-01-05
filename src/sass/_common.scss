@@ -293,6 +293,13 @@ ul.bulleted li {
     color: #ccc;
     border: none;
 }
+.flag {
+    width: 20px;
+    height: 15px;
+    background-image: url('/images/flags.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 .header nav {
     color: white;
 }

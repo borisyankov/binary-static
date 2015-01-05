@@ -17,6 +17,6 @@ button, input[type=button], input[type=submit], button.button, a.button {
     display: inline-block;
     cursor: pointer;
     &:hover, &:active {
-        box-shadow: 0px 0px 0px 2px $COLOR_ACTIVE;
+    //    box-shadow: 0px 0px 0px 2px $COLOR_ACTIVE;
     }
 }
