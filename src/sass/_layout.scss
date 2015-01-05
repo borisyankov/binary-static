@@ -63,9 +63,11 @@ body {
 
 .header nav ul {
     display: flex;
-    justify-content: space-around;
 }
 
+.nav2nd li {
+    justify-content: space-around;
+}
 
 .header nav li {
     cursor: pointer;
@@ -79,9 +81,10 @@ body {
     flex: 1;
 }
 
-.nav1st li {
+.nav1st > li {
     text-align: center;
     height: $HEADER_HEIGHT;
+    max-width: 10em;
 }
 
 .nav1st li div {
