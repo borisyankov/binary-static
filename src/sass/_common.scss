@@ -288,16 +288,19 @@ ul.bulleted li {
 
 }
 .language-selector {
-    width: 3em;
-    padding-left: 0.5em;
-    color: #ccc;
-    border: none;
+    select {
+        text-indent: 100px;
+        border: none;
+        width: 20px;
+        height: 15px;
+        margin: 17.5px;
+        background-position: 0 0;
+        &:hover, &:focus { box-shadow: none; }
+    }
 }
 .flag {
-    width: 20px;
-    height: 15px;
     background-image: url('/images/flags.png');
-    background-size: cover;
+    background-size: 20px;
     background-repeat: no-repeat;
 }
 .header nav {
@@ -307,8 +310,7 @@ ul.bulleted li {
     color: #717880;
     background: $COLOR_WHITE;
 }
-.nav1st li:hover,
-.language-selector:hover {
+.nav1st li:hover {
     background-color: $COLOR_ORANGE;
 
 }
