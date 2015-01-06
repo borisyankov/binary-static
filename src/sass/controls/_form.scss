@@ -55,8 +55,12 @@ select, #tradingdate, .date-picker, .hasDatepicker, .down-arrow {
     background-repeat: no-repeat;
     background-size: 1.25em;
     background-color: inherit;
-    padding-right: 1em;
+    padding: 0 1em 0 .25em;
     cursor: pointer;
+}
+
+label {
+    text-align: left;
 }
 
 .thin-form {
@@ -83,13 +87,14 @@ select, #tradingdate, .date-picker, .hasDatepicker, .down-arrow {
     flex: 1;
 }
 
-.wide-form p {
+.wide-form p, .thin-form p {
     display: flex;
     flex-direction: row;
     margin: 0;
+    text-align: center;
 }
 
-.wide-form p > * {
+.wide-form p > *, .thin-form p > * {
     flex: 1;
     margin: 0 .5em .5em 0;
 }

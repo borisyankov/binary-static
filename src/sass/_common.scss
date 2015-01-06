@@ -7,7 +7,7 @@
     transition: all .3;
 
 }
-html {    
+html {
     font-size: 17px;
     // base font-size, used with rem for responsive typography
 
@@ -337,4 +337,9 @@ ul.bulleted li {
 .nav-trade {
     font-weight: bold;
 
+}
+.form-logo {
+    height: 50px;
+    width: 50px;
+    margin: auto;
 }

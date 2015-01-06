@@ -46,14 +46,15 @@
     height: 100%;
     width: 100%;
     z-index: 10;
-    background-color: rgba(160,170,180,.5);
+    background-color: rgba(255, 255, 255, .75);
 }
 
 .dialog {
     margin: auto;
     background: white;
     padding: 2em;
-    border-radius: $BORDER_RADIUS;
+    border-radius: $BORDER_RADIUS * 2;
+    border: 1px solid $COLOR_CONTROL_BORDER;
 }
 
 .progress-spinner {
