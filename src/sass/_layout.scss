@@ -1,3 +1,6 @@
+html, body {
+    height: 100%;
+}
 body, .msgbar, .header, .content, .sitemap,
 .msgbar-wrapper, .header-wrapper, .content-wrapper, .sitemap-wrapper, .footer-wrapper {
     display: flex;
@@ -182,4 +185,11 @@ body {
 
 .open-real-money-account {
     display: flex;
+}
+
+
+.vcentered {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
