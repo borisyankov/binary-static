@@ -17,11 +17,10 @@ body {
 
 .content-wrapper {
     flex: 1;
-    padding-top: 50px;
-    padding-bottom: 2em;
+    margin-top: 3em;
 }
 
-.msgbar-wrapper, .header-wrapper, .content-wrapper, .footer-wrapper {
+.header-wrapper, .content-wrapper, .footer-wrapper {
     justify-content: center;
     padding: 0 1em;
 }
