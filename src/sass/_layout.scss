@@ -1,5 +1,5 @@
 html, body {
-    height: 100%;
+    min-height: 100vh;
 }
 body, .msgbar, .header, .content, .sitemap,
 .msgbar-wrapper, .header-wrapper, .content-wrapper, .sitemap-wrapper, .footer-wrapper {
@@ -16,21 +16,19 @@ body {
 }
 
 .content-wrapper {
+    flex: 1;
     padding-top: 50px;
     padding-bottom: 2em;
 }
 
-.msgbar-wrapper, .header-wrapper, .content-wrapper, .sitemap-wrapper, .footer-wrapper {
+.msgbar-wrapper, .header-wrapper, .content-wrapper, .footer-wrapper {
     justify-content: center;
+    padding: 0 1em;
 }
 
 .msgbar, .header, .content, .sitemap, .footer {
     max-width: 1200px;
     width: 100%;
-}
-
-.footer {
-    padding: .5em $PAGE_PADDING;
 }
 
 .content {
@@ -150,6 +148,10 @@ body {
     width: 2.5em;
 }
 
+.sitemap {
+    margin-top: 1em;
+}
+
 .sitemap li {
     flex: 1;
 }
@@ -167,7 +169,7 @@ body {
 .licenses {
     flex: 1;
     display: flex;
-    margin: 2em auto;
+    margin: 1em 0;
 }
 
 .licenses img {
@@ -191,6 +193,7 @@ body {
 
 
 .vcentered {
+    padding: 1em;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
