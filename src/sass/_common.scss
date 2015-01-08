@@ -43,7 +43,10 @@ h3 a,
 h1 a:visited,
 h2 a:visited,
 h3 a:visited,
-legend {
+legend,
+p,
+div,
+span {
     color: $COLOR_TEXT;
 }
 strong {

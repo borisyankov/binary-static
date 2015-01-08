@@ -106,17 +106,17 @@
     border: none;
     background: none;
     li:first-child {
-        border-top-left-radius: $BORDER_RADIUS;
-        border-bottom-left-radius: $BORDER_RADIUS;
+        border-top-left-radius: 100px;
+        border-bottom-left-radius: 100px;
     }
     li:last-child {
-        border-top-right-radius: $BORDER_RADIUS;
-        border-bottom-right-radius: $BORDER_RADIUS;
+        border-top-right-radius: 100px;
+        border-bottom-right-radius: 100px;
     }
     li {
-      border-top: 1px solid $COLOR_BLUE;
-      border-bottom: 1px solid $COLOR_BLUE;
-      border-right: 1px solid $COLOR_BLUE;
+      border-top: 1px solid $COLOR_GRAY;
+      border-bottom: 1px solid $COLOR_GRAY;
+      border-right: 1px solid $COLOR_GRAY;
       float: left;
       display: inline-block;
 
@@ -124,15 +124,15 @@
         padding: 5px 10px;
         line-height: 2;
         text-decoration: none;
-        color: $COLOR_BLUE;
+        color: $COLOR_GRAY;
         background: transparent;
       }
     }
     li:first-child {
-        border-left: 1px solid $COLOR_BLUE;
+        border-left: 1px solid $COLOR_GRAY;
     }
     li.active, li.ui-tabs-active {
-      background: $COLOR_BLUE;
+      background: $COLOR_GRAY;
       color: $COLOR_WHITE;
       a {
         background: none;
