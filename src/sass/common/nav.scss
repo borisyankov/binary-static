@@ -104,21 +104,11 @@
 #content .page-section {
     width: 100%;
     & > .tab-menu {
-        width: 100%;
-        height: 57px;
-        background-color: $COLOR_LIGHT_GRAY;
-        border-bottom: 1px solid $COLOR_GRAY;
         ul.tm-ul {
             margin: 0;
             background-color: $COLOR_LIGHT_GRAY;
-            border-bottom: 1px solid $COLOR_GRAY;
             li {
                 color: $COLOR_ORANGE;
-                a {
-                    &:hover {
-                        text-decoration: none;
-                    }
-                }
                 &.active {
                     background: none;
                     a {

@@ -32,18 +32,15 @@
       margin: 0;
       line-height: 150%;
       border-bottom: 1px solid #FFFFFF;
-      &:hover {
-        background: $COLOR_GRAY;
-      }
       a {
         text-decoration: none;
         display: block;
         padding: 5px 5px 5px 10px;
-        color: $COLOR_BLUE;
+        color: $COLOR_GRAY;
       }
     }
     li.selected {
-      background: $COLOR_BLUE;
+      background: $COLOR_GRAY;
       border-radius: $BORDER_RADIUS;
       a {
         color: $COLOR_WHITE;
