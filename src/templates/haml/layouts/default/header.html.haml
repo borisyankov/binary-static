@@ -1,35 +1,16 @@
-- stash (
--    loginholder => l('Login ID'),
--    pwdholder   => l('Password'),
--    logintext   => l('Log in'),
-- );
-
 .header-wrapper
   .header
     %a.logo{:href=>url_for("/")}
       %img{:src => url_for('images/logo.svg')}
-    %button.login-button= stash('logintext')
-
-#header
-  .grd-container
-    .grd-row-padding
-      .grd-grid-3.grd-grid-mobile-2.grd-grid-phablet-1
-        %a#logo{:href=>url_for("/")}
-          .grd-grid-3.grd-grid-mobile-12.grd-grid-phablet-12.grd-no-gutter
-            %img{:src => url_for('images/common/binary-logo-full.svg')}
-      .grd-grid-6.grd-hide-mobile.grd-hide-phablet
-        = include('layouts/default/nav')
-      .grd-grid-3.grd-grid-mobile-9.grd-grid-phablet-10.by_client_type.client_virtual.client_real#client-logged-in{ :style => 'display: none;'}
-        #logout
-          %a.pjaxload#client_loginid{:href => url_for('my_account.cgi')}
-          %a.logout{:href => url_for('/logout')}= l('Log out')
-      .grd-grid-3.grd-grid-mobile-9.grd-grid-phablet-10.grd-no-gutter-left.by_client_type.client_logged_out#client-logged-out
-        %form#login-form{:action => url_for('/login'), :method => 'post'}
-          %span#login-fields
-            %input{:name => 'loginid', :type => 'text', :placeholder => stash('loginholder')}
-            %input{:name => 'password', :type => 'password', :placeholder => stash('pwdholder')}
-            %input{:type => 'submit', :value => stash('logintext')}
-      .grd-grid-1.grd-hide.grd-show-mobile.grd-no-gutter-mobile.grd-show-phablet
-        #mobile-menu-icon-container
-          %a{:href => '#mobile-menu', :id => 'mobile-menu-icon'}
-            %img{:class => 'responsive', :src => url_for('images/pages/binary-mobile-menu.svg')}
+    %label.language-selector{:for => "lang-pick"}
+      %select#lang-pick.flag
+        %option{:value => "de"} Deutsch
+        %option{:value => "id"} Bahasa Indonesia
+        %option{:value => "zh_cn"} 简体中文
+        %option{:value => "ar"} Arabic
+        %option{:value => "pl"} Polish
+        %option{:value => "ru"} Русский
+        %option{:value => "pt"} Português
+        %option{:value => "es"} Español
+        %option{:value => "fr"} Français
+        %option{:value => "en"} English
