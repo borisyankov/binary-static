@@ -3,6 +3,13 @@
 -    pwdholder   => l('Password'),
 -    logintext   => l('Log in'),
 - );
+
+.header-wrapper
+  .header
+    %a.logo{:href=>url_for("/")}
+      %img{:src => url_for('images/logo.svg')}
+    %button.login-button= stash('logintext')
+
 #header
   .grd-container
     .grd-row-padding
