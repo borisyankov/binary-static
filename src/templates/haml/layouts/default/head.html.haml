@@ -20,6 +20,7 @@
 
 - foreach my $css (css()->files) {
     %link{:rel=>"stylesheet" :href=> $css}
+- }    
 
   %link{:rel=>"icon" :type=>"image/png" :href=>url_for('images/common/favicon_1.ico')}
   %link{:rel=>"shortcut icon" :href=>url_for('images/common/favicon_1.ico')}
