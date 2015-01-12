@@ -1,4 +1,4 @@
-var Page = function(config) { 
+var Page = function(config) {
     config = typeof config !== 'undefined' ? config : {};
     this.client = new Client();
     this.url = new URL();
@@ -10,8 +10,8 @@ var Page = function(config) {
 
 Page.prototype = {
     language: function() {
-        if ($('#language_select').length > 0) {
-            return $('#language_select').attr('class').toUpperCase(); //Required as mojo still provides lower case lang codes and most of our system expects upper case.
+        if ($('#language-selector').length > 0) {
+            return $('#language-selector').attr('class').toUpperCase(); //Required as mojo still provides lower case lang codes and most of our system expects upper case.
         } else if(page.url.param('l')) {
             return page.url.param('l');
         } else {

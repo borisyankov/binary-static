@@ -5,14 +5,12 @@
     = include('layouts/default/menu')
     %label.language-selector{:for => "lang-pick"}
       %select#lang-pick.flag
-        %option{:value => "de"} Deutsch
-        %option{:value => "id"} Bahasa Indonesia
-        %option{:value => "zh_cn"} 简体中文
-        %option{:value => "ar"} Arabic
-        %option{:value => "pl"} Polish
-        %option{:value => "ru"} Русский
-        %option{:value => "pt"} Português
-        %option{:value => "es"} Español
-        %option{:value => "fr"} Français
-        %option{:value => "en"} English
+        - foreach (keys %{ $languages }) {
+          - my ($code, $name) = ($_, $languages->{$_});
+          - if ($code ne $sel_code) {
+            %option{:class => $code}= $name
+          - } else {
+            %option{:class => $code, :selected => 'selected'}= $name
+          - }
+        - }    
     %button.login-button= l('Log in')
