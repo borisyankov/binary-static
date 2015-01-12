@@ -155,39 +155,7 @@
             margin-bottom: 1em;
           }
         }
-    }
-  #ticker-container {
-      font-size: $FONT_SIZE_S;
-      clear:both;
-      #hometicker {
-        background: $COLOR_GRAY;
-        height: 40px;
-        border-bottom: 1px solid $COLOR_GRAY;
-        border-top: 1px solid $COLOR_GRAY;
-        letter-spacing: 1px;
-        white-space: nowrap;
-        overflow: hidden;
-        ul {
-          margin: 0;
-          li {
-            padding-top:11px;
-            margin-right:30px;
-            display: inline;
-            width: auto;
-            line-height:1;
-            a.ticker-link {
-                color: $COLOR_BLACK;
-            }
-          }
-        }
-        span.fall {
-          color: $COLOR_RED;
-        }
-        span.rise {
-          color: $COLOR_GREEN;
-        }
-      }
-  }
+    } 
   #returns {
     margin:20px 0 0 0;
     background: $COLOR_WHITE;

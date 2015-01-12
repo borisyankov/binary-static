@@ -2,6 +2,7 @@
   .header
     %a.logo{:href=>url_for("/")}
       %img{:src => url_for('images/logo.svg')}
+    = include('layouts/default/menu')      
     %label.language-selector{:for => "lang-pick"}
       %select#lang-pick.flag
         %option{:value => "de"} Deutsch
