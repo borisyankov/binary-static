@@ -18,12 +18,14 @@
 
   %title= stash('website_name') . (stash('title') ? " : ".stash('title'): '')
 
+- foreach my $css (css()->files) {
+    %link{:rel=>"stylesheet" :href=> $css}
 
   %link{:rel=>"icon" :type=>"image/png" :href=>url_for('images/common/favicon_1.ico')}
   %link{:rel=>"shortcut icon" :href=>url_for('images/common/favicon_1.ico')}
   %link{:rel=>"apple-touch-icon" :href=>url_for('images/common/apple-touch-icon-57x57_1.png')}
   %link{:rel=>"apple-touch-icon" :sizes=>"72x72" :href=>url_for('images/common/apple-touch-icon-72x72_1.png')}
-  %link{:rel=>"apple-touch-icon" :sizes=>"114x114" :href=>url_for('images/common/apple-touch-icon-114x114_1.png')} 
+  %link{:rel=>"apple-touch-icon" :sizes=>"114x114" :href=>url_for('images/common/apple-touch-icon-114x114_1.png')}
 
   - my $languages = available_languages();
   - my $path = get_current_path();
