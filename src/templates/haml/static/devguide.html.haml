@@ -107,7 +107,7 @@
           %p
             %em= l("The access-token retrieved earlier has a limited lifetime.  In the case of Auth-Code Flow only, it can be renewed.")
           %p= l('The JSON structure which supplied the access_token also included a refresh_token.  Supply this in the following call:')
-          .code-sample!= 'POST https://PROXY_ENDPOINT/oauth/refresh_acesstoken'
+          .code-sample!= 'POST https://PROXY_ENDPOINT/oauth/refresh_accesstoken'
           %p= l('with this [_1] data:', 'POST')
           %ul.bullet
             %li= 'grant_type=refresh_token'

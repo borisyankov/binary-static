@@ -171,6 +171,12 @@ sub register {
             return BinaryStatic::Consts::countries();
         });
 
+    $app->helper(
+        get_current_path => sub {
+            my $c = shift;
+            return $c->url_for("/");
+        });
+
     return 1;
 }
 

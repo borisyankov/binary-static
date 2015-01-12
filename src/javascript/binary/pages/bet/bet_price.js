@@ -168,6 +168,7 @@ var BetPrice = function() {
             }
 
             con.show();
+            // push_data_layer();
             var _clear_results = function () { that.clear_buy_results(); };
             con.find('a.close').on('click', _clear_results).css('cursor', 'pointer').addClass('unbind_later');
         },

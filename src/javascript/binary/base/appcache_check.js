@@ -5,6 +5,10 @@ if (window.applicationCache) {
                     window.applicationCache.swapCache();
                     var appcache_reload_message = $('#appcache-reload-message');
                     appcache_reload_message.css('display', 'block');
+                    appcache_reload_message.on('click', '#appcache-refresh-link', function () {
+                        window.location.reload();
+                        return false;
+                    });
                 } catch (err) {}
             }
         }, false);

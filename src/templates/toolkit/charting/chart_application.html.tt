@@ -10,4 +10,7 @@
     <a id="install-java" class="button" href="http://java.com/en/download/" style="display: none">
         [% l('Install Java')%]
     </a>
+    <p>
+        [% l('Click <a href="[_1]" target="_blank">here</a> to try the beta-release of the application. Kindly report issues found to <a href="mailto:[_2]">[_2]</a>.', "https://download.binary.com/binary-charts-beta.jnlp", "arnab@binary.com") %]
+    </p>
 </div>

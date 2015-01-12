@@ -46,7 +46,7 @@
                                 <a class="pjaxload" href="[% request.url_for('tour') %]"[% target %]>[% l("Tour") %]</a>
                             </li>
                             <li id="trading_link">
-                                <a href="[% request.url_for('trade.cgi') %]"[% target %]>[% l("Trade") %]</a>
+                                <a class="pjaxload" href="[% request.url_for('trade.cgi') %]"[% target %]>[% l("Trade") %]</a>
                             </li>
                         </ul>
                     </div>

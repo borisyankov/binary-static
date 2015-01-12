@@ -1,6 +1,6 @@
 {
   "name": "binary-static",
-  "version": "3.2.8",
+  "version": "3.3.0",
   "description": "Binary.com static content",
   "scripts": {
     "test": "grunt test"

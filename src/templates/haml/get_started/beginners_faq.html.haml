@@ -30,10 +30,8 @@
     %h2= l('Depositing and withdrawing funds')
     %br
     %h3= l('Do I need to deposit any funds to open an account?')
-  .grd-grid-8.grd-grid-mobile-12
+  .grd-grid-12
     %p= l("You don't need to deposit any money to open an account, but you need to deposit funds before you can start trading.")
-  .grd-grid-4.grd-grid-mobile-6.grd-centered-mobile.grd-with-padding
-    %img.responsive{:src => url_for('images/pages/get-started/deposit-withdraw.png')}
   .grd-grid-12
     %h3= l('How do I fund my account?')
     %p= l('[_1] offers a range of common deposit and withdrawal methods, from credit and debit cards to bank wires, e-cash and e-wallets.', stash->{website_name})

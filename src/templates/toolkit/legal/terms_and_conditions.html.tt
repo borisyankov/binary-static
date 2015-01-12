@@ -1,14 +1,14 @@
 <div class="grd-grid-12">
     <h2>[% l("Terms and Conditions") %]</h2>
     <p>
-        <i>[% l("Version 32. Last modified 2014-09-24.") %]</i>
+        <i>[% l("Version 33. Last modified 2014-12-11.") %]</i>
     </p>
     <p>
         [% l("It is the responsibility of each Client to read and understand this legal notice and the terms and conditions pursuant to which an acquisition of financial contracts via this site is governed.") %]
     </p>
     <h2>A. [% l("Interpretation") %]</h2>
     <p>
-        [% l("The term \"the Company\" shall denote either of Regent Markets (IOM) Ltd., Regent Markets (Malta) Ltd. or Regent Markets (CR) S.A., depending on the jurisdiction to which a Client\'s account has been attached in accordance with the account opening procedures of the website and as detailed in the About Us section of the website.") %]
+        [% l("The term \"the Company\" shall denote either of Binary (IOM) Ltd., Binary (Europe) Ltd. or Binary (CR) S.A., depending on the jurisdiction to which a Client\'s account has been attached in accordance with the account opening procedures of the website and as detailed in the About Us section of the website.") %]
     </p>
     <h2>B. [% l("Introduction") %]</h2>
     <p>
@@ -50,10 +50,16 @@
     </p>
     <h2>F. [% l("Customer Funds") %]</h2>
     <p>
-        [% l("Money collected from Clients are not invested in any securities, futures, currencies, derivatives or other investments, on behalf of Clients") %]
+        [% l("Money collected from Clients are not invested in any securities, futures, currencies, derivatives or other investments, on behalf of Clients.") %]
     </p>
     <p>
-        [% l("The company holds customer funds in separate bank accounts to the operational accounts which would not, in the event of insolvency, form part of the Company's assets. Your account should not be used as a banking facility and deposits should only be made with a view to using funds to place contracts. Should you make repeated deposits and withdrawals without commensurate contracts being placed, we reserve the right to pass on to your accounts, without prior notice, any bank charges we have incurred before closing the account.") %]
+        [% l("We are required by our licence to inform you about what happens to funds which we hold on account for you, and the extent to which funds are protected in the event of insolvency <a href='[_1]' target='_blank'>[_1]</a>.", "http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx") %]
+    </p>
+    <p>
+        [% l("The company holds customer funds in separate bank accounts to the operational accounts which would not, in the event of insolvency, form part of the Company's assets. This meets the Gambling Commission’s requirements for the segregation of customer funds at the level: medium protection.") %]
+    </p>
+    <p>
+        [% l("Your account should not be used as a banking facility and deposits should only be made with a view to using funds to place contracts. Should you make repeated deposits and withdrawals without commensurate contracts being placed, we reserve the right to pass on to your accounts, without prior notice, any bank charges we have incurred before closing the account.") %]
     </p>
     <h2>G. [% l("Fraud and Money Laundering") %]</h2>
     <p>
