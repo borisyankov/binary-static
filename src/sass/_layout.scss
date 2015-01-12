@@ -192,8 +192,8 @@ body {
 
 
 .vcentered {
+    height: 100vh;
+    justify-content: center;
+    display: flex;
     padding: 1em;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
 }

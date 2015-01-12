@@ -19,9 +19,7 @@ body {
     padding: 0;
     margin: 0;
 }
-body, input, select {
-    color: $COLOR_LIGHT_BLACK;
-}
+
 a,
 a:visited {
     color: $COLOR_DARK_GRAY;
@@ -34,6 +32,9 @@ a:active {
     text-decoration: underline;
 
 }
+body,
+input,
+select,
 h1,
 h2,
 h3,
@@ -45,7 +46,6 @@ h2 a:visited,
 h3 a:visited,
 legend,
 p,
-div,
 span {
     color: $COLOR_TEXT;
 }
@@ -345,5 +345,5 @@ ul.bulleted li {
 .form-logo {
     height: 50px;
     width: 50px;
-    margin: auto;
+    margin: 0 auto;
 }
