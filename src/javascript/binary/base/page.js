@@ -35,10 +35,7 @@ Page.prototype = {
     on_change_language: function() {
         var that = this;
         $('#lang-pick').on('change', function() {
-            var language = $(this).find('option:selected').attr('class');
-            console.log( language, this.value);
-            alert('l=' + language + ' this.value=' + this.value)
-            document.location = that.url_for_language(language);
+            document.location = that.url_for_language(this.value);
         });
     },
     localize_for: function(language) {
