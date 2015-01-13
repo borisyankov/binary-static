@@ -11,9 +11,9 @@
         - foreach (keys %{ $languages }) {
           - my ($code, $name) = ($_, $languages->{$_});
           - if ($code ne $sel_code) {
-            %option{:class => $code}= $name
+            %option{:value => $code}= $name
           - } else {
-            %option{:class => $code, :selected => 'selected'}= $name
+            %option{:value => $code, :selected => 'selected'}= $name
           - }
         - }
     %button.login-button= l('Log in')
