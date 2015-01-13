@@ -10,8 +10,8 @@ var Page = function(config) {
 
 Page.prototype = {
     language: function() {
-        if ($('#language-selector').length > 0) {
-            return $('#language-selector').attr('class').toUpperCase(); //Required as mojo still provides lower case lang codes and most of our system expects upper case.
+        if ($('.language-selector').length > 0) {
+            return $('.language-selector').attr('class').toUpperCase(); //Required as mojo still provides lower case lang codes and most of our system expects upper case.
         } else if(page.url.param('l')) {
             return page.url.param('l');
         } else {
@@ -34,7 +34,7 @@ Page.prototype = {
     },
     on_change_language: function() {
         var that = this;
-        $('#language_select').on('change', 'select', function() {
+        $('#lang-pick').on('change', 'select', function() {
             var language = $(this).find('option:selected').attr('class');
             document.location = that.url_for_language(language);
         });
