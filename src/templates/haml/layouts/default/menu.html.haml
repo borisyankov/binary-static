@@ -18,7 +18,12 @@
     %li
       .nav-help Help
       %ul.nav2nd
-        %li Tour
+        %li
+          %a.pjaxload{:href=>url_for("/why-us")}= l('Why Us?')
+        %li
+          %a.pjaxload{:href=>url_for("/get-started")}= l('Get Started')
+        %li
+          %a.pjaxload{:href=>url_for("/tour")}= l('Tour')
         %li Training Center
         %li Webinars
         %li Blog
