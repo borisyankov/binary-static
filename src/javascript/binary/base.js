@@ -90,22 +90,6 @@ function formEffects() {
     };
 }
 
-var make_mobile_menu = function () {
-    if ($('#mobile-menu-container').is(':visible')) {
-        $('#mobile-menu').mmenu({
-            position: 'right',
-            zposition: 'front',
-            slidingSubmenus: false,
-            searchfield: true,
-            onClick: {
-                close: true
-            },
-        }, {
-            selectedClass: 'active',
-        });
-    }
-};
-
 onLoad.queue(function () {
     $('.tm-ul > li').hover(
         function () {
