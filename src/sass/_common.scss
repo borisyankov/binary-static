@@ -310,6 +310,9 @@ ul.bulleted li {
 .header nav {
     color: white;
 }
+.header nav a:hover {
+    text-decoration: none;
+}
 .nav1st li.active div {
     color: #717880;
     background: $COLOR_WHITE;

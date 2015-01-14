@@ -81,6 +81,10 @@ body {
     flex: 1;
 }
 
+.header nav a {
+    display: block;
+}
+
 .nav1st > li {
     text-align: center;
     height: $HEADER_HEIGHT;

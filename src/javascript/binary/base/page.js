@@ -5,7 +5,6 @@ var Page = function(config) {
     this.settings = new InScriptStore(config['settings']);
     this.header = new Header({ client: this.client, settings: this.settings, url: this.url});
     this.contents = new Contents(this.client);
-    this.footer = new Footer();
 };
 
 Page.prototype = {
