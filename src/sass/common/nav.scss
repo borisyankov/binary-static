@@ -10,7 +10,7 @@
     padding-right: 2em;
 }
 
-.tab-menu-wrap, #content .tab-menu-wrap {
+.tab-menu-wrap {
   ul {
     margin: 0;
     background-color: $COLOR_LIGHT_GRAY;
@@ -75,12 +75,6 @@
   }
 }
 
-#content {
-  ul.tm-ul {
-    @include tab-list;
-  }
-}
-
 .has-tabs {
   border: none;
   border-radius: 0;
@@ -99,7 +93,7 @@
   }
 }
 
-#content .page-section {
+.page-section {
     width: 100%;
     & > .tab-menu {
         ul.tm-ul {

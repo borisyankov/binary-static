@@ -83,7 +83,7 @@
   width: 95px;
 }
 /* Content of boxes is longer on Bet Guide page */
-#content #bet_guide_content {
+#bet_guide_content {
     background: none;
     .li-2-boxes-content {
         height: 10em;
@@ -138,7 +138,7 @@
     text-align: center;
 }
 
-#content .paging-navigation {
+.paging-navigation {
     .paging-links {
         display: inline-block;
         float: right;
@@ -481,7 +481,7 @@ h2.finder {
   }
 }
 
-#content #error_msg {
+#error_msg {
   margin: 10px;
 }
 
@@ -597,12 +597,12 @@ form#rise_fall_form {
     }
 }
 
-#content #settings_message {
+#settings_message {
     font-weight: bold;
     color: $COLOR_ORANGE;
 }
 
-#content #client_message.errorbox {
+#client_message.errorbox {
     background-image: none;
     text-align: center;
     .rbox-wrap {

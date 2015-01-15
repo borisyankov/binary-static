@@ -39,8 +39,8 @@ Contents.prototype = {
     },
     update_content_class: function() {
         //This is required for our css to work.
-        $('#content').removeClass();
-        $('#content').addClass($('#content_class').html());
+        $('.content').removeClass();
+        $('.content').addClass($('#content_class').html());
     },
     init_draggable: function() {
         $('.draggable').draggable();

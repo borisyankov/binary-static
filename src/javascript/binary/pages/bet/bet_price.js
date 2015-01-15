@@ -3,7 +3,7 @@ var BetPrice = function() {
     var _buy_response_container = null;
     return {
         deregister: function() {
-            $('#content button.buy_bet_button').off('click');
+            $('button.buy_bet_button').off('click');
         },
         container: function() {
             return $('#bet_calculation_container');
@@ -67,7 +67,7 @@ var BetPrice = function() {
         },
         on_buy: function() {
             var that = this;
-            $('#content button.buy_bet_button').on('click', function (e) {
+            $('button.buy_bet_button').on('click', function (e) {
                 e = e || window.event;
                 if (typeof e.preventDefault == 'function') {
                     e.preventDefault();
@@ -412,7 +412,7 @@ var BetPrice = function() {
                     return prices;
                 },
                 prices_from_form: function () {
-                    
+
                     var prices = [],
                         order_forms = $('.orderform'),
                         order_forms_count = order_forms ? order_forms.length : 0,
@@ -420,7 +420,7 @@ var BetPrice = function() {
                         id,
                         prob,
                         error;
-                    
+
                     if (order_forms_count > 0 ) {
                         for (i = 0; i < order_forms_count; i++) {
                             id = $('input[name="display_id"]', form).val();
