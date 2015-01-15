@@ -10,7 +10,7 @@ body {
     flex-direction: column;
 }
 
-.sticky {
+.header-wrapper {
     position: fixed;
     width: 100%;
 }
@@ -137,18 +137,16 @@ body {
 
 .header {
     height: 3em;
-    padding: 0 $PAGE_PADDING;
     flex-direction: row;
 }
 
 .login-button {
-    margin: .5em;
+    margin: .5em 0;
 }
 
 .logo {
-    height: 2.5em;
-    margin: .25em 1em .25em 0;
-    width: 2.5em;
+    margin: .5em 1em .5em 0;
+    width: 2em;
 }
 
 .sitemap {

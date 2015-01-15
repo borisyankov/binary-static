@@ -24,7 +24,6 @@ Page.prototype = {
         this.on_change_language();
         this.record_affiliate_exposure();
         this.contents.on_load();
-        this.footer.on_load();
         $('#current_width').val(get_container_width());//This should probably not be here.
     },
     on_unload: function() {
