@@ -18,22 +18,32 @@
 .header nav {
     color: white;
 }
+.header nav a {
+    color: white;
+    font-weight: normal;
+}
 .header nav a:hover {
     text-decoration: none;
 }
 .nav1st li.active div {
-    color: #717880;
-    background: $COLOR_WHITE;
+    //color: #717880;
 }
-.nav1st li:hover {
-    background-color: $COLOR_ORANGE;
-
+.nav1st > li, .logo {
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+}
+.nav1st > li:hover, .logo:hover {
+    box-shadow: inset 0px 3px 0px 0px $COLOR_ORANGE;
+    background-color: $COLOR_NAV_ACTIVE;
+    border-left: 1px solid $COLOR_NAV_BORDER;
+    border-right: 1px solid $COLOR_NAV_BORDER;
 }
 .nav2nd {
-    color: #717880;
-    background-color: $COLOR_WHITE;
-    box-shadow: $BOX_SHADOW;
-
+    margin-left: -1px;
+    background-color: $COLOR_NAV_ACTIVE;
+    border-left: 1px solid $COLOR_NAV_BORDER;
+    border-right: 1px solid $COLOR_NAV_BORDER;
+    border-bottom: 1px solid $COLOR_NAV_BORDER;
 }
 .nav2nd li:hover {
     color: white;

@@ -88,7 +88,7 @@ body {
 .nav1st > li {
     text-align: center;
     height: $HEADER_HEIGHT;
-    max-width: 10em;
+    max-width: 8em;
 }
 
 .nav1st li div {
@@ -145,8 +145,9 @@ body {
 }
 
 .logo {
-    margin: .5em 1em .5em 0;
-    width: 2em;
+    margin-left: -.5em;
+    padding: .5em;
+    width: 3em;
 }
 
 .sitemap {
