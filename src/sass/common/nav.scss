@@ -1,15 +1,4 @@
-#main-menu {
-  background-color: $COLOR_LIGHT_GRAY;
-  margin-bottom: 40px;
-  a.a-active, span.a-active {
-    color: $COLOR_ORANGE;
-  }
-}
-
-#main-menu .tab-menu-wrap ul li {
-    padding-right: 2em;
-}
-
+.disable-for-test {
 .tab-menu-wrap {
   ul {
     margin: 0;
@@ -131,4 +120,5 @@
             width: 100%;
         }
     }
+}
 }

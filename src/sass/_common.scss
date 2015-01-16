@@ -287,61 +287,7 @@ ul.bulleted li {
     margin-bottom: 10px;
 
 }
-.language-selector {
-    select {
-        text-indent: 100px;
-        border: none;
-        width: 20px;
-        height: 15px;
-        margin: 1em;
-        background-position: 0 0;
-        padding: 0;
-        &:hover, &:focus { box-shadow: none; }
-    }
-}
-.flag {
-    background: url('/images/flags.png');
-    background-size: 20px;
-    background-repeat: no-repeat;
-}
-.header nav {
-    color: white;
-}
-.header nav a:hover {
-    text-decoration: none;
-}
-.nav1st li.active div {
-    color: #717880;
-    background: $COLOR_WHITE;
-}
-.nav1st li:hover {
-    background-color: $COLOR_ORANGE;
 
-}
-.nav2nd {
-    color: #717880;
-    background-color: $COLOR_WHITE;
-    box-shadow: $BOX_SHADOW;
-
-}
-.nav2nd li:hover {
-    color: white;
-    background: $COLOR_GRAY;
-
-}
-.nav-trade,
-.nav-cashier,
-.nav-resources,
-.nav-charts,
-.nav-help {
-    background-repeat: no-repeat;
-    background-size: auto 70%;
-    background-position: center center;
-}
-.nav-trade {
-    font-weight: bold;
-
-}
 .form-logo {
     height: 50px;
     width: 50px;
