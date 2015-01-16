@@ -44,7 +44,7 @@
         margin-left: 0.4em;
       }
     }
-  }  
+  }
   #menu-top {
     height: 34px;
     text-align: center;
@@ -93,5 +93,8 @@
     margin: 12px;
     font-style: italic;
     color: $COLOR_RED;
+    a {
+      color: $COLOR_GREEN;
+    }
   }
 }

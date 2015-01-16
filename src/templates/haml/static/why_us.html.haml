@@ -7,7 +7,7 @@
   %li
     != l("Returns above 100% on simple [_1] contracts.", pjax_link_for(l('rise/fall'), url_for('trade.cgi?market=forex&form_name=risefall')))
   %li
-    != l("Returns above 1000% on [_1] and [_2] trades.", pjax_link_for(l('higher/lower'), url_for('trade.cgi?market=forex&form_name=higherlower')), pjax_link_for(l('touch/no-touch'), url_for('trade.cgi?market=forex&form_name=touchnotouch')))
+    != l("Returns above 1000% on <a href='[_1]' class='pjaxload'>higher/lower</a> and <a href='[_2]' class='pjaxload'>touch/no-touch</a> trades.", url_for('trade.cgi?market=forex&form_name=higherlower'), url_for('trade.cgi?market=forex&form_name=touchnotouch'))
   %li= l('No hidden fees or commissions.')
 
 %h1= l('Trade your way')

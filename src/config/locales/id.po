@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: I 18N\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2015-01-07 05:53+0200\n"
+"PO-Revision-Date: 2015-01-09 09:31+0200\n"
 "Last-Translator: Putri Kumala <putri@regentmarkets.com>\n"
 "Language-Team: Indonesian <https://hosted.weblate.org/projects/binary/static/id/>\n"
 "Language: id\n"
@@ -216,7 +216,7 @@ msgid "%1 prices are benchmarked against the interbank options market, so you al
 msgstr "Harga %1 mengacu kepada pasar antar bank pilihan, dimana anda selalu akan memperoleh harga terbaik pada setiap trading anda."
 
 #. (request()
-#: lib/BOM/View/CGIForm.pm:4757
+#: lib/BOM/View/CGIForm.pm:4723
 msgid "%1 provides <a href=\"%2\">Self Exclusion</a> facilities which allow you to set limits on your account."
 msgstr "%1 menyediakan fasilitas <a href=\"%2\">Pengecualian Diri</a> dimana Anda dapat menyusun batasan pada akun anda."
 
@@ -266,6 +266,13 @@ msgstr "Random Index %1 adalah %2, %3, %4, dan %5. Index ini mewakili jumlah vol
 #: /home/git/translations/binary-static/src/templates/haml/static/why_us.html.haml:1
 msgid "%1's patented pricing technology allows you to benefit from the same rates of return as traders in the interbank market."
 msgstr "Teknologi harga %1 yang telah dipatenkan memberi kesempatan kepada anda untuk memperoleh keuntungan dari tingkat pengembalian yang sama seperti perdagangan pada market antar bank."
+
+#. (stash('broker_name')
+#: /home/git/translations/binary-static/src/templates/haml/home2/index.html.haml:1
+#, fuzzy
+#| msgid "Online Trading platform for binary options on Forex, Indices, Commodities and Smart Indices"
+msgid "%1: Online Trading platform for binary options on Forex, Indices, Commodities and Smart Indices"
+msgstr "Platform Trading Online untuk opsi binary pada Forex, Indeks, Komoditas dan Indeks Smart"
 
 #. (stash->{website_name})
 #: /home/git/translations/binary-static/src/templates/haml/static/smart_indices.html.haml:1
@@ -364,7 +371,7 @@ msgstr "2hari"
 msgid "2w"
 msgstr "2minggu"
 
-#: lib/BOM/View/CGIForm.pm:1552
+#: lib/BOM/View/CGIForm.pm:1536
 msgid "3 - 30 characters and alphanumeric only."
 msgstr "3-30 karakter dan hanya alfanumerik."
 
@@ -380,7 +387,7 @@ msgstr "3m"
 msgid "4. Choose your Payout"
 msgstr "4. Pilih Hasil"
 
-#: lib/BOM/View/CGIForm.pm:760
+#: lib/BOM/View/CGIForm.pm:769
 msgid "5 - 25 characters and alphanumeric only."
 msgstr "5-25 karakter dan hanya alfanumerik."
 
@@ -392,7 +399,7 @@ msgstr "5hari"
 msgid "6h"
 msgstr "6jam"
 
-#: lib/BOM/View/CGIForm.pm:1926
+#: lib/BOM/View/CGIForm.pm:1915
 msgid "<br>Your Cashier and Settings sections are locked as per your request</strong> - if you wish to unlock them, please enter the password."
 msgstr "<br>Bagian kasir dan pengaturan akun anda sudah dikunci</strong> - jika anda ingin membukanya, silakan masukkan kata sandi."
 
@@ -446,7 +453,7 @@ msgid "<p>Please take a moment to verify your identity by providing us with the 
 msgstr "<p>Silakan lengkapi pembuktian identitas anda dengan mengajukan jawaban pada pertanyaan rahasia dan tanggal lahir dibawah ini.</p>"
 
 #. (request()
-#: cgi/cashier_forward.cgi:190
+#: cgi/cashier_forward.cgi.tidyup:202 cgi/cashier_forward.cgi:205
 msgid "<p>Sorry, an error has occurred. Please <a href=\"%1\">try accessing our Cashier</a> again.</p>"
 msgstr "<p>Maaf, telah terjadi error. Silahkan <a href=\"%1\">coba akses bagian Kasir</a> kembali.</p>"
 
@@ -525,7 +532,7 @@ msgid "<strong>Benchmarked prices</strong> - %1 benchmarks its prices daily agai
 msgstr "<strong>Harga diacukan</strong> - %1 mengacu harga harian sesuai dengan market derivatif antar bank."
 
 #. (to_monetary_number_format($limit_price)
-#: cgi/oop/Controller/Bet.pm:2174
+#: lib/BOM/View/Controller/Bet.pm:2161
 msgid "<strong>Better execution price!</strong><br />  The price has moved in your favour from %1 to %2."
 msgstr "<strong>Harga eksekusi lebih baik!</strong><br /> Harga telah bergerak dari %1 ke %2."
 
@@ -600,7 +607,7 @@ msgstr "<strong>Tanpa kejutan</strong> - 'slippage', tanpa 'margin calls', tanpa
 msgid "<strong>No surprises</strong> - you will never have margin calls, gap risk, slippage costs, hidden fees or commissions."
 msgstr "<strong>Tanpa kejutan</strong> - anda tidak akan dikenakan margin call, resiko gap, biaya slippage, komisi tambahan."
 
-#: lib/BOM/View/CGIForm.pm:2997
+#: lib/BOM/View/CGIForm.pm:2973
 msgid "<strong>Note:</strong> to minimize the file size, please save the image in PNG or JPEG format."
 msgstr "<strong>Catatan:</strong> untuk mengurangi ukuran, silahkan simpan file dalam format PNG atau JPEG."
 
@@ -803,16 +810,12 @@ msgid "A momentum indicator showing the percent rate-of-change of a triple expon
 msgstr "Sebuah indikator mementum yang memperlihatkan perubahan harga persen pada pergerakan rata-rata  triple exponentially smoothed. Seperti oscillator lainnya, TRIX bergerak mengelilingi baris nol."
 
 #: /home/git/translations/binary-static/src/templates/toolkit/global/footer.html.tt:209
-#, fuzzy
-#| msgid "A new version of the interface is available. Please refresh this page to try again."
 msgid "A new version of the interface is available. Please <a href=\"#\" id=\"appcache-refresh-link\">refresh</a> this page to try again."
-msgstr "Interface versi terbaru telah tersedia. Silahkan refresh halaman ini untuk mencoba kembali."
+msgstr "Tersedia versi antarmuka terbaru. Silahkan <a href=\"#\" id=\"appcache-refresh-link\">perbarui</a> halaman ini untuk mencoba kembali."
 
 #: /home/git/translations/binary-static/src/templates/haml/layouts/default/footer.html.haml:1
-#, fuzzy
-#| msgid "A new version of the interface is available. Please refresh this page to try again."
 msgid "A new version of the interface is available. Please <a href='#' id='appcache-refresh-link'>refresh</a> this page to try again."
-msgstr "Interface versi terbaru telah tersedia. Silahkan refresh halaman ini untuk mencoba kembali."
+msgstr "Tersedia versi antarmuka terbaru. Silahkan <a href=\"#\" id=\"appcache-refresh-link\">perbarui</a> halaman ini untuk mencoba kembali."
 
 #: /home/git/translations/binary-static/src/templates/haml/static/open_source_projects.html.haml:1
 msgid "A next-generation front-end interface with Sencha ExtJS-5"
@@ -830,7 +833,7 @@ msgstr "Masalah terjadi"
 msgid "A problem occurred while connecting to the server. Please try again later."
 msgstr "Masalah terdeteksi pada saat menghubungi server. Silakan coba kembali sebentar lagi."
 
-#: lib/BOM/View/CGIForm.pm:5304
+#: lib/BOM/View/CGIForm.pm:5274
 msgid "A recent (less than 3 months old) scanned copy of your paper utility bill, or your paper bank, credit union, building society, credit, or debit card statement, or passbook"
 msgstr "Salinan terbaru (kurang dari 3 bulan) tagihan utilitas, atau rekening koran, tagihan kartu kredit atau debit atau buku tabungan"
 
@@ -838,7 +841,7 @@ msgstr "Salinan terbaru (kurang dari 3 bulan) tagihan utilitas, atau rekening ko
 msgid "A scanned copy of a utility bill showing your current residential address (utility bill must not be more than 3 months old)."
 msgstr "Salinan scan dari tagihan utilitas yang menunjukkan alamat tempat tinggal anda saat ini (tagihan utilitas tidak boleh lebih dari 3 bulan)."
 
-#: lib/BOM/View/CGIForm.pm:5301
+#: lib/BOM/View/CGIForm.pm:5271
 msgid "A scanned copy of your current valid passport, current driving license (provisional or full), or identity card"
 msgstr "Salinan paspor, SIM atau KTP yang masih berlaku"
 
@@ -862,7 +865,7 @@ msgstr "API"
 msgid "API Developer Guide"
 msgstr "Panduan Pengembang API"
 
-#: lib/BOM/View/CGIForm.pm:3575
+#: lib/BOM/View/CGIForm.pm:3542
 msgid "AUTHORISED PAYMENT AGENT? (this field visible from office only)"
 msgstr "AGEN PEMBAYARAN SAH? (bagian ini hanya dapat dilihat dari kantor saja)"
 
@@ -908,11 +911,11 @@ msgstr "Pengelolaan Akun dan Pelacakan"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/legal/terms_and_conditions.html.tt:127
 #: cgi/create_account.cgi:191 cgi/create_account.cgi:306
-#: cgi/open_account.cgi:15 lib/BOM/View/CGIForm.pm:4523
+#: cgi/open_account.cgi:15 lib/BOM/View/CGIForm.pm:4489
 msgid "Account Opening"
 msgstr "Pendaftaran Akun"
 
-#: lib/BOM/View/CGIForm.pm:83
+#: lib/BOM/View/CGIForm.pm:96
 msgid "Account Settings</a> accordingly. Thank you for your kind assistance"
 msgstr "Pengaturan Akun</a> dengan sesuai. Terimakasih untuk bantuan anda"
 
@@ -967,8 +970,8 @@ msgstr "Tambahkan baris"
 msgid "Add Overlay"
 msgstr "Tambah Arsiran"
 
-#: cgi/f_writepartics.cgi:214 lib/BOM/View/CGIForm.pm:1687
-#: lib/BOM/View/CGIForm.pm:908
+#: cgi/f_writepartics.cgi:214 lib/BOM/View/CGIForm.pm:1671
+#: lib/BOM/View/CGIForm.pm:916
 msgid "Address"
 msgstr "Alamat"
 
@@ -999,7 +1002,7 @@ msgstr "Semua"
 msgid "All credit card details are submitted directly to the Visa/Mastercard network using the latest SSL encryption technology, in accordance with bank policies."
 msgstr "Semua data kartu kredit adalah dikirimkan langsung ke dalam jaringan Visa/Mastercard menggunakan teknologi sandi SSL terbaru, sesuai dengan peraturan bank."
 
-#: lib/BOM/View/CGIForm.pm:4587
+#: lib/BOM/View/CGIForm.pm:4553
 msgid "All email inquiries will be responded to within 2 business days whenever possible."
 msgstr "Kami akan berusaha menjawab pertanyaan anda secepat mungkin dalam tempo 2 hari kerja."
 
@@ -1012,12 +1015,12 @@ msgstr "Semua opini, berita, penelitian, analisis, harga atau informasi lain yan
 msgid "All times are in GMT (Greenwich Mean Time)."
 msgstr "Seluruh waktu yang digunakan adalah dalam GMT (Greenwich Mean Time)."
 
-#: cgi/paymentagent_withdraw.cgi:219 lib/BOM/View/CGIForm.pm:4057
-#: lib/BOM/View/CGIForm.pm:4264
+#: cgi/paymentagent_withdraw.cgi:219 lib/BOM/View/CGIForm.pm:4025
+#: lib/BOM/View/CGIForm.pm:4231
 msgid "Amount"
 msgstr "Jumlah"
 
-#: cgi/oop/Helper/Controller/Bet/PriceBoxParameters.pm:257
+#: lib/BOM/View/Controller/Bet/PriceBoxParameters.pm:257
 msgid "Amount must be a positive number."
 msgstr "Jumlah harus angka positif."
 
@@ -1025,7 +1028,7 @@ msgstr "Jumlah harus angka positif."
 msgid "An Ends Between trade pays out if the market exit price is strictly higher than the low price target AND strictly lower than the high price target. An Ends Outside binary pays out if the market exit price is EITHER strictly higher than the high price target OR strictly lower than the low price target."
 msgstr "Kontrak Berakhir Antara akan memberi hasil jika harga akhir market harus lebih tinggi dari target harga rendah DAN harus lebih rendah dari target harga tinggi. Kontrak Berakhir Diluar akan memberi hasil jika harga akhir market SALAH SATU yaitu harus lebih tinggi dari target harga tinggi ATAU harus lebih rendah dari target harga rendah."
 
-#: lib/BOM/View/CGIForm.pm:1719
+#: lib/BOM/View/CGIForm.pm:1706
 msgid "An additional password can be used to restrict access to the Cashier and Settings areas."
 msgstr "Kata sandi lain khusus untuk pengamanan bagian Kasir dan Pengaturan."
 
@@ -1066,7 +1069,7 @@ msgstr "Dan akhir pekan anda dapat membawa anda ke beberapa tempat paling eksoti
 msgid "Another major award. This time we’re nominated by the online readers of Global Banking and Finance Review and judged by a panel of industry experts and analysts who recognise our 13 years of platform reliability, range of trades, pricing, customer service and extensive knowledge."
 msgstr "Anugerah terbaik lainnya. Kali ini kami dinominasikan oleh pembaca online dari Global Banking and Finance Review dan dinilai oleh panel juri ahli yang mengakui 13 tahun kehandalan, pilihan trading, harga, layanan dan pengetahuan kami."
 
-#: lib/BOM/View/CGIForm.pm:692
+#: lib/BOM/View/CGIForm.pm:703
 msgid "Answer to secret question"
 msgstr "Jawaban Pertanyaan Rahasia"
 
@@ -1106,7 +1109,7 @@ msgid "Apply for access"
 msgstr "Daftar akses"
 
 #: cgi/paymentagent_application.cgi:17 cgi/paymentagent_application.cgi:21
-#: cgi/paymentagent_application.cgi:51 lib/BOM/View/CGIForm.pm:4776
+#: cgi/paymentagent_application.cgi:51 lib/BOM/View/CGIForm.pm:4742
 msgid "Apply to become Payment Agent"
 msgstr "Mendaftar sebagai Agen Pembayaran"
 
@@ -1115,7 +1118,7 @@ msgstr "Mendaftar sebagai Agen Pembayaran"
 msgid "Apply to become a %1 <a class=\"pjaxload\" href=\"%2\">payment agent</a>."
 msgstr "Jika anda menjalankan bisnis exchanger, daftar sebagai <a class=\"pjaxload\" href=\"%2\">agen pembayaran</a>  %1."
 
-#: lib/BOM/View/CGIForm.pm:2469 lib/BOM/View/CGIForm.pm:319
+#: lib/BOM/View/CGIForm.pm:2451 lib/BOM/View/CGIForm.pm:340
 #: platform/bin/GenerateStaticData.pm:77
 msgid "Apr"
 msgstr "Apr"
@@ -1183,7 +1186,7 @@ msgid "Asian options settle by comparing the <strong>last tick</strong> with the
 msgstr "Opsi Asian diselesaikan dengan membandingkan <strong>tik terakhir</strong> dengan jumlah rata-rata tik selama periode kontrak."
 
 #: /home/git/translations/binary-static/src/templates/haml/get_started/types_of_trades.html.haml:1
-#: cgi/oop/Controller/Bet.pm:1224 cgi/oop/Controller/Bet.pm:1231
+#: lib/BOM/View/Controller/Bet.pm:1211 lib/BOM/View/Controller/Bet.pm:1218
 msgid "Asians"
 msgstr "Asian"
 
@@ -1202,7 +1205,6 @@ msgstr "Aset"
 #: /home/git/translations/binary-static/src/templates/toolkit/global/footer.html.tt:90
 #: cgi/asset_index.cgi:146 cgi/asset_index.cgi:30
 #: lib/BOM/Product/Contract.pm:2877 lib/BOM/Product/Contract.pm:2919
-#: lib/BOM/Product/Pricing/Engine/Role/StandardMarkup.pm:179
 #: lib/BOM/View/Menu.pm:150
 msgid "Asset Index"
 msgstr "Indeks Aset"
@@ -1212,7 +1214,7 @@ msgstr "Indeks Aset"
 msgid "At a suitable stage in your application, when authorisation by a %1 end-user is required, re-direct the end-user's browser to this URL:"
 msgstr "Sesuai dengan tingkatan aplikasi anda, setelah otorisasi oleh %1 diperlukan, browser pengguna akan diarahkan kepada URL berikut:"
 
-#: lib/BOM/View/CGIForm.pm:2485 lib/BOM/View/CGIForm.pm:335
+#: lib/BOM/View/CGIForm.pm:2467 lib/BOM/View/CGIForm.pm:356
 #: platform/bin/GenerateStaticData.pm:81
 msgid "Aug"
 msgstr "Agustus"
@@ -1225,7 +1227,7 @@ msgstr "Agustus"
 msgid "Australia"
 msgstr "AUSTRALIA"
 
-#: cgi/f_onlineid.cgi:190 cgi/f_onlineid.cgi:194 lib/BOM/View/CGIForm.pm:3265
+#: cgi/f_onlineid.cgi:190 cgi/f_onlineid.cgi:194 lib/BOM/View/CGIForm.pm:3235
 #: lib/BOM/View/Menu.pm:116
 msgid "Authenticate"
 msgstr "Pembuktian"
@@ -1238,11 +1240,11 @@ msgstr "Pembuktian untuk penarikan"
 msgid "Authenticate your Account"
 msgstr "pembuktian rekening"
 
-#: lib/BOM/View/CGIForm.pm:1162
+#: lib/BOM/View/CGIForm.pm:1152
 msgid "Authenticated"
 msgstr "Telah terbukti"
 
-#: lib/BOM/View/CGIForm.pm:5241
+#: lib/BOM/View/CGIForm.pm:5207
 msgid "Authentication"
 msgstr "Pembuktian"
 
@@ -1292,7 +1294,7 @@ msgstr "Lembar kerja grafik BOM"
 
 #: /home/git/translations/binary-static/src/templates/haml/get_started/benefits_of_trading_binaries.html.haml:1
 #: /home/git/translations/binary-static/src/templates/haml/get_started/how_to_trade_binaries.html.haml:1
-#: cgi/emailus.cgi:204 lib/BOM/View/Form.pm:419
+#: cgi/emailus.cgi:204
 msgid "Back"
 msgstr "Kembali"
 
@@ -1310,7 +1312,7 @@ msgstr "Bank wire/Transfer dana"
 msgid "Bank your way"
 msgstr "Bank pilihan anda"
 
-#: lib/BOM/View/CGIForm.pm:4810
+#: lib/BOM/View/CGIForm.pm:4776
 msgid "Bank/Credit Union/Building Society/Credit/Debit Card statement or passbook (within last 3 months)."
 msgstr "Kartu Keluarga/Tagihan/Rekening Koran yang mencantumkan nama dan alamat anda (tidak melebihi tempo 3 bulan setelah tanggal pengeluaran)."
 
@@ -1338,7 +1340,7 @@ msgstr "Chart Bar OHLC"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/bet/form/barrier.html.tt:18
 #: /home/git/translations/binary-static/src/templates/toolkit/resources/pricing_table_form.html.tt:59
-#: cgi/oop/Controller/Bet.pm:2398 platform/bin/GenerateStaticData.pm:117
+#: lib/BOM/View/Controller/Bet.pm:2385 platform/bin/GenerateStaticData.pm:117
 msgid "Barrier"
 msgstr "Batasan"
 
@@ -1368,7 +1370,7 @@ msgid "Barrier must be at least "
 msgstr "Batasan setidaknya "
 
 #: /home/git/translations/binary-static/src/templates/toolkit/bet/form/barrier.html.tt:15
-#: cgi/oop/Controller/Bet.pm:2397
+#: lib/BOM/View/Controller/Bet.pm:2384
 msgid "Barrier offset"
 msgstr "Batasan offset"
 
@@ -1451,9 +1453,17 @@ msgstr "Bid"
 msgid "Binary (C.R.) S.A., registered in Costa Rica."
 msgstr "Binary (C.R.) S.A., terdaftar di Costa Rica."
 
+#: /home/git/translations/binary-static/src/templates/haml/static/contact.html.haml:1
+msgid "Binary (Europe) Ltd, Mompalao Building, Suite 2, Tower Road, Msida MSD1825"
+msgstr ""
+
 #: /home/git/translations/binary-static/src/templates/haml/about/index.html.haml:1
 msgid "Binary (Europe) Ltd, Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta. Licenced and regulated by the Lotteries and Gaming Authority in Malta, licence no LGA/CL2/118/2000."
 msgstr "Binary (Europe) Ltd, Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta. Berlisensi dan diatur oleh Pihak Berwenang Trading di negara Malta, nomor izin LGA/CL2/118/2000."
+
+#: /home/git/translations/binary-static/src/templates/haml/static/contact.html.haml:1
+msgid "Binary (IOM) Ltd, First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW"
+msgstr ""
 
 #: /home/git/translations/binary-static/src/templates/haml/about/index.html.haml:1
 msgid "Binary (IOM) Ltd, First Floor, Millennium House, Victoria Road, Douglas, Isle of Man, IM2 4RW. Licenced and regulated by the Gambling Supervision Commission in the Isle of Man. Current online gambling licence granted on the 31 August 2012."
@@ -1586,7 +1596,7 @@ msgstr "Bollinger Bands Upper"
 msgid "Bollinger Bands are lines displayed around a simple moving average line (default set to 20 periods). The upper line is displayed 2 standard deviations above the moving average, and the lower line is displayed 2 standard deviations below the moving average.By definition prices are high at the upper band and low at the lower band. This definition can aid in rigorous pattern recognition and is useful in comparing price action to the action of indicators to arrive at systematic trading decisions."
 msgstr "Bollinger Bands adalah garis-garis yang ditampilkan mengelilingi garis simple moving average (tersusun secara default kepada 20 periode). Garis atas menampilkan 2 standard deviasi diatas moving average, dan garis bawah menampilkan 2 standard deviasi dibawah moving average.Dengan batasan harga yang tinggi pada upper band dan rendah pada lower band. Batasan ini dapat membantu dalam pengakuan pola tajam dan berguna untuk membandingkan harga aksi dengan indikator aksi yang akan sampai pada keputusan trading sistematis."
 
-#: cgi/c_template.cgi:64 lib/BOM/View/CGIForm.pm:774
+#: cgi/c_template.cgi:64 lib/BOM/View/CGIForm.pm:783
 msgid "Bonus Code"
 msgstr "Kode Bonus (jika ada)"
 
@@ -1594,7 +1604,7 @@ msgstr "Kode Bonus (jika ada)"
 msgid "Both the deposit and the bonus amounts are clearly displayed when this type of promotion is available. E.g. Get $25 when you deposit $100. By way of example, if you choose to participate in a \"Get $25 when you deposit $100\" promotion, we will add an additional $25 to your account when you deposit $100 AND when you have purchased at least $125 worth of trades ($25 * 5= $125). The bonus will only be credited to your account when both of these conditions are met."
 msgstr "Jumlah deposit dan bonus ditampilkan dengan jelas ketika promosi tersedia. Sebagai contoh, dapatkan $25 jika anda mendeposit $100. Hal tersebut berarti jika anda memilih promosi \"Dapat $25 ketika mendeposit $100\", kami akan menambahkan bonus sebesar $25 kedalam akun anda ketika anda mendeposit minimal $100 DAN ketika anda melakukan pembelian minimal $125 ($25*5=$125). Bonus hanya akan dikreditkan kedalam akun anda setelah syarat tersebut dipenuhi."
 
-#: lib/BOM/View/CGIForm.pm:664
+#: lib/BOM/View/CGIForm.pm:676
 msgid "Brand of first car"
 msgstr "Merek mobil"
 
@@ -1602,7 +1612,7 @@ msgstr "Merek mobil"
 msgid "Browse"
 msgstr "Layari"
 
-#: lib/BOM/View/CGIForm.pm:3237
+#: lib/BOM/View/CGIForm.pm:3208
 msgid "Building Number"
 msgstr "Nomor Bangunan"
 
@@ -1631,6 +1641,10 @@ msgstr "Beli Kontrak"
 msgid "By requesting membership to our affiliate program you are agreeing to the terms and conditions set out in this Agreement. The application form will form an integral part of this Agreement."
 msgstr "Dengan meminta keanggotaan untuk bergabung dalam program afiliasi kami, anda setuju dengan syarat dan ketentuan yang ditetapkan dalam Perjanjian ini. Formulir aplikasi akan membentuk suatu bagian integral dari Persetujuan ini."
 
+#: /home/git/translations/binary-static/src/templates/haml/static/contact.html.haml:1
+msgid "C-2-01 SME Technopreneur Center 2 63000 Cyberjaya"
+msgstr ""
+
 #: /home/git/translations/binary-static/src/templates/toolkit/resources/pricing_table_form.html.tt:114
 #: /home/git/translations/binary-static/src/templates/toolkit/resources/rise_fall_table.html.tt:59
 msgid "Calculate"
@@ -1642,11 +1656,11 @@ msgstr "Hitung"
 msgid "Calculating"
 msgstr "Menghitung"
 
-#: lib/BOM/View/CGIForm.pm:2933
+#: lib/BOM/View/CGIForm.pm:2909
 msgid "Call me now"
 msgstr "Hubungi saya sekarang"
 
-#: lib/BOM/View/CGIForm.pm:4592
+#: lib/BOM/View/CGIForm.pm:4558
 msgid "Call us"
 msgstr "Hubungi Kami"
 
@@ -1654,7 +1668,7 @@ msgstr "Hubungi Kami"
 msgid "Callback URL"
 msgstr "URL callback"
 
-#: lib/BOM/View/CGIForm.pm:4603
+#: lib/BOM/View/CGIForm.pm:4569
 msgid "Callback services"
 msgstr "Layanan Callback"
 
@@ -1711,7 +1725,8 @@ msgid "Cash Dividend"
 msgstr "Dividen Tunai"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/homepage/logged_in.html.tt:95
-#: cgi/available_payment_methods.cgi:18 cgi/cashier_forward.cgi:28
+#: cgi/available_payment_methods.cgi:18 cgi/cashier_forward.cgi.tidyup:28
+#: cgi/cashier_forward.cgi.tidyup:31 cgi/cashier_forward.cgi:28
 #: cgi/cashier_forward.cgi:31 lib/BOM/View/Menu.pm:130
 msgid "Cashier"
 msgstr "Kasir"
@@ -1720,7 +1735,7 @@ msgstr "Kasir"
 msgid "Cashier Testing"
 msgstr "Percobaan Kasir"
 
-#: lib/BOM/View/CGIForm.pm:1824
+#: lib/BOM/View/CGIForm.pm:1813
 msgid "Cashier/Settings password"
 msgstr "Password Kasir/Pengaturan"
 
@@ -1760,8 +1775,8 @@ msgstr "Merubah Informasi Akun"
 
 #: cgi/change_password.cgi:14 cgi/change_password.cgi:19
 #: cgi/change_password.cgi:33 cgi/save_password.cgi:46
-#: cgi/save_password.cgi:59 lib/BOM/View/CGIForm.pm:2087
-#: lib/BOM/View/CGIForm.pm:2260
+#: cgi/save_password.cgi:59 lib/BOM/View/CGIForm.pm:2073
+#: lib/BOM/View/CGIForm.pm:2244
 msgid "Change Password"
 msgstr "Ubah Kata Sandi"
 
@@ -1769,7 +1784,7 @@ msgstr "Ubah Kata Sandi"
 msgid "Change in account settings"
 msgstr "Perubahan pengaturan akun"
 
-#: cgi/analyse_contract.cgi:280 cgi/oop/Controller/Bet.pm:2203
+#: cgi/analyse_contract.cgi:280 lib/BOM/View/Controller/Bet.pm:2190
 msgid "Chart"
 msgstr "Grafik"
 
@@ -1994,15 +2009,15 @@ msgid "Closing Price"
 msgstr "Harga Closing"
 
 #. (2000)
-#: lib/BOM/View/CGIForm.pm:3525
+#: lib/BOM/View/CGIForm.pm:3492
 msgid "Comment must not exceed %1 characters. Please resubmit."
 msgstr "Komentar tidak boleh melebihi %1 karakter. Silahkan isi ulang."
 
-#: lib/BOM/View/CGIForm.pm:3469
+#: lib/BOM/View/CGIForm.pm:3436
 msgid "Commission (%) you want to take on deposits"
 msgstr "Komisi (%), yang ingin Anda kenakan pada deposit"
 
-#: lib/BOM/View/CGIForm.pm:3486
+#: lib/BOM/View/CGIForm.pm:3453
 msgid "Commission (%) you want to take on withdrawals"
 msgstr "Komisi (%), yang ingin Anda kenakan pada penarikan"
 
@@ -2036,6 +2051,12 @@ msgstr "Komoditas adalah sumber yang berkembang dan disaring dari tanah seperti 
 msgid "Commodity Channel Index"
 msgstr "Indeks Terusan Komoditas"
 
+#: /home/git/translations/binary-static/src/templates/haml/static/contact.html.haml:1
+#, fuzzy
+#| msgid "Bank address"
+msgid "Company addresses"
+msgstr "Alamat Bank"
+
 #: /home/git/translations/binary-static/src/templates/haml/static/careers.html.haml:1
 msgid "Company trip to Phuket, Thailand"
 msgstr "Perjalanan wisata ke Phuket, Thailand"
@@ -2052,7 +2073,6 @@ msgid "Complaints and Disputes"
 msgstr "Keluhan dan Perselisihan"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/container/confirm_box_popup.html.tt:1
-#: lib/BOM/View/Form.pm:424
 msgid "Confirm"
 msgstr "Lanjutkan"
 
@@ -2070,6 +2090,7 @@ msgstr "Kontak"
 
 #: /home/git/translations/binary-static/src/templates/haml/layouts/default/footer.html.haml:1
 #: /home/git/translations/binary-static/src/templates/haml/layouts/default/topbar.html.haml:1
+#: /home/git/translations/binary-static/src/templates/haml/static/contact.html.haml:1
 #: /home/git/translations/binary-static/src/templates/haml/static/white_labels.html.haml:1
 #: /home/git/translations/binary-static/src/templates/toolkit/email/common_email.html.tt:105
 #: /home/git/translations/binary-static/src/templates/toolkit/global/footer.html.tt:174
@@ -2083,11 +2104,12 @@ msgstr "Hubungi Kami"
 msgid "Contact the payment agent directly for more information on how to transfer money to them."
 msgstr "Hubungi agen pembayaran langsung untuk informasi lebih lanjut tentang bagaimana mentransfer dana."
 
+#: /home/git/translations/binary-static/src/templates/haml/static/contact.html.haml:1
 #: /home/git/translations/binary-static/src/templates/haml/static/open_source_projects.html.haml:1
 msgid "Contact us"
 msgstr "Hubungi kami"
 
-#: lib/BOM/View/CGIForm.pm:2596 lib/BOM/View/CGIForm.pm:2647
+#: lib/BOM/View/CGIForm.pm:2577 lib/BOM/View/CGIForm.pm:2628
 msgid "Continue"
 msgstr "Lanjutkan"
 
@@ -2163,7 +2185,7 @@ msgstr "Masa kontrak"
 msgid "Contract purchase (approved applications only)"
 msgstr "Pembelian kontrak (yang disetujui saja)"
 
-#: cgi/oop/Controller/Bet.pm:1503
+#: lib/BOM/View/Controller/Bet.pm:1490
 msgid "Contract purchases on this account must be on behalf of granters."
 msgstr "Kontrak yang dibeli pada akun ini adalah atas nama pemberi kuasa."
 
@@ -2226,16 +2248,13 @@ msgstr "Biaya"
 msgid "Country"
 msgstr "Negara"
 
-#: cgi/f_writepartics.cgi:212 lib/BOM/View/CGIForm.pm:1193
-#: lib/BOM/View/CGIForm.pm:565
+#: cgi/f_writepartics.cgi:212 lib/BOM/View/CGIForm.pm:1183
+#: lib/BOM/View/CGIForm.pm:580
 msgid "Country of Residence"
 msgstr "Negara Domisili"
 
 #: /home/git/translations/binary-static/src/templates/haml/home/index.html.haml:1
-msgid "Country:"
-msgstr "Negara:"
-
-#: /home/git/translations/binary-static/src/templates/haml/home/index.html.haml:1
+#: /home/git/translations/binary-static/src/templates/haml/home2/index.html.haml:1
 msgid "Create free account"
 msgstr "Daftar gratis"
 
@@ -2246,6 +2265,10 @@ msgstr "Kredit/<wbr/>Debit"
 #: /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:151
 msgid "Credit/Debit Card"
 msgstr "Kartu Kredit/Debit"
+
+#: cgi/paymentagent_transfer.cgi:116
+msgid "Cross-company payment agent transfers are not allowed."
+msgstr ""
 
 #: lib/BOM/View/Charting.pm:437
 msgid "Crosshair"
@@ -2267,19 +2290,19 @@ msgstr "Spot saat ini"
 msgid "Current market price is 0."
 msgstr "Harga terkini market adalah 0."
 
-#: lib/BOM/View/CGIForm.pm:1988
+#: lib/BOM/View/CGIForm.pm:1977
 msgid "Current password"
 msgstr "Kata sandi saat ini"
 
-#: lib/BOM/View/CGIForm.pm:4801 lib/BOM/View/CGIForm.pm:5321
+#: lib/BOM/View/CGIForm.pm:4767 lib/BOM/View/CGIForm.pm:5294
 msgid "Current photocard Driving Licence (Provisional or Full)"
 msgstr "SIM (Surat Ijin Mengemudi) yang masih berlaku"
 
-#: lib/BOM/View/CGIForm.pm:4798
+#: lib/BOM/View/CGIForm.pm:4764
 msgid "Current signed Passport"
 msgstr "Paspor terkini"
 
-#: lib/BOM/View/CGIForm.pm:5320
+#: lib/BOM/View/CGIForm.pm:5293
 msgid "Current signed Passport OR"
 msgstr "KTP atau Paspor yang masih berlaku"
 
@@ -2298,18 +2321,18 @@ msgid "Daily"
 msgstr "Harian"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/charting/daily_ohlc.html.tt:31
-#: cgi/oop/Controller/Bet.pm:2226
+#: lib/BOM/View/Controller/Bet.pm:2213
 msgid "Daily Prices"
 msgstr "Harga Harian"
 
-#: lib/BOM/View/CGIForm.pm:3719
+#: lib/BOM/View/CGIForm.pm:3686
 msgid "Daily Turnover limit"
 msgstr "Batas Turnover harian"
 
 #. ($currencies, $self_exclusion->max_turnover)
 #. ($all_currencies, $self_exclusion->max_turnover)
 #: /home/git/regentmarkets/bom-backoffice/f_setting_selfexclusion.cgi:64
-#: lib/BOM/View/CGIForm.pm:4864
+#: lib/BOM/View/CGIForm.pm:4830
 msgid "Daily Turnover limit is currently set to <strong>%1 %2</strong>"
 msgstr "Batas pembelian kontrak harian saat ini <strong>%1 %2</strong>"
 
@@ -2333,8 +2356,8 @@ msgstr "Data akan tersedia setelah market ditutup."
 msgid "Date"
 msgstr "Tanggal"
 
-#: lib/BOM/View/CGIForm.pm:1184 lib/BOM/View/CGIForm.pm:2516
-#: lib/BOM/View/CGIForm.pm:365
+#: lib/BOM/View/CGIForm.pm:1174 lib/BOM/View/CGIForm.pm:2498
+#: lib/BOM/View/CGIForm.pm:386
 msgid "Date of birth"
 msgstr "Tanggal lahir"
 
@@ -2469,7 +2492,7 @@ msgstr ""
 "\n"
 "%1"
 
-#: lib/BOM/View/CGIForm.pm:2501 lib/BOM/View/CGIForm.pm:351
+#: lib/BOM/View/CGIForm.pm:2483 lib/BOM/View/CGIForm.pm:372
 #: platform/bin/GenerateStaticData.pm:85
 msgid "Dec"
 msgstr "Des"
@@ -2591,11 +2614,11 @@ msgstr "Perbedaan dengan data feed lain"
 
 #: /home/git/translations/binary-static/src/templates/haml/get_started/random_markets.html.haml:1
 #: /home/git/translations/binary-static/src/templates/haml/get_started/types_of_trades.html.haml:1
-#: cgi/oop/Controller/Bet.pm:1239 cgi/oop/Controller/Bet.pm:1246
+#: lib/BOM/View/Controller/Bet.pm:1226 lib/BOM/View/Controller/Bet.pm:1233
 msgid "Digits"
 msgstr "Digit"
 
-#: lib/BOM/View/CGIForm.pm:4425 lib/BOM/View/CGIForm.pm:4427
+#: lib/BOM/View/CGIForm.pm:4391 lib/BOM/View/CGIForm.pm:4393
 msgid "Direct helpline"
 msgstr "Bantuan Langsung"
 
@@ -2612,6 +2635,7 @@ msgid "Discover our indices generated from random numbers."
 msgstr "Temukan indeks kami yang dihasilkan dari angka acak."
 
 #: /home/git/translations/binary-static/src/templates/haml/home/index.html.haml:1
+#: /home/git/translations/binary-static/src/templates/haml/home2/index.html.haml:1
 msgid "Discover the easiest way to get started in the financial markets."
 msgstr "Temukan cara termudah untuk memulai market financial."
 
@@ -2720,7 +2744,7 @@ msgstr "Dr"
 msgid "Draw Chart"
 msgstr "Gambar Grafik"
 
-#: lib/BOM/View/CGIForm.pm:79
+#: lib/BOM/View/CGIForm.pm:92
 msgid "Due to new gaming regulations recently promulgated in Malta, we are required to obtain your residential address details.  We would be grateful if you could update your"
 msgstr "Berhubung peraturan baru bertransaksi Malta, kami diminta untuk mendapatkan alamat lengkap anda. Kami sangat menghargai jika anda dapat memperbaharui"
 
@@ -2802,15 +2826,19 @@ msgstr "Tinggalkan bagian kasir untuk sementara atau anda akan mengalami masalah
 msgid "Email"
 msgstr "Email"
 
-#: cgi/emailus.cgi:31 lib/BOM/View/CGIForm.pm:4582
+#: cgi/emailus.cgi:31 lib/BOM/View/CGIForm.pm:4548
 msgid "Email Us"
 msgstr "Email Kami"
 
 #: cgi/f_writepartics.cgi:200 cgi/f_writepartics.cgi:211
-#: lib/BOM/View/CGIForm.pm:1206 lib/BOM/View/CGIForm.pm:2326
-#: lib/BOM/View/CGIForm.pm:595
+#: lib/BOM/View/CGIForm.pm:1196 lib/BOM/View/CGIForm.pm:2310
+#: lib/BOM/View/CGIForm.pm:609
 msgid "Email address"
 msgstr "Alamat email"
+
+#: /home/git/translations/binary-static/src/templates/haml/static/contact.html.haml:1
+msgid "Email: <span id='cs_contact_eaddress'></span>"
+msgstr ""
 
 #: /home/git/translations/binary-static/src/templates/toolkit/bet/form/duration.html.tt:5
 #: cgi/analyse_contract.cgi:113 platform/bin/GenerateStaticData.pm:114
@@ -2821,7 +2849,7 @@ msgstr "Waktu akhir"
 msgid "Ends Between/Ends Outside trades"
 msgstr "Kontrak Berakhir Antara/Berakhir Keluar"
 
-#: cgi/contract_demo.cgi:87 cgi/oop/Controller/Bet.pm:1207
+#: cgi/contract_demo.cgi:87 lib/BOM/View/Controller/Bet.pm:1194
 msgid "Ends Between/Outside"
 msgstr "Berakhir Antara/Di Luar"
 
@@ -2839,7 +2867,7 @@ msgstr "Pastikan anda tidak mempromosikan %1 kepada pihak dibawah umur 18 tahun.
 msgid "Enter the barrier in terms of the difference from the spot price. If you enter +0.005, then you will be purchasing a contract with a barrier 0.005 higher than the entry spot. The entry spot will be the next tick after your order has been received"
 msgstr "Masukan batasan yang merupakan selisih harga spot. Jika Anda memasukan +0.005, maka Anda akan membeli kontrak dengan batasan 0.005 lebih tinggi dari spot masuk. Spot masuk adalah tik setelah kontrak Anda diproses"
 
-#: cgi/oop/Controller/Bet.pm:2401
+#: lib/BOM/View/Controller/Bet.pm:2388
 msgid "Enter the barrier in terms of the difference from the spot price. If you enter +0.005, then you will be purchasing a contract with a barrier 0.005 higher than the entry spot. The entry spot will be the next tick after your order has been received."
 msgstr "Masukan batasan yang merupakan selisih harga spot. Jika Anda memasukan +0.005, maka Anda akan membeli kontrak dengan batasan 0.005 lebih tinggi dari spot masuk. Spot masuk adalah tik setelah kontrak Anda diproses."
 
@@ -2884,19 +2912,19 @@ msgstr "Warga Uni Eropa kecuali Inggris akan memiliki akun mereka terdaftar deng
 msgid "Exchange Offering"
 msgstr "Penawaran Pertukaran"
 
-#: lib/BOM/View/CGIForm.pm:3791
+#: lib/BOM/View/CGIForm.pm:3758
 msgid "Exclude me from the website until"
 msgstr "Kecualikan saya dari situs web hingga"
 
-#: lib/BOM/View/CGIForm.pm:3983
+#: lib/BOM/View/CGIForm.pm:3952
 msgid "Exclude time cannot be for more than five years."
 msgstr "Waktu pengecualian tidak dapat melebihi lima tahun."
 
-#: lib/BOM/View/CGIForm.pm:3978
+#: lib/BOM/View/CGIForm.pm:3947
 msgid "Exclude time cannot be less than 6 months."
 msgstr "Waktu pengecualian tidak boleh kurang dari 6 bulan."
 
-#: lib/BOM/View/CGIForm.pm:3973
+#: lib/BOM/View/CGIForm.pm:3942
 msgid "Exclude time must be after today."
 msgstr "Waktu pengecualian harus setelah hari ini."
 
@@ -2984,7 +3012,7 @@ msgstr "Laba Kontrak Turun"
 msgid "Fall Contract Return (%)"
 msgstr "Laba Kontrak Turun (%)"
 
-#: lib/BOM/View/CGIForm.pm:276
+#: lib/BOM/View/CGIForm.pm:298
 msgid "Family Name"
 msgstr "Nama Belakang"
 
@@ -2993,20 +3021,20 @@ msgstr "Nama Belakang"
 msgid "Fast Stochastic"
 msgstr "Stochastic Cepat"
 
-#: lib/BOM/View/CGIForm.pm:664
+#: lib/BOM/View/CGIForm.pm:676
 msgid "Favourite artist"
 msgstr "Artis favorit"
 
-#: lib/BOM/View/CGIForm.pm:664
+#: lib/BOM/View/CGIForm.pm:676
 msgid "Favourite dish"
 msgstr "Makanan favorit"
 
-#: cgi/f_writepartics.cgi:223 lib/BOM/View/CGIForm.pm:1441
-#: lib/BOM/View/CGIForm.pm:4430 lib/BOM/View/CGIForm.pm:4431
+#: cgi/f_writepartics.cgi:223 lib/BOM/View/CGIForm.pm:1425
+#: lib/BOM/View/CGIForm.pm:4396 lib/BOM/View/CGIForm.pm:4397
 msgid "Fax"
 msgstr "Fax"
 
-#: lib/BOM/View/CGIForm.pm:2461 lib/BOM/View/CGIForm.pm:311
+#: lib/BOM/View/CGIForm.pm:2443 lib/BOM/View/CGIForm.pm:332
 #: platform/bin/GenerateStaticData.pm:75
 msgid "Feb"
 msgstr "Peb"
@@ -3056,11 +3084,11 @@ msgstr "Imbalan Financial"
 msgid "Find the right trade for every market condition."
 msgstr "Temukan trading yang tepat bagi setiap kondisi market."
 
-#: lib/BOM/View/CGIForm.pm:236
+#: lib/BOM/View/CGIForm.pm:259
 msgid "First Name"
 msgstr "Nama Depan"
 
-#: lib/BOM/View/CGIForm.pm:1248 lib/BOM/View/CGIForm.pm:410
+#: lib/BOM/View/CGIForm.pm:1237 lib/BOM/View/CGIForm.pm:430
 msgid "First line of home address"
 msgstr "Alamat Rumah"
 
@@ -3116,7 +3144,7 @@ msgstr ""
 "\n"
 "%1"
 
-#: lib/BOM/View/CGIForm.pm:4791
+#: lib/BOM/View/CGIForm.pm:4757
 msgid "For security reasons, please note that Payment Agent accounts will only be able to deposit via Bank Wire."
 msgstr "Untuk alasan keamanan, mohon diperhatikan bahwa account agen hanya dapat mendeposit melalui bank transfer."
 
@@ -3163,7 +3191,7 @@ msgstr "Penipuan dan Pencucian Uang"
 msgid "Free Bonus"
 msgstr "Bonus Gratis"
 
-#: lib/BOM/View/CGIForm.pm:5029
+#: lib/BOM/View/CGIForm.pm:4995
 msgid "Free Contract Bonus"
 msgstr "Bonus Gratis Kontrak"
 
@@ -3198,7 +3226,7 @@ msgstr "Tanggal berakhir diluar batas"
 msgid "From:"
 msgstr "Dari:"
 
-#: lib/BOM/View/CGIForm.pm:4300
+#: lib/BOM/View/CGIForm.pm:4266
 msgid "Further Instructions"
 msgstr "Instruksi Tambahan"
 
@@ -3209,7 +3237,7 @@ msgid "Further information"
 msgstr "Informasi selanjutnya"
 
 #. (300)
-#: cgi/paymentagent_withdraw.cgi:176 lib/BOM/View/CGIForm.pm:4324
+#: cgi/paymentagent_withdraw.cgi:176 lib/BOM/View/CGIForm.pm:4289
 msgid "Further instructions must not exceed %1 characters."
 msgstr "Instruksi Tambahan tidak boleh melebihi %1 perkataan."
 
@@ -3244,11 +3272,11 @@ msgid "Generous Commission Structure"
 msgstr "Struktur Persentasi Komisi"
 
 #. ($promocode_currency . $promocode_amount,            $promocode_currency . $min_deposit)
-#: lib/BOM/View/CGIForm.pm:5005
+#: lib/BOM/View/CGIForm.pm:4971
 msgid "Get %1 when you deposit %2."
 msgstr "Dapat %1 jika anda mendeposit %2."
 
-#: cgi/oop/Controller/Bet.pm:1088
+#: lib/BOM/View/Controller/Bet.pm:1075
 msgid "Get Prices"
 msgstr "Dapatkan Harga"
 
@@ -3265,6 +3293,7 @@ msgid "Get started with just $5"
 msgstr "Mulai dari hanya $5"
 
 #: /home/git/translations/binary-static/src/templates/haml/home/index.html.haml:1
+#: /home/git/translations/binary-static/src/templates/haml/home2/index.html.haml:1
 msgid "Get your free $10k virtual money account"
 msgstr "Gratis $10K Dana Virtual"
 
@@ -3364,12 +3393,12 @@ msgstr "Batasan Tinggi"
 #: /home/git/translations/binary-static/src/templates/toolkit/bet/form/barrier.html.tt:18
 #: /home/git/translations/binary-static/src/templates/toolkit/charting/livechart.html.tt:43
 #: /home/git/translations/binary-static/src/templates/toolkit/resources/pricing_table_form.html.tt:60
-#: cgi/oop/Controller/Bet.pm:2394
+#: lib/BOM/View/Controller/Bet.pm:2381
 msgid "High barrier"
 msgstr "Batasan Tinggi"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/bet/form/barrier.html.tt:15
-#: cgi/oop/Controller/Bet.pm:2392
+#: lib/BOM/View/Controller/Bet.pm:2379
 msgid "High barrier offset"
 msgstr "Batasan offset tinggi"
 
@@ -3393,7 +3422,7 @@ msgstr "Lebih Tinggi/Rendah"
 
 #: /home/git/translations/binary-static/src/templates/haml/get_started/random_markets.html.haml:1
 #: cgi/contract_demo.cgi:46 cgi/contract_demo.cgi:47 cgi/contract_guide.cgi:32
-#: cgi/oop/Controller/Bet.pm:1162 cgi/oop/Controller/Bet.pm:1169
+#: lib/BOM/View/Controller/Bet.pm:1149 lib/BOM/View/Controller/Bet.pm:1156
 msgid "Higher/Lower"
 msgstr "Lebih Tinggi/Rendah"
 
@@ -3480,7 +3509,7 @@ msgstr "Bagaimana cara bertrading market random?"
 msgid "How to use a payment agent?"
 msgstr "Bagaimana cara menggunakan agen pembayaran?"
 
-#: lib/BOM/View/CGIForm.pm:5315
+#: lib/BOM/View/CGIForm.pm:5288
 msgid "However, in order to increase your withdrawal limits, you are kindly requested to follow the instructions below."
 msgstr "Namun, untuk meningkatkan batasan penarikan dana silahkan ikuti instruksi berikut ini."
 
@@ -3493,7 +3522,7 @@ msgid "I forgot my password, what should I do?"
 msgstr "Saya lupa kata sandi, apa yang harus saya lakukan?"
 
 #. ($tac_url)
-#: lib/BOM/View/CGIForm.pm:864
+#: lib/BOM/View/CGIForm.pm:872
 msgid "I have read and agree to the <a target=\"_blank\" href=\"%1\">terms and conditions</a> of the site."
 msgstr "Saya telah membaca dan menyetujui <a target=\"_blank\" href=\"%1\">syarat dan kondisi</a> situs ini."
 
@@ -3501,15 +3530,15 @@ msgstr "Saya telah membaca dan menyetujui <a target=\"_blank\" href=\"%1\">syara
 msgid "I'm new to binaries, where do I start?"
 msgstr "Saya masih sangat baru di binary, bagaimana cara memulai?"
 
-#: lib/BOM/View/CGIForm.pm:1164
+#: lib/BOM/View/CGIForm.pm:1154
 msgid "ID scans submitted"
 msgstr "Scan ID dikirimkan"
 
-#: lib/BOM/View/CGIForm.pm:1467
+#: lib/BOM/View/CGIForm.pm:1451
 msgid "IP Address"
 msgstr "Alamat IP"
 
-#: cgi/f_writepartics.cgi:224 lib/BOM/View/CGIForm.pm:1704
+#: cgi/f_writepartics.cgi:224 lib/BOM/View/CGIForm.pm:1691
 msgid "IP Security"
 msgstr "Keamanan IP"
 
@@ -3529,7 +3558,7 @@ msgstr "Jika terjadi kesalahan didalam menghitung pembagian komisi, Perusahaan b
 msgid "If any provision of this Agreement is held to be void or unenforceable in whole or part, the impugned provision (or part thereof) shall be deemed to be deleted from this Agreement and the remaining provisions (including the remainder of the affected provision) shall continue to be valid and applicable."
 msgstr "Jika ketentuan apapun dalam Perjanjian ini dianggap tidak berlaku atau tidak dapat dilaksanakan secara keseluruhan atau sebagian, ketentuan impugned (atau bagian daripadanya) akan dianggap dihapus dari Perjanjian ini dan ketentuan lainnya (termasuk sisa ketentuan yang terkena) wajib tetap berlaku dan berlaku."
 
-#: lib/BOM/View/CGIForm.pm:2993
+#: lib/BOM/View/CGIForm.pm:2969
 msgid "If applicable, to expedite the processing of your query please include a screen capture of the page that requires our attention."
 msgstr "Jika memungkinkan, untuk mempercepat proses pertanyaan anda silahkan lampirkan tampilan halaman permasalahan yang anda maksudkan."
 
@@ -3746,12 +3775,12 @@ msgstr "Dalam keadaan dimana kontrak trading finansial diselesaikan atau dijual 
 msgid "In the meantime, we hope that you will have found the site to be informative and that it will meet with your requirements for financial fixed-odds trading."
 msgstr "di waktu yang sama, kami harap Anda akan telah menemukan website yang lebih mengakomodasi kebutuhan anda akan finansial fixed-odds transaksi."
 
-#: lib/BOM/View/CGIForm.pm:3334
+#: lib/BOM/View/CGIForm.pm:3303
 msgid "In what country do you want to offer your service"
 msgstr "Pada negara mana anda ingin menawarkan layanan anda"
 
 #: cgi/contract_demo.cgi:75 cgi/contract_demo.cgi:88 cgi/contract_guide.cgi:58
-#: cgi/oop/Controller/Bet.pm:1213
+#: lib/BOM/View/Controller/Bet.pm:1200
 msgid "In/Out"
 msgstr "Di Dalam/Luar"
 
@@ -3871,7 +3900,7 @@ msgstr "Intraday"
 msgid "Intraday contracts may not cross market open."
 msgstr "Kontrak intraday mungkin tidak melewati pembukaan market."
 
-#: cgi/oop/Controller/Bet.pm:2238
+#: lib/BOM/View/Controller/Bet.pm:2225
 msgid "Intraday prices"
 msgstr "Harga-harga Intraday"
 
@@ -3879,23 +3908,22 @@ msgstr "Harga-harga Intraday"
 msgid "Introduction"
 msgstr "Pendahuluan"
 
-#: lib/BOM/View/CGIForm.pm:3254
+#: lib/BOM/View/CGIForm.pm:3224
 msgid "Invalid Building No./Name"
 msgstr "Nomor/Nama Bangunan salah"
 
-#: cgi/oop/Helper/Controller/Bet/PriceBoxParameters.pm:129
-#: cgi/oop/Helper/Controller/Bet/PriceBoxParameters.pm:237
-#: cgi/oop/Helper/Controller/Bet/PriceBoxParameters.pm:436
+#: lib/BOM/View/Controller/Bet/PriceBoxParameters.pm:129
+#: lib/BOM/View/Controller/Bet/PriceBoxParameters.pm:237
+#: lib/BOM/View/Controller/Bet/PriceBoxParameters.pm:441
 msgid "Invalid Input"
 msgstr "Input tidak valid"
 
-#: lib/BOM/View/CGIForm.pm:4080 lib/BOM/View/CGIForm.pm:4086
-#: lib/BOM/View/CGIForm.pm:4287 lib/BOM/View/CGIForm.pm:4293
-#: lib/BOM/View/Form/Validation.pm:107 lib/BOM/View/Form/Validation.pm:115
+#: lib/BOM/View/CGIForm.pm:4047 lib/BOM/View/CGIForm.pm:4053
+#: lib/BOM/View/CGIForm.pm:4253 lib/BOM/View/CGIForm.pm:4259
 msgid "Invalid amount"
 msgstr "Jumlah tidak berlaku"
 
-#: lib/BOM/View/CGIForm.pm:1459
+#: lib/BOM/View/CGIForm.pm:1443
 msgid "Invalid fax number."
 msgstr "Nomor fax tidak berlaku."
 
@@ -3915,18 +3943,18 @@ msgstr "Modal salah"
 msgid "Invalid telephone number"
 msgstr "Nomor telepon salah"
 
-#: lib/BOM/View/CGIForm.pm:1423 lib/BOM/View/CGIForm.pm:2817
-#: lib/BOM/View/CGIForm.pm:3429 lib/BOM/View/CGIForm.pm:651
+#: lib/BOM/View/CGIForm.pm:1411 lib/BOM/View/CGIForm.pm:2796
+#: lib/BOM/View/CGIForm.pm:3396 lib/BOM/View/CGIForm.pm:663
 msgid "Invalid telephone number (too long)."
 msgstr "Nomor telepon salah (terlalu panjang)."
 
-#: lib/BOM/View/CGIForm.pm:1416 lib/BOM/View/CGIForm.pm:2810
-#: lib/BOM/View/CGIForm.pm:3422 lib/BOM/View/CGIForm.pm:644
+#: lib/BOM/View/CGIForm.pm:1404 lib/BOM/View/CGIForm.pm:2789
+#: lib/BOM/View/CGIForm.pm:3389 lib/BOM/View/CGIForm.pm:656
 msgid "Invalid telephone number (too short)."
 msgstr "Nomor telepon salah (terlalu pendek)."
 
-#: lib/BOM/View/CGIForm.pm:1428 lib/BOM/View/CGIForm.pm:2803
-#: lib/BOM/View/CGIForm.pm:3434 lib/BOM/View/CGIForm.pm:656
+#: lib/BOM/View/CGIForm.pm:1416 lib/BOM/View/CGIForm.pm:2782
+#: lib/BOM/View/CGIForm.pm:3401 lib/BOM/View/CGIForm.pm:668
 msgid "Invalid telephone number."
 msgstr "Nomor telepon salah."
 
@@ -3934,7 +3962,7 @@ msgstr "Nomor telepon salah."
 msgid "Invalid underlying"
 msgstr "Underlying salah"
 
-#: lib/BOM/View/CGIForm.pm:4724
+#: lib/BOM/View/CGIForm.pm:4690
 msgid "Invalid value."
 msgstr "Nilai tidak berlaku."
 
@@ -3945,6 +3973,10 @@ msgstr "Nama area kerja tidak berlaku. Silakan gunakan hanya huruf (A-Z,a-z,0-9,
 #: /home/git/translations/binary-static/src/templates/toolkit/affiliates/faq.html.tt:41
 msgid "Is there a cost for joining?"
 msgstr "Apakah ada biaya untuk mendaftar?"
+
+#: /home/git/translations/binary-static/src/templates/haml/static/contact.html.haml:1
+msgid "Isle of Man"
+msgstr ""
 
 #: /home/git/translations/binary-static/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:5
 msgid "It is important that you read and understand the contents of these terms and conditions. By indicating your acceptance of these terms and conditions and continuing with your application to join our affiliate program, you are agreeing (subject to our approval of your application) to the terms and conditions below. If you do not agree with the terms and conditions (or are not authorised to do so) you should not continue with your application. You should be the owner of, or acting on behalf of the owner of the website, that is signing up for this affiliate program."
@@ -3982,7 +4014,7 @@ msgstr "Sudah saatnya untuk memperluas. Kami mendirikan pusat pemrograman di Cyb
 msgid "J. Welles Wilder has developed the Average Directional Index - ADX to define trend force, whether the trend will develop further or will gradually weaken. The indicator allows to analyse tendencies of the market and to make trading decisions in the market forex."
 msgstr "J. Welles Wilder telah mengembangkan Average Directional Index - ADX untuk mendefinisikan paksaan trend, apakah trend akan berkembang lebih lanjut atau akan berangsur-angsur melemah. Indikator ini dapat menganalisa kecenderungan market dan membuat keputusan trading pada market forex."
 
-#: lib/BOM/View/CGIForm.pm:2457 lib/BOM/View/CGIForm.pm:307
+#: lib/BOM/View/CGIForm.pm:2439 lib/BOM/View/CGIForm.pm:328
 #: platform/bin/GenerateStaticData.pm:74
 msgid "Jan"
 msgstr "Jan"
@@ -4001,7 +4033,7 @@ msgstr "Chart Java"
 msgid "Join our analysts LIVE twice a week for a comprehensive analysis of recent developments and trends in the global financial markets."
 msgstr "Ikuti analis kami secara LIVE dua kali seminggu untuk memperoleh analisa menyeluruh pada perkembangan dan trend terbaru di dunia market financial."
 
-#: lib/BOM/View/CGIForm.pm:2481 lib/BOM/View/CGIForm.pm:331
+#: lib/BOM/View/CGIForm.pm:2463 lib/BOM/View/CGIForm.pm:352
 #: platform/bin/GenerateStaticData.pm:80
 msgid "Jul"
 msgstr "Jul"
@@ -4015,7 +4047,7 @@ msgstr "Juli"
 msgid "Jump to"
 msgstr "Langsung ke"
 
-#: lib/BOM/View/CGIForm.pm:2477 lib/BOM/View/CGIForm.pm:327
+#: lib/BOM/View/CGIForm.pm:2459 lib/BOM/View/CGIForm.pm:348
 #: platform/bin/GenerateStaticData.pm:79
 msgid "Jun"
 msgstr "Juni"
@@ -4053,7 +4085,7 @@ msgstr "Akhir"
 msgid "Last Digit Prediction"
 msgstr "Analisa Digit Terakhir"
 
-#: cgi/oop/Controller/Bet.pm:2255
+#: lib/BOM/View/Controller/Bet.pm:2242
 msgid "Last Digit Stats"
 msgstr "Statistik Digit Terakhir"
 
@@ -4148,7 +4180,7 @@ msgid "Links"
 msgstr "Berbagai Link"
 
 #. (BOM::Platform::Runtime->instance->countries->localized_code2country($target_country, request()
-#: lib/BOM/View/CGIForm.pm:4241
+#: lib/BOM/View/CGIForm.pm:4208
 msgid "Listing only Payment Agents in %1."
 msgstr "Perlihatkan daftar Agen Pembayaran di %1."
 
@@ -4168,7 +4200,13 @@ msgstr "Chart Live"
 msgid "Live Help"
 msgstr "Bantuan Online"
 
-#: lib/BOM/View/CGIForm.pm:1718
+#: /home/git/translations/binary-static/src/templates/haml/static/contact.html.haml:1
+#, fuzzy
+#| msgid "Live chat"
+msgid "Live chat:"
+msgstr "Live chat"
+
+#: lib/BOM/View/CGIForm.pm:1705
 msgid "Lock Cashier and Settings sections"
 msgstr "Mengunci Bagian Kasir Dan Bagian Pengaturan"
 
@@ -4211,7 +4249,7 @@ msgstr "Login"
 #: /home/git/translations/binary-static/src/templates/haml/home/login.html.haml:1
 #: /home/git/translations/binary-static/src/templates/haml/layouts/default/header.html.haml:1
 #: /home/git/translations/binary-static/src/templates/toolkit/global/header.html.tt:66
-#: lib/BOM/View/CGIForm.pm:2883 lib/BOM/View/CGIForm.pm:3008
+#: lib/BOM/View/CGIForm.pm:2860 lib/BOM/View/CGIForm.pm:2984
 msgid "Login ID"
 msgstr "Login ID"
 
@@ -4261,12 +4299,12 @@ msgstr "Batasan rendah hanya terdiri dari angka"
 #: /home/git/translations/binary-static/src/templates/toolkit/bet/form/barrier.html.tt:37
 #: /home/git/translations/binary-static/src/templates/toolkit/charting/livechart.html.tt:47
 #: /home/git/translations/binary-static/src/templates/toolkit/resources/pricing_table_form.html.tt:46
-#: cgi/oop/Controller/Bet.pm:2395
+#: lib/BOM/View/Controller/Bet.pm:2382
 msgid "Low barrier"
 msgstr "Batasan rendah"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/bet/form/barrier.html.tt:34
-#: cgi/oop/Controller/Bet.pm:2393
+#: lib/BOM/View/Controller/Bet.pm:2380
 msgid "Low barrier offset"
 msgstr "Batasan offset rendah"
 
@@ -4305,7 +4343,7 @@ msgstr "Lakukan Deposit"
 msgid "Make a deposit or withdraw"
 msgstr "Deposit atau menarik dana"
 
-#: lib/BOM/View/CGIForm.pm:4526
+#: lib/BOM/View/CGIForm.pm:4492
 msgid "Make a deposit using credit card, bank wire, cheque and e-cash. Accounts are available in dollars, pounds and euros. The minimum account size is ($/&pound;/&euro;) 5 and the maximum account size is ($/&pound;/&euro;) 150,000."
 msgstr "Isikan formulir pendaftaran menggunakan data asli dan lengkap. Pastikan alamat anda lengkap termasuk RT dan RW. Anda hanya dibenarkan memiliki satu akun riil per orang. Anda dapat mendeposit menggunkan agen pembayaran,  transfer bank, western union atau e-cash dengan minimum $10 dan maksimum $150,000."
 
@@ -4314,7 +4352,15 @@ msgstr "Isikan formulir pendaftaran menggunakan data asli dan lengkap. Pastikan 
 msgid "Make your trade"
 msgstr "Lakukan trading anda"
 
-#: lib/BOM/View/CGIForm.pm:2465 lib/BOM/View/CGIForm.pm:315
+#: /home/git/translations/binary-static/src/templates/haml/static/contact.html.haml:1
+msgid "Malaysia"
+msgstr ""
+
+#: /home/git/translations/binary-static/src/templates/haml/static/contact.html.haml:1
+msgid "Malta"
+msgstr ""
+
+#: lib/BOM/View/CGIForm.pm:2447 lib/BOM/View/CGIForm.pm:336
 #: platform/bin/GenerateStaticData.pm:76
 msgid "Mar"
 msgstr "Mar"
@@ -4376,11 +4422,11 @@ msgstr "Berbagai Market"
 msgid "Mass Index"
 msgstr "Indeks Massa"
 
-#: lib/BOM/View/CGIForm.pm:5017
+#: lib/BOM/View/CGIForm.pm:4983
 msgid "Matched Contract Bonus"
 msgstr "Bonus Kontrak Cocok"
 
-#: lib/BOM/View/CGIForm.pm:4053 lib/BOM/View/CGIForm.pm:4260
+#: lib/BOM/View/CGIForm.pm:4021 lib/BOM/View/CGIForm.pm:4227
 msgid "Max"
 msgstr "Maksimum"
 
@@ -4389,18 +4435,18 @@ msgid "Maximum"
 msgstr "Maksimal"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/cashier/betting_limits.html.tt:15
-#: lib/BOM/View/CGIForm.pm:3694
+#: lib/BOM/View/CGIForm.pm:3661
 msgid "Maximum account cash balance"
 msgstr "Maksimum saldo tunai"
 
 #. ($currencies, $self_exclusion->max_balance)
 #. ($all_currencies, $self_exclusion->max_balance)
 #: /home/git/regentmarkets/bom-backoffice/f_setting_selfexclusion.cgi:59
-#: lib/BOM/View/CGIForm.pm:4858
+#: lib/BOM/View/CGIForm.pm:4824
 msgid "Maximum account cash balance is currently set to <strong>%1 %2</strong>"
 msgstr "Saldo tunai maksimal saat ini adalah <strong>%1 %2</strong>"
 
-#: lib/BOM/View/CGIForm.pm:3739
+#: lib/BOM/View/CGIForm.pm:3706
 msgid "Maximum aggregate contract purchases per day."
 msgstr "Jumlah maksimum pembelian kontrak per hari."
 
@@ -4413,13 +4459,13 @@ msgid "Maximum daily turnover"
 msgstr "Maksimum turnover harian"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/cashier/betting_limits.html.tt:11
-#: lib/BOM/View/CGIForm.pm:3744
+#: lib/BOM/View/CGIForm.pm:3711
 msgid "Maximum number of open positions"
 msgstr "Maksimal jumlah posisi terbuka"
 
 #. ($self_exclusion->max_open_bets)
 #: /home/git/regentmarkets/bom-backoffice/f_setting_selfexclusion.cgi:69
-#: lib/BOM/View/CGIForm.pm:4870
+#: lib/BOM/View/CGIForm.pm:4836
 msgid "Maximum number of open positions is currently set to <strong>%1</strong>"
 msgstr "Maksimum jumlah kontrak yang ditampilkan pada portofolio adalah <strong>%1</strong>"
 
@@ -4427,7 +4473,7 @@ msgstr "Maksimum jumlah kontrak yang ditampilkan pada portofolio adalah <strong>
 msgid "Maximum withdrawal by all other means:"
 msgstr "Maksimum jumlah penarikan:"
 
-#: lib/BOM/View/CGIForm.pm:2473 lib/BOM/View/CGIForm.pm:323
+#: lib/BOM/View/CGIForm.pm:2455 lib/BOM/View/CGIForm.pm:344
 #: platform/bin/GenerateStaticData.pm:78 platform/bin/GenerateStaticData.pm:90
 msgid "May"
 msgstr "Mei"
@@ -4440,11 +4486,11 @@ msgstr "Harga tengah"
 msgid "Medium"
 msgstr "sedang"
 
-#: lib/BOM/View/CGIForm.pm:664
+#: lib/BOM/View/CGIForm.pm:676
 msgid "Memorable date"
 msgstr "Tanggal bersejarah"
 
-#: lib/BOM/View/CGIForm.pm:663
+#: lib/BOM/View/CGIForm.pm:675
 msgid "Memorable town/city"
 msgstr "Kota bersejarah"
 
@@ -4453,11 +4499,11 @@ msgstr "Kota bersejarah"
 msgid "Mentioning error code %1 in any correspondence may help us resolve the issue more quickly."
 msgstr "Sebutkan kode error %1 hal ini akan membantu kami untuk menyelesaikan masalah lebih cepat."
 
-#: lib/BOM/View/CGIForm.pm:3105
+#: lib/BOM/View/CGIForm.pm:3078
 msgid "Message"
 msgstr "Pesan"
 
-#: lib/BOM/View/CGIForm.pm:3126
+#: lib/BOM/View/CGIForm.pm:3098
 msgid "Message is too short."
 msgstr "Pesan terlalu pendek."
 
@@ -4469,7 +4515,7 @@ msgstr "Metode"
 msgid "Mid"
 msgstr "Mid"
 
-#: lib/BOM/View/CGIForm.pm:4053 lib/BOM/View/CGIForm.pm:4260
+#: lib/BOM/View/CGIForm.pm:4021 lib/BOM/View/CGIForm.pm:4227
 msgid "Min"
 msgstr "Minimum"
 
@@ -4523,10 +4569,8 @@ msgid "Monday"
 msgstr "Senin"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/legal/terms_and_conditions.html.tt:53
-#, fuzzy
-#| msgid "Money collected from Clients are not invested in any securities, futures, currencies, derivatives or other investments, on behalf of Clients"
 msgid "Money collected from Clients are not invested in any securities, futures, currencies, derivatives or other investments, on behalf of Clients."
-msgstr "Dana yang dikumpulkan dari klien tidak diinvestasikan dalam sekuritas, futures, mata uang, turunan atau investasi lainnya, atas nama klien"
+msgstr "Dana yang dikumpulkan dari Klien tidak diinvestasikan dalam sekuritas, bursa berjangka, mata uang, turunan atau investasi lainnya, atas nama Klien."
 
 #: lib/BOM/Product/Helper/PricingTableParameters.pm:233
 msgid "Moneyness terms"
@@ -4562,7 +4606,7 @@ msgstr "Manfaat lainnya"
 msgid "More than %1 trades available"
 msgstr "Lebih dari %1 kontrak tersedia"
 
-#: lib/BOM/View/CGIForm.pm:663
+#: lib/BOM/View/CGIForm.pm:675
 msgid "Mother's maiden name"
 msgstr "Nama Ibu"
 
@@ -4616,19 +4660,19 @@ msgstr "Akun Saya"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_agents_list.html.tt:2
 #: /home/git/translations/binary-static/src/templates/toolkit/cashier/payment_agent_further_info.html.tt:3
-#: lib/BOM/View/CGIForm.pm:1174
+#: lib/BOM/View/CGIForm.pm:1164
 msgid "Name"
 msgstr "Nama"
 
-#: lib/BOM/View/CGIForm.pm:2842 lib/BOM/View/CGIForm.pm:3064
+#: lib/BOM/View/CGIForm.pm:2820 lib/BOM/View/CGIForm.pm:3038
 msgid "Name is too short."
 msgstr "Nama terlalu pendek."
 
-#: lib/BOM/View/CGIForm.pm:663
+#: lib/BOM/View/CGIForm.pm:675
 msgid "Name of first love"
 msgstr "Nama pacar pertama"
 
-#: lib/BOM/View/CGIForm.pm:663
+#: lib/BOM/View/CGIForm.pm:675
 msgid "Name of your pet"
 msgstr "Nama binatang peliharaan"
 
@@ -4650,11 +4694,11 @@ msgstr "Status Network"
 msgid "New"
 msgstr "Baru"
 
-#: lib/BOM/View/CGIForm.pm:1533
+#: lib/BOM/View/CGIForm.pm:1517
 msgid "New Cashier/Settings password"
 msgstr "Kata sandi baru bagian kasir/pengaturan"
 
-#: lib/BOM/View/CGIForm.pm:2012 lib/BOM/View/CGIForm.pm:2163
+#: lib/BOM/View/CGIForm.pm:2000 lib/BOM/View/CGIForm.pm:2149
 msgid "New Password"
 msgstr "Kata Sandi Baru"
 
@@ -4684,7 +4728,7 @@ msgid "Next"
 msgstr "Lanjutkan"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/container/confirm_box_popup.html.tt:7
-#: lib/BOM/View/CGIForm.pm:1157 lib/BOM/View/CGIForm.pm:3569
+#: lib/BOM/View/CGIForm.pm:1147 lib/BOM/View/CGIForm.pm:3536
 #: lib/BOM/View/Charting.pm:416
 msgid "No"
 msgstr "Tidak"
@@ -4736,7 +4780,7 @@ msgstr "Tidak. Pendaftaran program afiliasi %1 adalah gratis."
 msgid "Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price."
 msgstr "Nota: Kontrak akan dijual pada harga terkini market ketika permintaan diterima oleh server kami. Harga ini mungkin berbeda dari harga yang diindikasikan."
 
-#: cgi/oop/Controller/Bet.pm:1055
+#: lib/BOM/View/Controller/Bet.pm:1042
 msgid "Note: During summer time (daylight saving), GMT is one hour behind BST (British Summer Time)"
 msgstr "Nota: Selama musim panas, GMT adalah satu jam lebih lambat dari BST (British Summer Time)"
 
@@ -4749,23 +4793,23 @@ msgstr "Nota: Perusahaan berhak untuk membatalkan komisi yang tidak diambil mele
 msgid "Note: You will be able to withdraw your bonus of %1%2 only once your aggregate volume of trades exceeds %1%3 (at the moment it is only %1%4). This restriction applies only to the bonus and profits derived therefrom.  All other deposits and profits derived therefrom can be withdrawn at any time."
 msgstr "Nota: Anda dapat mencairkan bonus sejumlah %1%2 jika volume trading melebihi %1%3 (dimana saat ini volume trading anda adalah %1%4). Aturan ini hanya berlaku bagi nominal bonus dan profit yang dihasilkannya, jika ada dana diluar bonus dan profit yang dihasilkannya maka anda bisa mencairkannya kapan saja."
 
-#: lib/BOM/View/CGIForm.pm:4897
+#: lib/BOM/View/CGIForm.pm:4863
 msgid "Note: limits will apply to all currency segments on your account individually."
 msgstr "Pesan: batasan akan berlaku juga untuk setiap jenis mata uang pada rekening anda secara terpisah."
 
 #: /home/git/translations/binary-static/src/templates/toolkit/resources/pricing_table.html.tt:69
-#: lib/BOM/View/CGIForm.pm:4787 lib/BOM/View/Cashier.pm:156
+#: lib/BOM/View/CGIForm.pm:4753 lib/BOM/View/Cashier.pm:156
 #: lib/BOM/View/Cashier.pm:174
 msgid "Notes:"
 msgstr "Catatan:"
 
 #. ($attorney->url, $attorney->company_name)
-#: lib/BOM/View/CGIForm.pm:4935
+#: lib/BOM/View/CGIForm.pm:4901
 msgid "Notice: Power of Attorney to your account has been revoked from <a target=\"_blank\" href=\"%1\">%2</a>.<br>Trades cannot be placed anymore on your account directly by <a target=\"_blank\" href=\"%1\">%2</a>."
 msgstr "Pemberitahuan: Surat Kuasa pada akun anda telah dibatalkan dari <a target=\"_blank\" href=\"%1\">%2</a>.<br>Trading tidak dapat dilakukan lagi pada akun anda oleh <a target=\"_blank\" href=\"%1\">%2</a>."
 
 #. ($attorney->url,            $attorney->company_name,            request()
-#: lib/BOM/View/CGIForm.pm:4931
+#: lib/BOM/View/CGIForm.pm:4897
 msgid "Notice: your account has granted Power of Attorney to <a target=\"_blank\" href=\"%1\">%2</a>.<br>Trades may be placed on your account directly by <a target=\"_blank\" href=\"%1\">%2</a>. You may <a class=\"bom_confirm_popup_link\" href=\"%3\">revoke this Power of Attorney at any time.</a>"
 msgstr "Pemberitahuan: akun Anda memiliki Surat Kuasa kepada <a target=\"_blank\" href=\"%1\">%2</a>.<br>Trading dapat dilakukan pada akun anda oleh <a target=\"_blank\" href=\"%1\">%2</a>. Anda dapat <a class=\"bom_confirm_popup_link\" href=\"%3\">membatalkan Surat Kuasa ini kapan saja.</a>"
 
@@ -4773,7 +4817,7 @@ msgstr "Pemberitahuan: akun Anda memiliki Surat Kuasa kepada <a target=\"_blank\
 msgid "Notification of Changes"
 msgstr "Pemberitahuan Perubahan"
 
-#: lib/BOM/View/CGIForm.pm:2497 lib/BOM/View/CGIForm.pm:347
+#: lib/BOM/View/CGIForm.pm:2479 lib/BOM/View/CGIForm.pm:368
 #: platform/bin/GenerateStaticData.pm:84
 msgid "Nov"
 msgstr "Nov"
@@ -4824,15 +4868,23 @@ msgstr "OAuth2.0 adalah internet standard untuk tujuan ini. Lihat <a href=\"http
 msgid "OK"
 msgstr "OK"
 
-#: lib/BOM/View/CGIForm.pm:5325
+#: /home/git/translations/binary-static/src/templates/haml/home2/index.html.haml:1
+msgid "OPEN REAL ACCOUNT"
+msgstr ""
+
+#: /home/git/translations/binary-static/src/templates/haml/home2/index.html.haml:1
+msgid "OPEN VIRTUAL ACCOUNT"
+msgstr ""
+
+#: lib/BOM/View/CGIForm.pm:5298
 msgid "ORIGINAL Bank/Credit Union/Building Society/Credit/Debit Card statement or passbook (within last 3 months)"
 msgstr "Kartu Keluarga/Tagihan/Rekening Koran yang mencantumkan nama dan alamat anda (tidak melebihi tempo 3 bulan setelah tanggal pengeluaran)"
 
-#: lib/BOM/View/CGIForm.pm:5324
+#: lib/BOM/View/CGIForm.pm:5297
 msgid "ORIGINAL Utility bill (within last 3 months) ; or"
 msgstr "Tagihan utilitas ASLI (dalam tempo 3 bulan) atau"
 
-#: lib/BOM/View/CGIForm.pm:2493 lib/BOM/View/CGIForm.pm:343
+#: lib/BOM/View/CGIForm.pm:2475 lib/BOM/View/CGIForm.pm:364
 #: platform/bin/GenerateStaticData.pm:83
 msgid "Oct"
 msgstr "Oktober"
@@ -4879,7 +4931,7 @@ msgstr "Setelah bonus dikreditkan kedalam akun anda, anda dapat menarik dana bon
 msgid "Once the white-label is live, you will earn standard affiliate commissions on clients trading via the white-label."
 msgstr "Setelah program white label anda aktif, perhitungan komisi adalah berdasarkan program affiliasi."
 
-#: lib/BOM/View/CGIForm.pm:3714
+#: lib/BOM/View/CGIForm.pm:3681
 msgid "Once this limit is reached, you may no longer deposit."
 msgstr "Sekali batasan tercapai, Anda tidak dapat melakukan deposit selanjutnya."
 
@@ -4902,10 +4954,8 @@ msgstr "Satu platform sederhana"
 
 #: /home/git/translations/binary-static/src/templates/haml/home/index.html.haml:1
 #: /home/git/translations/binary-static/src/templates/haml/home/styles.html.haml:1
-#, fuzzy
-#| msgid "%1: Online Trading platform for binary options on Forex, Indices, Commodities and Smart Indices"
 msgid "Online Trading platform for binary options on Forex, Indices, Commodities and Smart Indices"
-msgstr "%1: Trading platform online untuk opsi binary pada Forex, Index, Komoditas dan Indeks Smart"
+msgstr "Platform Trading Online untuk opsi binary pada Forex, Indeks, Komoditas dan Indeks Smart"
 
 #: /home/git/translations/binary-static/src/templates/haml/static/group_history.html.haml:1
 msgid "Only five years after inception, we pick up this major award for our online trading services. The award recognises BetOnMarkets.com’s reliable, fast and secure online trading for novice and expert traders. At this time, our website has received over 15 million trades."
@@ -4926,7 +4976,7 @@ msgstr "Hanya klien yang ditandai dengan benar akan menjadi afiliasi anda. Jika 
 msgid "Open"
 msgstr "Awal"
 
-#: lib/BOM/View/CGIForm.pm:826
+#: lib/BOM/View/CGIForm.pm:834
 msgid "Open Account"
 msgstr "Daftar Akun"
 
@@ -5024,7 +5074,7 @@ msgid "Our data feed may at times differ slightly from other data feeds found on
 msgstr "Kutipan data kami mungkin akan mengalami sedikit perbedaan dibandingkan dengan kutipan data yang tersedia pada internet. Mengapa demikian:"
 
 #. ($cs_email)
-#: lib/BOM/View/CGIForm.pm:5327
+#: lib/BOM/View/CGIForm.pm:5300
 msgid "Our email address is %1."
 msgstr "Alamat email kami adalah %1."
 
@@ -5073,7 +5123,7 @@ msgstr "Kepemilikan dan isi situs %1 akan tetap menjadi milik kami dan tidak dap
 msgid "Ownership, content and liability for affiliate sites are the sole responsibility of the affiliate. You will be solely responsible for the development, operation, and maintenance of your site and for all materials that appear on your site. You will indemnify and hold us harmless from all claims, damages, and expenses (including, without limitation to, attorneys' fees) relating to the development, operation, maintenance, and contents of your site."
 msgstr "Kepemilikan, konten dan kewajiban untuk situs afiliasi merupakan tanggung jawab dari afiliasi. Anda akan bertanggung jawab untuk pengembangan, operasi, dan pemeliharaan situs anda dan untuk semua materi yang muncul pada situs anda. Anda akan menanggung kerugian apapun dan mengecualikan kami dari semua tuduhan, kerusakan, dan biaya (termasuk, tidak terbatas pada, biaya pengacara) yang berkaitan dengan pengembangan, operasi, pemeliharaan, dan isi situs anda."
 
-#: lib/BOM/View/CGIForm.pm:1074 lib/BOM/View/CGIForm.pm:1077
+#: lib/BOM/View/CGIForm.pm:1080 lib/BOM/View/CGIForm.pm:1083
 msgid "P.O. Box is not accepted"
 msgstr "Tidak menerima P.O. Box"
 
@@ -5119,15 +5169,15 @@ msgstr "Mitra"
 #: /home/git/translations/binary-static/src/templates/haml/home/login.html.haml:1
 #: /home/git/translations/binary-static/src/templates/haml/layouts/default/header.html.haml:1
 #: /home/git/translations/binary-static/src/templates/toolkit/global/header.html.tt:67
-#: lib/BOM/View/CGIForm.pm:743 lib/BOM/View/Menu.pm:91
+#: lib/BOM/View/CGIForm.pm:753 lib/BOM/View/Menu.pm:91
 msgid "Password"
 msgstr "Kata Sandi"
 
-#: lib/BOM/View/CGIForm.pm:1527 lib/BOM/View/CGIForm.pm:1861
+#: lib/BOM/View/CGIForm.pm:1511 lib/BOM/View/CGIForm.pm:1850
 msgid "Password is too long, please enter at most 30 characters."
 msgstr "Password terlalu panjang, silahkan masukkan maksimal 30 karakter."
 
-#: lib/BOM/View/CGIForm.pm:1520 lib/BOM/View/CGIForm.pm:1854
+#: lib/BOM/View/CGIForm.pm:1504 lib/BOM/View/CGIForm.pm:1843
 msgid "Password is too short, please enter at least 3 characters."
 msgstr "Password terlalu pendek, silahkan masukkan minimal 3 karakter."
 
@@ -5203,7 +5253,7 @@ msgid "Payout Currency"
 msgstr "Mata uang hasil"
 
 #. (to_monetary_number_format($transaction_parameters->{payout})
-#: cgi/oop/Controller/Bet.pm:1591
+#: lib/BOM/View/Controller/Bet.pm:1578
 msgid "Payout has moved in your favour from %1 to %2."
 msgstr "Harga telah berubah dari %1 ke %2."
 
@@ -5217,7 +5267,7 @@ msgid "Payout must be between <strong>%1</strong> and <strong>%2</strong>."
 msgstr "Hasil harus diantara <strong>%1</strong> hingga <strong>%2</strong>."
 
 #. (qq{<span class="balance">$currency_label $promocode_amount</span>})
-#: lib/BOM/View/CGIForm.pm:4996
+#: lib/BOM/View/CGIForm.pm:4962
 msgid "Pending Bonus: %1"
 msgstr "Bonus Belum Disetujui: %1"
 
@@ -5271,7 +5321,7 @@ msgstr "Silahkan klik pada tombol \"Play\" untuk melihat video."
 msgid "Please confirm the transaction details in order to complete the transfer:"
 msgstr "Pastikan anda telah memilih Agen Pembayaran yang benar, salah transfer adalah diluar tanggungjawab kami:"
 
-#: lib/BOM/View/CGIForm.pm:4597
+#: lib/BOM/View/CGIForm.pm:4563
 msgid "Please contact us using the toll-free number provided for your country or our general contact number below."
 msgstr "Silahkan hubungi kami menggunakan nomor telepon bebas pulsa yang disediakan untuk negara anda atau hubungi kami langsung pada nomor telepon di bawah ini."
 
@@ -5280,68 +5330,68 @@ msgstr "Silahkan hubungi kami menggunakan nomor telepon bebas pulsa yang disedia
 msgid "Please contact us with whatever is on your mind at <a href=\"mailto:%1\">%1</a>. We'll be happy to hear your feedback and to answer any questions promptly and accurately."
 msgstr "Silahkan hubungi kami kapan saja di <a href=\"mailto:%1\">%1</a>. Kami akan dengan senang hati membalas dan menjawab pertanyaan anda secepatnya."
 
-#: lib/BOM/View/CGIForm.pm:4540
+#: lib/BOM/View/CGIForm.pm:4506
 msgid "Please do not click more than once and please allow 15 seconds for processing."
 msgstr "Mohon untuk mengklik sekali saja dan ijinkan 15 detik untuk memproses pendaftaran Anda."
 
-#: lib/BOM/View/CGIForm.pm:3807
+#: lib/BOM/View/CGIForm.pm:3774
 msgid "Please enter a date that is at least 6 months from now."
 msgstr "Masukkan tanggal setidaknya 6 bulan dari sekarang."
 
-#: lib/BOM/View/CGIForm.pm:1842 lib/BOM/View/CGIForm.pm:1962
-#: lib/BOM/View/CGIForm.pm:2135 lib/BOM/View/CGIForm.pm:717
+#: lib/BOM/View/CGIForm.pm:1831 lib/BOM/View/CGIForm.pm:1951
+#: lib/BOM/View/CGIForm.pm:2121 lib/BOM/View/CGIForm.pm:727
 msgid "Please enter a password."
 msgstr "Silakan masukkan password."
 
-#: lib/BOM/View/CGIForm.pm:1287 lib/BOM/View/CGIForm.pm:466
+#: lib/BOM/View/CGIForm.pm:1275 lib/BOM/View/CGIForm.pm:483
 msgid "Please enter a town or city."
 msgstr "Silakan masukkan nama kota atau daerah."
 
-#: cgi/paymentagent_transfer.cgi:126 lib/BOM/View/CGIForm.pm:4074
-#: lib/BOM/View/CGIForm.pm:4281
+#: cgi/paymentagent_transfer.cgi:126 lib/BOM/View/CGIForm.pm:4041
+#: lib/BOM/View/CGIForm.pm:4247
 msgid "Please enter a valid amount."
 msgstr "Tolong masukan jumlah yang benar."
 
-#: lib/BOM/View/CGIForm.pm:3317
+#: lib/BOM/View/CGIForm.pm:3286
 msgid "Please enter a valid name."
 msgstr "Silahkan masukkan nama yang berlaku."
 
-#: lib/BOM/View/CGIForm.pm:3705 lib/BOM/View/CGIForm.pm:3730
-#: lib/BOM/View/CGIForm.pm:3755 lib/BOM/View/CGIForm.pm:3777
+#: lib/BOM/View/CGIForm.pm:3672 lib/BOM/View/CGIForm.pm:3697
+#: lib/BOM/View/CGIForm.pm:3722 lib/BOM/View/CGIForm.pm:3744
 msgid "Please enter an integer value."
 msgstr "Silahkan masukan nilai penuh."
 
-#: lib/BOM/View/CGIForm.pm:3802 lib/BOM/View/CGIForm.pm:3816
+#: lib/BOM/View/CGIForm.pm:3769 lib/BOM/View/CGIForm.pm:3783
 msgid "Please enter date in the format YYYY-MM-DD."
 msgstr "Silakan masukkan tanggal dalam format YYY-MM-DD."
 
-#: lib/BOM/View/CGIForm.pm:4024
+#: lib/BOM/View/CGIForm.pm:3992
 msgid "Please enter the Login ID to transfer funds."
 msgstr "Silahkan masukkan Login ID untuk mentransfer dana."
 
-#: lib/BOM/View/CGIForm.pm:3350
+#: lib/BOM/View/CGIForm.pm:3318
 msgid "Please enter the country where you want to offer your service"
 msgstr "Silakan masukkan negara dimana Anda ingin menawarkan layanan Anda"
 
-#: lib/BOM/View/CGIForm.pm:1241 lib/BOM/View/CGIForm.pm:404
+#: lib/BOM/View/CGIForm.pm:1230 lib/BOM/View/CGIForm.pm:424
 msgid "Please enter the first line of your home address."
 msgstr "Silahkan masukkan alamat rumah Anda."
 
-#: lib/BOM/View/CGIForm.pm:1225 lib/BOM/View/CGIForm.pm:2345
-#: lib/BOM/View/CGIForm.pm:2872 lib/BOM/View/CGIForm.pm:3094
-#: lib/BOM/View/CGIForm.pm:3391 lib/BOM/View/CGIForm.pm:612
+#: lib/BOM/View/CGIForm.pm:1214 lib/BOM/View/CGIForm.pm:2328
+#: lib/BOM/View/CGIForm.pm:2849 lib/BOM/View/CGIForm.pm:3067
+#: lib/BOM/View/CGIForm.pm:3358 lib/BOM/View/CGIForm.pm:625
 msgid "Please enter your email address."
 msgstr "Silahkan masukan alamat email anda."
 
-#: lib/BOM/View/CGIForm.pm:253
+#: lib/BOM/View/CGIForm.pm:275
 msgid "Please enter your first name."
 msgstr "Silahkan masukkan nama depan Anda."
 
-#: lib/BOM/View/CGIForm.pm:271
+#: lib/BOM/View/CGIForm.pm:293
 msgid "Please enter your last name."
 msgstr "Silahkan masukkan nama akhir Anda."
 
-#: lib/BOM/View/CGIForm.pm:2440
+#: lib/BOM/View/CGIForm.pm:2422
 msgid "Please enter your secret answer"
 msgstr "Silakan masukkan jawaban rahasia anda"
 
@@ -5349,14 +5399,14 @@ msgstr "Silakan masukkan jawaban rahasia anda"
 msgid "Please fill in the Login ID and Amount you wish to transfer to your Client in the form below:"
 msgstr "Silahkan isi Login ID dan jumlah yang ingin Anda transfer ke klien Anda dalam formulir di bawah ini:"
 
-#: lib/BOM/View/CGIForm.pm:1054 lib/BOM/View/CGIForm.pm:2530
-#: lib/BOM/View/CGIForm.pm:2536 lib/BOM/View/CGIForm.pm:2542
-#: lib/BOM/View/CGIForm.pm:379 lib/BOM/View/CGIForm.pm:385
-#: lib/BOM/View/CGIForm.pm:391 lib/BOM/View/CGIForm.pm:396
+#: lib/BOM/View/CGIForm.pm:1059 lib/BOM/View/CGIForm.pm:2511
+#: lib/BOM/View/CGIForm.pm:2517 lib/BOM/View/CGIForm.pm:2523
+#: lib/BOM/View/CGIForm.pm:399 lib/BOM/View/CGIForm.pm:405
+#: lib/BOM/View/CGIForm.pm:411 lib/BOM/View/CGIForm.pm:416
 msgid "Please input a valid date."
 msgstr "Anda belum meMasukkan Tanggal lahir anda."
 
-#: lib/BOM/View/CGIForm.pm:1570
+#: lib/BOM/View/CGIForm.pm:1554
 msgid "Please input it again to confirm"
 msgstr "Ketik ulang untuk konfirmasi"
 
@@ -5364,7 +5414,7 @@ msgstr "Ketik ulang untuk konfirmasi"
 msgid "Please make sure that you first agree with the Agent on the terms of payment before submitting your request."
 msgstr "Pastikan anda telah setuju dengan Agen mengenai terma pembayaran sebelum mengajukan permohonan Anda."
 
-#: lib/BOM/View/CGIForm.pm:4813
+#: lib/BOM/View/CGIForm.pm:4779
 msgid "Please note that mobile telephone bills are not acceptable as evidence of address"
 msgstr "Mohon diketahui bahwa bukti tagihan handphone dapat diterima sebagai bukti alamat"
 
@@ -5396,23 +5446,23 @@ msgstr "Anda dapat melakukan perbaikan data dengan mengakses bagian \"Pengaturan
 msgid "Please note that your settings have been updated as follows:"
 msgstr "Mohon diketahui bahwa pengaturan anda telah diperbarui sebagai berikut:"
 
-#: lib/BOM/View/CGIForm.pm:4818
+#: lib/BOM/View/CGIForm.pm:4784
 msgid "Please post the documents to:"
 msgstr "Silakan hantar melalui pos dokumen tersebut ke:"
 
-#: lib/BOM/View/CGIForm.pm:3845 lib/BOM/View/CGIForm.pm:3992
+#: lib/BOM/View/CGIForm.pm:3812 lib/BOM/View/CGIForm.pm:3961
 msgid "Please provide at least one self-exclusion setting."
 msgstr "Silakan sediakan setidaknya satu susunan pengecualian diri."
 
-#: cgi/oop/Controller/Bet.pm:1713 cgi/oop/Controller/Bet.pm:2000
+#: lib/BOM/View/Controller/Bet.pm:1700 lib/BOM/View/Controller/Bet.pm:1987
 msgid "Please provide granter id(s)."
 msgstr "Mohon informasian ID granter."
 
-#: lib/BOM/View/CGIForm.pm:3503
+#: lib/BOM/View/CGIForm.pm:3470
 msgid "Please provide some information about yourself and your proposed services"
 msgstr "Silahkan sediakan beberapa informasi tentang diri anda dan layanan yang akan anda berikan"
 
-#: lib/BOM/View/CGIForm.pm:4609
+#: lib/BOM/View/CGIForm.pm:4575
 msgid "Please provide the following contact information and we will call you free of charge as soon as a representative is free."
 msgstr "Informasikan nomor telpon anda dan Customer Support kami akan menghubungi anda kembali tanpa biaya."
 
@@ -5420,7 +5470,7 @@ msgstr "Informasikan nomor telpon anda dan Customer Support kami akan menghubung
 msgid "Please provide us with the following information:"
 msgstr "Mohon lengkapi kami dengan informasi berikut:"
 
-#: lib/BOM/View/CGIForm.pm:4538
+#: lib/BOM/View/CGIForm.pm:4504
 msgid "Please provide your email address and password to open a virtual money account and start practicing."
 msgstr "Silakan informasikan alamat email dan kata sandi untuk mendaftar akun uang virtual dan mulai berlatih sekarang."
 
@@ -5428,21 +5478,21 @@ msgstr "Silakan informasikan alamat email dan kata sandi untuk mendaftar akun ua
 msgid "Please remember at all times that trading binary options can be an exciting activity, but we have a moral duty to remind you of the risks you may run. Options trading can become a real addiction, as can any other activity pushed to its limits. We kindly ask you to engage in a careful self-analysis to check if you are at risk. To avoid the danger of such an addiction, it is important that you follow some basic principles and guidelines."
 msgstr "Mohon diingat setiap waktu bahwa trading opsi binary dapat menjadi aktifitas yang menyenangkan, tetapi kami memiliki kewajiban moral untuk mengingatkan anda mengenai resiko yang mungkin anda hadapi. Trading opsi dapat menyebabkan ketagihan sama seperti aktifitas lain yang dilakukan melebihi batas. Kami menyarankan anda untuk melakukan pengecekan jika beresiko untuk menghindari ketagihan dimana penting untuk mengikuti panduan dan prinsip dasar."
 
-#: lib/BOM/View/CGIForm.pm:167
+#: lib/BOM/View/CGIForm.pm:191
 msgid "Please select"
 msgstr "Tolong pilih"
 
-#: cgi/oop/Helper/Controller/Bet/PriceBoxParameters.pm:272
+#: lib/BOM/View/Controller/Bet/PriceBoxParameters.pm:272
 msgid "Please select \"Payout\" or \"Stake\" option."
 msgstr "Pilih \"Hasil\" atau \"Modal\"."
 
 #. (qq(<a href="mailto:$cs_email">$cs_email</a>)
-#: lib/BOM/View/CGIForm.pm:5307
+#: lib/BOM/View/CGIForm.pm:5277
 msgid "Please send this email to %1."
 msgstr "Silahkan kirim email ini ke %1."
 
-#: lib/BOM/View/CGIForm.pm:1367 lib/BOM/View/CGIForm.pm:4460
-#: lib/BOM/View/CGIForm.pm:582
+#: lib/BOM/View/CGIForm.pm:1353 lib/BOM/View/CGIForm.pm:4426
+#: lib/BOM/View/CGIForm.pm:596
 msgid "Please specify your country."
 msgstr "Silahkan tentukan negara anda."
 
@@ -5454,16 +5504,16 @@ msgstr "Silahkan coba kembali."
 msgid "Please type your chosen password twice into the fields below:"
 msgstr "Silakan ketik password pilihan anda dua kali kedalam kolom berikut:"
 
-#: lib/BOM/View/CGIForm.pm:3151 lib/BOM/View/CGIForm.pm:3191
+#: lib/BOM/View/CGIForm.pm:3122 lib/BOM/View/CGIForm.pm:3162
 msgid "Please upload image (*.jpg, *.jpeg, *.png) only."
 msgstr "Anda hanya bisa mengupload gambar dalam format (*.jpg, *.jpeg, *.png)."
 
-#: lib/BOM/View/CGIForm.pm:1333
+#: lib/BOM/View/CGIForm.pm:1320
 msgid "Please use only alphanumeric characters or spaces."
 msgstr "Silakan hanya pergunakan gabungan angka dan huruf atau spasi."
 
-#: lib/BOM/View/CGIForm.pm:258 lib/BOM/View/CGIForm.pm:266
-#: lib/BOM/View/CGIForm.pm:2847 lib/BOM/View/CGIForm.pm:3069
+#: lib/BOM/View/CGIForm.pm:280 lib/BOM/View/CGIForm.pm:2825
+#: lib/BOM/View/CGIForm.pm:288 lib/BOM/View/CGIForm.pm:3043
 msgid "Please use only letters, spaces, hyphens, full-stops or apostrophes."
 msgstr "Silahkan pergunakan huruf, spasi, tanda penghubung, titik atau tanda apostrof."
 
@@ -5477,19 +5527,19 @@ msgstr "Silahkan tunggu.<br />Permohonan anda sedang diproses."
 msgid "Portfolio"
 msgstr "Portopolio"
 
-#: lib/BOM/View/CGIForm.pm:1340 lib/BOM/View/CGIForm.pm:503
+#: lib/BOM/View/CGIForm.pm:1327 lib/BOM/View/CGIForm.pm:519
 msgid "Postal Code / ZIP"
 msgstr "Kode Pos"
 
-#: lib/BOM/View/CGIForm.pm:1321 lib/BOM/View/CGIForm.pm:1328
+#: lib/BOM/View/CGIForm.pm:1308 lib/BOM/View/CGIForm.pm:1315
 msgid "Postcode is invalid."
 msgstr "Kode pos salah."
 
-#: lib/BOM/View/CGIForm.pm:1107 lib/BOM/View/CGIForm.pm:525
+#: lib/BOM/View/CGIForm.pm:1075 lib/BOM/View/CGIForm.pm:540
 msgid "Postcode is required for UK residents."
 msgstr "Kode pos diharuskan untuk warga Inggris."
 
-#: lib/BOM/View/CGIForm.pm:520
+#: lib/BOM/View/CGIForm.pm:535
 msgid "Postcode must be less than 20 characters long and may not contain \"+\"."
 msgstr "Kode pos harus kurang dari 20 kata dan tidak memiliki \"+\"."
 
@@ -5537,7 +5587,7 @@ msgid "Price Oscillator"
 msgstr "Price Oscillator"
 
 #. (to_monetary_number_format($transaction_parameters->{price})
-#: cgi/oop/Controller/Bet.pm:1586
+#: lib/BOM/View/Controller/Bet.pm:1573
 msgid "Price has moved in your favour from %1 to %2."
 msgstr "Harga telah bergerak dari %1 ke %2."
 
@@ -5553,7 +5603,7 @@ msgstr "OHLC"
 #: /home/git/translations/binary-static/src/templates/haml/resources/index.html.haml:1
 #: /home/git/translations/binary-static/src/templates/toolkit/global/footer.html.tt:81
 #: /home/git/translations/binary-static/src/templates/toolkit/resources/pricing_table_form.html.tt:2
-#: cgi/oop/Controller/Bet.pm:2244 cgi/pricing_table.cgi:170
+#: cgi/pricing_table.cgi:170 lib/BOM/View/Controller/Bet.pm:2231
 #: lib/BOM/View/Menu.pm:171
 msgid "Pricing Table"
 msgstr "Tabel Harga"
@@ -5570,6 +5620,10 @@ msgstr "Cetak grafik"
 #: cgi/c_template.cgi:76
 msgid "Privacy & Security"
 msgstr "Keamanan & Privasi"
+
+#: /home/git/translations/binary-static/src/templates/toolkit/cashier/ukgc_funds_protection_message.html.tt:19
+msgid "Proceed"
+msgstr ""
 
 #: /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:43
 msgid "Processing Time"
@@ -5608,11 +5662,11 @@ msgstr "Menggabungkan dan menampilkan link terbaru kepada anda oleh Perusahaan p
 msgid "Promoting the %1 Site"
 msgstr "Mempromosikan situs %1"
 
-#: lib/BOM/View/CGIForm.pm:941
+#: lib/BOM/View/CGIForm.pm:949
 msgid "Promotional"
 msgstr "Promosi"
 
-#: lib/BOM/View/CGIForm.pm:4804
+#: lib/BOM/View/CGIForm.pm:4770
 msgid "Proof of address"
 msgstr "Bukti alamat"
 
@@ -5624,12 +5678,12 @@ msgstr "Batasan tepat tidak dapat ditentukan."
 msgid "Provide the Company with all data and information related to the Company (including, but not limited to, passwords) at no charge to the Company, to enable the Company to monitor your Site and to ensure that you are complying with these terms and conditions."
 msgstr "Menyediakan Perusahaan semua data dan informasi yang berhubungan dengan Perusahaan (termasuk, namun tidak terbatas pada, kata sandi) tanpa biaya kepada Perusahaan, untuk memungkinkan Perusahaan untuk memonitor situs anda dan untuk memastikan bahwa anda mematuhi persyaratan dan ketentuan."
 
-#: lib/BOM/View/CGIForm.pm:4793
+#: lib/BOM/View/CGIForm.pm:4759
 msgid "Provide us with the following documentation:"
 msgstr "Berikan kami dokumentasi berikut:"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/account/portfolio.html.tt:26
-#: cgi/oop/Controller/Bet.pm:1443
+#: lib/BOM/View/Controller/Bet.pm:1430
 msgid "Purchase"
 msgstr "Beli"
 
@@ -5841,7 +5895,7 @@ msgstr "Indeks Kekuatan Relatif"
 msgid "Reload Cashier"
 msgstr "Akses Ulang Kasir"
 
-#: lib/BOM/Platform/Plack.pm:330
+#: lib/BOM/Platform/Plack.pm.tidyup:322 lib/BOM/Platform/Plack.pm:322
 msgid "Reload page"
 msgstr "Reload halaman"
 
@@ -5860,10 +5914,6 @@ msgstr "Mewakili jumlah kontrak pada portopolio Anda. Setiap baris pada portopol
 #: cgi/limits.cgi:44
 msgid "Represents the maximum volume of contracts that you may purchase in any given trading day."
 msgstr "Mewakili jumlah maksimum pembelian kontrak dalam satu hari trading."
-
-#: lib/BOM/View/Form.pm:370
-msgid "Required"
-msgstr "Harus diisi"
 
 #: lib/BOM/Product/Contract.pm:2993
 msgid "Resale of this contract is not offered due to end-of-year market holidays."
@@ -5884,6 +5934,7 @@ msgstr "Penjualan kembali untuk kontrak ini ditawarkan kurang dari %1 hari."
 
 #: lib/BOM/Product/Contract.pm:2344 lib/BOM/Product/Contract.pm:2867
 #: lib/BOM/Product/Contract.pm:2917
+#: lib/BOM/Product/Pricing/Engine/Role/StandardMarkup.pm.tidyup:173
 #: lib/BOM/Product/Pricing/Engine/Role/StandardMarkup.pm:173
 msgid "Resale of this contract is not offered."
 msgstr "Penjualan kembali untuk kontrak ini tidak ditawarkan."
@@ -5892,7 +5943,7 @@ msgstr "Penjualan kembali untuk kontrak ini tidak ditawarkan."
 msgid "Resale price"
 msgstr "Harga jual"
 
-#: lib/BOM/View/CGIForm.pm:2389
+#: lib/BOM/View/CGIForm.pm:2372
 msgid "Reset password"
 msgstr "Ulang kata sandi"
 
@@ -5923,7 +5974,7 @@ msgstr "Mencoba lagi"
 #: /home/git/translations/binary-static/src/templates/haml/get_started/glossary.html.haml:1
 #: /home/git/translations/binary-static/src/templates/haml/home/ticker.html.haml:1
 #: /home/git/translations/binary-static/src/templates/toolkit/bet/sell_success_ajax.html.tt:12
-#: cgi/oop/Controller/Bet.pm:483
+#: lib/BOM/View/Controller/Bet.pm:478
 msgid "Return"
 msgstr "Laba"
 
@@ -5932,10 +5983,10 @@ msgstr "Laba"
 msgid "Returns above 100% on simple %1 contracts."
 msgstr "Laba diatas 100% pada kontrak sederhana %1."
 
-#. (pjax_link_for(l('higher/lower')
+#. (url_for('trade.cgi?market=forex&form_name=higherlower')
 #: /home/git/translations/binary-static/src/templates/haml/static/why_us.html.haml:1
-msgid "Returns above 1000% on %1 and %2 trades."
-msgstr "Laba diatas 1000% pada kontrak %1 dan %2."
+msgid "Returns above 1000% on <a href='%1' class='pjaxload'>higher/lower</a> and <a href='%2' class='pjaxload'>touch/no-touch</a> trades."
+msgstr ""
 
 #: cgi/revoke_attorney.cgi:17 cgi/revoke_attorney.cgi:21
 msgid "Revoke Attorney"
@@ -5972,7 +6023,7 @@ msgstr "Laba Kontrak Naik (%)"
 
 #: /home/git/translations/binary-static/src/templates/haml/get_started/random_markets.html.haml:1
 #: cgi/contract_demo.cgi:33 cgi/contract_guide.cgi:19
-#: cgi/oop/Controller/Bet.pm:1130 cgi/oop/Controller/Bet.pm:1137
+#: lib/BOM/View/Controller/Bet.pm:1117 lib/BOM/View/Controller/Bet.pm:1124
 msgid "Rise/Fall"
 msgstr "Naik/Turun"
 
@@ -6045,21 +6096,21 @@ msgstr "Simpan dalam PNG"
 msgid "Save as SVG"
 msgstr "Simpan dalam SVG"
 
-#: lib/BOM/View/CGIForm.pm:3132
+#: lib/BOM/View/CGIForm.pm:3104
 msgid "Screenshot"
 msgstr "Screenshot"
 
-#: lib/BOM/View/CGIForm.pm:1270 lib/BOM/View/CGIForm.pm:430
+#: lib/BOM/View/CGIForm.pm:1258 lib/BOM/View/CGIForm.pm:449
 msgid "Second line of home address"
 msgstr "R.T/R.W"
 
-#: lib/BOM/View/CGIForm.pm:672
+#: lib/BOM/View/CGIForm.pm:684
 msgid "Secret question"
 msgstr "Pertanyaan rahasia"
 
 #: /home/git/translations/binary-static/src/templates/haml/static/partner_api.html.haml:1
 #: /home/git/translations/binary-static/src/templates/haml/static/why_us.html.haml:1
-#: lib/BOM/View/CGIForm.pm:4735 lib/BOM/View/CGIForm.pm:922
+#: lib/BOM/View/CGIForm.pm:4701 lib/BOM/View/CGIForm.pm:930
 msgid "Security"
 msgstr "Keamanan"
 
@@ -6072,7 +6123,7 @@ msgstr "Pernyataan Keamanan"
 msgid "Security and Privacy"
 msgstr "Keamanan dan Privasi"
 
-#: lib/BOM/View/CGIForm.pm:777
+#: lib/BOM/View/CGIForm.pm:786
 msgid "See Terms"
 msgstr "Lihat Ketentuan"
 
@@ -6084,8 +6135,8 @@ msgstr "Lihat demo"
 msgid "See our "
 msgstr "Lihat "
 
-#: /home/git/translations/binary-static/src/templates/haml/home/index.html.haml:1
-#: lib/BOM/View/CGIForm.pm:532
+#: /home/git/translations/binary-static/src/templates/haml/static/contact.html.haml:1
+#: lib/BOM/View/CGIForm.pm:547
 msgid "Select Country"
 msgstr "Pilih Negara"
 
@@ -6094,7 +6145,7 @@ msgid "Select market"
 msgstr "Pilih market"
 
 #: /home/git/regentmarkets/bom-backoffice/f_setting_selfexclusion.cgi:23
-#: lib/BOM/View/CGIForm.pm:4839
+#: lib/BOM/View/CGIForm.pm:4805
 msgid "Self-Exclusion Facilities"
 msgstr "Fasilitas Pengecualian Diri"
 
@@ -6126,7 +6177,7 @@ msgstr "Jual kontrak pada harga market."
 msgid "Sell option"
 msgstr "Opsi jual"
 
-#: lib/BOM/View/CGIForm.pm:3172
+#: lib/BOM/View/CGIForm.pm:3143
 msgid "Send"
 msgstr "Kirim"
 
@@ -6138,7 +6189,7 @@ msgstr "Kirimkan surat penghantar dan lamaran yang menggambarkan keinginan karir
 msgid "Send your funds to the payment agent. The deposited funds, less the agent's commission, will show up in your account."
 msgstr "Kirim dana anda kepada agen pembayaran. Jumlah deposit berdasarkan nilai tukar yang berlaku dan akan dikreditkan kedalam akun anda."
 
-#: lib/BOM/View/CGIForm.pm:2489 lib/BOM/View/CGIForm.pm:339
+#: lib/BOM/View/CGIForm.pm:2471 lib/BOM/View/CGIForm.pm:360
 #: platform/bin/GenerateStaticData.pm:82
 msgid "Sep"
 msgstr "Sep"
@@ -6151,17 +6202,17 @@ msgstr "September"
 msgid "Service summary"
 msgstr "Ringkasan layanan"
 
-#: lib/BOM/View/CGIForm.pm:3961
+#: lib/BOM/View/CGIForm.pm:3930
 msgid "Session duration limit cannot be more than 1440 minutes."
 msgstr "Batasan durasi sesi tidak bisa lebih dari 1440 menit."
 
 #. ($self_exclusion->session_duration_limit)
 #: /home/git/regentmarkets/bom-backoffice/f_setting_selfexclusion.cgi:73
-#: lib/BOM/View/CGIForm.pm:4875
+#: lib/BOM/View/CGIForm.pm:4841
 msgid "Session duration limit is currently set to <strong>%1 minutes.</strong>"
 msgstr "Batas durasi per trading adalah <strong>%1 menit.</strong>"
 
-#: lib/BOM/View/CGIForm.pm:3766
+#: lib/BOM/View/CGIForm.pm:3733
 msgid "Session duration limit, in minutes"
 msgstr "Batasan waktu berlangsung, dalam menit"
 
@@ -6172,7 +6223,7 @@ msgstr "Tentukan posisi anda"
 #: /home/git/translations/binary-static/src/templates/toolkit/account/settings.html.tt:2
 #: /home/git/translations/binary-static/src/templates/toolkit/charting/light_chart.html.tt:39
 #: cgi/f_writepartics.cgi:75 cgi/settings.cgi:15 cgi/settings.cgi:19
-#: lib/BOM/View/CGIForm.pm:4730 lib/BOM/View/Menu.pm:99
+#: lib/BOM/View/CGIForm.pm:4696 lib/BOM/View/Menu.pm:99
 msgid "Settings"
 msgstr "Pengaturan"
 
@@ -6180,10 +6231,10 @@ msgstr "Pengaturan"
 msgid "Settles"
 msgstr "Diselesaikan"
 
-#: cgi/oop/Controller/Bet.pm:1489 cgi/oop/Controller/Bet.pm:1695
-#: cgi/oop/Controller/Bet.pm:1953 cgi/oop/Controller/Bet.pm:1992
-#: cgi/oop/Controller/Bet.pm:2414 cgi/oop/Controller/Bet.pm:777
-#: cgi/oop/Controller/Bet.pm:886
+#: lib/BOM/View/Controller/Bet.pm:1476 lib/BOM/View/Controller/Bet.pm:1682
+#: lib/BOM/View/Controller/Bet.pm:1940 lib/BOM/View/Controller/Bet.pm:1979
+#: lib/BOM/View/Controller/Bet.pm:2401 lib/BOM/View/Controller/Bet.pm:764
+#: lib/BOM/View/Controller/Bet.pm:873
 msgid "Sharp Prices. Smart Trading."
 msgstr "Harga Tajam. Trading Pintar."
 
@@ -6191,7 +6242,7 @@ msgstr "Harga Tajam. Trading Pintar."
 msgid "Sharp prices"
 msgstr "Harga tajam"
 
-#: lib/BOM/View/CGIForm.pm:3356
+#: lib/BOM/View/CGIForm.pm:3324
 msgid "Short summary of your Payment Agent service"
 msgstr "Ringkasan pendek dari layanan Agen Pembayaran anda"
 
@@ -6271,6 +6322,10 @@ msgstr "Hanya dengan merubah parameter anda dan kontrak akan berubah secara lang
 msgid "Site"
 msgstr "Situs"
 
+#: /home/git/translations/binary-static/src/templates/haml/static/contact.html.haml:1
+msgid "Skype:"
+msgstr ""
+
 #: cgi/smartchart.cgi:44 lib/BOM/View/ChartDirector.pm:423
 #: lib/BOM/View/Charting.pm:579
 msgid "Slow Stochastic"
@@ -6312,11 +6367,11 @@ msgstr "Maaf, OHLC tidak tersedia untuk %1."
 msgid "Sorry, Payment Agent Transfer is temporarily disabled due to system maintenance. Please try again in 30 minutes."
 msgstr "Maaf, Transfer Agen Pembayaran dihentikan untuk sementara berhubung perbaikan sistem. Silahkan coba 30 menit lagi."
 
-#: cgi/cashier_forward.cgi:50
+#: cgi/cashier_forward.cgi.tidyup:62 cgi/cashier_forward.cgi:64
 msgid "Sorry, access to the CASHIER SECTION is disabled for TRADING AGENT accounts. This is to protect you from accidentally attempting to place real money contracts via this account instead of using it to place trades for authorised third parties."
 msgstr "Maaf, pengaksesan BAGIAN KASIR adalah tidak dibenarkan bagi akun AGEN TRADING. Hal ini untuk melindungi anda dari kemungkinan membeli kontrak pada akun riil ini dan bukan membeli kontrak menggunakan akun agen trading."
 
-#: cgi/oop/Controller/Bet.pm:714
+#: lib/BOM/View/Controller/Bet.pm:709
 msgid "Sorry, an error occured with this trade.  Please try again in a few minutes.  If the problem persists, please contact customer support."
 msgstr "Maaf, telah terjadi error pada trading ini. Silahkan coba kembali beberapa menit lagi. Jika masalah ini masih berlangsung, silahkan hubungi customer support."
 
@@ -6332,11 +6387,6 @@ msgstr "Maaf, error terjadi pada saat meloading formulir. Silakan hubungi Custom
 #: cgi/f_writepartics.cgi:152
 msgid "Sorry, an error occurred while processing your account."
 msgstr "Maaf, error terjadi ketika memproses rekening anda."
-
-#. ($client_fm->broker)
-#: cgi/paymentagent_transfer.cgi:116
-msgid "Sorry, broker %1 does not allow transfers from payment agents."
-msgstr "Maaf, akun %1 tidak menyediakan layanan transfer agen pembayaran."
 
 #: lib/BOM/Product/Transaction.pm:960
 msgid "Sorry, due to VAT regulations in your country of residence, contracts on Random Indices are not available."
@@ -6355,7 +6405,7 @@ msgid "Sorry, only USD is allowed."
 msgstr "Maaf, hanya USD diperbolehkan."
 
 #. ($country)
-#: lib/BOM/View/CGIForm.pm:4467
+#: lib/BOM/View/CGIForm.pm:4433
 msgid "Sorry, our service is not available for residents of %1."
 msgstr "Maaf, layanan kami tidak tersedia untuk penduduk %1."
 
@@ -6364,12 +6414,12 @@ msgid "Sorry, payments agents are unavailable at the weekend (UTC timezone)."
 msgstr "Maaf, penarikan tidak tersedia pada akhir pekan (waktu zona UTC)."
 
 #. ($ip_security,                    request()
-#: lib/BOM/View/CGIForm.pm:1781
+#: lib/BOM/View/CGIForm.pm:1768
 msgid "Sorry, the IP Security field you specified (%1) wouldn't let you in from your current IP address %2."
 msgstr "Maaf, bagian keamanan IP yang anda pasang (%1) tidak membenarkan anda masuk menggunakan alamat IP saat ini %2."
 
 #. ($transfer_form->get_field_value('transfer_to')
-#: lib/BOM/View/CGIForm.pm:4144
+#: lib/BOM/View/CGIForm.pm:4112
 msgid "Sorry, the Login ID (%1) does not exist."
 msgstr "Maaf, Login ID (%1) tidak ada."
 
@@ -6415,7 +6465,7 @@ msgstr "Maaf, anda tidak dapat membeli kontrak yang sama. Anda telah membeli kon
 msgid "Sorry, there is too much data to display, please select a shorter interval"
 msgstr "Maaf, terlalu  banyak data yang ditampilkan, Silahkan pilih interval yang lebih singkat"
 
-#: cgi/cashier_forward.cgi:155
+#: cgi/cashier_forward.cgi.tidyup:167 cgi/cashier_forward.cgi:170
 msgid "Sorry, there was a problem validating your personal information with our payment processor. Please contact our Customer Service."
 msgstr "Maaf, telah terjadi masalah pada saat mengesahkan data pribadi anda melalui prosesor pembayaran kami. Silakan hubungi Customer Service kami."
 
@@ -6431,7 +6481,7 @@ msgstr "Maaf, halaman ini tidak dapat direfreshkan."
 msgid "Sorry, withdrawals cannot be made on the day of your account opening. Please wait until tomorrow to make a withdrawal."
 msgstr "Maaf, anda tidak dapat melakukan penarikan dana pada hari yang sama dengan hari pendaftaran akun. Silakan coba kembali besok."
 
-#: lib/BOM/View/CGIForm.pm:1056
+#: lib/BOM/View/CGIForm.pm:1061
 msgid "Sorry, you are too young to open an account."
 msgstr "Maaf, anda dibawah umur untuk mendaftar akun."
 
@@ -6444,14 +6494,14 @@ msgstr "Maaf, anda tidak dapat memiliki lebih dari %1 kontrak dalam jangka waktu
 msgid "Sorry, you cannot withdraw."
 msgstr "Maaf, anda tidak dapat mencairkan."
 
-#: lib/BOM/View/CGIForm.pm:1942
+#: lib/BOM/View/CGIForm.pm:1931
 msgid "Sorry, you have entered an incorrect cashier password"
 msgstr "Maaf, kata sandi yang anda masukkan salah"
 
-#: lib/BOM/View/CGIForm.pm:1026 lib/BOM/View/CGIForm.pm:1230
-#: lib/BOM/View/CGIForm.pm:1773 lib/BOM/View/CGIForm.pm:2350
-#: lib/BOM/View/CGIForm.pm:2877 lib/BOM/View/CGIForm.pm:3099
-#: lib/BOM/View/CGIForm.pm:3396 lib/BOM/View/CGIForm.pm:617
+#: lib/BOM/View/CGIForm.pm:1027 lib/BOM/View/CGIForm.pm:1219
+#: lib/BOM/View/CGIForm.pm:1760 lib/BOM/View/CGIForm.pm:2333
+#: lib/BOM/View/CGIForm.pm:2854 lib/BOM/View/CGIForm.pm:3072
+#: lib/BOM/View/CGIForm.pm:3363 lib/BOM/View/CGIForm.pm:630
 msgid "Sorry, you have entered an incorrect email address."
 msgstr "Maaf, Anda telah memasukkan alamat email yang salah."
 
@@ -6464,7 +6514,7 @@ msgid "Sorry, you have exceeded the maximum allowable transfer amount for today.
 msgstr "Maaf, Anda telah melebihi jumlah transfer maksimum yang diperbolehkan untuk hari ini."
 
 #. (${$exclude_until})
-#: lib/BOM/View/CGIForm.pm:69
+#: lib/BOM/View/CGIForm.pm:82
 msgid "Sorry, you have excluded yourself from the website until %1."
 msgstr "Maaf, anda telah mengecualikan diri dari website hingga %1."
 
@@ -6567,7 +6617,7 @@ msgstr "Waktu mulai pada kontrak mendatang harus lebih dari %1 dari sekarang."
 msgid "Start trading"
 msgstr "Mulai trading"
 
-#: lib/BOM/View/CGIForm.pm:1376 lib/BOM/View/CGIForm.pm:477
+#: lib/BOM/View/CGIForm.pm:1364 lib/BOM/View/CGIForm.pm:494
 msgid "State/Province"
 msgstr "Provinsi"
 
@@ -6598,7 +6648,7 @@ msgstr "Statistik"
 msgid "Stay informed. %1 offers daily market reports and market research, as well as frequent trading webinars."
 msgstr "Pengetahuan terkini. %1 menawarkan laporan dan penelitian market harian termasuk berbagai webinar."
 
-#: cgi/contract_demo.cgi:74 cgi/oop/Controller/Bet.pm:1197
+#: cgi/contract_demo.cgi:74 lib/BOM/View/Controller/Bet.pm:1184
 msgid "Stays Between/Goes Outside"
 msgstr "Tetap Antara/Bergerak Keluar"
 
@@ -6681,8 +6731,8 @@ msgstr "Mgg"
 msgid "Subject to your complying with the Company's instructions, with regards to tracking Clients accessing %1 via the Links on your Site or by quoting your affiliate IDs during signup, the Company shall use all reasonable endeavours to ensure that whenever a Client links to %1 through these Links or affiliate IDs and they subsequently place a contract or otherwise transact with the Company, the relevant Client is identified as originating from you or your Site. However, the Company shall not be liable to you in any way if the Company is unable to identify a Client as originating from you or your Site."
 msgstr "Sesuai dengan ketertiban anda mengikuti arahan perusahaan dalam hal menjejaki klien yang mengakses %1 melalui link pada situs anda atau dengan menginformasikan ID affiliasi anda pada saat mendaftar, perusahaan akan menggunakan cara terbaik untuk memastikan bahwa setiap kali klient berhubungan dengan %1 melalui link atau ID afiliasi dan mereka melakukan pembelian kontrak atau bertransaksi dengan perusahaan maka klien tersebut akan diidentifikasi sebagai berasal dari anda atau situs anda. Namun demikian, perusahaan tidak bertanggung jawab jika tidak dapat mengidentifikasi atau membuktikan klien tersebut berasal dari anda atau situs anda."
 
-#: lib/BOM/View/CGIForm.pm:3614 lib/BOM/View/CGIForm.pm:4097
-#: lib/BOM/View/CGIForm.pm:4335
+#: lib/BOM/View/CGIForm.pm:3581 lib/BOM/View/CGIForm.pm:4064
+#: lib/BOM/View/CGIForm.pm:4300
 msgid "Submit"
 msgstr "Mengajukan"
 
@@ -6703,11 +6753,11 @@ msgstr "Minggu"
 msgid "Support Times"
 msgstr "Jam operasi"
 
-#: lib/BOM/View/CGIForm.pm:3536
+#: lib/BOM/View/CGIForm.pm:3503
 msgid "Supported banks (this field visible from office only) **"
 msgstr "Bank yang tersedia (fasilitas ini hanya tersedia dari kantor saja) **"
 
-#: lib/BOM/View/CGIForm.pm:3552
+#: lib/BOM/View/CGIForm.pm:3519
 msgid "Supported banks list is invalid"
 msgstr "Daftar bank yang digunakan salah"
 
@@ -6760,9 +6810,15 @@ msgstr "Pemimpin teknologi dengan lebih dari 10 tahun pengalaman..."
 msgid "Tel"
 msgstr "Tel"
 
-#: cgi/f_writepartics.cgi:222 lib/BOM/View/CGIForm.pm:1395
-#: lib/BOM/View/CGIForm.pm:624
+#: cgi/f_writepartics.cgi:222 lib/BOM/View/CGIForm.pm:1383
+#: lib/BOM/View/CGIForm.pm:637
 msgid "Telephone"
+msgstr "Telepon"
+
+#: /home/git/translations/binary-static/src/templates/haml/static/contact.html.haml:1
+#, fuzzy
+#| msgid "Telephone"
+msgid "Telephone:"
 msgstr "Telepon"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:110
@@ -6930,7 +6986,7 @@ msgstr "Agen akan mengirimkan jumlah penarikan (dikurangi komisi) melalui metode
 msgid "The Ask price represents the price at which the contract may be purchased at the present time."
 msgstr "Harga Ask merupakan harga di mana kontrak dapat dibeli saat ini."
 
-#: lib/BOM/View/CGIForm.pm:3219
+#: lib/BOM/View/CGIForm.pm:3190
 msgid "The Authentication process verifies the information you have provided us during account registration. It will increase your trading limits and enable you to register more than one credit card.<br/><br/>In order to facilitate the process, please confirm your building no./name before clicking \"Authenticate\".<br/>"
 msgstr "Proses pembuktian adalah untuk memastikan kebenaran data yang anda informasikan pada saat melakukan pendaftaran. Disamping itu juga bertujuan untuk meningkatkan batasan trading anda.<br/><br/>Untuk melanjutkan proses, konfirmasikan nomor/nama gedung sebelum mengklik tombol \"Pembuktian\".<br/>"
 
@@ -7206,9 +7262,15 @@ msgstr "Pelanggan telah mencapai total pembelian kontrak sebesar 5 kali jumlah b
 msgid "The company does not guarantee the ability to sell a contract prior to its expiration time."
 msgstr "Perusahaan tidak menjamin keberhasilan penjualan awal kontrak sebelum waktu berakhir tercapai."
 
+#: /home/git/translations/binary-static/src/templates/toolkit/cashier/ukgc_funds_protection_message.html.tt:13
+#, fuzzy
+#| msgid "The company holds customer funds in separate bank accounts to the operational accounts which would not, in the event of insolvency, form part of the Company's assets. This meets the Gambling Commission’s requirements for the segregation of customer funds at the level: medium protection."
+msgid "The company holds customer funds in separate bank accounts to the operational accounts which would not, in the event of insolvency, form part of the Company's assets. This meets the Gambling Commission’s requirements for the segregation of customer funds at the level: <strong>medium protection</strong>."
+msgstr "Perusahaan menyimpan dana Pelanggan pada rekening bank terpisah dari rekening bank untuk urusan operasional dimana tidak akan, meskipun dalam keadaan pailit menjadi bagian dari aset Perusahaan. Hal ini memenuhi persyaratan Komisi Trading dalam pemisahan dana nasabah di tingkat: perlindungan menengah."
+
 #: /home/git/translations/binary-static/src/templates/toolkit/legal/terms_and_conditions.html.tt:59
 msgid "The company holds customer funds in separate bank accounts to the operational accounts which would not, in the event of insolvency, form part of the Company's assets. This meets the Gambling Commission’s requirements for the segregation of customer funds at the level: medium protection."
-msgstr ""
+msgstr "Perusahaan menyimpan dana Pelanggan pada rekening bank terpisah dari rekening bank untuk urusan operasional dimana tidak akan, meskipun dalam keadaan pailit menjadi bagian dari aset Perusahaan. Hal ini memenuhi persyaratan Komisi Trading dalam pemisahan dana nasabah di tingkat: perlindungan menengah."
 
 #: /home/git/translations/binary-static/src/templates/toolkit/legal/promocode.html.tt:35
 #: /home/git/translations/binary-static/src/templates/toolkit/legal/promocode.html.tt:61
@@ -7234,6 +7296,7 @@ msgid "The contract has expired"
 msgstr "Kontrak telah berakhir"
 
 #. ($ny_1600->time_hhmm)
+#: lib/BOM/Product/Pricing/Engine/Role/StandardMarkup.pm.tidyup:174
 #: lib/BOM/Product/Pricing/Engine/Role/StandardMarkup.pm:174
 msgid "The contract is not available after %1 GMT."
 msgstr "Kontrak tidak tersedia setelah %1 GMT."
@@ -7250,7 +7313,7 @@ msgstr "Periode kontrak adalah jangka waktu trading. Yang juga disebut sebagai d
 msgid "The cost of your open positions"
 msgstr "Jumlah biaya kontrak"
 
-#: lib/BOM/View/CGIForm.pm:5026
+#: lib/BOM/View/CGIForm.pm:4992
 msgid "The currency of your bonus will be the same as the currency of your first deposit."
 msgstr "Mata uang bonus anda akan sama dengan mata uang deposit pertama anda."
 
@@ -7331,7 +7394,7 @@ msgstr "Manfaat paling penting OAuth2.0 adalah bagi pengguna yang sudah memiliki
 msgid "The moving average period of the signal line"
 msgstr "Pergerakan rata-rata periode dari garis signal"
 
-#: lib/BOM/Platform/Plack.pm:342
+#: lib/BOM/Platform/Plack.pm.tidyup:334 lib/BOM/Platform/Plack.pm:334
 msgid "The page has timed out. This may be due to a slow Internet connection, or to excess load on our servers.  Please try again in a few moments."
 msgstr "Halaman memiliki batas waktu. Hal ini mungkin disebabkan oleh koneksi internet yang sangat lambat, atau kelebihan muatan pada server kami.  Silahkan coba beberapa saat lagi."
 
@@ -7460,9 +7523,9 @@ msgstr "Waktu saat ini menunjukkan %1 %2 dan waktu pembukaan market (untuk %3) a
 msgid "The transactions performed on this site and the relationship between Clients and the Company are to be governed by and construed in accordance with the laws of the country of incorporation of the Company (the \"Jurisdiction\"), which shall be either of the Isle of Man, Malta, or Costa Rica. You agree that the Jurisdiction's courts will have sole jurisdiction to settle any disputes that may arise in relation thereto. For such purposes, you irrevocably submit to the jurisdiction of the courts of the Jurisdiction in relation to any such dispute and you agree that any claim you might have against the Company shall only be brought before the courts of the Jurisdiction. For further information on complaints and disputes, kindly refer to the Company’s Complaints and Disputes section."
 msgstr "Transaksi yang dilakukan di situs ini dan hubungan antara klien dan perusahaan adalah diatur dan ditafsirkan sesuai dengan hukum negara pendirian perusahaan (\"Yurisdiksi\"), yaitu di Isle of Man , Malta, atau Costa Rica. Anda bersetuju bahwa pengadilan yurisdiksi akan memiliki kewenangan tunggal untuk menyelesaikan perselisihan yang mungkin timbul dalam kaitan tersebut. Untuk tujuan tersebut, anda tidak dapat ditarik kembali tunduk kepada yurisdiksi pengadilan dari yurisdiksi berkaitan dengan masalah tersebut dan anda setuju bahwa setiap klaim yang mungkin anda miliki terhadap perusahaan hanya akan dibawa ke pengadilan dari yurisdiksi. Untuk informasi lebih lanjut tentang keluhan dan perselisihan, silakan lihat bagian keluhan dan perselisihan perusahaan."
 
-#: lib/BOM/View/CGIForm.pm:1565 lib/BOM/View/CGIForm.pm:1759
-#: lib/BOM/View/CGIForm.pm:2041 lib/BOM/View/CGIForm.pm:2115
-#: lib/BOM/View/CGIForm.pm:2192 lib/BOM/View/CGIForm.pm:2291
+#: lib/BOM/View/CGIForm.pm:1549 lib/BOM/View/CGIForm.pm:1746
+#: lib/BOM/View/CGIForm.pm:2028 lib/BOM/View/CGIForm.pm:2101
+#: lib/BOM/View/CGIForm.pm:2177 lib/BOM/View/CGIForm.pm:2275
 msgid "The two passwords that you entered do not match."
 msgstr "Kedua-dua password yang Anda masukkan tidak cocok."
 
@@ -7525,7 +7588,7 @@ msgid "There was a market data disruption during the contract period. For real-m
 msgstr "Terdapat gangguan data pada periode kontrak berikut. Bagi akun uang riil, kami akan melakukan perbaikan dan akan menyelesaikan kontrak berdasarkan hasil yang sesuai. Untuk akun virtual akan kami batalkan dan melakukan pengembalian harga kontrak."
 
 #. (request()
-#: cgi/cashier_forward.cgi:175
+#: cgi/cashier_forward.cgi.tidyup:187 cgi/cashier_forward.cgi:190
 msgid "There was a problem validating your address. Please fix the indicated fields. If you need assistance feel free to contact our <a href=\"%1\">Customer Support</a>."
 msgstr "Terdapat masalah pada saat mengesahkan alamat anda. Silahkan periksa bagian yang ditandai. Jika anda memerlukan bantuan silahkan hubungi <a href=\"%1\">Customer Support</a> kami."
 
@@ -7595,20 +7658,20 @@ msgstr "Dokumen ini"
 msgid "This Payment Agent cashier section is locked."
 msgstr "Bagian kasir Agen Pembayaran ini terkunci."
 
-#: cgi/top_up_virtual.cgi:46 lib/BOM/View/CGIForm.pm:3458
+#: cgi/top_up_virtual.cgi:46 lib/BOM/View/CGIForm.pm:3425
 msgid "This URL is invalid."
 msgstr "URL ini tidak berlaku."
 
 #. (request()
-#: lib/BOM/View/CGIForm.pm:114
+#: lib/BOM/View/CGIForm.pm:130
 msgid "This account is unavailable. For any questions please contact <a href=\"%1\">Customer Support</a>."
 msgstr "Akun ini untuk sementara dibatalkan, silahkan hubungi <a href=\"%1\">Customer Support</a>."
 
-#: lib/BOM/View/CGIForm.pm:802
+#: lib/BOM/View/CGIForm.pm:810
 msgid "This bonus code has expired."
 msgstr "Kode Bonus tidak berlaku."
 
-#: lib/BOM/View/CGIForm.pm:797
+#: lib/BOM/View/CGIForm.pm:805
 msgid "This bonus code is not available."
 msgstr "Kode bonus ini tidak tersedia."
 
@@ -7682,12 +7745,12 @@ msgstr "Kontrak ini untung"
 msgid "This document (the \"Agreement\") sets out the terms and conditions between \"the Company\" which is Binary Ltd, and you (the person who applied for this program; \"you\" or \"your\"), in relation to your application to setup an affiliate account (and membership of the affiliate program if your application is deemed successful) to promote the website %1"
 msgstr "Dokumen ini (\"Perjanjian\") ini menjabarkan syarat dan kondisi antara \"Perusahaan\" Binary Ltd, dan anda (orang yang menggunakan program ini; \"anda\" atau \"milik anda\"), dalam kaitannya dengan aplikasi untuk setup akun afiliasi (dan keanggotaan dari program afiliasi jika aplikasi anda dianggap sukses) untuk mempromosikan situs %1"
 
-#: lib/BOM/View/CGIForm.pm:5237
+#: lib/BOM/View/CGIForm.pm:5203
 msgid "This function is not relevant to Virtual money accounts"
 msgstr "Fasilitas ini tidak tersedia untuk Akun Uang Virtual"
 
 #. (request()
-#: cgi/cashier_forward.cgi:45
+#: cgi/cashier_forward.cgi.tidyup:57 cgi/cashier_forward.cgi:59
 msgid "This is a virtual-money account. Please click <a class=\"pjaxload\" href=\"%1\">here</a> to open a real-money account and deposit funds."
 msgstr "Ini adalah akun uang virtual. Silakan klik <a class=\"pjaxload\" href=\"%1\">disini</a> untuk mendaftar akun riil dan mendeposit dana."
 
@@ -7698,7 +7761,7 @@ msgstr "Ini adalah pesan otomatis untuk mengingatkan Anda bahwa telah terjadi ke
 
 #: /home/git/translations/binary-static/src/templates/toolkit/bet/form/barrier.html.tt:23
 #: /home/git/translations/binary-static/src/templates/toolkit/bet/form/barrier.html.tt:42
-#: cgi/oop/Controller/Bet.pm:2405
+#: lib/BOM/View/Controller/Bet.pm:2392
 msgid "This is an indicative barrier. Actual barrier will be the entry spot plus the barrier offset."
 msgstr "Ini adalah batasan indikatif. Batasan aktual adalah spot masuk ditambah batasan offset."
 
@@ -7795,7 +7858,7 @@ msgstr "Tik"
 msgid "Tick by Tick"
 msgstr "Tick demi Tick"
 
-#: cgi/oop/Controller/Bet.pm:1145 cgi/oop/Controller/Bet.pm:1152
+#: lib/BOM/View/Controller/Bet.pm:1132 lib/BOM/View/Controller/Bet.pm:1139
 msgid "Ticks"
 msgstr "Hasil Tik"
 
@@ -7820,7 +7883,7 @@ msgstr "Dengan perubahan waktu. Kami meningkatkan hasil sehingga klien kami dapa
 msgid "Tip:"
 msgstr "Tip:"
 
-#: lib/BOM/View/CGIForm.pm:216
+#: lib/BOM/View/CGIForm.pm:240
 msgid "Title"
 msgstr "Gelar"
 
@@ -7833,7 +7896,7 @@ msgstr "Kepada"
 msgid "To apply, please submit your CV and a cover letter via our <a href=\"%1\">Contact us</a> page."
 msgstr "Untuk melamar, kirimkan lamaran anda melalui halaman <a href=\"%1\">Hubungi kami</a>."
 
-#: lib/BOM/View/Form.pm:374
+#: lib/BOM/View/CGIForm.pm:1794
 msgid "To change your name, date of birth, or country of residence, please contact Customer Support."
 msgstr ""
 "Untuk merubah nama, tanggal lahir dan negara domisili anda, silahkan \n"
@@ -7852,7 +7915,7 @@ msgstr "Untuk membuat White Label, pertama %1. Hal ini akan memberi anda komisi 
 msgid "To enable cookies, follow the instructions below for the browser version that you are using."
 msgstr "Untuk mengaktifkan cookie, ikuti petunjuk di bawah ini untuk versi browser yang anda gunakan."
 
-#: lib/BOM/View/CGIForm.pm:5319
+#: lib/BOM/View/CGIForm.pm:5292
 msgid "To fully authenticate your account, please email scanned copies of the document listed below."
 msgstr "Untuk membuktikan kebenaran akun Anda, silahkan email scan copy dokumen berikut ini."
 
@@ -7869,7 +7932,7 @@ msgstr "Untuk memasikan anda menerima balasan email, masukan domain \"%1\" kedal
 msgid "To reset your password, enter the e-mail address you registered in the field below and click \"RESET PASSWORD\"."
 msgstr "Untuk mengatur ulang kata sandi, masukkan alamat email yang anda daftarkan dan klik \"ULANG KATA SANDI\"."
 
-#: lib/BOM/View/CGIForm.pm:4573
+#: lib/BOM/View/CGIForm.pm:4539
 msgid "To speak to our customer service representatives online, please click on the Live Help button. Live Help in English is available Monday to Friday, 24 hours a day. Assistance in Russian is available from 7h00GMT until 23h30; in Indonesian from 1h00GMT to 10h00."
 msgstr "Untuk berbicara langsung dengan wakil Customer Service kami secara online, silakan klik pada tombol Live Chat Online. Bantuan online dalam bahasa Inggris tersedia dari hari Senin hingga Jumat, 24 jam. Bantuan dalam bahasa Rusia tersedia dari jam 7h00GMT hingga 23h30 dan dalam bahasa Indonesia tersedia dari jam 1h00GMT hingga 10h00."
 
@@ -7908,7 +7971,7 @@ msgstr "Menyentuh/Tidak"
 
 #: /home/git/translations/binary-static/src/templates/haml/get_started/random_markets.html.haml:1
 #: cgi/contract_demo.cgi:60 cgi/contract_demo.cgi:61 cgi/contract_guide.cgi:45
-#: cgi/oop/Controller/Bet.pm:1177 cgi/oop/Controller/Bet.pm:1184
+#: lib/BOM/View/Controller/Bet.pm:1164 lib/BOM/View/Controller/Bet.pm:1171
 msgid "Touch/No Touch"
 msgstr "Menyentuh/Tidak"
 
@@ -7924,7 +7987,7 @@ msgstr "Kontrak Menyentuh/tidak"
 msgid "Tour"
 msgstr "Panduan"
 
-#: lib/BOM/View/CGIForm.pm:1295 lib/BOM/View/CGIForm.pm:449
+#: lib/BOM/View/CGIForm.pm:1283 lib/BOM/View/CGIForm.pm:467
 msgid "Town/City"
 msgstr "Kota"
 
@@ -8047,8 +8110,8 @@ msgstr "Trading hanya tersedia setelah %1 sesi pertama."
 msgid "Trading is not offered for this duration."
 msgstr "Trading tidak ditawarkan untuk durasi ini."
 
-#: cgi/oop/Controller/Bet.pm:688 lib/BOM/Product/Contract.pm:2266
-#: lib/BOM/Product/Contract.pm:2332
+#: lib/BOM/Product/Contract.pm:2266 lib/BOM/Product/Contract.pm:2332
+#: lib/BOM/View/Controller/Bet.pm:683
 msgid "Trading is suspended at the moment."
 msgstr "Trading dihentikan untuk sementara."
 
@@ -8079,11 +8142,11 @@ msgstr "Trading pada jenis kontrak ini tidak ditawarkan bagi satu jam sesi terak
 msgid "Trading suspended for the last %1 of the session."
 msgstr "Trading dihentikan hingga sedi terakhir %1."
 
-#: lib/BOM/View/CGIForm.pm:4843
+#: lib/BOM/View/CGIForm.pm:4809
 msgid "Trading the financial markets can become addictive. Fill in the form below to limit your participation on the website or send a signed letter or fax to our customer support team. Limits will only be removed or altered after 7 days."
 msgstr "Trading pada market financial dapat menyebabkan kecanduan. Isikan formulir dibawah ini untuk membatasi keikutsertaan Anda pada situs web ini atau kirimkan surat yang ditandatangani atau kirimkan fax kepada tim customer support kami. Batas hanya akan dihapus atau diubah setelah 7 hari."
 
-#: lib/BOM/View/CGIForm.pm:2630
+#: lib/BOM/View/CGIForm.pm:2611
 msgid "Transact in"
 msgstr "Bertransaksi di"
 
@@ -8091,11 +8154,11 @@ msgstr "Bertransaksi di"
 msgid "Transfer to"
 msgstr "Kirim ke"
 
-#: lib/BOM/View/CGIForm.pm:4007
+#: lib/BOM/View/CGIForm.pm:3976
 msgid "Transfer to Login ID"
 msgstr "Transfer ke Login ID"
 
-#: lib/BOM/View/CGIForm.pm:4230
+#: lib/BOM/View/CGIForm.pm:4198
 msgid "Transfer to Payment Agent"
 msgstr "Penarikan Agen Pembayaran"
 
@@ -8186,7 +8249,7 @@ msgstr "Oskilator Gabungan"
 msgid "Unable to process your request"
 msgstr "Tidak dapat memproses permohonan anda"
 
-#: lib/BOM/View/CGIForm.pm:1164 lib/BOM/View/CGIForm.pm:1166
+#: lib/BOM/View/CGIForm.pm:1154 lib/BOM/View/CGIForm.pm:1156
 msgid "Unauthenticated"
 msgstr "Belum terbukti"
 
@@ -8207,7 +8270,7 @@ msgstr "Yang mendasari"
 msgid "Unknown error while saving workspace '#1'."
 msgstr "Error tidak dikenal saat menyimpan workspace '#1'."
 
-#: lib/BOM/View/CGIForm.pm:1909
+#: lib/BOM/View/CGIForm.pm:1898
 msgid "Unlock Cashier/Settings sections"
 msgstr "Membuka kunci Kasir/bagian Pengaturan"
 
@@ -8224,11 +8287,11 @@ msgid "Upcoming Events"
 msgstr "Acara Mendatang"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/api/register.html.tt:25
-#: lib/BOM/View/CGIForm.pm:1596
+#: lib/BOM/View/CGIForm.pm:1580
 msgid "Update"
 msgstr "Memperbarui"
 
-#: lib/BOM/View/CGIForm.pm:3855
+#: lib/BOM/View/CGIForm.pm:3822
 msgid "Update Settings"
 msgstr "Perbaru Pengaturan"
 
@@ -8261,7 +8324,7 @@ msgstr "Penggunaan harga penawaran/permintaan: ketika market terlikuidasi, kutip
 msgid "Use the opportunity provided by our website to practice for free with our virtual money account facility. This will enable you to get used to the functionalities and rules of the website."
 msgstr "Manfaatkan kesempatan untuk bertrading gratis menggunakan fasilitas akun virtual yang kami tawarkan. Hal ini dapat membantu anda di dalam memahami fasilitas dan aturan yang tersedia."
 
-#: lib/BOM/View/CGIForm.pm:1706
+#: lib/BOM/View/CGIForm.pm:1693
 msgid "Use this feature to restrict access to your account from a specific IP address, or range of IP addresses.  For example, if you are certain that your IP address will always be in the range 213.45.0.0 - 213.45.255.255 then you would input 213.45.*.* into the IP address field.  This would ensure that persons outside of that IP network cannot access your account (even if they have the correct password)."
 msgstr "Gunakan fasilitas ini untuk membatasi pengaksesan kedalam rekening anda dari alamat IP khusus. Sebagai contoh, anda menggunakan alamat IP tetap seputar 213.45.0.0 - 213.45.255.255 maka anda bisa memasukkan 213.45.*.* kedalam kolom alamat IP. Hal ini akan memastikan pihak ketiga yang mengakses menggunakan alamat IP diluar network anda tidak akan berhasil mengakses rekening anda (meskipun menggunakan password yang benar)."
 
@@ -8269,7 +8332,7 @@ msgstr "Gunakan fasilitas ini untuk membatasi pengaksesan kedalam rekening anda 
 msgid "User Support - Thank you"
 msgstr "Pengguna Support - Terimakasih"
 
-#: lib/BOM/View/CGIForm.pm:4807
+#: lib/BOM/View/CGIForm.pm:4773
 msgid "Utility bill (within last 3 months)"
 msgstr "Tagihan utilitas (dalam 3 bulan terakhir)"
 
@@ -8281,11 +8344,11 @@ msgstr "Valletta, ibukota Malta"
 msgid "Variable return"
 msgstr "Laba variable"
 
-#: lib/BOM/View/CGIForm.pm:4795
+#: lib/BOM/View/CGIForm.pm:4761
 msgid "Verification of identity"
 msgstr "Pembuktian identitas"
 
-#: lib/BOM/View/CGIForm.pm:2046 lib/BOM/View/CGIForm.pm:2197
+#: lib/BOM/View/CGIForm.pm:2033 lib/BOM/View/CGIForm.pm:2182
 msgid "Verify new password"
 msgstr "Verifikasi kata sandi baru"
 
@@ -8303,9 +8366,16 @@ msgstr "Garis Vertical"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/bet/intraday_prices.html.tt:16
 #: /home/git/translations/binary-static/src/templates/toolkit/charting/daily_ohlc.html.tt:21
-#: cgi/oop/Controller/Bet.pm:1276 cgi/oop/Controller/Bet.pm:1295
+#: lib/BOM/View/Controller/Bet.pm:1263 lib/BOM/View/Controller/Bet.pm:1282
 msgid "View"
 msgstr "Lihat"
+
+#: lib/BOM/Product/Pricing/Engine/Role/StandardMarkup.pm.tidyup:179
+#: lib/BOM/Product/Pricing/Engine/Role/StandardMarkup.pm:179
+#, fuzzy
+#| msgid "Asset Index"
+msgid "View Asset Index"
+msgstr "Indeks Aset"
 
 #: /home/git/translations/binary-static/src/templates/haml/resources/index.html.haml:1
 msgid "View Rise/Fall contract prices across a range of markets."
@@ -8356,7 +8426,7 @@ msgid "View the operating hours of the markets you can trade."
 msgstr "Lihat waktu operasi dan market yang dapat anda tradingkan."
 
 #. (request()
-#: lib/BOM/View/CGIForm.pm:5244
+#: lib/BOM/View/CGIForm.pm:5210
 msgid "View your <a href=\"%1\">withdrawal limits</a>."
 msgstr "Lihat batasan <a href=\"%1\">penarikan</a> anda."
 
@@ -8381,13 +8451,13 @@ msgstr "Lihat keuntungan/kerugian trading anda."
 msgid "Virtual Account"
 msgstr "Akun Virtual"
 
-#: lib/BOM/View/CGIForm.pm:4529
+#: lib/BOM/View/CGIForm.pm:4495
 msgid "Virtual Money Account Opening"
 msgstr "Pendaftaran Akun Uang Virtual"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/account/open_account.html.tt:24
-#: cgi/lost_password.cgi:385 lib/BOM/View/CGIForm.pm:1160
-#: lib/BOM/View/CGIForm.pm:4917
+#: cgi/lost_password.cgi:385 lib/BOM/View/CGIForm.pm:1150
+#: lib/BOM/View/CGIForm.pm:4883
 msgid "Virtual money account"
 msgstr "Akun Uang Virtual"
 
@@ -8432,14 +8502,21 @@ msgstr "Kami sepenuhnya memiliki ijin dari British Isles dan Malta."
 msgid "We are not able to stream live prices at the moment. To enjoy live streaming of prices try refreshing the page, if you get this issue after repeated attempts try a different browser"
 msgstr "Kami tidak dapat memberikan striming harga live untuk saat ini. Untuk menikmati striming harga live silahkan coba merefresh halaman, atau coba browser lain"
 
-#: lib/BOM/View/CGIForm.pm:587 platform/bin/GenerateStaticData.pm:56
+#: lib/BOM/View/CGIForm.pm:601 platform/bin/GenerateStaticData.pm:56
 msgid "We are not accepting accounts from residents of this country at the present time."
 msgstr "Saat ini kami tidak menerima pembukaan account dari penduduk negara berikut."
 
 #. ("http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx")
 #: /home/git/translations/binary-static/src/templates/toolkit/legal/terms_and_conditions.html.tt:56
 msgid "We are required by our licence to inform you about what happens to funds which we hold on account for you, and the extent to which funds are protected in the event of insolvency <a href='%1' target='_blank'>%1</a>."
-msgstr ""
+msgstr "Kami diwajibkan oleh lisensi kami untuk memberitahu Anda tentang apa yang terjadi pada dana yang kami pegang pada akun Anda dan sejauh mana dana anda dilindungi dalam hal kepailitan <a href='%1' target='_blank'>%1</a>."
+
+#. ("http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx")
+#: /home/git/translations/binary-static/src/templates/toolkit/cashier/ukgc_funds_protection_message.html.tt:10
+#, fuzzy
+#| msgid "We are required by our licence to inform you about what happens to funds which we hold on account for you, and the extent to which funds are protected in the event of insolvency <a href='%1' target='_blank'>%1</a>."
+msgid "We are required by our license to inform you about what happens to funds which we hold on account for you, and the extent to which funds are protected in the event of insolvency <a href='%1' target='_blank'>%1</a>."
+msgstr "Kami diwajibkan oleh lisensi kami untuk memberitahu Anda tentang apa yang terjadi pada dana yang kami pegang pada akun Anda dan sejauh mana dana anda dilindungi dalam hal kepailitan <a href='%1' target='_blank'>%1</a>."
 
 #. ($manualAuthenticationLocation, $contact_us_url)
 #: cgi/f_onlineid.cgi:187
@@ -8510,7 +8587,7 @@ msgstr "Kami ingin memudahkan anda didalam mencari prospek. Setelah anda memperk
 msgid "We were unable to recover your Login ID or Password with the provided information. <a href=\"%1\">Return to Password Recovery</a>, or <a href=\"%2\"><strong>contact us</strong></a> should you need further assistance."
 msgstr "Kami tidak dapat memulihkan Login ID atau kata sandi menggunakan informasi yang anda berikan. <a href=\"%1\">Kembali ke Pemulihan Kata Sandi</a>, atau <a href=\"%2\"><strong>hubungi kami</strong></a> jika anda memerlukan bantuan lebih lanjut."
 
-#: lib/BOM/View/CGIForm.pm:5298
+#: lib/BOM/View/CGIForm.pm:5267
 msgid "We were unable to verify your identity and prove your residential address using our automated verification procedure."
 msgstr "Kami tidak dapat membuktikan identitas dan alamat anda menggunakan prosedur pembuktian otomatis."
 
@@ -8575,7 +8652,7 @@ msgstr "Situs web"
 #. ($until->date)
 #. ($self_exclusion->exclude_until)
 #: /home/git/regentmarkets/bom-backoffice/f_setting_selfexclusion.cgi:77
-#: lib/BOM/View/CGIForm.pm:4885
+#: lib/BOM/View/CGIForm.pm:4851
 msgid "Website exclusion is currently set to <strong>%1.</strong>"
 msgstr "Pengecualian website saat ini adalah <strong>%1.</strong>"
 
@@ -8957,7 +9034,7 @@ msgid "Year"
 msgstr "Tahun"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/container/confirm_box_popup.html.tt:5
-#: lib/BOM/View/CGIForm.pm:1153 lib/BOM/View/CGIForm.pm:3565
+#: lib/BOM/View/CGIForm.pm:1143 lib/BOM/View/CGIForm.pm:3532
 #: lib/BOM/View/Charting.pm:478
 msgid "Yes"
 msgstr "Ya"
@@ -8979,7 +9056,7 @@ msgstr "Anda juga berhak untuk memperoleh data pribadi yang telah anda ajukan ke
 msgid "You and we are independent contractors, and nothing in this Agreement will create any partnership, joint venture, agency, franchise, sales representative, or employment relationship between the parties. You will have no authority to make or accept any offers or representations on our behalf. You will not make any statement, whether on your site or otherwise, that reasonably would contradict anything in this paragraph."
 msgstr "Anda dan kami merupakan kontraktor bebas dan tidak terdapat dalam perjanjian ini yang akan membuat satu kemitraan, usaha patungan, agen, waralaba, perwakilan penjualan, atau hubungan kerja antara kedua belah pihak. Anda tidak akan memiliki otoritas untuk membuat atau menerima tawaran atau mengatas namakan kami."
 
-#: cgi/oop/Controller/Bet.pm:2177
+#: lib/BOM/View/Controller/Bet.pm:2164
 msgid "You are being given the better price."
 msgstr "Anda diberikan harga yang lebih baik."
 
@@ -9033,7 +9110,7 @@ msgstr "Anda dapat menjual kembali kontrak jangka panjang untuk profit dari peru
 msgid "You can set the length of your trade, from 10 seconds to 365 days."
 msgstr "Anda dapat menentukan lama kontrak, dari 10 detik hingga 365 hari."
 
-#: lib/BOM/View/CGIForm.pm:5299
+#: lib/BOM/View/CGIForm.pm:5269
 msgid "You can still authenticate your account by sending us scans of the following documents by email"
 msgstr "Anda masih dapat membuktikan kebenaran akun anda dengan mengirimkan kami scan dokumentasi berikut melalui email"
 
@@ -9105,17 +9182,17 @@ msgstr "Anda telah melakukan penarikan dana sejumlah EUR %1 akumulasi sepanjang 
 msgid "You have already withdrawn the equivalent of EUR %1."
 msgstr "Anda telah melakukan penarikan sebesar EUR %1."
 
-#: lib/BOM/View/CGIForm.pm:5014
+#: lib/BOM/View/CGIForm.pm:4980
 msgid "You have bought contracts with a combined purchase price of five times the bonus amount."
 msgstr "Anda telah membeli kontrak dengan harga total lima kali jumlah bonus."
 
-#: lib/BOM/View/CGIForm.pm:1486 lib/BOM/View/CGIForm.pm:1492
-#: lib/BOM/View/CGIForm.pm:1497
+#: lib/BOM/View/CGIForm.pm:1470 lib/BOM/View/CGIForm.pm:1476
+#: lib/BOM/View/CGIForm.pm:1481
 msgid "You have entered an invalid IP address."
 msgstr "Alamat IP yang anda masukkan salah."
 
-#: lib/BOM/View/CGIForm.pm:2907 lib/BOM/View/CGIForm.pm:3033
-#: lib/BOM/View/CGIForm.pm:4034
+#: lib/BOM/View/CGIForm.pm:2883 lib/BOM/View/CGIForm.pm:3008
+#: lib/BOM/View/CGIForm.pm:4002
 msgid "You have entered an invalid login ID"
 msgstr "Anda telah memasukkan login ID yang salah"
 
@@ -9220,7 +9297,7 @@ msgstr "Anda perlu mengganti kerugian pada permintaan dan Perusahaan tidak berta
 msgid "You shall not hold or pool client funds or third party funds into your own account held with %1."
 msgstr "Anda tidak boleh memegang atau mengumpulkan dana pelanggan atau pihak ketiga di dalam akun %1 anda."
 
-#: lib/BOM/View/CGIForm.pm:3786
+#: lib/BOM/View/CGIForm.pm:3753
 msgid "You will be automatically logged out after such time."
 msgstr "Anda akan secara otomatis keluar setelah waktu tersebut."
 
@@ -9258,6 +9335,13 @@ msgstr "Anda akan menikmati peralatan charting terbaru ini dengan 27 indikator t
 msgid "You'll find answers to most of your questions on the <a href=\"%1\" target=\"_blank\">FAQ</a> page."
 msgstr "Anda akan menemukan jawaban pada halaman <a href=\"%1\" target=\"_blank\">Pertanyaan Umum</a> page."
 
+#. ($faq_url)
+#: /home/git/translations/binary-static/src/templates/haml/static/contact.html.haml:1
+#, fuzzy
+#| msgid "You'll find answers to most of your questions on the <a href=\"%1\" target=\"_blank\">FAQ</a> page."
+msgid "You'll find answers to most of your questions on the <a href='%1' target='_blank'>FAQ</a> page."
+msgstr "Anda akan menemukan jawaban pada halaman <a href=\"%1\" target=\"_blank\">Pertanyaan Umum</a> page."
+
 #: /home/git/translations/binary-static/src/templates/haml/layouts/default/topbar.html.haml:1
 #: /home/git/translations/binary-static/src/templates/toolkit/global/header.html.tt:7
 msgid "You're using a virtual money account."
@@ -9269,7 +9353,7 @@ msgid "Your %1 day withdrawal limit is currently <strong>EUR %2</strong> (or %3 
 msgstr "Batas penarikan %1 hari anda adalah <strong>EUR %2</strong> (atau %3 pada mata uang lainnya)."
 
 #. ($currency_label, $min_deposit)
-#: lib/BOM/View/CGIForm.pm:5012
+#: lib/BOM/View/CGIForm.pm:4978
 msgid "Your <strong>first</strong> deposit is equal to or more than %1%2, and"
 msgstr "Deposit <strong>pertama</strong> anda adalah senilai atau lebih dari %1%2 dan"
 
@@ -9289,12 +9373,12 @@ msgstr "Alamat IP anda telah berubah. Hal ini mungkin disebabkan baru saja anda 
 msgid "Your Login ID"
 msgstr "Login ID Anda"
 
-#: lib/BOM/View/CGIForm.pm:2912 lib/BOM/View/CGIForm.pm:3038
+#: lib/BOM/View/CGIForm.pm:2888 lib/BOM/View/CGIForm.pm:3013
 msgid "Your Login ID must start with either of the following:"
 msgstr "Login ID Anda harus dimulai dengan:"
 
-#: lib/BOM/View/CGIForm.pm:2902 lib/BOM/View/CGIForm.pm:3028
-#: lib/BOM/View/CGIForm.pm:4029
+#: lib/BOM/View/CGIForm.pm:2878 lib/BOM/View/CGIForm.pm:3003
+#: lib/BOM/View/CGIForm.pm:3997
 msgid "Your Login ID should not contain spaces."
 msgstr "Login ID tidak boleh mengandungi spasi."
 
@@ -9311,7 +9395,7 @@ msgstr "Saldo akun Anda"
 msgid "Your account balance (%1%2) is insufficient to buy this contract (%1%3)."
 msgstr "Saldo anda (%1%2) tidak mencukupi untuk membeli kontrak (%1%3) ini."
 
-#: lib/BOM/View/CGIForm.pm:5329
+#: lib/BOM/View/CGIForm.pm:5302
 msgid "Your account does not require authentication at this time."
 msgstr "Akun Anda tidak memerlukan otentikasi untuk saat ini."
 
@@ -9319,7 +9403,7 @@ msgstr "Akun Anda tidak memerlukan otentikasi untuk saat ini."
 msgid "Your account has exceeded the trading limit with free promo code, please deposit if you wish to continue trading."
 msgstr "Akun anda telah melebihi batasan trading menggunakan kode bonus, silakan mendeposit untuk melanjutkan trading."
 
-#: cgi/cashier_forward.cgi:63
+#: cgi/cashier_forward.cgi.tidyup:75 cgi/cashier_forward.cgi:77
 msgid "Your account is disabled"
 msgstr "Akun anda telah dibatalkan"
 
@@ -9329,11 +9413,11 @@ msgid "Your account is fully authenticated and your withdrawal limit of EUR %1 h
 msgstr "Akun anda telah terbukti dan batasan penarikan sebesar EUR %1 telah dihapuskan."
 
 #. (request()
-#: lib/BOM/View/CGIForm.pm:5268
+#: lib/BOM/View/CGIForm.pm:5236
 msgid "Your account is fully authenticated. You can view your <a href=\"%1\">trading limits here</a>."
 msgstr "Akun anda telah melengkapi proses pembuktian. Anda dapat melihat <a href=\"%1\">batasan trading disini</a>."
 
-#: lib/BOM/View/CGIForm.pm:5313
+#: lib/BOM/View/CGIForm.pm:5286
 msgid "Your account is fully operational and you may begin depositing money and buying contracts."
 msgstr "Akun anda saat ini sepenuhnya aktif, anda dapat mulai melakukan deposit, trading dan melakukan penarikan dana."
 
@@ -9346,15 +9430,13 @@ msgstr "Akun Anda adalah penting bagi kami. Silakan <a href=\"%1\">hubungi kami<
 msgid "Your account is registered as a Payment Agent."
 msgstr "Akun Anda terdaftar sebagai Agen Pembayaran."
 
-#: cgi/cashier_forward.cgi:39
+#: cgi/cashier_forward.cgi.tidyup:51 cgi/cashier_forward.cgi:53
 msgid "Your account is restricted to withdrawals only."
 msgstr "Akun Anda hanya dapat melakukan penarikan saja."
 
 #: /home/git/translations/binary-static/src/templates/toolkit/legal/terms_and_conditions.html.tt:62
-#, fuzzy
-#| msgid "The company holds customer funds in separate bank accounts to the operational accounts which would not, in the event of insolvency, form part of the Company's assets. Your account should not be used as a banking facility and deposits should only be made with a view to using funds to place contracts. Should you make repeated deposits and withdrawals without commensurate contracts being placed, we reserve the right to pass on to your accounts, without prior notice, any bank charges we have incurred before closing the account."
 msgid "Your account should not be used as a banking facility and deposits should only be made with a view to using funds to place contracts. Should you make repeated deposits and withdrawals without commensurate contracts being placed, we reserve the right to pass on to your accounts, without prior notice, any bank charges we have incurred before closing the account."
-msgstr "Perusahaan memiliki dana nasabah yang disimpan pada rekening bank secara terpisah sebagai rekening operasional yang tidak akan, dalam hal kepailitan, merupakan bagian dari aset Perusahaan. Akun anda tidak boleh digunakan sebagai fasilitas perbankan dan deposito hanya boleh dilakukan dengan tujuan untuk menggunakan dana untuk menempatkan trading. Jika anda membuat deposito berulang dan penarikan tanpa trading yang sepadan maka kami berhak untuk mentransfer dana anda kembali tanpa pemberitahuan sebelumnya, setiap biaya bank kami akan potong sebelum menutup akun."
+msgstr "Akun anda tidak boleh digunakan sebagai fasilitas perbankan dan deposito hanya boleh dilakukan dengan tujuan untuk menggunakan dana untuk menempatkan trading. Jika anda membuat deposito berulang dan penarikan tanpa trading yang sepadan maka kami berhak untuk mentransfer dana anda kembali tanpa pemberitahuan sebelumnya, setiap biaya bank kami akan potong sebelum menutup akun."
 
 #: /home/git/translations/binary-static/src/templates/toolkit/api/register.html.tt:20
 msgid "Your base url for all API calls"
@@ -9365,15 +9447,15 @@ msgstr "Url dasar anda untuk panggilan API"
 msgid "Your bonus request - %1"
 msgstr "Permohonan bonus anda - %1"
 
-#: lib/BOM/View/CGIForm.pm:5008
+#: lib/BOM/View/CGIForm.pm:4974
 msgid "Your bonus will be credited to your account within 3 working days after the following conditions have been met:"
 msgstr "Bonus Anda akan dikreditkan ke account Anda dalam waktu 3 hari kerja setelah kondisi berikut telah terpenuhi:"
 
-#: lib/BOM/View/CGIForm.pm:5021
+#: lib/BOM/View/CGIForm.pm:4987
 msgid "Your bonus will be credited to your account within 3 working days after you have bought contracts with a combined purchase price equal to or greater than the bonus amount."
 msgstr "Anda akan segera menerima email konfirmasi mengenai bonus setelah pembelian kontrak setara atau lebih besar dengan jumlah bonus anda."
 
-#: lib/BOM/View/CGIForm.pm:5030
+#: lib/BOM/View/CGIForm.pm:4996
 msgid "Your bonus will be credited to your account within 3 working days."
 msgstr "Anda akan segera menerima email konfirmasi mengenai bonus anda."
 
@@ -9381,11 +9463,11 @@ msgstr "Anda akan segera menerima email konfirmasi mengenai bonus anda."
 msgid "Your callback handler now swaps the new authorization code for a session token with this call:"
 msgstr "Penyedia panggilan kembali anda memberi kode otorisasi baru untuk sesi token panggilan ini:"
 
-#: cgi/cashier_forward.cgi:59
+#: cgi/cashier_forward.cgi.tidyup:71 cgi/cashier_forward.cgi:73
 msgid "Your cashier is locked"
 msgstr "Kasir anda telah terkunci"
 
-#: cgi/cashier_forward.cgi:67
+#: cgi/cashier_forward.cgi.tidyup:79 cgi/cashier_forward.cgi:81
 msgid "Your cashier is locked by password."
 msgstr "Bagian kasir terkunci dengan kata sandi."
 
@@ -9397,11 +9479,11 @@ msgstr "Bagian kasir anda dibatalkan."
 msgid "Your cashier session has expired"
 msgstr "Sesi kasir anda telah berakhir"
 
-#: lib/BOM/View/CGIForm.pm:2763
+#: lib/BOM/View/CGIForm.pm:2744
 msgid "Your country"
 msgstr "Negara anda"
 
-#: lib/BOM/View/CGIForm.pm:4852
+#: lib/BOM/View/CGIForm.pm:4818
 msgid "Your current self-exclusion settings are as follows:"
 msgstr "Pengaturan pengecualian diri Anda adalah sebagai berikut:"
 
@@ -9409,12 +9491,12 @@ msgstr "Pengaturan pengecualian diri Anda adalah sebagai berikut:"
 msgid "Your details"
 msgstr "Data anda"
 
-#: cgi/cashier_forward.cgi:55
+#: cgi/cashier_forward.cgi.tidyup:67 cgi/cashier_forward.cgi:69
 msgid "Your documents are expired"
 msgstr "Dokumen anda telah berakhir"
 
-#: lib/BOM/View/CGIForm.pm:2853 lib/BOM/View/CGIForm.pm:3075
-#: lib/BOM/View/CGIForm.pm:3374
+#: lib/BOM/View/CGIForm.pm:2831 lib/BOM/View/CGIForm.pm:3049
+#: lib/BOM/View/CGIForm.pm:3342
 msgid "Your email address"
 msgstr "Alamat email anda"
 
@@ -9426,8 +9508,8 @@ msgstr "Formulir anda telah dikirimkan."
 msgid "Your funds are safe"
 msgstr "Dana anda aman"
 
-#: lib/BOM/View/CGIForm.pm:1114 lib/BOM/View/CGIForm.pm:1606
-#: lib/BOM/View/CGIForm.pm:831
+#: lib/BOM/View/CGIForm.pm:1107 lib/BOM/View/CGIForm.pm:1590
+#: lib/BOM/View/CGIForm.pm:839
 msgid "Your information is incomplete or incorrect. Please correct the fields highlighted above."
 msgstr "Informasi Anda tidak benar atau tidak lengkap. Silakan koreksi kolom yang ditebalkan diatas."
 
@@ -9436,20 +9518,20 @@ msgstr "Informasi Anda tidak benar atau tidak lengkap. Silakan koreksi kolom yan
 msgid "Your money is always safe with %1. At all times, it is held in segregated AAA-rated banks, which is a condition of our trading licenses."
 msgstr "Dana anda selalu aman bersama %1. Setiap saat, disimpan pada beberapa bank berkelas AAA dimana hal ini merupakan syarat ijin trading yang kami miliki."
 
-#: lib/BOM/View/CGIForm.pm:2823 lib/BOM/View/CGIForm.pm:3045
+#: lib/BOM/View/CGIForm.pm:2802 lib/BOM/View/CGIForm.pm:3020
 msgid "Your name"
 msgstr "Nama anda"
 
-#: lib/BOM/View/CGIForm.pm:3297
+#: lib/BOM/View/CGIForm.pm:3267
 msgid "Your name/company"
 msgstr "Nama anda/perusahaan"
 
-#: cgi/oop/Controller/Bet.pm:2137
+#: lib/BOM/View/Controller/Bet.pm:2124
 msgid "Your new account balance is %s %s"
 msgstr "Saldo akun Anda adalah %s %s"
 
 #. ($reference_number, $executed_price)
-#: cgi/oop/Controller/Bet.pm:2182
+#: lib/BOM/View/Controller/Bet.pm:2169
 msgid "Your order (Reference # <span id=\"reference_no\">%1</span>) has been executed at %2."
 msgstr "Order anda (referensi # <span id=\"reference_no\">%1</span>) telah terproses pada %2."
 
@@ -9473,19 +9555,19 @@ msgstr "Kata Sandi Anda telah berhasil dirubah. Login ID anda adalah <strong>%1<
 msgid "Your password recovery token has expired. Please click <a href=\"%1\"><strong>here</strong></a> to restart the password recovery process.<br /><br /> Your account is important to us. If you require further assistance, please contact our <a href=\"%2\"><strong>Customer Support</strong></a>."
 msgstr "Token permohonan sandi telah berakhir. Silakan klik <a href=\"%1\"><strong>di sini</strong></a> untuk mengulang proses pembuatan sandi baru.<br /><br /> Akun Anda adalah penting bagi kami. Jika Anda memerlukan bantuan selanjutnya, silakan hubungi <a href=\"%2\"><strong>Customer Support</strong></a> kami."
 
-#: lib/BOM/View/CGIForm.pm:1974 lib/BOM/View/CGIForm.pm:2147
-#: lib/BOM/View/CGIForm.pm:729
+#: lib/BOM/View/CGIForm.pm:1963 lib/BOM/View/CGIForm.pm:2133
+#: lib/BOM/View/CGIForm.pm:739
 msgid "Your password should be at least 5 characters."
 msgstr "Kata sandi anda harus minimum 5 karakter."
 
-#: lib/BOM/View/CGIForm.pm:1512 lib/BOM/View/CGIForm.pm:1847
-#: lib/BOM/View/CGIForm.pm:1967 lib/BOM/View/CGIForm.pm:2140
-#: lib/BOM/View/CGIForm.pm:722
+#: lib/BOM/View/CGIForm.pm:1496 lib/BOM/View/CGIForm.pm:1836
+#: lib/BOM/View/CGIForm.pm:1956 lib/BOM/View/CGIForm.pm:2126
+#: lib/BOM/View/CGIForm.pm:732
 msgid "Your password should contain only characters and digits."
 msgstr "Kata sandi anda harus terdiri dari kombinasi huruf dan angka saja."
 
-#: lib/BOM/View/CGIForm.pm:1981 lib/BOM/View/CGIForm.pm:2154
-#: lib/BOM/View/CGIForm.pm:736
+#: lib/BOM/View/CGIForm.pm:1970 lib/BOM/View/CGIForm.pm:2140
+#: lib/BOM/View/CGIForm.pm:746
 msgid "Your password should not be more then 25 characters."
 msgstr "Kata sandi anda seharusnya tidak lebih dari 25 karakter."
 
@@ -9493,7 +9575,7 @@ msgstr "Kata sandi anda seharusnya tidak lebih dari 25 karakter."
 msgid "Your personal information is used primarily as a way of authenticating you as the proper owner of your account and as the person to whom withdrawal payments may be made. We collect personal data relating to you directly from you when you fill in the account opening form. In the event of any doubt as to the authenticity of your account details or of any withdrawal request, the company reserves the right to request further authentication information as may be deemed appropriate under the circumstances."
 msgstr "Data pribadi anda digunakan untuk membuktikan bahwa anda adalah pemilik akun yang asli dan andalah yang melakukan penarikan dana dari akun tersebut. Kami memperoleh data pribadi anda dari formulir pendaftaran yang anda isi. Jika Perusahaan meragukan kebenaran data anda maka Perusahaan berhak untuk memperoleh pembuktian lebih lanjut untuk memenuhi tujuan pembuktian tersebut."
 
-#: lib/BOM/View/CGIForm.pm:2784 lib/BOM/View/CGIForm.pm:3403
+#: lib/BOM/View/CGIForm.pm:2764 lib/BOM/View/CGIForm.pm:3370
 msgid "Your phone number"
 msgstr "Nomor telepon anda"
 
@@ -9515,7 +9597,7 @@ msgstr "Permohonan penarikan Anda %1 %2 dari account %3 ke Agen Pembayaran %4 te
 msgid "Your risks are known"
 msgstr "Resiko anda jelas"
 
-#: lib/BOM/View/CGIForm.pm:709
+#: lib/BOM/View/CGIForm.pm:719
 msgid "Your secret answer is too short.  Please enter at least 4 characters."
 msgstr "Jawaban rahasia anda terlalu pendek. Masukkan minimal 4 karakter."
 
@@ -9524,11 +9606,11 @@ msgid "Your settings have been updated successfully."
 msgstr "Pengaturan anda telah sukses diperbarui."
 
 #. ($tradeRef)
-#: cgi/oop/Controller/Bet.pm:1548 cgi/oop/Controller/Bet.pm:2141
+#: lib/BOM/View/Controller/Bet.pm:1535 lib/BOM/View/Controller/Bet.pm:2128
 msgid "Your transaction reference number is %1"
 msgstr "Nomor referensi transaksi Anda adalah %1"
 
-#: lib/BOM/View/CGIForm.pm:3442
+#: lib/BOM/View/CGIForm.pm:3409
 msgid "Your website URL"
 msgstr "URL situsweb anda"
 
@@ -9566,7 +9648,7 @@ msgstr "batas jumlah yang dapat anda tradingkan dalam periode waktu tertentu;"
 msgid "a limit on the losses you may incur within a specified period of time;"
 msgstr "batas kerugian yang mungkin akan anda alami dalam periode waktu tertentu,"
 
-#: lib/BOM/View/CGIForm.pm:5322
+#: lib/BOM/View/CGIForm.pm:5295
 msgid "and"
 msgstr "dan"
 
@@ -9598,22 +9680,20 @@ msgstr "batasan manapun pada klien dari membeli kontrak selama jam-jam tertentu.
 msgid "barrier"
 msgstr "batasan"
 
-#: cgi/oop/Controller/Bet.pm:1596
+#: lib/BOM/View/Controller/Bet.pm:1583
 msgid "better trade"
 msgstr "kontrak lebih baik"
 
 #: /home/git/translations/binary-static/src/templates/haml/layouts/default/head.html.haml:1
 #: /home/git/translations/binary-static/src/templates/toolkit/global/head.html.tt:13
-#, fuzzy
-#| msgid "binary options, binary option, forex trading, online trading, financial trading, financial trading binary option, binary trading, index trading, trading indices, forex trades, trading commodities, forex trading market, practice trading, practice binary trading, tick trade, virtual money trading, trading forex, binary trading, binary bet, binary online bet, binary options trading platform, digital options"
 msgid "binary options, forex, forex trading, online trading, financial trading, binary trading, index trading, trading indices, forex trades, trading commodities, binary options strategy, binary broker, binary bet, binary options trading platform, binary strategy, finance, stocks, investment, trading"
-msgstr "Opsi binary, pilihan binary, trading forex, trading online, trading financial, trading financial opsi binary, trading binary, trading indeks, perdagangan indeks, perdagangan forex, trading komoditas, trading pasar forex, berlatih trading, berlatih trading binary, trading tik, trading uang virtual, trading forex, trading binary, kontrak binary, kontrak binary online, platform trading opsi binary, opsi digital"
+msgstr "Opsi binary, forex, trading forex, online trading, trading financial, trading biner, trading indeks, indeks trading, trading forex, trading komoditi, strategi opsi binary, broker binary, trading binary, Platform trading opsi binary, strategi binary, keuangan, saham , investasi, trading"
 
 #: /home/git/translations/binary-static/src/templates/haml/static/responsible_trading.html.haml:1
 msgid "contact us"
 msgstr "hubungi kami"
 
-#: lib/BOM/Product/Contract/ContractCategory/ContractType.pm:364
+#: lib/BOM/Product/Contract/ContractCategory/ContractType.pm:350
 msgid "contract start time"
 msgstr "waktu mulai kontrak"
 
@@ -9626,7 +9706,7 @@ msgstr "hari"
 msgid "days"
 msgstr "hari"
 
-#: lib/BOM/View/CGIForm.pm:1659 lib/BOM/View/CGIForm.pm:894
+#: lib/BOM/View/CGIForm.pm:1643 lib/BOM/View/CGIForm.pm:902
 msgid "details"
 msgstr "perincian"
 
@@ -9658,11 +9738,11 @@ msgstr "spot masuk ditambah %1 pip"
 msgid "equivalent"
 msgstr "setara"
 
-#: cgi/oop/Controller/Bet.pm:2214
+#: lib/BOM/View/Controller/Bet.pm:2201
 msgid "explanation"
 msgstr "penjelasan"
 
-#: lib/BOM/Product/Contract/ContractCategory/ContractType.pm:362
+#: lib/BOM/Product/Contract/ContractCategory/ContractType.pm:348
 msgid "first tick"
 msgstr "tik pertama"
 
@@ -9678,7 +9758,7 @@ msgstr "di sini"
 msgid "high barrier"
 msgstr "batasan tinggi"
 
-#: lib/BOM/Platform/Plack.pm:335
+#: lib/BOM/Platform/Plack.pm.tidyup:327 lib/BOM/Platform/Plack.pm:327
 msgid "homepage"
 msgstr "homepage"
 
@@ -9702,7 +9782,7 @@ msgstr "pemuatan..."
 msgid "low barrier"
 msgstr "batasan rendah"
 
-#: lib/BOM/View/CGIForm.pm:4086 lib/BOM/View/CGIForm.pm:4293
+#: lib/BOM/View/CGIForm.pm:4053 lib/BOM/View/CGIForm.pm:4259
 msgid "maximum is"
 msgstr "maksimum adalah"
 
@@ -9718,7 +9798,7 @@ msgstr "min"
 msgid "minimum available duration"
 msgstr "durasi minimal yang tersedia"
 
-#: lib/BOM/View/CGIForm.pm:4080 lib/BOM/View/CGIForm.pm:4287
+#: lib/BOM/View/CGIForm.pm:4047 lib/BOM/View/CGIForm.pm:4253
 msgid "minimum is"
 msgstr "minimum adalah"
 
@@ -9759,7 +9839,7 @@ msgstr "tidak tersedia"
 msgid "on this website. You may also"
 msgstr "pada website ini. Anda juga dapat"
 
-#: lib/BOM/View/CGIForm.pm:4799 lib/BOM/View/CGIForm.pm:4808
+#: lib/BOM/View/CGIForm.pm:4765 lib/BOM/View/CGIForm.pm:4774
 msgid "or"
 msgstr "ATAU"
 
@@ -9770,7 +9850,7 @@ msgstr "atau silahkan coba peta situs berikut"
 #. (request()
 #: lib/BOM/Product/Contract.pm:2674 lib/BOM/Product/Contract.pm:2689
 msgid "or try out the <a href='%1'>Random Indices</a> which are always open."
-msgstr ""
+msgstr "atau coba <a href='%1'>Random Index</a> yang tersedia setiap saat."
 
 #: /home/git/translations/binary-static/src/templates/toolkit/legal/datafeed.html.tt:29
 msgid "page for the exact time of settlement for all contracts. Other websites may adopt a different convention (for example some websites choose 4 o'clock NY time, or 5 o'clock London time). As a result, the open, high, low and closing prices displayed on our website may differ to those on other websites, due to the market-closing time convention."
@@ -9843,10 +9923,6 @@ msgstr "untuk menginformasikan batasan yang Anda inginkan melalui chat, email at
 #: cgi/trading_times.cgi:148
 msgid "today"
 msgstr "hari ini"
-
-#: /home/git/translations/binary-static/src/templates/haml/static/why_us.html.haml:1
-msgid "touch/no-touch"
-msgstr "menyentuh/tidak"
 
 #: /home/git/translations/binary-static/src/templates/haml/home/index.html.haml:1
 msgid "trades"
@@ -11840,6 +11916,21 @@ msgstr "Maaf, pengaksesan menggunakan alamat IP jaringan ini telah dibatalkan."
 #: Message for API Error 'LOGIN_TOO_MANY_FAILED_ATTEMPTS'
 msgid "Sorry, you have already had too many unsuccessful attempts. Please try again in 5 minutes."
 msgstr "Maaf, Anda telah gagal mengakses beberapa kali. Silakan coba kembali dalam waktu 5 menit lagi."
+
+#~ msgid "Country:"
+#~ msgstr "Negara:"
+
+#~ msgid "Required"
+#~ msgstr "Harus diisi"
+
+#~ msgid "Returns above 1000% on %1 and %2 trades."
+#~ msgstr "Laba diatas 1000% pada kontrak %1 dan %2."
+
+#~ msgid "Sorry, broker %1 does not allow transfers from payment agents."
+#~ msgstr "Maaf, akun %1 tidak menyediakan layanan transfer agen pembayaran."
+
+#~ msgid "touch/no-touch"
+#~ msgstr "menyentuh/tidak"
 
 #~ msgid "Viber"
 #~ msgstr "Viber"
@@ -17210,9 +17301,6 @@ msgstr "Maaf, Anda telah gagal mengakses beberapa kali. Silakan coba kembali dal
 #~ msgid "Bank account number is too short, please enter at least %1 characters."
 #~ msgstr "Nomor rekening Bank terlalu pendek, silakan masukkan setidaknya %1 karakter."
 
-#~ msgid "Bank address"
-#~ msgstr "Alamat Bank"
-
 #~ msgid "Bank name"
 #~ msgstr "Nama Bank"
 
@@ -18367,9 +18455,6 @@ msgstr "Maaf, Anda telah gagal mengakses beberapa kali. Silakan coba kembali dal
 
 #~ msgid "main page"
 #~ msgstr "halaman utama"
-
-#~ msgid "Live chat"
-#~ msgstr "Live chat"
 
 #~ msgid "Error 404: not found"
 #~ msgstr "Error 404: tidak ditemukan"

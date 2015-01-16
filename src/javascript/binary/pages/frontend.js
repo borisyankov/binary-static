@@ -180,6 +180,14 @@ var home_bomoverlay = {
     }
 };
 
+var display_cs_numbers = function () {
+    $('.contact-content').on("change", '#cs_telephone_number', function () {
+        var val = $(this).val();
+        $('#display_cs_telephone').text(val);
+    });
+    $('#cs_contact_eaddress').html("<n uers=\"znvygb:fhccbeg@ovanel.pbz\" ery=\"absbyybj\">fhccbeg@ovanel.pbz</n>".replace(/[a-zA-Z]/g, function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);}));
+};
+
 pjax_config_page('/$|/home', function() {
     return {
         onLoad: function() {
@@ -255,6 +263,14 @@ pjax_config_page('/get-started', function() {
         },
         onUnload: function() {
             $(window).off('scroll');
+        },
+    };
+});
+
+pjax_config_page('/contact', function() {
+    return {
+        onLoad: function() {
+            display_cs_numbers();
         },
     };
 });

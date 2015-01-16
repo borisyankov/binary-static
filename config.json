@@ -3,12 +3,19 @@
     "display_languages": "EN,ID,RU,ES,FR,PT,DE,ZH_CN,PL,AR",
     "static": {
         "url": "https://static.binary.com/",
-        "version": "3.3.0"
+        "version": "3.3.1"
     },
     "marketing": {
         "google_tag_manager": "GTM-MZWFF7"
     },
     "customer_support": {
-        "email": "helpdesk@binary.com"
+        "email": "helpdesk@binary.com",
+        "telephone": {
+            "Australia": "+61280050136",
+            "Indonesia": "+6285574670313",
+            "Russia": "+788007073860",
+            "Ukraine": "+380893202430",
+            "United Kingdom": "+448081782950 (Toll-free)"
+        }
     }
 }

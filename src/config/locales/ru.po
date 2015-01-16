@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: BOM\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2015-01-08 16:21+0200\n"
+"PO-Revision-Date: 2015-01-12 15:04+0200\n"
 "Last-Translator: olga borg <olga@binary.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/binary/static/ru/>\n"
 "Language: ru\n"
@@ -216,7 +216,7 @@ msgid "%1 prices are benchmarked against the interbank options market, so you al
 msgstr "%1 стандартизирует цены относительно межбанковских опционов, благодаря чему Вы всегда получаете лучшие цены для своих позиций."
 
 #. (request()
-#: lib/BOM/View/CGIForm.pm:4757
+#: lib/BOM/View/CGIForm.pm:4723
 msgid "%1 provides <a href=\"%2\">Self Exclusion</a> facilities which allow you to set limits on your account."
 msgstr "%1 предлагает услуги по <a href=\"%2\">само-ограничению</a>, которые позволят Вам установить лимиты на Вашу деятельность на счете."
 
@@ -266,6 +266,13 @@ msgstr "Индексы Random %1 - это %2, %3, %4 и %5. Они соотве�
 #: /home/git/translations/binary-static/src/templates/haml/static/why_us.html.haml:1
 msgid "%1's patented pricing technology allows you to benefit from the same rates of return as traders in the interbank market."
 msgstr "Запатентированная ценовая технология %1 позволяет Вам получить тот же процент прибыли, как у трейдеров на межбанковском рынке."
+
+#. (stash('broker_name')
+#: /home/git/translations/binary-static/src/templates/haml/home2/index.html.haml:1
+#, fuzzy
+#| msgid "Online Trading platform for binary options on Forex, Indices, Commodities and Smart Indices"
+msgid "%1: Online Trading platform for binary options on Forex, Indices, Commodities and Smart Indices"
+msgstr "Онлайн-платформа по работе с бинарными опционами на рынках валют, индексов, сырья и индексах Smart"
 
 #. (stash->{website_name})
 #: /home/git/translations/binary-static/src/templates/haml/static/smart_indices.html.haml:1
@@ -364,7 +371,7 @@ msgstr "2д"
 msgid "2w"
 msgstr "2нед"
 
-#: lib/BOM/View/CGIForm.pm:1552
+#: lib/BOM/View/CGIForm.pm:1536
 msgid "3 - 30 characters and alphanumeric only."
 msgstr "3 - 30 знаков, только буквы и цифры."
 
@@ -380,7 +387,7 @@ msgstr "3м"
 msgid "4. Choose your Payout"
 msgstr "4. Выбрать выплату"
 
-#: lib/BOM/View/CGIForm.pm:760
+#: lib/BOM/View/CGIForm.pm:769
 msgid "5 - 25 characters and alphanumeric only."
 msgstr "5 - 25 знаков, только буквы и цифры."
 
@@ -392,7 +399,7 @@ msgstr "5д"
 msgid "6h"
 msgstr "6ч"
 
-#: lib/BOM/View/CGIForm.pm:1926
+#: lib/BOM/View/CGIForm.pm:1915
 msgid "<br>Your Cashier and Settings sections are locked as per your request</strong> - if you wish to unlock them, please enter the password."
 msgstr "<br>Разделы Касса и Установки являются закрытыми секциями по Вашему запросу</strong> - eсли Вы хотите открыть их, пожалуйста, введите пароль."
 
@@ -446,7 +453,7 @@ msgid "<p>Please take a moment to verify your identity by providing us with the 
 msgstr "<p>Просим Вас подтвердить, что Вы являетесь владельцем счета, ответив на Ваш контрольный вопрос и подтвердив дату Вашего рождения:</p>"
 
 #. (request()
-#: cgi/cashier_forward.cgi:190
+#: cgi/cashier_forward.cgi.tidyup:202 cgi/cashier_forward.cgi:205
 msgid "<p>Sorry, an error has occurred. Please <a href=\"%1\">try accessing our Cashier</a> again.</p>"
 msgstr "<p>Извините, произошла ошибка. Просим <a href=\"%1\">попробовать войти в кассу</a> снова.</p>"
 
@@ -526,7 +533,7 @@ msgid "<strong>Benchmarked prices</strong> - %1 benchmarks its prices daily agai
 msgstr "<strong>Стандартные цены</strong> - %1 ежедневно стандартизирует свои цены относительно рынков межбанковских производных."
 
 #. (to_monetary_number_format($limit_price)
-#: cgi/oop/Controller/Bet.pm:2174
+#: lib/BOM/View/Controller/Bet.pm:2161
 msgid "<strong>Better execution price!</strong><br />  The price has moved in your favour from %1 to %2."
 msgstr "<strong>Цена изменилась в лучшую для Вас сторону!</strong><br />  Цена изменилась в выгодную для Вас сторону с %1 до %2."
 
@@ -601,7 +608,7 @@ msgstr "<strong>Отстутствие сюрпризов</strong> - без тр
 msgid "<strong>No surprises</strong> - you will never have margin calls, gap risk, slippage costs, hidden fees or commissions."
 msgstr "<strong>Отстутствие сюрпризов</strong> - Вы никогда не столкнетесь с требованием гарантийного взноса, риском разрыва, проскальзыванием стоимости, скрытыми комиссиями или другими взносами."
 
-#: lib/BOM/View/CGIForm.pm:2997
+#: lib/BOM/View/CGIForm.pm:2973
 msgid "<strong>Note:</strong> to minimize the file size, please save the image in PNG or JPEG format."
 msgstr "<strong>Внимание:</strong> чтобы получить минимальный размер файла, желательно сохранить картинку в формате PNG или JPEG."
 
@@ -804,16 +811,12 @@ msgid "A momentum indicator showing the percent rate-of-change of a triple expon
 msgstr "Индикатор Индикатор Темпа (Momentum), показывающий процентное изменение тройной экспоненциальной cредней скользящей. Как и другие осцилляторы, TRIX 'осциллирует' относительно нулевой линии."
 
 #: /home/git/translations/binary-static/src/templates/toolkit/global/footer.html.tt:209
-#, fuzzy
-#| msgid "A new version of the interface is available. Please refresh this page to try again."
 msgid "A new version of the interface is available. Please <a href=\"#\" id=\"appcache-refresh-link\">refresh</a> this page to try again."
-msgstr "Новая версия интерфейса уже доступна. Обновите страницу и попробуйте снова."
+msgstr "Новая версия интерфейса уже доступна. <a href=\"#\" id=\"appcache-refresh-link\">Обновите</a> страницу и попробуйте снова."
 
 #: /home/git/translations/binary-static/src/templates/haml/layouts/default/footer.html.haml:1
-#, fuzzy
-#| msgid "A new version of the interface is available. Please refresh this page to try again."
 msgid "A new version of the interface is available. Please <a href='#' id='appcache-refresh-link'>refresh</a> this page to try again."
-msgstr "Новая версия интерфейса уже доступна. Обновите страницу и попробуйте снова."
+msgstr "Новая версия интерфейса уже доступна. <a href='#' id='appcache-refresh-link'>Обновите</a> страницу и попробуйте снова."
 
 #: /home/git/translations/binary-static/src/templates/haml/static/open_source_projects.html.haml:1
 msgid "A next-generation front-end interface with Sencha ExtJS-5"
@@ -831,7 +834,7 @@ msgstr "Произошла ошибка"
 msgid "A problem occurred while connecting to the server. Please try again later."
 msgstr "Во время соединения с сервером произошла ошибка. Пожалуйста, попробуйте снова чуть позже."
 
-#: lib/BOM/View/CGIForm.pm:5304
+#: lib/BOM/View/CGIForm.pm:5274
 msgid "A recent (less than 3 months old) scanned copy of your paper utility bill, or your paper bank, credit union, building society, credit, or debit card statement, or passbook"
 msgstr "Недавняя (не старее 3 месяцев) sотсканированная копия бумажного счета за коммунальные услуги, выписка из банка (с адресом), данные о кредите, выписка об операциях кредитной или дебетовой карты (с адресом)"
 
@@ -839,7 +842,7 @@ msgstr "Недавняя (не старее 3 месяцев) sотсканир�
 msgid "A scanned copy of a utility bill showing your current residential address (utility bill must not be more than 3 months old)."
 msgstr "Отсканированная копия счета за коммунальные или другие услуги, показывающая Ваш настоящий адрес (счет должен быть датирован не ранее, чем 3 последние месяца)."
 
-#: lib/BOM/View/CGIForm.pm:5301
+#: lib/BOM/View/CGIForm.pm:5271
 msgid "A scanned copy of your current valid passport, current driving license (provisional or full), or identity card"
 msgstr "Отсканированная копия действительного паспорта, водительских прав или национального удостоверения личности"
 
@@ -863,7 +866,7 @@ msgstr "API"
 msgid "API Developer Guide"
 msgstr "Гид для API"
 
-#: lib/BOM/View/CGIForm.pm:3575
+#: lib/BOM/View/CGIForm.pm:3542
 msgid "AUTHORISED PAYMENT AGENT? (this field visible from office only)"
 msgstr "АВТОРИЗОВАННЫЙ ПЛАТЕЖНЫЙ АГЕНТ? (это поле видно только из офиса)"
 
@@ -909,11 +912,11 @@ msgstr "Управлением счетом и контроль"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/legal/terms_and_conditions.html.tt:127
 #: cgi/create_account.cgi:191 cgi/create_account.cgi:306
-#: cgi/open_account.cgi:15 lib/BOM/View/CGIForm.pm:4523
+#: cgi/open_account.cgi:15 lib/BOM/View/CGIForm.pm:4489
 msgid "Account Opening"
 msgstr "Открытие счета"
 
-#: lib/BOM/View/CGIForm.pm:83
+#: lib/BOM/View/CGIForm.pm:96
 msgid "Account Settings</a> accordingly. Thank you for your kind assistance"
 msgstr "Установки</a> на Вашем счету. Спасибо за содействие"
 
@@ -968,8 +971,8 @@ msgstr "Добавить линии"
 msgid "Add Overlay"
 msgstr "Добавить наложение"
 
-#: cgi/f_writepartics.cgi:214 lib/BOM/View/CGIForm.pm:1687
-#: lib/BOM/View/CGIForm.pm:908
+#: cgi/f_writepartics.cgi:214 lib/BOM/View/CGIForm.pm:1671
+#: lib/BOM/View/CGIForm.pm:916
 msgid "Address"
 msgstr "Адрес"
 
@@ -1000,7 +1003,7 @@ msgstr "Все"
 msgid "All credit card details are submitted directly to the Visa/Mastercard network using the latest SSL encryption technology, in accordance with bank policies."
 msgstr "Все данные карты посылаются напрямую в систему Visa/Mastercard, используя новейшие технологии шифрования данных SSL, согласно политике банков."
 
-#: lib/BOM/View/CGIForm.pm:4587
+#: lib/BOM/View/CGIForm.pm:4553
 msgid "All email inquiries will be responded to within 2 business days whenever possible."
 msgstr "На все заявки Вы по возможности получите ответ в течение двух рабочих дней. Обратите внимание, что хотя поле для логина не отмечено как обязательное для тех клиентов, у кого еще нет счета, в случае, если он у Вас есть, обязательно укажите логин, так как это напрямую скажется на скорости ответа на Вашу заявку."
 
@@ -1013,12 +1016,12 @@ msgstr "Все мнения, новости, исследования, анал�
 msgid "All times are in GMT (Greenwich Mean Time)."
 msgstr "Все времена на сайте указаны в GMT, по Гринвичу (Greenwich Mean Time)."
 
-#: cgi/paymentagent_withdraw.cgi:219 lib/BOM/View/CGIForm.pm:4057
-#: lib/BOM/View/CGIForm.pm:4264
+#: cgi/paymentagent_withdraw.cgi:219 lib/BOM/View/CGIForm.pm:4025
+#: lib/BOM/View/CGIForm.pm:4231
 msgid "Amount"
 msgstr "Количество"
 
-#: cgi/oop/Helper/Controller/Bet/PriceBoxParameters.pm:257
+#: lib/BOM/View/Controller/Bet/PriceBoxParameters.pm:257
 msgid "Amount must be a positive number."
 msgstr "Сумма должна быть положительным значением."
 
@@ -1026,7 +1029,7 @@ msgstr "Сумма должна быть положительным значен
 msgid "An Ends Between trade pays out if the market exit price is strictly higher than the low price target AND strictly lower than the high price target. An Ends Outside binary pays out if the market exit price is EITHER strictly higher than the high price target OR strictly lower than the low price target."
 msgstr "Контракт \"Закончится внутри\" выигрывает, если выходная цена рынка строго выше, чем нижний ценовой барьер И строго ниже, чем высший ценовой барьер. Контракт \"Закончится вне\" выигрывает, если выходная цена рынка ЛИБО строго выше, чем высший ценовой барьер, ЛИБО строго ниже, чем низший ценовой барьер."
 
-#: lib/BOM/View/CGIForm.pm:1719
+#: lib/BOM/View/CGIForm.pm:1706
 msgid "An additional password can be used to restrict access to the Cashier and Settings areas."
 msgstr "Можно использовать дополнительный пароль для ограничения доступа к кассе и секции установок."
 
@@ -1067,7 +1070,7 @@ msgstr "На выходных Вы можете побывать в самых �
 msgid "Another major award. This time we’re nominated by the online readers of Global Banking and Finance Review and judged by a panel of industry experts and analysts who recognise our 13 years of platform reliability, range of trades, pricing, customer service and extensive knowledge."
 msgstr "Еще одна крупная награда. В этот раз мы номинировались читателями изданий онлайн Global Banking и Finance Review, и нас судило жюри из экспертов индустрии и аналитиков, которое признало  наш 13-летний опыт, надежность, широкий выбор контрактов, ценообразование, высокий уровень поддержки клиентов и общие знания нашей команды о бизнесе."
 
-#: lib/BOM/View/CGIForm.pm:692
+#: lib/BOM/View/CGIForm.pm:703
 msgid "Answer to secret question"
 msgstr "Ответ на секретный вопрос"
 
@@ -1107,7 +1110,7 @@ msgid "Apply for access"
 msgstr "Запросите доступ"
 
 #: cgi/paymentagent_application.cgi:17 cgi/paymentagent_application.cgi:21
-#: cgi/paymentagent_application.cgi:51 lib/BOM/View/CGIForm.pm:4776
+#: cgi/paymentagent_application.cgi:51 lib/BOM/View/CGIForm.pm:4742
 msgid "Apply to become Payment Agent"
 msgstr "Подать заявку Платежного Агента"
 
@@ -1116,7 +1119,7 @@ msgstr "Подать заявку Платежного Агента"
 msgid "Apply to become a %1 <a class=\"pjaxload\" href=\"%2\">payment agent</a>."
 msgstr "Подать заявку на получение статуса %1 <a class=\"pjaxload\" href=\"%2\">платежного агента</a>."
 
-#: lib/BOM/View/CGIForm.pm:2469 lib/BOM/View/CGIForm.pm:319
+#: lib/BOM/View/CGIForm.pm:2451 lib/BOM/View/CGIForm.pm:340
 #: platform/bin/GenerateStaticData.pm:77
 msgid "Apr"
 msgstr "Апр"
@@ -1184,7 +1187,7 @@ msgid "Asian options settle by comparing the <strong>last tick</strong> with the
 msgstr "Исход азиатских опционов рассчитывается путем сравнения <strong>последней котировки</strong> с общим средним значением котировок за весь период."
 
 #: /home/git/translations/binary-static/src/templates/haml/get_started/types_of_trades.html.haml:1
-#: cgi/oop/Controller/Bet.pm:1224 cgi/oop/Controller/Bet.pm:1231
+#: lib/BOM/View/Controller/Bet.pm:1211 lib/BOM/View/Controller/Bet.pm:1218
 msgid "Asians"
 msgstr "Азиатские"
 
@@ -1203,7 +1206,6 @@ msgstr "Актив"
 #: /home/git/translations/binary-static/src/templates/toolkit/global/footer.html.tt:90
 #: cgi/asset_index.cgi:146 cgi/asset_index.cgi:30
 #: lib/BOM/Product/Contract.pm:2877 lib/BOM/Product/Contract.pm:2919
-#: lib/BOM/Product/Pricing/Engine/Role/StandardMarkup.pm:179
 #: lib/BOM/View/Menu.pm:150
 msgid "Asset Index"
 msgstr "Индекс активов"
@@ -1213,7 +1215,7 @@ msgstr "Индекс активов"
 msgid "At a suitable stage in your application, when authorisation by a %1 end-user is required, re-direct the end-user's browser to this URL:"
 msgstr "В нужный момент в процессе обработки заявки, когда будет запрошена авторизация со стороны %1, Вы перейдете по следущему адресу URL:"
 
-#: lib/BOM/View/CGIForm.pm:2485 lib/BOM/View/CGIForm.pm:335
+#: lib/BOM/View/CGIForm.pm:2467 lib/BOM/View/CGIForm.pm:356
 #: platform/bin/GenerateStaticData.pm:81
 msgid "Aug"
 msgstr "Авг"
@@ -1226,7 +1228,7 @@ msgstr "Август"
 msgid "Australia"
 msgstr "Австралия"
 
-#: cgi/f_onlineid.cgi:190 cgi/f_onlineid.cgi:194 lib/BOM/View/CGIForm.pm:3265
+#: cgi/f_onlineid.cgi:190 cgi/f_onlineid.cgi:194 lib/BOM/View/CGIForm.pm:3235
 #: lib/BOM/View/Menu.pm:116
 msgid "Authenticate"
 msgstr "Авторизация"
@@ -1239,11 +1241,11 @@ msgstr "Авторизуйте счет для вывода средств"
 msgid "Authenticate your Account"
 msgstr "Авторизовать свой счет"
 
-#: lib/BOM/View/CGIForm.pm:1162
+#: lib/BOM/View/CGIForm.pm:1152
 msgid "Authenticated"
 msgstr "Авторизован"
 
-#: lib/BOM/View/CGIForm.pm:5241
+#: lib/BOM/View/CGIForm.pm:5207
 msgid "Authentication"
 msgstr "Авторизация"
 
@@ -1293,7 +1295,7 @@ msgstr "Рабочее пространство"
 
 #: /home/git/translations/binary-static/src/templates/haml/get_started/benefits_of_trading_binaries.html.haml:1
 #: /home/git/translations/binary-static/src/templates/haml/get_started/how_to_trade_binaries.html.haml:1
-#: cgi/emailus.cgi:204 lib/BOM/View/Form.pm:419
+#: cgi/emailus.cgi:204
 msgid "Back"
 msgstr "назад"
 
@@ -1311,7 +1313,7 @@ msgstr "Денежный/банковский перевод"
 msgid "Bank your way"
 msgstr "Пополните удобным способом"
 
-#: lib/BOM/View/CGIForm.pm:4810
+#: lib/BOM/View/CGIForm.pm:4776
 msgid "Bank/Credit Union/Building Society/Credit/Debit Card statement or passbook (within last 3 months)."
 msgstr "История или выписка с банковского счета или кредитной иди дебетовой карты (не старее последних 3 месяцев)."
 
@@ -1339,7 +1341,7 @@ msgstr "Столбцовый OHLC (Откр.Высш.Низ.Закр.)"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/bet/form/barrier.html.tt:18
 #: /home/git/translations/binary-static/src/templates/toolkit/resources/pricing_table_form.html.tt:59
-#: cgi/oop/Controller/Bet.pm:2398 platform/bin/GenerateStaticData.pm:117
+#: lib/BOM/View/Controller/Bet.pm:2385 platform/bin/GenerateStaticData.pm:117
 msgid "Barrier"
 msgstr "Барьер"
 
@@ -1369,7 +1371,7 @@ msgid "Barrier must be at least "
 msgstr "Барьер должен быть по меньшей мере "
 
 #: /home/git/translations/binary-static/src/templates/toolkit/bet/form/barrier.html.tt:15
-#: cgi/oop/Controller/Bet.pm:2397
+#: lib/BOM/View/Controller/Bet.pm:2384
 msgid "Barrier offset"
 msgstr "Изменение барьера"
 
@@ -1452,9 +1454,17 @@ msgstr "Предложение"
 msgid "Binary (C.R.) S.A., registered in Costa Rica."
 msgstr "Компания Binary (C.R.) S.A. зарегистрирована в Коста-Рике."
 
+#: /home/git/translations/binary-static/src/templates/haml/static/contact.html.haml:1
+msgid "Binary (Europe) Ltd, Mompalao Building, Suite 2, Tower Road, Msida MSD1825"
+msgstr ""
+
 #: /home/git/translations/binary-static/src/templates/haml/about/index.html.haml:1
 msgid "Binary (Europe) Ltd, Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta. Licenced and regulated by the Lotteries and Gaming Authority in Malta, licence no LGA/CL2/118/2000."
 msgstr "Binary (Europe) Ltd, адрес Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Мальта. Лицензируется и регулируется органом по управлению лотереями и азартными играми на Мальте Lotteries and Gaming Authority, номер лицензии LGA/CL2/118/2000."
+
+#: /home/git/translations/binary-static/src/templates/haml/static/contact.html.haml:1
+msgid "Binary (IOM) Ltd, First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW"
+msgstr ""
 
 #: /home/git/translations/binary-static/src/templates/haml/about/index.html.haml:1
 msgid "Binary (IOM) Ltd, First Floor, Millennium House, Victoria Road, Douglas, Isle of Man, IM2 4RW. Licenced and regulated by the Gambling Supervision Commission in the Isle of Man. Current online gambling licence granted on the 31 August 2012."
@@ -1587,7 +1597,7 @@ msgstr "Верх. Полосы Боллинджера"
 msgid "Bollinger Bands are lines displayed around a simple moving average line (default set to 20 periods). The upper line is displayed 2 standard deviations above the moving average, and the lower line is displayed 2 standard deviations below the moving average.By definition prices are high at the upper band and low at the lower band. This definition can aid in rigorous pattern recognition and is useful in comparing price action to the action of indicators to arrive at systematic trading decisions."
 msgstr "Волны Боллинджера (Bollinger Bands) - это линии вокруг средней скользящей. Верхняя линия показывает 2 стандартных отклонения над средней скользящей, нижняя линия - 2 отклонения под ней.По определению цены высокие на верхней волне и низкие на нижней волне. Данное определение помогает четко выявить паттерн и полезно для сравнения поведения цен и поведения индикаторов."
 
-#: cgi/c_template.cgi:64 lib/BOM/View/CGIForm.pm:774
+#: cgi/c_template.cgi:64 lib/BOM/View/CGIForm.pm:783
 msgid "Bonus Code"
 msgstr "Бонус"
 
@@ -1595,7 +1605,7 @@ msgstr "Бонус"
 msgid "Both the deposit and the bonus amounts are clearly displayed when this type of promotion is available. E.g. Get $25 when you deposit $100. By way of example, if you choose to participate in a \"Get $25 when you deposit $100\" promotion, we will add an additional $25 to your account when you deposit $100 AND when you have purchased at least $125 worth of trades ($25 * 5= $125). The bonus will only be credited to your account when both of these conditions are met."
 msgstr "Как депозит, так и сумма бонуса отчетливо отображены при наличии соответствующего предложения. Например, предложение \"Получите $25 при депозите $100\" означает, что мы внесем на Ваш счет дополнительно $25, когда Вы пополните его на $100 И КОГДА Вы приобретете контракты по меньшей мере на сумму $125 ($25 * 5= $125). Бонус будет внесен на Ваш счет только когда будут соблюдены оба условия."
 
-#: lib/BOM/View/CGIForm.pm:664
+#: lib/BOM/View/CGIForm.pm:676
 msgid "Brand of first car"
 msgstr "Марка первой машины"
 
@@ -1603,7 +1613,7 @@ msgstr "Марка первой машины"
 msgid "Browse"
 msgstr "Обзор"
 
-#: lib/BOM/View/CGIForm.pm:3237
+#: lib/BOM/View/CGIForm.pm:3208
 msgid "Building Number"
 msgstr "Номер дома"
 
@@ -1632,6 +1642,10 @@ msgstr "Сделать ставку"
 msgid "By requesting membership to our affiliate program you are agreeing to the terms and conditions set out in this Agreement. The application form will form an integral part of this Agreement."
 msgstr "Подавая заявку на участие в партнерской программе, Вы соглашаетесь с условиями, описанными в данном Соглашении. Заявка на программу будет считаться неотъемлемой частью данного Соглашения."
 
+#: /home/git/translations/binary-static/src/templates/haml/static/contact.html.haml:1
+msgid "C-2-01 SME Technopreneur Center 2 63000 Cyberjaya"
+msgstr ""
+
 #: /home/git/translations/binary-static/src/templates/toolkit/resources/pricing_table_form.html.tt:114
 #: /home/git/translations/binary-static/src/templates/toolkit/resources/rise_fall_table.html.tt:59
 msgid "Calculate"
@@ -1643,11 +1657,11 @@ msgstr "Расчет"
 msgid "Calculating"
 msgstr "Расчет"
 
-#: lib/BOM/View/CGIForm.pm:2933
+#: lib/BOM/View/CGIForm.pm:2909
 msgid "Call me now"
 msgstr "Заказать звонок"
 
-#: lib/BOM/View/CGIForm.pm:4592
+#: lib/BOM/View/CGIForm.pm:4558
 msgid "Call us"
 msgstr "Позвоните нам"
 
@@ -1655,7 +1669,7 @@ msgstr "Позвоните нам"
 msgid "Callback URL"
 msgstr "Callback URL"
 
-#: lib/BOM/View/CGIForm.pm:4603
+#: lib/BOM/View/CGIForm.pm:4569
 msgid "Callback services"
 msgstr "Обратный звонок"
 
@@ -1712,7 +1726,8 @@ msgid "Cash Dividend"
 msgstr "Денежные дивиденды"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/homepage/logged_in.html.tt:95
-#: cgi/available_payment_methods.cgi:18 cgi/cashier_forward.cgi:28
+#: cgi/available_payment_methods.cgi:18 cgi/cashier_forward.cgi.tidyup:28
+#: cgi/cashier_forward.cgi.tidyup:31 cgi/cashier_forward.cgi:28
 #: cgi/cashier_forward.cgi:31 lib/BOM/View/Menu.pm:130
 msgid "Cashier"
 msgstr "Касса"
@@ -1721,7 +1736,7 @@ msgstr "Касса"
 msgid "Cashier Testing"
 msgstr "Касса тест"
 
-#: lib/BOM/View/CGIForm.pm:1824
+#: lib/BOM/View/CGIForm.pm:1813
 msgid "Cashier/Settings password"
 msgstr "Разделы Касса/Установки - защитный пароль"
 
@@ -1761,8 +1776,8 @@ msgstr "Изменить установки счета"
 
 #: cgi/change_password.cgi:14 cgi/change_password.cgi:19
 #: cgi/change_password.cgi:33 cgi/save_password.cgi:46
-#: cgi/save_password.cgi:59 lib/BOM/View/CGIForm.pm:2087
-#: lib/BOM/View/CGIForm.pm:2260
+#: cgi/save_password.cgi:59 lib/BOM/View/CGIForm.pm:2073
+#: lib/BOM/View/CGIForm.pm:2244
 msgid "Change Password"
 msgstr "Сменить пароль"
 
@@ -1770,7 +1785,7 @@ msgstr "Сменить пароль"
 msgid "Change in account settings"
 msgstr "Изменение настроек счета"
 
-#: cgi/analyse_contract.cgi:280 cgi/oop/Controller/Bet.pm:2203
+#: cgi/analyse_contract.cgi:280 lib/BOM/View/Controller/Bet.pm:2190
 msgid "Chart"
 msgstr "График"
 
@@ -1995,15 +2010,15 @@ msgid "Closing Price"
 msgstr "Цена закрытия"
 
 #. (2000)
-#: lib/BOM/View/CGIForm.pm:3525
+#: lib/BOM/View/CGIForm.pm:3492
 msgid "Comment must not exceed %1 characters. Please resubmit."
 msgstr "Комментарий не может превышать %1 знаков. Пожалуйста, попробуйте еще раз."
 
-#: lib/BOM/View/CGIForm.pm:3469
+#: lib/BOM/View/CGIForm.pm:3436
 msgid "Commission (%) you want to take on deposits"
 msgstr "Комиссионные (%), которые Вы будете взимать при пополнениях"
 
-#: lib/BOM/View/CGIForm.pm:3486
+#: lib/BOM/View/CGIForm.pm:3453
 msgid "Commission (%) you want to take on withdrawals"
 msgstr "Комиссионные (%), которые Вы хотите взимать при снятиях"
 
@@ -2037,6 +2052,12 @@ msgstr "Сырье - это материалы, которые растут ил
 msgid "Commodity Channel Index"
 msgstr "Индекс Товарного Канала CCI"
 
+#: /home/git/translations/binary-static/src/templates/haml/static/contact.html.haml:1
+#, fuzzy
+#| msgid "Bank address"
+msgid "Company addresses"
+msgstr "Адрес банка"
+
 #: /home/git/translations/binary-static/src/templates/haml/static/careers.html.haml:1
 msgid "Company trip to Phuket, Thailand"
 msgstr "Корпоративная поездка в Пхукет, Тайланд"
@@ -2053,7 +2074,6 @@ msgid "Complaints and Disputes"
 msgstr "Жалобы и иски"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/container/confirm_box_popup.html.tt:1
-#: lib/BOM/View/Form.pm:424
 msgid "Confirm"
 msgstr "Подтвердить"
 
@@ -2071,6 +2091,7 @@ msgstr "Контакт"
 
 #: /home/git/translations/binary-static/src/templates/haml/layouts/default/footer.html.haml:1
 #: /home/git/translations/binary-static/src/templates/haml/layouts/default/topbar.html.haml:1
+#: /home/git/translations/binary-static/src/templates/haml/static/contact.html.haml:1
 #: /home/git/translations/binary-static/src/templates/haml/static/white_labels.html.haml:1
 #: /home/git/translations/binary-static/src/templates/toolkit/email/common_email.html.tt:105
 #: /home/git/translations/binary-static/src/templates/toolkit/global/footer.html.tt:174
@@ -2084,11 +2105,12 @@ msgstr "Контакты"
 msgid "Contact the payment agent directly for more information on how to transfer money to them."
 msgstr "Свяжитесь с платежным агентом напрямую для дальнейшей информации относительно перевода денег."
 
+#: /home/git/translations/binary-static/src/templates/haml/static/contact.html.haml:1
 #: /home/git/translations/binary-static/src/templates/haml/static/open_source_projects.html.haml:1
 msgid "Contact us"
 msgstr "Обратная связь"
 
-#: lib/BOM/View/CGIForm.pm:2596 lib/BOM/View/CGIForm.pm:2647
+#: lib/BOM/View/CGIForm.pm:2577 lib/BOM/View/CGIForm.pm:2628
 msgid "Continue"
 msgstr "Подтвердить"
 
@@ -2165,7 +2187,7 @@ msgstr "Период контракта"
 msgid "Contract purchase (approved applications only)"
 msgstr "Покупка контракта (только утвержденные приложения)"
 
-#: cgi/oop/Controller/Bet.pm:1503
+#: lib/BOM/View/Controller/Bet.pm:1490
 msgid "Contract purchases on this account must be on behalf of granters."
 msgstr "Покупка контрактов на этом счету разрешена только от имени уполномоченного лица."
 
@@ -2228,16 +2250,13 @@ msgstr "Затраты"
 msgid "Country"
 msgstr "Страна"
 
-#: cgi/f_writepartics.cgi:212 lib/BOM/View/CGIForm.pm:1193
-#: lib/BOM/View/CGIForm.pm:565
+#: cgi/f_writepartics.cgi:212 lib/BOM/View/CGIForm.pm:1183
+#: lib/BOM/View/CGIForm.pm:580
 msgid "Country of Residence"
 msgstr "Страна проживания"
 
 #: /home/git/translations/binary-static/src/templates/haml/home/index.html.haml:1
-msgid "Country:"
-msgstr "Страна:"
-
-#: /home/git/translations/binary-static/src/templates/haml/home/index.html.haml:1
+#: /home/git/translations/binary-static/src/templates/haml/home2/index.html.haml:1
 msgid "Create free account"
 msgstr "Открыть демо-счет"
 
@@ -2248,6 +2267,10 @@ msgstr "Кредит/<wbr/>Дебет"
 #: /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:151
 msgid "Credit/Debit Card"
 msgstr "Кредитная/дебетовая карта"
+
+#: cgi/paymentagent_transfer.cgi:116
+msgid "Cross-company payment agent transfers are not allowed."
+msgstr ""
 
 #: lib/BOM/View/Charting.pm:437
 msgid "Crosshair"
@@ -2269,19 +2292,19 @@ msgstr "Настоящая спот-цена"
 msgid "Current market price is 0."
 msgstr "Текущая цена - 0."
 
-#: lib/BOM/View/CGIForm.pm:1988
+#: lib/BOM/View/CGIForm.pm:1977
 msgid "Current password"
 msgstr "Текущий пароль"
 
-#: lib/BOM/View/CGIForm.pm:4801 lib/BOM/View/CGIForm.pm:5321
+#: lib/BOM/View/CGIForm.pm:4767 lib/BOM/View/CGIForm.pm:5294
 msgid "Current photocard Driving Licence (Provisional or Full)"
 msgstr "Настоящие действительные водительские права"
 
-#: lib/BOM/View/CGIForm.pm:4798
+#: lib/BOM/View/CGIForm.pm:4764
 msgid "Current signed Passport"
 msgstr "Действительный паспорт с подписью"
 
-#: lib/BOM/View/CGIForm.pm:5320
+#: lib/BOM/View/CGIForm.pm:5293
 msgid "Current signed Passport OR"
 msgstr "Настоящий действительный паспорт ИЛИ"
 
@@ -2300,18 +2323,18 @@ msgid "Daily"
 msgstr "Днев."
 
 #: /home/git/translations/binary-static/src/templates/toolkit/charting/daily_ohlc.html.tt:31
-#: cgi/oop/Controller/Bet.pm:2226
+#: lib/BOM/View/Controller/Bet.pm:2213
 msgid "Daily Prices"
 msgstr "Дневные цены"
 
-#: lib/BOM/View/CGIForm.pm:3719
+#: lib/BOM/View/CGIForm.pm:3686
 msgid "Daily Turnover limit"
 msgstr "Лимит на дневной оборот"
 
 #. ($currencies, $self_exclusion->max_turnover)
 #. ($all_currencies, $self_exclusion->max_turnover)
 #: /home/git/regentmarkets/bom-backoffice/f_setting_selfexclusion.cgi:64
-#: lib/BOM/View/CGIForm.pm:4864
+#: lib/BOM/View/CGIForm.pm:4830
 msgid "Daily Turnover limit is currently set to <strong>%1 %2</strong>"
 msgstr "Дневной оборот в настоящий момент установлен как <strong>%1 %2</strong>"
 
@@ -2335,8 +2358,8 @@ msgstr "Данные будут доступны после закрытия р�
 msgid "Date"
 msgstr "Дата"
 
-#: lib/BOM/View/CGIForm.pm:1184 lib/BOM/View/CGIForm.pm:2516
-#: lib/BOM/View/CGIForm.pm:365
+#: lib/BOM/View/CGIForm.pm:1174 lib/BOM/View/CGIForm.pm:2498
+#: lib/BOM/View/CGIForm.pm:386
 msgid "Date of birth"
 msgstr "Ваша дата рождения"
 
@@ -2468,7 +2491,7 @@ msgstr ""
 "\n"
 "%1"
 
-#: lib/BOM/View/CGIForm.pm:2501 lib/BOM/View/CGIForm.pm:351
+#: lib/BOM/View/CGIForm.pm:2483 lib/BOM/View/CGIForm.pm:372
 #: platform/bin/GenerateStaticData.pm:85
 msgid "Dec"
 msgstr "Дек"
@@ -2590,11 +2613,11 @@ msgstr "Разница с другими поставщиками котиров
 
 #: /home/git/translations/binary-static/src/templates/haml/get_started/random_markets.html.haml:1
 #: /home/git/translations/binary-static/src/templates/haml/get_started/types_of_trades.html.haml:1
-#: cgi/oop/Controller/Bet.pm:1239 cgi/oop/Controller/Bet.pm:1246
+#: lib/BOM/View/Controller/Bet.pm:1226 lib/BOM/View/Controller/Bet.pm:1233
 msgid "Digits"
 msgstr "Цифровые"
 
-#: lib/BOM/View/CGIForm.pm:4425 lib/BOM/View/CGIForm.pm:4427
+#: lib/BOM/View/CGIForm.pm:4391 lib/BOM/View/CGIForm.pm:4393
 msgid "Direct helpline"
 msgstr "Прямой номер (платный)"
 
@@ -2611,6 +2634,7 @@ msgid "Discover our indices generated from random numbers."
 msgstr "Откройте для себя наши индексы, генерируемые на основе случайных чисел."
 
 #: /home/git/translations/binary-static/src/templates/haml/home/index.html.haml:1
+#: /home/git/translations/binary-static/src/templates/haml/home2/index.html.haml:1
 msgid "Discover the easiest way to get started in the financial markets."
 msgstr "Откройте простой способ начала работы на финансовых рынках."
 
@@ -2717,7 +2741,7 @@ msgstr "Доктор"
 msgid "Draw Chart"
 msgstr "Нарисовать график"
 
-#: lib/BOM/View/CGIForm.pm:79
+#: lib/BOM/View/CGIForm.pm:92
 msgid "Due to new gaming regulations recently promulgated in Malta, we are required to obtain your residential address details.  We would be grateful if you could update your"
 msgstr "Согласно законам, регулиющим игорный бизнес на Мальте, в юрисдикции которой зарегистрирован Ваш счет, нами клиенты обязаны заполнять поля для адреса проживания на своих счетах. Пожалуйста, укажите Ваш домашний адрес в разделе"
 
@@ -2799,15 +2823,19 @@ msgstr "Возможно, что Вы оставили секцию КАССА �
 msgid "Email"
 msgstr "Электронная почта"
 
-#: cgi/emailus.cgi:31 lib/BOM/View/CGIForm.pm:4582
+#: cgi/emailus.cgi:31 lib/BOM/View/CGIForm.pm:4548
 msgid "Email Us"
 msgstr "Отправьте нам электронное сообщение"
 
 #: cgi/f_writepartics.cgi:200 cgi/f_writepartics.cgi:211
-#: lib/BOM/View/CGIForm.pm:1206 lib/BOM/View/CGIForm.pm:2326
-#: lib/BOM/View/CGIForm.pm:595
+#: lib/BOM/View/CGIForm.pm:1196 lib/BOM/View/CGIForm.pm:2310
+#: lib/BOM/View/CGIForm.pm:609
 msgid "Email address"
 msgstr "E-Mail адрес"
+
+#: /home/git/translations/binary-static/src/templates/haml/static/contact.html.haml:1
+msgid "Email: <span id='cs_contact_eaddress'></span>"
+msgstr ""
 
 #: /home/git/translations/binary-static/src/templates/toolkit/bet/form/duration.html.tt:5
 #: cgi/analyse_contract.cgi:113 platform/bin/GenerateStaticData.pm:114
@@ -2818,7 +2846,7 @@ msgstr "Окончание"
 msgid "Ends Between/Ends Outside trades"
 msgstr "Закончится между/Закончится вне"
 
-#: cgi/contract_demo.cgi:87 cgi/oop/Controller/Bet.pm:1207
+#: cgi/contract_demo.cgi:87 lib/BOM/View/Controller/Bet.pm:1194
 msgid "Ends Between/Outside"
 msgstr "Закончится между/вне"
 
@@ -2836,7 +2864,7 @@ msgstr "Убеждаться, что Вы не продвигаете %1 соо�
 msgid "Enter the barrier in terms of the difference from the spot price. If you enter +0.005, then you will be purchasing a contract with a barrier 0.005 higher than the entry spot. The entry spot will be the next tick after your order has been received"
 msgstr "Внесите барьер для изменения спот-котировки. Если Вы внесете +0.005, Вы покупаете контракт с барьером на 0.005 выше, чем спот-котировка. Спот-котировкой считается следующий тик после покупки контракта"
 
-#: cgi/oop/Controller/Bet.pm:2401
+#: lib/BOM/View/Controller/Bet.pm:2388
 msgid "Enter the barrier in terms of the difference from the spot price. If you enter +0.005, then you will be purchasing a contract with a barrier 0.005 higher than the entry spot. The entry spot will be the next tick after your order has been received."
 msgstr "Внесите барьер для изменения спот-котировки. Если Вы внесете +0.005, в этом случае Вы покупаете контракт с барьером на 0.005 выше, чем спот-котировка. Спот-котировкой считается следующий тик после покупки контракта."
 
@@ -2881,19 +2909,19 @@ msgstr "Резиденты Евросоюза, кроме Соединенног
 msgid "Exchange Offering"
 msgstr "Биржевое предложение"
 
-#: lib/BOM/View/CGIForm.pm:3791
+#: lib/BOM/View/CGIForm.pm:3758
 msgid "Exclude me from the website until"
 msgstr "Закройте мне доступ к сайту до"
 
-#: lib/BOM/View/CGIForm.pm:3983
+#: lib/BOM/View/CGIForm.pm:3952
 msgid "Exclude time cannot be for more than five years."
 msgstr "Период ограничения не может быть больше пяти лет."
 
-#: lib/BOM/View/CGIForm.pm:3978
+#: lib/BOM/View/CGIForm.pm:3947
 msgid "Exclude time cannot be less than 6 months."
 msgstr "Период ограничения не может быть менее 6 месяцев."
 
-#: lib/BOM/View/CGIForm.pm:3973
+#: lib/BOM/View/CGIForm.pm:3942
 msgid "Exclude time must be after today."
 msgstr "Время начала ограничения должно быть позднее сегодняшней даты."
 
@@ -2981,7 +3009,7 @@ msgstr "Контракт вниз - выигрыш"
 msgid "Fall Contract Return (%)"
 msgstr "Контракт вниз - выигрыш (%)"
 
-#: lib/BOM/View/CGIForm.pm:276
+#: lib/BOM/View/CGIForm.pm:298
 msgid "Family Name"
 msgstr "Фамилия"
 
@@ -2990,20 +3018,20 @@ msgstr "Фамилия"
 msgid "Fast Stochastic"
 msgstr "Быстрый Стохастический Осциллятор"
 
-#: lib/BOM/View/CGIForm.pm:664
+#: lib/BOM/View/CGIForm.pm:676
 msgid "Favourite artist"
 msgstr "Любимый артист"
 
-#: lib/BOM/View/CGIForm.pm:664
+#: lib/BOM/View/CGIForm.pm:676
 msgid "Favourite dish"
 msgstr "Любимое блюдо"
 
-#: cgi/f_writepartics.cgi:223 lib/BOM/View/CGIForm.pm:1441
-#: lib/BOM/View/CGIForm.pm:4430 lib/BOM/View/CGIForm.pm:4431
+#: cgi/f_writepartics.cgi:223 lib/BOM/View/CGIForm.pm:1425
+#: lib/BOM/View/CGIForm.pm:4396 lib/BOM/View/CGIForm.pm:4397
 msgid "Fax"
 msgstr "Факс"
 
-#: lib/BOM/View/CGIForm.pm:2461 lib/BOM/View/CGIForm.pm:311
+#: lib/BOM/View/CGIForm.pm:2443 lib/BOM/View/CGIForm.pm:332
 #: platform/bin/GenerateStaticData.pm:75
 msgid "Feb"
 msgstr "Фев"
@@ -3053,11 +3081,11 @@ msgstr "Финансовое вознаграждение"
 msgid "Find the right trade for every market condition."
 msgstr "Найдите подходящий контракт для любых условий рынка."
 
-#: lib/BOM/View/CGIForm.pm:236
+#: lib/BOM/View/CGIForm.pm:259
 msgid "First Name"
 msgstr "Имя"
 
-#: lib/BOM/View/CGIForm.pm:1248 lib/BOM/View/CGIForm.pm:410
+#: lib/BOM/View/CGIForm.pm:1237 lib/BOM/View/CGIForm.pm:430
 msgid "First line of home address"
 msgstr "Адрес (улица, дом, кв.)"
 
@@ -3113,7 +3141,7 @@ msgstr ""
 "\n"
 "%1"
 
-#: lib/BOM/View/CGIForm.pm:4791
+#: lib/BOM/View/CGIForm.pm:4757
 msgid "For security reasons, please note that Payment Agent accounts will only be able to deposit via Bank Wire."
 msgstr "По причинам безопасности, обратите внимание, что счета платежных агентов могут пополняться только банковским переводом."
 
@@ -3160,7 +3188,7 @@ msgstr "Мошенничество и отмывание денег"
 msgid "Free Bonus"
 msgstr "Бесплатный бонус"
 
-#: lib/BOM/View/CGIForm.pm:5029
+#: lib/BOM/View/CGIForm.pm:4995
 msgid "Free Contract Bonus"
 msgstr "Бонус Бесплатного Контракта"
 
@@ -3195,7 +3223,7 @@ msgstr "От даты окончаня за пределами лимитов"
 msgid "From:"
 msgstr "От:"
 
-#: lib/BOM/View/CGIForm.pm:4300
+#: lib/BOM/View/CGIForm.pm:4266
 msgid "Further Instructions"
 msgstr "Дальнейшие инструкции"
 
@@ -3206,7 +3234,7 @@ msgid "Further information"
 msgstr "Подробнее"
 
 #. (300)
-#: cgi/paymentagent_withdraw.cgi:176 lib/BOM/View/CGIForm.pm:4324
+#: cgi/paymentagent_withdraw.cgi:176 lib/BOM/View/CGIForm.pm:4289
 msgid "Further instructions must not exceed %1 characters."
 msgstr "Дальнейшие инструкции не могут превышать %1 знаков."
 
@@ -3241,11 +3269,11 @@ msgid "Generous Commission Structure"
 msgstr "Гибкая структура комиссий"
 
 #. ($promocode_currency . $promocode_amount,            $promocode_currency . $min_deposit)
-#: lib/BOM/View/CGIForm.pm:5005
+#: lib/BOM/View/CGIForm.pm:4971
 msgid "Get %1 when you deposit %2."
 msgstr "Получите %1, когда вносите %2."
 
-#: cgi/oop/Controller/Bet.pm:1088
+#: lib/BOM/View/Controller/Bet.pm:1075
 msgid "Get Prices"
 msgstr "Получить цены"
 
@@ -3262,6 +3290,7 @@ msgid "Get started with just $5"
 msgstr "Начните работу всего с $5"
 
 #: /home/git/translations/binary-static/src/templates/haml/home/index.html.haml:1
+#: /home/git/translations/binary-static/src/templates/haml/home2/index.html.haml:1
 msgid "Get your free $10k virtual money account"
 msgstr "Получить счет с виртуальными 10000$"
 
@@ -3361,12 +3390,12 @@ msgstr "Высший Барьер"
 #: /home/git/translations/binary-static/src/templates/toolkit/bet/form/barrier.html.tt:18
 #: /home/git/translations/binary-static/src/templates/toolkit/charting/livechart.html.tt:43
 #: /home/git/translations/binary-static/src/templates/toolkit/resources/pricing_table_form.html.tt:60
-#: cgi/oop/Controller/Bet.pm:2394
+#: lib/BOM/View/Controller/Bet.pm:2381
 msgid "High barrier"
 msgstr "Высший барьер"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/bet/form/barrier.html.tt:15
-#: cgi/oop/Controller/Bet.pm:2392
+#: lib/BOM/View/Controller/Bet.pm:2379
 msgid "High barrier offset"
 msgstr "Изменение высшего барьера"
 
@@ -3388,7 +3417,7 @@ msgstr "Выше / Ниже"
 
 #: /home/git/translations/binary-static/src/templates/haml/get_started/random_markets.html.haml:1
 #: cgi/contract_demo.cgi:46 cgi/contract_demo.cgi:47 cgi/contract_guide.cgi:32
-#: cgi/oop/Controller/Bet.pm:1162 cgi/oop/Controller/Bet.pm:1169
+#: lib/BOM/View/Controller/Bet.pm:1149 lib/BOM/View/Controller/Bet.pm:1156
 msgid "Higher/Lower"
 msgstr "Выше/Ниже"
 
@@ -3475,7 +3504,7 @@ msgstr "Как работать на рынках Random?"
 msgid "How to use a payment agent?"
 msgstr "Как оплачивать через платежного агента?"
 
-#: lib/BOM/View/CGIForm.pm:5315
+#: lib/BOM/View/CGIForm.pm:5288
 msgid "However, in order to increase your withdrawal limits, you are kindly requested to follow the instructions below."
 msgstr "Однако, если Вы желаете увеличить лимиты по выводу средств, Вам необходимо следовать инструкциям ниже."
 
@@ -3488,7 +3517,7 @@ msgid "I forgot my password, what should I do?"
 msgstr "Я забыл(а) пароль, что делать?"
 
 #. ($tac_url)
-#: lib/BOM/View/CGIForm.pm:864
+#: lib/BOM/View/CGIForm.pm:872
 msgid "I have read and agree to the <a target=\"_blank\" href=\"%1\">terms and conditions</a> of the site."
 msgstr "Я прочитал и согласен с  <a target=\"_blank\" href=\"%1\">правилами и условиями</a> сайта."
 
@@ -3496,15 +3525,15 @@ msgstr "Я прочитал и согласен с  <a target=\"_blank\" href=\"
 msgid "I'm new to binaries, where do I start?"
 msgstr "Я новичок в торговле бинарными опционам, с чего начать?"
 
-#: lib/BOM/View/CGIForm.pm:1164
+#: lib/BOM/View/CGIForm.pm:1154
 msgid "ID scans submitted"
 msgstr "Удостоверение личности отправлено"
 
-#: lib/BOM/View/CGIForm.pm:1467
+#: lib/BOM/View/CGIForm.pm:1451
 msgid "IP Address"
 msgstr "IP-адрес"
 
-#: cgi/f_writepartics.cgi:224 lib/BOM/View/CGIForm.pm:1704
+#: cgi/f_writepartics.cgi:224 lib/BOM/View/CGIForm.pm:1691
 msgid "IP Security"
 msgstr "<b>Ограничение по IP</b>"
 
@@ -3524,7 +3553,7 @@ msgstr "Если происходит ошибка в рассчете Ваше�
 msgid "If any provision of this Agreement is held to be void or unenforceable in whole or part, the impugned provision (or part thereof) shall be deemed to be deleted from this Agreement and the remaining provisions (including the remainder of the affected provision) shall continue to be valid and applicable."
 msgstr "Если какой-либо из пунктов данного Соглашения становится недействительным или неприменимым, в своей полноте или отчасти, данный пункт (или его часть) будет считаться удаленным из данного Соглашения, в то время как остальные пункты(включая действительную часть задетого пункта) будут оставаться действительными и применительными."
 
-#: lib/BOM/View/CGIForm.pm:2993
+#: lib/BOM/View/CGIForm.pm:2969
 msgid "If applicable, to expedite the processing of your query please include a screen capture of the page that requires our attention."
 msgstr "Чтобы ускорить получение ответа по поводу технических проблем, желательно сделать скриншот страницы с изображением конкретной ошибки."
 
@@ -3741,12 +3770,12 @@ msgstr "В случае, если финансовые контракты был
 msgid "In the meantime, we hope that you will have found the site to be informative and that it will meet with your requirements for financial fixed-odds trading."
 msgstr "Надеемся, что Вы найдете наш сайт информативным и что он будет соответствовать Ваши ожиданиям от финансового беттинга."
 
-#: lib/BOM/View/CGIForm.pm:3334
+#: lib/BOM/View/CGIForm.pm:3303
 msgid "In what country do you want to offer your service"
 msgstr "В какой стране Вы планируете предлагать свой сервис"
 
 #: cgi/contract_demo.cgi:75 cgi/contract_demo.cgi:88 cgi/contract_guide.cgi:58
-#: cgi/oop/Controller/Bet.pm:1213
+#: lib/BOM/View/Controller/Bet.pm:1200
 msgid "In/Out"
 msgstr "Внутри/Вне"
 
@@ -3866,7 +3895,7 @@ msgstr "Внутридневный"
 msgid "Intraday contracts may not cross market open."
 msgstr "Внутридневные контракты не могут переходить на следующий рабочий день."
 
-#: cgi/oop/Controller/Bet.pm:2238
+#: lib/BOM/View/Controller/Bet.pm:2225
 msgid "Intraday prices"
 msgstr "Почасовые цены"
 
@@ -3874,23 +3903,22 @@ msgstr "Почасовые цены"
 msgid "Introduction"
 msgstr "Введение"
 
-#: lib/BOM/View/CGIForm.pm:3254
+#: lib/BOM/View/CGIForm.pm:3224
 msgid "Invalid Building No./Name"
 msgstr "Неправильный номер/название дома"
 
-#: cgi/oop/Helper/Controller/Bet/PriceBoxParameters.pm:129
-#: cgi/oop/Helper/Controller/Bet/PriceBoxParameters.pm:237
-#: cgi/oop/Helper/Controller/Bet/PriceBoxParameters.pm:436
+#: lib/BOM/View/Controller/Bet/PriceBoxParameters.pm:129
+#: lib/BOM/View/Controller/Bet/PriceBoxParameters.pm:237
+#: lib/BOM/View/Controller/Bet/PriceBoxParameters.pm:441
 msgid "Invalid Input"
 msgstr "Неверный ввод"
 
-#: lib/BOM/View/CGIForm.pm:4080 lib/BOM/View/CGIForm.pm:4086
-#: lib/BOM/View/CGIForm.pm:4287 lib/BOM/View/CGIForm.pm:4293
-#: lib/BOM/View/Form/Validation.pm:107 lib/BOM/View/Form/Validation.pm:115
+#: lib/BOM/View/CGIForm.pm:4047 lib/BOM/View/CGIForm.pm:4053
+#: lib/BOM/View/CGIForm.pm:4253 lib/BOM/View/CGIForm.pm:4259
 msgid "Invalid amount"
 msgstr "Вы ввели неверную сумму"
 
-#: lib/BOM/View/CGIForm.pm:1459
+#: lib/BOM/View/CGIForm.pm:1443
 msgid "Invalid fax number."
 msgstr "Неверно введен факс."
 
@@ -3910,18 +3938,18 @@ msgstr "Недействительная ставка"
 msgid "Invalid telephone number"
 msgstr "Недействительный номер телефона"
 
-#: lib/BOM/View/CGIForm.pm:1423 lib/BOM/View/CGIForm.pm:2817
-#: lib/BOM/View/CGIForm.pm:3429 lib/BOM/View/CGIForm.pm:651
+#: lib/BOM/View/CGIForm.pm:1411 lib/BOM/View/CGIForm.pm:2796
+#: lib/BOM/View/CGIForm.pm:3396 lib/BOM/View/CGIForm.pm:663
 msgid "Invalid telephone number (too long)."
 msgstr "Неверный номер телефона (слишком длинный)."
 
-#: lib/BOM/View/CGIForm.pm:1416 lib/BOM/View/CGIForm.pm:2810
-#: lib/BOM/View/CGIForm.pm:3422 lib/BOM/View/CGIForm.pm:644
+#: lib/BOM/View/CGIForm.pm:1404 lib/BOM/View/CGIForm.pm:2789
+#: lib/BOM/View/CGIForm.pm:3389 lib/BOM/View/CGIForm.pm:656
 msgid "Invalid telephone number (too short)."
 msgstr "Неверный номер телефона (слишком короткий)."
 
-#: lib/BOM/View/CGIForm.pm:1428 lib/BOM/View/CGIForm.pm:2803
-#: lib/BOM/View/CGIForm.pm:3434 lib/BOM/View/CGIForm.pm:656
+#: lib/BOM/View/CGIForm.pm:1416 lib/BOM/View/CGIForm.pm:2782
+#: lib/BOM/View/CGIForm.pm:3401 lib/BOM/View/CGIForm.pm:668
 msgid "Invalid telephone number."
 msgstr "Неверно указан номер телефона."
 
@@ -3929,7 +3957,7 @@ msgstr "Неверно указан номер телефона."
 msgid "Invalid underlying"
 msgstr "Неверная валюта (индекс)"
 
-#: lib/BOM/View/CGIForm.pm:4724
+#: lib/BOM/View/CGIForm.pm:4690
 msgid "Invalid value."
 msgstr "Недействительное значение."
 
@@ -3940,6 +3968,10 @@ msgstr "Неверное название рабочего пространст�
 #: /home/git/translations/binary-static/src/templates/toolkit/affiliates/faq.html.tt:41
 msgid "Is there a cost for joining?"
 msgstr "Есть ли вступительный взнос?"
+
+#: /home/git/translations/binary-static/src/templates/haml/static/contact.html.haml:1
+msgid "Isle of Man"
+msgstr ""
 
 #: /home/git/translations/binary-static/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:5
 msgid "It is important that you read and understand the contents of these terms and conditions. By indicating your acceptance of these terms and conditions and continuing with your application to join our affiliate program, you are agreeing (subject to our approval of your application) to the terms and conditions below. If you do not agree with the terms and conditions (or are not authorised to do so) you should not continue with your application. You should be the owner of, or acting on behalf of the owner of the website, that is signing up for this affiliate program."
@@ -3977,7 +4009,7 @@ msgstr "Время расширяться. Мы открыли центр про
 msgid "J. Welles Wilder has developed the Average Directional Index - ADX to define trend force, whether the trend will develop further or will gradually weaken. The indicator allows to analyse tendencies of the market and to make trading decisions in the market forex."
 msgstr "Дж. Уэллес Уайлдер разработал индикатор Индекс Среднего Направления Движения (Average Directional Movement Index, ADX) для выявления силы тенденции, будет ли она развиваться далее или постепенно ослабнет. Индикатор позволяет анализировать тенденции рынка и делать решения на рынке валют Форекс."
 
-#: lib/BOM/View/CGIForm.pm:2457 lib/BOM/View/CGIForm.pm:307
+#: lib/BOM/View/CGIForm.pm:2439 lib/BOM/View/CGIForm.pm:328
 #: platform/bin/GenerateStaticData.pm:74
 msgid "Jan"
 msgstr "Янв"
@@ -3996,7 +4028,7 @@ msgstr "Графики Java"
 msgid "Join our analysts LIVE twice a week for a comprehensive analysis of recent developments and trends in the global financial markets."
 msgstr "Присоединитесь к живой сессии с нашими аналитиками ДВАЖДЫ в неделю, чтобы прослушать подробный анализ последних событий и тенденций на мировых рынках (на английском)."
 
-#: lib/BOM/View/CGIForm.pm:2481 lib/BOM/View/CGIForm.pm:331
+#: lib/BOM/View/CGIForm.pm:2463 lib/BOM/View/CGIForm.pm:352
 #: platform/bin/GenerateStaticData.pm:80
 msgid "Jul"
 msgstr "Июл"
@@ -4010,7 +4042,7 @@ msgstr "Июль"
 msgid "Jump to"
 msgstr "Перейти на"
 
-#: lib/BOM/View/CGIForm.pm:2477 lib/BOM/View/CGIForm.pm:327
+#: lib/BOM/View/CGIForm.pm:2459 lib/BOM/View/CGIForm.pm:348
 #: platform/bin/GenerateStaticData.pm:79
 msgid "Jun"
 msgstr "Июн"
@@ -4048,7 +4080,7 @@ msgstr "Посл. знач."
 msgid "Last Digit Prediction"
 msgstr "Прогнозы последней десятичной"
 
-#: cgi/oop/Controller/Bet.pm:2255
+#: lib/BOM/View/Controller/Bet.pm:2242
 msgid "Last Digit Stats"
 msgstr "Статистика последних тиков"
 
@@ -4143,7 +4175,7 @@ msgid "Links"
 msgstr "Ссылки"
 
 #. (BOM::Platform::Runtime->instance->countries->localized_code2country($target_country, request()
-#: lib/BOM/View/CGIForm.pm:4241
+#: lib/BOM/View/CGIForm.pm:4208
 msgid "Listing only Payment Agents in %1."
 msgstr "Список платежных агентов %1."
 
@@ -4163,7 +4195,13 @@ msgstr "Живые графики"
 msgid "Live Help"
 msgstr "Live Chat"
 
-#: lib/BOM/View/CGIForm.pm:1718
+#: /home/git/translations/binary-static/src/templates/haml/static/contact.html.haml:1
+#, fuzzy
+#| msgid "Live Chart"
+msgid "Live chat:"
+msgstr "Живой график"
+
+#: lib/BOM/View/CGIForm.pm:1705
 msgid "Lock Cashier and Settings sections"
 msgstr "Блокирование разделов КАССА и УСТАНОВКИ"
 
@@ -4206,7 +4244,7 @@ msgstr "Вход"
 #: /home/git/translations/binary-static/src/templates/haml/home/login.html.haml:1
 #: /home/git/translations/binary-static/src/templates/haml/layouts/default/header.html.haml:1
 #: /home/git/translations/binary-static/src/templates/toolkit/global/header.html.tt:66
-#: lib/BOM/View/CGIForm.pm:2883 lib/BOM/View/CGIForm.pm:3008
+#: lib/BOM/View/CGIForm.pm:2860 lib/BOM/View/CGIForm.pm:2984
 msgid "Login ID"
 msgstr "Логин"
 
@@ -4256,12 +4294,12 @@ msgstr "Значение низшего барьера может быть то�
 #: /home/git/translations/binary-static/src/templates/toolkit/bet/form/barrier.html.tt:37
 #: /home/git/translations/binary-static/src/templates/toolkit/charting/livechart.html.tt:47
 #: /home/git/translations/binary-static/src/templates/toolkit/resources/pricing_table_form.html.tt:46
-#: cgi/oop/Controller/Bet.pm:2395
+#: lib/BOM/View/Controller/Bet.pm:2382
 msgid "Low barrier"
 msgstr "Нижний барьер"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/bet/form/barrier.html.tt:34
-#: cgi/oop/Controller/Bet.pm:2393
+#: lib/BOM/View/Controller/Bet.pm:2380
 msgid "Low barrier offset"
 msgstr "Изменение нижнего барьера"
 
@@ -4300,7 +4338,7 @@ msgstr "Пополнить"
 msgid "Make a deposit or withdraw"
 msgstr "Пополнить счет или вывести средства"
 
-#: lib/BOM/View/CGIForm.pm:4526
+#: lib/BOM/View/CGIForm.pm:4492
 msgid "Make a deposit using credit card, bank wire, cheque and e-cash. Accounts are available in dollars, pounds and euros. The minimum account size is ($/&pound;/&euro;) 5 and the maximum account size is ($/&pound;/&euro;) 150,000."
 msgstr "Просьба отнестись к выбору контрольного вопроса и ответа серьезно, так как он может понадобиться в дальнейшем для доступа к счету или получения нового пароля. Также просим указывать достоверные и полные данные. Подозрение, что данные недостоверны или неполные, может привести к закрытию счета. Вы можете пополнить счет картой, банковским переводом или через электронный кошелек. Счета могут быть в долларах, евро и фунтах стерлингов. Минимальная сумма на счету составляет ($/£/€) 5, а максимальная сумма на счету - ($/£/€) 150,000."
 
@@ -4309,7 +4347,15 @@ msgstr "Просьба отнестись к выбору контрольног
 msgid "Make your trade"
 msgstr "Купите контракт"
 
-#: lib/BOM/View/CGIForm.pm:2465 lib/BOM/View/CGIForm.pm:315
+#: /home/git/translations/binary-static/src/templates/haml/static/contact.html.haml:1
+msgid "Malaysia"
+msgstr ""
+
+#: /home/git/translations/binary-static/src/templates/haml/static/contact.html.haml:1
+msgid "Malta"
+msgstr ""
+
+#: lib/BOM/View/CGIForm.pm:2447 lib/BOM/View/CGIForm.pm:336
 #: platform/bin/GenerateStaticData.pm:76
 msgid "Mar"
 msgstr "Мар"
@@ -4372,11 +4418,11 @@ msgstr "Рынки"
 msgid "Mass Index"
 msgstr "Массовый индекс"
 
-#: lib/BOM/View/CGIForm.pm:5017
+#: lib/BOM/View/CGIForm.pm:4983
 msgid "Matched Contract Bonus"
 msgstr "Бонус на получение эквивалента депозита"
 
-#: lib/BOM/View/CGIForm.pm:4053 lib/BOM/View/CGIForm.pm:4260
+#: lib/BOM/View/CGIForm.pm:4021 lib/BOM/View/CGIForm.pm:4227
 msgid "Max"
 msgstr "Макс."
 
@@ -4385,18 +4431,18 @@ msgid "Maximum"
 msgstr "Максимум"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/cashier/betting_limits.html.tt:15
-#: lib/BOM/View/CGIForm.pm:3694
+#: lib/BOM/View/CGIForm.pm:3661
 msgid "Maximum account cash balance"
 msgstr "Максимальный баланс на счету"
 
 #. ($currencies, $self_exclusion->max_balance)
 #. ($all_currencies, $self_exclusion->max_balance)
 #: /home/git/regentmarkets/bom-backoffice/f_setting_selfexclusion.cgi:59
-#: lib/BOM/View/CGIForm.pm:4858
+#: lib/BOM/View/CGIForm.pm:4824
 msgid "Maximum account cash balance is currently set to <strong>%1 %2</strong>"
 msgstr "Максимальный баланс на счету в настоящий момент установлен на <strong>%1 %2</strong>"
 
-#: lib/BOM/View/CGIForm.pm:3739
+#: lib/BOM/View/CGIForm.pm:3706
 msgid "Maximum aggregate contract purchases per day."
 msgstr "Максимальное общее количество купленных ставок в день."
 
@@ -4409,13 +4455,13 @@ msgid "Maximum daily turnover"
 msgstr "Максимальный дневной оборот"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/cashier/betting_limits.html.tt:11
-#: lib/BOM/View/CGIForm.pm:3744
+#: lib/BOM/View/CGIForm.pm:3711
 msgid "Maximum number of open positions"
 msgstr "Максимальное количество открытых позиций"
 
 #. ($self_exclusion->max_open_bets)
 #: /home/git/regentmarkets/bom-backoffice/f_setting_selfexclusion.cgi:69
-#: lib/BOM/View/CGIForm.pm:4870
+#: lib/BOM/View/CGIForm.pm:4836
 msgid "Maximum number of open positions is currently set to <strong>%1</strong>"
 msgstr "Максимальное количество открытых позиций в настоящее время установлено на <strong>%1</strong>"
 
@@ -4423,7 +4469,7 @@ msgstr "Максимальное количество открытых пози�
 msgid "Maximum withdrawal by all other means:"
 msgstr "Максимум перевода другими методами (e-gold, goldmoney, webmoney, nochex, wire, check):"
 
-#: lib/BOM/View/CGIForm.pm:2473 lib/BOM/View/CGIForm.pm:323
+#: lib/BOM/View/CGIForm.pm:2455 lib/BOM/View/CGIForm.pm:344
 #: platform/bin/GenerateStaticData.pm:78 platform/bin/GenerateStaticData.pm:90
 msgid "May"
 msgstr "Май"
@@ -4436,11 +4482,11 @@ msgstr "Средняя (медианная) цена"
 msgid "Medium"
 msgstr "Средний"
 
-#: lib/BOM/View/CGIForm.pm:664
+#: lib/BOM/View/CGIForm.pm:676
 msgid "Memorable date"
 msgstr "Важная дата"
 
-#: lib/BOM/View/CGIForm.pm:663
+#: lib/BOM/View/CGIForm.pm:675
 msgid "Memorable town/city"
 msgstr "Любимый город"
 
@@ -4449,11 +4495,11 @@ msgstr "Любимый город"
 msgid "Mentioning error code %1 in any correspondence may help us resolve the issue more quickly."
 msgstr "Упоминание кода ошибки %1 в переписке с нами поможет нам скорее разрешить проблему."
 
-#: lib/BOM/View/CGIForm.pm:3105
+#: lib/BOM/View/CGIForm.pm:3078
 msgid "Message"
 msgstr "Сообщение"
 
-#: lib/BOM/View/CGIForm.pm:3126
+#: lib/BOM/View/CGIForm.pm:3098
 msgid "Message is too short."
 msgstr "Слишком короткое сообщение."
 
@@ -4465,7 +4511,7 @@ msgstr "Метод"
 msgid "Mid"
 msgstr "Средн."
 
-#: lib/BOM/View/CGIForm.pm:4053 lib/BOM/View/CGIForm.pm:4260
+#: lib/BOM/View/CGIForm.pm:4021 lib/BOM/View/CGIForm.pm:4227
 msgid "Min"
 msgstr "Мин"
 
@@ -4524,10 +4570,8 @@ msgid "Monday"
 msgstr "Понедельник"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/legal/terms_and_conditions.html.tt:53
-#, fuzzy
-#| msgid "Money collected from Clients are not invested in any securities, futures, currencies, derivatives or other investments, on behalf of Clients"
 msgid "Money collected from Clients are not invested in any securities, futures, currencies, derivatives or other investments, on behalf of Clients."
-msgstr "Денежные средства, полученные от Клиентов, не могут быть инвестированы в какие-либо ценные бумаги, фьючерсы, валюты, производные и другие активы от имени Клиентов"
+msgstr "Денежные средства, полученные от Клиентов, не могут быть инвестированы в какие-либо ценные бумаги, фьючерсы, валюты, производные и другие активы от имени Клиентов."
 
 #: lib/BOM/Product/Helper/PricingTableParameters.pm:233
 msgid "Moneyness terms"
@@ -4563,7 +4607,7 @@ msgstr "Дополнительные преимущества"
 msgid "More than %1 trades available"
 msgstr "Более, чем %1 доступных к покупке контрактов"
 
-#: lib/BOM/View/CGIForm.pm:663
+#: lib/BOM/View/CGIForm.pm:675
 msgid "Mother's maiden name"
 msgstr "Девичья фамилия матери"
 
@@ -4617,19 +4661,19 @@ msgstr "Мой Счет"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_agents_list.html.tt:2
 #: /home/git/translations/binary-static/src/templates/toolkit/cashier/payment_agent_further_info.html.tt:3
-#: lib/BOM/View/CGIForm.pm:1174
+#: lib/BOM/View/CGIForm.pm:1164
 msgid "Name"
 msgstr "Имя и фамилия"
 
-#: lib/BOM/View/CGIForm.pm:2842 lib/BOM/View/CGIForm.pm:3064
+#: lib/BOM/View/CGIForm.pm:2820 lib/BOM/View/CGIForm.pm:3038
 msgid "Name is too short."
 msgstr "Слишком короткое имя."
 
-#: lib/BOM/View/CGIForm.pm:663
+#: lib/BOM/View/CGIForm.pm:675
 msgid "Name of first love"
 msgstr "Имя первой любви"
 
-#: lib/BOM/View/CGIForm.pm:663
+#: lib/BOM/View/CGIForm.pm:675
 msgid "Name of your pet"
 msgstr "Имя домашнего животного"
 
@@ -4652,11 +4696,11 @@ msgstr "Статус сети"
 msgid "New"
 msgstr "Новости"
 
-#: lib/BOM/View/CGIForm.pm:1533
+#: lib/BOM/View/CGIForm.pm:1517
 msgid "New Cashier/Settings password"
 msgstr "Новый пароль к разделам Касса/Установки"
 
-#: lib/BOM/View/CGIForm.pm:2012 lib/BOM/View/CGIForm.pm:2163
+#: lib/BOM/View/CGIForm.pm:2000 lib/BOM/View/CGIForm.pm:2149
 msgid "New Password"
 msgstr "Новый пароль"
 
@@ -4686,7 +4730,7 @@ msgid "Next"
 msgstr "Далее"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/container/confirm_box_popup.html.tt:7
-#: lib/BOM/View/CGIForm.pm:1157 lib/BOM/View/CGIForm.pm:3569
+#: lib/BOM/View/CGIForm.pm:1147 lib/BOM/View/CGIForm.pm:3536
 #: lib/BOM/View/Charting.pm:416
 msgid "No"
 msgstr "Нет"
@@ -4738,7 +4782,7 @@ msgstr "Нет. Участие в партнерской программе %1 �
 msgid "Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price."
 msgstr "Внимание: контракт будет продан по цене, действительной на момент получения запроса нашими серверами. Эта цена может отличаться от указанной в настояшее время."
 
-#: cgi/oop/Controller/Bet.pm:1055
+#: lib/BOM/View/Controller/Bet.pm:1042
 msgid "Note: During summer time (daylight saving), GMT is one hour behind BST (British Summer Time)"
 msgstr "Внимание! В летнее время, GMT отстает на один час от BST (British Summer Time)"
 
@@ -4751,23 +4795,23 @@ msgstr "Внимание: Компания оставляет за собой п
 msgid "Note: You will be able to withdraw your bonus of %1%2 only once your aggregate volume of trades exceeds %1%3 (at the moment it is only %1%4). This restriction applies only to the bonus and profits derived therefrom.  All other deposits and profits derived therefrom can be withdrawn at any time."
 msgstr "Примечание: Вы можете снять со счета бесплатный бонус %1%2 только по достижении оборота на счете в %1%3 (в настоящий момент только %1%4). Это ограничение распространяется только на бонус и всю прибыль, полученную в результате бонусной торговли. Все другие средства и прибыль могут быть выведены со счета в любое время."
 
-#: lib/BOM/View/CGIForm.pm:4897
+#: lib/BOM/View/CGIForm.pm:4863
 msgid "Note: limits will apply to all currency segments on your account individually."
 msgstr "Внимание: ограничения будут наложены на каждый валютный сегмент на Вашем счету индивидуально."
 
 #: /home/git/translations/binary-static/src/templates/toolkit/resources/pricing_table.html.tt:69
-#: lib/BOM/View/CGIForm.pm:4787 lib/BOM/View/Cashier.pm:156
+#: lib/BOM/View/CGIForm.pm:4753 lib/BOM/View/Cashier.pm:156
 #: lib/BOM/View/Cashier.pm:174
 msgid "Notes:"
 msgstr "Примечания:"
 
 #. ($attorney->url, $attorney->company_name)
-#: lib/BOM/View/CGIForm.pm:4935
+#: lib/BOM/View/CGIForm.pm:4901
 msgid "Notice: Power of Attorney to your account has been revoked from <a target=\"_blank\" href=\"%1\">%2</a>.<br>Trades cannot be placed anymore on your account directly by <a target=\"_blank\" href=\"%1\">%2</a>."
 msgstr "Внимание: доверенность действовать от Вашего имени была отозвана от <a target=\"_blank\" href=\"%1\">%2</a>.<br>Контракты теперь не могут быть приобретены напрямую <a target=\"_blank\" href=\"%1\">%2</a>."
 
 #. ($attorney->url,            $attorney->company_name,            request()
-#: lib/BOM/View/CGIForm.pm:4931
+#: lib/BOM/View/CGIForm.pm:4897
 msgid "Notice: your account has granted Power of Attorney to <a target=\"_blank\" href=\"%1\">%2</a>.<br>Trades may be placed on your account directly by <a target=\"_blank\" href=\"%1\">%2</a>. You may <a class=\"bom_confirm_popup_link\" href=\"%3\">revoke this Power of Attorney at any time.</a>"
 msgstr "Внимание: на Вашем счету действует доверенность для <a target=\"_blank\" href=\"%1\">%2</a>действовать от Вашего имени.<br />Контракты могут быть приобретены напрямую <a target=\"_blank\" href=\"%1\">%2</a>. Вы можете <a class=\"bom_confirm_popup_link\" href=\"%3\">отозвать данное право в любое время.</p>"
 
@@ -4775,7 +4819,7 @@ msgstr "Внимание: на Вашем счету действует дове
 msgid "Notification of Changes"
 msgstr "Информация об изменениях"
 
-#: lib/BOM/View/CGIForm.pm:2497 lib/BOM/View/CGIForm.pm:347
+#: lib/BOM/View/CGIForm.pm:2479 lib/BOM/View/CGIForm.pm:368
 #: platform/bin/GenerateStaticData.pm:84
 msgid "Nov"
 msgstr "Ноя"
@@ -4826,15 +4870,23 @@ msgstr "OAuth2.0 - это новейший интернет-стандарт д�
 msgid "OK"
 msgstr "ОК"
 
-#: lib/BOM/View/CGIForm.pm:5325
+#: /home/git/translations/binary-static/src/templates/haml/home2/index.html.haml:1
+msgid "OPEN REAL ACCOUNT"
+msgstr ""
+
+#: /home/git/translations/binary-static/src/templates/haml/home2/index.html.haml:1
+msgid "OPEN VIRTUAL ACCOUNT"
+msgstr ""
+
+#: lib/BOM/View/CGIForm.pm:5298
 msgid "ORIGINAL Bank/Credit Union/Building Society/Credit/Debit Card statement or passbook (within last 3 months)"
 msgstr "ОРИГИНАЛ выписки с банковского счета (с адресом) или кредитной/ дебетовой карты (не старее последних 3 месяцев)"
 
-#: lib/BOM/View/CGIForm.pm:5324
+#: lib/BOM/View/CGIForm.pm:5297
 msgid "ORIGINAL Utility bill (within last 3 months) ; or"
 msgstr "ОРИГИНАЛ счета или квитанции за коммунальные услуги (не старее последних 3 месяцев); или"
 
-#: lib/BOM/View/CGIForm.pm:2493 lib/BOM/View/CGIForm.pm:343
+#: lib/BOM/View/CGIForm.pm:2475 lib/BOM/View/CGIForm.pm:364
 #: platform/bin/GenerateStaticData.pm:83
 msgid "Oct"
 msgstr "Окт"
@@ -4881,7 +4933,7 @@ msgstr "Когда бонус будет внесен на Ваш счет, Вы
 msgid "Once the white-label is live, you will earn standard affiliate commissions on clients trading via the white-label."
 msgstr "Как только сайт White Label будет запущен, Вы начнете зарабатывать стандартную партнерскую комиссию от сделок клиентов, торгующих через Ваш сайт White Label."
 
-#: lib/BOM/View/CGIForm.pm:3714
+#: lib/BOM/View/CGIForm.pm:3681
 msgid "Once this limit is reached, you may no longer deposit."
 msgstr "Когда данный лимит будет достигнут, Вы не сможете вносить средства."
 
@@ -4904,10 +4956,8 @@ msgstr "Одна простая платформа"
 
 #: /home/git/translations/binary-static/src/templates/haml/home/index.html.haml:1
 #: /home/git/translations/binary-static/src/templates/haml/home/styles.html.haml:1
-#, fuzzy
-#| msgid "%1: Online Trading platform for binary options on Forex, Indices, Commodities and Smart Indices"
 msgid "Online Trading platform for binary options on Forex, Indices, Commodities and Smart Indices"
-msgstr "%1: Онлайн-платформа по работе с бинарными опционами на рынках валют, индексов, сырья и индексах Smart"
+msgstr "Онлайн-платформа по работе с бинарными опционами на рынках валют, индексов, сырья и индексах Smart"
 
 #: /home/git/translations/binary-static/src/templates/haml/static/group_history.html.haml:1
 msgid "Only five years after inception, we pick up this major award for our online trading services. The award recognises BetOnMarkets.com’s reliable, fast and secure online trading for novice and expert traders. At this time, our website has received over 15 million trades."
@@ -4928,7 +4978,7 @@ msgstr "Только клиенты, зарегистрировавшиеся п
 msgid "Open"
 msgstr "Значение при открытии"
 
-#: lib/BOM/View/CGIForm.pm:826
+#: lib/BOM/View/CGIForm.pm:834
 msgid "Open Account"
 msgstr "Открыть счет"
 
@@ -5026,7 +5076,7 @@ msgid "Our data feed may at times differ slightly from other data feeds found on
 msgstr "Котировки на нашем сайте иногда могут слегка отличаться от данных на каких-либо других сайтах (которые, в свою очередь, также немного отличаются друг от друга). Это происходит по следующим причинам:"
 
 #. ($cs_email)
-#: lib/BOM/View/CGIForm.pm:5327
+#: lib/BOM/View/CGIForm.pm:5300
 msgid "Our email address is %1."
 msgstr "Наш электронный адрес %1."
 
@@ -5075,7 +5125,7 @@ msgstr "Принадлежность и содержание сайта %1 ос�
 msgid "Ownership, content and liability for affiliate sites are the sole responsibility of the affiliate. You will be solely responsible for the development, operation, and maintenance of your site and for all materials that appear on your site. You will indemnify and hold us harmless from all claims, damages, and expenses (including, without limitation to, attorneys' fees) relating to the development, operation, maintenance, and contents of your site."
 msgstr "Принадлежность, содержание и  ответственность за партнерский сайт являются единоличной ответственностью партнера. Партнер несет эксклюзивную ответственность за развитие, оперативность и поддержание своего сайта и все материалы, опубликованные на сайте. Партнер обязуется возместить все возможные убытки, проистекающие из содержания своего сайта, и обеспечивать защищенность нашего сайта от любых запросов, вреда и расходов (включая, но не ограничиваясь, юридическими расходами), имеющих отношение к развитию, опреативности, поддержанию и содержанию сайта партнера."
 
-#: lib/BOM/View/CGIForm.pm:1074 lib/BOM/View/CGIForm.pm:1077
+#: lib/BOM/View/CGIForm.pm:1080 lib/BOM/View/CGIForm.pm:1083
 msgid "P.O. Box is not accepted"
 msgstr "Адреса P.O.Box и а/я не принимаются"
 
@@ -5121,15 +5171,15 @@ msgstr "Партнеры"
 #: /home/git/translations/binary-static/src/templates/haml/home/login.html.haml:1
 #: /home/git/translations/binary-static/src/templates/haml/layouts/default/header.html.haml:1
 #: /home/git/translations/binary-static/src/templates/toolkit/global/header.html.tt:67
-#: lib/BOM/View/CGIForm.pm:743 lib/BOM/View/Menu.pm:91
+#: lib/BOM/View/CGIForm.pm:753 lib/BOM/View/Menu.pm:91
 msgid "Password"
 msgstr "Пароль"
 
-#: lib/BOM/View/CGIForm.pm:1527 lib/BOM/View/CGIForm.pm:1861
+#: lib/BOM/View/CGIForm.pm:1511 lib/BOM/View/CGIForm.pm:1850
 msgid "Password is too long, please enter at most 30 characters."
 msgstr "Пароль слишком длинный, введите менее 30 знаков."
 
-#: lib/BOM/View/CGIForm.pm:1520 lib/BOM/View/CGIForm.pm:1854
+#: lib/BOM/View/CGIForm.pm:1504 lib/BOM/View/CGIForm.pm:1843
 msgid "Password is too short, please enter at least 3 characters."
 msgstr "Слишком короткий пароль, введите как минимум 3 знака."
 
@@ -5205,7 +5255,7 @@ msgid "Payout Currency"
 msgstr "Валюта выплаты"
 
 #. (to_monetary_number_format($transaction_parameters->{payout})
-#: cgi/oop/Controller/Bet.pm:1591
+#: lib/BOM/View/Controller/Bet.pm:1578
 msgid "Payout has moved in your favour from %1 to %2."
 msgstr "Выплата изменилась в выгодную для Вас сторону с %1 до %2."
 
@@ -5219,7 +5269,7 @@ msgid "Payout must be between <strong>%1</strong> and <strong>%2</strong>."
 msgstr "Выплата должна быть между <strong>%1</strong> и <strong>%2</strong>."
 
 #. (qq{<span class="balance">$currency_label $promocode_amount</span>})
-#: lib/BOM/View/CGIForm.pm:4996
+#: lib/BOM/View/CGIForm.pm:4962
 msgid "Pending Bonus: %1"
 msgstr "Неполученный бонус %1"
 
@@ -5273,7 +5323,7 @@ msgstr "Нажмите на кнопку \"Play\", чтобы просмотре
 msgid "Please confirm the transaction details in order to complete the transfer:"
 msgstr "Просим подтвердить данные транзакции для завершения перевода:"
 
-#: lib/BOM/View/CGIForm.pm:4597
+#: lib/BOM/View/CGIForm.pm:4563
 msgid "Please contact us using the toll-free number provided for your country or our general contact number below."
 msgstr "Пожалуйста, свяжитесь с нами, используя телефон для бесплатный звонков для Вашей страны – см. номер ниже. Примите во внимание, что если звонок не проходит, может быть необходимым обратиться в телефонную компанию для активации звонков на бесплатные номера."
 
@@ -5282,68 +5332,68 @@ msgstr "Пожалуйста, свяжитесь с нами, используя
 msgid "Please contact us with whatever is on your mind at <a href=\"mailto:%1\">%1</a>. We'll be happy to hear your feedback and to answer any questions promptly and accurately."
 msgstr "Пожалуйста, свяжитесь с нами, если у Вас есть какая-либо идея по <a href=\"mailto:%1\">%1</a>. Мы будем рады услышать Ваши комментарии и ответить любые вопросы."
 
-#: lib/BOM/View/CGIForm.pm:4540
+#: lib/BOM/View/CGIForm.pm:4506
 msgid "Please do not click more than once and please allow 15 seconds for processing."
 msgstr "Не нажимайте больше одного раза."
 
-#: lib/BOM/View/CGIForm.pm:3807
+#: lib/BOM/View/CGIForm.pm:3774
 msgid "Please enter a date that is at least 6 months from now."
 msgstr "Внесите дату по меньшей мере в 6 месяцах от настоящей."
 
-#: lib/BOM/View/CGIForm.pm:1842 lib/BOM/View/CGIForm.pm:1962
-#: lib/BOM/View/CGIForm.pm:2135 lib/BOM/View/CGIForm.pm:717
+#: lib/BOM/View/CGIForm.pm:1831 lib/BOM/View/CGIForm.pm:1951
+#: lib/BOM/View/CGIForm.pm:2121 lib/BOM/View/CGIForm.pm:727
 msgid "Please enter a password."
 msgstr "Пожалуйста, введите пароль."
 
-#: lib/BOM/View/CGIForm.pm:1287 lib/BOM/View/CGIForm.pm:466
+#: lib/BOM/View/CGIForm.pm:1275 lib/BOM/View/CGIForm.pm:483
 msgid "Please enter a town or city."
 msgstr "Введите город."
 
-#: cgi/paymentagent_transfer.cgi:126 lib/BOM/View/CGIForm.pm:4074
-#: lib/BOM/View/CGIForm.pm:4281
+#: cgi/paymentagent_transfer.cgi:126 lib/BOM/View/CGIForm.pm:4041
+#: lib/BOM/View/CGIForm.pm:4247
 msgid "Please enter a valid amount."
 msgstr "Пожалуйста, введите правильную сумму."
 
-#: lib/BOM/View/CGIForm.pm:3317
+#: lib/BOM/View/CGIForm.pm:3286
 msgid "Please enter a valid name."
 msgstr "Пожалуйста, внесите правильное имя."
 
-#: lib/BOM/View/CGIForm.pm:3705 lib/BOM/View/CGIForm.pm:3730
-#: lib/BOM/View/CGIForm.pm:3755 lib/BOM/View/CGIForm.pm:3777
+#: lib/BOM/View/CGIForm.pm:3672 lib/BOM/View/CGIForm.pm:3697
+#: lib/BOM/View/CGIForm.pm:3722 lib/BOM/View/CGIForm.pm:3744
 msgid "Please enter an integer value."
 msgstr "Пожалуйста, внесите целое число."
 
-#: lib/BOM/View/CGIForm.pm:3802 lib/BOM/View/CGIForm.pm:3816
+#: lib/BOM/View/CGIForm.pm:3769 lib/BOM/View/CGIForm.pm:3783
 msgid "Please enter date in the format YYYY-MM-DD."
 msgstr "Пожалуйста, внесите дату в формате ГГГГ-МММ-ДД."
 
-#: lib/BOM/View/CGIForm.pm:4024
+#: lib/BOM/View/CGIForm.pm:3992
 msgid "Please enter the Login ID to transfer funds."
 msgstr "Внесите логин для перевода средств."
 
-#: lib/BOM/View/CGIForm.pm:3350
+#: lib/BOM/View/CGIForm.pm:3318
 msgid "Please enter the country where you want to offer your service"
 msgstr "Пожалуйста, выберите страну, где Вы хотите предлагать свои услуги"
 
-#: lib/BOM/View/CGIForm.pm:1241 lib/BOM/View/CGIForm.pm:404
+#: lib/BOM/View/CGIForm.pm:1230 lib/BOM/View/CGIForm.pm:424
 msgid "Please enter the first line of your home address."
 msgstr "Пожалуйста, введите первую строку Вашего домашнего адреса."
 
-#: lib/BOM/View/CGIForm.pm:1225 lib/BOM/View/CGIForm.pm:2345
-#: lib/BOM/View/CGIForm.pm:2872 lib/BOM/View/CGIForm.pm:3094
-#: lib/BOM/View/CGIForm.pm:3391 lib/BOM/View/CGIForm.pm:612
+#: lib/BOM/View/CGIForm.pm:1214 lib/BOM/View/CGIForm.pm:2328
+#: lib/BOM/View/CGIForm.pm:2849 lib/BOM/View/CGIForm.pm:3067
+#: lib/BOM/View/CGIForm.pm:3358 lib/BOM/View/CGIForm.pm:625
 msgid "Please enter your email address."
 msgstr "Пожалуйста, введите Ваш email."
 
-#: lib/BOM/View/CGIForm.pm:253
+#: lib/BOM/View/CGIForm.pm:275
 msgid "Please enter your first name."
 msgstr "Пожалуйста, введите Ваше имя."
 
-#: lib/BOM/View/CGIForm.pm:271
+#: lib/BOM/View/CGIForm.pm:293
 msgid "Please enter your last name."
 msgstr "Пожалуйста, введите Вашу фамилию."
 
-#: lib/BOM/View/CGIForm.pm:2440
+#: lib/BOM/View/CGIForm.pm:2422
 msgid "Please enter your secret answer"
 msgstr "Внесите ответ на Ваш контрольный вопрос"
 
@@ -5351,14 +5401,14 @@ msgstr "Внесите ответ на Ваш контрольный вопро�
 msgid "Please fill in the Login ID and Amount you wish to transfer to your Client in the form below:"
 msgstr "Просим указать логин и сумму, которую Вы желаете перевести Клиенту, в форме ниже:"
 
-#: lib/BOM/View/CGIForm.pm:1054 lib/BOM/View/CGIForm.pm:2530
-#: lib/BOM/View/CGIForm.pm:2536 lib/BOM/View/CGIForm.pm:2542
-#: lib/BOM/View/CGIForm.pm:379 lib/BOM/View/CGIForm.pm:385
-#: lib/BOM/View/CGIForm.pm:391 lib/BOM/View/CGIForm.pm:396
+#: lib/BOM/View/CGIForm.pm:1059 lib/BOM/View/CGIForm.pm:2511
+#: lib/BOM/View/CGIForm.pm:2517 lib/BOM/View/CGIForm.pm:2523
+#: lib/BOM/View/CGIForm.pm:399 lib/BOM/View/CGIForm.pm:405
+#: lib/BOM/View/CGIForm.pm:411 lib/BOM/View/CGIForm.pm:416
 msgid "Please input a valid date."
 msgstr "Пожалуйста введите верную дату."
 
-#: lib/BOM/View/CGIForm.pm:1570
+#: lib/BOM/View/CGIForm.pm:1554
 msgid "Please input it again to confirm"
 msgstr "Пожалуйста, подтвердите пароль"
 
@@ -5366,7 +5416,7 @@ msgstr "Пожалуйста, подтвердите пароль"
 msgid "Please make sure that you first agree with the Agent on the terms of payment before submitting your request."
 msgstr "Пожалуйста, убедитесь, что Вы согласны с условиями платежного агента, прежде чем Вы отошлете заявку."
 
-#: lib/BOM/View/CGIForm.pm:4813
+#: lib/BOM/View/CGIForm.pm:4779
 msgid "Please note that mobile telephone bills are not acceptable as evidence of address"
 msgstr "Обратите внимание, что счета за оплату сотовых телефонов не принимаются как подтверждение адреса"
 
@@ -5398,23 +5448,23 @@ msgstr "Примите во внимание, что Вы можете изме�
 msgid "Please note that your settings have been updated as follows:"
 msgstr "Ваши установки были обновлены:"
 
-#: lib/BOM/View/CGIForm.pm:4818
+#: lib/BOM/View/CGIForm.pm:4784
 msgid "Please post the documents to:"
 msgstr "Пожалуйста, вышлите документы на следующий адрес:"
 
-#: lib/BOM/View/CGIForm.pm:3845 lib/BOM/View/CGIForm.pm:3992
+#: lib/BOM/View/CGIForm.pm:3812 lib/BOM/View/CGIForm.pm:3961
 msgid "Please provide at least one self-exclusion setting."
 msgstr "Пожалуйста, выберите по меньшей мере одну установку на само-ограничение."
 
-#: cgi/oop/Controller/Bet.pm:1713 cgi/oop/Controller/Bet.pm:2000
+#: lib/BOM/View/Controller/Bet.pm:1700 lib/BOM/View/Controller/Bet.pm:1987
 msgid "Please provide granter id(s)."
 msgstr "Пожалуйста, предоставьте идентификатор(ы) клиентов."
 
-#: lib/BOM/View/CGIForm.pm:3503
+#: lib/BOM/View/CGIForm.pm:3470
 msgid "Please provide some information about yourself and your proposed services"
 msgstr "Пожалуйста, сообщите дополнительную информацию о себе, своей компании/вебсайте"
 
-#: lib/BOM/View/CGIForm.pm:4609
+#: lib/BOM/View/CGIForm.pm:4575
 msgid "Please provide the following contact information and we will call you free of charge as soon as a representative is free."
 msgstr "Пожалуйста, предоставьте следующую контактную информацию, и мы перезвоним Вам бесплатно для Вас, как только освободится представитель, говорящий на Вашем языке. Если звонок перейдет к англоязычному оператору, Вы можете просто повесить трубку и ждать звонка на своем языке, так как русскоязычный оператор в любом случае получит Ваш запрос."
 
@@ -5422,7 +5472,7 @@ msgstr "Пожалуйста, предоставьте следующую кон
 msgid "Please provide us with the following information:"
 msgstr "Просим предоставить следующую информацию:"
 
-#: lib/BOM/View/CGIForm.pm:4538
+#: lib/BOM/View/CGIForm.pm:4504
 msgid "Please provide your email address and password to open a virtual money account and start practicing."
 msgstr "Пожалуйста, введите Ваш адрес электронной почты и пароль, чтобы открыть виртуальный счет и начать приобретать на нем контракты."
 
@@ -5430,21 +5480,21 @@ msgstr "Пожалуйста, введите Ваш адрес электрон�
 msgid "Please remember at all times that trading binary options can be an exciting activity, but we have a moral duty to remind you of the risks you may run. Options trading can become a real addiction, as can any other activity pushed to its limits. We kindly ask you to engage in a careful self-analysis to check if you are at risk. To avoid the danger of such an addiction, it is important that you follow some basic principles and guidelines."
 msgstr "Пожалуйста, помните, что, несмотря на то, что торговля на бинарных опционах может быть увлекательным занятием, у нас есть моральный долг напомнить Вам о рисках, с которыми Вы можете столкнуться. Работа с опционами может перерасти в настоящую зависимость, как и любая другая деятельность, доведенная до крайности. Мы просим Вас произвести тщательный самоанализ, чтобы проверить, находитесь ли Вы в опасности. Чтобы избежать возникновения такой зависимости, важно следовать некоторым основным правилам и принципам."
 
-#: lib/BOM/View/CGIForm.pm:167
+#: lib/BOM/View/CGIForm.pm:191
 msgid "Please select"
 msgstr "Выберите"
 
-#: cgi/oop/Helper/Controller/Bet/PriceBoxParameters.pm:272
+#: lib/BOM/View/Controller/Bet/PriceBoxParameters.pm:272
 msgid "Please select \"Payout\" or \"Stake\" option."
 msgstr "Пожалуйста, выберите опцию \"Выплата\" или \"Ставка\"."
 
 #. (qq(<a href="mailto:$cs_email">$cs_email</a>)
-#: lib/BOM/View/CGIForm.pm:5307
+#: lib/BOM/View/CGIForm.pm:5277
 msgid "Please send this email to %1."
 msgstr "Пожалуйста, вышлите нам эл.сообщение на %1."
 
-#: lib/BOM/View/CGIForm.pm:1367 lib/BOM/View/CGIForm.pm:4460
-#: lib/BOM/View/CGIForm.pm:582
+#: lib/BOM/View/CGIForm.pm:1353 lib/BOM/View/CGIForm.pm:4426
+#: lib/BOM/View/CGIForm.pm:596
 msgid "Please specify your country."
 msgstr "Вы забыли указать Ваше гражданство."
 
@@ -5456,16 +5506,16 @@ msgstr "Пожалуйста, попробуйте снова."
 msgid "Please type your chosen password twice into the fields below:"
 msgstr "Внесите Ваш новый пароль дважды в поля внизу:"
 
-#: lib/BOM/View/CGIForm.pm:3151 lib/BOM/View/CGIForm.pm:3191
+#: lib/BOM/View/CGIForm.pm:3122 lib/BOM/View/CGIForm.pm:3162
 msgid "Please upload image (*.jpg, *.jpeg, *.png) only."
 msgstr "Просим загрузить файл только в одном из этих форматов (*.jpg, *.jpeg, *.png)."
 
-#: lib/BOM/View/CGIForm.pm:1333
+#: lib/BOM/View/CGIForm.pm:1320
 msgid "Please use only alphanumeric characters or spaces."
 msgstr "Пожалуйста, вводите только буквы, цифры или пробелы."
 
-#: lib/BOM/View/CGIForm.pm:258 lib/BOM/View/CGIForm.pm:266
-#: lib/BOM/View/CGIForm.pm:2847 lib/BOM/View/CGIForm.pm:3069
+#: lib/BOM/View/CGIForm.pm:280 lib/BOM/View/CGIForm.pm:2825
+#: lib/BOM/View/CGIForm.pm:288 lib/BOM/View/CGIForm.pm:3043
 msgid "Please use only letters, spaces, hyphens, full-stops or apostrophes."
 msgstr "Пожалуйста, используйте только латинские буквы."
 
@@ -5479,19 +5529,19 @@ msgstr "Пожалуйста, подождите.<br/>Запрос в обраб
 msgid "Portfolio"
 msgstr "Портфолио"
 
-#: lib/BOM/View/CGIForm.pm:1340 lib/BOM/View/CGIForm.pm:503
+#: lib/BOM/View/CGIForm.pm:1327 lib/BOM/View/CGIForm.pm:519
 msgid "Postal Code / ZIP"
 msgstr "Почтовый индекс"
 
-#: lib/BOM/View/CGIForm.pm:1321 lib/BOM/View/CGIForm.pm:1328
+#: lib/BOM/View/CGIForm.pm:1308 lib/BOM/View/CGIForm.pm:1315
 msgid "Postcode is invalid."
 msgstr "Индекс недействителен."
 
-#: lib/BOM/View/CGIForm.pm:1107 lib/BOM/View/CGIForm.pm:525
+#: lib/BOM/View/CGIForm.pm:1075 lib/BOM/View/CGIForm.pm:540
 msgid "Postcode is required for UK residents."
 msgstr "Почтовый код требуется от резидентов Великобритании."
 
-#: lib/BOM/View/CGIForm.pm:520
+#: lib/BOM/View/CGIForm.pm:535
 msgid "Postcode must be less than 20 characters long and may not contain \"+\"."
 msgstr "Почтовый код должен содержать менее 20 знаков и не должен содержать \"+\"."
 
@@ -5539,7 +5589,7 @@ msgid "Price Oscillator"
 msgstr "Ценовой осциллятор"
 
 #. (to_monetary_number_format($transaction_parameters->{price})
-#: cgi/oop/Controller/Bet.pm:1586
+#: lib/BOM/View/Controller/Bet.pm:1573
 msgid "Price has moved in your favour from %1 to %2."
 msgstr "Цена изменилась в выгодную для Вас сторону с %1 до %2."
 
@@ -5555,7 +5605,7 @@ msgstr "Котировки"
 #: /home/git/translations/binary-static/src/templates/haml/resources/index.html.haml:1
 #: /home/git/translations/binary-static/src/templates/toolkit/global/footer.html.tt:81
 #: /home/git/translations/binary-static/src/templates/toolkit/resources/pricing_table_form.html.tt:2
-#: cgi/oop/Controller/Bet.pm:2244 cgi/pricing_table.cgi:170
+#: cgi/pricing_table.cgi:170 lib/BOM/View/Controller/Bet.pm:2231
 #: lib/BOM/View/Menu.pm:171
 msgid "Pricing Table"
 msgstr "Ценовая таблица"
@@ -5572,6 +5622,10 @@ msgstr "Напечатать график"
 #: cgi/c_template.cgi:76
 msgid "Privacy & Security"
 msgstr "Защита инф."
+
+#: /home/git/translations/binary-static/src/templates/toolkit/cashier/ukgc_funds_protection_message.html.tt:19
+msgid "Proceed"
+msgstr ""
 
 #: /home/git/translations/binary-static/src/templates/toolkit/cashier/available_payment_methods.html.tt:43
 msgid "Processing Time"
@@ -5610,11 +5664,11 @@ msgstr "Постоянно и в заметном месте на Вашем С�
 msgid "Promoting the %1 Site"
 msgstr "Продвижение %1"
 
-#: lib/BOM/View/CGIForm.pm:941
+#: lib/BOM/View/CGIForm.pm:949
 msgid "Promotional"
 msgstr "Дополнительно"
 
-#: lib/BOM/View/CGIForm.pm:4804
+#: lib/BOM/View/CGIForm.pm:4770
 msgid "Proof of address"
 msgstr "Подтверждение адреса"
 
@@ -5626,12 +5680,12 @@ msgstr "Барьеры не могут быть определены."
 msgid "Provide the Company with all data and information related to the Company (including, but not limited to, passwords) at no charge to the Company, to enable the Company to monitor your Site and to ensure that you are complying with these terms and conditions."
 msgstr "3.1.2 Предоставлять Компании всю необходимую информацию и данные, имеющие отношение к Компании (включая, но не ограничиваясь паролями), бесплатно, чтобы Компания имела возможность осуществлять мониторинг Вашего Сайта с целью убедиться, что Вы соблюдаете правила и условия."
 
-#: lib/BOM/View/CGIForm.pm:4793
+#: lib/BOM/View/CGIForm.pm:4759
 msgid "Provide us with the following documentation:"
 msgstr "Просим предоставить следующую документацию:"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/account/portfolio.html.tt:26
-#: cgi/oop/Controller/Bet.pm:1443
+#: lib/BOM/View/Controller/Bet.pm:1430
 msgid "Purchase"
 msgstr "Покупка"
 
@@ -5843,7 +5897,7 @@ msgstr "Индекс Относительной Силы"
 msgid "Reload Cashier"
 msgstr "Перезагрузить кассу"
 
-#: lib/BOM/Platform/Plack.pm:330
+#: lib/BOM/Platform/Plack.pm.tidyup:322 lib/BOM/Platform/Plack.pm:322
 msgid "Reload page"
 msgstr "Перегрузите страницу"
 
@@ -5862,10 +5916,6 @@ msgstr "Представляет собой максимальное колич�
 #: cgi/limits.cgi:44
 msgid "Represents the maximum volume of contracts that you may purchase in any given trading day."
 msgstr "Представляет собой максимальную сумму, на которую Вы можете купить контракты в течение любого торгового дня."
-
-#: lib/BOM/View/Form.pm:370
-msgid "Required"
-msgstr "Обязательно"
 
 #: lib/BOM/Product/Contract.pm:2993
 msgid "Resale of this contract is not offered due to end-of-year market holidays."
@@ -5890,6 +5940,7 @@ msgstr "Продажа контрактов с оставшейся продол
 
 #: lib/BOM/Product/Contract.pm:2344 lib/BOM/Product/Contract.pm:2867
 #: lib/BOM/Product/Contract.pm:2917
+#: lib/BOM/Product/Pricing/Engine/Role/StandardMarkup.pm.tidyup:173
 #: lib/BOM/Product/Pricing/Engine/Role/StandardMarkup.pm:173
 msgid "Resale of this contract is not offered."
 msgstr "Продажа данного контракта не предлагается."
@@ -5898,7 +5949,7 @@ msgstr "Продажа данного контракта не предлагае
 msgid "Resale price"
 msgstr "Цена прод."
 
-#: lib/BOM/View/CGIForm.pm:2389
+#: lib/BOM/View/CGIForm.pm:2372
 msgid "Reset password"
 msgstr "Изменить пароль"
 
@@ -5929,7 +5980,7 @@ msgstr "Попробовать снова"
 #: /home/git/translations/binary-static/src/templates/haml/get_started/glossary.html.haml:1
 #: /home/git/translations/binary-static/src/templates/haml/home/ticker.html.haml:1
 #: /home/git/translations/binary-static/src/templates/toolkit/bet/sell_success_ajax.html.tt:12
-#: cgi/oop/Controller/Bet.pm:483
+#: lib/BOM/View/Controller/Bet.pm:478
 msgid "Return"
 msgstr "Прибыль"
 
@@ -5938,10 +5989,10 @@ msgstr "Прибыль"
 msgid "Returns above 100% on simple %1 contracts."
 msgstr "Выплата свыше 100% на простых контрактах %1."
 
-#. (pjax_link_for(l('higher/lower')
+#. (url_for('trade.cgi?market=forex&form_name=higherlower')
 #: /home/git/translations/binary-static/src/templates/haml/static/why_us.html.haml:1
-msgid "Returns above 1000% on %1 and %2 trades."
-msgstr "Выплата свыше 1000% на контрактах %1 и %2."
+msgid "Returns above 1000% on <a href='%1' class='pjaxload'>higher/lower</a> and <a href='%2' class='pjaxload'>touch/no-touch</a> trades."
+msgstr ""
 
 #: cgi/revoke_attorney.cgi:17 cgi/revoke_attorney.cgi:21
 msgid "Revoke Attorney"
@@ -5978,7 +6029,7 @@ msgstr "Контракт вверх - выигрыш (%)"
 
 #: /home/git/translations/binary-static/src/templates/haml/get_started/random_markets.html.haml:1
 #: cgi/contract_demo.cgi:33 cgi/contract_guide.cgi:19
-#: cgi/oop/Controller/Bet.pm:1130 cgi/oop/Controller/Bet.pm:1137
+#: lib/BOM/View/Controller/Bet.pm:1117 lib/BOM/View/Controller/Bet.pm:1124
 msgid "Rise/Fall"
 msgstr "Повышение/Падение"
 
@@ -6051,21 +6102,21 @@ msgstr "Сохранить в формате PNG"
 msgid "Save as SVG"
 msgstr "Сохранить в формате SVG"
 
-#: lib/BOM/View/CGIForm.pm:3132
+#: lib/BOM/View/CGIForm.pm:3104
 msgid "Screenshot"
 msgstr "Снимок экрана"
 
-#: lib/BOM/View/CGIForm.pm:1270 lib/BOM/View/CGIForm.pm:430
+#: lib/BOM/View/CGIForm.pm:1258 lib/BOM/View/CGIForm.pm:449
 msgid "Second line of home address"
 msgstr "Доп. адресные данные"
 
-#: lib/BOM/View/CGIForm.pm:672
+#: lib/BOM/View/CGIForm.pm:684
 msgid "Secret question"
 msgstr "Секретный вопрос"
 
 #: /home/git/translations/binary-static/src/templates/haml/static/partner_api.html.haml:1
 #: /home/git/translations/binary-static/src/templates/haml/static/why_us.html.haml:1
-#: lib/BOM/View/CGIForm.pm:4735 lib/BOM/View/CGIForm.pm:922
+#: lib/BOM/View/CGIForm.pm:4701 lib/BOM/View/CGIForm.pm:930
 msgid "Security"
 msgstr "Безопасность"
 
@@ -6078,7 +6129,7 @@ msgstr "Сообщение о безопасности"
 msgid "Security and Privacy"
 msgstr "Безопасность"
 
-#: lib/BOM/View/CGIForm.pm:777
+#: lib/BOM/View/CGIForm.pm:786
 msgid "See Terms"
 msgstr "См. условия"
 
@@ -6090,8 +6141,8 @@ msgstr "См. демо"
 msgid "See our "
 msgstr "См. наш "
 
-#: /home/git/translations/binary-static/src/templates/haml/home/index.html.haml:1
-#: lib/BOM/View/CGIForm.pm:532
+#: /home/git/translations/binary-static/src/templates/haml/static/contact.html.haml:1
+#: lib/BOM/View/CGIForm.pm:547
 msgid "Select Country"
 msgstr "Выбрать страну"
 
@@ -6100,7 +6151,7 @@ msgid "Select market"
 msgstr "Выбрать рынок"
 
 #: /home/git/regentmarkets/bom-backoffice/f_setting_selfexclusion.cgi:23
-#: lib/BOM/View/CGIForm.pm:4839
+#: lib/BOM/View/CGIForm.pm:4805
 msgid "Self-Exclusion Facilities"
 msgstr "Услуги по само-ограничению"
 
@@ -6132,7 +6183,7 @@ msgstr "Продайте опционы досрочно по рыночной �
 msgid "Sell option"
 msgstr "Опция продажи"
 
-#: lib/BOM/View/CGIForm.pm:3172
+#: lib/BOM/View/CGIForm.pm:3143
 msgid "Send"
 msgstr "Отправить"
 
@@ -6144,7 +6195,7 @@ msgstr "Пошлите свое резюме и сопроводительное
 msgid "Send your funds to the payment agent. The deposited funds, less the agent's commission, will show up in your account."
 msgstr "Переведите средства платежному агенту. Сумма депозита, минус агентская комиссия, покажется на Вашем счету."
 
-#: lib/BOM/View/CGIForm.pm:2489 lib/BOM/View/CGIForm.pm:339
+#: lib/BOM/View/CGIForm.pm:2471 lib/BOM/View/CGIForm.pm:360
 #: platform/bin/GenerateStaticData.pm:82
 msgid "Sep"
 msgstr "Сен"
@@ -6157,17 +6208,17 @@ msgstr "Сентябрь"
 msgid "Service summary"
 msgstr "Услуги"
 
-#: lib/BOM/View/CGIForm.pm:3961
+#: lib/BOM/View/CGIForm.pm:3930
 msgid "Session duration limit cannot be more than 1440 minutes."
 msgstr "Лимит на продолжительность сессии не может превышать 1440 минут."
 
 #. ($self_exclusion->session_duration_limit)
 #: /home/git/regentmarkets/bom-backoffice/f_setting_selfexclusion.cgi:73
-#: lib/BOM/View/CGIForm.pm:4875
+#: lib/BOM/View/CGIForm.pm:4841
 msgid "Session duration limit is currently set to <strong>%1 minutes.</strong>"
 msgstr "Ограничения на продолжительность сессии в настоящее время установлены на <strong>%1 минут.</strong>"
 
-#: lib/BOM/View/CGIForm.pm:3766
+#: lib/BOM/View/CGIForm.pm:3733
 msgid "Session duration limit, in minutes"
 msgstr "Ограничение на продолжительность сессии, в минутах"
 
@@ -6178,7 +6229,7 @@ msgstr "Определите позицию"
 #: /home/git/translations/binary-static/src/templates/toolkit/account/settings.html.tt:2
 #: /home/git/translations/binary-static/src/templates/toolkit/charting/light_chart.html.tt:39
 #: cgi/f_writepartics.cgi:75 cgi/settings.cgi:15 cgi/settings.cgi:19
-#: lib/BOM/View/CGIForm.pm:4730 lib/BOM/View/Menu.pm:99
+#: lib/BOM/View/CGIForm.pm:4696 lib/BOM/View/Menu.pm:99
 msgid "Settings"
 msgstr "Установки"
 
@@ -6186,10 +6237,10 @@ msgstr "Установки"
 msgid "Settles"
 msgstr "заканчивается"
 
-#: cgi/oop/Controller/Bet.pm:1489 cgi/oop/Controller/Bet.pm:1695
-#: cgi/oop/Controller/Bet.pm:1953 cgi/oop/Controller/Bet.pm:1992
-#: cgi/oop/Controller/Bet.pm:2414 cgi/oop/Controller/Bet.pm:777
-#: cgi/oop/Controller/Bet.pm:886
+#: lib/BOM/View/Controller/Bet.pm:1476 lib/BOM/View/Controller/Bet.pm:1682
+#: lib/BOM/View/Controller/Bet.pm:1940 lib/BOM/View/Controller/Bet.pm:1979
+#: lib/BOM/View/Controller/Bet.pm:2401 lib/BOM/View/Controller/Bet.pm:764
+#: lib/BOM/View/Controller/Bet.pm:873
 msgid "Sharp Prices. Smart Trading."
 msgstr "Лучшие цены. Умный трейдинг."
 
@@ -6197,7 +6248,7 @@ msgstr "Лучшие цены. Умный трейдинг."
 msgid "Sharp prices"
 msgstr "Лучшие цены"
 
-#: lib/BOM/View/CGIForm.pm:3356
+#: lib/BOM/View/CGIForm.pm:3324
 msgid "Short summary of your Payment Agent service"
 msgstr "Краткое описание Ваших услуг"
 
@@ -6277,6 +6328,10 @@ msgstr "Просто измените люболй из параметров, и
 msgid "Site"
 msgstr "О сайте"
 
+#: /home/git/translations/binary-static/src/templates/haml/static/contact.html.haml:1
+msgid "Skype:"
+msgstr ""
+
 #: cgi/smartchart.cgi:44 lib/BOM/View/ChartDirector.pm:423
 #: lib/BOM/View/Charting.pm:579
 msgid "Slow Stochastic"
@@ -6318,11 +6373,11 @@ msgstr "Извините, данные OHLC (Открытие/Высшее/Ни�
 msgid "Sorry, Payment Agent Transfer is temporarily disabled due to system maintenance. Please try again in 30 minutes."
 msgstr "Извините, оплаты через платежных агентов временно невозможна ввиду технических работ в системе. Пожалуйста, попробуйте еще раз через 30 минут."
 
-#: cgi/cashier_forward.cgi:50
+#: cgi/cashier_forward.cgi.tidyup:62 cgi/cashier_forward.cgi:64
 msgid "Sorry, access to the CASHIER SECTION is disabled for TRADING AGENT accounts. This is to protect you from accidentally attempting to place real money contracts via this account instead of using it to place trades for authorised third parties."
 msgstr "Извините, доступ к секции КАССА закрыт для счетов Торговых Агентов. Это связано с тем, чтобы защитить Вас от случайной покупки настоящих контрактов на данном счету вместо того, чтобы приобретать опционы для авторизованных третьих лиц."
 
-#: cgi/oop/Controller/Bet.pm:714
+#: lib/BOM/View/Controller/Bet.pm:709
 msgid "Sorry, an error occured with this trade.  Please try again in a few minutes.  If the problem persists, please contact customer support."
 msgstr "Извините, произошла ошибка с данным контрактом. Попробуйте через несколько минут. Если ошибка повторится, пожалуйста, свяжитесь со службой поддержки."
 
@@ -6338,11 +6393,6 @@ msgstr "Произошла ошибка с загрузкой формуляра
 #: cgi/f_writepartics.cgi:152
 msgid "Sorry, an error occurred while processing your account."
 msgstr "Извините, произошла ошибка."
-
-#. ($client_fm->broker)
-#: cgi/paymentagent_transfer.cgi:116
-msgid "Sorry, broker %1 does not allow transfers from payment agents."
-msgstr "Извините, брокер %1 не разрешает переводы от платежных агентов."
 
 #: lib/BOM/Product/Transaction.pm:960
 msgid "Sorry, due to VAT regulations in your country of residence, contracts on Random Indices are not available."
@@ -6361,7 +6411,7 @@ msgid "Sorry, only USD is allowed."
 msgstr "Извините, только в USD."
 
 #. ($country)
-#: lib/BOM/View/CGIForm.pm:4467
+#: lib/BOM/View/CGIForm.pm:4433
 msgid "Sorry, our service is not available for residents of %1."
 msgstr "Извините, мы не принимаем к регистрации резидентов %1."
 
@@ -6370,12 +6420,12 @@ msgid "Sorry, payments agents are unavailable at the weekend (UTC timezone)."
 msgstr "Извините, платежи через агентов недоступны в выходные дни (временная зона UTC)."
 
 #. ($ip_security,                    request()
-#: lib/BOM/View/CGIForm.pm:1781
+#: lib/BOM/View/CGIForm.pm:1768
 msgid "Sorry, the IP Security field you specified (%1) wouldn't let you in from your current IP address %2."
 msgstr "Извините, Ваш зарегистрированный на счету IP (%1) не позволяет Вам войти с настоящего IP-адреса %2."
 
 #. ($transfer_form->get_field_value('transfer_to')
-#: lib/BOM/View/CGIForm.pm:4144
+#: lib/BOM/View/CGIForm.pm:4112
 msgid "Sorry, the Login ID (%1) does not exist."
 msgstr "Извините, логин (%1) не существует."
 
@@ -6422,7 +6472,7 @@ msgstr "Извините, один и тот же контракт не може
 msgid "Sorry, there is too much data to display, please select a shorter interval"
 msgstr "Слишком много данных. Пожалуйста, выберите меньший интервал."
 
-#: cgi/cashier_forward.cgi:155
+#: cgi/cashier_forward.cgi.tidyup:167 cgi/cashier_forward.cgi:170
 msgid "Sorry, there was a problem validating your personal information with our payment processor. Please contact our Customer Service."
 msgstr "Извините, возникла проблема с валидацией Вашей личной информации в нашей системе оплат. Просим связаться с нашей службой поддержки."
 
@@ -6438,7 +6488,7 @@ msgstr ", эта страница не может быть обновлена."
 msgid "Sorry, withdrawals cannot be made on the day of your account opening. Please wait until tomorrow to make a withdrawal."
 msgstr "Извините, вывод средств не осуществляется в день открытия счета. Пожалуйста, подождите до завтра."
 
-#: lib/BOM/View/CGIForm.pm:1056
+#: lib/BOM/View/CGIForm.pm:1061
 msgid "Sorry, you are too young to open an account."
 msgstr "Извините, но Ваш возраст не позволяет Вам открыть счет."
 
@@ -6451,14 +6501,14 @@ msgstr "Извините, у Вас не может быть более %1 ко�
 msgid "Sorry, you cannot withdraw."
 msgstr "Извините, но Вы не можете снять деньги."
 
-#: lib/BOM/View/CGIForm.pm:1942
+#: lib/BOM/View/CGIForm.pm:1931
 msgid "Sorry, you have entered an incorrect cashier password"
 msgstr "Извините, Вы ввели неверный пароль для раздела Касса"
 
-#: lib/BOM/View/CGIForm.pm:1026 lib/BOM/View/CGIForm.pm:1230
-#: lib/BOM/View/CGIForm.pm:1773 lib/BOM/View/CGIForm.pm:2350
-#: lib/BOM/View/CGIForm.pm:2877 lib/BOM/View/CGIForm.pm:3099
-#: lib/BOM/View/CGIForm.pm:3396 lib/BOM/View/CGIForm.pm:617
+#: lib/BOM/View/CGIForm.pm:1027 lib/BOM/View/CGIForm.pm:1219
+#: lib/BOM/View/CGIForm.pm:1760 lib/BOM/View/CGIForm.pm:2333
+#: lib/BOM/View/CGIForm.pm:2854 lib/BOM/View/CGIForm.pm:3072
+#: lib/BOM/View/CGIForm.pm:3363 lib/BOM/View/CGIForm.pm:630
 msgid "Sorry, you have entered an incorrect email address."
 msgstr "Ошибка: Вы ввели неправильный email  адрес.  Пожалуйста, вернитесь и попробуйте еще раз."
 
@@ -6471,7 +6521,7 @@ msgid "Sorry, you have exceeded the maximum allowable transfer amount for today.
 msgstr "Извините, Вы превысили сумму перевода на сегодня."
 
 #. (${$exclude_until})
-#: lib/BOM/View/CGIForm.pm:69
+#: lib/BOM/View/CGIForm.pm:82
 msgid "Sorry, you have excluded yourself from the website until %1."
 msgstr "Извините, Вы ограничили свой доступ на сайт до %1."
 
@@ -6576,7 +6626,7 @@ msgstr "Отложенные контракты должны начинатьс�
 msgid "Start trading"
 msgstr "Время начала"
 
-#: lib/BOM/View/CGIForm.pm:1376 lib/BOM/View/CGIForm.pm:477
+#: lib/BOM/View/CGIForm.pm:1364 lib/BOM/View/CGIForm.pm:494
 msgid "State/Province"
 msgstr "Штат/провинция/область"
 
@@ -6607,7 +6657,7 @@ msgstr "Статистика"
 msgid "Stay informed. %1 offers daily market reports and market research, as well as frequent trading webinars."
 msgstr "Будьте информированными. %1 предлагает своим клиентам ежедневные рыночные прогнозы, а также вебинары, в том числе на русском."
 
-#: cgi/contract_demo.cgi:74 cgi/oop/Controller/Bet.pm:1197
+#: cgi/contract_demo.cgi:74 lib/BOM/View/Controller/Bet.pm:1184
 msgid "Stays Between/Goes Outside"
 msgstr "Останется между/Выйдет за пределы"
 
@@ -6690,8 +6740,8 @@ msgstr "Вс"
 msgid "Subject to your complying with the Company's instructions, with regards to tracking Clients accessing %1 via the Links on your Site or by quoting your affiliate IDs during signup, the Company shall use all reasonable endeavours to ensure that whenever a Client links to %1 through these Links or affiliate IDs and they subsequently place a contract or otherwise transact with the Company, the relevant Client is identified as originating from you or your Site. However, the Company shall not be liable to you in any way if the Company is unable to identify a Client as originating from you or your Site."
 msgstr "В согласии с Вашим исполнением инструкций Компании относительно отслеживания входа Клиентов на %1 по ссылками с Вашего Сайта или с цитированием Вашего партнерского идентификатора, Компания будет делать все возможное для обеспечения того, чтобы Клиент был закреплен за Вашим партнерским счетом %1 посредством данных ссылок или предоставления идентификатора и что в случае последующих покупок контрактов или других транзакций на сайте Компании происхождение соответствуюших Клиентов будет маркировано как от Вас или с Вашего Сайта. Однако, Компания не несет ответственности, если Компания не сможет идентифицировать происхождение Клиента как с Вашего Сайта."
 
-#: lib/BOM/View/CGIForm.pm:3614 lib/BOM/View/CGIForm.pm:4097
-#: lib/BOM/View/CGIForm.pm:4335
+#: lib/BOM/View/CGIForm.pm:3581 lib/BOM/View/CGIForm.pm:4064
+#: lib/BOM/View/CGIForm.pm:4300
 msgid "Submit"
 msgstr "Подтвердить"
 
@@ -6712,11 +6762,11 @@ msgstr "Воскресенье"
 msgid "Support Times"
 msgstr "Время работы"
 
-#: lib/BOM/View/CGIForm.pm:3536
+#: lib/BOM/View/CGIForm.pm:3503
 msgid "Supported banks (this field visible from office only) **"
 msgstr "Поддерживаемые банки (this field visible from office only) **"
 
-#: lib/BOM/View/CGIForm.pm:3552
+#: lib/BOM/View/CGIForm.pm:3519
 msgid "Supported banks list is invalid"
 msgstr "Список поддерживаемых банков недействителен"
 
@@ -6769,9 +6819,15 @@ msgstr "Лидер в технологии с 10-летним опытом..."
 msgid "Tel"
 msgstr "Тел"
 
-#: cgi/f_writepartics.cgi:222 lib/BOM/View/CGIForm.pm:1395
-#: lib/BOM/View/CGIForm.pm:624
+#: cgi/f_writepartics.cgi:222 lib/BOM/View/CGIForm.pm:1383
+#: lib/BOM/View/CGIForm.pm:637
 msgid "Telephone"
+msgstr "Номер телефона"
+
+#: /home/git/translations/binary-static/src/templates/haml/static/contact.html.haml:1
+#, fuzzy
+#| msgid "Telephone"
+msgid "Telephone:"
 msgstr "Номер телефона"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:110
@@ -6941,7 +6997,7 @@ msgstr "Агент вышлет Вам выведенную сумму (мину
 msgid "The Ask price represents the price at which the contract may be purchased at the present time."
 msgstr "Цена спроса представляет цену, по котороый контракт может быть куплен в настоящее время."
 
-#: lib/BOM/View/CGIForm.pm:3219
+#: lib/BOM/View/CGIForm.pm:3190
 msgid "The Authentication process verifies the information you have provided us during account registration. It will increase your trading limits and enable you to register more than one credit card.<br/><br/>In order to facilitate the process, please confirm your building no./name before clicking \"Authenticate\".<br/>"
 msgstr "Процесс авторизации верифицирует данные. предоставленные при регистрации. Авторизация увеличивает Ваши торговые лимиты и позволяет использовать дополнительные карты. <br/><br/>Чтобы начать авторизацию, внесите номер здания/имя,прежде чем нажать на \"Авторизоваться\".<br/>"
 
@@ -7217,9 +7273,15 @@ msgstr "Клиент достиг оборота, объем которого с
 msgid "The company does not guarantee the ability to sell a contract prior to its expiration time."
 msgstr "Компания не гарантирует возможность продажи ставок до истечения срока действия."
 
+#: /home/git/translations/binary-static/src/templates/toolkit/cashier/ukgc_funds_protection_message.html.tt:13
+#, fuzzy
+#| msgid "The company holds customer funds in separate bank accounts to the operational accounts which would not, in the event of insolvency, form part of the Company's assets. This meets the Gambling Commission’s requirements for the segregation of customer funds at the level: medium protection."
+msgid "The company holds customer funds in separate bank accounts to the operational accounts which would not, in the event of insolvency, form part of the Company's assets. This meets the Gambling Commission’s requirements for the segregation of customer funds at the level: <strong>medium protection</strong>."
+msgstr "Компания держит средства клиентов на отдельных от рабочих счетов банковских счетах , которые в случае неплатежеспособности Компании не считаются входящими в состав ее активов. Это отвечает требованиям Комиссии по азартным играм по сегрегации средств клиентов на следующем уровне: средняя защита."
+
 #: /home/git/translations/binary-static/src/templates/toolkit/legal/terms_and_conditions.html.tt:59
 msgid "The company holds customer funds in separate bank accounts to the operational accounts which would not, in the event of insolvency, form part of the Company's assets. This meets the Gambling Commission’s requirements for the segregation of customer funds at the level: medium protection."
-msgstr ""
+msgstr "Компания держит средства клиентов на отдельных от рабочих счетов банковских счетах , которые в случае неплатежеспособности Компании не считаются входящими в состав ее активов. Это отвечает требованиям Комиссии по азартным играм по сегрегации средств клиентов на следующем уровне: средняя защита."
 
 #: /home/git/translations/binary-static/src/templates/toolkit/legal/promocode.html.tt:35
 #: /home/git/translations/binary-static/src/templates/toolkit/legal/promocode.html.tt:61
@@ -7245,6 +7307,7 @@ msgid "The contract has expired"
 msgstr "Контракт закончился"
 
 #. ($ny_1600->time_hhmm)
+#: lib/BOM/Product/Pricing/Engine/Role/StandardMarkup.pm.tidyup:174
 #: lib/BOM/Product/Pricing/Engine/Role/StandardMarkup.pm:174
 msgid "The contract is not available after %1 GMT."
 msgstr "Контракт недоступен после %1 GMT."
@@ -7261,7 +7324,7 @@ msgstr "Период контракта - это временные рамки �
 msgid "The cost of your open positions"
 msgstr "Стоимость открытых контрактов"
 
-#: lib/BOM/View/CGIForm.pm:5026
+#: lib/BOM/View/CGIForm.pm:4992
 msgid "The currency of your bonus will be the same as the currency of your first deposit."
 msgstr "Валюта Вашего бонуса будет той же, что валюта Вашего первого депозита."
 
@@ -7342,7 +7405,7 @@ msgstr "Основным преимуществом использования O
 msgid "The moving average period of the signal line"
 msgstr "Период Средней скользящей для сигнальной линии"
 
-#: lib/BOM/Platform/Plack.pm:342
+#: lib/BOM/Platform/Plack.pm.tidyup:334 lib/BOM/Platform/Plack.pm:334
 msgid "The page has timed out. This may be due to a slow Internet connection, or to excess load on our servers.  Please try again in a few moments."
 msgstr "Время загрузки этой страницы закончилось. Это может быть связано с медленным соединением с Интернетом или с перегрузкой сервера. Пожалуйста, попытайтесь еще раз через некоторое время."
 
@@ -7471,9 +7534,9 @@ msgstr "Сейчас время %1 %2, а времена открытия рын
 msgid "The transactions performed on this site and the relationship between Clients and the Company are to be governed by and construed in accordance with the laws of the country of incorporation of the Company (the \"Jurisdiction\"), which shall be either of the Isle of Man, Malta, or Costa Rica. You agree that the Jurisdiction's courts will have sole jurisdiction to settle any disputes that may arise in relation thereto. For such purposes, you irrevocably submit to the jurisdiction of the courts of the Jurisdiction in relation to any such dispute and you agree that any claim you might have against the Company shall only be brought before the courts of the Jurisdiction. For further information on complaints and disputes, kindly refer to the Company’s Complaints and Disputes section."
 msgstr "Транзакции, производимые на данном сайте, и отношения между Клиентами и Компанией регулируются и толкуются в соответствии с законодательством страны регистрации Компании (\"Юрисдикции\"), которой является Остров Мэн, Мальта или Коста Рика. Вы соглашаетесь, что суды данных стран будут единственными инстанциями, которые имеют право урегулировать любые споры и несогласия, которые могут возникнуть между сторонами. С этой целью, Вы безоговорочно подчиняетесь юрисдикции суда определенной Юрисдикции относительного любого иска и соглашаетесь, что любая претензия, которую Вы можете иметь к Компании, будет решаться в суде Юрисдикции. Для дальнейшей информации по жалобам и искам смотрите секцию Компании \"Жалобы\"."
 
-#: lib/BOM/View/CGIForm.pm:1565 lib/BOM/View/CGIForm.pm:1759
-#: lib/BOM/View/CGIForm.pm:2041 lib/BOM/View/CGIForm.pm:2115
-#: lib/BOM/View/CGIForm.pm:2192 lib/BOM/View/CGIForm.pm:2291
+#: lib/BOM/View/CGIForm.pm:1549 lib/BOM/View/CGIForm.pm:1746
+#: lib/BOM/View/CGIForm.pm:2028 lib/BOM/View/CGIForm.pm:2101
+#: lib/BOM/View/CGIForm.pm:2177 lib/BOM/View/CGIForm.pm:2275
 msgid "The two passwords that you entered do not match."
 msgstr "Введенные пароли не совпадают."
 
@@ -7538,7 +7601,7 @@ msgid "There was a market data disruption during the contract period. For real-m
 msgstr "Во время действия данного контракта произошло прерывание в получении котировок. Для реальных счетов, мы постараемся исправить проблему и рассчитать контракт правильно позже; в противном случае, мы отменим контракт и вернем его стоимость. Для демо-счетов, мы отменим Ваш контракт и вернем цену его покупки."
 
 #. (request()
-#: cgi/cashier_forward.cgi:175
+#: cgi/cashier_forward.cgi.tidyup:187 cgi/cashier_forward.cgi:190
 msgid "There was a problem validating your address. Please fix the indicated fields. If you need assistance feel free to contact our <a href=\"%1\">Customer Support</a>."
 msgstr "Возникла проблема с валидацией адреса. Просим заполнить указанные поля. Если Вам нужна помощь, обратитесь в нашу <a href=\"%1\">службу поддержки</a>."
 
@@ -7608,20 +7671,20 @@ msgstr "Данный документ"
 msgid "This Payment Agent cashier section is locked."
 msgstr "Секция КАССА данного платежного агента недоступна."
 
-#: cgi/top_up_virtual.cgi:46 lib/BOM/View/CGIForm.pm:3458
+#: cgi/top_up_virtual.cgi:46 lib/BOM/View/CGIForm.pm:3425
 msgid "This URL is invalid."
 msgstr "Неверный URL."
 
 #. (request()
-#: lib/BOM/View/CGIForm.pm:114
+#: lib/BOM/View/CGIForm.pm:130
 msgid "This account is unavailable. For any questions please contact <a href=\"%1\">Customer Support</a>."
 msgstr "Этот счет в данный момент недоступен. Пожалуйста, свяжитесь с нашей <a href=\"%1\">службой поддержки</a>."
 
-#: lib/BOM/View/CGIForm.pm:802
+#: lib/BOM/View/CGIForm.pm:810
 msgid "This bonus code has expired."
 msgstr "Бонус-код недействителен."
 
-#: lib/BOM/View/CGIForm.pm:797
+#: lib/BOM/View/CGIForm.pm:805
 msgid "This bonus code is not available."
 msgstr "Данный бонус-код недоступен."
 
@@ -7695,12 +7758,12 @@ msgstr "Контракт выиграл"
 msgid "This document (the \"Agreement\") sets out the terms and conditions between \"the Company\" which is Binary Ltd, and you (the person who applied for this program; \"you\" or \"your\"), in relation to your application to setup an affiliate account (and membership of the affiliate program if your application is deemed successful) to promote the website %1"
 msgstr "Данный документ (\"Соглашение\") описывает правила и условия между \"Компанией\", что обозначает Binary Ltd., и Вами (человеком, подавшим заявку на партнерскую программу; \"Вы\"), в отношении Вашего заявления на партнерский счет (и участие в партнерской программе, если заявка одобрена) с целью продвижения сайта %1"
 
-#: lib/BOM/View/CGIForm.pm:5237
+#: lib/BOM/View/CGIForm.pm:5203
 msgid "This function is not relevant to Virtual money accounts"
 msgstr "Эта функция не может быть использована под виртуальным счётом"
 
 #. (request()
-#: cgi/cashier_forward.cgi:45
+#: cgi/cashier_forward.cgi.tidyup:57 cgi/cashier_forward.cgi:59
 msgid "This is a virtual-money account. Please click <a class=\"pjaxload\" href=\"%1\">here</a> to open a real-money account and deposit funds."
 msgstr "Вы находитесь на своем виртуальном счету. Пожалуйста, нажмите <a class='pjaxload' href=\"%1\">сюда</a>, чтобы открыть реальный счет и пополнить его."
 
@@ -7711,7 +7774,7 @@ msgstr "Это автоматическое сообщениея для опов
 
 #: /home/git/translations/binary-static/src/templates/toolkit/bet/form/barrier.html.tt:23
 #: /home/git/translations/binary-static/src/templates/toolkit/bet/form/barrier.html.tt:42
-#: cgi/oop/Controller/Bet.pm:2405
+#: lib/BOM/View/Controller/Bet.pm:2392
 msgid "This is an indicative barrier. Actual barrier will be the entry spot plus the barrier offset."
 msgstr "Это ориентировочный барьер. Настоящим барьером будет спот-котировка плюс изменение барьера."
 
@@ -7808,7 +7871,7 @@ msgstr "Тики"
 msgid "Tick by Tick"
 msgstr "Тик за тиком"
 
-#: cgi/oop/Controller/Bet.pm:1145 cgi/oop/Controller/Bet.pm:1152
+#: lib/BOM/View/Controller/Bet.pm:1132 lib/BOM/View/Controller/Bet.pm:1139
 msgid "Ticks"
 msgstr "Тики"
 
@@ -7833,7 +7896,7 @@ msgstr "Времена меняются. Мы увеличиваем выпла�
 msgid "Tip:"
 msgstr "Подсказка:"
 
-#: lib/BOM/View/CGIForm.pm:216
+#: lib/BOM/View/CGIForm.pm:240
 msgid "Title"
 msgstr "Титул"
 
@@ -7846,7 +7909,7 @@ msgstr "До"
 msgid "To apply, please submit your CV and a cover letter via our <a href=\"%1\">Contact us</a> page."
 msgstr "Для того, чтобы выслать заявку на работу у нас, пришлите свое резюме и сопроводительное письмо через секцию <a href=\"%1\">Контакты</a>."
 
-#: lib/BOM/View/Form.pm:374
+#: lib/BOM/View/CGIForm.pm:1794
 msgid "To change your name, date of birth, or country of residence, please contact Customer Support."
 msgstr "Чтобы изменить имя, дату рождения или страну проживания, пожалуйста, обратитесь в службу поддержки."
 
@@ -7863,7 +7926,7 @@ msgstr "Для создания White Label, сначала %1. Это позв�
 msgid "To enable cookies, follow the instructions below for the browser version that you are using."
 msgstr "Для активации cookies следуйте инструкциям ниже для типа браузера, который Вы используете."
 
-#: lib/BOM/View/CGIForm.pm:5319
+#: lib/BOM/View/CGIForm.pm:5292
 msgid "To fully authenticate your account, please email scanned copies of the document listed below."
 msgstr "Чтобы полностью авторизовать свой счет, пожалуйста, вышлите отсканированные копии указанных ниже документов."
 
@@ -7880,7 +7943,7 @@ msgstr "Чтобы убедиться, что Вы можете получать
 msgid "To reset your password, enter the e-mail address you registered in the field below and click \"RESET PASSWORD\"."
 msgstr "Для получения нового пароля, внесите Ваш эл.адрес, зарегистрированный в поле внизу и нажмите на кнопку \"ИЗМЕНИТЬ ПАРОЛЬ\"."
 
-#: lib/BOM/View/CGIForm.pm:4573
+#: lib/BOM/View/CGIForm.pm:4539
 msgid "To speak to our customer service representatives online, please click on the Live Help button. Live Help in English is available Monday to Friday, 24 hours a day. Assistance in Russian is available from 7h00GMT until 23h30; in Indonesian from 1h00GMT to 10h00."
 msgstr "Для общения со службой поддержки в режиме онлайн, пожалуйста, нажмите на кнопку \"Поддержка в чате\". Данная услуга доступна на русском c 1100 до 0330 следующего дня по Москве и 24 часа в сутки на английском, в будние дни."
 
@@ -7921,7 +7984,7 @@ msgstr "Касание / Нет касания"
 
 #: /home/git/translations/binary-static/src/templates/haml/get_started/random_markets.html.haml:1
 #: cgi/contract_demo.cgi:60 cgi/contract_demo.cgi:61 cgi/contract_guide.cgi:45
-#: cgi/oop/Controller/Bet.pm:1177 cgi/oop/Controller/Bet.pm:1184
+#: lib/BOM/View/Controller/Bet.pm:1164 lib/BOM/View/Controller/Bet.pm:1171
 msgid "Touch/No Touch"
 msgstr "Касание/Нет касания"
 
@@ -7937,7 +8000,7 @@ msgstr "Контракты Касание/Нет касания"
 msgid "Tour"
 msgstr "Тур"
 
-#: lib/BOM/View/CGIForm.pm:1295 lib/BOM/View/CGIForm.pm:449
+#: lib/BOM/View/CGIForm.pm:1283 lib/BOM/View/CGIForm.pm:467
 msgid "Town/City"
 msgstr "Город"
 
@@ -8060,8 +8123,8 @@ msgstr "Покупка контрактов доступна после перв
 msgid "Trading is not offered for this duration."
 msgstr "Контракты не предлагаются на данный период."
 
-#: cgi/oop/Controller/Bet.pm:688 lib/BOM/Product/Contract.pm:2266
-#: lib/BOM/Product/Contract.pm:2332
+#: lib/BOM/Product/Contract.pm:2266 lib/BOM/Product/Contract.pm:2332
+#: lib/BOM/View/Controller/Bet.pm:683
 msgid "Trading is suspended at the moment."
 msgstr "В данный момент торги приостановлены."
 
@@ -8092,11 +8155,11 @@ msgstr "Торги для данного типа контракта приос�
 msgid "Trading suspended for the last %1 of the session."
 msgstr "Торги приостановлены для последних %1 торговой сессии."
 
-#: lib/BOM/View/CGIForm.pm:4843
+#: lib/BOM/View/CGIForm.pm:4809
 msgid "Trading the financial markets can become addictive. Fill in the form below to limit your participation on the website or send a signed letter or fax to our customer support team. Limits will only be removed or altered after 7 days."
 msgstr "Торговля на финансовых рынках может превратиться в зависимость. Заполните форму для ограничения Вашего участия на сайте или вышлите в службу поддержки подписанное письмо в отсканированном виде или по факсу. Ограничения могут быть сняты или изменены только по истечении 7 дней."
 
-#: lib/BOM/View/CGIForm.pm:2630
+#: lib/BOM/View/CGIForm.pm:2611
 msgid "Transact in"
 msgstr "Совершать транзакции в"
 
@@ -8104,11 +8167,11 @@ msgstr "Совершать транзакции в"
 msgid "Transfer to"
 msgstr "Перевести на имя"
 
-#: lib/BOM/View/CGIForm.pm:4007
+#: lib/BOM/View/CGIForm.pm:3976
 msgid "Transfer to Login ID"
 msgstr "Перевести на логин"
 
-#: lib/BOM/View/CGIForm.pm:4230
+#: lib/BOM/View/CGIForm.pm:4198
 msgid "Transfer to Payment Agent"
 msgstr "Перевод платежному агенту"
 
@@ -8199,7 +8262,7 @@ msgstr "Окончательный Осциллятор"
 msgid "Unable to process your request"
 msgstr "Запрос не может быть обработан"
 
-#: lib/BOM/View/CGIForm.pm:1164 lib/BOM/View/CGIForm.pm:1166
+#: lib/BOM/View/CGIForm.pm:1154 lib/BOM/View/CGIForm.pm:1156
 msgid "Unauthenticated"
 msgstr "Не авторизован"
 
@@ -8220,7 +8283,7 @@ msgstr "Рынок"
 msgid "Unknown error while saving workspace '#1'."
 msgstr "Неизвестная ошибка при сохранении рабочего пространства '#1'."
 
-#: lib/BOM/View/CGIForm.pm:1909
+#: lib/BOM/View/CGIForm.pm:1898
 msgid "Unlock Cashier/Settings sections"
 msgstr "Разблокировать раздел Касса/Настройки"
 
@@ -8237,11 +8300,11 @@ msgid "Upcoming Events"
 msgstr "Приближающиеся события"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/api/register.html.tt:25
-#: lib/BOM/View/CGIForm.pm:1596
+#: lib/BOM/View/CGIForm.pm:1580
 msgid "Update"
 msgstr "Обновить"
 
-#: lib/BOM/View/CGIForm.pm:3855
+#: lib/BOM/View/CGIForm.pm:3822
 msgid "Update Settings"
 msgstr "Обновить установки"
 
@@ -8274,7 +8337,7 @@ msgstr "Использование цен спроса/предложения: �
 msgid "Use the opportunity provided by our website to practice for free with our virtual money account facility. This will enable you to get used to the functionalities and rules of the website."
 msgstr "Используйте возможность практиковаться на нашем сайте бесплатно на демо-счете. Это поможет Вам понять правила и основные функции сайта."
 
-#: lib/BOM/View/CGIForm.pm:1706
+#: lib/BOM/View/CGIForm.pm:1693
 msgid "Use this feature to restrict access to your account from a specific IP address, or range of IP addresses.  For example, if you are certain that your IP address will always be in the range 213.45.0.0 - 213.45.255.255 then you would input 213.45.*.* into the IP address field.  This would ensure that persons outside of that IP network cannot access your account (even if they have the correct password)."
 msgstr "Используйте эту функцию для ограничения доступа к своему счету только с одного IP адреса (или нескольких адресов). Например, если Вы уверены, что Ваш IP-адрес будет всегда в коридоре 213.45.0.0 - 213.45.255.255, то введите  213.45.*.*. Это запретит доступ на счет с любого другого IP (даже если будет введен правильный пароль)."
 
@@ -8282,7 +8345,7 @@ msgstr "Используйте эту функцию для ограничени
 msgid "User Support - Thank you"
 msgstr "Поддержка клиента - Спасибо"
 
-#: lib/BOM/View/CGIForm.pm:4807
+#: lib/BOM/View/CGIForm.pm:4773
 msgid "Utility bill (within last 3 months)"
 msgstr "Счет или квитанция за коммунальные услуги (не старее последних 3 месяцев)"
 
@@ -8294,11 +8357,11 @@ msgstr "Валлетта, столица Мальты"
 msgid "Variable return"
 msgstr "Изменчивая прибыль"
 
-#: lib/BOM/View/CGIForm.pm:4795
+#: lib/BOM/View/CGIForm.pm:4761
 msgid "Verification of identity"
 msgstr "Верификация личности"
 
-#: lib/BOM/View/CGIForm.pm:2046 lib/BOM/View/CGIForm.pm:2197
+#: lib/BOM/View/CGIForm.pm:2033 lib/BOM/View/CGIForm.pm:2182
 msgid "Verify new password"
 msgstr "Верифицируйте новый пароль"
 
@@ -8316,9 +8379,16 @@ msgstr "Вертикальная сетка"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/bet/intraday_prices.html.tt:16
 #: /home/git/translations/binary-static/src/templates/toolkit/charting/daily_ohlc.html.tt:21
-#: cgi/oop/Controller/Bet.pm:1276 cgi/oop/Controller/Bet.pm:1295
+#: lib/BOM/View/Controller/Bet.pm:1263 lib/BOM/View/Controller/Bet.pm:1282
 msgid "View"
 msgstr "Просмотр"
+
+#: lib/BOM/Product/Pricing/Engine/Role/StandardMarkup.pm.tidyup:179
+#: lib/BOM/Product/Pricing/Engine/Role/StandardMarkup.pm:179
+#, fuzzy
+#| msgid "Asset Index"
+msgid "View Asset Index"
+msgstr "Индекс активов"
 
 #: /home/git/translations/binary-static/src/templates/haml/resources/index.html.haml:1
 msgid "View Rise/Fall contract prices across a range of markets."
@@ -8369,7 +8439,7 @@ msgid "View the operating hours of the markets you can trade."
 msgstr "Посмотрите времена открытия и закрытия всех рынков, на которых можно работать."
 
 #. (request()
-#: lib/BOM/View/CGIForm.pm:5244
+#: lib/BOM/View/CGIForm.pm:5210
 msgid "View your <a href=\"%1\">withdrawal limits</a>."
 msgstr "Посмотрите свои <a href=\"%1\">лимиты на вывод средств</a>."
 
@@ -8394,13 +8464,13 @@ msgstr "Смотрите свою прибыль/потери."
 msgid "Virtual Account"
 msgstr "Демо-счет"
 
-#: lib/BOM/View/CGIForm.pm:4529
+#: lib/BOM/View/CGIForm.pm:4495
 msgid "Virtual Money Account Opening"
 msgstr "Открытие Демо-счета"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/account/open_account.html.tt:24
-#: cgi/lost_password.cgi:385 lib/BOM/View/CGIForm.pm:1160
-#: lib/BOM/View/CGIForm.pm:4917
+#: cgi/lost_password.cgi:385 lib/BOM/View/CGIForm.pm:1150
+#: lib/BOM/View/CGIForm.pm:4883
 msgid "Virtual money account"
 msgstr "Виртуальный счет"
 
@@ -8445,14 +8515,21 @@ msgstr "Мы полностью лицензируемы на Мальте и Б
 msgid "We are not able to stream live prices at the moment. To enjoy live streaming of prices try refreshing the page, if you get this issue after repeated attempts try a different browser"
 msgstr "Мы не в состоянии предложить живые цены в данный момент. Чтобы посмотреть живые цены, попробуйте перезагрузить страницу. Если вы получаете это сообщение повторно, используйте другой браузер"
 
-#: lib/BOM/View/CGIForm.pm:587 platform/bin/GenerateStaticData.pm:56
+#: lib/BOM/View/CGIForm.pm:601 platform/bin/GenerateStaticData.pm:56
 msgid "We are not accepting accounts from residents of this country at the present time."
 msgstr "В настоящее время мы не открываем счета для резидентов этой страны."
 
 #. ("http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx")
 #: /home/git/translations/binary-static/src/templates/toolkit/legal/terms_and_conditions.html.tt:56
 msgid "We are required by our licence to inform you about what happens to funds which we hold on account for you, and the extent to which funds are protected in the event of insolvency <a href='%1' target='_blank'>%1</a>."
-msgstr ""
+msgstr "Наша лицензия требует от нас, чтобы мы информировали Вас о состоянии средств, которые мы держим на Вашем счету, и о степени защиты средств в случае неплатежеспособности <a href='%1' target='_blank'>%1</a>."
+
+#. ("http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx")
+#: /home/git/translations/binary-static/src/templates/toolkit/cashier/ukgc_funds_protection_message.html.tt:10
+#, fuzzy
+#| msgid "We are required by our licence to inform you about what happens to funds which we hold on account for you, and the extent to which funds are protected in the event of insolvency <a href='%1' target='_blank'>%1</a>."
+msgid "We are required by our license to inform you about what happens to funds which we hold on account for you, and the extent to which funds are protected in the event of insolvency <a href='%1' target='_blank'>%1</a>."
+msgstr "Наша лицензия требует от нас, чтобы мы информировали Вас о состоянии средств, которые мы держим на Вашем счету, и о степени защиты средств в случае неплатежеспособности <a href='%1' target='_blank'>%1</a>."
 
 #. ($manualAuthenticationLocation, $contact_us_url)
 #: cgi/f_onlineid.cgi:187
@@ -8523,7 +8600,7 @@ msgstr "Мы хотим сделать для Вас привлечение кл
 msgid "We were unable to recover your Login ID or Password with the provided information. <a href=\"%1\">Return to Password Recovery</a>, or <a href=\"%2\"><strong>contact us</strong></a> should you need further assistance."
 msgstr "Мы не смогли восстановить ваш логин или пароль на основе предоставленной информации. <a href=\"%1\" target=\"_blank\">Вернитесь</a>, чтобы повторить процедуру восстановления пароля, или свяжитесь с нашей <a href=\"%2\"><strong>службой поддержки</strong></a>."
 
-#: lib/BOM/View/CGIForm.pm:5298
+#: lib/BOM/View/CGIForm.pm:5267
 msgid "We were unable to verify your identity and prove your residential address using our automated verification procedure."
 msgstr "Мы не смогли проверить Ваши личные данные и данные адреса путем верификации онлайн."
 
@@ -8582,7 +8659,7 @@ msgstr "Вебсайт"
 #. ($until->date)
 #. ($self_exclusion->exclude_until)
 #: /home/git/regentmarkets/bom-backoffice/f_setting_selfexclusion.cgi:77
-#: lib/BOM/View/CGIForm.pm:4885
+#: lib/BOM/View/CGIForm.pm:4851
 msgid "Website exclusion is currently set to <strong>%1.</strong>"
 msgstr "Запрет на вход на сайт в настоящий момент установлен на <strong>%1.</strong>"
 
@@ -8964,7 +9041,7 @@ msgid "Year"
 msgstr "год"
 
 #: /home/git/translations/binary-static/src/templates/toolkit/container/confirm_box_popup.html.tt:5
-#: lib/BOM/View/CGIForm.pm:1153 lib/BOM/View/CGIForm.pm:3565
+#: lib/BOM/View/CGIForm.pm:1143 lib/BOM/View/CGIForm.pm:3532
 #: lib/BOM/View/Charting.pm:478
 msgid "Yes"
 msgstr "Да"
@@ -8986,7 +9063,7 @@ msgstr "Вы также имеете право запросить от нас, 
 msgid "You and we are independent contractors, and nothing in this Agreement will create any partnership, joint venture, agency, franchise, sales representative, or employment relationship between the parties. You will have no authority to make or accept any offers or representations on our behalf. You will not make any statement, whether on your site or otherwise, that reasonably would contradict anything in this paragraph."
 msgstr "Вы и мы являемся незвисимыми контракторами, и ничто в данном соглашении способно создать партнерство, совместное предприятие, агентство, филиал, торгового агента или отношения работодателя и работника между сторонами. У Вас нет права создавать или принимать предложения от нашего имени или представлять нас. Вы обязуетесь не делать утверждений, противоречащих данному параграфу, на Вашем сайте или где-либо еще."
 
-#: cgi/oop/Controller/Bet.pm:2177
+#: lib/BOM/View/Controller/Bet.pm:2164
 msgid "You are being given the better price."
 msgstr "Мы предлагаем Вам лучшую цену."
 
@@ -9040,7 +9117,7 @@ msgstr "Вы можете продать свои долгосрочные ко�
 msgid "You can set the length of your trade, from 10 seconds to 365 days."
 msgstr "Установите продолжительность сделки, от 10 секунд до 365 дней."
 
-#: lib/BOM/View/CGIForm.pm:5299
+#: lib/BOM/View/CGIForm.pm:5269
 msgid "You can still authenticate your account by sending us scans of the following documents by email"
 msgstr "Однако, Вы можете авторизовать счет, прислав нам отсканированные копии следующих документов по электронной почте"
 
@@ -9112,17 +9189,17 @@ msgstr "Вы уже вывели общую сумму EUR %1 (или эквив
 msgid "You have already withdrawn the equivalent of EUR %1."
 msgstr "Вы уже вывели со счета сумму, эквивалентную EUR %1."
 
-#: lib/BOM/View/CGIForm.pm:5014
+#: lib/BOM/View/CGIForm.pm:4980
 msgid "You have bought contracts with a combined purchase price of five times the bonus amount."
 msgstr "Вы приобрели контракты на общую сумму в пять раз больше суммы бонуса."
 
-#: lib/BOM/View/CGIForm.pm:1486 lib/BOM/View/CGIForm.pm:1492
-#: lib/BOM/View/CGIForm.pm:1497
+#: lib/BOM/View/CGIForm.pm:1470 lib/BOM/View/CGIForm.pm:1476
+#: lib/BOM/View/CGIForm.pm:1481
 msgid "You have entered an invalid IP address."
 msgstr "Вы ввели неверный IP-адрес."
 
-#: lib/BOM/View/CGIForm.pm:2907 lib/BOM/View/CGIForm.pm:3033
-#: lib/BOM/View/CGIForm.pm:4034
+#: lib/BOM/View/CGIForm.pm:2883 lib/BOM/View/CGIForm.pm:3008
+#: lib/BOM/View/CGIForm.pm:4002
 msgid "You have entered an invalid login ID"
 msgstr "Вы ввели неправильный логин"
 
@@ -9227,7 +9304,7 @@ msgstr "Вы должны возместить по требованию и об
 msgid "You shall not hold or pool client funds or third party funds into your own account held with %1."
 msgstr "Не принимать от одного или нескольких лиц средства на свой счет %1 для управления ими."
 
-#: lib/BOM/View/CGIForm.pm:3786
+#: lib/BOM/View/CGIForm.pm:3753
 msgid "You will be automatically logged out after such time."
 msgstr "Вы автоматически будете выходить с сайта после данного времени."
 
@@ -9265,6 +9342,13 @@ msgstr "К Вашим услугам лучшие графики с 27 техн�
 msgid "You'll find answers to most of your questions on the <a href=\"%1\" target=\"_blank\">FAQ</a> page."
 msgstr "Вы найдете ответы на большинство своих вопросов на странице <a href=\"%1\" target=\"_blank\">FAQ</a>."
 
+#. ($faq_url)
+#: /home/git/translations/binary-static/src/templates/haml/static/contact.html.haml:1
+#, fuzzy
+#| msgid "You'll find answers to most of your questions on the <a href=\"%1\" target=\"_blank\">FAQ</a> page."
+msgid "You'll find answers to most of your questions on the <a href='%1' target='_blank'>FAQ</a> page."
+msgstr "Вы найдете ответы на большинство своих вопросов на странице <a href=\"%1\" target=\"_blank\">FAQ</a>."
+
 #: /home/git/translations/binary-static/src/templates/haml/layouts/default/topbar.html.haml:1
 #: /home/git/translations/binary-static/src/templates/toolkit/global/header.html.tt:7
 msgid "You're using a virtual money account."
@@ -9276,7 +9360,7 @@ msgid "Your %1 day withdrawal limit is currently <strong>EUR %2</strong> (or %3 
 msgstr "Ваш дневной %1 лимит на вывод в настоящее время составляет <strong>EUR %2</strong> (или %3 в другой валюте)."
 
 #. ($currency_label, $min_deposit)
-#: lib/BOM/View/CGIForm.pm:5012
+#: lib/BOM/View/CGIForm.pm:4978
 msgid "Your <strong>first</strong> deposit is equal to or more than %1%2, and"
 msgstr "Ваш <strong>первый</strong> депозит равен или выше %1%2 в любой валюте, и"
 
@@ -9296,12 +9380,12 @@ msgstr "Ваш IP-адрес изменился. Возможно, это про
 msgid "Your Login ID"
 msgstr "Ваш логин"
 
-#: lib/BOM/View/CGIForm.pm:2912 lib/BOM/View/CGIForm.pm:3038
+#: lib/BOM/View/CGIForm.pm:2888 lib/BOM/View/CGIForm.pm:3013
 msgid "Your Login ID must start with either of the following:"
 msgstr "Ваш логин должен начинаться со следующих знаков:"
 
-#: lib/BOM/View/CGIForm.pm:2902 lib/BOM/View/CGIForm.pm:3028
-#: lib/BOM/View/CGIForm.pm:4029
+#: lib/BOM/View/CGIForm.pm:2878 lib/BOM/View/CGIForm.pm:3003
+#: lib/BOM/View/CGIForm.pm:3997
 msgid "Your Login ID should not contain spaces."
 msgstr "В логине нельзя использовать пробелы."
 
@@ -9318,7 +9402,7 @@ msgstr "Баланс вашего счета"
 msgid "Your account balance (%1%2) is insufficient to buy this contract (%1%3)."
 msgstr "Баланс Вашего счета (%1%2) недостаточен для покупки данного контракта (%1%3)."
 
-#: lib/BOM/View/CGIForm.pm:5329
+#: lib/BOM/View/CGIForm.pm:5302
 msgid "Your account does not require authentication at this time."
 msgstr "Ваш счет не требует верификации на настоящий момент."
 
@@ -9326,7 +9410,7 @@ msgstr "Ваш счет не требует верификации на наст
 msgid "Your account has exceeded the trading limit with free promo code, please deposit if you wish to continue trading."
 msgstr "Ваш счет превысил лимит торговли от бесплатного бонуса. Пожалуйста, пополните счет, если Вы желаете продолжить торговать на нем."
 
-#: cgi/cashier_forward.cgi:63
+#: cgi/cashier_forward.cgi.tidyup:75 cgi/cashier_forward.cgi:77
 msgid "Your account is disabled"
 msgstr "Ваш счет недоступен"
 
@@ -9336,11 +9420,11 @@ msgid "Your account is fully authenticated and your withdrawal limit of EUR %1 h
 msgstr "Ваш счет полность авторизован, и лимит EUR %1 был снят."
 
 #. (request()
-#: lib/BOM/View/CGIForm.pm:5268
+#: lib/BOM/View/CGIForm.pm:5236
 msgid "Your account is fully authenticated. You can view your <a href=\"%1\">trading limits here</a>."
 msgstr "Ваш счет полность авторизован. Вы можете посмотреть свои <a href=\"%1\">торговые лимиты здесь</a>."
 
-#: lib/BOM/View/CGIForm.pm:5313
+#: lib/BOM/View/CGIForm.pm:5286
 msgid "Your account is fully operational and you may begin depositing money and buying contracts."
 msgstr "Ваш счет полностью доступен, и Вы можете пополнить его и начать приобретать контракты."
 
@@ -9353,15 +9437,13 @@ msgstr "Ваш счет очень важен для нас. Если Вам н�
 msgid "Your account is registered as a Payment Agent."
 msgstr "Ваш счет зарегистрирован под %1."
 
-#: cgi/cashier_forward.cgi:39
+#: cgi/cashier_forward.cgi.tidyup:51 cgi/cashier_forward.cgi:53
 msgid "Your account is restricted to withdrawals only."
 msgstr "На Вашем счету можно производить только вывод средств."
 
 #: /home/git/translations/binary-static/src/templates/toolkit/legal/terms_and_conditions.html.tt:62
-#, fuzzy
-#| msgid "The company holds customer funds in separate bank accounts to the operational accounts which would not, in the event of insolvency, form part of the Company's assets. Your account should not be used as a banking facility and deposits should only be made with a view to using funds to place contracts. Should you make repeated deposits and withdrawals without commensurate contracts being placed, we reserve the right to pass on to your accounts, without prior notice, any bank charges we have incurred before closing the account."
 msgid "Your account should not be used as a banking facility and deposits should only be made with a view to using funds to place contracts. Should you make repeated deposits and withdrawals without commensurate contracts being placed, we reserve the right to pass on to your accounts, without prior notice, any bank charges we have incurred before closing the account."
-msgstr "Компания держит средства клиентов на банковском счете, отдельном от оперативных счетов, который не будет составлять часть активов Компании в случае ее неплатежеспособности. Ваш рабочий счет не должен использоваться в качестве банковского хранилища, и депозиты должны производиться только с целью использования средств для приобретения контрактов. Если Вы совершаете повторные пополнения и вывод денег без приобретения контрактов, мы оставляем за собой право применения к Вашим счетам, без предварительного уведомления, любых банковских сборов, которые мы можем понести до закрытия счетов."
+msgstr "Ваш рабочий счет не должен использоваться в качестве банковского хранилища, и депозиты должны производиться только с целью использования средств для приобретения контрактов. Если Вы совершаете повторные пополнения и вывод денег без приобретения контрактов, мы оставляем за собой право применения к Вашим счетам, без предварительного уведомления, любых банковских сборов, которые мы можем понести до закрытия счетов."
 
 #: /home/git/translations/binary-static/src/templates/toolkit/api/register.html.tt:20
 msgid "Your base url for all API calls"
@@ -9372,15 +9454,15 @@ msgstr "Ваш базовый url для всех вызовов API"
 msgid "Your bonus request - %1"
 msgstr "Ваш запрос на бонус - %1"
 
-#: lib/BOM/View/CGIForm.pm:5008
+#: lib/BOM/View/CGIForm.pm:4974
 msgid "Your bonus will be credited to your account within 3 working days after the following conditions have been met:"
 msgstr "Ваш бонус будет зачислен на счет через три рабочих дня после того, как будут удовлетворены следующие условия:"
 
-#: lib/BOM/View/CGIForm.pm:5021
+#: lib/BOM/View/CGIForm.pm:4987
 msgid "Your bonus will be credited to your account within 3 working days after you have bought contracts with a combined purchase price equal to or greater than the bonus amount."
 msgstr "Ваш бонус будет зачислен на счет через три рабочих дня после покупки контрактов на общую сумму, соответствующую или выше суммы бонуса."
 
-#: lib/BOM/View/CGIForm.pm:5030
+#: lib/BOM/View/CGIForm.pm:4996
 msgid "Your bonus will be credited to your account within 3 working days."
 msgstr "Ваш бонус будет зачислен на счет через три рабочих дня."
 
@@ -9388,11 +9470,11 @@ msgstr "Ваш бонус будет зачислен на счет через �
 msgid "Your callback handler now swaps the new authorization code for a session token with this call:"
 msgstr "Ваш callback handler теперь опменяет Ваш новый авторизационный код на ключ к доступу (session token) с таким вызовом:"
 
-#: cgi/cashier_forward.cgi:59
+#: cgi/cashier_forward.cgi.tidyup:71 cgi/cashier_forward.cgi:73
 msgid "Your cashier is locked"
 msgstr "Ваша КАССА заблокирована"
 
-#: cgi/cashier_forward.cgi:67
+#: cgi/cashier_forward.cgi.tidyup:79 cgi/cashier_forward.cgi:81
 msgid "Your cashier is locked by password."
 msgstr "Для входа в секцию КАССА установлен пароль."
 
@@ -9404,11 +9486,11 @@ msgstr "Ваша секция КАССА заблокирована."
 msgid "Your cashier session has expired"
 msgstr "Сессия в секции КАССА истекла"
 
-#: lib/BOM/View/CGIForm.pm:2763
+#: lib/BOM/View/CGIForm.pm:2744
 msgid "Your country"
 msgstr "Ваша страна"
 
-#: lib/BOM/View/CGIForm.pm:4852
+#: lib/BOM/View/CGIForm.pm:4818
 msgid "Your current self-exclusion settings are as follows:"
 msgstr "Ваши настоящие установки по самоограничению следующие:"
 
@@ -9416,12 +9498,12 @@ msgstr "Ваши настоящие установки по самоограни
 msgid "Your details"
 msgstr "Ваши данные"
 
-#: cgi/cashier_forward.cgi:55
+#: cgi/cashier_forward.cgi.tidyup:67 cgi/cashier_forward.cgi:69
 msgid "Your documents are expired"
 msgstr "Присланные документы просрочены"
 
-#: lib/BOM/View/CGIForm.pm:2853 lib/BOM/View/CGIForm.pm:3075
-#: lib/BOM/View/CGIForm.pm:3374
+#: lib/BOM/View/CGIForm.pm:2831 lib/BOM/View/CGIForm.pm:3049
+#: lib/BOM/View/CGIForm.pm:3342
 msgid "Your email address"
 msgstr "Ваш e-mail"
 
@@ -9433,8 +9515,8 @@ msgstr "Ваш запрос выслан."
 msgid "Your funds are safe"
 msgstr "Ваши средства в безопасности"
 
-#: lib/BOM/View/CGIForm.pm:1114 lib/BOM/View/CGIForm.pm:1606
-#: lib/BOM/View/CGIForm.pm:831
+#: lib/BOM/View/CGIForm.pm:1107 lib/BOM/View/CGIForm.pm:1590
+#: lib/BOM/View/CGIForm.pm:839
 msgid "Your information is incomplete or incorrect. Please correct the fields highlighted above."
 msgstr "Данные введены неверно или не полностью. Пожалуйста, исправьте отмеченные поля."
 
@@ -9443,20 +9525,20 @@ msgstr "Данные введены неверно или не полность�
 msgid "Your money is always safe with %1. At all times, it is held in segregated AAA-rated banks, which is a condition of our trading licenses."
 msgstr "Ваши деньги всегда в безопасности на %1. Мы отделяем и содержим средства клиентов в банках рейтинга ААА, что является условием нашей лицензии."
 
-#: lib/BOM/View/CGIForm.pm:2823 lib/BOM/View/CGIForm.pm:3045
+#: lib/BOM/View/CGIForm.pm:2802 lib/BOM/View/CGIForm.pm:3020
 msgid "Your name"
 msgstr "Ваше имя"
 
-#: lib/BOM/View/CGIForm.pm:3297
+#: lib/BOM/View/CGIForm.pm:3267
 msgid "Your name/company"
 msgstr "Имя или название компании"
 
-#: cgi/oop/Controller/Bet.pm:2137
+#: lib/BOM/View/Controller/Bet.pm:2124
 msgid "Your new account balance is %s %s"
 msgstr "Новый баланс Вашего счета %s %s"
 
 #. ($reference_number, $executed_price)
-#: cgi/oop/Controller/Bet.pm:2182
+#: lib/BOM/View/Controller/Bet.pm:2169
 msgid "Your order (Reference # <span id=\"reference_no\">%1</span>) has been executed at %2."
 msgstr "Ваш заказ (номер # <span id=\"reference_no\">%1</span>) был выполнен по цене %2."
 
@@ -9480,19 +9562,19 @@ msgstr "Ваш пароль был переустановлен. Ваш логи
 msgid "Your password recovery token has expired. Please click <a href=\"%1\"><strong>here</strong></a> to restart the password recovery process.<br /><br /> Your account is important to us. If you require further assistance, please contact our <a href=\"%2\"><strong>Customer Support</strong></a>."
 msgstr "Ваш токен для восстановления пароля просрочен. Пожалуйста, нажмите <a href=\"%1\"><strong>сюда</strong></a>, чтобы начать процедуру восстановления пароля заново.<br /><br /> Если Вам требуется дополнительная помощь, пожалуйста, свяжитесь с нашей <a href=\"%2\"><strong>службой поддержки</strong></a>."
 
-#: lib/BOM/View/CGIForm.pm:1974 lib/BOM/View/CGIForm.pm:2147
-#: lib/BOM/View/CGIForm.pm:729
+#: lib/BOM/View/CGIForm.pm:1963 lib/BOM/View/CGIForm.pm:2133
+#: lib/BOM/View/CGIForm.pm:739
 msgid "Your password should be at least 5 characters."
 msgstr "Пароль должен содержать хотя бы 5 знаков. Просим убедиться, что клавиатура переключена на латиницу."
 
-#: lib/BOM/View/CGIForm.pm:1512 lib/BOM/View/CGIForm.pm:1847
-#: lib/BOM/View/CGIForm.pm:1967 lib/BOM/View/CGIForm.pm:2140
-#: lib/BOM/View/CGIForm.pm:722
+#: lib/BOM/View/CGIForm.pm:1496 lib/BOM/View/CGIForm.pm:1836
+#: lib/BOM/View/CGIForm.pm:1956 lib/BOM/View/CGIForm.pm:2126
+#: lib/BOM/View/CGIForm.pm:732
 msgid "Your password should contain only characters and digits."
 msgstr "Ваш пароль должен содержать только буквы и цифры."
 
-#: lib/BOM/View/CGIForm.pm:1981 lib/BOM/View/CGIForm.pm:2154
-#: lib/BOM/View/CGIForm.pm:736
+#: lib/BOM/View/CGIForm.pm:1970 lib/BOM/View/CGIForm.pm:2140
+#: lib/BOM/View/CGIForm.pm:746
 msgid "Your password should not be more then 25 characters."
 msgstr "Пароль может содержать не более 25 знаков."
 
@@ -9500,7 +9582,7 @@ msgstr "Пароль может содержать не более 25 знако
 msgid "Your personal information is used primarily as a way of authenticating you as the proper owner of your account and as the person to whom withdrawal payments may be made. We collect personal data relating to you directly from you when you fill in the account opening form. In the event of any doubt as to the authenticity of your account details or of any withdrawal request, the company reserves the right to request further authentication information as may be deemed appropriate under the circumstances."
 msgstr "Ваша личная информация используется для установления Вашей личности как владельца счета, а также для выплат с Вашего счета на Ваше имя. Мы запрашиваем всю личную информацию при открытии счета напрямую у Вас. Если у нас есть какие-либо сомнения относительно точности всех данных или данных при запросе на вывод средств, компания оставляет за собой право запросить дальнейшую информацию, которая считается необходимой в зависимости от обстоятельств."
 
-#: lib/BOM/View/CGIForm.pm:2784 lib/BOM/View/CGIForm.pm:3403
+#: lib/BOM/View/CGIForm.pm:2764 lib/BOM/View/CGIForm.pm:3370
 msgid "Your phone number"
 msgstr "Ваш телефон"
 
@@ -9522,7 +9604,7 @@ msgstr "Ваш запрос на вывод %1 %2 с Вашего счета %3 
 msgid "Your risks are known"
 msgstr "Ваш риск заранее известен"
 
-#: lib/BOM/View/CGIForm.pm:709
+#: lib/BOM/View/CGIForm.pm:719
 msgid "Your secret answer is too short.  Please enter at least 4 characters."
 msgstr "Ответ на Ваш секретный вопрос слишком короткий. Пожалуйста, введите как минимум 4 знака."
 
@@ -9531,11 +9613,11 @@ msgid "Your settings have been updated successfully."
 msgstr "Настройки успешно обновлены."
 
 #. ($tradeRef)
-#: cgi/oop/Controller/Bet.pm:1548 cgi/oop/Controller/Bet.pm:2141
+#: lib/BOM/View/Controller/Bet.pm:1535 lib/BOM/View/Controller/Bet.pm:2128
 msgid "Your transaction reference number is %1"
 msgstr "Номер Вашей сделки %1"
 
-#: lib/BOM/View/CGIForm.pm:3442
+#: lib/BOM/View/CGIForm.pm:3409
 msgid "Your website URL"
 msgstr "URL Вашего сайта"
 
@@ -9573,7 +9655,7 @@ msgstr "лимит на сумму, на которую Вы можете при
 msgid "a limit on the losses you may incur within a specified period of time;"
 msgstr "лимит на потери, которые Вы можете понести в указанный период времени;"
 
-#: lib/BOM/View/CGIForm.pm:5322
+#: lib/BOM/View/CGIForm.pm:5295
 msgid "and"
 msgstr "и"
 
@@ -9605,22 +9687,20 @@ msgstr "какие-либо ограничения для Клиентов в п
 msgid "barrier"
 msgstr "значение"
 
-#: cgi/oop/Controller/Bet.pm:1596
+#: lib/BOM/View/Controller/Bet.pm:1583
 msgid "better trade"
 msgstr "лучший контракт"
 
 #: /home/git/translations/binary-static/src/templates/haml/layouts/default/head.html.haml:1
 #: /home/git/translations/binary-static/src/templates/toolkit/global/head.html.tt:13
-#, fuzzy
-#| msgid "binary options, binary option, forex trading, online trading, financial trading, financial trading binary option, binary trading, index trading, trading indices, forex trades, trading commodities, forex trading market, practice trading, practice binary trading, tick trade, virtual money trading, trading forex, binary trading, binary bet, binary online bet, binary options trading platform, digital options"
 msgid "binary options, forex, forex trading, online trading, financial trading, binary trading, index trading, trading indices, forex trades, trading commodities, binary options strategy, binary broker, binary bet, binary options trading platform, binary strategy, finance, stocks, investment, trading"
-msgstr "бинарные опционы, бинарный опцион, торговля на форекс, онлайн торговля, финансовый трейдинг, финансовые бинарные опционы, бинарная торговля, торговля на индексах, трейдинг на индексах, торговля на сырьевых материалах, практика торговли, попробуйте бинарные опционы, тиковые контракты, торговля на демо-счету, торговля на форексе, бинарный трейдинг, бинарная ставка, бинарная ставка онлайн, платформа для торговли бинарными опционами, цифровые опционы"
+msgstr "бинарные опционы, форекс, торговля на форекс, онлайн торговля, бинарный трейдинг, торговля на индексах, трейдинг на индексах, контракты на форекс, торговля на сырье, стратегия бинарных опционов, бинарный брокер, бинарная ставка, платформа для торговли бинарными опционами, бинарная стратегия, финансы, акции, инвестиции, трейдинг"
 
 #: /home/git/translations/binary-static/src/templates/haml/static/responsible_trading.html.haml:1
 msgid "contact us"
 msgstr "связаться с нами"
 
-#: lib/BOM/Product/Contract/ContractCategory/ContractType.pm:364
+#: lib/BOM/Product/Contract/ContractCategory/ContractType.pm:350
 msgid "contract start time"
 msgstr "врем. начала контракта"
 
@@ -9633,7 +9713,7 @@ msgstr "дн."
 msgid "days"
 msgstr "дн."
 
-#: lib/BOM/View/CGIForm.pm:1659 lib/BOM/View/CGIForm.pm:894
+#: lib/BOM/View/CGIForm.pm:1643 lib/BOM/View/CGIForm.pm:902
 msgid "details"
 msgstr "подробности"
 
@@ -9665,11 +9745,11 @@ msgstr "входная спот-котировка плюс %plural(%1,1 пун�
 msgid "equivalent"
 msgstr "эквивалент"
 
-#: cgi/oop/Controller/Bet.pm:2214
+#: lib/BOM/View/Controller/Bet.pm:2201
 msgid "explanation"
 msgstr "объяснение"
 
-#: lib/BOM/Product/Contract/ContractCategory/ContractType.pm:362
+#: lib/BOM/Product/Contract/ContractCategory/ContractType.pm:348
 msgid "first tick"
 msgstr "первая котировка"
 
@@ -9685,7 +9765,7 @@ msgstr "здесь"
 msgid "high barrier"
 msgstr "высший барьер"
 
-#: lib/BOM/Platform/Plack.pm:335
+#: lib/BOM/Platform/Plack.pm.tidyup:327 lib/BOM/Platform/Plack.pm:327
 msgid "homepage"
 msgstr "домашняя страница"
 
@@ -9709,7 +9789,7 @@ msgstr "загружается..."
 msgid "low barrier"
 msgstr "нижний барьер"
 
-#: lib/BOM/View/CGIForm.pm:4086 lib/BOM/View/CGIForm.pm:4293
+#: lib/BOM/View/CGIForm.pm:4053 lib/BOM/View/CGIForm.pm:4259
 msgid "maximum is"
 msgstr "максимум составляет"
 
@@ -9725,7 +9805,7 @@ msgstr "мин."
 msgid "minimum available duration"
 msgstr "мин. доступный период"
 
-#: lib/BOM/View/CGIForm.pm:4080 lib/BOM/View/CGIForm.pm:4287
+#: lib/BOM/View/CGIForm.pm:4047 lib/BOM/View/CGIForm.pm:4253
 msgid "minimum is"
 msgstr "минимум составляет"
 
@@ -9766,7 +9846,7 @@ msgstr "нет данных"
 msgid "on this website. You may also"
 msgstr "на этом сайте. Вы также можете"
 
-#: lib/BOM/View/CGIForm.pm:4799 lib/BOM/View/CGIForm.pm:4808
+#: lib/BOM/View/CGIForm.pm:4765 lib/BOM/View/CGIForm.pm:4774
 msgid "or"
 msgstr "или"
 
@@ -9777,7 +9857,7 @@ msgstr "или попробуйте поиск по карте сайта вни
 #. (request()
 #: lib/BOM/Product/Contract.pm:2674 lib/BOM/Product/Contract.pm:2689
 msgid "or try out the <a href='%1'>Random Indices</a> which are always open."
-msgstr ""
+msgstr "или попробуйте <a href='%1'>индексы Random</a>, торговля на которых открыта всегда."
 
 #: /home/git/translations/binary-static/src/templates/toolkit/legal/datafeed.html.tt:29
 msgid "page for the exact time of settlement for all contracts. Other websites may adopt a different convention (for example some websites choose 4 o'clock NY time, or 5 o'clock London time). As a result, the open, high, low and closing prices displayed on our website may differ to those on other websites, due to the market-closing time convention."
@@ -9850,10 +9930,6 @@ msgstr "и установить лимиты, которые Вы сами по�
 #: cgi/trading_times.cgi:148
 msgid "today"
 msgstr "сегодня"
-
-#: /home/git/translations/binary-static/src/templates/haml/static/why_us.html.haml:1
-msgid "touch/no-touch"
-msgstr "касание/нет касания"
 
 #: /home/git/translations/binary-static/src/templates/haml/home/index.html.haml:1
 msgid "trades"
@@ -11851,6 +11927,21 @@ msgstr "Извините, вход с этого ip-адреса был запр
 #: Message for API Error 'LOGIN_TOO_MANY_FAILED_ATTEMPTS'
 msgid "Sorry, you have already had too many unsuccessful attempts. Please try again in 5 minutes."
 msgstr "Извините, у Вас уже было слишком много неудачных попыток. Попробуйте через пять минут."
+
+#~ msgid "Country:"
+#~ msgstr "Страна:"
+
+#~ msgid "Required"
+#~ msgstr "Обязательно"
+
+#~ msgid "Returns above 1000% on %1 and %2 trades."
+#~ msgstr "Выплата свыше 1000% на контрактах %1 и %2."
+
+#~ msgid "Sorry, broker %1 does not allow transfers from payment agents."
+#~ msgstr "Извините, брокер %1 не разрешает переводы от платежных агентов."
+
+#~ msgid "touch/no-touch"
+#~ msgstr "касание/нет касания"
 
 #~ msgid "Viber"
 #~ msgstr "Viber"
@@ -16871,9 +16962,6 @@ msgstr "Извините, у Вас уже было слишком много н
 
 #~ msgid "Bank account number is too short, please enter at least %1 characters."
 #~ msgstr "Слишком короткий номер банковского счета, введите минимум %1 знаков."
-
-#~ msgid "Bank address"
-#~ msgstr "Адрес банка"
 
 #~ msgid "Bank name"
 #~ msgstr "Название банка"
