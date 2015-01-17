@@ -12,6 +12,7 @@ body {
 
 .header-wrapper {
     position: fixed;
+    z-index: 9999;
     width: 100%;
 }
 
@@ -102,7 +103,6 @@ body {
     flex-direction: column;
     min-width: 200px;
     transform: translateY(100px);
-    z-index: 9999;
 }
 
 .nav2nd li {
