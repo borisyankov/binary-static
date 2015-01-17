@@ -1,79 +1,10 @@
-<div id='page-wrapper'>
-    <div id="topbar">
-        <div class='grd-container'>
-            <div class='grd-grid-12 grd-parent'>
-                <div class='grd-grid-6 grd-grid-mobile-12 by_client_type client_virtual' id='virtualupgrade' style="display: none;">
-                    <span class='grd-hide-mobile'>
-                        <span>[% l("You're using a virtual money account.") %]</span>
-                    </span>
-                    <a class="pjaxload with_login_cookies" href="[% request.url_for('linkto_acopening.cgi', { actype => 'real'}) %]">[% l("Upgrade to a real money account") %]</a>
-                </div>
-                <div class='grd-grid-6 grd-grid-mobile-12 grd-parent' id='topbar-info'>
-                    <div class='grd-grid-5 grd-grid-mobile-7' id="gmt-clock"></div>
-                    <div class='grd-grid-3 grd-hide-mobile' id='contact-us'>
-                        <a class="pjaxload" href="[% request.url_for('contact.cgi') %]"[% target %]>[% l("Contact Us") %]</a>
-                    </div>
-                    <div class='grd-grid-4 grd-grid-mobile-5'>
-                        <div class="[% language %]" id='language_select'>
-                            [% language_select %]
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<div class='header-wrapper'>
+    <div class="header">
+        <a class="logo" href="[% request.url_for('/') %]"[% target %]>
+            <img src="[% request.url_for('images/logo.svg') %]"/>
+        </a>
+        [% INCLUDE global/menu.html.tt %]
+        <button class="login-button">[% l("Chart Application") %]</button>
     </div>
-
-    <div id="header">
-        <div class='grd-container'>
-            <div class='grd-row-padding'>
-                <div class='grd-grid-3 grd-grid-mobile-2 grd-grid-phablet-1'>
-                    <a id="logo" href="[% request.url_for('/') %]"[% target %]>
-                        <div class='grd-grid-3 grd-grid-mobile-12 grd-grid-phablet-12 grd-no-gutter'>
-                            <img src="[% request.url_for('images/common/binary-logo-full.svg') %]"/>
-                        </div>
-                    </a>
-                </div>
-                <div class='grd-grid-6 grd-hide-mobile grd-hide-phablet'>
-                    <div id='main-navigation'>
-                        <ul id="menu-top">
-                            <li>
-                                <a class="pjaxload" href="[% request.url_for('why-us') %]"[% target %]>[% l("Why Us?") %]</a>
-                            </li>
-                            <li>
-                                <a class="pjaxload" href="[% request.url_for('get-started') %]"[% target %]>[% l("Get Started") %]</a>
-                            </li>
-                            <li>
-                                <a class="pjaxload" href="[% request.url_for('tour') %]"[% target %]>[% l("Tour") %]</a>
-                            </li>
-                            <li id="trading_link">
-                                <a class="pjaxload" href="[% request.url_for('trade.cgi') %]"[% target %]>[% l("Trade") %]</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div id="client-logged-in" class="grd-grid-3 grd-grid-mobile-9 grd-grid-phablet-10 by_client_type client_real client_virtual" style="display: none">
-                  <div id="logout">
-                      <a id="client_loginid" class="pjaxload" href="[% request.url_for('my_account.cgi') %]"[% target %]></a>
-                      <a id="btn_logout" class="logout" href="[% request.url_for('logout') %]"[% target %]>[% l('LOG OUT') %]</a>
-                  </div>
-                </div>
-                <div id="client-logged-out" class="grd-grid-3 grd-grid-mobile-9 grd-grid-phablet-10 grd-no-gutter-left by_client_type client_logged_out">
-                    <form id="login-form" action="[% request.url_for('login') %]" method="post">
-                        <span id="login-fields">
-                            <input name="loginid" type="text" placeholder="[% l("Login ID") %]" />
-                            <input name="password" type="password" placeholder="[% l("Password") %]" />
-                            <input type="submit" value="[% l("Log in") %]" />
-                        </span>                        
-                    </form>
-                </div>
-                <div class='grd-grid-1 grd-hide grd-show-mobile grd-no-gutter-mobile grd-show-phablet'>
-                    <div id='mobile-menu-icon-container'>
-                        <a href='#mobile-menu' id='mobile-menu-icon'>
-                            <img class='responsive' src="[% request.url_for('images/pages/binary-mobile-menu.svg') %]"/>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="content-holder">
+</div>
+<div class="content-wrapper">
