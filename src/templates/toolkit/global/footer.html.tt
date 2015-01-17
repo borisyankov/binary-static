@@ -7,9 +7,7 @@
             <li>
                 <a class="pjaxload" href="[% request.url_for('affiliate_signup.cgi') %]"[% IF target %]
                     target="[% target %]"[% END %]>[% l('Affiliate Program') %]</a>
-                <a class="pjaxload" href="<%= url_for("white-labels") %>">
-                    <a href="[% request.url_for('white-labels') %]" class="pjaxload">[% l('White Labels') %]</a>
-                </a>
+                <a class="pjaxload" href="[% request.url_for('white-labels') %]">[% l('White Labels') %]</a>
                 <a class="pjaxload" href="[% request.url_for('partnerapi') %]"[% IF target %] target="[%
                 target
                 %]"[% END %]>[% l('Partner API') %]</a>

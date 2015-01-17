@@ -7,7 +7,6 @@ Contents.prototype = {
     on_load: function() {
         this.activate_by_client_type();
         this.update_body_id();
-        this.update_content_class();
         this.tooltip.attach();
         this.init_draggable();
     },
@@ -37,12 +36,7 @@ Contents.prototype = {
         $('body').attr('id', '');
         $('body').attr('id', $('#body_id').html());
     },
-    update_content_class: function() {
-        //This is required for our css to work.
-        $('.content').removeClass();
-        $('.content').addClass($('#content_class').html());
-    },
     init_draggable: function() {
         $('.draggable').draggable();
-    },
+    }
 };

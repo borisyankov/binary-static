@@ -1,7 +1,6 @@
 [% UNLESS is_pjax_request %]
 <body[% IF body_id %] id="[% body_id %]"[% END %][% IF lang %] class="[% language %]"[% END %]>
       [% INCLUDE global/header.html.tt %]
-      [% INCLUDE global/main_menu.html.tt %]
       <!-- FlushHead -->
 [% END %]
       <div id="content">
