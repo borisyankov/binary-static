@@ -5,42 +5,32 @@
   }
 }
 
-#live_chart_form_wrapper {
-  margin: 0 auto;
-  a {
+#live_chart_form_wrapper a {
     text-decoration: underline;
     cursor: pointer;
-  }
-  input {
-    border-radius: $BORDER_RADIUS;
-  }
-  input[type=button] {
-    @include link-button;
-    padding: 6px 15px 6px 15px;
-    font-size: $FONT_SIZE_S;
-  }
-  #live_chart_options {
-      display: block;
-      min-height: 50px;
-      #live_chart_duration {
-        li {
-          float: left;
-          text-align: center;
-          min-width: 7%;
-          span.button {
-              margin: 0 5px;
-              color: $COLOR_BLACK;
-              font-weight: bold;
-              border-bottom: 2px solid $COLOR_GRAY;
-              &.current {
-                color: $COLOR_ORANGE;
-                border-bottom: 4px solid $COLOR_ORANGE;
-              }
-          }
+} 
+#live_chart_options {
+    display: block;
+    min-height: 50px;
+    #live_chart_duration {
+      li {
+        float: left;
+        text-align: center;
+        min-width: 7%;
+        span.button {
+            margin: 0 5px;
+            color: $COLOR_BLACK;
+            font-weight: bold;
+            border-bottom: 2px solid $COLOR_GRAY;
+            &.current {
+              color: $COLOR_ORANGE;
+              border-bottom: 4px solid $COLOR_ORANGE;
+            }
         }
       }
-  }
+    }
 }
+
 .chart-notice {
     text-align: left;
     font-size: $FONT_SIZE_S;

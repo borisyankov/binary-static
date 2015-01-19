@@ -7,6 +7,4 @@
     <div id="live-help-button"></div>
 </div>
 
-<div class="clear">
-    [% menu_content %]
-</div>
+[% menu_content %]
