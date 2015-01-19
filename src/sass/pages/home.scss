@@ -1,8 +1,5 @@
 /* HOME PAGE RULES */
 .home-content {
-   #banner {
-    background: url("../images/pages/home/banner-background_1.png") no-repeat 0 0;
-   }
   #slider {
     .invisibleslides {
         display: none;
@@ -126,7 +123,6 @@
   }
   #help {
         clearfix { clear:both; visibility:hidden; content:'.' }
-        background: $COLOR_LIGHT_GRAY;
         #new-trader, #experienced-trader {
           background: url("../images/pages/home/stripe_1.png") repeat;
           border-radius: $BORDER_RADIUS;
