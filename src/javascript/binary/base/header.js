@@ -48,8 +48,6 @@ Header.prototype = {
             event.preventDefault();
             load_with_pjax(logged_in_url);
         }).addClass('unbind_later');
-
-        this.menu.register_dynamic_links();
     },
     start_clock: function() {
         var clock = $('#gmt-clock');
