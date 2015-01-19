@@ -211,18 +211,10 @@ pre {
     margin: 0;
     padding: 10px;
     text-align: center;
-    border: solid 1px $COLOR_ORANGE;
+    border: solid 1px $COLOR_NAV_BORDER;
     background: $COLOR_LIGHT_GRAY;
     z-index: 1000;
     max-width: 90%;
-    .drag-handle {
-        cursor: pointer;
-    }
-    a.close {
-        position: relative;
-        top: -10px;
-        right: -10px;
-    }
     .inpage_popup_content {
         margin: 30px 10px 10px;
         padding: 0;
@@ -235,6 +227,25 @@ pre {
         text-align: center;
     }
 
+}
+
+a.close {
+    position: relative;
+    top: -10px;
+    right: -10px;
+    float: right;
+    display: inline-block;
+    padding: .25em .5em;
+    cursor: pointer;
+    color: $COLOR_WHITE;
+    border-radius: 0;
+    border-bottom-left-radius: 4px;
+    background: $COLOR_NAV_BORDER;
+    font-size: $FONT_SIZE_L;
+    font-weight: bold;
+    &:hover {
+        text-decoration: none;
+    }
 }
 .paging-navigation {
     ul.paging-links {

@@ -399,26 +399,6 @@
     background-color: $COLOR_GRAY;
 }
 
-a.close {
-    display: inline-block;
-    float:right;
-    margin-top: 0;
-    margin-right: 0;
-    padding: 10px 8px;
-    cursor: pointer;
-    color: $COLOR_WHITE;
-    border: solid 1px $COLOR_ORANGE;
-    border-radius: 0;
-    border-bottom-left-radius: 4px;
-    background: $COLOR_ORANGE;
-    font-size: $FONT_SIZE_L;
-    font-weight: bold;
-    line-height: 0px;
-    &:hover {
-        text-decoration: none;
-    }
-}
-
 .trade_confirm_container {
     overflow: display;
     margin: 0;
