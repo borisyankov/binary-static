@@ -2,7 +2,7 @@
     "website_name": "Binary.com",
     "display_languages": "EN,ID,RU,ES,FR,PT,DE,ZH_CN,PL,AR",
     "static": {
-        "url": "http://borisyankov.github.io/binary-static/",
+        "url": "https://borisyankov.github.io/binary-static/",
         "version": "3.3.1"
     },
     "marketing": {
