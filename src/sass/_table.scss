@@ -1,12 +1,31 @@
-table
-{
-    border-collapse: collapse;
-    line-height: 1.5em;
+table {
     width: 100%;
-    .even {
-        background-color: $COLOR_WHITE;
-    }
-    thead, th {
+}
+
+th {
+    background: #fafafa;
+    font-weight: bold;
+}
+
+tbody tr {
+    border-top: 1px solid #d4d4d4;
+}
+
+tbody tr:hover {
+    background: #fafafa;
+}
+
+tbody tr:hover td:first-child {
+    box-shadow: inset 3px 0px 0px 0px $COLOR_ORANGE;
+}
+
+th, td {
+    padding: 1em;
+}
+
+/*table
+{
+
         line-height: 1.1em;
         font-weight: bold;
         padding: 3px 8px;
@@ -88,9 +107,9 @@ table
         color: $COLOR_RED;
     }
 }
-
+*/
 /* Gridle based table styling */
-.table-header{
+/*.table-header{
     clear: both;
     overflow: auto;
     font-weight: bold;
@@ -129,3 +148,4 @@ table
 .table-body-lines {
     border-bottom: 3px solid $COLOR_LIGHT_GRAY;
 }
+*/
