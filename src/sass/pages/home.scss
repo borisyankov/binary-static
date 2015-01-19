@@ -158,7 +158,7 @@
     #prices, #try-now {
       display:inline-block;
       text-align: center;
-      h1 { font-weight:100; color: $COLOR_BLUE; padding:4px 0 4px 0; font-size:230%; }
+      h1 { font-weight:100;  margin: 0; }
     }
     #prices {
       padding-right:10px;
