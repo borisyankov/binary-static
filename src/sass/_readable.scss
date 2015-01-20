@@ -1,15 +1,18 @@
-.readable, .narrow {
-    max-width: 700px;
-}
-
 .readable,
-.whyus-content,
-.tour-content,
+.careers-content,
 .devguide-content,
+.grouphistory-content,
 .opensourceprojects-content,
+.partnerapi-content,
+.responsibletrading-content,
+.smartindices-content,
+.tour-content,
+.whitelabels-content,
 .aboutus-content,
-.careers-content
+
+partnerapi-content
 {
+    max-width: 700px;
 
     header {
         text-align: center;
