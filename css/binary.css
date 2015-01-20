@@ -921,33 +921,78 @@ th, td {
   max-width: 700px;
 }
 
-.readable header {
+.readable header,
+.whyus-content header,
+.tour-content header,
+.devguide-content header,
+.opensourceprojects-content header,
+.aboutus-content header {
   text-align: center;
 }
-.readable article blockquote, .readable article img {
+.readable article blockquote, .readable article img,
+.whyus-content article blockquote,
+.whyus-content article img,
+.tour-content article blockquote,
+.tour-content article img,
+.devguide-content article blockquote,
+.devguide-content article img,
+.opensourceprojects-content article blockquote,
+.opensourceprojects-content article img,
+.aboutus-content article blockquote,
+.aboutus-content article img {
   margin: 0 10%;
 }
-.readable article blockquote p {
+.readable article blockquote p,
+.whyus-content article blockquote p,
+.tour-content article blockquote p,
+.devguide-content article blockquote p,
+.opensourceprojects-content article blockquote p,
+.aboutus-content article blockquote p {
   font-weight: bold;
   text-align: center;
   quotes: '\201D' '\201D' '\2019' '\2019';
 }
-.readable article blockquote p:before {
+.readable article blockquote p:before,
+.whyus-content article blockquote p:before,
+.tour-content article blockquote p:before,
+.devguide-content article blockquote p:before,
+.opensourceprojects-content article blockquote p:before,
+.aboutus-content article blockquote p:before {
   content: open-quote;
 }
-.readable article blockquote p:after {
+.readable article blockquote p:after,
+.whyus-content article blockquote p:after,
+.tour-content article blockquote p:after,
+.devguide-content article blockquote p:after,
+.opensourceprojects-content article blockquote p:after,
+.aboutus-content article blockquote p:after {
   content: close-quote;
 }
-.readable article img {
+.readable article img,
+.whyus-content article img,
+.tour-content article img,
+.devguide-content article img,
+.opensourceprojects-content article img,
+.aboutus-content article img {
   display: block;
   max-width: 100%;
   margin: 0 auto;
 }
-.readable article ul {
+.readable article ul,
+.whyus-content article ul,
+.tour-content article ul,
+.devguide-content article ul,
+.opensourceprojects-content article ul,
+.aboutus-content article ul {
   padding-left: 1.5em;
   list-style: disc outside none;
 }
-.readable article li {
+.readable article li,
+.whyus-content article li,
+.tour-content article li,
+.devguide-content article li,
+.opensourceprojects-content article li,
+.aboutus-content article li {
   line-height: 1.3;
   margin-bottom: .5em;
 }
@@ -1562,7 +1607,7 @@ button, input[type=button], input[type=submit], button.button, a.button {
 }
 button:hover, button:active, input[type=button]:hover, input[type=button]:active, input[type=submit]:hover, input[type=submit]:active, button.button:hover, button.button:active, a.button:hover, a.button:active {
   background: #929ca6;
-  box-shadow: inset 0px 0px 0px 1px #818d99;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1), inset 0px 0px 0px 1px #818d99;
 }
 
 nav[role=tabs] a {
@@ -1715,36 +1760,10 @@ nav[role=tabs] a.active, nav[role=tabs] a:hover {
 .home-content #open-account #virtual-fields {
   margin: 4px 0;
 }
-.home-content #open-account #virtual-fields input, .home-content #open-account #virtual-fields select, .home-content #open-account #virtual-fields textarea {
-  border-radius: 2px;
-  width: 90%;
-  padding: 0px;
-}
 .home-content #open-account #virtual-fields .acc-input {
   margin: 10px 0;
   width: 100%;
   display: inline-block;
-}
-.home-content #open-account input[type=submit] {
-  color: white;
-  text-decoration: none;
-  text-align: center;
-  line-height: 100%;
-  border-radius: 2px;
-  font-weight: bold;
-  text-transform: uppercase;
-  padding: 10px 15px 10px 15px;
-  display: inline-block;
-  background: #414a80;
-  padding: 9px 10.83333%;
-  border: 0;
-  white-space: normal;
-}
-.home-content #open-account input[type=submit]:visited {
-  color: white;
-}
-.home-content #open-account input[type=submit]:hover, .home-content #open-account input[type=submit]:active {
-  background-color: #15212d;
 }
 .home-content #help clearfix {
   clear: both;

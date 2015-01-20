@@ -1,7 +1,5 @@
 - stash(title => l('API'));
 
-%a{:href => 'http://trade.binary.com/api_en_binary/', :target => '_blank'}= l('Apply for access')
-
 %h1= l('The [_1] API', stash->{website_name})
 
 %p= l('[_1] provides approved business partners with a REST-style application programming interface (API) over the internet. The API provides the following functionality:', stash->{website_name});
@@ -30,7 +28,7 @@
 
 %h2= l('Security')
 
-%h3= l('The [_1] API uses the OAuth2.0 scheme for authenticating users.', stash->{website_name})
+%hp= l('The [_1] API uses the OAuth2.0 scheme for authenticating users.', stash->{website_name})
 
 %p!= l('OAuth2.0 is the emerging internet standard for this purpose. See <a href="http://oauth.net/2" target="_blank">http://oauth.net/2</a> for a formal definition, although we will guide you through the steps relevant to your platform.')
 
@@ -56,3 +54,5 @@
   = l('for detailed coding instructions.')
 
 %img{:src => url_for('images/pages/partnerapi/developer-guide.svg')}
+
+%a{:class="button" :href => 'http://trade.binary.com/api_en_binary/', :target => '_blank'}= l('Apply for access')
