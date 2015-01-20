@@ -926,7 +926,8 @@ th, td {
 .tour-content header,
 .devguide-content header,
 .opensourceprojects-content header,
-.aboutus-content header {
+.aboutus-content header,
+.careers-content header {
   text-align: center;
 }
 .readable article blockquote, .readable article img,
@@ -939,7 +940,9 @@ th, td {
 .opensourceprojects-content article blockquote,
 .opensourceprojects-content article img,
 .aboutus-content article blockquote,
-.aboutus-content article img {
+.aboutus-content article img,
+.careers-content article blockquote,
+.careers-content article img {
   margin: 0 10%;
 }
 .readable article blockquote p,
@@ -947,7 +950,8 @@ th, td {
 .tour-content article blockquote p,
 .devguide-content article blockquote p,
 .opensourceprojects-content article blockquote p,
-.aboutus-content article blockquote p {
+.aboutus-content article blockquote p,
+.careers-content article blockquote p {
   font-weight: bold;
   text-align: center;
   quotes: '\201D' '\201D' '\2019' '\2019';
@@ -957,7 +961,8 @@ th, td {
 .tour-content article blockquote p:before,
 .devguide-content article blockquote p:before,
 .opensourceprojects-content article blockquote p:before,
-.aboutus-content article blockquote p:before {
+.aboutus-content article blockquote p:before,
+.careers-content article blockquote p:before {
   content: open-quote;
 }
 .readable article blockquote p:after,
@@ -965,7 +970,8 @@ th, td {
 .tour-content article blockquote p:after,
 .devguide-content article blockquote p:after,
 .opensourceprojects-content article blockquote p:after,
-.aboutus-content article blockquote p:after {
+.aboutus-content article blockquote p:after,
+.careers-content article blockquote p:after {
   content: close-quote;
 }
 .readable article img,
@@ -973,7 +979,8 @@ th, td {
 .tour-content article img,
 .devguide-content article img,
 .opensourceprojects-content article img,
-.aboutus-content article img {
+.aboutus-content article img,
+.careers-content article img {
   display: block;
   max-width: 100%;
   margin: 0 auto;
@@ -983,7 +990,8 @@ th, td {
 .tour-content article ul,
 .devguide-content article ul,
 .opensourceprojects-content article ul,
-.aboutus-content article ul {
+.aboutus-content article ul,
+.careers-content article ul {
   padding-left: 1.5em;
   list-style: disc outside none;
 }
@@ -992,7 +1000,8 @@ th, td {
 .tour-content article li,
 .devguide-content article li,
 .opensourceprojects-content article li,
-.aboutus-content article li {
+.aboutus-content article li,
+.careers-content article li {
   line-height: 1.3;
   margin-bottom: .5em;
 }
