@@ -1,0 +1,10 @@
+<div class='header-wrapper'>
+    <div class="header">
+        <a class="logo" href="[% request.url_for('/') %]"[% target %]>
+            <img src="[% request.url_for('images/logo.svg') %]"/>
+        </a>
+        [% INCLUDE global/menu.html.tt %]
+        <button class="login-button">[% l("Chart Application") %]</button>
+    </div>
+</div>
+<div class="content-wrapper">

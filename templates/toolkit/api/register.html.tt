@@ -1,0 +1,33 @@
+
+    <h2>[%l('Partner API Registration for')%] [%client.loginid%] [%client.full_name%]</h2>
+    <p class="error-msg">[% results %]</p>
+    <form method="post">
+    <table>
+        <tr>
+            <td>*[%l('Application Name')%]</td>
+            <td> <input name="app_name" size="50" type="text" value="[% my_app.display_name || input.app_name %]" /> </td>
+            <td>[%l('This name will appear to your end-users when they authenticate at binary.com.  Use between 5 and 30 alphanumeric chars.')%]</td>
+        </tr>
+        <tr>
+            <td>*[%l('Callback URL')%]</td>
+            <td> <input name="callback_url" size="50" type="text" value="[% my_app.callbackUrl || input.callback_url%]" /> </td>
+            <td>[%l('This is the Callback URL required by the 3-legged authentication procedure as described in the ')%]<a href="https://www.binary.com/devguide">Developer's Guide</a>.
+                [%l('Must be in a valid URI format')%]</td>
+        </tr>
+    [% IF my_app.credentials %]
+         <tr><td>CLIENT_ID     </td><td>[% my_app.credentials.0.consumerKey %]</td><td>[%l('Your Public Key')%]</td></tr>
+         <tr><td>CLIENT_SECRET </td><td>[% my_app.credentials.0.consumerSecret %]</td><td>[%l('Keep this value secure')%]</td></tr>
+         <tr><td>PROXY_ENDPOINT</td><td>[% proxy_endpoint %]</td><td>[%l('Your base url for all API calls')%]</td></tr>
+    [% END %]
+        <tr>
+            <td colspan="3">
+                <span class="button">
+                    <button class="button" name="register" value="Register" type="submit">[% my_app ? l('Update') : l('Register') %]</button>
+                [% IF my_app %]
+                    <button class="button" name="cancel" value="Cancel" type="submit">[%l('Cancel Registration')%]</button>
+                [% END %]
+                </span>
+            </td>
+        </tr>
+    </table>
+    </form>

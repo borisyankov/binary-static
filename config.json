@@ -1,0 +1,25 @@
+{
+	"website_name": "Binary.com",
+	"display_languages": "EN,ID,RU,ES,FR,PT,DE,ZH_CN,PL,AR",
+	"static": {
+		"url": "https://static.binary.com/",
+		"version": "3.3.1"
+	},
+	"marketing": {
+		"google_tag_manager": "GTM-MZWFF7"
+	},
+	"customer_support": {
+		"email": "helpdesk@binary.com",
+		"telephone": {
+			"Australia": "+61280050136",
+			"Indonesia": "+6285574670313",
+			"Russia": "+788007073860",
+			"Ukraine": "+380893202430",
+			"United Kingdom": "+448081782950 (Toll-free)"
+		}
+	},
+	"binary_js_hash": "4a1e30ac0518559ad8d45214528c3f34",
+	"binary_lib_hash": "c1ee07e3cadd5878a72a83710a297fdd",
+	"binary_data_hash": "37609d7277b9e542d70bd4411ccd068f",
+	"binary_css_hash": "966fe3034ac883c6d19d15022b26f7d8"
+}

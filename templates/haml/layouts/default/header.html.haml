@@ -1,0 +1,19 @@
+.header-wrapper
+  .header
+    %a.logo{:href=>url_for("/")}
+      %img{:src => url_for('images/logo.svg')}
+    = include('layouts/default/menu')
+    %label.language-selector{:for => "lang-pick"}
+      %select#lang-pick.flag
+        - my $languages = available_languages();
+        - my $sel_code = stash->{language};
+        - my $sel_name = $languages->{$sel_code};
+        - foreach (keys %{ $languages }) {
+          - my ($code, $name) = ($_, $languages->{$_});
+          - if ($code ne $sel_code) {
+            %option{:value => $code}= $name
+          - } else {
+            %option{:value => $code, :selected => 'selected'}= $name
+          - }
+        - }
+    %button.login-button= l('Log in')

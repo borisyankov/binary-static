@@ -1,0 +1,7 @@
+- my $content_class = current_route.'-content';
+.content.$content_class
+  != google_tag_tracking_code
+  = include('layouts/default/page_info')
+  = include('layouts/get_started/nav')
+  = content
+  = include('layouts/get_started/more')

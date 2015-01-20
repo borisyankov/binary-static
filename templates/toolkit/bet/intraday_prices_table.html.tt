@@ -1,0 +1,20 @@
+<table>
+    <thead>
+        <tr>
+            <th id="stockname">[% l('Time') %]</th>
+            <th id="open">[% l('Price') %]</th>
+            <th id="low">[% l('Change') %]</th>
+        </tr>
+    </thead>
+    <tbody>
+    [% FOREACH ticker IN ticker_data %]
+        [% IF ticker.price %]
+        <tr>
+            <td>[% ticker.time_start %]</td>
+            <td>[% ticker.price %]</td>
+            <td>[% ticker.change_cell %]</td>
+        </tr>
+        [% END %]
+    [% END %]
+    </tbody>
+</table>

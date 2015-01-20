@@ -1,0 +1,39 @@
+<div id="bet_cal_buy" class="div_wrapper default"[%- IF fields.start_hidden -%] style="display:none"[%- END -%]>
+<form class="orderform" id="orderform_[% fields.display_id %]" name="orderform" action="[% fields.url %]" method="post" autocomplete="off">
+    <input type="hidden" name="display_id" value="[% fields.display_id %]" />
+    <input type="hidden" name="H" value="[% fields.H %]" />
+    <input type="hidden" name="L" value="[% fields.L %]" />
+    <input type="hidden" name="type" value="[% fields.bet_type %]" />
+    <input type="hidden" name="underlying_symbol" value="[% fields.underlying %]" />
+    <input type="hidden" name="time" value="[% fields.time %]" />
+    <input type="hidden" name="currency" value="[% fields.currency %]" />
+    <input type="hidden" name="controller_action" value="[% IF fields.is_approved_attorney %]batch_buy[% ELSE %]buy[% END %]" />
+    <input type="hidden" name="date_start" value="[% fields.date_start %]" />
+    <input type="hidden" name="qty" value="1" />
+    <input type="hidden" name="comment" value=" " />
+    <input type="hidden" name="batch" value="no" />
+    <input type="hidden" name="amount_type" value="[% fields.amount_type %]" />
+    <input type="hidden" name="payout" value="[% fields.payout %]" />
+    <input type="hidden" name="prob" value="[% fields.prob %]" />
+    <input type="hidden" name="opposite_prob" value="[% fields.bid_prob %]" />
+    <input type="hidden" name="price" value="[% fields.price %]" />
+    <input type="hidden" name="barrier_type" value="[% fields.barrier_type %]" />
+    <input type="hidden" name="id" value="[% fields.id %]" />
+    <input type="hidden" name="l" value="[% fields.l %]" />
+    <input type="hidden" name="expiry_type" value="[% fields.expiry_type %]" />
+    [% IF fields.expiry_date %]
+    <input type="hidden" name="expiry_date" value="[% fields.expiry_date %]" />
+    [% END %]
+    [% IF fields.expiry_time %]
+    <input type="hidden" name="expiry_time" value="[% fields.expiry_time %]" />
+    [% END %]
+
+    <div class="form_button">
+        [% IF fields.is_approved_attorney %]
+        <h3>Granter IDs:</h3>
+        <textarea class="granter_loginids_input" name="granter_loginids" rows="5" cols="8">[% fields.granter_loginids %]</textarea>
+        [% END %]
+        <span class="button"><button name="btn_buybet_[% fields.display_id %]" class="button buy_bet_button" type="submit" value="[% fields.button_text %]">[% fields.button_text %]</button></span>
+    </div>
+</form>
+</div>

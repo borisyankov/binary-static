@@ -1,0 +1,69 @@
+<div class="bet_confirm_wrapper">
+    <h3 id="bet-confirm-header">[% l('Trade Confirmation') %]</h3>
+    <p id="bet-confirm-exp">[% l('You have purchased the following contract:') %]</p>
+    <div id='tick_info' style="display:none">
+            [% WRAPPER 'container/full_table.html.tt' table_id="confirmation_table_second" %]
+            <tr>
+                <th>[% l('Entry spot') %]</th><td id='entry'></td>
+                <th>[% l('Exit spot') %]</th><td id='exit'></td>
+            </tr>
+            [% END %]
+    </div>
+
+    <div class="bet_confirm_desc">
+        [% longcode %]
+    </div>
+
+    <div id='confirmation_table' class='grd-parent grd-grid-12 grd-row-padding'>
+        <span class="grd-grid-4 grd-no-col-padding standin">
+            <span class="grd-grid-12 grd-no-col-padding standin">[% l('Potential Payout') %]</span>
+            <span class="grd-grid-12 grd-with-top-padding standin">[% payout %]</span>
+        </span>
+        <span class="grd-grid-4 grd-no-col-padding standout with_left_border with_right_border">
+            <span class="grd-grid-12 grd-no-col-padding standout"><span class='price'>[% l('Total Cost') %]</span></span>
+            <span class="grd-grid-12 grd-with-top-padding standout"><span class='price'>[% price %]</span></span>
+        </span>
+        <span class="grd-grid-4 grd-no-col-padding standin">
+            <span class="grd-grid-12 grd-no-col-padding standin">[% l('Potential Profit') %]</span>
+            <span class="grd-grid-12 grd-with-top-padding standin">[% win %]</span>
+        </span>
+        [% IF notes %]
+        <span class="notes">
+            <span class="notes" colspan="3">
+            [% FOREACH note IN notes %]
+                [% l(note) %]<br>
+            [% END %]
+            </span>
+        </span>
+        [% END %]
+    </div>
+    <div id='contract-outcome-details' class="grd-row-padding" style="display:none">
+        <span class="grd-grid-4 grd-no-col-padding standin">
+            <span class="grd-grid-12 grd-no-col-padding standin">[% l('Buy Price') %]</span>
+            <span id="contract-outcome-buyprice" class="grd-grid-12 grd-with-top-padding standin">[% price %]</span>
+        </span>
+        <span class="grd-grid-4 grd-no-col-padding standin with_left_border with_right_border">
+            <span class="grd-grid-12 grd-no-col-padding standin">[% l('Final Price') %]</span>
+            <span id="contract-outcome-payout" class="grd-grid-12 grd-with-top-padding standin"></span>
+        </span>
+        <span class="grd-grid-4 grd-no-col-padding standin">
+            <span id="contract-outcome-label" class="grd-grid-12 grd-no-col-padding standout profit">[% l('Profit') %]</span>
+            <span id="contract-outcome-profit" class="grd-grid-12 grd-with-top-padding standout">[% win %]</span>
+        </span>
+    </div>
+
+    [% IF transaction_msg %]
+        <span class="trade_ref grd-grid-12 grd-row-padding">[% transaction_msg%]</span>
+    [% END %]
+    [% IF contract_visualization %]
+        [% contract_visualization %]
+    [% END %]
+
+    [% IF google_tag_manager %]
+        [% google_tag_manager %]
+    [% END %]
+
+    [% IF balance_amount %]
+        <div class="account_balance">[% l('Account balance: ') %][% currency %] [% balance_amount %]</div>
+    [% END %]
+</div>

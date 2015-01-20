@@ -1,0 +1,49 @@
+- stash(
+-   keyword => l('binary options, forex, forex trading, online trading, financial trading, binary trading, index trading, trading indices, forex trades, trading commodities, binary options strategy, binary broker, binary bet, binary options trading platform, binary strategy, finance, stocks, investment, trading'),
+-   description => l('[_1] gives everyone an easy and exciting way to participate in the financial markets. Trade with as little as $1 USD on major currencies, indices and commodities.',stash('website_name')),
+- );
+
+%head
+  - my $route = current_route;
+  - my $curr_lang = stash->{language};
+  - if ($route eq "home" and $curr_lang eq 'EN') {
+    %script
+      != "function utmx_section(){}function utmx(){}(function(){var k='73768344-8',d=document,l=d.location,c=d.cookie; if(l.search.indexOf('utm_expid='+k)>0)return; function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write('<sc'+'ript src=\"'+'http'+(l.protocol=='https:'?'s://ssl':'://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+'\" type=\"text/javascript\" charset=\"utf-8\"><\/sc'+'ript>')})();</script><script>utmx('url','A/B');"
+  - }
+
+  %meta{:charset => "utf-8"}
+  %meta{:name => "description", :content => stash('description')}
+  %meta{:name => "keywords" :content => encode_html_text(stash('keyword'))}
+  %meta{:name => "author", :content => stash('website_name')}
+  %meta{:name => "dcterms.rightsHolder" :content => stash('website_name')}
+  %meta{:name => "dcterms.rights", :content => stash('website_name')}
+  %meta{:name => "google-site-verification", :content => "roReCEK-wNa1EMA6ZM9a4zCOQOMqxfJjvfsZMC9qh_k"}
+  %meta{:name => "viewport", :content => "width=device-width, initial-scale=1"}
+  %meta{:property => "og:title", :content=>"Binary.com"}
+  %meta{:property => "og:type", :content=>"website"}
+  %meta{:property => "og:image", :content=>url_for('images/common/og_image.gif')}
+
+  %title= stash('website_name') . (stash('title') ? " : ".stash('title'): '')
+
+%script{:src => "//use.typekit.net/bfu3ywb.js"}
+:javascript
+  try{Typekit.load();}catch(e){}
+
+- foreach my $css (css()->files) {
+    %link{:rel=>"stylesheet" :href=> $css}
+- }
+
+  %link{:rel=>"icon" :type=>"image/png" :href=>url_for('images/common/favicon_1.ico')}
+  %link{:rel=>"shortcut icon" :href=>url_for('images/common/favicon_1.ico')}
+  %link{:rel=>"apple-touch-icon" :href=>url_for('images/common/apple-touch-icon-57x57_1.png')}
+  %link{:rel=>"apple-touch-icon" :sizes=>"72x72" :href=>url_for('images/common/apple-touch-icon-72x72_1.png')}
+  %link{:rel=>"apple-touch-icon" :sizes=>"114x114" :href=>url_for('images/common/apple-touch-icon-114x114_1.png')}
+
+  - my $languages = available_languages();
+  - my $path = get_current_path();
+  - foreach (keys %{ $languages }) {
+    - my $complete_path = $path . "?l=" . $_;
+    %link{:rel=>"alternate", :hreflang=>$_, :href=>$complete_path}
+  - }
+
+  = include('layouts/default/javascripts')

@@ -1,0 +1,13 @@
+- stash(title => l('Login'));
+
+%form.thin-form.login-form{:action => url_for('/login'), :method => "post", :novalidate => ""}
+  %img.form-logo{:alt => "Binary", :src => "/images/logo.svg"}
+  %h3{:style => "text-align: center"}= l('Sign in to your account')
+  %p
+    %input{:name => "loginid", :placeholder => "#{l('Login ID')}", :type => "text"}
+  %p
+    %input{:name => "password", :placeholder => "#{l('Password')}", :type => "password"}
+  %p
+    %button.important= l('Sign in')
+  %p
+    %a{:href => "#"}= l('Forgot Password?')

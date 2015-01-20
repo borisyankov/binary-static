@@ -1,0 +1,75 @@
+[% MACRO change_type(change) IF change < 0 -%]
+lower
+[%- ELSIF change > 0 -%]
+higher
+[%- ELSE -%]
+unchanged
+[%- END -%]
+[% MACRO change_percent(change,final) GET (100 * change / ( final - change )) FILTER format('%.2f%%') %]
+
+<table>
+    <thead>
+        <tr>
+            <th colspan=7>[% l('Daily Prices') %]</th>
+        </tr>
+        <tr>
+            <th>[% l('Date') %]</th>
+            <th>[% l('Open') %]</th>
+            <th>[% l('High') %]</th>
+            <th>[% l('Low') %]</th>
+            <th>[% l('Close') %]</th>
+            <th><abbr rel="tooltip" title="[% about_change %]">[% l('Change') %]</abbr></th>
+            <th>[% l('Rel Change') %]</th>
+        </tr>
+    </thead>
+    <tbody>
+        [% FOREACH ohlc IN ohlc_table %]
+        <tr>
+            <td>[% ohlc.date %]</td>
+            <td>[% ohlc.open %]</td>
+            <td>[% ohlc.high %]</td>
+            <td>[% ohlc.low %]</td>
+            <td>[% ohlc.close %]</td>
+            <td class="[% change_type(ohlc.close_change) %]">[% ohlc.close_change %]</td>
+            <td class="[% change_type(ohlc.close_change) %]">[% change_percent(ohlc.close_change,ohlc.close) %]&nbsp;<span class="market_[% change_type(ohlc.close_change) %]"></span></td>
+        </tr>
+        [% END %]
+    </tbody>
+</table>
+
+<table>
+    <thead>
+        <tr>
+            <th colspan=7>[% l('Summary') %]</th>
+        </tr>
+        <tr>
+            <th>[% l('Statistic') %]</th>
+            <th>[% l('Open') %]</th>
+            <th>[% l('High') %]</th>
+            <th>[% l('Low') %]</th>
+            <th>[% l('Close') %]</th>
+            <th><abbr rel="tooltip" title="[% summary_change %]">[% l('Average Change') %]</abbr></th>
+            <th>[% l('Rel Change') %]</th>
+        </tr>
+    </thead>
+    <tbody>
+    [% FOREACH row IN [['max',l('Maximum')],['p2sigma',l('Upper Band'),upper_band],['avg',l('Average')],['m2sigma',l('Lower Band'),lower_band],['min',l('Minimum')]] %]
+        <tr>
+            <td>
+            [% stat = statistics.item(row.0) %]
+            [% IF row.2 %]
+                <abbr rel="tooltip" title="[% row.2 %]">[% row.1 %]</abbr>
+            [% ELSE %]
+                [% row.1 %]
+            [% END %]
+            </td>
+            <td>[% stat.item('open') %]</td>
+            <td>[% stat.item('high') %]</td>
+            <td>[% stat.item('low') %]</td>
+            <td>[% stat.item('close') %]</td>
+            <td class="[% change_type(stat.item('abs_change')) %]">[% stat.item('abs_change') %]</td>
+            <td class="[% change_type(stat.item('rel_change')) %]">[% stat.item('rel_change') %]%&nbsp;<span class="market_[% change_type(stat.item('rel_change')) %]"></span></td>
+        </tr>
+    [% END %]
+    </tbody>
+</table>

@@ -1,0 +1,143 @@
+- stash(title => l('API Developer Guide'));
+
+%h1= l('API Developer Guide')
+
+%h2(id=>'registration')= l('Registration')
+
+%p
+  = l('You must already have a valid "Real money account" with Binary.com.')
+  = l('It is not necessary to actually trade or to deposit funds to your account.')
+  = l('You can open your account')
+  %a{:href=>url_for('/linkto_acopening.cgi?actype=real')}= l('here')
+    = '.'
+%p
+  = l('After logging into binary.com, you can register as an API Developer')
+  %a{:href=>url_for('/register-api.cgi')}= l('here')
+  = '.'
+  = l('There may be a delay of up to 24 hours before your registration becomes valid.')
+
+%h2(id=>'authflow')= l('OAuth2 Authentication Using Auth-Code Flow')
+
+%p
+  %em= l("This method is for web applications which are hosted on their own web-server. It is the most secure way of protecting your organisation's identity as the owner of your application.")
+%p= l('At a suitable stage in your application, when authorisation by a [_1] end-user is required, re-direct the end-user\'s browser to this URL:', stash->{website_name})
+
+code!= 'GET https://PROXY_ENDPOINT/oauth/authorize?response_type=code&client_id=CLIENT_ID&callback_url=CALLBACK_URL&scope=S110&state=STATE'
+
+%p= l('where')
+
+%ul.bullet
+  %li= l('[_1] will be provided to you on registration.', 'PROXY_ENDPOINT')
+  %li= l('[_1] will be provided to you on registration.', 'CLIENT_ID')
+  %li= l('[_1] is the page in your application that will handle the return step.  This URL must be registered with us in advance.', 'CALLBACK_URL')
+  %li= l('[_1] is for your own internal reference; optional.', 'STATE')
+
+%p!= l('After the user authenticates to [_1]; their browser will be re-directed to your callback handler with a call like this:', stash->{website_name})
+
+code!= 'GET https://CALLBACK_URL?code=AUTHCODE&state=STATE&scope=SCOPE'
+
+%p= l('where')
+
+%ul.bullet
+  %li= l('[_1] is a new OAuth2 authorization code.', 'AUTHCODE');
+  %li= l('[_1] is the scope level that was granted.', 'SCOPE');
+
+%p!= l('Your callback handler now swaps the new authorization code for a session token with this call:')
+
+code!= 'POST https://PROXY_ENDPOINT/oauth/accesstoken_authcode'
+
+%p= l('with this [_1] data:', 'POST')
+
+%ul.bullet
+  %li= 'code=CODE'
+  %li= 'scope=SCOPE'
+  %li= 'redirect_uri=CALLBACK_URL'
+  %li= 'grant_type=authorization_code'
+
+%p= l('and with this HTTP header')
+
+%ul.bullet
+  %li= l('Authorization: Basic [_1]', 'ENCODED')
+
+%p= l('where')
+  %ul.bullet
+    %li!= l('[_1] is a Base64-encoding of [_2].', 'ENCODED', 'CLIENT_ID:CLIENT_SECRET')
+    %li!= l('[_1] will be provided to you on registration.', 'CLIENT_SECRET')
+
+%p!= l('The [_1] will return a JSON structure which includes access_token along with several other useful attributes.', 'POST')
+
+%h2(id=>'implflow')= l('OAuth2 Authentication Using Implicit Flow')
+
+%p
+  %em= l("This method is suited to JavaScript-only (typically mobile-embedded) applications. Use this method when you do not have your own application server.")
+
+%p= l('At a suitable stage in your application, when authorisation by a [_1] end-user is required, re-direct the end-user\'s browser to this URL:', stash->{website_name})
+
+code!= 'GET https://PROXY_ENDPOINT/oauth/authorize?response_type=token&client_id=CLIENT_ID&callback_url=CALLBACK_URL&scope=S110&state=STATE'
+
+%p= l('where')
+
+%ul.bullet
+  %li= l('[_1] will be provided to you on registration.', 'PROXY_ENDPOINT')
+  %li= l('[_1] will be provided to you on registration.', 'CLIENT_ID')
+  %li= l('[_1] is the page in your application that will handle the return step.  This URL must be registered with us in advance.  For mobile apps, this could for example use a custom URI scheme.', 'CALLBACK_URL')
+  %li= l('[_1] is for your own internal reference; optional.', 'STATE')
+
+%p!= l('After the user authenticates to [_1]; their browser will be re-directed to your callback handler with a call like this:', stash->{website_name})
+
+code!= 'GET https://CALLBACK_URL?state=STATE&scope=SCOPE&expires_in=EXPIRES&access_token=ACCESSTOKEN'
+
+%p= l('where')
+
+%ul.bullet
+  %li= l('[_1] is a new OAuth2 access token.', 'ACCESSTOKEN');
+  %li= l('[_1] is the lifetime in seconds of the new access token.', 'EXPIRES');
+  %li= l('[_1] is the scope level that was granted.', 'SCOPE');
+
+%p= l('You must now strip ACCESSTOKEN from the redirection URL as described in the literature for Implicit Grants.')
+
+%h2(id=>'callserv')= l('Calling a Service')
+
+%p!= l('With a current access_token it is now possible to make calls to an API Service.  Such a call looks like this: ')
+
+code!= 'GET https://PROXY_ENDPOINT/SERVICE/PARAMS'
+
+%p= l('with this HTTP header')
+
+%ul.bullet
+  %li!= l('Authorization: Bearer [_1]', 'ACCESSTOKEN')
+
+%p= l('where')
+
+%ul.bullet
+  %li!= l('[_1] is the same endpoint used during authentication.', 'PROXY_ENDPOINT')
+  %li!= l('[_1] was returned by the authentication procedure.', 'ACCESS_TOKEN')
+  %li!= l('[_1] is any binary.com API service e.g. "/markets".', 'SERVICE')
+  %li!= l('[_1] are the REST-style parameters to the service e.g. "/forex".', 'PARAMS')
+
+%p!= l('This call will return the same JSON structure that can be previewed from the API Console Facility.')
+
+%h2(id=>'renewal')= l('OAuth2 Token Renewal')
+
+%p
+  %em= l("The access-token retrieved earlier has a limited lifetime.  In the case of Auth-Code Flow only, it can be renewed.")
+
+%p= l('The JSON structure which supplied the access_token also included a refresh_token.  Supply this in the following call:')
+
+code!= 'POST https://PROXY_ENDPOINT/oauth/refresh_accesstoken'
+
+%p= l('with this [_1] data:', 'POST')
+
+%ul.bullet
+  %li= 'grant_type=refresh_token'
+  %li= 'refresh_token=REFRESH_TOKEN'
+
+%p= l('and with this (same as before) HTTP header')
+  %ul.bullet
+    %li= l('Authorization: Basic [_1]', 'ENCODED')
+
+%p= l('where')
+  %ul.bullet
+    %li!= l('[_1] was found in the same JSON structure which supplied the original access_token.', 'REFRESH_TOKEN')
+
+%p!= l('The [_1] will return a JSON structure which includes a new access_token along with several other useful attributes relevant to the renewal.', 'POST')

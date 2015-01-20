@@ -1,0 +1,17 @@
+.sidebar-left
+  %ul.nav
+    - my @nav = ({route => '/get-started/what-is-binary-trading',       text => l('Why choose binary trading?')},
+    -            {route => '/get-started/types-of-trades',              text => l('Types of trades')},
+    -            {route => '/get-started/binary-options-basics',        text => l('Binary options basics')},
+    -            {route => '/get-started/benefits-of-trading-binaries', text => l('Benefits of binary trading')},
+    -            {route => '/get-started/how-to-trade-binaries',        text => l('How to trade binaries?')},
+    -            {route => '/get-started/random-markets',               text => l('How to trade the random markets?')},
+    -            {route => '/smart-indices',                            text => l('Smart indices')},
+    -            {route => '/get-started/beginners-faq',                text => l("FAQ")},
+    -            {route => '/get-started/glossary',                     text => l('Glossary')});
+    - foreach my $item (@nav) {
+      - my ($route, $text) = ($item->{route}, $item->{text});
+      - my $class = ($route eq current_route) ? 'selected' : '';
+      %li.$class
+        %a{:href=>url_for($route), :class => 'pjaxload'}= $text
+    - }
