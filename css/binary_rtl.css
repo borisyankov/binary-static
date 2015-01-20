@@ -457,7 +457,7 @@ body {
 
 .content-wrapper {
   flex: 1;
-  margin-top: 3em;
+  margin: 3em 0;
 }
 
 .header-wrapper, .content-wrapper, .footer-wrapper {
@@ -582,6 +582,7 @@ body {
 
 .login-button {
   margin: .5em 0;
+  line-height: 0;
 }
 
 .logo {
@@ -1411,21 +1412,6 @@ abbr {
   padding: 10px;
 }
 
-button:focus, input:focus, a:focus, select:focus {
-  outline: none;
-}
-
-.login-button {
-  background: inherit;
-  color: white;
-  border: 2px solid;
-}
-.login-button:hover {
-  color: #44484c;
-  background: white;
-  border-color: white;
-}
-
 .msg-button {
   background: inherit;
 }
@@ -1564,6 +1550,22 @@ button, input[type=button], input[type=submit], button.button, a.button {
 button:hover, button:active, input[type=button]:hover, input[type=button]:active, input[type=submit]:hover, input[type=submit]:active, button.button:hover, button.button:active, a.button:hover, a.button:active {
   background: #929ca6;
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1), inset 0px 0px 0px 1px #818d99;
+}
+
+button:focus, input:focus, a:focus, select:focus {
+  outline: none;
+}
+
+.login-button {
+  background: inherit;
+  color: white;
+  border: 2px solid;
+}
+.login-button:hover {
+  color: #44484c;
+  background: white;
+  border-color: white;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
 }
 
 nav[role=tabs] a {
