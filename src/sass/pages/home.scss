@@ -101,24 +101,12 @@
         font-size: $FONT_SIZE_S;
     }
     #virtual-fields {
-        input, select, textarea {
-            border-radius: $BORDER_RADIUS;
-            width: 90%;
-            padding: 0px;
-        }
         margin: 4px 0;
         .acc-input {
             margin: 10px 0;
             width: 100%;
             display: inline-block;
         }
-    }
-    input[type=submit] {
-      @include link-button;
-      background: $COLOR_BLUE;
-      padding: 9px 10.83333%;
-      border: 0;
-      white-space: normal;
     }
   }
   #help {

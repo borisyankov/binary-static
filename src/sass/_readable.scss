@@ -2,8 +2,14 @@
     max-width: 700px;
 }
 
-.readable {
-    
+.readable,
+.whyus-content,
+.tour-content,
+.devguide-content,
+.opensourceprojects-content,
+.aboutus-content
+{
+
     header {
         text-align: center;
     }
