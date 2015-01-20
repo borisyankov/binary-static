@@ -8,8 +8,7 @@
   = include('layouts/default/head')
   - my $lang = stash->{language};
   %body.$lang
-    #page-wrapper
-      = include('layouts/default/header')
-      .content-wrapper
-        = include('layouts/get_started/content')
-      = include('layouts/default/footer')
+    = include('layouts/default/header')
+    .content-wrapper
+      = include('layouts/get_started/content')
+    = include('layouts/default/footer')

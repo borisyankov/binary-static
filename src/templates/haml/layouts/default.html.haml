@@ -9,8 +9,7 @@
   - my $body_id = current_route;
   - my $lang = stash->{language};
   %body#$body_id.$lang
-    #page-wrapper
-      = include('layouts/default/header')
-      .content-wrapper
-        = include('layouts/default/content')
-      = include('layouts/default/footer')
+    = include('layouts/default/header')
+    .content-wrapper
+      = include('layouts/default/content')
+    = include('layouts/default/footer')
