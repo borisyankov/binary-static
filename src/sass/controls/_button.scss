@@ -21,3 +21,19 @@ button, input[type=button], input[type=submit], button.button, a.button {
                     inset 0px 0px 0px 1px $COLOR_NAV_BORDER;
     }
 }
+
+button:focus, input:focus, a:focus, select:focus {
+    outline: none;
+}
+
+.login-button {
+    background: inherit;
+    color: $COLOR_WHITE;
+    border: 2px solid;
+    &:hover {
+        color: $COLOR_DARK_GRAY;
+        background: $COLOR_WHITE;
+        border-color: $COLOR_WHITE;
+        box-shadow: 0 2px 0 rgba(0, 0, 0, .1);
+    }
+}

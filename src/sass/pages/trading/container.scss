@@ -223,7 +223,6 @@ table.half-2 {
       padding: 0.5em;
     }
     a.button {
-      @include link-button;
       display: block;
       width: 6em;
       margin: 0 auto;

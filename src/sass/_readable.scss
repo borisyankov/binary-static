@@ -1,4 +1,5 @@
 .readable,
+.whyus-content,
 .careers-content,
 .devguide-content,
 .grouphistory-content,
@@ -8,9 +9,7 @@
 .smartindices-content,
 .tour-content,
 .whitelabels-content,
-.aboutus-content,
-
-partnerapi-content
+.aboutus-content
 {
     max-width: 700px;
 
@@ -18,39 +17,37 @@ partnerapi-content
         text-align: center;
     }
 
-    article {
-        blockquote, img {
-            margin: 0 10%;
+    blockquote, img {
+        margin: 0 10%;
+    }
+
+    blockquote p {
+        font-weight: bold;
+        text-align: center;
+        quotes: '\201D' '\201D' '\2019' '\2019';
+
+        &:before {
+            content: open-quote;
         }
 
-        blockquote p {
-            font-weight: bold;
-            text-align: center;
-            quotes: '\201D' '\201D' '\2019' '\2019';
-
-            &:before {
-                content: open-quote;
-            }
-
-            &:after {
-                content: close-quote;
-            }
+        &:after {
+            content: close-quote;
         }
+    }
 
-        img {
-            display: block;
-            max-width: 100%;
-            margin: 0 auto;
-        }
+    img {
+        display: block;
+        max-width: 100%;
+        margin: 0 auto;
+    }
 
-        ul {
-            padding-left: 1.5em;
-            list-style: disc outside none;
-        }
+    ul {
+        padding-left: 1.5em;
+        list-style: disc outside none;
+    }
 
-        li {
-            line-height: 1.3;
-            margin-bottom: .5em;
-        }
+    li {
+        line-height: 1.3;
+        margin-bottom: .5em;
     }
 }

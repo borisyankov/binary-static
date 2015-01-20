@@ -50,7 +50,6 @@
   }
   .open-account {
     a {
-      @include link-button;
       display: block;
     }
   }
@@ -74,27 +73,8 @@
     p { margin-bottom: 1em; }
     padding: 20px;
     a {
-      @include link-button;
       display: block;
     }
-  }
-}
-
-@mixin link-button {
-  color: $COLOR_WHITE;
-  text-decoration: none;
-  text-align: center;
-  line-height:100%;
-  border-radius: $BORDER_RADIUS;
-  font-weight: bold;
-  text-transform: uppercase;
-  padding: 10px 15px 10px 15px;
-  display: inline-block;
-  &:visited {
-    color: $COLOR_WHITE;
-  }
-  &:hover, &:active {
-    background-color: $COLOR_DARK_BLUE;
   }
 }
 

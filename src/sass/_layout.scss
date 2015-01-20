@@ -1,3 +1,8 @@
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
 html, body {
     min-height: 100vh;
 }
@@ -18,7 +23,7 @@ body {
 
 .content-wrapper {
     flex: 1;
-    margin-top: 3em;
+    margin: 3em 0;
 }
 
 .header-wrapper, .content-wrapper, .footer-wrapper {
@@ -110,7 +115,7 @@ body {
 }
 
 .nav2nd a {
-    padding: 1em;    
+    padding: 1em;
 }
 
 .nav1st li:hover > ul {
@@ -145,6 +150,7 @@ body {
 
 .login-button {
     margin: .5em 0;
+    line-height: 0;
 }
 
 .logo {

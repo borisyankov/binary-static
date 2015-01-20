@@ -1,12 +1,5 @@
 /* DO NOT include any rules for specific pages in this file. */
 
-*,
-*:after,
-*:before {
-    box-sizing: border-box;
-    transition: all .3;
-
-}
 html {
     font-size: 17px;
     // base font-size, used with rem for responsive typography

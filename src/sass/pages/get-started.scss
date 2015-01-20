@@ -93,7 +93,6 @@
     margin-top: 20px;
     padding-top: 10px;
     a {
-      @include link-button;
       padding: 0.4375em 3.19149%;
     }
     a.disabled {

@@ -1,33 +1,39 @@
+*,
+*:after,
+*:before {
+    transition: opacity .2s, color .2s, background .2s;
+}
+
 @keyframes spinning {
-  from {transform: rotate(0deg);}
-  to {transform: rotate(360deg);}
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
 }
 @-webkit-keyframes spinning {
-  from {transform: rotate(0deg);}
-  to {transform: rotate(360deg);}
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
 }
 .progress-spinner {
-    -webkit-animation: spinning 1s infinite linear;
-    animation: spinning 1s infinite linear;
+    -webkit-animation: spinning .2s * 5 infinite linear;
+    animation: spinning .2s * 5 infinite linear;
 }
 
 .overlay {
     opacity: 1;
-    transition: opacity .3s, height 0;
+    transition: opacity .2s, height 0;
 }
 
 .overlay.hidden {
     opacity: 0;
-    transition: opacity .3s, height 0 .3s;
+    transition: opacity .2s, height 0 .2s;
     height: 0;
 }
 
 .overlay .dialog {
-    transition: transform .3s, height 0;
+    transition: transform .2s, height 0;
     transform: scale(1);
 }
 
 .overlay.hidden .dialog {
-    transition: transform .3s, height 0 .3s;
+    transition: transform .2s, height 0 .2s;
     transform: scale(.9);
 }

@@ -35,21 +35,6 @@
     padding: 10px;
 }
 
-button:focus, input:focus, a:focus, select:focus {
-    outline: none;
-}
-
-.login-button {
-    background: inherit;
-    color: $COLOR_WHITE;
-    border: 2px solid;
-    &:hover {
-        color: $COLOR_DARK_GRAY;
-        background: $COLOR_WHITE;
-        border-color: $COLOR_WHITE;
-    }
-}
-
 .msg-button {
     background: inherit;
     &:hover {
