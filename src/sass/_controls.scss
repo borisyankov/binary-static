@@ -39,12 +39,12 @@ button:focus, input:focus, a:focus, select:focus {
     outline: none;
 }
 
-.login-button, #login-fields input[type=submit] {
+.login-button {
     background: inherit;
     color: $COLOR_WHITE;
     border: 2px solid;
     &:hover {
-        color: $COLOR_ORANGE;
+        color: $COLOR_DARK_GRAY;
         background: $COLOR_WHITE;
         border-color: $COLOR_WHITE;
     }
