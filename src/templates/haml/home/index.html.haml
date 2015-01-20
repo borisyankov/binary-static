@@ -68,20 +68,20 @@
           %input{:type => 'hidden', :name => 'l', :value => $lang}
           %input.button{:id => 'btn_registration',:type => 'submit', :value => stash('createacc')}
       .grd-with-padding.grd-grid-6.grd-hide-mobile.grd-hide-phablet
-        %img.responsive{:src => url_for('images/pages/why-us/why-us-proven-record_1.svg')}
+        %img{:src => url_for('images/pages/why-us/why-us-proven-record_1.svg')}
       .grd-with-padding.grd-grid-6.grd-hide-mobile.grd-hide-phablet
-        %img.responsive{:src => url_for('images/pages/why-us/why-us-GBAF-award-2012.svg')}
+        %img{:src => url_for('images/pages/why-us/why-us-GBAF-award-2012.svg')}
 #help
   .grd-container.grd-hide-mobile
     .grd-row-padding
       #trader-types.grd-grid-2.grd-hide-phablet
         #new-trader.center-aligned
-          %img.responsive{:src => url_for('images/pages/home/new-trader.svg')}
+          %img{:src => url_for('images/pages/home/new-trader.svg')}
           %h3= l('New To Trading?')
           %span
             %a.learn-more.pjaxload{:href => url_for('/get-started')}= l('Learn More')
         #experienced-trader.center-aligned
-          %img.responsive{:src => url_for('images/pages/home/experienced-trader.svg')}
+          %img{:src => url_for('images/pages/home/experienced-trader.svg')}
           %h3= l('Experienced Traders')
           %span
             %a.learn-more.pjaxload{:href => url_for('/why-us')}= l('Learn More')
@@ -89,11 +89,11 @@
         .grd-parent.grd-grid-9.grd-grid-phablet-12
           .grd-grid-12.grd-parent
             #how-it-works-1.grd-grid-4.grd-no-gutter-right
-              %img.responsive{:src => url_for('images/pages/home/step-1.svg')}
+              %img{:src => url_for('images/pages/home/step-1.svg')}
             #how-it-works-2.grd-grid-4.grd-no-gutter-right
-              %img.responsive{:src => url_for('images/pages/home/step-2.svg')}
+              %img{:src => url_for('images/pages/home/step-2.svg')}
             #how-it-works-3.grd-grid-4.grd-no-gutter-right
-              %img.responsive{:src => url_for('images/pages/home/step-3.svg')}
+              %img{:src => url_for('images/pages/home/step-3.svg')}
           .grd-grid-12.grd-parent
             .grd-grid-4.grd-no-gutter-right
               %p= l('Set your position')
