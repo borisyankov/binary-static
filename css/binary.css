@@ -917,91 +917,146 @@ th, td {
     }
 }
 */
-.readable, .narrow {
+.readable,
+.careers-content,
+.devguide-content,
+.grouphistory-content,
+.opensourceprojects-content,
+.partnerapi-content,
+.responsibletrading-content,
+.smartindices-content,
+.tour-content,
+.whitelabels-content,
+.aboutus-content,
+partnerapi-content {
   max-width: 700px;
 }
-
 .readable header,
-.whyus-content header,
-.tour-content header,
+.careers-content header,
 .devguide-content header,
+.grouphistory-content header,
 .opensourceprojects-content header,
+.partnerapi-content header,
+.responsibletrading-content header,
+.smartindices-content header,
+.tour-content header,
+.whitelabels-content header,
 .aboutus-content header,
-.careers-content header {
+partnerapi-content header {
   text-align: center;
 }
 .readable article blockquote, .readable article img,
-.whyus-content article blockquote,
-.whyus-content article img,
-.tour-content article blockquote,
-.tour-content article img,
+.careers-content article blockquote,
+.careers-content article img,
 .devguide-content article blockquote,
 .devguide-content article img,
+.grouphistory-content article blockquote,
+.grouphistory-content article img,
 .opensourceprojects-content article blockquote,
 .opensourceprojects-content article img,
+.partnerapi-content article blockquote,
+.partnerapi-content article img,
+.responsibletrading-content article blockquote,
+.responsibletrading-content article img,
+.smartindices-content article blockquote,
+.smartindices-content article img,
+.tour-content article blockquote,
+.tour-content article img,
+.whitelabels-content article blockquote,
+.whitelabels-content article img,
 .aboutus-content article blockquote,
 .aboutus-content article img,
-.careers-content article blockquote,
-.careers-content article img {
+partnerapi-content article blockquote,
+partnerapi-content article img {
   margin: 0 10%;
 }
 .readable article blockquote p,
-.whyus-content article blockquote p,
-.tour-content article blockquote p,
+.careers-content article blockquote p,
 .devguide-content article blockquote p,
+.grouphistory-content article blockquote p,
 .opensourceprojects-content article blockquote p,
+.partnerapi-content article blockquote p,
+.responsibletrading-content article blockquote p,
+.smartindices-content article blockquote p,
+.tour-content article blockquote p,
+.whitelabels-content article blockquote p,
 .aboutus-content article blockquote p,
-.careers-content article blockquote p {
+partnerapi-content article blockquote p {
   font-weight: bold;
   text-align: center;
   quotes: '\201D' '\201D' '\2019' '\2019';
 }
 .readable article blockquote p:before,
-.whyus-content article blockquote p:before,
-.tour-content article blockquote p:before,
+.careers-content article blockquote p:before,
 .devguide-content article blockquote p:before,
+.grouphistory-content article blockquote p:before,
 .opensourceprojects-content article blockquote p:before,
+.partnerapi-content article blockquote p:before,
+.responsibletrading-content article blockquote p:before,
+.smartindices-content article blockquote p:before,
+.tour-content article blockquote p:before,
+.whitelabels-content article blockquote p:before,
 .aboutus-content article blockquote p:before,
-.careers-content article blockquote p:before {
+partnerapi-content article blockquote p:before {
   content: open-quote;
 }
 .readable article blockquote p:after,
-.whyus-content article blockquote p:after,
-.tour-content article blockquote p:after,
+.careers-content article blockquote p:after,
 .devguide-content article blockquote p:after,
+.grouphistory-content article blockquote p:after,
 .opensourceprojects-content article blockquote p:after,
+.partnerapi-content article blockquote p:after,
+.responsibletrading-content article blockquote p:after,
+.smartindices-content article blockquote p:after,
+.tour-content article blockquote p:after,
+.whitelabels-content article blockquote p:after,
 .aboutus-content article blockquote p:after,
-.careers-content article blockquote p:after {
+partnerapi-content article blockquote p:after {
   content: close-quote;
 }
 .readable article img,
-.whyus-content article img,
-.tour-content article img,
+.careers-content article img,
 .devguide-content article img,
+.grouphistory-content article img,
 .opensourceprojects-content article img,
+.partnerapi-content article img,
+.responsibletrading-content article img,
+.smartindices-content article img,
+.tour-content article img,
+.whitelabels-content article img,
 .aboutus-content article img,
-.careers-content article img {
+partnerapi-content article img {
   display: block;
   max-width: 100%;
   margin: 0 auto;
 }
 .readable article ul,
-.whyus-content article ul,
-.tour-content article ul,
+.careers-content article ul,
 .devguide-content article ul,
+.grouphistory-content article ul,
 .opensourceprojects-content article ul,
+.partnerapi-content article ul,
+.responsibletrading-content article ul,
+.smartindices-content article ul,
+.tour-content article ul,
+.whitelabels-content article ul,
 .aboutus-content article ul,
-.careers-content article ul {
+partnerapi-content article ul {
   padding-left: 1.5em;
   list-style: disc outside none;
 }
 .readable article li,
-.whyus-content article li,
-.tour-content article li,
+.careers-content article li,
 .devguide-content article li,
+.grouphistory-content article li,
 .opensourceprojects-content article li,
+.partnerapi-content article li,
+.responsibletrading-content article li,
+.smartindices-content article li,
+.tour-content article li,
+.whitelabels-content article li,
 .aboutus-content article li,
-.careers-content article li {
+partnerapi-content article li {
   line-height: 1.3;
   margin-bottom: .5em;
 }
