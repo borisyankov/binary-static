@@ -378,7 +378,7 @@ ul.bulleted li {
 }
 
 .flag {
-  background: url("/images/flags.png");
+  background: url("../images/flags.png");
   background-size: 20px;
   background-repeat: no-repeat;
 }
@@ -1315,13 +1315,13 @@ button:focus, input:focus, a:focus, select:focus {
   outline: none;
 }
 
-.login-button, #login-fields input[type=submit] {
+.login-button {
   background: inherit;
   color: white;
   border: 2px solid;
 }
-.login-button:hover, #login-fields input[type=submit]:hover {
-  color: #e98024;
+.login-button:hover {
+  color: #44484c;
   background: white;
   border-color: white;
 }
