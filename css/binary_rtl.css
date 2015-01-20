@@ -855,8 +855,7 @@ th, td {
 .smartindices-content,
 .tour-content,
 .whitelabels-content,
-.aboutus-content,
-partnerapi-content {
+.aboutus-content {
   max-width: 700px;
 }
 .readable header,
@@ -869,122 +868,113 @@ partnerapi-content {
 .smartindices-content header,
 .tour-content header,
 .whitelabels-content header,
-.aboutus-content header,
-partnerapi-content header {
+.aboutus-content header {
   text-align: center;
 }
-.readable article blockquote, .readable article img,
-.careers-content article blockquote,
-.careers-content article img,
-.devguide-content article blockquote,
-.devguide-content article img,
-.grouphistory-content article blockquote,
-.grouphistory-content article img,
-.opensourceprojects-content article blockquote,
-.opensourceprojects-content article img,
-.partnerapi-content article blockquote,
-.partnerapi-content article img,
-.responsibletrading-content article blockquote,
-.responsibletrading-content article img,
-.smartindices-content article blockquote,
-.smartindices-content article img,
-.tour-content article blockquote,
-.tour-content article img,
-.whitelabels-content article blockquote,
-.whitelabels-content article img,
-.aboutus-content article blockquote,
-.aboutus-content article img,
-partnerapi-content article blockquote,
-partnerapi-content article img {
+.readable blockquote, .readable img,
+.careers-content blockquote,
+.careers-content img,
+.devguide-content blockquote,
+.devguide-content img,
+.grouphistory-content blockquote,
+.grouphistory-content img,
+.opensourceprojects-content blockquote,
+.opensourceprojects-content img,
+.partnerapi-content blockquote,
+.partnerapi-content img,
+.responsibletrading-content blockquote,
+.responsibletrading-content img,
+.smartindices-content blockquote,
+.smartindices-content img,
+.tour-content blockquote,
+.tour-content img,
+.whitelabels-content blockquote,
+.whitelabels-content img,
+.aboutus-content blockquote,
+.aboutus-content img {
   margin: 0 10%;
 }
-.readable article blockquote p,
-.careers-content article blockquote p,
-.devguide-content article blockquote p,
-.grouphistory-content article blockquote p,
-.opensourceprojects-content article blockquote p,
-.partnerapi-content article blockquote p,
-.responsibletrading-content article blockquote p,
-.smartindices-content article blockquote p,
-.tour-content article blockquote p,
-.whitelabels-content article blockquote p,
-.aboutus-content article blockquote p,
-partnerapi-content article blockquote p {
+.readable blockquote p,
+.careers-content blockquote p,
+.devguide-content blockquote p,
+.grouphistory-content blockquote p,
+.opensourceprojects-content blockquote p,
+.partnerapi-content blockquote p,
+.responsibletrading-content blockquote p,
+.smartindices-content blockquote p,
+.tour-content blockquote p,
+.whitelabels-content blockquote p,
+.aboutus-content blockquote p {
   font-weight: bold;
   text-align: center;
   quotes: '\201D' '\201D' '\2019' '\2019';
 }
-.readable article blockquote p:before,
-.careers-content article blockquote p:before,
-.devguide-content article blockquote p:before,
-.grouphistory-content article blockquote p:before,
-.opensourceprojects-content article blockquote p:before,
-.partnerapi-content article blockquote p:before,
-.responsibletrading-content article blockquote p:before,
-.smartindices-content article blockquote p:before,
-.tour-content article blockquote p:before,
-.whitelabels-content article blockquote p:before,
-.aboutus-content article blockquote p:before,
-partnerapi-content article blockquote p:before {
+.readable blockquote p:before,
+.careers-content blockquote p:before,
+.devguide-content blockquote p:before,
+.grouphistory-content blockquote p:before,
+.opensourceprojects-content blockquote p:before,
+.partnerapi-content blockquote p:before,
+.responsibletrading-content blockquote p:before,
+.smartindices-content blockquote p:before,
+.tour-content blockquote p:before,
+.whitelabels-content blockquote p:before,
+.aboutus-content blockquote p:before {
   content: open-quote;
 }
-.readable article blockquote p:after,
-.careers-content article blockquote p:after,
-.devguide-content article blockquote p:after,
-.grouphistory-content article blockquote p:after,
-.opensourceprojects-content article blockquote p:after,
-.partnerapi-content article blockquote p:after,
-.responsibletrading-content article blockquote p:after,
-.smartindices-content article blockquote p:after,
-.tour-content article blockquote p:after,
-.whitelabels-content article blockquote p:after,
-.aboutus-content article blockquote p:after,
-partnerapi-content article blockquote p:after {
+.readable blockquote p:after,
+.careers-content blockquote p:after,
+.devguide-content blockquote p:after,
+.grouphistory-content blockquote p:after,
+.opensourceprojects-content blockquote p:after,
+.partnerapi-content blockquote p:after,
+.responsibletrading-content blockquote p:after,
+.smartindices-content blockquote p:after,
+.tour-content blockquote p:after,
+.whitelabels-content blockquote p:after,
+.aboutus-content blockquote p:after {
   content: close-quote;
 }
-.readable article img,
-.careers-content article img,
-.devguide-content article img,
-.grouphistory-content article img,
-.opensourceprojects-content article img,
-.partnerapi-content article img,
-.responsibletrading-content article img,
-.smartindices-content article img,
-.tour-content article img,
-.whitelabels-content article img,
-.aboutus-content article img,
-partnerapi-content article img {
+.readable img,
+.careers-content img,
+.devguide-content img,
+.grouphistory-content img,
+.opensourceprojects-content img,
+.partnerapi-content img,
+.responsibletrading-content img,
+.smartindices-content img,
+.tour-content img,
+.whitelabels-content img,
+.aboutus-content img {
   display: block;
   max-width: 100%;
   margin: 0 auto;
 }
-.readable article ul,
-.careers-content article ul,
-.devguide-content article ul,
-.grouphistory-content article ul,
-.opensourceprojects-content article ul,
-.partnerapi-content article ul,
-.responsibletrading-content article ul,
-.smartindices-content article ul,
-.tour-content article ul,
-.whitelabels-content article ul,
-.aboutus-content article ul,
-partnerapi-content article ul {
+.readable ul,
+.careers-content ul,
+.devguide-content ul,
+.grouphistory-content ul,
+.opensourceprojects-content ul,
+.partnerapi-content ul,
+.responsibletrading-content ul,
+.smartindices-content ul,
+.tour-content ul,
+.whitelabels-content ul,
+.aboutus-content ul {
   padding-left: 1.5em;
   list-style: disc outside none;
 }
-.readable article li,
-.careers-content article li,
-.devguide-content article li,
-.grouphistory-content article li,
-.opensourceprojects-content article li,
-.partnerapi-content article li,
-.responsibletrading-content article li,
-.smartindices-content article li,
-.tour-content article li,
-.whitelabels-content article li,
-.aboutus-content article li,
-partnerapi-content article li {
+.readable li,
+.careers-content li,
+.devguide-content li,
+.grouphistory-content li,
+.opensourceprojects-content li,
+.partnerapi-content li,
+.responsibletrading-content li,
+.smartindices-content li,
+.tour-content li,
+.whitelabels-content li,
+.aboutus-content li {
   line-height: 1.3;
   margin-bottom: .5em;
 }
