@@ -1063,7 +1063,7 @@ th, td {
 *,
 *:after,
 *:before {
-  transition: all .3s;
+  transition: opacity .3s, color .3s, background .3s;
 }
 
 @keyframes spinning {
