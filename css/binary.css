@@ -60,13 +60,6 @@ table {
 
 /* GLOBAL RULES */
 /* DO NOT include any rules for specific pages in this file. */
-*,
-*:after,
-*:before {
-  box-sizing: border-box;
-  transition: all .3;
-}
-
 html {
   font-size: 17px;
 }
@@ -434,6 +427,12 @@ ul.bulleted li {
 
 .nav-trade {
   font-weight: bold;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
 }
 
 html, body {
@@ -1131,6 +1130,12 @@ th, td {
   margin: 0 2.3em;
   line-height: 1.8em;
   text-align: center;
+}
+
+*,
+*:after,
+*:before {
+  transition: all .3s;
 }
 
 @keyframes spinning {
