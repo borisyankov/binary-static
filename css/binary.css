@@ -841,7 +841,7 @@ tbody tr:hover td:first-child {
 }
 
 th, td {
-  padding: 1em;
+  padding: .5em;
 }
 
 /*table
@@ -2049,6 +2049,7 @@ nav[role=tabs] a.active, nav[role=tabs] a:hover {
 }
 
 .home2-content #open-account p {
+  color: white;
   font-size: 100%;
   font-weight: bold;
   line-height: 2em;

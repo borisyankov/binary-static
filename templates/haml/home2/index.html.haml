@@ -33,8 +33,8 @@
         .grd-row-padding
           %h1.center-aligned.xhead Reasons to Choose Binary.com
           .grd-grid-6.grd-grid-mobile-12.grd-grid-phablet-12
-            %ul 
-              %li.xlist1 
+            %ul
+              %li.xlist1
                 %h3 Sharp prices
                 %p Binary.com's patented pricing technology allows you to benefit from the same rates of return as traders in the interbank market.
               %li.xlist2
@@ -42,7 +42,7 @@
                 %p With Binary.com, your money is secure. We segregate and hold client funds in secure AAA-rated banks.
           .grd-grid-6.grd-grid-mobile-12.grd-grid-phablet-12
             %ul
-              %li.xlist3 
+              %li.xlist3
                 %h3 Trade your way
                 %p Don't limit yourself! Whatever your market view, Binary.com allows you to put your strategy to work and profit from your predictions.
               %li.xlist4
@@ -50,9 +50,9 @@
                 %p Binary.com is the award-winning industry pioneer in online options trading.
     .xcta
       %a.pjaxload.xreal{:href => url_for('linkto_acopening.cgi?actype=real&l=EN'), :class => 'button'}
-        %span= l('OPEN REAL ACCOUNT')
+        = l('OPEN REAL ACCOUNT')
       %a.pjaxload.xvirtual{:href => url_for('linkto_acopening.cgi?actype=virtual&l=EN'), :class => 'button'}
-        %span= l('OPEN VIRTUAL ACCOUNT')
+        = l('OPEN VIRTUAL ACCOUNT')
   #xtestimonial
     .grd-container
       .grd-row-padding
@@ -64,7 +64,7 @@
           .xquoter-left
             %p!= "Rob Panozo <span> Markets And You Trader.</span>"
         .grd-grid-6.grd-grid-mobile-12.grd-grid-phablet-6
-          .xquote 
+          .xquote
             %p!= '&#8220;Binary.com is one of the oldest and trustworthy partners we ever had. We have worked together for many years.&#8221;'
           .xbubble-right
           .xquoter-right

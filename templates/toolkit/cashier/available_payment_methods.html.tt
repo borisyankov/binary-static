@@ -3,22 +3,20 @@
 <p>
     [% l('You can fund your account with a minimum of &#36;/&pound;/&euro; 5 via any of the methods.') %]
 </p>
-<div id="payment_method_suggestions">
-    <p>
-        <a href="[% request.url_for('linkto_acopening.cgi', {actype => " real "}) %]" class="button important by_client_type client_logged_out">
-            [% l('Open An Account Now') %]
-        </a>
-        <a href="[% request.url_for('linkto_acopening.cgi', {actype => real}) %]" class="button important by_client_type client_virtual">
-            <span>[% l('Open Real Account') %]</span>
-        </a>
-        <a href="[% deposit_url %]" class="button button_large by_client_type client_real with_login_cookies">
-            <span>[% l('Deposit') %]</span>
-        </a>
-        <a href="[% withdrawal_url %]" class="button by_client_type client_real with_login_cookies">
-            <span>[% l('Withdraw') %]</span>
-        </a>
-    </p>
-</div>
+<p>
+    <a href="[% request.url_for('linkto_acopening.cgi', {actype => " real "}) %]" class="button important by_client_type client_logged_out">
+        [% l('Open An Account Now') %]
+    </a>
+    <a href="[% request.url_for('linkto_acopening.cgi', {actype => real}) %]" class="button important by_client_type client_virtual">
+        <span>[% l('Open Real Account') %]</span>
+    </a>
+    <a href="[% deposit_url %]" class="button button_large by_client_type client_real with_login_cookies">
+        <span>[% l('Deposit') %]</span>
+    </a>
+    <a href="[% withdrawal_url %]" class="button by_client_type client_real with_login_cookies">
+        <span>[% l('Withdraw') %]</span>
+    </a>
+</p>
 
 <h2>[% l('Bank wire/Money transfer') %]</h2>
 
@@ -479,6 +477,7 @@
         [% l('Deposit to Payment Agent') %]
     </a>
 </p>
+
 <p>
     <a href="[% paymentagent_withdraw_url %]" class="button important by_client_type client_real with_login_cookies" id="withdraw_to_payment_agent">
         <span>[% l('Withdraw via Payment Agent') %]</span>
