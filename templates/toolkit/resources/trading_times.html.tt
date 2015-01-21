@@ -5,6 +5,7 @@
 </nav>
 
 [% FOREACH market IN fullinfo %]
+<p>
     <table id="[% market.tabid %]">
         [% FOREACH submarket IN market.submarkets %]
             <thead>
@@ -33,4 +34,5 @@
             </tbody>
         [% END %]
     </table>
+</p>    
 [% END %]
