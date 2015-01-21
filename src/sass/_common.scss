@@ -203,6 +203,7 @@ pre {
     position: fixed;
     margin: 0;
     padding: 10px;
+    border-radius: $BORDER_RADIUS;
     text-align: center;
     border: solid 1px $COLOR_NAV_BORDER;
     background: $COLOR_LIGHT_GRAY;
@@ -232,7 +233,7 @@ a.close {
     cursor: pointer;
     color: $COLOR_WHITE;
     border-radius: 0;
-    border-bottom-left-radius: 4px;
+    border-bottom-left-radius: $BORDER_RADIUS;
     background: $COLOR_NAV_BORDER;
     font-size: $FONT_SIZE_L;
     font-weight: bold;

@@ -1,7 +1,3 @@
-button.important .button.important {
-    background: $COLOR_ACTIVE;
-}
-
 button, input[type=button], input[type=submit], button.button, a.button {
     color: white;
     background: $COLOR_GRAY;
@@ -21,6 +17,14 @@ button, input[type=button], input[type=submit], button.button, a.button {
                     inset 0px 0px 0px 1px $COLOR_NAV_BORDER;
     }
 }
+
+button.important .button.important {
+    background: $COLOR_ACTIVE;
+    &:hover, &:active {
+        background: darken($COLOR_ACTIVE, 10%);
+    }
+}
+
 
 button:focus, input:focus, a:focus, select:focus {
     outline: none;

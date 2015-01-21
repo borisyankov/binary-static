@@ -23,11 +23,11 @@
             <tbody>
                 [% FOREACH underlying IN submarket.underlyings %]
                     <tr>
-                        <th><a href="[% underlying.link %]">[% underlying.name %]</a>[% underlying.tooltip %]</th>
-                        <th>[% underlying.times.open %][% IF underlying.times.pm_open %]<br>[% underlying.times.pm_open %][% END %]</th>
-                        <th>[% IF underlying.times.am_close %][% underlying.times.am_close %]<br>[% END %][% underlying.times.close %]</th>
-                        <th>[% underlying.times.settlement %]</th>
-                        <th>[% FOREACH event IN underlying.events %][% event.descrip %]: [% event.dates %]</br>[% END %]</th>
+                        <td><a href="[% underlying.link %]">[% underlying.name %]</a>[% underlying.tooltip %]</td>
+                        <td>[% underlying.times.open %][% IF underlying.times.pm_open %]<br>[% underlying.times.pm_open %][% END %]</td>
+                        <td>[% IF underlying.times.am_close %][% underlying.times.am_close %]<br>[% END %][% underlying.times.close %]</td>
+                        <td>[% underlying.times.settlement %]</td>
+                        <td>[% FOREACH event IN underlying.events %][% event.descrip %]: [% event.dates %]</br>[% END %]</td>
                     </tr>
                 [% END %]
             </tbody>
