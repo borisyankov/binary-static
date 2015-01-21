@@ -13,19 +13,13 @@
         <table>
             <thead>
                 <tr>
-                    <th>
+                    <th colspan="100">
                         [% submarket.name %]
                     </th>
                 </tr>
 
-            [% market_name = market.code %]
-            [% number_of_cat = categories.$market_name.size - 1 %]
-            [% IF market_name == 'random' %]
-                [% grid_width = 1 %]
-            [% ELSE %]
-                [% grid_width = 2 %]
-            [% END %]
-            [% balance = 12 - grid_width %]
+                [% market_name = market.code %]
+                [% number_of_cat = categories.$market_name.size - 1 %]
 
                 <tr>
                     <th></th>
@@ -88,8 +82,10 @@
                     [% END %]
                     </td>
                 [% END %]
-            </tr>
-        [% END %]
+                </tr>
+            [% END %]
+            </tbody>
+        </table>
     </div>
     [% END %]
 </div>
