@@ -2,13 +2,17 @@ table {
     width: 100%;
 }
 
+thead {
+    border-bottom: 2px solid #d4d4d4;
+}
+
 th {
     background: #fafafa;
     font-weight: bold;
 }
 
 tbody tr {
-    border-top: 1px solid #d4d4d4;
+    border-bottom: 1px solid #d4d4d4;
 }
 
 tbody tr:hover {
@@ -20,7 +24,7 @@ tbody tr:hover td:first-child {
 }
 
 th, td {
-    padding: 1em;
+    padding: .5em;
 }
 
 /*table

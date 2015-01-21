@@ -9,17 +9,23 @@ input, textarea {
     vertical-align: middle;
 }
 
-input[type=text], input[type=email], input[type=password], input[type=tel], input[type=number] {
+input[type=text], input[type=email], input[type=password], input[type=tel], input[type=number], input[type=date] {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 }
 
-select, textarea, input[type=text], input[type=email], input[type=password], input[type=tel], input[type=number] {
+input[type=date]::-webkit-inner-spin-button,
+input[type=date]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+select, textarea, input[type=text], input[type=email], input[type=password], input[type=tel], input[type=number], input[type=date] {
     padding: $CONTROL_PADDING;
     height: 2em;
 }
 
-select, textarea, input[type=text], input[type=email], input[type=password], input[type=tel], input[type=number], .dob  {
+select, textarea, input[type=text], input[type=email], input[type=password], input[type=tel], input[type=number], input[type=date], .dob  {
     border: 1px solid $COLOR_CONTROL_BORDER;
     border-radius: $BORDER_RADIUS;
     vertical-align: bottom;
