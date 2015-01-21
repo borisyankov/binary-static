@@ -1666,12 +1666,18 @@ button:focus, input:focus, a:focus, select:focus {
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
 }
 
+nav[role=tabs] {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 nav[role=tabs] a {
   display: inline-block;
   padding: 0.5em 1em;
-  border-left: 1px solid #414a80;
-  border-top: 1px solid #414a80;
-  border-bottom: 1px solid #414a80;
+  border-left: 100px solid #414a80;
+  border-top: 100px solid #414a80;
+  border-bottom: 100px solid #414a80;
 }
 
 nav[role=tabs] a:first-child {
@@ -1680,7 +1686,7 @@ nav[role=tabs] a:first-child {
 
 nav[role=tabs] a:last-child {
   border-radius: 0 2px 2px 0;
-  border-right: 1px solid #414a80;
+  border-right: 100px solid #414a80;
 }
 
 nav[role=tabs] a.active, nav[role=tabs] a:hover {
