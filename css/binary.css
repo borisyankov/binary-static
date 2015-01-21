@@ -1675,24 +1675,24 @@ nav[role=tabs] {
 nav[role=tabs] a {
   display: inline-block;
   padding: 0.5em 1em;
-  border-left: 100px solid #414a80;
-  border-top: 100px solid #414a80;
-  border-bottom: 100px solid #414a80;
+  border-left: 1px solid #929ca6;
+  border-top: 1px solid #929ca6;
+  border-bottom: 1px solid #929ca6;
 }
 
 nav[role=tabs] a:first-child {
-  border-radius: 2px 0 0 2px;
+  border-radius: 100px 0 0 100px;
 }
 
 nav[role=tabs] a:last-child {
-  border-radius: 0 2px 2px 0;
-  border-right: 100px solid #414a80;
+  border-radius: 0 100px 100px 0;
+  border-right: 1px solid #929ca6;
 }
 
 nav[role=tabs] a.active, nav[role=tabs] a:hover {
   text-decoration: none;
   color: white;
-  background-color: #414a80;
+  background-color: #929ca6;
 }
 
 .error {
