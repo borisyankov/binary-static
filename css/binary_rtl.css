@@ -1529,7 +1529,7 @@ label {
   flex: initial;
 }
 
-button.important {
+button.important .button.important {
   background: #ff992a;
 }
 
