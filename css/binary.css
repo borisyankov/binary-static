@@ -918,7 +918,7 @@ th, td {
 }
 */
 .readable,
-.whyus-content,
+.why-us-content,
 .careers-content,
 .devguide-content,
 .grouphistory-content,
@@ -932,7 +932,7 @@ th, td {
   max-width: 700px;
 }
 .readable header,
-.whyus-content header,
+.why-us-content header,
 .careers-content header,
 .devguide-content header,
 .grouphistory-content header,
@@ -946,8 +946,8 @@ th, td {
   text-align: center;
 }
 .readable blockquote, .readable img,
-.whyus-content blockquote,
-.whyus-content img,
+.why-us-content blockquote,
+.why-us-content img,
 .careers-content blockquote,
 .careers-content img,
 .devguide-content blockquote,
@@ -971,7 +971,7 @@ th, td {
   margin: 0 10%;
 }
 .readable blockquote p,
-.whyus-content blockquote p,
+.why-us-content blockquote p,
 .careers-content blockquote p,
 .devguide-content blockquote p,
 .grouphistory-content blockquote p,
@@ -987,7 +987,7 @@ th, td {
   quotes: '\201D' '\201D' '\2019' '\2019';
 }
 .readable blockquote p:before,
-.whyus-content blockquote p:before,
+.why-us-content blockquote p:before,
 .careers-content blockquote p:before,
 .devguide-content blockquote p:before,
 .grouphistory-content blockquote p:before,
@@ -1001,7 +1001,7 @@ th, td {
   content: open-quote;
 }
 .readable blockquote p:after,
-.whyus-content blockquote p:after,
+.why-us-content blockquote p:after,
 .careers-content blockquote p:after,
 .devguide-content blockquote p:after,
 .grouphistory-content blockquote p:after,
@@ -1015,7 +1015,7 @@ th, td {
   content: close-quote;
 }
 .readable img,
-.whyus-content img,
+.why-us-content img,
 .careers-content img,
 .devguide-content img,
 .grouphistory-content img,
@@ -1031,7 +1031,7 @@ th, td {
   margin: 0 auto;
 }
 .readable ul,
-.whyus-content ul,
+.why-us-content ul,
 .careers-content ul,
 .devguide-content ul,
 .grouphistory-content ul,
@@ -1042,11 +1042,11 @@ th, td {
 .tour-content ul,
 .whitelabels-content ul,
 .aboutus-content ul {
-  padding-left: 1.5em;
-  list-style: disc outside none;
+  padding-left: 1em;
+  /* list-style: disc outside none; */
 }
 .readable li,
-.whyus-content li,
+.why-us-content li,
 .careers-content li,
 .devguide-content li,
 .grouphistory-content li,
