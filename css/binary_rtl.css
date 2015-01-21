@@ -1413,6 +1413,12 @@ input[type=text], input[type=email], input[type=password], input[type=tel], inpu
   -moz-appearance: none;
 }
 
+input[type=date]::-webkit-inner-spin-button,
+input[type=date]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+
 select, textarea, input[type=text], input[type=email], input[type=password], input[type=tel], input[type=number], input[type=date] {
   padding: 0.33333em;
   height: 2em;
