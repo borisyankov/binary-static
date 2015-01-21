@@ -5,10 +5,10 @@
 </p>
 <div id="payment_method_suggestions">
     <p>
-        <a href="[% request.url_for('linkto_acopening.cgi', {actype => " real "}) %]" class="button by_client_type client_logged_out">
+        <a href="[% request.url_for('linkto_acopening.cgi', {actype => " real "}) %]" class="button important by_client_type client_logged_out">
             [% l('Open An Account Now') %]
         </a>
-        <a href="[% request.url_for('linkto_acopening.cgi', {actype => real}) %]" class="button by_client_type client_virtual">
+        <a href="[% request.url_for('linkto_acopening.cgi', {actype => real}) %]" class="button important by_client_type client_virtual">
             <span>[% l('Open Real Account') %]</span>
         </a>
         <a href="[% deposit_url %]" class="button button_large by_client_type client_real with_login_cookies">
@@ -474,10 +474,11 @@
     [% l('You can use an authorized payment agent to process deposits and withdrawals for e-cash methods or local currencies not supported by') %] [% website_name %].
 </p>
 
+<p>
 <a href="[% paymentagent_list_url %]" class="button" id="deposit_to_payment_agent">
     [% l('Deposit to Payment Agent') %]
 </a>
-
+</p>
 <a href="[% paymentagent_withdraw_url %]" class="button by_client_type client_real with_login_cookies" id="withdraw_to_payment_agent">
     <span>[% l('Withdraw via Payment Agent') %]</span>
 </a>

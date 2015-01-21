@@ -13,9 +13,9 @@
         <table>
             <thead>
                 <tr>
-                    <td>
+                    <th>
                         [% submarket.name %]
-                    </td>
+                    </th>
                 </tr>
 
             [% market_name = market.code %]
@@ -28,8 +28,8 @@
             [% balance = 12 - grid_width %]
 
                 <tr>
-                    <td></td>
-                    <td>
+                    <th></th>
+                    <th>
                         [%- FOREACH category IN [0..number_of_cat] -%]
                             [% name = categories.$market_name.item(category) %]
                             [% IF (matches = name.match('(Asian|Digit)')) %]
@@ -39,7 +39,7 @@
                             [% END %]
                             <div [% IF market_name == 'random' %] style="font-size:80%" [% END %] [% IF category > 4 %]class="grd-grid-1"[% ELSE %]class="grd-grid-2"[% END %]>[% cat_name %]</div>
                         [%- END %]
-                    </td>
+                    </th>
                 </tr>
             </thead>
 
