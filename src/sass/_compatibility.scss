@@ -8,6 +8,18 @@
     box-shadow: $BOX_SHADOW;
     border-radius: $BORDER_RADIUS;
 }
+
+.license-logos {
+    display: flex;
+    justify-content: space-around;
+}
+
+.license-logos img {
+    height: 100px;    
+    margin: 0;
+    display: inline-block;
+}
+
 /*
 .ui-datepicker .ui-datepicker-header {
     position: relative;

@@ -12,12 +12,12 @@
 
 %h1= l('Trade your way')
 %p= l('Why limit yourself? Whatever your market view, [_1] allows you to put your strategy to work and profit from your predictions.', stash->{website_name})
-%img{:src => url_for('images/pages/tour/trade-tutorial_1.svg')}
 %ul.checked
   %li= l('Choose a payout from $1 to $100,000.')
   %li= l('Trade all major currencies, indices, stocks, and commodities.')
   %li= l('Choose a duration from 10 seconds to 365 days.')
   %li= l('Choose your own strike.')
+%img{:src => url_for('images/pages/tour/trade-tutorial_1.svg')}
 
 %h1= l('You won\'t lose your shirt')
 %p= l('With [_1], you\'re in control. Simply fix your upside and your downside before every trade.', stash->{website_name})
@@ -28,9 +28,6 @@
 
 %h1= l('One simple platform')
 %p= l('[_1] offers the world\'s financial markets in a simple, user-friendly platform.', stash->{website_name})
-%img{:src => url_for('images/pages/why-us/trade-sample.svg')}
-%img{:src => url_for('images/pages/why-us/trade-direct-value.svg')}
-%img{:src => url_for('images/pages/why-us/trade-opposite-value.svg')}
 %ul.checked
   %li= l('Find the right trade for every market condition.')
   %li= l('Execute your trade in seconds.')
@@ -43,16 +40,16 @@
   %li= l('We segregate and hold client funds in secure AAA-rated banks.')
   %li= l('We are fully licensed in the British Isles and Malta.')
   %li= l('We have a proven track record since starting in 2000.')
-%img{:src => url_for('images/pages/why-us/why-us-authority-malta-gray.svg')}
-%img{:src => url_for('images/pages/why-us/why-us-proven-record_1.svg')}
-%img{:src => url_for('images/pages/footer/isle-of-man.png')}
+%p.license-logos
+  %img{:src => url_for('images/pages/why-us/why-us-authority-malta-gray.svg')}
+  %img{:src => url_for('images/pages/why-us/why-us-proven-record_1.svg')}
+  %img{:src => url_for('images/pages/footer/isle-of-man.png')}
 
 %h1= l('Go with the leader')
-%p
-  %img{:src => url_for('images/pages/why-us/why-us-GBAF-award-2012.svg')}
 %p= l('[_1] is the award-winning industry pioneer in online options trading. We boast:', stash->{website_name})
-%ul.checked
-  %li= l('Over two billion dollars in trades to date.')
-  %li= l('First-class client service.')
-  %li= l('Multi award-winning trading platform.')
-  %li= l('Exclusive binary trading technology.')
+  %ul.checked
+    %li= l('Over two billion dollars in trades to date.')
+    %li= l('First-class client service.')
+    %li= l('Multi award-winning trading platform.')
+    %li= l('Exclusive binary trading technology.')
+%img{:src => url_for('images/pages/why-us/why-us-GBAF-award-2012.svg')}
