@@ -10,8 +10,6 @@
   %li= l('Basic Account review/update facilities')
   %li= l('Statement and Portfolio Enquiries')
 
-%img{:src => url_for('images/pages/partnerapi/api.svg')}
-
 %h2= l('REST')
 
 %h3= l("[_1]'s API conforms to the Representational State Transfer (REST) model.", stash->{website_name})
@@ -20,27 +18,21 @@
 
 %code GET /markets
 
-%img{:src => url_for('images/pages/partnerapi/rest.svg')}
-
 %p= l('To get a summary of currently tradeable market symbols in the "forex" market:')
 
 %code GET /markets/forex
 
 %h2= l('Security')
 
-%hp= l('The [_1] API uses the OAuth2.0 scheme for authenticating users.', stash->{website_name})
+%h3= l('The [_1] API uses the OAuth2.0 scheme for authenticating users.', stash->{website_name})
 
 %p!= l('OAuth2.0 is the emerging internet standard for this purpose. See <a href="http://oauth.net/2" target="_blank">http://oauth.net/2</a> for a formal definition, although we will guide you through the steps relevant to your platform.')
 
 %p= l('The most important benefit of using OAuth2.0 is that the end-users, who already have valid logins at [_1], are able to leverage new applications to execute various trading activities, without these applications needing to know or "see" the end-users security credentials.', stash->{website_name})
 
-%img{:src => url_for('images/pages/partnerapi/security.svg')}
-
 %p!= l('Further to this, the API interface is hosted by an API Proxy management provider, namely <a href="http://apigee.com" target="_blank">Apigee</a>. This service applies several services of benefit both to the application developer and to the API provider.')
 
 %h2= l('Console Facility')
-
-%img{:src => url_for('images/pages/partnerapi/console-facility.svg')}
 
 %p!= l('The "raw" API can be inspected "live" using Apigee\'s <a href="http://apigee.com/rmg/console/binary1" target="_blank">Console-to-go</a> facility. This facility applies the full OAuth2 validation process, hence you will need to opt for the "OAuth2" Authentication option offered here and you will then need a valid [_1] login to proceed.', stash->{website_name} )
 
@@ -53,6 +45,5 @@
   %a{:href => url_for('/devguide')}= l('Developer\'s Guide')
   = l('for detailed coding instructions.')
 
-%img{:src => url_for('images/pages/partnerapi/developer-guide.svg')}
-
-%a{:class="button", :href => 'http://trade.binary.com/api_en_binary/', :target => '_blank'}= l('Apply for access')
+%p
+  %a.button.important{:href => 'http://trade.binary.com/api_en_binary/', :target => '_blank'}= l('Apply for access')

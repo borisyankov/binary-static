@@ -473,7 +473,7 @@
 </p>
 
 <p>
-    <a href="[% paymentagent_list_url %]" class="button" id="deposit_to_payment_agent">
+    <a href="[% paymentagent_list_url %]" class="button important" id="deposit_to_payment_agent">
         [% l('Deposit to Payment Agent') %]
     </a>
 </p>

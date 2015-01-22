@@ -1,5 +1,9 @@
 /* GET-STARTED PAGES RULES */
-.get-started-content {
+.get-started-content, .-content, .whatisbinarytrading-content, .what-is-binary-trading-content, .glossary-content, .beginnersfaq-content, .howtotradebinaries-content,
+.benefitsoftradingbinaries-content, .binaryoptionsbasics-content, .typesoftrades-content, .whatisbinarytrading-content,
+.types-of-trades-content, .binary-options-basics-content, .benefits-of-trading-binaries-content, .how-to-trade-binaries-content,
+.beginners-faq-content {
+  flex-direction: row;
   @include topspace;
   overflow: hidden;
   .sidebar-left {

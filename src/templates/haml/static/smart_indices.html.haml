@@ -1,7 +1,5 @@
 - stash(title => l('Smart Indices'));
 
-%a.pjaxload{:href => url_for('trade.cgi?market=smarties')}= l('Trade the Smart Indices')
-
 %h1= l('What are the Smart Indices?')
 
 %p= l('[_1]’s exclusive Smart Indices are built to key on a particular subset of the world’s markets. With a price derived from related assets, Smart Indices allow traders to take positions on a variety of market action.', stash->{website_name});
@@ -35,3 +33,5 @@
 %p= l('The German vs French Index measures the performance of the German Index relative to the French Index. This outperformance index rises if the German Index performs better than the French Index, and decreases if the French Index performs better than the German Index.')
 
 %p= l('The German vs Dutch Index measures the performance of the German Index relative to the Dutch Index. This outperformance index rises if the German Index performs better than the Dutch Index, and decreases if the Dutch Index performs better than the German Index.')
+
+%a.button.important.pjaxload{:href => url_for('trade.cgi?market=smarties')}= l('Trade the Smart Indices')
