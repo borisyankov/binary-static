@@ -1634,10 +1634,10 @@ button:hover, button:active, input[type=button]:hover, input[type=button]:active
   cursor: pointer;
 }
 
-button.important .button.important {
+button.important, .button.important {
   background: #ff992a;
 }
-button.important .button.important:hover, button.important .button.important:active {
+button.important:hover, button.important:active, .button.important:hover, .button.important:active {
   background: #f68000;
 }
 

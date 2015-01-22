@@ -2,7 +2,7 @@
 <div class="grd-grid-12 grd-row-padding">
         <div class="grd-grid-2 grd-grid-mobile-6 grd-grid-phablet-6 left-aligned">
                 [% IF has_newer %]
-                <a class="pjaxload button" href="[% request.url_for('statement.cgi', { after => transactions.first.transaction_time, currency => currency }) %]"><span>&laquo;[% l('Newer') %]</span></a>
+                <a class="pjaxload button" href="[% request.url_for('statement.cgi', { after => transactions.first.transaction_time, currency => currency }) %]">&laquo;[% l('Newer') %]</a>
                 [% END %]
         </div>
 
@@ -21,7 +21,7 @@
 
         <div class="grd-grid-2 grd-grid-mobile-6 grd-grid-phablet-6 right-aligned">
                 [% IF has_older %]
-                <a class="pjaxload button" href="[% request.url_for('statement.cgi', { before => transactions.last.transaction_time, currency => currency }) %]"><span>[% l('Older') %]&raquo;</span></a>
+                <a class="pjaxload button" href="[% request.url_for('statement.cgi', { before => transactions.last.transaction_time, currency => currency }) %]">[% l('Older') %]&raquo;</a>
                 [% END %]
         </div>
 </div>

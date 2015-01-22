@@ -1570,7 +1570,7 @@ onLoad.queue(function () {
     attach_date_picker('.has-date-picker');
     attach_time_picker('.has-time-picker');
     attach_inpage_popup('.has-inpage-popup');
-    attach_tabs('.has-tabs');
+    attach_tabs('nav[type=tabs]');
 });
 ;DatePicker = function(component_id, select_type) {
     this.component_id = component_id;
@@ -8045,7 +8045,7 @@ ClientForm.prototype = {
     while(cs_time--) {
         var start_hour = parseInt(cs_times[cs_time]['start']);
         var end_hour = parseInt(cs_times[cs_time]['end']);
-        if(date.getUTCHours() >= start_hour && date.getUTCHours() <= end_hour) { 
+        if(date.getUTCHours() >= start_hour && date.getUTCHours() <= end_hour) {
             available = true;
         }
     }
@@ -8083,35 +8083,35 @@ var change_chat_icon = function () {
 };
 
 var render_desk_widget = function() {
-       new DESK.Widget({ 
-                version: 1, 
-                site: 'binary.desk.com', 
-                port: '80', 
-                type: 'chat', 
+       new DESK.Widget({
+                version: 1,
+                site: 'binary.desk.com',
+                port: '80',
+                type: 'chat',
                 id: 'live-help-button',
                 displayMode: 0,  //0 for popup, 1 for lightbox
-                features: {  
-                        offerAlways: true, 
-                        offerAgentsOnline: false, 
-                        offerRoutingAgentsAvailable: false,  
-                        offerEmailIfChatUnavailable: false 
-                },  
-                fields: { 
-                        ticket: { 
+                features: {
+                        offerAlways: true,
+                        offerAgentsOnline: false,
+                        offerRoutingAgentsAvailable: false,
+                        offerEmailIfChatUnavailable: false
+                },
+                fields: {
+                        ticket: {
                                 // desc: &#x27;&#x27;,
                 // labels_new: &#x27;&#x27;,
                 // priority: &#x27;&#x27;,
                 // subject: &#x27;&#x27;,
                 // custom_loginid: &#x27;&#x27;
-                        }, 
-                        interaction: { 
+                        },
+                        interaction: {
                                 // email: &#x27;&#x27;,
                 // name: &#x27;&#x27;
-                        }, 
-                        chat: { 
-                                //subject: '' 
-                        }, 
-                        customer: { 
+                        },
+                        chat: {
+                                //subject: ''
+                        },
+                        customer: {
                                 // company: &#x27;&#x27;,
                 // desc: &#x27;&#x27;,
                 // first_name: &#x27;&#x27;,
@@ -8119,13 +8119,13 @@ var render_desk_widget = function() {
                 // locale_code: &#x27;&#x27;,
                 // title: &#x27;&#x27;,
                 // custom_loginid: &#x27;&#x27;
-                        } 
-                } 
+                        }
+                }
         }).render();
 };
 
 var add_qq = function() {
-    $('#live-help-button').html('<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2597352559&site=qq&menu=yes" id="qq_chat_icon"><span>Live Chat</span></a>');
+    $('#live-help-button').html('<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2597352559&site=qq&menu=yes" id="qq_chat_icon">Live Chat</a>');
 };
 
 var show_live_chat_icon = function() {
