@@ -18,11 +18,12 @@
           %span#virtual-fields
             %span.grd-grid-12.grd-no-gutter
               %input.xemail{:name => 'Email', :id => 'Email', :type => 'email', :required => true, :placeholder => 'Enter Your Email'}
+              %br
               %input#chooseapassword.xpass{:name => 'chooseapassword', :type => 'password', :maxlength => '25', :required => true, :placeholder => 'Choose a Password'}
               %input#actype{:type => 'hidden', :name => 'actype', :value => 'virtual'}
               %input{:type => 'hidden', :name => 'l', :value => $lang}
             %span.grd-grid-12.grd-no-gutter
-              %input.button.xtopcta{:id => 'btn_registration',:type => 'submit', :value => stash('createacc')}
+              %input.button.important.xtopcta{:id => 'btn_registration',:type => 'submit', :value => stash('createacc')}
       .grd-grid-2.grd-hide-mobile.grd-hide-phablet
   #xcta
     / #xbadges

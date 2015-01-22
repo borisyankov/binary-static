@@ -2,7 +2,7 @@
 
 <h2>[% l('Register') %]</h3>
 
-<a class="button" href="http://login.binary.com/signup.php">[% l('Sign Me Up') %]</a>
+<a class="button important" href="http://login.binary.com/signup.php">[% l('Sign Me Up') %]</a>
 
 <h2>[% l('Are your site visitors interested in:') %]</h2>
 <ul class="checked">
@@ -18,7 +18,7 @@
 
 <h2>[% l('Register') %]</h3>
 
-<a class="button" href="http://login.binary.com/signup.php">[% l('Sign Me Up') %]</a>
+<a class="button important" href="http://login.binary.com/signup.php">[% l('Sign Me Up') %]</a>
 
 <h2>[% l('Why become a [_1] Affiliate?', broker_name) %]</h2>
 <p><em>[% l('"I work with a number of affiliate companies, and [_1] is by far the friendliest and most helpful that I\'ve found. They go out of their way to provide their affiliates with all the tools, advice and support they need to succeed. To top it all off they offer some of the most handsome rebates in the industry." - <strong>Vinod Gorasia, Marketing Manager, Agora Lifestyles</strong>.', broker_name) %]</em></p>
@@ -56,4 +56,4 @@
 
 <h3>[% l('Register') %]</h3>
 
-<a class="button" href="http://login.binary.com/signup.php">[% l('Sign Me Up') %]</a>
+<a class="button important" href="http://login.binary.com/signup.php">[% l('Sign Me Up') %]</a>

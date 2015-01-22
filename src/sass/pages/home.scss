@@ -86,7 +86,6 @@
     }
   }
   #open-account {
-    background: $COLOR_ORANGE;
     border-radius: 0 0 $BORDER_RADIUS $BORDER_RADIUS;
     color: #FFFFFF;
     text-align: center;
@@ -94,11 +93,10 @@
     p {
       line-height: 2em;
       margin: 0;
-      background: $COLOR_DARK_BLUE;
-      font-size: $FONT_SIZE_S;
+      font-size: 30px;
     }
     form {
-        font-size: $FONT_SIZE_S;
+        font-size: 20px;
     }
     #virtual-fields {
         margin: 4px 0;
