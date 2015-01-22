@@ -774,6 +774,7 @@ tbody tr:hover td:first-child {
 
 th, td {
   padding: .5em;
+  vertical-align: middle;
 }
 
 /*table
@@ -1529,7 +1530,7 @@ button, input[type=button], input[type=submit], button.button, a.button {
 }
 button:hover, button:active, input[type=button]:hover, input[type=button]:active, input[type=submit]:hover, input[type=submit]:active, button.button:hover, button.button:active, a.button:hover, a.button:active {
   background: #929ca6;
-  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1), inset 0px 0px 0px 1px #818d99;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1), inset 0px 0px 0px 1px rgba(0, 0, 0, 0.2);
 }
 
 .button {
