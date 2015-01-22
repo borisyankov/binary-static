@@ -14,7 +14,7 @@ button, input[type=button], input[type=submit], button.button, a.button {
     &:hover, &:active {
         background: $COLOR_NAV_ACTIVE;
         box-shadow: 0 2px 0 rgba(0, 0, 0, .1),
-                    inset 0px 0px 0px 1px $COLOR_NAV_BORDER;
+                    inset 0px 0px 0px 1px rgba(0,0,0,.2);
     }
 }
 
@@ -22,7 +22,7 @@ button, input[type=button], input[type=submit], button.button, a.button {
     cursor: pointer;
 }
 
-button.important .button.important {
+button.important, .button.important {
     background: $COLOR_ACTIVE;
     &:hover, &:active {
         background: darken($COLOR_ACTIVE, 10%);
