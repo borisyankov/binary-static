@@ -102,7 +102,7 @@ var get_started_behaviour = function() {
         return false;
     };
     var to_show;
-    var nav = $('.get-started').find('.subsection-navigation');
+    var nav = $('.get-started-content').find('.subsection-navigation');
     var fragment;
     var len = nav.length;
 
