@@ -236,7 +236,7 @@ BetForm.TradingTime.prototype = {
 
         var diff = time.valueOf() - start_time.valueOf();
         var min_unit = this.min_unit();
-        var min_expiration_time = BetForm.attributes.start_time_moment().add(min_unit.units, min_unit.min);
+        var min_expiration_time = BetForm.attributes.start_time_moment().add(min_unit.min, min_unit.units);
         if(time.isBefore(min_expiration_time)) {
             units = min_unit.units;
             amount = min_unit.min;
@@ -261,7 +261,7 @@ BetForm.TradingTime.prototype = {
     },
     convert_to_end_time: function(duration_amount, duration_units) {
         var ms = BetForm.attributes.start_time_moment();
-        ms.add(duration_units, duration_amount);
+        ms.add(duration_amount, duration_units);
         if(duration_units == "d") {
             var trading_times = this.get_trading_times(ms.format("YYYY-MM-DD"));
             ms = trading_times.closing;

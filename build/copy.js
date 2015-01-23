@@ -9,7 +9,7 @@ module.exports = {
             { expand: true, cwd: 'src/templates/', src: ['**'], dest: 'dist/templates/' },
             { expand: true, cwd: 'src/css/external/jquery-ui-custom-theme/images/', src: ['**'], dest: 'dist/css/images' },
             { expand: true, cwd: 'src/css/external/jquery-ui-custom-theme/', src: ['*.css'], dest: 'dist/css/' },
-            { expand: true, cwd: 'src/javascript/', src: ['**'], dest: 'dist/dev/src/javascript/' }
+            { expand: true, cwd: 'src/javascript/', src: ['**'], dest: 'dist/dev/src/javascript/' },
         ]
     }
 };

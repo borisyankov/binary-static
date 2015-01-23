@@ -38,7 +38,7 @@ Page.prototype = {
     },
     localize_for: function(language) {
         text = texts[language];
-        moment.lang(language.toLowerCase());
+        moment.locale(language.toLowerCase());
     },
     url_for_language: function(lang) {
         lang = lang.trim().toUpperCase();

@@ -120,7 +120,7 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.binary.com/d/contact.cgi?l=EN</loc>
+  <loc>https://www.binary.com/contact?l=EN</loc>
   <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>

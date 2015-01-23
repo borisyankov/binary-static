@@ -61,7 +61,7 @@
             <a href="http://www.gamcare.org.uk">[% l("GamCare") %]</a>
         </li>
         <li>
-            <a class="pjaxload" href="[% request.url_for('contact.cgi') %]"[% target %]>[% l("Contact Us") %]</a>
+            <a class="pjaxload" href="[% request.url_for('contact') %]"[% target %]>[% l("Contact Us") %]</a>
         </li>
       </ul>
     </li>

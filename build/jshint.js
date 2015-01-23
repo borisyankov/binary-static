@@ -2,8 +2,8 @@ module.exports = {
     all: {
         options: {
             jshintrc: true,
-            ignores: 'javascript/external/**/*.js',
+            ignores: 'src/javascript/lib/**/*.js',
         },
-        all: 'javascript/**/*.js'
+        src: 'src/javascript/**/*.js'
     }
 };
