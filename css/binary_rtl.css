@@ -853,6 +853,7 @@ th, td {
 */
 .readable,
 .why-us-content,
+.whyus-content,
 .careers-content,
 .devguide-content,
 .grouphistory-content,
@@ -867,6 +868,7 @@ th, td {
 }
 .readable header,
 .why-us-content header,
+.whyus-content header,
 .careers-content header,
 .devguide-content header,
 .grouphistory-content header,
@@ -882,6 +884,8 @@ th, td {
 .readable blockquote, .readable img,
 .why-us-content blockquote,
 .why-us-content img,
+.whyus-content blockquote,
+.whyus-content img,
 .careers-content blockquote,
 .careers-content img,
 .devguide-content blockquote,
@@ -906,6 +910,7 @@ th, td {
 }
 .readable blockquote p,
 .why-us-content blockquote p,
+.whyus-content blockquote p,
 .careers-content blockquote p,
 .devguide-content blockquote p,
 .grouphistory-content blockquote p,
@@ -922,6 +927,7 @@ th, td {
 }
 .readable blockquote p:before,
 .why-us-content blockquote p:before,
+.whyus-content blockquote p:before,
 .careers-content blockquote p:before,
 .devguide-content blockquote p:before,
 .grouphistory-content blockquote p:before,
@@ -936,6 +942,7 @@ th, td {
 }
 .readable blockquote p:after,
 .why-us-content blockquote p:after,
+.whyus-content blockquote p:after,
 .careers-content blockquote p:after,
 .devguide-content blockquote p:after,
 .grouphistory-content blockquote p:after,
@@ -950,6 +957,7 @@ th, td {
 }
 .readable img,
 .why-us-content img,
+.whyus-content img,
 .careers-content img,
 .devguide-content img,
 .grouphistory-content img,
@@ -966,6 +974,7 @@ th, td {
 }
 .readable ul,
 .why-us-content ul,
+.whyus-content ul,
 .careers-content ul,
 .devguide-content ul,
 .grouphistory-content ul,
@@ -981,6 +990,7 @@ th, td {
 }
 .readable li,
 .why-us-content li,
+.whyus-content li,
 .careers-content li,
 .devguide-content li,
 .grouphistory-content li,
