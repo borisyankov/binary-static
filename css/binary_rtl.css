@@ -1706,7 +1706,6 @@ nav[role=tabs] a.active, nav[role=tabs] a:hover {
   background: #e98024;
 }
 .home-content #open-account {
-  background: #e98024;
   border-radius: 0 0 2px 2px;
   color: #FFFFFF;
   text-align: center;
@@ -1715,8 +1714,6 @@ nav[role=tabs] a.active, nav[role=tabs] a:hover {
 .home-content #open-account p {
   line-height: 2em;
   margin: 0;
-  background: #15212d;
-  font-size: 0.71429rem;
 }
 .home-content #open-account form {
   font-size: 0.71429rem;
@@ -2120,19 +2117,11 @@ nav[role=tabs] a.active, nav[role=tabs] a:hover {
 }
 
 .xemail, .xpass {
-  width: 35% !important;
+  width: 50% !important;
   display: inline-block;
   margin-top: 20px;
   margin-bottom: 10px;
   padding: 10px !important;
-}
-
-.xemail {
-  margin-right: 20px;
-}
-
-.xpass {
-  margin-left: 20px;
 }
 
 .xtopcta {
