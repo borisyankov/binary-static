@@ -1028,12 +1028,12 @@ th, td {
 }
 
 .license-logos {
-  height: 100px;
   display: flex;
   justify-content: space-around;
 }
 
 .license-logos img {
+  height: 100px;
   margin: 0;
   display: inline-block;
 }

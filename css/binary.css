@@ -1100,7 +1100,6 @@ th, td {
 }
 
 .license-logos {
-  height: 100px;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -1110,6 +1109,7 @@ th, td {
 }
 
 .license-logos img {
+  height: 100px;
   margin: 0;
   display: inline-block;
 }
