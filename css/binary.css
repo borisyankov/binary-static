@@ -1111,6 +1111,7 @@ th, td {
 
 .license-logos img {
   margin: 0;
+  display: inline-block;
 }
 
 /*

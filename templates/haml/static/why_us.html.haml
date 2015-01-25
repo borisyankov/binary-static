@@ -46,11 +46,10 @@
   %img{:src => url_for('images/pages/footer/isle-of-man.png')}
 
 %h1= l('Go with the leader')
-.twocol
-  %img{:src => url_for('images/pages/why-us/why-us-GBAF-award-2012.svg')}
-  %p= l('[_1] is the award-winning industry pioneer in online options trading. We boast:', stash->{website_name})
-    %ul.checked
-      %li= l('Over two billion dollars in trades to date.')
-      %li= l('First-class client service.')
-      %li= l('Multi award-winning trading platform.')
-      %li= l('Exclusive binary trading technology.')
+%p= l('[_1] is the award-winning industry pioneer in online options trading. We boast:', stash->{website_name})
+  %ul.checked
+    %li= l('Over two billion dollars in trades to date.')
+    %li= l('First-class client service.')
+    %li= l('Multi award-winning trading platform.')
+    %li= l('Exclusive binary trading technology.')
+%img{:src => url_for('images/pages/why-us/why-us-GBAF-award-2012.svg')}
