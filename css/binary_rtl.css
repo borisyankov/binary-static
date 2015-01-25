@@ -1944,6 +1944,7 @@ nav[role=tabs] a.active, nav[role=tabs] a:hover {
   color: #FFF;
   text-align: center;
   padding: 0 0 0;
+  font-size: 22px;
 }
 
 .home2-content #open-account p {
@@ -1990,7 +1991,6 @@ nav[role=tabs] a.active, nav[role=tabs] a:hover {
 }
 
 #xreason {
-  background-color: #f2f2f2;
   padding-bottom: 40px;
 }
 
@@ -2146,7 +2146,6 @@ nav[role=tabs] a.active, nav[role=tabs] a:hover {
   margin-top: 10px;
   margin-bottom: 20px;
   padding: 20px !important;
-  border-radius: 0 !important;
 }
 
 .xquoter-left p span {
