@@ -1797,72 +1797,72 @@ nav[role=tabs] a.active, nav[role=tabs] a:hover {
 }
 
 /* GET-STARTED PAGES RULES */
-.get-started {
+.get-started-content {
   margin-top: 40px;
   overflow: hidden;
 }
-.get-started .sidebar-left ul li {
+.get-started-content .sidebar-left ul li {
   list-style-image: none;
   margin: 0;
   line-height: 150%;
   border-bottom: 1px solid #FFFFFF;
 }
-.get-started .sidebar-left ul li a {
+.get-started-content .sidebar-left ul li a {
   text-decoration: none;
   display: block;
   padding: 5px 5px 5px 10px;
   color: #a0aab4;
 }
-.get-started .sidebar-left ul li.selected {
+.get-started-content .sidebar-left ul li.selected {
   background: #a0aab4;
   border-radius: 2px;
 }
-.get-started .sidebar-left ul li.selected a {
+.get-started-content .sidebar-left ul li.selected a {
   color: white;
   text-decoration: none;
 }
-.get-started .sidebar-left .open-account a {
+.get-started-content .sidebar-left .open-account a {
   display: block;
 }
-.get-started .sidebar-right div {
+.get-started-content .sidebar-right div {
   border-bottom: #a0aab4;
   margin-bottom: 20px;
   padding: 20px;
   text-align: center;
 }
-.get-started .sidebar-right div p {
+.get-started-content .sidebar-right div p {
   margin: 0;
 }
-.get-started .sidebar-right div a {
+.get-started-content .sidebar-right div a {
   font-weight: bold;
 }
-.get-started .sidebar-right .open-account {
+.get-started-content .sidebar-right .open-account {
   padding: 20px;
 }
-.get-started .sidebar-right .open-account p {
+.get-started-content .sidebar-right .open-account p {
   margin-bottom: 1em;
 }
-.get-started .sidebar-right .open-account a {
+.get-started-content .sidebar-right .open-account a {
   display: block;
 }
-.get-started dl {
+.get-started-content dl {
   text-align: center;
 }
-.get-started dl .section {
+.get-started-content dl .section {
   min-height: 210px;
   background: #f0f0f5;
   margin: 0 20px 20px 0;
 }
-.get-started dl .section-header {
+.get-started-content dl .section-header {
   padding: 10px;
 }
-.get-started dl .section-info {
+.get-started-content dl .section-info {
   width: auto;
   text-align: center;
   padding: 10px;
   min-height: 50px;
 }
-.get-started dl a {
+.get-started-content dl a {
   display: block;
   color: white;
   font-weight: bold;
@@ -1871,84 +1871,84 @@ nav[role=tabs] a.active, nav[role=tabs] a:hover {
   background: black;
   text-decoration: none;
 }
-.get-started dl div#what-is-binary-trading {
+.get-started-content dl div#what-is-binary-trading {
   height: 80px;
   background: url("../images/pages/get-started/intro_1.png") no-repeat 0 0;
 }
-.get-started dl div#binary-options-basics {
+.get-started-content dl div#binary-options-basics {
   height: 80px;
   background: url("../images/pages/get-started/intro_1.png") no-repeat 100% 0;
 }
-.get-started dl div#how-to-trade-binaries {
+.get-started-content dl div#how-to-trade-binaries {
   height: 80px;
   background: url("../images/pages/get-started/intro_1.png") no-repeat 100% 24%;
 }
-.get-started dl div#types-of-trades {
+.get-started-content dl div#types-of-trades {
   height: 80px;
   background: url("../images/pages/get-started/intro_1.png") no-repeat 0 47%;
 }
-.get-started dl div#benefits-of-trading-binaries {
+.get-started-content dl div#benefits-of-trading-binaries {
   height: 80px;
   background: url("../images/pages/get-started/intro_1.png") no-repeat 0 24%;
 }
-.get-started dl div#beginners-faq {
+.get-started-content dl div#beginners-faq {
   height: 80px;
   background: url("../images/pages/get-started/intro_1.png") no-repeat 0 71%;
 }
-.get-started dl div#glossary {
+.get-started-content dl div#glossary {
   height: 80px;
   background: url("../images/pages/get-started/intro_1.png") no-repeat 100% 71%;
 }
-.get-started dl div#random-trades {
+.get-started-content dl div#random-trades {
   height: 80px;
   background: url("../images/pages/get-started/intro_1.png") no-repeat 100% 93%;
 }
-.get-started dl div#smart-indices {
+.get-started-content dl div#smart-indices {
   height: 80px;
   background: url("../images/pages/smart-indices/smart-indices-1.svg") no-repeat 50% 0%;
 }
-.get-started .section-content h2 {
+.get-started-content .section-content h2 {
   padding-top: 20px;
 }
-.get-started .section-content h2.center {
+.get-started-content .section-content h2.center {
   width: 63.8297872%;
 }
-.get-started .section-1 img {
+.get-started-content .section-1 img {
   float: left;
   margin-right: 3.1914894%;
 }
-.get-started .subsection-navigation {
+.get-started-content .subsection-navigation {
   clear: both;
   text-align: center;
   margin-top: 20px;
   padding-top: 10px;
 }
-.get-started .subsection-navigation a {
+.get-started-content .subsection-navigation a {
   padding: 0.4375em 3.19149%;
 }
-.get-started .subsection-navigation a.disabled {
+.get-started-content .subsection-navigation a.disabled {
   color: #a0aab4;
   background: #f0f0f5;
   cursor: default;
 }
-.get-started .section-5 ol ol, .get-started .section-5 ul ol {
+.get-started-content .section-5 ol ol, .get-started-content .section-5 ul ol {
   list-style-type: lower-alpha;
 }
-.get-started .section-5 .subsection p .highlight {
+.get-started-content .section-5 .subsection p .highlight {
   font-style: italic;
   margin: 0.625em 0;
 }
-.get-started .section-7 h3 {
+.get-started-content .section-7 h3 {
   font-weight: bold;
   margin-top: 1.875em;
 }
-.get-started .section-7 p {
+.get-started-content .section-7 p {
   margin: 0.625em 0 1.25em 0;
 }
-.get-started .section-7 a {
+.get-started-content .section-7 a {
   font-weight: bold;
 }
-.get-started .trade-type-flash {
+.get-started-content .trade-type-flash {
   padding-bottom: 25px;
 }
 
