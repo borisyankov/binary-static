@@ -1814,9 +1814,10 @@ nav[role=tabs] a.active, nav[role=tabs] a:hover {
 .home-content #open-account p {
   line-height: 2em;
   margin: 0;
+  font-size: 30px;
 }
 .home-content #open-account form {
-  font-size: 0.71429rem;
+  font-size: 20px;
 }
 .home-content #open-account #virtual-fields {
   margin: 4px 0;
@@ -2230,6 +2231,7 @@ nav[role=tabs] a.active, nav[role=tabs] a:hover {
   margin-top: 10px;
   margin-bottom: 20px;
   padding: 20px !important;
+  font-size: 20px;
 }
 
 .xquoter-left p span {
@@ -2262,7 +2264,7 @@ nav[role=tabs] a.active, nav[role=tabs] a:hover {
   }
 
   .xtopcta {
-    width: 80%;
+    width: 50%;
   }
 
   .xtestimonial h1 {
