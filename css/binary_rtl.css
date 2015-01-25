@@ -1027,8 +1027,14 @@ th, td {
   border-radius: 2px;
 }
 
-.license-logos img {
+.license-logos {
   height: 100px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.license-logos img {
+  margin: 0;
 }
 
 /*
