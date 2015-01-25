@@ -2040,7 +2040,6 @@ nav[role=tabs] a.active, nav[role=tabs] a:hover {
 .home2-content #open-account {
   border-radius: 0;
   margin-top: 10px;
-  background: #e98024;
   color: #FFF;
   text-align: center;
   padding: 0 0 0;
@@ -2048,12 +2047,8 @@ nav[role=tabs] a.active, nav[role=tabs] a:hover {
 }
 
 .home2-content #open-account p {
-  color: white;
-  font-size: 100%;
-  font-weight: bold;
   line-height: 2em;
   margin: 0;
-  background: #15212d;
 }
 
 .home2-content #open-account #virtual-fields {
