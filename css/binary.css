@@ -847,6 +847,7 @@ tbody tr:hover td:first-child {
 th, td {
   padding: .5em;
   vertical-align: middle;
+  text-align: center;
 }
 
 /*table
@@ -932,6 +933,7 @@ th, td {
 .opensourceprojects-content,
 .partnerapi-content,
 .responsibletrading-content,
+.responsible-trading-content,
 .smartindices-content,
 .tour-content,
 .whitelabels-content,
@@ -947,6 +949,7 @@ th, td {
 .opensourceprojects-content header,
 .partnerapi-content header,
 .responsibletrading-content header,
+.responsible-trading-content header,
 .smartindices-content header,
 .tour-content header,
 .whitelabels-content header,
@@ -970,6 +973,8 @@ th, td {
 .partnerapi-content img,
 .responsibletrading-content blockquote,
 .responsibletrading-content img,
+.responsible-trading-content blockquote,
+.responsible-trading-content img,
 .smartindices-content blockquote,
 .smartindices-content img,
 .tour-content blockquote,
@@ -989,6 +994,7 @@ th, td {
 .opensourceprojects-content blockquote p,
 .partnerapi-content blockquote p,
 .responsibletrading-content blockquote p,
+.responsible-trading-content blockquote p,
 .smartindices-content blockquote p,
 .tour-content blockquote p,
 .whitelabels-content blockquote p,
@@ -1006,6 +1012,7 @@ th, td {
 .opensourceprojects-content blockquote p:before,
 .partnerapi-content blockquote p:before,
 .responsibletrading-content blockquote p:before,
+.responsible-trading-content blockquote p:before,
 .smartindices-content blockquote p:before,
 .tour-content blockquote p:before,
 .whitelabels-content blockquote p:before,
@@ -1021,6 +1028,7 @@ th, td {
 .opensourceprojects-content blockquote p:after,
 .partnerapi-content blockquote p:after,
 .responsibletrading-content blockquote p:after,
+.responsible-trading-content blockquote p:after,
 .smartindices-content blockquote p:after,
 .tour-content blockquote p:after,
 .whitelabels-content blockquote p:after,
@@ -1036,6 +1044,7 @@ th, td {
 .opensourceprojects-content img,
 .partnerapi-content img,
 .responsibletrading-content img,
+.responsible-trading-content img,
 .smartindices-content img,
 .tour-content img,
 .whitelabels-content img,
@@ -1053,6 +1062,7 @@ th, td {
 .opensourceprojects-content ul,
 .partnerapi-content ul,
 .responsibletrading-content ul,
+.responsible-trading-content ul,
 .smartindices-content ul,
 .tour-content ul,
 .whitelabels-content ul,
@@ -1069,6 +1079,7 @@ th, td {
 .opensourceprojects-content li,
 .partnerapi-content li,
 .responsibletrading-content li,
+.responsible-trading-content li,
 .smartindices-content li,
 .tour-content li,
 .whitelabels-content li,
@@ -1086,6 +1097,10 @@ th, td {
   padding: .25em;
   box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.25);
   border-radius: 2px;
+}
+
+.license-logos img {
+  height: 100px;
 }
 
 /*
