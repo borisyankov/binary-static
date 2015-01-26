@@ -484,6 +484,7 @@ body {
 
 #content {
   flex-direction: column;
+  align-items: center;
 }
 
 .msgbar {
@@ -1490,6 +1491,7 @@ select, #tradingdate, .date-picker, .hasDatepicker, .down-arrow {
 
 label {
   text-align: left;
+  line-height: 2em;
 }
 
 .thin-form {

@@ -494,6 +494,9 @@ body {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .msgbar {
@@ -1574,6 +1577,7 @@ select, #tradingdate, .date-picker, .hasDatepicker, .down-arrow {
 
 label {
   text-align: left;
+  line-height: 2em;
 }
 
 .thin-form {
