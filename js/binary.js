@@ -226,7 +226,6 @@ Header.prototype = {
         this.simulate_input_placeholder_for_ie();
     },
     on_unload: function() {
-        this.menu.reset();
     },
     show_or_hide_login_form: function() {
         if (this.client.is_logged_in) {
