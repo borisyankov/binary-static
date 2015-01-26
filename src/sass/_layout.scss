@@ -6,7 +6,7 @@
 html, body {
     min-height: 100vh;
 }
-body, .msgbar, .header, .content, .sitemap,
+body, .msgbar, .header, #content, .sitemap,
 .msgbar-wrapper, .header-wrapper, .content-wrapper, .sitemap-wrapper, .footer-wrapper {
     display: flex;
 }
@@ -31,12 +31,12 @@ body {
     padding: 0 1em;
 }
 
-.msgbar, .header, .content, .sitemap, .footer {
+.msgbar, .header, #content, .sitemap, .footer {
     max-width: 1200px;
     width: 100%;
 }
 
-.content {
+#content {
     flex-direction: column;
 }
 

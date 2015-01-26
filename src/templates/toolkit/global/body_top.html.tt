@@ -4,7 +4,7 @@
       <!-- FlushHead -->
 [% END %]
 
-<div class="content">
+<div id="content">
     [% google_tag_tracking_code %]
     [% google_tag_declaration_code %]
     <div id="page_info" style="display:none;">
