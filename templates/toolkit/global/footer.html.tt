@@ -11,9 +11,10 @@
                 <a class="pjaxload" href="[% request.url_for('partnerapi') %]"[% IF target %] target="[%
                 target
                 %]"[% END %]>[% l('Partner API') %]</a>
-                <a href="[% request.url_for('open-source-projects') %]" class="pjaxload">[% l('Open Source') %]</a>
             </li>
             <li>
+                <a class="pjaxload" href="[% request.url_for('careers') %]">[% l('Careers') %]</a>
+                <a href="[% request.url_for('open-source-projects') %]" class="pjaxload">[% l('Open Source') %]</a>
                 <a href="http://binarycom.statuspage.io" target="_blank">[% l('Network Status') %]</a>
             </li>
             <li>
@@ -24,8 +25,6 @@
                    href="[% request.url_for('c_template.cgi', {filecode => 'legal'}) %]#privacy-tab"[% IF
                 target
                 %] target="[% target %]"[% END %]>[% l('Security and Privacy') %]</a>
-                <a class="pjaxload" href="[% request.url_for('responsible-trading') %]"[% IF target %]
-                    target="[% target %]"[% END %]>[% l('Responsible Trading') %]</a>
                 <a class="pjaxload" href="[% request.url_for('c_template.cgi', {filecode => 'legal', selected_tab => 'complaints-disputes-tac-tab'}) %]"[% IF target %]
                     target="[% target %]"[% END %]>[% l('Complaints and Disputes') %]</a>
             </li>
@@ -37,7 +36,6 @@
                 target
                 %]"[% END %]>[% l('Group History') %]</a>
                 <a href="[% request.url_for('us_patents.cgi') %]" class="us_patent_link pjaxload">[% l('Patents') %]</a>
-                <a class="pjaxload" href="[% request.url_for('careers') %]">[% l('Careers') %]</a>
             </li>
         </ul>
         <div class="licenses">

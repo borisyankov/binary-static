@@ -137,6 +137,7 @@ code {
   font-family: monospace;
   white-space: pre;
   line-height: 1.5;
+  padding: .25em;
 }
 
 pre {
@@ -667,6 +668,7 @@ body {
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
+  margin-bottom: .25em;
 }
 
 .footer {
@@ -944,7 +946,6 @@ td a {
 .whyus-content,
 .careers-content,
 .devguide-content,
-.grouphistory-content,
 .opensourceprojects-content,
 .partnerapi-content,
 .responsibletrading-content,
@@ -961,7 +962,6 @@ td a {
 .whyus-content header,
 .careers-content header,
 .devguide-content header,
-.grouphistory-content header,
 .opensourceprojects-content header,
 .partnerapi-content header,
 .responsibletrading-content header,
@@ -982,8 +982,6 @@ td a {
 .careers-content img,
 .devguide-content blockquote,
 .devguide-content img,
-.grouphistory-content blockquote,
-.grouphistory-content img,
 .opensourceprojects-content blockquote,
 .opensourceprojects-content img,
 .partnerapi-content blockquote,
@@ -1009,7 +1007,6 @@ td a {
 .whyus-content blockquote p,
 .careers-content blockquote p,
 .devguide-content blockquote p,
-.grouphistory-content blockquote p,
 .opensourceprojects-content blockquote p,
 .partnerapi-content blockquote p,
 .responsibletrading-content blockquote p,
@@ -1028,7 +1025,6 @@ td a {
 .whyus-content blockquote p:before,
 .careers-content blockquote p:before,
 .devguide-content blockquote p:before,
-.grouphistory-content blockquote p:before,
 .opensourceprojects-content blockquote p:before,
 .partnerapi-content blockquote p:before,
 .responsibletrading-content blockquote p:before,
@@ -1045,7 +1041,6 @@ td a {
 .whyus-content blockquote p:after,
 .careers-content blockquote p:after,
 .devguide-content blockquote p:after,
-.grouphistory-content blockquote p:after,
 .opensourceprojects-content blockquote p:after,
 .partnerapi-content blockquote p:after,
 .responsibletrading-content blockquote p:after,
@@ -1062,7 +1057,6 @@ td a {
 .whyus-content img,
 .careers-content img,
 .devguide-content img,
-.grouphistory-content img,
 .opensourceprojects-content img,
 .partnerapi-content img,
 .responsibletrading-content img,
@@ -1082,7 +1076,6 @@ td a {
 .whyus-content ul,
 .careers-content ul,
 .devguide-content ul,
-.grouphistory-content ul,
 .opensourceprojects-content ul,
 .partnerapi-content ul,
 .responsibletrading-content ul,
@@ -1100,7 +1093,6 @@ td a {
 .whyus-content li,
 .careers-content li,
 .devguide-content li,
-.grouphistory-content li,
 .opensourceprojects-content li,
 .partnerapi-content li,
 .responsibletrading-content li,
