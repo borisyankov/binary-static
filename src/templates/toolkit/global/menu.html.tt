@@ -61,6 +61,9 @@
             <a href="http://www.gamcare.org.uk">[% l("GamCare") %]</a>
         </li>
         <li>
+            <a class="pjaxload" href="[% request.url_for('responsible-trading') %]">[% l('Responsible Trading') %]</a>
+        </li>            
+        <li>
             <a class="pjaxload" href="[% request.url_for('contact') %]"[% target %]>[% l("Contact Us") %]</a>
         </li>
       </ul>

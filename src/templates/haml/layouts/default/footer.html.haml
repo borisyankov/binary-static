@@ -5,19 +5,18 @@
         %a.pjaxload{:href=>url_for("affiliate_signup.cgi")}= l('Affiliate Program')
         %a.pjaxload{:href=>url_for("white-labels")}= l('White Labels')
         %a.pjaxload{:href=>url_for("partnerapi")}= l('Partner API')
-        %a.pjaxload{:href=>url_for("open-source-projects")}= l('Open Source')
       %li
+        %a.pjaxload{:href=>url_for("careers")}= l('Careers')
+        %a.pjaxload{:href=>url_for("open-source-projects")}= l('Open Source')
         %a{:href=>"http://binarycom.statuspage.io", :target => "_blank"}= l('Network Status')
       %li
         %a.pjaxload{:href=>url_for("c_template.cgi?filecode=legal")}= l('Terms and Conditions')
         %a.pjaxload{:href=>url_for("c_template.cgi?filecode=legal#privacy-tab")}= l('Security and Privacy')
-        %a.pjaxload{:href=>url_for("responsible-trading")}= l('Responsible Trading')
         %a.pjaxload{:href=>url_for("c_template.cgi?filecode=legal&selected_tab=complaints-disputes-tac-tab")}= l('Complaints and Disputes')
       %li
         %a.pjaxload{:href=>url_for("about-us"), :class => 'pjaxload'}= l('Group Information')
         %a.pjaxload{:href=>url_for("group-history"), :class => 'pjaxload'}= l('Group History')
         %a.pjaxload{:href=>url_for("us_patents.cgi"), :class=>"us_patent_link"}= l('Patents')
-        %a.pjaxload{:href=>url_for("careers")}= l('Careers')
     .licenses
       %a{:href => "http://www.gov.im/gambling/", :target => "_blank"}
         %img{:src => url_for('images/pages/footer/isle-of-man.png')}
