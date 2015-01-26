@@ -120,14 +120,6 @@
   select {
     margin-right: 5px;
   }
-  input[type="text"] {
-    border: 1px solid $COLOR_GRAY;
-    margin-right: 5px;
-    width: 105px;
-  }
-  input[type="checkbox"] {
-    border: none;
-  }
 }
 
 #tradingform select {
@@ -528,16 +520,6 @@ div#price_table_notes {
 .tab-menu-wrap {
     ul#trading-times {
         margin-bottom: 1em;
-    }
-}
-
-form#rise_fall_form {
-    fieldset {
-        padding-top: 1em;
-        margin-bottom: 1em;
-    }
-    label {
-        width: auto;
     }
 }
 

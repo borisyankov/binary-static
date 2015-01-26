@@ -1,14 +1,16 @@
-<h1>[% l("Rise / Fall Table") %]</h1>
-<form name="rise_fall" id="rise_fall_form" method="post" action="[%= request.url_for('rise_fall_table.cgi') %]">
-    <label for="atleast">[% l('Start time') %]:</label>
-    <select id="atleast" name="date_start">
-        [% FOREACH option IN start_options.options %]
-            <option value="[% option.value %]" [% IF start_options.selected == option.value %] selected="selected" [% END %]>[% option.text %]</option>
-        [% END %]
-    </select>
-    <div id='duration_container'>
+<div class="readable">
+    <h1>[% l("Rise / Fall Table") %]</h1>
+    <form name="rise_fall" id="rise_fall_form" method="post" action="[%= request.url_for('rise_fall_table.cgi') %]">
+        <p>
+            <label for="atleast">[% l('Start time') %]:</label>
+            <select id="atleast" name="date_start">
+                [% FOREACH option IN start_options.options %]
+                    <option value="[% option.value %]" [% IF start_options.selected == option.value %] selected="selected" [% END %]>[% option.text %]</option>
+                [% END %]
+            </select>
+        </p>
+        <p>
             <label for="duration_amount">[% l('Duration') %]:</label>
-        <span id="expiry_type_duration" class='grd-grid-9 grd-parent'>
             <input type="text" name="duration_amount" id="duration_amount" size="4" maxlength="5" value="[% duration_selected.duration_amount %]"/>
             <select id="duration_units" name="duration_units">
             [% FOREACH pair IN duration_options.pairs %]
@@ -22,23 +24,24 @@
             <span class="[% IF pair.key == 'forward_starting' %]forward_starting [% END %]non_input [% minimum.unit %]"><abbr rel='tooltip' title="[% l("minimum available duration") %]">[% l("min") %]</abbr>: [% minimum.value %]</span>
                 [% END %]
             [% END %]
-        </span>
+        </p>
+        <p>
+            <label for="payout">[% l('Payout Currency') %]:</label>
+            <select id="bet_currency" name="currency">
+                [% FOREACH currency = currency_options %]
+                    <option value=[% currency %] [% IF selected_currency == currency %] selected="selected" [% END %]>[% currency %]</option>
+                [% END %]
+            </select>
+            <input type="hidden" name="table_action" value="price"></input>
+        </p>
+        <p style="text-align: center">
+            <button id="rise_fall_calculate" class="button important" value="calculate" type="submit">[% l('Calculate') %]</button>
+            <button style="display:none;" id="rise_fall_calculating" class="button" value="calculating" type="submit">[% l('Calculating') %]</button>
+        </p>
+    </form>
+
+
+    <div id="rise_fall_prices_div">
+    [% prices %]
     </div>
-    <label for="payout">[% l('Payout Currency') %]:</label>
-    <select id="bet_currency" name="currency">
-        [% FOREACH currency = currency_options %]
-            <option value=[% currency %] [% IF selected_currency == currency %] selected="selected" [% END %]>[% currency %]</option>
-        [% END %]
-    </select>
-    <input type="hidden" name="table_action" value="price"></input>
-
-    <div id="submit" >
-        <button id="rise_fall_calculate" class="button" value="calculate" type="submit">[% l('Calculate') %]</button>
-        <button style="display:none;" id="rise_fall_calculating" class="button" value="calculating" type="submit">[% l('Calculating') %]</button>
-    </div>
-</form>
-
-
-<div id="rise_fall_prices_div">
-[% prices %]
 </div>

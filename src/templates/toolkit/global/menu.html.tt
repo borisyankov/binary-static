@@ -46,7 +46,7 @@
             <a class="pjaxload" href="[% request.url_for('why-us') %]"[% target %]>[% l("Why Us?") %]</a>
         </li>
         <li>
-            <a class="pjaxload" href="[% request.url_for('get-started') %]"[% target %]>[% l("Training Center?") %]</a>
+            <a class="pjaxload" href="[% request.url_for('get-started') %]"[% target %]>[% l("Training Center") %]</a>
         </li>
         <li>
             <a class="pjaxload" href="[% request.url_for('tour.cgi') %]"[% target %]>[% l("Tour") %]</a>
@@ -62,7 +62,7 @@
         </li>
         <li>
             <a class="pjaxload" href="[% request.url_for('responsible-trading') %]">[% l('Responsible Trading') %]</a>
-        </li>            
+        </li>
         <li>
             <a class="pjaxload" href="[% request.url_for('contact') %]"[% target %]>[% l("Contact Us") %]</a>
         </li>

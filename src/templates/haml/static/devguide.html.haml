@@ -26,7 +26,7 @@
 
 %p= l('where')
 
-%ul.bullet
+%ul.bulleted
   %li= l('[_1] will be provided to you on registration.', 'PROXY_ENDPOINT')
   %li= l('[_1] will be provided to you on registration.', 'CLIENT_ID')
   %li= l('[_1] is the page in your application that will handle the return step.  This URL must be registered with us in advance.', 'CALLBACK_URL')
@@ -38,7 +38,7 @@
 
 %p= l('where')
 
-%ul.bullet
+%ul.bulleted
   %li= l('[_1] is a new OAuth2 authorization code.', 'AUTHCODE');
   %li= l('[_1] is the scope level that was granted.', 'SCOPE');
 
@@ -48,7 +48,7 @@
 
 %p= l('with this [_1] data:', 'POST')
 
-%ul.bullet
+%ul.bulleted
   %li= 'code=CODE'
   %li= 'scope=SCOPE'
   %li= 'redirect_uri=CALLBACK_URL'
@@ -56,11 +56,11 @@
 
 %p= l('and with this HTTP header')
 
-%ul.bullet
+%ul.bulleted
   %li= l('Authorization: Basic [_1]', 'ENCODED')
 
 %p= l('where')
-  %ul.bullet
+  %ul.bulleted
     %li!= l('[_1] is a Base64-encoding of [_2].', 'ENCODED', 'CLIENT_ID:CLIENT_SECRET')
     %li!= l('[_1] will be provided to you on registration.', 'CLIENT_SECRET')
 
@@ -77,7 +77,7 @@
 
 %p= l('where')
 
-%ul.bullet
+%ul.bulleted
   %li= l('[_1] will be provided to you on registration.', 'PROXY_ENDPOINT')
   %li= l('[_1] will be provided to you on registration.', 'CLIENT_ID')
   %li= l('[_1] is the page in your application that will handle the return step.  This URL must be registered with us in advance.  For mobile apps, this could for example use a custom URI scheme.', 'CALLBACK_URL')
@@ -89,7 +89,7 @@
 
 %p= l('where')
 
-%ul.bullet
+%ul.bulleted
   %li= l('[_1] is a new OAuth2 access token.', 'ACCESSTOKEN');
   %li= l('[_1] is the lifetime in seconds of the new access token.', 'EXPIRES');
   %li= l('[_1] is the scope level that was granted.', 'SCOPE');
@@ -104,12 +104,12 @@
 
 %p= l('with this HTTP header')
 
-%ul.bullet
+%ul.bulleted
   %li!= l('Authorization: Bearer [_1]', 'ACCESSTOKEN')
 
 %p= l('where')
 
-%ul.bullet
+%ul.bulleted
   %li!= l('[_1] is the same endpoint used during authentication.', 'PROXY_ENDPOINT')
   %li!= l('[_1] was returned by the authentication procedure.', 'ACCESS_TOKEN')
   %li!= l('[_1] is any binary.com API service e.g. "/markets".', 'SERVICE')
@@ -128,16 +128,16 @@
 
 %p= l('with this [_1] data:', 'POST')
 
-%ul.bullet
+%ul.bulleted
   %li= 'grant_type=refresh_token'
   %li= 'refresh_token=REFRESH_TOKEN'
 
 %p= l('and with this (same as before) HTTP header')
-  %ul.bullet
+  %ul.bulleted
     %li= l('Authorization: Basic [_1]', 'ENCODED')
 
 %p= l('where')
-  %ul.bullet
+  %ul.bulleted
     %li!= l('[_1] was found in the same JSON structure which supplied the original access_token.', 'REFRESH_TOKEN')
 
 %p!= l('The [_1] will return a JSON structure which includes a new access_token along with several other useful attributes relevant to the renewal.', 'POST')
