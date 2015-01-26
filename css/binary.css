@@ -861,6 +861,10 @@ th, td {
   text-align: center;
 }
 
+th a {
+  font-weight: normal;
+}
+
 /*table
 {
         #pf-bet-details {
@@ -1700,6 +1704,7 @@ nav[role=tabs] a {
   border-left: 1px solid #929ca6;
   border-top: 1px solid #929ca6;
   border-bottom: 1px solid #929ca6;
+  font-weight: normal;
 }
 
 nav[role=tabs] a:first-child {
@@ -2107,19 +2112,11 @@ nav[role=tabs] a.active, nav[role=tabs] a:hover {
   margin-top: 20px;
   padding-top: 10px;
 }
-.get-started-content .subsection-navigation a, .-content .subsection-navigation a, .whatisbinarytrading-content .subsection-navigation a, .what-is-binary-trading-content .subsection-navigation a, .glossary-content .subsection-navigation a, .beginnersfaq-content .subsection-navigation a, .howtotradebinaries-content .subsection-navigation a,
-.benefitsoftradingbinaries-content .subsection-navigation a, .binaryoptionsbasics-content .subsection-navigation a, .typesoftrades-content .subsection-navigation a, .whatisbinarytrading-content .subsection-navigation a,
-.types-of-trades-content .subsection-navigation a, .binary-options-basics-content .subsection-navigation a, .benefits-of-trading-binaries-content .subsection-navigation a, .how-to-trade-binaries-content .subsection-navigation a,
-.beginners-faq-content .subsection-navigation a {
-  padding: 0.4375em 3.19149%;
-}
 .get-started-content .subsection-navigation a.disabled, .-content .subsection-navigation a.disabled, .whatisbinarytrading-content .subsection-navigation a.disabled, .what-is-binary-trading-content .subsection-navigation a.disabled, .glossary-content .subsection-navigation a.disabled, .beginnersfaq-content .subsection-navigation a.disabled, .howtotradebinaries-content .subsection-navigation a.disabled,
 .benefitsoftradingbinaries-content .subsection-navigation a.disabled, .binaryoptionsbasics-content .subsection-navigation a.disabled, .typesoftrades-content .subsection-navigation a.disabled, .whatisbinarytrading-content .subsection-navigation a.disabled,
 .types-of-trades-content .subsection-navigation a.disabled, .binary-options-basics-content .subsection-navigation a.disabled, .benefits-of-trading-binaries-content .subsection-navigation a.disabled, .how-to-trade-binaries-content .subsection-navigation a.disabled,
 .beginners-faq-content .subsection-navigation a.disabled {
-  color: #a0aab4;
-  background: #f0f0f5;
-  cursor: default;
+  display: none;
 }
 .get-started-content .section-5 ol ol, .get-started-content .section-5 ul ol, .-content .section-5 ol ol, .-content .section-5 ul ol, .whatisbinarytrading-content .section-5 ol ol, .whatisbinarytrading-content .section-5 ul ol, .what-is-binary-trading-content .section-5 ol ol, .what-is-binary-trading-content .section-5 ul ol, .glossary-content .section-5 ol ol, .glossary-content .section-5 ul ol, .beginnersfaq-content .section-5 ol ol, .beginnersfaq-content .section-5 ul ol, .howtotradebinaries-content .section-5 ol ol, .howtotradebinaries-content .section-5 ul ol,
 .benefitsoftradingbinaries-content .section-5 ol ol,
@@ -2442,88 +2439,88 @@ nav[role=tabs] a.active, nav[role=tabs] a:hover {
   font-weight: bold;
 }
 
-#content {
+#bet_container {
   width: 100%;
 }
-#content form fieldset {
+#bet_container form fieldset {
   background: none;
 }
-#content > .content-tab-container {
+#bet_container > .content-tab-container {
   width: 100%;
 }
-#content > .content-tab-container .tab-content-wrapper {
+#bet_container > .content-tab-container .tab-content-wrapper {
   width: 100%;
   margin: 0 auto;
 }
-#content > .content-tab-container .tab-content-wrapper #tab_graph-content {
+#bet_container > .content-tab-container .tab-content-wrapper #tab_graph-content {
   width: 100%;
 }
-#content > .content-tab-container .tab-content-wrapper #tab_ohlc-content #prices_statistics_table .daily_price_stats_head .table_heading {
+#bet_container > .content-tab-container .tab-content-wrapper #tab_ohlc-content #prices_statistics_table .daily_price_stats_head .table_heading {
   text-align: center;
   background-color: #f0f0f5;
   font-weight: bold;
 }
-#content > .content-tab-container .tab-content-wrapper #tab_ohlc-content #prices_statistics_table .daily_price_stats_head hr {
+#bet_container > .content-tab-container .tab-content-wrapper #tab_ohlc-content #prices_statistics_table .daily_price_stats_head hr {
   display: block;
 }
-#content > .content-tab-container .tab-content-wrapper form.smallfont {
+#bet_container > .content-tab-container .tab-content-wrapper form.smallfont {
   height: 40px;
 }
-#content > .content-tab-container .tab-content-wrapper form.smallfont .bet_bottom_loading_image {
+#bet_container > .content-tab-container .tab-content-wrapper form.smallfont .bet_bottom_loading_image {
   padding: 10px 15px;
 }
-#content > .content-tab-container .tab-content-wrapper form.smallfont button.button {
+#bet_container > .content-tab-container .tab-content-wrapper form.smallfont button.button {
   line-height: 0.3em;
 }
-#content #bet_container {
+#bet_container #bet_container {
   margin-bottom: 20px;
 }
-#content #bet_container fieldset {
+#bet_container #bet_container fieldset {
   border: 0;
 }
-#content #bet_container .form_button {
+#bet_container #bet_container .form_button {
   margin-top: 0;
 }
-#content #bet_container #betInputBox_container {
+#bet_container #bet_container #betInputBox_container {
   position: relative;
   z-index: 10;
   margin: 0;
 }
-#content #bet_container #betInputBox_container .tab-content {
+#bet_container #bet_container #betInputBox_container .tab-content {
   border: 1px solid #a0aab4;
   min-height: 369px;
 }
-#content #bet_container #betInputBox_container .tab-content-wrapper, #content #bet_container #betInputBox_container .tab-content {
+#bet_container #bet_container #betInputBox_container .tab-content-wrapper, #bet_container #bet_container #betInputBox_container .tab-content {
   background-color: transparent;
 }
-#content #bet_container #betInputBox_container .tab-menu ul#betsTab {
+#bet_container #bet_container #betInputBox_container .tab-menu ul#betsTab {
   border-bottom: none;
 }
-#content #bet_container #betInputBox_container .tab-menu ul#betsTab > li {
+#bet_container #bet_container #betInputBox_container .tab-menu ul#betsTab > li {
   padding: 0;
 }
-#content #bet_container #betInputBox_container .tab-menu ul#betsTab > li .tm-ul-2 {
+#bet_container #bet_container #betInputBox_container .tab-menu ul#betsTab > li .tm-ul-2 {
   margin-top: 5px;
 }
-#content #bet_container #betInputBox_container .tab-menu ul#betsTab > li a.tm-a {
+#bet_container #bet_container #betInputBox_container .tab-menu ul#betsTab > li a.tm-a {
   padding: 5px 10px;
   width: auto;
   font-size: 85%;
 }
-#content #bet_container #bet_calculation_container {
+#bet_container #bet_container #bet_calculation_container {
   margin: 0;
   padding: 0;
   position: relative;
   /* loading section for bet container */
 }
-#content #bet_container #bet_calculation_container #page_timeout_notice {
+#bet_container #bet_container #bet_calculation_container #page_timeout_notice {
   padding: 10px;
   background: white;
 }
-#content #bet_container #bet_calculation_container .rbox-content {
+#bet_container #bet_container #bet_calculation_container .rbox-content {
   padding: 0;
 }
-#content #bet_container #bet_calculation_container .bet-error-box {
+#bet_container #bet_container #bet_calculation_container .bet-error-box {
   clear: both;
   margin: 0;
   margin-top: 27px;
@@ -2533,166 +2530,166 @@ nav[role=tabs] a.active, nav[role=tabs] a:hover {
   color: black;
   background-color: #fef1cf;
 }
-#content #bet_container #bet_calculation_container .bet-error-box p {
+#bet_container #bet_container #bet_calculation_container .bet-error-box p {
   margin: 0;
 }
-#content #bet_container #bet_calculation_container .rbox {
+#bet_container #bet_container #bet_calculation_container .rbox {
   margin: 0;
   padding-bottom: 1.8em;
 }
-#content #bet_container #bet_calculation_container .rbox .rbox-wrap {
+#bet_container #bet_container #bet_calculation_container .rbox .rbox-wrap {
   min-height: 140px;
 }
-#content #bet_container #bet_calculation_container .rbox .rbox-wrap .bet-error-box {
+#bet_container #bet_container #bet_calculation_container .rbox .rbox-wrap .bet-error-box {
   margin: 0;
   padding: 1em;
   font-size: 0.71429rem;
   width: auto;
 }
-#content #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading {
+#bet_container #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading {
   background-color: transparent;
   margin-bottom: 0;
 }
-#content #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading h3 {
+#bet_container #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading h3 {
   padding: 0.7em 0 0.7em 4em;
   text-transform: capitalize;
 }
-#content #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .asian_up {
+#bet_container #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .asian_up {
   background: url("../images/pages/trade/asian-u_1.svg") no-repeat 5% 75%;
 }
-#content #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .asian_down {
+#bet_container #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .asian_down {
   background: url("../images/pages/trade/asian-d_1.svg") no-repeat 5% 75%;
 }
-#content #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .differs {
+#bet_container #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .differs {
   background: url("../images/pages/trade/differs_1.svg") no-repeat 5% 75%;
 }
-#content #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .matches {
+#bet_container #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .matches {
   background: url("../images/pages/trade/matches_1.svg") no-repeat 5% 75%;
 }
-#content #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .rises {
+#bet_container #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .rises {
   background: url("../images/pages/trade/rise_1.png") no-repeat 5% 75%;
 }
-#content #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .falls {
+#bet_container #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .falls {
   background: url("../images/pages/trade/fall_1.png") no-repeat 5% 75%;
 }
-#content #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .higher {
+#bet_container #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .higher {
   background: url("../images/pages/trade/higher_1.png") no-repeat 5% 75%;
 }
-#content #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .lower {
+#bet_container #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .lower {
   background: url("../images/pages/trade/lower_1.png") no-repeat 5% 75%;
 }
-#content #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .touches {
+#bet_container #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .touches {
   background: url("../images/pages/trade/touch_1.png") no-repeat 5% 75%;
 }
-#content #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .does_not_touch {
+#bet_container #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .does_not_touch {
   background: url("../images/pages/trade/no-touch_1.png") no-repeat 5% 75%;
 }
-#content #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .stays_between {
+#bet_container #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .stays_between {
   background: url("../images/pages/trade/stay-in-between_1.png") no-repeat 5% 75%;
 }
-#content #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .goes_outside {
+#bet_container #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .goes_outside {
   background: url("../images/pages/trade/stay-out_1.png") no-repeat 5% 75%;
 }
-#content #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .ends_between {
+#bet_container #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .ends_between {
   background: url("../images/pages/trade/ends-between_1.png") no-repeat 5% 75%;
 }
-#content #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .ends_outside {
+#bet_container #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .ends_outside {
   background: url("../images/pages/trade/ends-outside_1.png") no-repeat 5% 75%;
 }
-#content #bet_container #bet_calculation_container .rbox .ui-tabs ul.ui-tabs-nav li {
+#bet_container #bet_container #bet_calculation_container .rbox .ui-tabs ul.ui-tabs-nav li {
   list-style-image: none;
 }
-#content #bet_container #bet_calculation_container .rbox .ui-datepicker td {
+#bet_container #bet_container #bet_calculation_container .rbox .ui-datepicker td {
   padding: 0.1em;
 }
-#content #bet_container #bet_calculation_container .rbox .form_button {
+#bet_container #bet_container #bet_calculation_container .rbox .form_button {
   margin-bottom: 0;
 }
-#content #bet_container #bet_calculation_container .rbox-bg-alt {
+#bet_container #bet_container #bet_calculation_container .rbox-bg-alt {
   background: none;
 }
-#content #bet_container #bet_calculation_container .rbox-bg-alt .rbox-content {
+#bet_container #bet_container #bet_calculation_container .rbox-bg-alt .rbox-content {
   background: none;
   padding: 0;
 }
-#content #bet_container #bet_calculation_container .bet_pricebox_wrapper {
+#bet_container #bet_container #bet_calculation_container .bet_pricebox_wrapper {
   padding: 0;
   margin: 0;
 }
-#content #bet_container #bet_cost_container {
+#bet_container #bet_container #bet_cost_container {
   font-size: 0.71429rem;
   display: inline-block;
   background: white;
   /* Pricing Table */
 }
-#content #bet_container #bet_cost_container .rbox-wrap {
+#bet_container #bet_container #bet_cost_container .rbox-wrap {
   border-bottom: 1px solid #a0aab4;
 }
-#content #bet_container #bet_cost_container form {
+#bet_container #bet_container #bet_cost_container form {
   width: 40%;
   position: relative;
 }
-#content #bet_container #bet_cost_container .pricing-details {
+#bet_container #bet_container #bet_cost_container .pricing-details {
   top: 1px;
 }
-#content #bet_container #bet_cost_container .draggable form {
+#bet_container #bet_container #bet_cost_container .draggable form {
   width: auto;
 }
-#content #bet_container #bet_cost_container .draggable .odd {
+#bet_container #bet_container #bet_cost_container .draggable .odd {
   background: #f0f0f5;
 }
-#content #bet_container #bet_cost_container .draggable .rbox {
+#bet_container #bet_container #bet_cost_container .draggable .rbox {
   border: 1px solid #a0aab4;
   position: relative;
   margin-bottom: 3em;
 }
-#content #bet_container #bet_cost_container .draggable .rbox-table-full {
+#bet_container #bet_container #bet_cost_container .draggable .rbox-table-full {
   border: 1px solid #f0f0f5;
   text-align: left;
 }
-#content #bet_container #bet_cost_container .draggable .rbox-table-full td {
+#bet_container #bet_container #bet_cost_container .draggable .rbox-table-full td {
   text-align: left;
   border: 1px solid #f0f0f5;
   border-width: 0 1px;
 }
-#content #bet_container #loading-price {
+#bet_container #bet_container #loading-price {
   text-align: center;
 }
-#content #bet_container #spot {
+#bet_container #bet_container #spot {
   padding: 1px 2px;
 }
-#content #bet_container .basicInputForm .error {
+#bet_container #bet_container .basicInputForm .error {
   background-color: #fef1cf;
 }
-#content #bet_container .basicInputForm #no_bets {
+#bet_container #bet_container .basicInputForm #no_bets {
   text-align: center;
   margin: 30px 0 70px;
 }
-#content #bet_container #betInputBox button {
+#bet_container #bet_container #betInputBox button {
   margin: 1em auto 0;
 }
-#content #bet_container #betInputBox form {
+#bet_container #bet_container #betInputBox form {
   margin-top: 21px;
 }
-#content #bet_container #betInputBox form fieldset {
+#bet_container #bet_container #betInputBox form fieldset {
   background: none;
 }
-#content #bet_container #betInputBox div {
+#bet_container #bet_container #betInputBox div {
   clear: both;
   padding: 10px 0;
 }
-#content #bet_container #betInputBox #std_loading_img {
+#bet_container #bet_container #betInputBox #std_loading_img {
   min-height: 300px;
   padding-top: 50px;
 }
-#content #bet_container #betInputBox div.toggle-content {
+#bet_container #bet_container #betInputBox div.toggle-content {
   margin-top: 0;
 }
-#content #bet_container #expiry,
-#content #bet_container #type {
+#bet_container #bet_container #expiry,
+#bet_container #bet_container #type {
   width: 163px;
 }
-#content #bet_container .tab-content-wrapper p.required {
+#bet_container #bet_container .tab-content-wrapper p.required {
   padding-top: 3px;
 }
 
