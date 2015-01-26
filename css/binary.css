@@ -1144,8 +1144,9 @@ td a {
 .ui-datepicker .ui-datepicker-next {
   position: absolute;
   top: 2px;
-  width: 1.8em;
+  width: 3em;
   height: 1.8em;
+  width: 100%;
 }
 
 .ui-datepicker .ui-datepicker-prev-hover,
@@ -1173,10 +1174,8 @@ td a {
 .ui-datepicker .ui-datepicker-next span {
   display: block;
   position: absolute;
-  left: 50%;
-  margin-left: -8px;
-  top: 50%;
-  margin-top: -8px;
+  margin-top: .5em;
+  cursor: pointer;
 }
 
 .ui-datepicker .ui-datepicker-title {
