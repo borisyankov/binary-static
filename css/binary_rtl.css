@@ -1038,10 +1038,6 @@ th, td {
   display: inline-block;
 }
 
-.get-started-content, .-content {
-  flex-direction: row;
-}
-
 /*
 .ui-datepicker .ui-datepicker-header {
     position: relative;
@@ -1801,72 +1797,90 @@ nav[role=tabs] a.active, nav[role=tabs] a:hover {
 }
 
 /* GET-STARTED PAGES RULES */
-.get-started-content, .-content {
+.get-started-content, .-content, .whatisbinarytrading-content, .what-is-binary-trading-content, .glossary-content, .beginnersfaq-content, .howtotradebinaries-content,
+.benefitsoftradingbinaries-content, .binaryoptionsbasics-content, .typesoftrades-content, .whatisbinarytrading-content {
+  flex-direction: row;
   margin-top: 40px;
   overflow: hidden;
 }
-.get-started-content .sidebar-left ul li, .-content .sidebar-left ul li {
+.get-started-content .sidebar-left ul li, .-content .sidebar-left ul li, .whatisbinarytrading-content .sidebar-left ul li, .what-is-binary-trading-content .sidebar-left ul li, .glossary-content .sidebar-left ul li, .beginnersfaq-content .sidebar-left ul li, .howtotradebinaries-content .sidebar-left ul li,
+.benefitsoftradingbinaries-content .sidebar-left ul li, .binaryoptionsbasics-content .sidebar-left ul li, .typesoftrades-content .sidebar-left ul li, .whatisbinarytrading-content .sidebar-left ul li {
   list-style-image: none;
   margin: 0;
   line-height: 150%;
   border-bottom: 1px solid #FFFFFF;
 }
-.get-started-content .sidebar-left ul li a, .-content .sidebar-left ul li a {
+.get-started-content .sidebar-left ul li a, .-content .sidebar-left ul li a, .whatisbinarytrading-content .sidebar-left ul li a, .what-is-binary-trading-content .sidebar-left ul li a, .glossary-content .sidebar-left ul li a, .beginnersfaq-content .sidebar-left ul li a, .howtotradebinaries-content .sidebar-left ul li a,
+.benefitsoftradingbinaries-content .sidebar-left ul li a, .binaryoptionsbasics-content .sidebar-left ul li a, .typesoftrades-content .sidebar-left ul li a, .whatisbinarytrading-content .sidebar-left ul li a {
   text-decoration: none;
   display: block;
   padding: 5px 5px 5px 10px;
   color: #a0aab4;
 }
-.get-started-content .sidebar-left ul li.selected, .-content .sidebar-left ul li.selected {
+.get-started-content .sidebar-left ul li.selected, .-content .sidebar-left ul li.selected, .whatisbinarytrading-content .sidebar-left ul li.selected, .what-is-binary-trading-content .sidebar-left ul li.selected, .glossary-content .sidebar-left ul li.selected, .beginnersfaq-content .sidebar-left ul li.selected, .howtotradebinaries-content .sidebar-left ul li.selected,
+.benefitsoftradingbinaries-content .sidebar-left ul li.selected, .binaryoptionsbasics-content .sidebar-left ul li.selected, .typesoftrades-content .sidebar-left ul li.selected, .whatisbinarytrading-content .sidebar-left ul li.selected {
   background: #a0aab4;
   border-radius: 2px;
 }
-.get-started-content .sidebar-left ul li.selected a, .-content .sidebar-left ul li.selected a {
+.get-started-content .sidebar-left ul li.selected a, .-content .sidebar-left ul li.selected a, .whatisbinarytrading-content .sidebar-left ul li.selected a, .what-is-binary-trading-content .sidebar-left ul li.selected a, .glossary-content .sidebar-left ul li.selected a, .beginnersfaq-content .sidebar-left ul li.selected a, .howtotradebinaries-content .sidebar-left ul li.selected a,
+.benefitsoftradingbinaries-content .sidebar-left ul li.selected a, .binaryoptionsbasics-content .sidebar-left ul li.selected a, .typesoftrades-content .sidebar-left ul li.selected a, .whatisbinarytrading-content .sidebar-left ul li.selected a {
   color: white;
   text-decoration: none;
 }
-.get-started-content .sidebar-left .open-account a, .-content .sidebar-left .open-account a {
+.get-started-content .sidebar-left .open-account a, .-content .sidebar-left .open-account a, .whatisbinarytrading-content .sidebar-left .open-account a, .what-is-binary-trading-content .sidebar-left .open-account a, .glossary-content .sidebar-left .open-account a, .beginnersfaq-content .sidebar-left .open-account a, .howtotradebinaries-content .sidebar-left .open-account a,
+.benefitsoftradingbinaries-content .sidebar-left .open-account a, .binaryoptionsbasics-content .sidebar-left .open-account a, .typesoftrades-content .sidebar-left .open-account a, .whatisbinarytrading-content .sidebar-left .open-account a {
   display: block;
 }
-.get-started-content .sidebar-right div, .-content .sidebar-right div {
+.get-started-content .sidebar-right div, .-content .sidebar-right div, .whatisbinarytrading-content .sidebar-right div, .what-is-binary-trading-content .sidebar-right div, .glossary-content .sidebar-right div, .beginnersfaq-content .sidebar-right div, .howtotradebinaries-content .sidebar-right div,
+.benefitsoftradingbinaries-content .sidebar-right div, .binaryoptionsbasics-content .sidebar-right div, .typesoftrades-content .sidebar-right div, .whatisbinarytrading-content .sidebar-right div {
   border-bottom: #a0aab4;
   margin-bottom: 20px;
   padding: 20px;
   text-align: center;
 }
-.get-started-content .sidebar-right div p, .-content .sidebar-right div p {
+.get-started-content .sidebar-right div p, .-content .sidebar-right div p, .whatisbinarytrading-content .sidebar-right div p, .what-is-binary-trading-content .sidebar-right div p, .glossary-content .sidebar-right div p, .beginnersfaq-content .sidebar-right div p, .howtotradebinaries-content .sidebar-right div p,
+.benefitsoftradingbinaries-content .sidebar-right div p, .binaryoptionsbasics-content .sidebar-right div p, .typesoftrades-content .sidebar-right div p, .whatisbinarytrading-content .sidebar-right div p {
   margin: 0;
 }
-.get-started-content .sidebar-right div a, .-content .sidebar-right div a {
+.get-started-content .sidebar-right div a, .-content .sidebar-right div a, .whatisbinarytrading-content .sidebar-right div a, .what-is-binary-trading-content .sidebar-right div a, .glossary-content .sidebar-right div a, .beginnersfaq-content .sidebar-right div a, .howtotradebinaries-content .sidebar-right div a,
+.benefitsoftradingbinaries-content .sidebar-right div a, .binaryoptionsbasics-content .sidebar-right div a, .typesoftrades-content .sidebar-right div a, .whatisbinarytrading-content .sidebar-right div a {
   font-weight: bold;
 }
-.get-started-content .sidebar-right .open-account, .-content .sidebar-right .open-account {
+.get-started-content .sidebar-right .open-account, .-content .sidebar-right .open-account, .whatisbinarytrading-content .sidebar-right .open-account, .what-is-binary-trading-content .sidebar-right .open-account, .glossary-content .sidebar-right .open-account, .beginnersfaq-content .sidebar-right .open-account, .howtotradebinaries-content .sidebar-right .open-account,
+.benefitsoftradingbinaries-content .sidebar-right .open-account, .binaryoptionsbasics-content .sidebar-right .open-account, .typesoftrades-content .sidebar-right .open-account, .whatisbinarytrading-content .sidebar-right .open-account {
   padding: 20px;
 }
-.get-started-content .sidebar-right .open-account p, .-content .sidebar-right .open-account p {
+.get-started-content .sidebar-right .open-account p, .-content .sidebar-right .open-account p, .whatisbinarytrading-content .sidebar-right .open-account p, .what-is-binary-trading-content .sidebar-right .open-account p, .glossary-content .sidebar-right .open-account p, .beginnersfaq-content .sidebar-right .open-account p, .howtotradebinaries-content .sidebar-right .open-account p,
+.benefitsoftradingbinaries-content .sidebar-right .open-account p, .binaryoptionsbasics-content .sidebar-right .open-account p, .typesoftrades-content .sidebar-right .open-account p, .whatisbinarytrading-content .sidebar-right .open-account p {
   margin-bottom: 1em;
 }
-.get-started-content .sidebar-right .open-account a, .-content .sidebar-right .open-account a {
+.get-started-content .sidebar-right .open-account a, .-content .sidebar-right .open-account a, .whatisbinarytrading-content .sidebar-right .open-account a, .what-is-binary-trading-content .sidebar-right .open-account a, .glossary-content .sidebar-right .open-account a, .beginnersfaq-content .sidebar-right .open-account a, .howtotradebinaries-content .sidebar-right .open-account a,
+.benefitsoftradingbinaries-content .sidebar-right .open-account a, .binaryoptionsbasics-content .sidebar-right .open-account a, .typesoftrades-content .sidebar-right .open-account a, .whatisbinarytrading-content .sidebar-right .open-account a {
   display: block;
 }
-.get-started-content dl, .-content dl {
+.get-started-content dl, .-content dl, .whatisbinarytrading-content dl, .what-is-binary-trading-content dl, .glossary-content dl, .beginnersfaq-content dl, .howtotradebinaries-content dl,
+.benefitsoftradingbinaries-content dl, .binaryoptionsbasics-content dl, .typesoftrades-content dl, .whatisbinarytrading-content dl {
   text-align: center;
 }
-.get-started-content dl .section, .-content dl .section {
+.get-started-content dl .section, .-content dl .section, .whatisbinarytrading-content dl .section, .what-is-binary-trading-content dl .section, .glossary-content dl .section, .beginnersfaq-content dl .section, .howtotradebinaries-content dl .section,
+.benefitsoftradingbinaries-content dl .section, .binaryoptionsbasics-content dl .section, .typesoftrades-content dl .section, .whatisbinarytrading-content dl .section {
   min-height: 210px;
   background: #f0f0f5;
   margin: 0 20px 20px 0;
 }
-.get-started-content dl .section-header, .-content dl .section-header {
+.get-started-content dl .section-header, .-content dl .section-header, .whatisbinarytrading-content dl .section-header, .what-is-binary-trading-content dl .section-header, .glossary-content dl .section-header, .beginnersfaq-content dl .section-header, .howtotradebinaries-content dl .section-header,
+.benefitsoftradingbinaries-content dl .section-header, .binaryoptionsbasics-content dl .section-header, .typesoftrades-content dl .section-header, .whatisbinarytrading-content dl .section-header {
   padding: 10px;
 }
-.get-started-content dl .section-info, .-content dl .section-info {
+.get-started-content dl .section-info, .-content dl .section-info, .whatisbinarytrading-content dl .section-info, .what-is-binary-trading-content dl .section-info, .glossary-content dl .section-info, .beginnersfaq-content dl .section-info, .howtotradebinaries-content dl .section-info,
+.benefitsoftradingbinaries-content dl .section-info, .binaryoptionsbasics-content dl .section-info, .typesoftrades-content dl .section-info, .whatisbinarytrading-content dl .section-info {
   width: auto;
   text-align: center;
   padding: 10px;
   min-height: 50px;
 }
-.get-started-content dl a, .-content dl a {
+.get-started-content dl a, .-content dl a, .whatisbinarytrading-content dl a, .what-is-binary-trading-content dl a, .glossary-content dl a, .beginnersfaq-content dl a, .howtotradebinaries-content dl a,
+.benefitsoftradingbinaries-content dl a, .binaryoptionsbasics-content dl a, .typesoftrades-content dl a, .whatisbinarytrading-content dl a {
   display: block;
   color: white;
   font-weight: bold;
@@ -1875,84 +1889,106 @@ nav[role=tabs] a.active, nav[role=tabs] a:hover {
   background: black;
   text-decoration: none;
 }
-.get-started-content dl div#what-is-binary-trading, .-content dl div#what-is-binary-trading {
+.get-started-content dl div#what-is-binary-trading, .-content dl div#what-is-binary-trading, .whatisbinarytrading-content dl div#what-is-binary-trading, .what-is-binary-trading-content dl div#what-is-binary-trading, .glossary-content dl div#what-is-binary-trading, .beginnersfaq-content dl div#what-is-binary-trading, .howtotradebinaries-content dl div#what-is-binary-trading,
+.benefitsoftradingbinaries-content dl div#what-is-binary-trading, .binaryoptionsbasics-content dl div#what-is-binary-trading, .typesoftrades-content dl div#what-is-binary-trading, .whatisbinarytrading-content dl div#what-is-binary-trading {
   height: 80px;
   background: url("../images/pages/get-started/intro_1.png") no-repeat 0 0;
 }
-.get-started-content dl div#binary-options-basics, .-content dl div#binary-options-basics {
+.get-started-content dl div#binary-options-basics, .-content dl div#binary-options-basics, .whatisbinarytrading-content dl div#binary-options-basics, .what-is-binary-trading-content dl div#binary-options-basics, .glossary-content dl div#binary-options-basics, .beginnersfaq-content dl div#binary-options-basics, .howtotradebinaries-content dl div#binary-options-basics,
+.benefitsoftradingbinaries-content dl div#binary-options-basics, .binaryoptionsbasics-content dl div#binary-options-basics, .typesoftrades-content dl div#binary-options-basics, .whatisbinarytrading-content dl div#binary-options-basics {
   height: 80px;
   background: url("../images/pages/get-started/intro_1.png") no-repeat 100% 0;
 }
-.get-started-content dl div#how-to-trade-binaries, .-content dl div#how-to-trade-binaries {
+.get-started-content dl div#how-to-trade-binaries, .-content dl div#how-to-trade-binaries, .whatisbinarytrading-content dl div#how-to-trade-binaries, .what-is-binary-trading-content dl div#how-to-trade-binaries, .glossary-content dl div#how-to-trade-binaries, .beginnersfaq-content dl div#how-to-trade-binaries, .howtotradebinaries-content dl div#how-to-trade-binaries,
+.benefitsoftradingbinaries-content dl div#how-to-trade-binaries, .binaryoptionsbasics-content dl div#how-to-trade-binaries, .typesoftrades-content dl div#how-to-trade-binaries, .whatisbinarytrading-content dl div#how-to-trade-binaries {
   height: 80px;
   background: url("../images/pages/get-started/intro_1.png") no-repeat 100% 24%;
 }
-.get-started-content dl div#types-of-trades, .-content dl div#types-of-trades {
+.get-started-content dl div#types-of-trades, .-content dl div#types-of-trades, .whatisbinarytrading-content dl div#types-of-trades, .what-is-binary-trading-content dl div#types-of-trades, .glossary-content dl div#types-of-trades, .beginnersfaq-content dl div#types-of-trades, .howtotradebinaries-content dl div#types-of-trades,
+.benefitsoftradingbinaries-content dl div#types-of-trades, .binaryoptionsbasics-content dl div#types-of-trades, .typesoftrades-content dl div#types-of-trades, .whatisbinarytrading-content dl div#types-of-trades {
   height: 80px;
   background: url("../images/pages/get-started/intro_1.png") no-repeat 0 47%;
 }
-.get-started-content dl div#benefits-of-trading-binaries, .-content dl div#benefits-of-trading-binaries {
+.get-started-content dl div#benefits-of-trading-binaries, .-content dl div#benefits-of-trading-binaries, .whatisbinarytrading-content dl div#benefits-of-trading-binaries, .what-is-binary-trading-content dl div#benefits-of-trading-binaries, .glossary-content dl div#benefits-of-trading-binaries, .beginnersfaq-content dl div#benefits-of-trading-binaries, .howtotradebinaries-content dl div#benefits-of-trading-binaries,
+.benefitsoftradingbinaries-content dl div#benefits-of-trading-binaries, .binaryoptionsbasics-content dl div#benefits-of-trading-binaries, .typesoftrades-content dl div#benefits-of-trading-binaries, .whatisbinarytrading-content dl div#benefits-of-trading-binaries {
   height: 80px;
   background: url("../images/pages/get-started/intro_1.png") no-repeat 0 24%;
 }
-.get-started-content dl div#beginners-faq, .-content dl div#beginners-faq {
+.get-started-content dl div#beginners-faq, .-content dl div#beginners-faq, .whatisbinarytrading-content dl div#beginners-faq, .what-is-binary-trading-content dl div#beginners-faq, .glossary-content dl div#beginners-faq, .beginnersfaq-content dl div#beginners-faq, .howtotradebinaries-content dl div#beginners-faq,
+.benefitsoftradingbinaries-content dl div#beginners-faq, .binaryoptionsbasics-content dl div#beginners-faq, .typesoftrades-content dl div#beginners-faq, .whatisbinarytrading-content dl div#beginners-faq {
   height: 80px;
   background: url("../images/pages/get-started/intro_1.png") no-repeat 0 71%;
 }
-.get-started-content dl div#glossary, .-content dl div#glossary {
+.get-started-content dl div#glossary, .-content dl div#glossary, .whatisbinarytrading-content dl div#glossary, .what-is-binary-trading-content dl div#glossary, .glossary-content dl div#glossary, .beginnersfaq-content dl div#glossary, .howtotradebinaries-content dl div#glossary,
+.benefitsoftradingbinaries-content dl div#glossary, .binaryoptionsbasics-content dl div#glossary, .typesoftrades-content dl div#glossary, .whatisbinarytrading-content dl div#glossary {
   height: 80px;
   background: url("../images/pages/get-started/intro_1.png") no-repeat 100% 71%;
 }
-.get-started-content dl div#random-trades, .-content dl div#random-trades {
+.get-started-content dl div#random-trades, .-content dl div#random-trades, .whatisbinarytrading-content dl div#random-trades, .what-is-binary-trading-content dl div#random-trades, .glossary-content dl div#random-trades, .beginnersfaq-content dl div#random-trades, .howtotradebinaries-content dl div#random-trades,
+.benefitsoftradingbinaries-content dl div#random-trades, .binaryoptionsbasics-content dl div#random-trades, .typesoftrades-content dl div#random-trades, .whatisbinarytrading-content dl div#random-trades {
   height: 80px;
   background: url("../images/pages/get-started/intro_1.png") no-repeat 100% 93%;
 }
-.get-started-content dl div#smart-indices, .-content dl div#smart-indices {
+.get-started-content dl div#smart-indices, .-content dl div#smart-indices, .whatisbinarytrading-content dl div#smart-indices, .what-is-binary-trading-content dl div#smart-indices, .glossary-content dl div#smart-indices, .beginnersfaq-content dl div#smart-indices, .howtotradebinaries-content dl div#smart-indices,
+.benefitsoftradingbinaries-content dl div#smart-indices, .binaryoptionsbasics-content dl div#smart-indices, .typesoftrades-content dl div#smart-indices, .whatisbinarytrading-content dl div#smart-indices {
   height: 80px;
   background: url("../images/pages/smart-indices/smart-indices-1.svg") no-repeat 50% 0%;
 }
-.get-started-content .section-content h2, .-content .section-content h2 {
+.get-started-content .section-content h2, .-content .section-content h2, .whatisbinarytrading-content .section-content h2, .what-is-binary-trading-content .section-content h2, .glossary-content .section-content h2, .beginnersfaq-content .section-content h2, .howtotradebinaries-content .section-content h2,
+.benefitsoftradingbinaries-content .section-content h2, .binaryoptionsbasics-content .section-content h2, .typesoftrades-content .section-content h2, .whatisbinarytrading-content .section-content h2 {
   padding-top: 20px;
 }
-.get-started-content .section-content h2.center, .-content .section-content h2.center {
+.get-started-content .section-content h2.center, .-content .section-content h2.center, .whatisbinarytrading-content .section-content h2.center, .what-is-binary-trading-content .section-content h2.center, .glossary-content .section-content h2.center, .beginnersfaq-content .section-content h2.center, .howtotradebinaries-content .section-content h2.center,
+.benefitsoftradingbinaries-content .section-content h2.center, .binaryoptionsbasics-content .section-content h2.center, .typesoftrades-content .section-content h2.center, .whatisbinarytrading-content .section-content h2.center {
   width: 63.8297872%;
 }
-.get-started-content .section-1 img, .-content .section-1 img {
+.get-started-content .section-1 img, .-content .section-1 img, .whatisbinarytrading-content .section-1 img, .what-is-binary-trading-content .section-1 img, .glossary-content .section-1 img, .beginnersfaq-content .section-1 img, .howtotradebinaries-content .section-1 img,
+.benefitsoftradingbinaries-content .section-1 img, .binaryoptionsbasics-content .section-1 img, .typesoftrades-content .section-1 img, .whatisbinarytrading-content .section-1 img {
   float: left;
   margin-right: 3.1914894%;
 }
-.get-started-content .subsection-navigation, .-content .subsection-navigation {
+.get-started-content .subsection-navigation, .-content .subsection-navigation, .whatisbinarytrading-content .subsection-navigation, .what-is-binary-trading-content .subsection-navigation, .glossary-content .subsection-navigation, .beginnersfaq-content .subsection-navigation, .howtotradebinaries-content .subsection-navigation,
+.benefitsoftradingbinaries-content .subsection-navigation, .binaryoptionsbasics-content .subsection-navigation, .typesoftrades-content .subsection-navigation, .whatisbinarytrading-content .subsection-navigation {
   clear: both;
   text-align: center;
   margin-top: 20px;
   padding-top: 10px;
 }
-.get-started-content .subsection-navigation a, .-content .subsection-navigation a {
+.get-started-content .subsection-navigation a, .-content .subsection-navigation a, .whatisbinarytrading-content .subsection-navigation a, .what-is-binary-trading-content .subsection-navigation a, .glossary-content .subsection-navigation a, .beginnersfaq-content .subsection-navigation a, .howtotradebinaries-content .subsection-navigation a,
+.benefitsoftradingbinaries-content .subsection-navigation a, .binaryoptionsbasics-content .subsection-navigation a, .typesoftrades-content .subsection-navigation a, .whatisbinarytrading-content .subsection-navigation a {
   padding: 0.4375em 3.19149%;
 }
-.get-started-content .subsection-navigation a.disabled, .-content .subsection-navigation a.disabled {
+.get-started-content .subsection-navigation a.disabled, .-content .subsection-navigation a.disabled, .whatisbinarytrading-content .subsection-navigation a.disabled, .what-is-binary-trading-content .subsection-navigation a.disabled, .glossary-content .subsection-navigation a.disabled, .beginnersfaq-content .subsection-navigation a.disabled, .howtotradebinaries-content .subsection-navigation a.disabled,
+.benefitsoftradingbinaries-content .subsection-navigation a.disabled, .binaryoptionsbasics-content .subsection-navigation a.disabled, .typesoftrades-content .subsection-navigation a.disabled, .whatisbinarytrading-content .subsection-navigation a.disabled {
   color: #a0aab4;
   background: #f0f0f5;
   cursor: default;
 }
-.get-started-content .section-5 ol ol, .get-started-content .section-5 ul ol, .-content .section-5 ol ol, .-content .section-5 ul ol {
+.get-started-content .section-5 ol ol, .get-started-content .section-5 ul ol, .-content .section-5 ol ol, .-content .section-5 ul ol, .whatisbinarytrading-content .section-5 ol ol, .whatisbinarytrading-content .section-5 ul ol, .what-is-binary-trading-content .section-5 ol ol, .what-is-binary-trading-content .section-5 ul ol, .glossary-content .section-5 ol ol, .glossary-content .section-5 ul ol, .beginnersfaq-content .section-5 ol ol, .beginnersfaq-content .section-5 ul ol, .howtotradebinaries-content .section-5 ol ol, .howtotradebinaries-content .section-5 ul ol,
+.benefitsoftradingbinaries-content .section-5 ol ol,
+.benefitsoftradingbinaries-content .section-5 ul ol, .binaryoptionsbasics-content .section-5 ol ol, .binaryoptionsbasics-content .section-5 ul ol, .typesoftrades-content .section-5 ol ol, .typesoftrades-content .section-5 ul ol, .whatisbinarytrading-content .section-5 ol ol, .whatisbinarytrading-content .section-5 ul ol {
   list-style-type: lower-alpha;
 }
-.get-started-content .section-5 .subsection p .highlight, .-content .section-5 .subsection p .highlight {
+.get-started-content .section-5 .subsection p .highlight, .-content .section-5 .subsection p .highlight, .whatisbinarytrading-content .section-5 .subsection p .highlight, .what-is-binary-trading-content .section-5 .subsection p .highlight, .glossary-content .section-5 .subsection p .highlight, .beginnersfaq-content .section-5 .subsection p .highlight, .howtotradebinaries-content .section-5 .subsection p .highlight,
+.benefitsoftradingbinaries-content .section-5 .subsection p .highlight, .binaryoptionsbasics-content .section-5 .subsection p .highlight, .typesoftrades-content .section-5 .subsection p .highlight, .whatisbinarytrading-content .section-5 .subsection p .highlight {
   font-style: italic;
   margin: 0.625em 0;
 }
-.get-started-content .section-7 h3, .-content .section-7 h3 {
+.get-started-content .section-7 h3, .-content .section-7 h3, .whatisbinarytrading-content .section-7 h3, .what-is-binary-trading-content .section-7 h3, .glossary-content .section-7 h3, .beginnersfaq-content .section-7 h3, .howtotradebinaries-content .section-7 h3,
+.benefitsoftradingbinaries-content .section-7 h3, .binaryoptionsbasics-content .section-7 h3, .typesoftrades-content .section-7 h3, .whatisbinarytrading-content .section-7 h3 {
   font-weight: bold;
   margin-top: 1.875em;
 }
-.get-started-content .section-7 p, .-content .section-7 p {
+.get-started-content .section-7 p, .-content .section-7 p, .whatisbinarytrading-content .section-7 p, .what-is-binary-trading-content .section-7 p, .glossary-content .section-7 p, .beginnersfaq-content .section-7 p, .howtotradebinaries-content .section-7 p,
+.benefitsoftradingbinaries-content .section-7 p, .binaryoptionsbasics-content .section-7 p, .typesoftrades-content .section-7 p, .whatisbinarytrading-content .section-7 p {
   margin: 0.625em 0 1.25em 0;
 }
-.get-started-content .section-7 a, .-content .section-7 a {
+.get-started-content .section-7 a, .-content .section-7 a, .whatisbinarytrading-content .section-7 a, .what-is-binary-trading-content .section-7 a, .glossary-content .section-7 a, .beginnersfaq-content .section-7 a, .howtotradebinaries-content .section-7 a,
+.benefitsoftradingbinaries-content .section-7 a, .binaryoptionsbasics-content .section-7 a, .typesoftrades-content .section-7 a, .whatisbinarytrading-content .section-7 a {
   font-weight: bold;
 }
-.get-started-content .trade-type-flash, .-content .trade-type-flash {
+.get-started-content .trade-type-flash, .-content .trade-type-flash, .whatisbinarytrading-content .trade-type-flash, .what-is-binary-trading-content .trade-type-flash, .glossary-content .trade-type-flash, .beginnersfaq-content .trade-type-flash, .howtotradebinaries-content .trade-type-flash,
+.benefitsoftradingbinaries-content .trade-type-flash, .binaryoptionsbasics-content .trade-type-flash, .typesoftrades-content .trade-type-flash, .whatisbinarytrading-content .trade-type-flash {
   padding-bottom: 25px;
 }
 

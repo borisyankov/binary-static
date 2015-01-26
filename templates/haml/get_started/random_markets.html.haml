@@ -1,26 +1,5 @@
 - stash(title => l('Random Markets'));
 
-.grd-container
-  .random-markets.static_full
-    .grd-grid-3.grd-hide-mobile
-      .sidebar
-        %ul#sidebar-nav
-          %li#sidebar-link-section-1.selected
-            %a{:href => "#what-are-random-markets"}= l('How to trade the random markets?')
-          %li#sidebar-link-section-2
-            %a{:href => "#random-indices"}= l('Random Indices')
-          %li#sidebar-link-section-3
-            %a{:href => "#random-quotidians"}= l('Random Quotidians')
-          %li#sidebar-link-section-4
-            %a{:href => "#random-nocturnes"}= l('Random Nocturnes')
-        .sidebar-button
-          %a.pjaxload{:href => url_for('trade.cgi?market=random')}= l('Place a random trade')
-    .grd-grid-9.grd-grid-mobile-12.grd-parent
-      .section
-        %a#what-are-random-markets
-        .section-content
-          #section-1
-            .grd-grid-12
               %h1= l('How to trade the random markets?')
               %p= l('[_1] has created random indices that you can trade 24/7. You can trade randoms on all types of contract:', stash->{website_name});
             .grd-grid-7.grd-grid-mobile-12
