@@ -882,7 +882,7 @@ td a {
 .whitelabels-content,
 .aboutus-content,
 .random-markets-content {
-  max-width: 700px;
+  max-width: 700px !important;
 }
 .readable header,
 .why-us-content header,
