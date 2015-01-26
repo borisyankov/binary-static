@@ -8,6 +8,7 @@ nav[role=tabs] a {
     border-left: 1px solid $COLOR_NAV_ACTIVE;
     border-top: 1px solid $COLOR_NAV_ACTIVE;
     border-bottom: 1px solid $COLOR_NAV_ACTIVE;
+    font-weight: normal;
 }
 nav[role=tabs] a:first-child {
     border-radius: 100px 0 0 100px;
