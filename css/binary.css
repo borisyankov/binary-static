@@ -494,9 +494,6 @@ body {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .msgbar {
@@ -1149,7 +1146,7 @@ td a {
 }
 
 .ui-datepicker-next {
-  right: 2.5em;
+  right: 0;
 }
 
 .ui-datepicker .ui-datepicker-prev span,
@@ -3192,7 +3189,7 @@ nav[role=tabs] a.active, nav[role=tabs] a:hover {
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: 50% 0;
-  height: 10em;
+  height: 8.5em;
   text-indent: -9999px;
   outline: none;
 }
@@ -4088,14 +4085,6 @@ div#price_table_notes {
 
 .tab-menu-wrap ul#trading-times {
   margin-bottom: 1em;
-}
-
-form#rise_fall_form fieldset {
-  padding-top: 1em;
-  margin-bottom: 1em;
-}
-form#rise_fall_form label {
-  width: auto;
 }
 
 /* Terms and conditions */
