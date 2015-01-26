@@ -963,7 +963,7 @@ var PjaxExecQueue = function () {
     this.id_exec_queue = [];
     this.fired = false;
     this.indicating_loading = false;
-    this.content = $('.content');
+    this.content = $('#content');
 };
 
 PjaxExecQueue.prototype = {
@@ -1039,7 +1039,7 @@ var pjax_config = function() {
         'error': function(event) {
             var error_text = SessionStore.get('errors.500');
             if(error_text) {
-                $('.content').html(error_text);
+                $('#content').html(error_text);
             } else {
                 $.get('/errors/500.html').always(function(content) {
                     var tmp = document.createElement('div');
@@ -1048,7 +1048,7 @@ var pjax_config = function() {
                     for(var i=0,l=tmpNodes.length;i<l;i++){
                         if(tmpNodes[i].id == 'content') {
                             SessionStore.set('errors.500', tmpNodes[i].innerHTML);
-                            $('.content').html(tmpNodes[i].innerHTML);
+                            $('#content').html(tmpNodes[i].innerHTML);
                             break;
                         }
                     }

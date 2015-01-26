@@ -451,7 +451,7 @@ html, body {
   min-height: 100vh;
 }
 
-body, .msgbar, .header, .content, .sitemap,
+body, .msgbar, .header, #content, .sitemap,
 .msgbar-wrapper, .header-wrapper, .content-wrapper, .sitemap-wrapper, .footer-wrapper {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -484,12 +484,12 @@ body {
   padding: 0 1em;
 }
 
-.msgbar, .header, .content, .sitemap, .footer {
+.msgbar, .header, #content, .sitemap, .footer {
   max-width: 1200px;
   width: 100%;
 }
 
-.content {
+#content {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
@@ -1071,6 +1071,7 @@ th, td {
   display: block;
   max-width: 100%;
   margin: 0 auto;
+  margin: 2em;
 }
 .readable ul,
 .why-us-content ul,
@@ -2441,88 +2442,88 @@ nav[role=tabs] a.active, nav[role=tabs] a:hover {
   font-weight: bold;
 }
 
-.content {
+#content {
   width: 100%;
 }
-.content form fieldset {
+#content form fieldset {
   background: none;
 }
-.content > .content-tab-container {
+#content > .content-tab-container {
   width: 100%;
 }
-.content > .content-tab-container .tab-content-wrapper {
+#content > .content-tab-container .tab-content-wrapper {
   width: 100%;
   margin: 0 auto;
 }
-.content > .content-tab-container .tab-content-wrapper #tab_graph-content {
+#content > .content-tab-container .tab-content-wrapper #tab_graph-content {
   width: 100%;
 }
-.content > .content-tab-container .tab-content-wrapper #tab_ohlc-content #prices_statistics_table .daily_price_stats_head .table_heading {
+#content > .content-tab-container .tab-content-wrapper #tab_ohlc-content #prices_statistics_table .daily_price_stats_head .table_heading {
   text-align: center;
   background-color: #f0f0f5;
   font-weight: bold;
 }
-.content > .content-tab-container .tab-content-wrapper #tab_ohlc-content #prices_statistics_table .daily_price_stats_head hr {
+#content > .content-tab-container .tab-content-wrapper #tab_ohlc-content #prices_statistics_table .daily_price_stats_head hr {
   display: block;
 }
-.content > .content-tab-container .tab-content-wrapper form.smallfont {
+#content > .content-tab-container .tab-content-wrapper form.smallfont {
   height: 40px;
 }
-.content > .content-tab-container .tab-content-wrapper form.smallfont .bet_bottom_loading_image {
+#content > .content-tab-container .tab-content-wrapper form.smallfont .bet_bottom_loading_image {
   padding: 10px 15px;
 }
-.content > .content-tab-container .tab-content-wrapper form.smallfont button.button {
+#content > .content-tab-container .tab-content-wrapper form.smallfont button.button {
   line-height: 0.3em;
 }
-.content #bet_container {
+#content #bet_container {
   margin-bottom: 20px;
 }
-.content #bet_container fieldset {
+#content #bet_container fieldset {
   border: 0;
 }
-.content #bet_container .form_button {
+#content #bet_container .form_button {
   margin-top: 0;
 }
-.content #bet_container #betInputBox_container {
+#content #bet_container #betInputBox_container {
   position: relative;
   z-index: 10;
   margin: 0;
 }
-.content #bet_container #betInputBox_container .tab-content {
+#content #bet_container #betInputBox_container .tab-content {
   border: 1px solid #a0aab4;
   min-height: 369px;
 }
-.content #bet_container #betInputBox_container .tab-content-wrapper, .content #bet_container #betInputBox_container .tab-content {
+#content #bet_container #betInputBox_container .tab-content-wrapper, #content #bet_container #betInputBox_container .tab-content {
   background-color: transparent;
 }
-.content #bet_container #betInputBox_container .tab-menu ul#betsTab {
+#content #bet_container #betInputBox_container .tab-menu ul#betsTab {
   border-bottom: none;
 }
-.content #bet_container #betInputBox_container .tab-menu ul#betsTab > li {
+#content #bet_container #betInputBox_container .tab-menu ul#betsTab > li {
   padding: 0;
 }
-.content #bet_container #betInputBox_container .tab-menu ul#betsTab > li .tm-ul-2 {
+#content #bet_container #betInputBox_container .tab-menu ul#betsTab > li .tm-ul-2 {
   margin-top: 5px;
 }
-.content #bet_container #betInputBox_container .tab-menu ul#betsTab > li a.tm-a {
+#content #bet_container #betInputBox_container .tab-menu ul#betsTab > li a.tm-a {
   padding: 5px 10px;
   width: auto;
   font-size: 85%;
 }
-.content #bet_container #bet_calculation_container {
+#content #bet_container #bet_calculation_container {
   margin: 0;
   padding: 0;
   position: relative;
   /* loading section for bet container */
 }
-.content #bet_container #bet_calculation_container #page_timeout_notice {
+#content #bet_container #bet_calculation_container #page_timeout_notice {
   padding: 10px;
   background: white;
 }
-.content #bet_container #bet_calculation_container .rbox-content {
+#content #bet_container #bet_calculation_container .rbox-content {
   padding: 0;
 }
-.content #bet_container #bet_calculation_container .bet-error-box {
+#content #bet_container #bet_calculation_container .bet-error-box {
   clear: both;
   margin: 0;
   margin-top: 27px;
@@ -2532,166 +2533,166 @@ nav[role=tabs] a.active, nav[role=tabs] a:hover {
   color: black;
   background-color: #fef1cf;
 }
-.content #bet_container #bet_calculation_container .bet-error-box p {
+#content #bet_container #bet_calculation_container .bet-error-box p {
   margin: 0;
 }
-.content #bet_container #bet_calculation_container .rbox {
+#content #bet_container #bet_calculation_container .rbox {
   margin: 0;
   padding-bottom: 1.8em;
 }
-.content #bet_container #bet_calculation_container .rbox .rbox-wrap {
+#content #bet_container #bet_calculation_container .rbox .rbox-wrap {
   min-height: 140px;
 }
-.content #bet_container #bet_calculation_container .rbox .rbox-wrap .bet-error-box {
+#content #bet_container #bet_calculation_container .rbox .rbox-wrap .bet-error-box {
   margin: 0;
   padding: 1em;
   font-size: 0.71429rem;
   width: auto;
 }
-.content #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading {
+#content #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading {
   background-color: transparent;
   margin-bottom: 0;
 }
-.content #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading h3 {
+#content #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading h3 {
   padding: 0.7em 0 0.7em 4em;
   text-transform: capitalize;
 }
-.content #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .asian_up {
+#content #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .asian_up {
   background: url("../images/pages/trade/asian-u_1.svg") no-repeat 5% 75%;
 }
-.content #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .asian_down {
+#content #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .asian_down {
   background: url("../images/pages/trade/asian-d_1.svg") no-repeat 5% 75%;
 }
-.content #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .differs {
+#content #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .differs {
   background: url("../images/pages/trade/differs_1.svg") no-repeat 5% 75%;
 }
-.content #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .matches {
+#content #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .matches {
   background: url("../images/pages/trade/matches_1.svg") no-repeat 5% 75%;
 }
-.content #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .rises {
+#content #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .rises {
   background: url("../images/pages/trade/rise_1.png") no-repeat 5% 75%;
 }
-.content #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .falls {
+#content #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .falls {
   background: url("../images/pages/trade/fall_1.png") no-repeat 5% 75%;
 }
-.content #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .higher {
+#content #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .higher {
   background: url("../images/pages/trade/higher_1.png") no-repeat 5% 75%;
 }
-.content #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .lower {
+#content #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .lower {
   background: url("../images/pages/trade/lower_1.png") no-repeat 5% 75%;
 }
-.content #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .touches {
+#content #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .touches {
   background: url("../images/pages/trade/touch_1.png") no-repeat 5% 75%;
 }
-.content #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .does_not_touch {
+#content #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .does_not_touch {
   background: url("../images/pages/trade/no-touch_1.png") no-repeat 5% 75%;
 }
-.content #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .stays_between {
+#content #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .stays_between {
   background: url("../images/pages/trade/stay-in-between_1.png") no-repeat 5% 75%;
 }
-.content #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .goes_outside {
+#content #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .goes_outside {
   background: url("../images/pages/trade/stay-out_1.png") no-repeat 5% 75%;
 }
-.content #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .ends_between {
+#content #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .ends_between {
   background: url("../images/pages/trade/ends-between_1.png") no-repeat 5% 75%;
 }
-.content #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .ends_outside {
+#content #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading .ends_outside {
   background: url("../images/pages/trade/ends-outside_1.png") no-repeat 5% 75%;
 }
-.content #bet_container #bet_calculation_container .rbox .ui-tabs ul.ui-tabs-nav li {
+#content #bet_container #bet_calculation_container .rbox .ui-tabs ul.ui-tabs-nav li {
   list-style-image: none;
 }
-.content #bet_container #bet_calculation_container .rbox .ui-datepicker td {
+#content #bet_container #bet_calculation_container .rbox .ui-datepicker td {
   padding: 0.1em;
 }
-.content #bet_container #bet_calculation_container .rbox .form_button {
+#content #bet_container #bet_calculation_container .rbox .form_button {
   margin-bottom: 0;
 }
-.content #bet_container #bet_calculation_container .rbox-bg-alt {
+#content #bet_container #bet_calculation_container .rbox-bg-alt {
   background: none;
 }
-.content #bet_container #bet_calculation_container .rbox-bg-alt .rbox-content {
+#content #bet_container #bet_calculation_container .rbox-bg-alt .rbox-content {
   background: none;
   padding: 0;
 }
-.content #bet_container #bet_calculation_container .bet_pricebox_wrapper {
+#content #bet_container #bet_calculation_container .bet_pricebox_wrapper {
   padding: 0;
   margin: 0;
 }
-.content #bet_container #bet_cost_container {
+#content #bet_container #bet_cost_container {
   font-size: 0.71429rem;
   display: inline-block;
   background: white;
   /* Pricing Table */
 }
-.content #bet_container #bet_cost_container .rbox-wrap {
+#content #bet_container #bet_cost_container .rbox-wrap {
   border-bottom: 1px solid #a0aab4;
 }
-.content #bet_container #bet_cost_container form {
+#content #bet_container #bet_cost_container form {
   width: 40%;
   position: relative;
 }
-.content #bet_container #bet_cost_container .pricing-details {
+#content #bet_container #bet_cost_container .pricing-details {
   top: 1px;
 }
-.content #bet_container #bet_cost_container .draggable form {
+#content #bet_container #bet_cost_container .draggable form {
   width: auto;
 }
-.content #bet_container #bet_cost_container .draggable .odd {
+#content #bet_container #bet_cost_container .draggable .odd {
   background: #f0f0f5;
 }
-.content #bet_container #bet_cost_container .draggable .rbox {
+#content #bet_container #bet_cost_container .draggable .rbox {
   border: 1px solid #a0aab4;
   position: relative;
   margin-bottom: 3em;
 }
-.content #bet_container #bet_cost_container .draggable .rbox-table-full {
+#content #bet_container #bet_cost_container .draggable .rbox-table-full {
   border: 1px solid #f0f0f5;
   text-align: left;
 }
-.content #bet_container #bet_cost_container .draggable .rbox-table-full td {
+#content #bet_container #bet_cost_container .draggable .rbox-table-full td {
   text-align: left;
   border: 1px solid #f0f0f5;
   border-width: 0 1px;
 }
-.content #bet_container #loading-price {
+#content #bet_container #loading-price {
   text-align: center;
 }
-.content #bet_container #spot {
+#content #bet_container #spot {
   padding: 1px 2px;
 }
-.content #bet_container .basicInputForm .error {
+#content #bet_container .basicInputForm .error {
   background-color: #fef1cf;
 }
-.content #bet_container .basicInputForm #no_bets {
+#content #bet_container .basicInputForm #no_bets {
   text-align: center;
   margin: 30px 0 70px;
 }
-.content #bet_container #betInputBox button {
+#content #bet_container #betInputBox button {
   margin: 1em auto 0;
 }
-.content #bet_container #betInputBox form {
+#content #bet_container #betInputBox form {
   margin-top: 21px;
 }
-.content #bet_container #betInputBox form fieldset {
+#content #bet_container #betInputBox form fieldset {
   background: none;
 }
-.content #bet_container #betInputBox div {
+#content #bet_container #betInputBox div {
   clear: both;
   padding: 10px 0;
 }
-.content #bet_container #betInputBox #std_loading_img {
+#content #bet_container #betInputBox #std_loading_img {
   min-height: 300px;
   padding-top: 50px;
 }
-.content #bet_container #betInputBox div.toggle-content {
+#content #bet_container #betInputBox div.toggle-content {
   margin-top: 0;
 }
-.content #bet_container #expiry,
-.content #bet_container #type {
+#content #bet_container #expiry,
+#content #bet_container #type {
   width: 163px;
 }
-.content #bet_container .tab-content-wrapper p.required {
+#content #bet_container .tab-content-wrapper p.required {
   padding-top: 3px;
 }
 
@@ -3072,22 +3073,22 @@ nav[role=tabs] a.active, nav[role=tabs] a:hover {
   visibility: hidden;
 }
 
-.content .rbox-table-heading {
+#content .rbox-table-heading {
   padding: 3px;
 }
-.content .rbox-heading {
+#content .rbox-heading {
   font-weight: bold;
   background-color: #f0f0f5;
 }
-.content .rbox-content {
+#content .rbox-content {
   background-color: white;
   padding: 0.3em 0;
 }
-.content .rbox-content .half-1 {
+#content .rbox-content .half-1 {
   width: 50%;
   float: left;
 }
-.content .rbox-content .half-2 {
+#content .rbox-content .half-2 {
   width: 50%;
   float: right;
 }
@@ -3251,7 +3252,7 @@ nav[role=tabs] a.active, nav[role=tabs] a:hover {
   font-size: 1.96rem !important;
 }
 
-.content {
+#content {
   padding-left: 0;
   padding-right: 0;
 }
