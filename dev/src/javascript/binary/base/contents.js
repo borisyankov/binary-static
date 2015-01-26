@@ -9,6 +9,7 @@ Contents.prototype = {
         this.update_body_id();
         this.tooltip.attach();
         this.init_draggable();
+        this.display_live_chat();
     },
     on_unload: function() {
         this.tooltip.detach();
@@ -18,8 +19,8 @@ Contents.prototype = {
     },
     activate_by_client_type: function() {
         $('.by_client_type').addClass('invisible');
-        if(this.client.is_logged_in) {
-            if(this.client.is_real) {
+        if (this.client.is_logged_in) {
+            if (this.client.is_real) {
                 $('.by_client_type.client_real').removeClass('invisible');
                 $('.by_client_type.client_real').show();
             } else {
@@ -38,5 +39,8 @@ Contents.prototype = {
     },
     init_draggable: function() {
         $('.draggable').draggable();
+    },
+    display_live_chat: function() {
+        $('#live-chat-container').hide();
     }
 };

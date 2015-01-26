@@ -11,15 +11,26 @@
 	"customer_support": {
 		"email": "helpdesk@binary.com",
 		"telephone": {
-			"Australia": "+61280050136",
-			"Indonesia": "+6285574670313",
-			"Russia": "+788007073860",
-			"Ukraine": "+380893202430",
-			"United Kingdom": "+448081782950 (Toll-free)"
+			"Australia": "+61 (0) 2 8005 0136",
+			"Ireland": "+353 (0) 76 622 3220",
+			"Mexico": "+52 55 4169 2160",
+			"Poland": "+48 22 208 4441",
+			"South Africa": "+27 21 832 0907",
+			"United Kingdom": "+44 (0) 20 3239 2211"
+		},
+		"tollfree_number": {
+			"Australia": "1800 093570",
+			"Indonesia": "0018030113641",
+			"Ireland": "1800931084",
+			"Russia": "8 10 8002 8553011",
+			"United Kingdom": "0800 3762737"
+		},
+		"default_telephone": {
+			"country": "United Kingdom"
 		}
 	},
-	"binary_js_hash": "f56a2e547512ab7dc14e5f129d2c74a3",
+	"binary_js_hash": "627d5b8e123c2107925b645449974a88",
 	"binary_lib_hash": "c1ee07e3cadd5878a72a83710a297fdd",
 	"binary_data_hash": "37609d7277b9e542d70bd4411ccd068f",
-	"binary_css_hash": "102156dad71030546bda8efa75e462a9"
+	"binary_css_hash": "45a4ee960417f410204f17d2580ac648"
 }

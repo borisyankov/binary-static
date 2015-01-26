@@ -14,24 +14,36 @@
       .grd-grid-12.grd-parent.grd-row-padding
         %label.grd-grid-4.grd-grid-mobile-12.grd-no-gutter= l('Telephone:')
         - my $contact_number = customer_support_telephone();
+        - my $tollfree_number = customer_support_tollfree();
+        - my $default_country = customer_support_default_telephone();
+        - my $default_number = $contact_number->{$default_country};
         %select.grd-grid-7.grd-grid-mobile-12.grd-no-gutter{:id => 'cs_telephone_number'}
-          %option{:value => ""}= l('Select Country')
+          %option{:disabled => true}= l('Select Country')
           - foreach (sort keys %{ $contact_number }) {
             - my $number = $contact_number->{$_};
-            %option{:value => $number}= $_
+            - if ($_ eq $default_country) {
+              %option{:value => $number, :selected => true}= $_
+            - } else {
+              %option{:value => $number}= $_
+            - }
+          - }
+          %option{:disabled => true}= l('== Toll Free ==')
+          - foreach (sort keys %{ $tollfree_number }) {
+            - my $tollfree = $tollfree_number->{$_};
+            %option{:value => $tollfree}= $_
           - }
         %span#display_cs_telephone.grd-grid-7.grd-prefix-4.grd-no-gutter.grd-grid-mobile-12.grd-prefix-mobile-0.grd-row-padding
+          = $default_number
       .grd-grid-12.grd-parent.grd-row-padding
         %label.grd-grid-4.grd-grid-mobile-12.grd-no-gutter= l('Skype:')
         .grd-grid-2.grd-grid-mobile-3.grd-no-gutter
           %a{:href =>"skype:binaryhelpline?call"}
             %img{:src => url_for('images/pages/contact/skype-icon.svg')}
-      .grd-grid-12.grd-parent.grd-row-padding
+      #live-chat-container.grd-grid-12.grd-parent.grd-row-padding.by_client_type.client_virtual.client_real
         %label.grd-grid-4.grd-grid-mobile-12.grd-no-gutter= l('Live chat:')
         .grd-grid-2.grd-grid-mobile-3.grd-no-gutter
-          %a{:href =>"" :id => "IntercomDefaultWidget"}
+          %a{:href =>"#" :id => "live-chat-icon"}
             %img{:src => url_for('images/pages/contact/chat-icon.svg')}
-        .grd-grid-2.grd-grid-mobile-3.grd-no-gutter
     .grd-grid-5.grd-grid-mobile-12
       %h1= l("Company addresses")
       .grd-row-padding
@@ -43,4 +55,4 @@
         %p.no-para-margin= l('Binary (IOM) Ltd, First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW')
       .grd-row-padding
         %p.no-para-margin.address-heading= l('Malaysia')
-        %p.no-para-margin= l('C-2-01 SME Technopreneur Center 2 63000 Cyberjaya')
+        %p.no-para-margin= l('RMG Technology (M) Sdn Bhd, C-2-01 SME Technopreneur Center 2, 63000 Cyberjaya')

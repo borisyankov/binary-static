@@ -21,7 +21,6 @@
 %p!= l('[_1]\'s Random Indices are the [_2], [_3], [_4], and [_5]. These indices correspond to volatilities of 25%, 50%, 75% and 100%', stash->{website_name}, pjax_link_for(l('Random 25 Index'), url_for('trade.cgi?market=random&form_name=risefall&underlying_symbol=R_25')), pjax_link_for(l('Random 50 Index'), url_for('trade.cgi?market=random&form_name=risefall&underlying_symbol=R_50')), pjax_link_for(l('Random 75 Index'), url_for('trade.cgi?market=random&form_name=risefall&underlying_symbol=R_75')), pjax_link_for(l('Random 100 Index'), url_for('trade.cgi?market=random&form_name=risefall&underlying_symbol=R_100')))
 
 %p!= l('The [_1] is twice as volatile as the [_2], and four times as volatile as the [_3].', pjax_link_for(l('Random 100 Index'), url_for('trade.cgi?market=random&form_name=risefall&underlying_symbol=R_100')), pjax_link_for(l('Random 50 Index'), url_for('trade.cgi?market=random&form_name=risefall&underlying_symbol=R_50')), pjax_link_for(l('Random 25 Index'), url_for('trade.cgi?market=random&form_name=risefall&underlying_symbol=R_25')))
-%img{:src => url_for('images/pages/get-started/get-started-random-indices.svg')}
 
 %h2= l('Random Quotidians')
 %h3= l('Don’t be put off by the name. Quotidian just means something that happens everyday.')
