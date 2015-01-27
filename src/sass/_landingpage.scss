@@ -4,10 +4,10 @@
 
 .lp-header-wrapper .logo:hover {
     box-shadow: none;
-    border: 1px solid transparent;
+    border-color: transparent;
     background-color: inherit;
 }
 
 .lp-header-wrapper .login-button {
-
+    border-color: $COLOR_ACTIVE;
 }
