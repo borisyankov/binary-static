@@ -10,11 +10,10 @@
 @import "table.scss";
 @import "readable";
 @import "compatibility";
+@import "landingpage";
 @import "animations";
-
-@import "common/header";
-@import "common/nav";
-@import "common/tooltip";
+@import "header";
+@import "tooltip";
 
 @import "controls";
 @import "controls/form";

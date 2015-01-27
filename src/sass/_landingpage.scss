@@ -1,7 +1,13 @@
 .lp-header-wrapper {
-    background: white;
+    background: inherit;
+}
+
+.lp-header-wrapper .logo:hover {
+    box-shadow: none;
+    border: 1px solid transparent;
+    background-color: inherit;
 }
 
 .lp-header-wrapper .login-button {
-    
+
 }
