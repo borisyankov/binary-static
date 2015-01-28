@@ -1071,23 +1071,6 @@ td a {
   margin: 0 auto;
   margin: 2em;
 }
-.readable ul,
-.why-us-content ul,
-.whyus-content ul,
-.careers-content ul,
-.devguide-content ul,
-.opensourceprojects-content ul,
-.partnerapi-content ul,
-.responsibletrading-content ul,
-.responsible-trading-content ul,
-.smartindices-content ul,
-.tour-content ul,
-.whitelabels-content ul,
-.aboutus-content ul,
-.random-markets-content ul {
-  padding-left: 1em;
-  /* list-style: disc outside none; */
-}
 .readable li,
 .why-us-content li,
 .whyus-content li,
