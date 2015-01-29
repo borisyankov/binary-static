@@ -708,6 +708,7 @@ ol {
 
 .footer, .footer a, .footer a:visited {
   color: rgba(0, 0, 0, 0.6);
+  font-weight: normal;
 }
 
 .sitemap h3 {
@@ -1078,6 +1079,10 @@ td a {
   box-shadow: none;
   border-color: transparent;
   background-color: inherit;
+}
+
+.lp-header-wrapper .login-button {
+  border-color: #ff992a;
 }
 
 *,
