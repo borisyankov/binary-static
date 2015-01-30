@@ -1161,6 +1161,12 @@ td a {
   border-color: #ff992a;
 }
 
+.publications {
+  width: 100%;
+  padding: 1em 0;
+  opacity: .5;
+}
+
 *,
 *:after,
 *:before {
