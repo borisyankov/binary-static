@@ -12,8 +12,19 @@
     border-color: $COLOR_ACTIVE;
 }
 
+.lp-header-wrapper .login-button:hover {
+    border-color: transparent;
+}
+
 .publications {
     width: 100%;
     padding: 1em 0;
     opacity: .5;
+}
+
+blockquote {
+    border: 1px solid #e8eced;
+    background: #f8f8f8;
+    padding: .5em;
+    margin-bottom: 1em;
 }
