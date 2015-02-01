@@ -691,7 +691,7 @@ body {
 }
 
 .licenses img {
-  height: 2em;
+  height: 3em;
   margin-right: 1em;
 }
 
@@ -776,8 +776,8 @@ ol {
   background: #a0aab4;
 }
 
-.sitemap h3, .sitemap a, .sitemap a:visited, .footer {
-  color: rgba(0, 0, 0, 0.5);
+.footer, .footer a, .footer a:visited {
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .sitemap h3 {
@@ -1146,6 +1146,16 @@ td a {
   text-align: center;
 }
 
+.lp-header-wrapper {
+  background: inherit;
+}
+
+.lp-header-wrapper .logo:hover {
+  box-shadow: none;
+  border-color: transparent;
+  background-color: inherit;
+}
+
 *,
 *:after,
 *:before {
@@ -1220,165 +1230,6 @@ td a {
 }
 #appcache-reload-message .message a {
   color: #2e8836;
-}
-
-.disable-for-test .tab-menu-wrap ul {
-  margin: 0;
-  background-color: #f0f0f5;
-  position: relative;
-  display: block;
-}
-.disable-for-test .tab-menu-wrap ul li {
-  display: inline-block;
-}
-.disable-for-test .tab-menu-wrap ul li a {
-  color: black;
-  line-height: 2;
-  top: 1px;
-  text-decoration: none;
-  display: inline-block;
-  text-transform: capitalize;
-}
-.disable-for-test .tab-menu-wrap ul li a a.a-active, .disable-for-test .tab-menu-wrap ul li a span.a-active {
-  color: white;
-}
-.disable-for-test .tab-menu-wrap ul li ul.sub_items {
-  margin-top: 1px;
-  display: none;
-}
-.disable-for-test .tab-menu-wrap ul li ul.tm-ul-2 {
-  margin-top: 1px;
-  display: none;
-}
-.disable-for-test .tab-menu-wrap ul li.hover ul, .disable-for-test .tab-menu-wrap ul li.active ul {
-  display: block;
-  position: absolute;
-  left: 1px;
-  width: 99%;
-  z-index: 10;
-  margin-top: 3px solid transparent;
-  background: #fff;
-}
-.disable-for-test .tab-menu-wrap ul li.hover ul li a, .disable-for-test .tab-menu-wrap ul li.active ul li a, .disable-for-test .tab-menu-wrap ul li.hover ul li span, .disable-for-test .tab-menu-wrap ul li.active ul li span {
-  top: auto;
-  border: 0;
-  color: #44484c;
-  display: inline-block;
-}
-.disable-for-test .tab-menu-wrap ul li.hover ul li a.a-active, .disable-for-test .tab-menu-wrap ul li.active ul li a.a-active, .disable-for-test .tab-menu-wrap ul li.hover ul li span.a-active, .disable-for-test .tab-menu-wrap ul li.active ul li span.a-active {
-  color: #e98024;
-}
-.disable-for-test .tab-menu-wrap ul li.active > a {
-  box-shadow: inset 0px -4px 0px 0px #414a80;
-}
-.disable-for-test .tab-menu-wrap ul li.active ul {
-  z-index: 1;
-}
-.disable-for-test .tab-menu-wrap ul li.active ul a {
-  background: none;
-}
-.disable-for-test .has-tabs {
-  border: none;
-  border-radius: 0;
-  margin: 0;
-  padding: 0;
-  font: inherit !important;
-}
-.disable-for-test .has-tabs ul.ui-tabs-nav {
-  border: none;
-  background: none;
-  font: inherit !important;
-}
-.disable-for-test .has-tabs ul.ui-tabs-nav li:first-child {
-  border-top-left-radius: 100px;
-  border-bottom-left-radius: 100px;
-}
-.disable-for-test .has-tabs ul.ui-tabs-nav li:last-child {
-  border-top-right-radius: 100px;
-  border-bottom-right-radius: 100px;
-}
-.disable-for-test .has-tabs ul.ui-tabs-nav li {
-  border-top: 1px solid #a0aab4;
-  border-bottom: 1px solid #a0aab4;
-  border-right: 1px solid #a0aab4;
-  float: left;
-  display: inline-block;
-}
-.disable-for-test .has-tabs ul.ui-tabs-nav li a, .disable-for-test .has-tabs ul.ui-tabs-nav li a:visited {
-  padding: 5px 10px;
-  line-height: 2;
-  text-decoration: none;
-  color: #a0aab4;
-  background: transparent;
-}
-.disable-for-test .has-tabs ul.ui-tabs-nav li:first-child {
-  border-left: 1px solid #a0aab4;
-}
-.disable-for-test .has-tabs ul.ui-tabs-nav li.active, .disable-for-test .has-tabs ul.ui-tabs-nav li.ui-tabs-active {
-  background: #a0aab4;
-  color: white;
-}
-.disable-for-test .has-tabs ul.ui-tabs-nav li.active a, .disable-for-test .has-tabs ul.ui-tabs-nav li.ui-tabs-active a {
-  background: none;
-  color: white;
-  text-decoration: none;
-}
-.disable-for-test .has-tabs ul.ui-tabs-nav li.active span.a-active, .disable-for-test .has-tabs ul.ui-tabs-nav li.ui-tabs-active span.a-active {
-  line-height: 2;
-}
-.disable-for-test .has-tabs ul.ui-tabs-nav ul.tm-ul-2 {
-  list-style-type: none;
-  margin: 0;
-}
-.disable-for-test .has-tabs ul.ui-tabs-nav ul.tm-ul-2 li {
-  background: none;
-}
-.disable-for-test .has-tabs ul.ui-tabs-nav ul.tm-ul-2 li a {
-  color: black;
-  text-decoration: none;
-  width: auto;
-}
-.disable-for-test .has-tabs ul.ui-tabs-nav ul.tm-ul-2 li a.a-active {
-  color: #e98024;
-}
-.disable-for-test .has-tabs ul.ui-tabs-nav ul.tm-ul-2 li a:hover {
-  text-decoration: underline;
-}
-.disable-for-test .has-tabs .ui-tabs-panel {
-  padding: 0 !important;
-}
-.disable-for-test .page-section {
-  width: 100%;
-}
-.disable-for-test .page-section > .tab-menu ul.tm-ul {
-  margin: 0;
-  background-color: #f0f0f5;
-}
-.disable-for-test .page-section > .tab-menu ul.tm-ul li {
-  color: #e98024;
-}
-.disable-for-test .page-section > .tab-menu ul.tm-ul li.active {
-  background: none;
-}
-.disable-for-test .page-section > .tab-menu ul.tm-ul li.active a {
-  color: white;
-  background: #414a80;
-}
-.disable-for-test .page-section > .tab-menu ul.tm-ul-2 li.active a.tm-a-2 {
-  color: #44484c;
-  background: none;
-}
-.disable-for-test .page-section > .tab-menu ul.tm-ul-2 li.active a.a-active {
-  color: #e98024;
-  background: none;
-}
-.disable-for-test .page-section > .tab-content-wrapper {
-  width: 100%;
-  margin: 0 auto;
-  margin-top: 2em;
-}
-.disable-for-test .page-section > .tab-content-wrapper .full-width-content {
-  width: 100%;
 }
 
 #tooltip {
@@ -3703,27 +3554,27 @@ input#duration_amount {
 #form_chart_director #instrument-content .rbox-content {
   height: 42.5em;
 }
-#form_chart_director li.hover .drop-down-content, #form_chart_director .disable-for-test .tab-menu-wrap ul li.active .drop-down-content, .disable-for-test .tab-menu-wrap ul #form_chart_director li.active .drop-down-content {
+#form_chart_director li.hover .drop-down-content {
   margin-top: 0;
   border: 1px solid #a0aab4;
   margin: 0;
   top: 24px;
 }
-#form_chart_director li.hover .drop-down-content .half-1, #form_chart_director .disable-for-test .tab-menu-wrap ul li.active .drop-down-content .half-1, .disable-for-test .tab-menu-wrap ul #form_chart_director li.active .drop-down-content .half-1, #form_chart_director li.hover .drop-down-content .half-2, #form_chart_director .disable-for-test .tab-menu-wrap ul li.active .drop-down-content .half-2, .disable-for-test .tab-menu-wrap ul #form_chart_director li.active .drop-down-content .half-2 {
+#form_chart_director li.hover .drop-down-content .half-1, #form_chart_director li.hover .drop-down-content .half-2 {
   width: 47%;
   height: auto;
 }
-#form_chart_director li.hover .drop-down-content .half-1.with-separator, #form_chart_director .disable-for-test .tab-menu-wrap ul li.active .drop-down-content .half-1.with-separator, .disable-for-test .tab-menu-wrap ul #form_chart_director li.active .drop-down-content .half-1.with-separator {
+#form_chart_director li.hover .drop-down-content .half-1.with-separator {
   border-right: 1px solid #a0aab4;
 }
-#form_chart_director li.hover .drop-down-content .tl, #form_chart_director .disable-for-test .tab-menu-wrap ul li.active .drop-down-content .tl, .disable-for-test .tab-menu-wrap ul #form_chart_director li.active .drop-down-content .tl, #form_chart_director li.hover .drop-down-content .tr, #form_chart_director .disable-for-test .tab-menu-wrap ul li.active .drop-down-content .tr, .disable-for-test .tab-menu-wrap ul #form_chart_director li.active .drop-down-content .tr, #form_chart_director li.hover .drop-down-content .bl, #form_chart_director .disable-for-test .tab-menu-wrap ul li.active .drop-down-content .bl, .disable-for-test .tab-menu-wrap ul #form_chart_director li.active .drop-down-content .bl, #form_chart_director li.hover .drop-down-content .br, #form_chart_director .disable-for-test .tab-menu-wrap ul li.active .drop-down-content .br, .disable-for-test .tab-menu-wrap ul #form_chart_director li.active .drop-down-content .br {
+#form_chart_director li.hover .drop-down-content .tl, #form_chart_director li.hover .drop-down-content .tr, #form_chart_director li.hover .drop-down-content .bl, #form_chart_director li.hover .drop-down-content .br {
   display: none;
 }
-#form_chart_director li.hover .drop-down-content .rbox-content, #form_chart_director .disable-for-test .tab-menu-wrap ul li.active .drop-down-content .rbox-content, .disable-for-test .tab-menu-wrap ul #form_chart_director li.active .drop-down-content .rbox-content {
+#form_chart_director li.hover .drop-down-content .rbox-content {
   height: auto;
   overflow: auto;
 }
-#form_chart_director li.hover .drop-down-content ul.not-li, #form_chart_director .disable-for-test .tab-menu-wrap ul li.active .drop-down-content ul.not-li, .disable-for-test .tab-menu-wrap ul #form_chart_director li.active .drop-down-content ul.not-li {
+#form_chart_director li.hover .drop-down-content ul.not-li {
   display: block;
   height: auto;
   margin: 0 0 0 0.7em;
@@ -3731,17 +3582,17 @@ input#duration_amount {
   border: 0;
   line-height: 1em;
 }
-#form_chart_director li.hover .drop-down-content ul.not-li li, #form_chart_director .disable-for-test .tab-menu-wrap ul li.active .drop-down-content ul.not-li li, .disable-for-test .tab-menu-wrap ul #form_chart_director li.active .drop-down-content ul.not-li li {
+#form_chart_director li.hover .drop-down-content ul.not-li li {
   background: none;
   float: none;
   display: list-item;
   margin: 0;
   padding: 0;
 }
-#form_chart_director li.hover .drop-down-content ul.not-li li label, #form_chart_director .disable-for-test .tab-menu-wrap ul li.active .drop-down-content ul.not-li li label, .disable-for-test .tab-menu-wrap ul #form_chart_director li.active .drop-down-content ul.not-li li label {
+#form_chart_director li.hover .drop-down-content ul.not-li li label {
   float: none;
 }
-#form_chart_director li.hover .drop-down-content ul.not-li, #form_chart_director .disable-for-test .tab-menu-wrap ul li.active .drop-down-content ul.not-li, .disable-for-test .tab-menu-wrap ul #form_chart_director li.active .drop-down-content ul.not-li {
+#form_chart_director li.hover .drop-down-content ul.not-li {
   position: relative;
   top: auto;
   left: auto;
