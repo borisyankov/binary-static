@@ -7,8 +7,9 @@
 @import "layout";
 @import "typography";
 @import "page";
-@import "table.scss";
+@import "table";
 @import "readable";
+@import "grid";
 @import "compatibility";
 @import "landingpage";
 @import "animations";
@@ -38,7 +39,6 @@
 
 @import "media-queries";
 
-@import "external/syntax-highlighting";
 @import "external/jquery.ui.timepicker.scss";
 
 @import "external/grid";

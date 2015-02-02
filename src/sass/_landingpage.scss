@@ -22,9 +22,24 @@
     opacity: .5;
 }
 
-blockquote {
+blockquote p {
     border: 1px solid #e8eced;
     background: #f8f8f8;
-    padding: .5em;
+    padding: 1em 1em 0 1em;
     margin-bottom: 1em;
+}
+
+
+blockquote p:after {
+    content: '';
+    position: relative;
+    display: block;
+    bottom: -.5em;
+    left: 1em;
+    height: 1em;
+    width: 1em;
+    transform: rotate(-45deg);
+    border: solid #e8eced;
+    border-width: 0 0 1px 1px;
+    background: #f8f8f8;
 }
