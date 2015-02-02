@@ -463,7 +463,7 @@ body {
 
 .header-wrapper {
   position: fixed;
-  z-index: 9999;
+  z-index: 50;
   width: 100%;
 }
 
@@ -742,8 +742,16 @@ ol {
   left: 0;
   height: 100%;
   width: 100%;
-  z-index: 10;
-  background-color: rgba(255, 255, 255, 0.75);
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.overlay form {
+  display: none;
+}
+
+.dialog .form-logo {
+  margin-top: -60px;
 }
 
 .dialog {
@@ -1096,8 +1104,10 @@ td a {
 }
 
 blockquote {
-  border-top: 1px solid #e8eced;
+  border: 1px solid #e8eced;
   background: #f8f8f8;
+  padding: .5em;
+  margin-bottom: 1em;
 }
 
 *,
@@ -3247,64 +3257,67 @@ table.half-2 {
   z-index: 1;
 }
 
-form#profit-table-form span,
-form#tradingform span {
-  padding: 10px;
-}
-form#profit-table-form .row,
-form#tradingform .row {
-  clear: none;
-  float: left;
-  margin: -3px 8px 0 8px;
-}
-form#profit-table-form .row label,
-form#tradingform .row label {
-  width: auto;
+/*
+form#profit-table-form,
+form#tradingform {
+    span {
+        padding: 10px;
+    }
+    .row {
+        clear: none;
+        float: left;
+        margin: -3px 8px 0 8px;
+        label {
+            width: auto;
+        }
+    }
 }
 
 form#tradingform div.row.form_button {
-  float: right;
+    float: right;
 }
 
 form#tradingform div.row {
-  margin-right: 30px;
-}
-form#tradingform div.row label {
-  padding-top: 0;
+    margin-right: 30px;
+    label {
+        padding-top: 0;
+    }
 }
 
 form#forward_start {
-  font-size: 0.71429rem;
-}
-form#forward_start fieldset {
-  padding-top: 1em;
-  margin-bottom: 1em;
-}
-form#forward_start label {
-  width: auto;
+    font-size: $FONT_SIZE_S;
+    fieldset {
+        padding-top: 1em;
+        margin-bottom: 1em;
+    }
+    label {
+        width: auto;
+    }
 }
 
-#profit-table-form #fromdate {
-  width: 105px;
-}
-#profit-table-form #todate {
-  width: 105px;
+#profit-table-form{
+    #fromdate{
+        width: 105px;
+    }
+    #todate{
+        width: 105px;
+    }
 }
 
 input#duration_amount {
-  width: 75px;
+    width: 75px; // same as date picker width
 }
 
 #profit-table-form span {
-  position: relative;
+    position: relative;
 }
 
 #profit-table-form p {
-  position: absolute;
-  left: 13px;
-  bottom: -16px;
+    position: absolute;
+    left: 13px;
+    bottom: -16px;
 }
-
+*/
 /* landing page icon */
 #internet_explorer {
   background-image: url("../images/pages/logintrouble/ielogo-icon_1.png");
