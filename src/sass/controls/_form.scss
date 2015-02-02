@@ -103,7 +103,27 @@ label {
 
 .wide-form p > *, .thin-form p > * {
     flex: 1;
+}
+
+.wide-form p > * {
     margin: 0 .5em .5em 0;
+}
+
+.thin-form p > * {
+    margin: 0 0 .5em 0;
+}
+
+.wide-form p > label {
+    margin: 0;
+}
+
+.wide-form p > button, .thin-form p > button {
+    margin-top: 1em;
+    margin-bottom: 0;
+}
+
+.wide-form h3, .thin-form h3 {
+    margin-bottom: 1em;
 }
 
 .wide-form p > :last-child {
