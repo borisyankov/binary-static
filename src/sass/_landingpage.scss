@@ -1,5 +1,5 @@
 .lp-header-wrapper {
-    background: inherit;
+    background: rgba(255, 255, 255, .9);
 }
 
 .lp-header-wrapper .logo:hover {
@@ -42,4 +42,8 @@ blockquote p:after {
     border: solid #e8eced;
     border-width: 0 0 1px 1px;
     background: #f8f8f8;
+}
+
+blockquote cite {
+    font-style: italic;
 }
