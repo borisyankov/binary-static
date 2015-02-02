@@ -1086,7 +1086,7 @@ td a {
 }
 
 .lp-header-wrapper .login-button:hover {
-  background-color: inherit;
+  border-color: transparent;
 }
 
 .publications {
