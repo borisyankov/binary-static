@@ -8,12 +8,16 @@
     background-color: inherit;
 }
 
-.lp-header-wrapper .login-button {
-    border-color: $COLOR_ACTIVE;
+.lp-header-wrapper .login-button, .lp-header-wrapper .login-button:hover {
+    color: white;
+    background: $COLOR_GRAY;
+    border-color: $COLOR_GRAY;
 }
 
-.lp-header-wrapper .login-button:hover {
-    border-color: transparent;
+.emphasis-wrapper {
+    background: rgba(160, 170, 180, .075);
+    border-top: 1px solid rgba(160, 170, 180, .15);
+    border-bottom: 1px solid rgba(160, 170, 180, .15);
 }
 
 .publications {
