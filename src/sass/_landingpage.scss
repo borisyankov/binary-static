@@ -14,6 +14,15 @@
     border-color: $COLOR_GRAY;
 }
 
+.lp-content h2 {
+    text-align: center;
+}
+
+.lp-content .row {
+    margin: 3em -.5em;
+}
+
+
 .emphasis-wrapper {
     background: rgba(160, 170, 180, .075);
     border-top: 1px solid rgba(160, 170, 180, .15);
