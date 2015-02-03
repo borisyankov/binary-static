@@ -819,7 +819,7 @@ ol {
 }
 
 .overlay form {
-  display: none;
+  visibility: hidden;
 }
 
 .dialog .form-logo {
