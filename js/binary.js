@@ -135,7 +135,7 @@ $(function() {
         var $form = $(this);
         $form.find('.error').remove();
         if (Binary.Form.validate($form)) {
-            $form.find('img').toggleClass('progress-spinner');
+            $form.find('img').toggleClass('spinner');
         }
         e.preventDefault();
     });
