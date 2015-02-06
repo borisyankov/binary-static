@@ -151,7 +151,7 @@ pre {
   text-align: right;
   padding-right: 1em;
   width: 40%;
-  line-height: 1.7em;
+  line-height: 1.7;
 }
 
 .form_label {
@@ -657,6 +657,7 @@ p {
 
 h1, h2, h3 {
   margin: 1em 0 .5em 0;
+  line-height: 1.25;
 }
 
 h1 {
@@ -1015,7 +1016,7 @@ td a {
 .whitelabels-content li,
 .aboutus-content li,
 .random-markets-content li {
-  line-height: 1.3;
+  line-height: 1.25;
   margin-bottom: .5em;
 }
 
@@ -1275,16 +1276,16 @@ abbr {
 
 .non_input {
   color: #44484c;
-  line-height: 1.7em;
+  line-height: 1.7;
 }
 
 .non_input label {
-  line-height: 1.6em;
+  line-height: 1.6;
 }
 
 .form_link {
   display: block;
-  line-height: 0.8em;
+  line-height: 0.8;
 }
 
 .error-msg {
