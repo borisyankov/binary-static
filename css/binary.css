@@ -1180,7 +1180,11 @@ td a {
 }
 
 .lp-content h2 {
-  text-align: center;
+  margin: 0 0 .5em 0;
+}
+
+.lp-content ul.checked {
+  margin: 0;
 }
 
 .lp-content .row {
