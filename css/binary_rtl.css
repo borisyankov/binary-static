@@ -1085,6 +1085,7 @@ td a {
 
 .lp-header-wrapper {
   background: rgba(255, 255, 255, 0.9);
+  border-top: 3px solid #e98024;
 }
 
 .lp-header-wrapper .logo:hover {
