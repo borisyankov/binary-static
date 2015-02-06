@@ -1,3 +1,12 @@
+::-moz-selection {
+    color: white;
+    background: $COLOR_ORANGE;
+}
+::selection {
+    color: white;
+    background: $COLOR_ORANGE;
+}
+
 .msgbar-wrapper {
     background: $COLOR_ORANGE;
 }
