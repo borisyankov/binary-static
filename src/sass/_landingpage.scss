@@ -1,5 +1,6 @@
 .lp-header-wrapper {
     background: rgba(255, 255, 255, .9);
+    border-top: 3px solid $COLOR_ORANGE;
 }
 
 .lp-header-wrapper .logo:hover {
@@ -16,6 +17,10 @@
 
 .lp-content h2 {
     margin: 0 0 .5em 0;
+}
+
+.lp-content ul.checked {
+    margin: 0;
 }
 
 .lp-content .row {
