@@ -2,15 +2,12 @@
     html {
         font-size: 16px;
     }
-    .sitemap {
+    .sitemap, .extra-award, .adcopy  {
         display: none;
     }
     .nav2nd {
         left: 0;
         right: 0;
-    }
-    .adcopy {
-        display: none;
     }
 }
 @media all and (max-width: 479px) {
@@ -78,5 +75,8 @@
     }
     .row {
         flex-direction: column;
+    }
+    .emphasis-wrapper-wrapper {
+        display: none;
     }
 }
