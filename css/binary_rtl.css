@@ -290,7 +290,7 @@ a.close {
   border-radius: 0;
   border-bottom-left-radius: 2px;
   background: #818d99;
-  font-size: 1.4rem;
+  font-size: 1.33333rem;
   font-weight: bold;
 }
 a.close:hover {
@@ -487,7 +487,7 @@ body {
 }
 
 .msgbar {
-  font-size: 0.71429rem;
+  font-size: 0.75rem;
 }
 
 .msgbar, .header, .sitemap {
@@ -594,6 +594,10 @@ body {
   width: 3em;
 }
 
+.logo-text {
+  padding: .5em 0;
+}
+
 .sitemap {
   margin-top: 1em;
 }
@@ -658,19 +662,20 @@ p {
 h1, h2, h3 {
   margin: 1em 0 .5em 0;
   line-height: 1.25;
+  color: black;
 }
 
 h1 {
-  font-size: 2.744rem;
+  font-size: 2.37035rem;
 }
 
 h2 {
-  font-size: 1.96rem;
+  font-size: 1.77777rem;
 }
 
 h3,
 legend {
-  font-size: 1.4rem;
+  font-size: 1.33333rem;
 }
 
 pre {
@@ -682,7 +687,7 @@ ol {
 }
 
 .hint {
-  font-size: 0.71429rem;
+  font-size: 0.75rem;
 }
 
 ::-moz-selection {
@@ -712,7 +717,7 @@ ol {
   font-size: 1rem;
 }
 .sitemap a {
-  font-size: 0.71429rem;
+  font-size: 0.75rem;
 }
 
 .sitemap * {
@@ -725,7 +730,7 @@ ol {
 }
 
 .regulatory {
-  font-size: 0.5102rem;
+  font-size: 0.5625rem;
 }
 
 .logo img {
@@ -1031,7 +1036,7 @@ td a {
 }
 
 #bet_container .tm-li-2 {
-  font-size: 0.5102rem;
+  font-size: 0.5625rem;
 }
 
 #ui-datepicker-div {
@@ -1149,6 +1154,10 @@ blockquote cite {
   font-style: italic;
 }
 
+.emphasis-wrapper-wrapper {
+  height: 7em;
+}
+
 *,
 *:after,
 *:before {
@@ -1218,7 +1227,7 @@ blockquote cite {
 }
 
 #tooltip {
-  font-size: 0.71429rem;
+  font-size: 0.75rem;
   line-height: 1.5;
   color: #000;
   background: #FFF1CF;
@@ -2346,7 +2355,7 @@ nav[role=tabs] a.active, nav[role=tabs] a:hover {
 #bet_container #bet_container #bet_calculation_container .rbox .rbox-wrap .bet-error-box {
   margin: 0;
   padding: 1em;
-  font-size: 0.71429rem;
+  font-size: 0.75rem;
   width: auto;
 }
 #bet_container #bet_container #bet_calculation_container .rbox .rbox-wrap .rbox-heading {
@@ -2420,7 +2429,7 @@ nav[role=tabs] a.active, nav[role=tabs] a:hover {
   margin: 0;
 }
 #bet_container #bet_container #bet_cost_container {
-  font-size: 0.71429rem;
+  font-size: 0.75rem;
   display: inline-block;
   background: white;
   /* Pricing Table */
@@ -2497,20 +2506,20 @@ nav[role=tabs] a.active, nav[role=tabs] a:hover {
 }
 
 .stylized_cents {
-  font-size: 0.71429rem;
+  font-size: 0.75rem;
   vertical-align: text-top;
   margin-left: .02em;
   margin-right: 0.1em;
 }
 
 .stylized_currency {
-  font-size: 0.71429rem;
+  font-size: 0.75rem;
   text-align: left;
 }
 
 .stylized_price {
   font-weight: bold;
-  font-size: 1.96rem;
+  font-size: 1.77777rem;
 }
 
 .price_moved_up {
@@ -2537,7 +2546,7 @@ nav[role=tabs] a.active, nav[role=tabs] a:hover {
 }
 
 .bet_cost b {
-  font-size: 1.4rem;
+  font-size: 1.33333rem;
 }
 
 .bet_description {
@@ -2546,7 +2555,7 @@ nav[role=tabs] a.active, nav[role=tabs] a:hover {
   padding: 0 3px 3px 0;
 }
 .bet_description strong:first-child {
-  font-size: 1.4rem;
+  font-size: 1.33333rem;
 }
 
 .bet_return {
@@ -2654,7 +2663,7 @@ nav[role=tabs] a.active, nav[role=tabs] a:hover {
   margin-bottom: 10px;
 }
 .bet_confirm_wrapper table {
-  font-size: 0.71429rem;
+  font-size: 0.75rem;
 }
 .bet_confirm_wrapper table .even {
   background: #f0f0f5;
@@ -2725,7 +2734,7 @@ nav[role=tabs] a.active, nav[role=tabs] a:hover {
   width: 100%;
 }
 #buy_confirm_container a.visualization {
-  font-size: 0.71429rem;
+  font-size: 0.75rem;
   font-weight: normal;
   text-decoration: underline;
 }
@@ -2889,7 +2898,7 @@ nav[role=tabs] a.active, nav[role=tabs] a:hover {
   z-index: 200;
 }
 #tt #ttcont {
-  font-size: 0.71429rem;
+  font-size: 0.75rem;
   background-color: white;
   border: 1px solid #414a80;
   display: block;
@@ -2986,7 +2995,7 @@ nav[role=tabs] a.active, nav[role=tabs] a:hover {
   color: #414a80;
 }
 .li-3-boxes-content p {
-  font-size: 0.71429rem;
+  font-size: 0.75rem;
   margin: 10px 15px;
 }
 
@@ -3039,7 +3048,7 @@ nav[role=tabs] a.active, nav[role=tabs] a:hover {
 }
 
 #digit-contract-details .sign {
-  font-size: 1.96rem !important;
+  font-size: 1.77777rem !important;
 }
 
 #content {
@@ -3652,7 +3661,7 @@ input#duration_amount {
 }
 
 #instrument-content, #settings-content, #band-content, #moving-average-content, #indicator-content {
-  font-size: 0.71429rem;
+  font-size: 0.75rem;
 }
 
 #intraday_interval ul.not-li {
@@ -3790,7 +3799,7 @@ input#duration_amount {
 }
 
 #bet_details-table em {
-  font-size: 0.5102rem;
+  font-size: 0.5625rem;
   font-weight: normal;
   color: black;
 }
@@ -3864,7 +3873,7 @@ h2.finder {
 
 .smaller-font table td,
 .smaller-font table th {
-  font-size: 0.71429rem;
+  font-size: 0.75rem;
 }
 
 .left-align table td,
@@ -4179,7 +4188,7 @@ div#price_table_notes {
 
 .chart-notice {
   text-align: left;
-  font-size: 0.71429rem;
+  font-size: 0.75rem;
   color: #44484c;
   width: 90%;
   margin: 5px 0;
@@ -4203,7 +4212,7 @@ div#price_table_notes {
   line-height: 80px;
   border: 1px solid #a0aab4;
   font-weight: bold;
-  font-size: 1.4rem;
+  font-size: 1.33333rem;
   transition-duration: 0.4s;
   transition-property: transform;
   box-shadow: 0 0 2px #a0aab4;
@@ -4294,17 +4303,13 @@ div#price_table_notes {
     font-size: 16px;
   }
 
-  .sitemap {
+  .sitemap, .extra-award, .adcopy {
     display: none;
   }
 
   .nav2nd {
     left: 0;
     right: 0;
-  }
-
-  .adcopy {
-    display: none;
   }
 }
 @media all and (max-width: 479px) {
@@ -4388,6 +4393,10 @@ div#price_table_notes {
 
   .row {
     flex-direction: column;
+  }
+
+  .emphasis-wrapper-wrapper {
+    display: none;
   }
 }
 /*
