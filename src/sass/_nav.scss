@@ -34,20 +34,20 @@
 }
 .nav1st > li:hover, .logo:hover {
     box-shadow: inset 0px 3px 0px 0px $COLOR_ORANGE;
-    background-color: $COLOR_NAV_ACTIVE;
+    background-color: $COLOR_BLUE;
     border-left: 1px solid $COLOR_NAV_BORDER;
     border-right: 1px solid $COLOR_NAV_BORDER;
 }
 .nav2nd {
     margin-left: -1px;
-    background-color: $COLOR_NAV_ACTIVE;
+    background-color: $COLOR_BLUE;
     border-left: 1px solid $COLOR_NAV_BORDER;
     border-right: 1px solid $COLOR_NAV_BORDER;
     border-bottom: 1px solid $COLOR_NAV_BORDER;
 }
 .nav2nd li:hover {
     color: white;
-    background: $COLOR_GRAY;
+    background: #2a3052;
 
 }
 .nav-trade,
