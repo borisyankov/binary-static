@@ -1089,7 +1089,7 @@ td a {
 }
 
 .lp-header-wrapper {
-  background: rgba(255, 255, 255, 0.9);
+  background: #2a3052;
   border-top: 3px solid #e98024;
 }
 
@@ -1114,7 +1114,7 @@ td a {
 }
 
 .lp-content .row {
-  margin: 3em -.5em;
+  margin: 2.5em -.5em;
 }
 
 .emphasis-wrapper {
