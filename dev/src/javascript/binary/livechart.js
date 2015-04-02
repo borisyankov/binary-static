@@ -23,13 +23,13 @@ function updateLiveChart(config) {
 var LiveChart = function(config) {
     //Required for inheritence.
     if (!config) return;
-    
+
     this.config = config;
     this.shift = false;
     if (!config.trade_visualization) {
         this.on_duration_change();
         this.highlight_duration();
-    }    
+    }
 };
 
 LiveChart.prototype = {
@@ -45,7 +45,9 @@ LiveChart.prototype = {
         }
 
         if (!chart_closed && live_chart) {
-            this.chart.destroy();
+            if (this.chart) {
+                this.chart.destroy();
+            }
             chart_closed = true;
             live_chart = null;
         }
@@ -167,7 +169,10 @@ LiveChart.prototype = {
                 min: this.config.from * 1000,
             },
             yAxis: {
+                opposite: false,
                 labels: {
+                    align: 'left',
+                    x: 0,
                     formatter: function() { return this.value; }
                 },
                 title: {
@@ -276,6 +281,10 @@ LiveChartTick.prototype.process_data = function(point) {
             epoch: parseInt(point[1]),
             quote: parseFloat(point[2])
         };
+        
+        if (!this.chart) return;
+        if (!this.chart.series) return;
+
         this.chart.series[0].addPoint(
             [tick.epoch * 1000, tick.quote], false, this.shift, false
         );
@@ -349,6 +358,9 @@ LiveChartOHLC.prototype.process_corp_action = function(action) {
 
 LiveChartOHLC.prototype.process_ohlc = function(ohlc) {
     var epoch = parseInt(ohlc[0]);
+    if (!this.chart && !this.chart.series) {
+        return;
+    }
     var ohlc_pt = {
         x:     epoch * 1000,
         open:  parseFloat(ohlc[1]),
@@ -370,8 +382,8 @@ LiveChartOHLC.prototype.process_tick = function(tickInput) {
     };
     this.spot = tick.quote;
 
-    if (!this.chart.series) {
-        return; 
+    if (!this.chart && !this.chart.series) {
+        return;
     }
 
     var data = this.chart.series[0].options.data;

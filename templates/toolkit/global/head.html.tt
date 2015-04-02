@@ -20,8 +20,26 @@
         <meta property="og:type" content="website" />
         <meta property="og:image" content="[% request.url_for('images/common/og_image.gif') %]" />
 
-        <script src="//use.typekit.net/bfu3ywb.js"></script>
-        <script>try{Typekit.load();}catch(e){}</script>
+        <script>
+          (function() {
+            var config = {
+              kitId: 'bfu3ywb'
+            };
+            var d = false;
+            var tk = document.createElement('script');
+            tk.src = '//use.typekit.net/' + config.kitId + '.js';
+            tk.type = 'text/javascript';
+            tk.async = 'true';
+            tk.onload = tk.onreadystatechange = function() {
+              var rs = this.readyState;
+              if (d || rs && rs != 'complete' && rs != 'loaded') return;
+              d = true;
+              try { Typekit.load(config); } catch (e) {}
+            };
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(tk, s);
+          })();
+        </script>
 
         <link rel="apple-touch-icon" sizes="57x57" href="[% request.url_for('/images/favicons/apple-touch-icon-57x57.png') %]">
         <link rel="apple-touch-icon" sizes="114x114" href="[% request.url_for('/images/favicons/apple-touch-icon-114x114.png') %]">

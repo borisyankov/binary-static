@@ -1,5 +1,5 @@
 <div class="bet_confirm_wrapper">
-    <h3>[% l('Trade Confirmation') %]</h3>
+    <h4>[% l('Trade Confirmation') %]</h4>
     <p>[% l('You have sold the following contract:') %]</p>
     <div class="bet_confirm_desc">
         [% description %]

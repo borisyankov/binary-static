@@ -1,5 +1,5 @@
 <div class='grd-grid-12'>
-    <h1>[% l('Pricing Table') %]</h1>
+    <h1>[% l('Pricing table') %]</h1>
     <div id="pricing_table_form_div" class='grd-row-padding'>
         <form id="pricing_table_input" name="pricing_table_input" method="GET" action=[% form_url %]>
             <fieldset>
@@ -63,7 +63,7 @@
                         <label for="strike_step">[% l('Step') %] (%):</label>
                     </div>
                     <div class="grd-grid-2 grd-grid-mobile-8">
-                        <input size="10" type="text" name="strike_step" id="strike_step" [% IF selected_strike_step %] value=[% selected_strike_step %] [% END %] />
+                        <input size="13" type="text" name="strike_step" id="strike_step" [% IF selected_strike_step %] value=[% selected_strike_step %] [% END %] />
                     </div>
                     <div class="grd-grid-2 grd-grid-mobile-4">
                         <select id="strike_type" name="strike_type">
@@ -109,11 +109,9 @@
 
                 <div class="grd-grid-12 center-aligned">
                     <input type="hidden" value="price" name="action" />
-                    <input type="hidden" id="calculating" value=[% l('Calculating') %] />
-                    <span class="button">
-                        <button id="pricingtable_calculate" class="button important" value="calculate" type="submit">[% l('Calculate') %]</button>
-                        <button style="display:none;" disabled="disabled" id="pricingtable_calculating" class="button" value="calculating" type="submit">[% l('Calculating') %]</button>
-                    </span>
+                    <input type="hidden" class="pulser" id="calculating" value=[% l('Calculating') %] />
+                    <button id="pricingtable_calculate" class="button" value="calculate" type="submit">[% l('Calculate') %]</button>
+                    <button style="display:none;" id="pricingtable_calculating" class="button pulser" value="calculating" type="submit">[% l('Calculating') %]</button>
                 </div>
             </fieldset>
         </form>

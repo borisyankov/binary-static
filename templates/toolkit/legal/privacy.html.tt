@@ -10,6 +10,13 @@
     <p>[% l("The above personal data that we collect will be held by us and processed for any purpose as may be allowed by law or required by any law. We may also transfer such personal data to any company within the Binary Group of companies or any of our business associates.") %]</p>
     <p>[% l("Please note that our website generates log files that record the IP addresses of accesses to your account. This information is gathered with the sole purpose of assisting in the unlikely event of a need to investigate accesses to your account by unauthorised users. Additionally we may verify certain of the information you supply in the account opening form, or otherwise, with third-party information providers.") %]</p>
     <p>[% l("Please note that you may update your personal information at any time by logging into the \"Settings\" section of your account. It is your responsibility to ensure that [_1] is promptly and continually informed of any change in your personal information.", SITENAME) %]</p>
+    <h2>[% l("Access to Personal Data") %]</h2>
+    <p>
+        [% l("Access to your personal data is strictly prohibited with the exception of key personnel of the Company and only as needed in the performance of their duties.") %]
+    </p>
+    <p>
+        [% l("If the Company is legally required to disclose your personal or financial information  by law or pursuant to the order of a court of competent jurisdiction or a governmental agency, the Company  shall, unless legally prohibited, promptly notify you to that effect, in order to give you the opportunity to seek such protection for the information as it deems appropriate. Such required disclosure shall not be construed as a breach of this Terms and Conditions Agreement.") %]
+    </p>
     <h2>[% l("Security Statement") %]</h2>
     <p>[% l("We are committed to making sure your personal data and transactions are secure:") %]</p>
     <ol>

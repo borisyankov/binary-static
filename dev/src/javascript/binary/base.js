@@ -1,3 +1,6 @@
+// for IE (before 10) we use a jquery plugin called jQuery.XDomainRequest. Explained here,
+//http://stackoverflow.com/questions/11487216/cors-with-jquery-and-xdomainrequest-in-ie8-9
+//
 $(document).ajaxSuccess(function () {
     var contents = new Contents(page.client);
     contents.on_load();
@@ -90,6 +93,66 @@ function formEffects() {
     };
 }
 
+function add_click_effect_to_button() {
+    var prefix = function (class_name) {
+        var class_names = class_name.split(/\s+/);
+        
+        var _prefix = 'button';
+        var cn = class_names.shift();
+
+        while (cn) {
+            if (cn && cn != _prefix && !cn.match(/-focus|-hover/)) {
+                _prefix = cn;
+                break;
+            }
+            cn = class_names.shift();
+        }
+
+        return _prefix;
+    };
+
+    var remove_button_class = function (button, class_name) {
+        button.removeClass(class_name).children('.button').removeClass(class_name).end().parent('.button').removeClass(class_name);
+    };
+    var add_button_class = function (button, class_name) {
+        button.addClass(class_name).children('.button').addClass(class_name).end().parent('.button').addClass(class_name);
+    };
+
+    $('#content,#popup')
+        .delegate('.button', 'mousedown', function () {
+            var class_name = prefix(this.className) + '-focus';
+            add_button_class($(this), class_name);
+        })
+        .delegate('.button', 'mouseup', function () {
+            var class_name = prefix(this.className) + '-focus';
+            remove_button_class($(this), class_name);
+        })
+        .delegate('.button', 'mouseover', function () {
+            var class_name = prefix(this.className) + '-hover';
+            add_button_class($(this), class_name);
+        })
+        .delegate('.button', 'mouseout', function () {
+            var class_name = prefix(this.className) + '-hover';
+            remove_button_class($(this), class_name);
+        });
+}
+
+var make_mobile_menu = function () {
+    if ($('#mobile-menu-container').is(':visible')) {
+        $('#mobile-menu').mmenu({
+            position: 'right',
+            zposition: 'front',
+            slidingSubmenus: false,
+            searchfield: true,
+            onClick: {
+                close: true
+            },
+        }, {
+            selectedClass: 'active',
+        });
+    }
+};
+
 onLoad.queue(function () {
     $('.tm-ul > li').hover(
         function () {
@@ -101,6 +164,9 @@ onLoad.queue(function () {
     );
 
     MenuContent.init($('.content-tab-container').find('.tm-ul'));
+
+    add_click_effect_to_button();
+    make_mobile_menu();
 
     // attach the class to account form's div/fieldset for CSS visual effects
     var objFormEffect = new formEffects();
@@ -122,5 +188,5 @@ onLoad.queue(function () {
     attach_date_picker('.has-date-picker');
     attach_time_picker('.has-time-picker');
     attach_inpage_popup('.has-inpage-popup');
-    attach_tabs('nav[type=tabs]');
+    attach_tabs('.has-tabs');
 });

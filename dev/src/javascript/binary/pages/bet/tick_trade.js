@@ -108,7 +108,12 @@ var TickDisplay = function() {
                     labels: { enabled: false, }
                 },
                 yAxis: {
-                    title: '',
+                    opposite: false,
+                    labels: {
+                        align: 'left',
+                        x: 0,
+                    },
+                    title: ''
                 },
                 series: [{
                     data: [],
@@ -140,36 +145,41 @@ var TickDisplay = function() {
                 }
 
                 var data = JSON.parse(msg.data);
-                if (!(data[0] instanceof Array)) {
+                if (data && !(data[0] instanceof Array)) {
                     data = [ data ];
                 }
-                for (var i = 0; i < data.length; i++) {
-                    if (data[i][0] === 'tick') {
-                        var tick = {
-                            epoch: parseInt(data[i][1]),
-                            quote: parseFloat(data[i][2])
-                        };
+                if (data) {
+                    for (var i = 0; i < data.length; i++) {
+                        if (data[i][0] === 'tick') {
+                            var tick = {
+                                epoch: parseInt(data[i][1]),
+                                quote: parseFloat(data[i][2])
+                            };
 
-                        if (tick.epoch > contract_start_moment.unix()) {
-                            if ($self.applicable_ticks.length >= $self.ticks_needed) {
-                                $self.ev.close();
-                                $self.evaluate_contract_outcome();
-                                return;
-                            } else {
-                                $self.chart.series[0].addPoint([$self.counter, tick.quote], true, false);
-                                $self.applicable_ticks.push(tick);
-                                var indicator_key = '_' + $self.counter;
-                                if (typeof $self.x_indicators[indicator_key] !== 'undefined') {
-                                    $self.x_indicators[indicator_key]['index'] = $self.counter;
-                                    $self.add($self.x_indicators[indicator_key]);
+                            if (tick.epoch > contract_start_moment.unix()) {
+                                if ($self.applicable_ticks.length >= $self.ticks_needed) {
+                                    $self.ev.close();
+                                    $self.evaluate_contract_outcome();
+                                    return;
+                                } else {
+                                    if (!$self.chart && !$self.chart.series) {
+                                        return;
+                                    }
+                                    $self.chart.series[0].addPoint([$self.counter, tick.quote], true, false);
+                                    $self.applicable_ticks.push(tick);
+                                    var indicator_key = '_' + $self.counter;
+                                    if (typeof $self.x_indicators[indicator_key] !== 'undefined') {
+                                        $self.x_indicators[indicator_key]['index'] = $self.counter;
+                                        $self.add($self.x_indicators[indicator_key]);
+                                    }
+
+                                    $self.add_barrier();
+                                    $self.apply_chart_background_color(tick);
+                                    $self.counter++;
                                 }
-
-                                $self.add_barrier();
-                                $self.apply_chart_background_color(tick);
-                                $self.counter++;
                             }
-                        }
 
+                        }
                     }
                 }
             };

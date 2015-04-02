@@ -19,294 +19,6 @@ if (window.applicationCache) {
                 } catch (err) {}
         }, 5*60*1000);
 }
-;var Client = function() {
-    this.loginid =  $.cookie('loginid');
-    this.is_logged_in = false;
-    this.is_real = false;
-    if(this.loginid === null || typeof this.loginid === "undefined") {
-        this.type = 'logged_out';
-    } else if(/VRT/.test(this.loginid)) {
-        this.type = 'virtual';
-        this.is_logged_in = true;
-    } else {
-        this.type = 'real';
-        this.is_logged_in = true;
-        this.is_real = true;
-    }
-
-    var dl_info = gtm_data_layer_info();
-    if(dl_info.length > 0) {
-        for (var i=0;i<dl_info.length;i++) {
-            if(dl_info[i].event == 'log_in') {
-                SessionStore.set('client_info', this.loginid + ':' + dl_info[i].params.bom_firstname + ':'  + dl_info[i].params.bom_lastname + ':' + dl_info[i].params.bom_email + ':' + dl_info[i].params.bom_phone);
-            }
-        }
-    }
-
-    var client_info = SessionStore.get('client_info');
-    if(client_info) {
-        var parsed = client_info.split(':');
-        if(this.is_logged_in && parsed[0] == this.loginid) {
-            this.first_name = parsed[1];
-            this.last_name = parsed[2];
-            this.name = this.first_name +  ' ' + this.last_name;
-            this.email = parsed[3];
-            this.phone = parsed[4];
-        } else {
-            SessionStore.remove('client_info');
-        }
-    }
-};
-;var Contents = function(client) {
-    this.client = client;
-    this.tooltip = new ToolTip();
-};
-
-Contents.prototype = {
-    on_load: function() {
-        this.activate_by_client_type();
-        this.update_body_id();
-        this.tooltip.attach();
-        this.init_draggable();
-        this.display_live_chat();
-    },
-    on_unload: function() {
-        this.tooltip.detach();
-        if ($('.unbind_later').length > 0) {
-            $('.unbind_later').off();
-        }
-    },
-    activate_by_client_type: function() {
-        $('.by_client_type').addClass('invisible');
-        if (this.client.is_logged_in) {
-            if (this.client.is_real) {
-                $('.by_client_type.client_real').removeClass('invisible');
-                $('.by_client_type.client_real').show();
-            } else {
-                $('.by_client_type.client_virtual').removeClass('invisible');
-                $('.by_client_type.client_virtual').show();
-            }
-        } else {
-            $('.by_client_type.client_logged_out').removeClass('invisible');
-            $('.by_client_type.client_logged_out').show();
-        }
-    },
-    update_body_id: function() {
-        //This is required for our css to work.
-        $('body').attr('id', '');
-        $('body').attr('id', $('#body_id').html());
-    },
-    init_draggable: function() {
-        $('.draggable').draggable();
-    },
-    display_live_chat: function() {
-        $('#live-chat-container').hide();
-    }
-};
-;var Binary = Binary || {};
-
-Binary.Form = {
-    validate: function ($parent) {
-        $parent.find('input, select').each(function() {
-            console.log($(this).val());
-            if ($(this).val() === '') {
-                var $el = $(this);
-                if ($el.parent().is('p')) {
-                    $el = $el.parent();
-                }
-                if ($el.parent().is('.dob')) {
-                    $el = $el.parent().parent();
-                }
-                $el.after('<div class="error">You can\'t leave this empty</div>');
-            }
-        });
-        $('.error + .error').remove();
-        return $('.error').length === 0;
-    }
-}
-
-$(function() {
-
-    $('.login-button, .dialog, .overlay').on('click', function() {
-        $('.overlay').toggleClass('hidden');
-    })
-
-    $('form[novalidate]').on('submit', function(e) {
-        var $form = $(this);
-        $form.find('.error').remove();
-        if (Binary.Form.validate($form)) {
-            $form.find('img').toggleClass('spinner');
-        }
-        e.preventDefault();
-    });
-    $('.language-selector select').on('change', function() {
-        var idx = this.selectedIndex;
-        $('.flag').css('background-position', '0 -' + idx * 15 + 'px');
-    })
-});
-;var gtm_data_layer_info = function() {
-    var gtm_data_layer_info = [];
-    $('.gtm_data_layer').each(function() {
-        var gtm_params = {};
-        var event_name = '';
-        $(this).children().each(function() {
-            var tag = $(this).attr("id");
-            var value = $(this).html();
-
-            if ($(this).attr("data-type") == "json") {
-                value = JSON.parse($(this).html());
-            }
-
-            if (tag == "event") {
-                event_name = value;
-            } else {
-                gtm_params[tag] = value;
-            }
-        });
-        gtm_params['url'] = document.URL;
-
-        var entry = {};
-        entry['params'] = gtm_params;
-        entry['event'] = event_name;
-        gtm_data_layer_info.push(entry);
-    });
-
-    return gtm_data_layer_info;
-};
-
-var Client = function() {
-    this.loginid =  $.cookie('loginid');
-    this.is_logged_in = false;
-    this.is_real = false;
-    if(this.loginid === null || typeof this.loginid === "undefined") {
-        this.type = 'logged_out';
-    } else if(/VRT/.test(this.loginid)) {
-        this.type = 'virtual';
-        this.is_logged_in = true;
-    } else {
-        this.type = 'real';
-        this.is_logged_in = true;
-        this.is_real = true;
-    }
-
-    var dl_info = gtm_data_layer_info();
-    if(dl_info.length > 0) {
-        for (var i=0;i<dl_info.length;i++) {
-            if(dl_info[i].event == 'log_in') {
-                SessionStore.set('client_info', this.loginid + ':' + dl_info[i].params.bom_firstname + ':'  + dl_info[i].params.bom_lastname + ':' + dl_info[i].params.bom_email + ':' + dl_info[i].params.bom_phone);
-            }
-        }
-    }
-
-    var client_info = SessionStore.get('client_info');
-    if(client_info) {
-        var parsed = client_info.split(':');
-        if(this.is_logged_in && parsed[0] == this.loginid) {
-            this.first_name = parsed[1];
-            this.last_name = parsed[2];
-            this.name = this.first_name +  ' ' + this.last_name;
-            this.email = parsed[3];
-            this.phone = parsed[4];
-        } else {
-            SessionStore.remove('client_info');
-        }
-    }
-};
-;var Header = function(params) {
-    this.client = params['client'];
-    this.settings = params['settings'];
-    this.clock_started = false;
-};
-
-Header.prototype = {
-    on_load: function() {
-        this.show_or_hide_login_form();
-        this.register_dynamic_links();
-        if (!this.clock_started) this.start_clock();
-        this.simulate_input_placeholder_for_ie();
-    },
-    on_unload: function() {
-    },
-    show_or_hide_login_form: function() {
-        if (this.client.is_logged_in) {
-            $("#client_loginid").html(this.client.loginid);
-        }
-    },
-    simulate_input_placeholder_for_ie: function() {
-        var test = document.createElement('input');
-        if ('placeholder' in test)
-            return;
-        $('input[placeholder]').each(function() {
-            var input = $(this);
-            $(input).val(input.attr('placeholder'));
-            $(input).focus(function() {
-                if (input.val() == input.attr('placeholder')) {
-                    input.val('');
-                }
-            });
-            $(input).blur(function() {
-                if (input.val() === '' || input.val() == input.attr('placeholder')) {
-                    input.val(input.attr('placeholder'));
-                }
-            });
-        });
-    },
-    register_dynamic_links: function() {
-        var logged_in_url = page.url.url_for('');
-        if(this.client.is_logged_in) {
-            logged_in_url = page.url.url_for('my_account.cgi');
-        }
-
-        $('#logo').attr('href', logged_in_url).on('click', function(event) {
-            event.preventDefault();
-            load_with_pjax(logged_in_url);
-        }).addClass('unbind_later');
-    },
-    start_clock: function() {
-        var clock = $('#gmt-clock');
-        if (clock.length === 0) {
-            return;
-        }
-
-        var that = this;
-        var clock_handle;
-        var sync = function() {
-            var query_start_time = (new Date().getTime());
-            $.ajax({crossDomain: true, url: page.url.url_for('timestamp'), async: true, dataType: "json"}).done(function(response) {
-                var start_timestamp = response.timestamp;
-
-                //time now is timestamp from server + ping time.
-                //ping time = roundtrip time / 2
-                //roundtrip time = time at start of request - time after response.
-                that.time_now = (start_timestamp * 1000) + (((new Date().getTime()) - query_start_time)/2);
-                var increase_time_by = function(interval) {
-                    that.time_now += interval;
-                };
-
-                var update_time = function() {
-                    clock.html(moment(that.time_now).utc().format("YYYY-MM-DD HH:mm") + " GMT");
-                };
-
-                update_time();
-
-                clearInterval(clock_handle);
-
-                clock_handle = setInterval(function() {
-                    increase_time_by(1000);
-                    update_time();
-                }, 1000);
-            });
-        };
-
-        sync();
-        setInterval(function() {
-            sync();
-        }, 300000);
-
-        this.clock_started = true;
-        return;
-    },
-};
 ;/**
  * Synopsis
  *
@@ -831,7 +543,579 @@ SubMarket.prototype = {
         }
     };
 })();
-;var Page = function(config) {
+;var text;
+
+var gtm_data_layer_info = function() {
+    var gtm_data_layer_info = [];
+    $('.gtm_data_layer').each(function() {
+        var gtm_params = {};
+        var event_name = '';
+        $(this).children().each(function() {
+            var tag = $(this).attr("id");
+            var value = $(this).html();
+
+            if ($(this).attr("data-type") == "json") {
+                value = JSON.parse($(this).html());
+            }
+
+            if (tag == "event") {
+                event_name = value;
+            } else {
+                gtm_params[tag] = value;
+            }
+        });
+        gtm_params['url'] = document.URL;
+
+        var entry = {};
+        entry['params'] = gtm_params;
+        entry['event'] = event_name;
+        gtm_data_layer_info.push(entry);
+    });
+
+    return gtm_data_layer_info;
+};
+
+var Client = function() {
+    this.loginid =  $.cookie('loginid');
+    this.is_logged_in = false;
+    this.is_real = false;
+    if(this.loginid === null || typeof this.loginid === "undefined") {
+        this.type = 'logged_out';
+    } else if(/VRT/.test(this.loginid)) {
+        this.type = 'virtual';
+        this.is_logged_in = true;
+    } else {
+        this.type = 'real';
+        this.is_logged_in = true;
+        this.is_real = true;
+    }
+
+    var dl_info = gtm_data_layer_info();
+    if(dl_info.length > 0) {
+        for (var i=0;i<dl_info.length;i++) {
+            if(dl_info[i].event == 'log_in') {
+                SessionStore.set('client_info', this.loginid + ':' + dl_info[i].params.bom_firstname + ':'  + dl_info[i].params.bom_lastname + ':' + dl_info[i].params.bom_email + ':' + dl_info[i].params.bom_phone);
+            }
+        }
+    }
+
+    var client_info = SessionStore.get('client_info');
+    if(client_info) {
+        var parsed = client_info.split(':');
+        if(this.is_logged_in && parsed[0] == this.loginid) {
+            this.first_name = parsed[1];
+            this.last_name = parsed[2];
+            this.name = this.first_name +  ' ' + this.last_name;
+            this.email = parsed[3];
+            this.phone = parsed[4];
+        } else {
+            SessionStore.remove('client_info');
+        }
+    }
+};
+
+var URL = function (url) { // jshint ignore:line
+    this.is_valid = true;
+    this.history_supported = window.history && window.history.pushState;
+    if(typeof url !== 'undefined') {
+        this.location = $('<a>', { href: decodeURIComponent(url) } )[0];
+    } else {
+        this.location = window.location;
+    }
+};
+
+URL.prototype = {
+    url_for: function(path, params, type) {
+        var mid_path = '/';
+        if(/.cgi/.test(path)) {
+            if(type == 'cached') {
+                mid_path = '/c/';
+            } else {
+                mid_path = '/d/';
+            }
+        }
+
+        var url = "https://" + this.location.host + mid_path + path;
+        if(params) {
+            url += '?' + params;
+            url += '&l=' + page.language();
+        } else {
+            url += '?l=' + page.language();
+        }
+
+        return url;
+    },
+    reset: function() {
+        this.location = window.location;
+        this._param_hash = undefined;
+        this.is_valid = true;
+        $(this).trigger("change", [ this ]);
+    },
+    invalidate: function() {
+        this.is_valid = false;
+    },
+    update: function(url) {
+        var state_info = { container: 'content', url: url, useClass: 'pjaxload' };
+        if(this.history_supported) {
+            history.pushState(state_info, '', url);
+            this.reset();
+        }
+        this.is_valid = true;
+    },
+    param: function(name) {
+        var param_hash= this.params_hash();
+        return param_hash[name];
+    },
+    param_if_valid: function(name) {
+        if(this.is_valid) {
+           return this.param(name);
+        }
+        return;
+    },
+    path_matches: function(url) {
+        //pathname is /d/page.cgi. Eliminate /d/ and /c/ from both urls.
+        var this_pathname = this.location.pathname.replace(/\/[d|c]\//g, '');
+        var url_pathname = url.location.pathname.replace(/\/[d|c]\//g, '');
+        return (this_pathname == url_pathname || '/' + this_pathname == url_pathname);
+    },
+    params_hash_to_string: function(params) {
+        var as_array = [];
+        for(var p_key in params) if (params.hasOwnProperty(p_key)) {
+            as_array.push(p_key + '=' + params[p_key]);
+        }
+
+        return as_array.join('&');
+    },
+    is_in: function(url) {
+        if(this.path_matches(url)) {
+            var this_params = this.params();
+            var param_count = this_params.length;
+            var match_count = 0;
+            while(param_count--) {
+                if(url.param(this_params[param_count][0]) == this_params[param_count][1]) {
+                    match_count++;
+                }
+            }
+            if(match_count == this_params.length) {
+                return true;
+            }
+        }
+
+        return false;
+    },
+    params_hash: function() {
+        if(!this._param_hash) {
+            this._param_hash = {};
+            var params = this.params();
+            var param = params.length;
+            while(param--) {
+                this._param_hash[params[param][0]] = params[param][1];
+            }
+        }
+        return this._param_hash;
+    },
+    params: function() {
+        var params = [];
+        var parsed = this.location.search.substr(1).split('&');
+        var p_l = parsed.length;
+        while(p_l--) {
+            var param = parsed[p_l].split('=');
+            params.push(param);
+        }
+        return params;
+    },
+};
+
+var Menu = function(url) {
+    this.page_url = url;
+    var that = this;
+    $(this.page_url).on('change', function() { that.activate(); });
+};
+
+Menu.prototype = {
+    on_unload: function() {
+        this.reset();
+    },
+    activate: function() {
+        $('#menu-top li').removeClass('active');
+        this.hide_main_menu();
+
+        var active = this.active_menu_top();
+        var trading = $('#menu-top li:eq(3)');
+        if(active) {
+            active.addClass('active');
+            if(trading.is(active)) {
+                this.show_main_menu();
+            }
+        } else {
+            var is_mojo_page = /\/$|\/login|\/home|\/smart-indices|\/open-source-projects|\/white-labels|\/partnerapi$/.test(window.location.pathname);
+            if(!is_mojo_page) {
+                trading.addClass('active');
+                this.show_main_menu();
+            }
+        }
+    },
+    show_main_menu: function() {
+        $("#main-menu").removeClass('hidden');
+        this.activate_main_menu();
+    },
+    hide_main_menu: function() {
+        $("#main-menu").addClass('hidden');
+    },
+    activate_main_menu: function() {
+        //First unset everything.
+        $("#main-menu li.item").removeClass('active');
+        $("#main-menu li.item").removeClass('hover');
+        $("#main-menu li.sub_item a").removeClass('a-active');
+
+        var active = this.active_main_menu();
+        if(active.subitem) {
+            active.subitem.addClass('a-active');
+        }
+
+        if(active.item) {
+            active.item.addClass('active');
+            active.item.addClass('hover');
+        }
+
+        this.on_mouse_hover(active.item);
+    },
+    reset: function() {
+        $("#main-menu .item").unbind();
+        $("#main-menu").unbind();
+    },
+    on_mouse_hover: function(active_item) {
+        $("#main-menu .item").on( 'mouseenter', function() {
+            $("#main-menu li.item").removeClass('hover');
+            $(this).addClass('hover');
+        });
+
+        $("#main-menu").on('mouseleave', function() {
+            $("#main-menu li.item").removeClass('hover');
+            if(active_item)
+                active_item.addClass('hover');
+        });
+    },
+    active_menu_top: function() {
+        var active;
+        var path = window.location.pathname;
+        $('#menu-top li a').each(function() {
+            if(path.indexOf(this.pathname) >= 0) {
+                active = $(this).closest('li');
+            }
+        });
+
+        return active;
+    },
+    active_main_menu: function() {
+        var path = window.location.pathname;
+        path = path.replace(/\/$/, "");
+        path = decodeURIComponent(path);
+
+        var item;
+        var subitem;
+
+        var that = this;
+        //Is something selected in main items list
+        $("#main-menu .items a").each(function () {
+            var url = new URL($(this).attr('href'));
+            if(url.is_in(that.page_url)) {
+                item = $(this).closest('.item');
+            }
+        });
+
+        $("#main-menu .sub_items a").each(function(){
+            var url = new URL($(this).attr('href'));
+            if(url.is_in(that.page_url)) {
+                item = $(this).closest('.item');
+                subitem = $(this);
+            }
+        });
+
+        return { item: item, subitem: subitem };
+    },
+    register_dynamic_links: function() {
+        var stored_market = page.url.param('market') || LocalStore.get('bet_page.market');
+        var start_trading = $('#topMenuStartBetting a:first');
+        var trade_url = start_trading.attr("href");
+        if(stored_market) {
+            if(/market=/.test(trade_url)) {
+                trade_url = trade_url.replace(/market=\w+/, 'market=' + stored_market);
+            } else {
+                trade_url += '&market=' + stored_market;
+            }
+            start_trading.attr("href", trade_url);
+
+            $('#menu-top li:eq(3) a').attr('href', trade_url);
+        }
+
+        start_trading.on('click', function(event) {
+            event.preventDefault();
+            load_with_pjax(trade_url);
+        }).addClass('unbind_later');
+
+        $('#menu-top li:eq(3) a').on('click', function(event) {
+            event.preventDefault();
+            load_with_pjax(trade_url);
+        }).addClass('unbind_later');
+
+    }
+};
+
+var Header = function(params) {
+    this.client = params['client'];
+    this.settings = params['settings'];
+    this.menu = new Menu(params['url']);
+    this.clock_started = false;
+};
+
+Header.prototype = {
+    on_load: function() {
+        this.show_or_hide_login_form();
+        this.register_dynamic_links();
+        if (!this.clock_started) this.start_clock();
+        this.simulate_input_placeholder_for_ie();
+    },
+    on_unload: function() {
+        this.menu.reset();
+    },
+    show_or_hide_login_form: function() {
+        if (this.client.is_logged_in) {
+            $("#client_loginid").html(this.client.loginid);
+        }
+    },
+    simulate_input_placeholder_for_ie: function() {
+        var test = document.createElement('input');
+        if ('placeholder' in test)
+            return;
+        $('input[placeholder]').each(function() {
+            var input = $(this);
+            $(input).val(input.attr('placeholder'));
+            $(input).focus(function() {
+                if (input.val() == input.attr('placeholder')) {
+                    input.val('');
+                }
+            });
+            $(input).blur(function() {
+                if (input.val() === '' || input.val() == input.attr('placeholder')) {
+                    input.val(input.attr('placeholder'));
+                }
+            });
+        });
+    },
+    register_dynamic_links: function() {
+        var logged_in_url = page.url.url_for('');
+        if(this.client.is_logged_in) {
+            logged_in_url = page.url.url_for('user/my_account');
+        }
+
+        $('#logo').attr('href', logged_in_url).on('click', function(event) {
+            event.preventDefault();
+            load_with_pjax(logged_in_url);
+        }).addClass('unbind_later');
+
+        this.menu.register_dynamic_links();
+    },
+    start_clock: function() {
+        var clock = $('#gmt-clock');
+        if (clock.length === 0) {
+            return;
+        }
+
+        var that = this;
+        var clock_handle;
+        var sync = function() {
+            var query_start_time = (new Date().getTime());
+            $.ajax({crossDomain: true, url: page.url.url_for('timestamp'), async: true, dataType: "json"}).done(function(response) {
+                var start_timestamp = response.timestamp;
+
+                //time now is timestamp from server + ping time.
+                //ping time = roundtrip time / 2
+                //roundtrip time = time at start of request - time after response.
+                that.time_now = (start_timestamp * 1000) + (((new Date().getTime()) - query_start_time)/2);
+                var increase_time_by = function(interval) {
+                    that.time_now += interval;
+                };
+
+                var update_time = function() {
+                    clock.html(moment(that.time_now).utc().format("YYYY-MM-DD HH:mm") + " GMT");
+                };
+
+                update_time();
+
+                clearInterval(clock_handle);
+
+                clock_handle = setInterval(function() {
+                    increase_time_by(1000);
+                    update_time();
+                }, 1000);
+            });
+        };
+
+        sync();
+        setInterval(function() {
+            sync();
+        }, 900000);
+
+        this.clock_started = true;
+        return;
+    },
+};
+
+var ToolTip = function() {
+    this.tooltip = $('#tooltip');
+
+    if (this.tooltip.length === 0) {
+        this.tooltip = $('<div id="tooltip"></div>');
+        this.tooltip.css('display', 'none')
+            .appendTo('body');
+    }
+
+    this.showing = {};
+    var that = this;
+    $(window).resize(function() { that.resize_tooltip(); });
+};
+
+ToolTip.prototype = {
+    attach: function() {
+        var that = this;
+        this.detach();
+
+        var targets = $( '[rel~=tooltip]' ),
+            target  = false,
+            tip     = false,
+            title   = false;
+
+        targets.on('mouseenter', function(e) {
+            tip = $(this).attr( 'title' );
+
+            if( !tip || tip === '' )
+                return false;
+
+            that.showing.target = $(this);
+            that.showing.tip = tip;
+
+            that.showing.target.removeAttr( 'title' );
+
+            that.tooltip.html(tip);
+            that.resize_tooltip();
+            that.reposition_tooltip_for(that.showing.target);
+            that.show_tooltip($(this));
+        });
+
+        targets.on('mouseleave', function() {
+            if(that.showing.target) {
+                that.showing.target.attr( 'title', that.showing.tip );
+            }
+            that.hide_tooltip();
+        });
+
+        targets.on('click', function() {
+            if(that.showing.target) {
+                that.showing.target.attr( 'title', that.showing.tip );
+            }
+            that.hide_tooltip();
+        });
+    },
+    detach: function() {
+        $( '[rel~=tooltip]' ).off('mouseenter');
+        $( '[rel~=tooltip]' ).off('mouseleave');
+        this.tooltip.off('click');
+    },
+    show_tooltip: function(target) {
+        this.tooltip.css({ display: ''});
+        this.tooltip.zIndex(target.zIndex() + 100);
+    },
+    hide_tooltip: function(tooltip) {
+        this.tooltip.html("");
+        this.tooltip.css({ top: 0, left: 0, display: 'none'});
+        this.tooltip.addClass('invisible');
+    },
+    resize_tooltip: function() {
+        if( $( window ).width() < this.tooltip.outerWidth() * 1.5 )
+            this.tooltip.css( 'max-width', $( window ).width() / 2 );
+        else
+            this.tooltip.css( 'max-width', 340 );
+    },
+    reposition_tooltip_for: function(target) {
+        this.tooltip.removeClass('invisible');
+
+        var pos_left = target.offset().left + ( target.outerWidth() / 2 ) - ( this.tooltip.outerWidth() / 2 ),
+            pos_top = target.offset().top - (this.tooltip.outerHeight() + 10);
+
+        this.tooltip.removeClass( 'left' );
+        this.tooltip.removeClass( 'right' );
+        this.tooltip.removeClass( 'top' );
+
+        if( pos_left < 0 ) {
+            pos_left = target.offset().left + target.outerWidth() / 2 - 20;
+            this.tooltip.addClass( 'left' );
+        }
+
+        if( pos_left + this.tooltip.outerWidth() > $( window ).width() ) {
+            pos_left = target.offset().left - this.tooltip.outerWidth() + target.outerWidth() / 2 + 20;
+            this.tooltip.addClass( 'right' );
+        }
+
+        if( pos_top < 0 ) {
+            pos_top  = target.offset().top + target.outerHeight() + 20;
+            this.tooltip.addClass( 'top' );
+        }
+
+        this.tooltip.css( { left: pos_left, top: pos_top} );
+    },
+};
+
+var Contents = function(client) {
+    this.client = client;
+    this.tooltip = new ToolTip();
+};
+
+Contents.prototype = {
+    on_load: function() {
+        this.activate_by_client_type();
+        this.update_body_id();
+        this.update_content_class();
+        this.tooltip.attach();
+        this.init_draggable();
+    },
+    on_unload: function() {
+        this.tooltip.detach();
+        if ($('.unbind_later').length > 0) {
+            $('.unbind_later').off();
+        }
+    },
+    activate_by_client_type: function() {
+        $('.by_client_type').addClass('invisible');
+        if(this.client.is_logged_in) {
+            if(this.client.is_real) {
+                $('.by_client_type.client_real').removeClass('invisible');
+                $('.by_client_type.client_real').show();
+            } else {
+                $('.by_client_type.client_virtual').removeClass('invisible');
+                $('.by_client_type.client_virtual').show();
+            }
+        } else {
+            $('.by_client_type.client_logged_out').removeClass('invisible');
+            $('.by_client_type.client_logged_out').show();
+        }
+    },
+    update_body_id: function() {
+        //This is required for our css to work.
+        $('body').attr('id', '');
+        $('body').attr('id', $('#body_id').html());
+    },
+    update_content_class: function() {
+        //This is required for our css to work.
+        $('#content').removeClass();
+        $('#content').addClass($('#content_class').html());
+    },
+    init_draggable: function() {
+        $('.draggable').draggable();
+    },
+};
+
+var Page = function(config) {
     config = typeof config !== 'undefined' ? config : {};
     this.client = new Client();
     this.url = new URL();
@@ -842,8 +1126,8 @@ SubMarket.prototype = {
 
 Page.prototype = {
     language: function() {
-        if ($('.language-selector').length > 0) {
-            return $('.language-selector').attr('class').toUpperCase(); //Required as mojo still provides lower case lang codes and most of our system expects upper case.
+        if ($('#language_select').length > 0) {
+            return $('#language_select').attr('class').toUpperCase(); //Required as mojo still provides lower case lang codes and most of our system expects upper case.
         } else if(page.url.param('l')) {
             return page.url.param('l');
         } else {
@@ -865,8 +1149,9 @@ Page.prototype = {
     },
     on_change_language: function() {
         var that = this;
-        $('#lang-pick').on('change', function() {
-            document.location = that.url_for_language(this.value);
+        $('#language_select').on('change', 'select', function() {
+            var language = $(this).find('option:selected').attr('class');
+            document.location = that.url_for_language(language);
         });
     },
     localize_for: function(language) {
@@ -961,7 +1246,6 @@ var PjaxExecQueue = function () {
     this.url_exec_queue = [];
     this.id_exec_queue = [];
     this.fired = false;
-    this.indicating_loading = false;
     this.content = $('#content');
 };
 
@@ -976,10 +1260,6 @@ PjaxExecQueue.prototype = {
         this.id_exec_queue.unshift(new IDPjaxQueueElement(exec_function, id));
     },
     fire: function () {
-        if(this.indicating_loading) {
-            this.content.removeClass("indicate-loading");
-            this.indicating_loading = false;
-        }
         if(!this.fired) {
             var match_loc = window.location.pathname;
             var i = this.url_exec_queue.length;
@@ -998,8 +1278,6 @@ PjaxExecQueue.prototype = {
         this.fired = false;
     },
     loading: function () {
-        this.content.addClass("indicate-loading");
-        this.indicating_loading = true;
         this.reset();
     },
     count: function () {
@@ -1235,221 +1513,10 @@ Localizable.prototype = {
         return this.texts[index] || text;
     }
 };
-;var ToolTip = function() {
-    this.tooltip = $('#tooltip');
-
-    if (this.tooltip.length === 0) {
-        this.tooltip = $('<div id="tooltip"></div>');
-        this.tooltip.css('display', 'none')
-            .appendTo('body');
-    }
-
-    this.showing = {};
-    var that = this;
-    $(window).resize(function() { that.resize_tooltip(); });
-};
-
-ToolTip.prototype = {
-    attach: function() {
-        var that = this;
-        this.detach();
-
-        var targets = $( '[rel~=tooltip]' ),
-            target  = false,
-            tip     = false,
-            title   = false;
-
-        targets.on('mouseenter', function(e) {
-            tip = $(this).attr( 'title' );
-
-            if( !tip || tip === '' )
-                return false;
-
-            that.showing.target = $(this);
-            that.showing.tip = tip;
-
-            that.showing.target.removeAttr( 'title' );
-
-            that.tooltip.html(tip);
-            that.resize_tooltip();
-            that.reposition_tooltip_for(that.showing.target);
-            that.show_tooltip($(this));
-        });
-
-        targets.on('mouseleave', function() {
-            if(that.showing.target) {
-                that.showing.target.attr( 'title', that.showing.tip );
-            }
-            that.hide_tooltip();
-        });
-
-        targets.on('click', function() {
-            if(that.showing.target) {
-                that.showing.target.attr( 'title', that.showing.tip );
-            }
-            that.hide_tooltip();
-        });
-    },
-    detach: function() {
-        $( '[rel~=tooltip]' ).off('mouseenter');
-        $( '[rel~=tooltip]' ).off('mouseleave');
-        this.tooltip.off('click');
-    },
-    show_tooltip: function(target) {
-        this.tooltip.css({ display: ''});
-        this.tooltip.zIndex(target.zIndex() + 100);
-    },
-    hide_tooltip: function(tooltip) {
-        this.tooltip.html("");
-        this.tooltip.css({ top: 0, left: 0, display: 'none'});
-        this.tooltip.addClass('invisible');
-    },
-    resize_tooltip: function() {
-        if( $( window ).width() < this.tooltip.outerWidth() * 1.5 )
-            this.tooltip.css( 'max-width', $( window ).width() / 2 );
-        else
-            this.tooltip.css( 'max-width', 340 );
-    },
-    reposition_tooltip_for: function(target) {
-        this.tooltip.removeClass('invisible');
-
-        var pos_left = target.offset().left + ( target.outerWidth() / 2 ) - ( this.tooltip.outerWidth() / 2 ),
-            pos_top = target.offset().top - (this.tooltip.outerHeight() + 10);
-
-        this.tooltip.removeClass( 'left' );
-        this.tooltip.removeClass( 'right' );
-        this.tooltip.removeClass( 'top' );
-
-        if( pos_left < 0 ) {
-            pos_left = target.offset().left + target.outerWidth() / 2 - 20;
-            this.tooltip.addClass( 'left' );
-        }
-
-        if( pos_left + this.tooltip.outerWidth() > $( window ).width() ) {
-            pos_left = target.offset().left - this.tooltip.outerWidth() + target.outerWidth() / 2 + 20;
-            this.tooltip.addClass( 'right' );
-        }
-
-        if( pos_top < 0 ) {
-            pos_top  = target.offset().top + target.outerHeight() + 20;
-            this.tooltip.addClass( 'top' );
-        }
-
-        this.tooltip.css( { left: pos_left, top: pos_top} );
-    },
-};
-;var URL = function (url) { // jshint ignore:line
-    this.is_valid = true;
-    this.history_supported = window.history && window.history.pushState;
-    if(typeof url !== 'undefined') {
-        this.location = $('<a>', { href: decodeURIComponent(url) } )[0];
-    } else {
-        this.location = window.location;
-    }
-};
-
-URL.prototype = {
-    url_for: function(path, params, type) {
-        var mid_path = '/';
-        if(/.cgi/.test(path)) {
-            if(type == 'cached') {
-                mid_path = '/c/';
-            } else {
-                mid_path = '/d/';
-            }
-        }
-
-        var url = "https://" + this.location.host + mid_path + path;
-        if(params) {
-            url += '?' + params;
-            url += '&l=' + page.language();
-        } else {
-            url += '?l=' + page.language();
-        }
-
-        return url;
-    },
-    reset: function() {
-        this.location = window.location;
-        this._param_hash = undefined;
-        this.is_valid = true;
-        $(this).trigger("change", [ this ]);
-    },
-    invalidate: function() {
-        this.is_valid = false;
-    },
-    update: function(url) {
-        var state_info = { container: 'content', url: url, useClass: 'pjaxload' };
-        if(this.history_supported) {
-            history.pushState(state_info, '', url);
-            this.reset();
-        }
-        this.is_valid = true;
-    },
-    param: function(name) {
-        var param_hash= this.params_hash();
-        return param_hash[name];
-    },
-    param_if_valid: function(name) {
-        if(this.is_valid) {
-           return this.param(name);
-        }
-        return;
-    },
-    path_matches: function(url) {
-        //pathname is /d/page.cgi. Eliminate /d/ and /c/ from both urls.
-        var this_pathname = this.location.pathname.replace(/\/[d|c]\//g, '');
-        var url_pathname = url.location.pathname.replace(/\/[d|c]\//g, '');
-        return (this_pathname == url_pathname || '/' + this_pathname == url_pathname);
-    },
-    params_hash_to_string: function(params) {
-        var as_array = [];
-        for(var p_key in params) if (params.hasOwnProperty(p_key)) {
-            as_array.push(p_key + '=' + params[p_key]);
-        }
-
-        return as_array.join('&');
-    },
-    is_in: function(url) {
-        if(this.path_matches(url)) {
-            var this_params = this.params();
-            var param_count = this_params.length;
-            var match_count = 0;
-            while(param_count--) {
-                if(url.param(this_params[param_count][0]) == this_params[param_count][1]) {
-                    match_count++;
-                }
-            }
-            if(match_count == this_params.length) {
-                return true;
-            }
-        }
-
-        return false;
-    },
-    params_hash: function() {
-        if(!this._param_hash) {
-            this._param_hash = {};
-            var params = this.params();
-            var param = params.length;
-            while(param--) {
-                this._param_hash[params[param][0]] = params[param][1];
-            }
-        }
-        return this._param_hash;
-    },
-    params: function() {
-        var params = [];
-        var parsed = this.location.search.substr(1).split('&');
-        var p_l = parsed.length;
-        while(p_l--) {
-            var param = parsed[p_l].split('=');
-            params.push(param);
-        }
-        return params;
-    },
-};
-;$(document).ajaxSuccess(function () {
+;// for IE (before 10) we use a jquery plugin called jQuery.XDomainRequest. Explained here,
+//http://stackoverflow.com/questions/11487216/cors-with-jquery-and-xdomainrequest-in-ie8-9
+//
+$(document).ajaxSuccess(function () {
     var contents = new Contents(page.client);
     contents.on_load();
 });
@@ -1541,6 +1608,66 @@ function formEffects() {
     };
 }
 
+function add_click_effect_to_button() {
+    var prefix = function (class_name) {
+        var class_names = class_name.split(/\s+/);
+        
+        var _prefix = 'button';
+        var cn = class_names.shift();
+
+        while (cn) {
+            if (cn && cn != _prefix && !cn.match(/-focus|-hover/)) {
+                _prefix = cn;
+                break;
+            }
+            cn = class_names.shift();
+        }
+
+        return _prefix;
+    };
+
+    var remove_button_class = function (button, class_name) {
+        button.removeClass(class_name).children('.button').removeClass(class_name).end().parent('.button').removeClass(class_name);
+    };
+    var add_button_class = function (button, class_name) {
+        button.addClass(class_name).children('.button').addClass(class_name).end().parent('.button').addClass(class_name);
+    };
+
+    $('#content,#popup')
+        .delegate('.button', 'mousedown', function () {
+            var class_name = prefix(this.className) + '-focus';
+            add_button_class($(this), class_name);
+        })
+        .delegate('.button', 'mouseup', function () {
+            var class_name = prefix(this.className) + '-focus';
+            remove_button_class($(this), class_name);
+        })
+        .delegate('.button', 'mouseover', function () {
+            var class_name = prefix(this.className) + '-hover';
+            add_button_class($(this), class_name);
+        })
+        .delegate('.button', 'mouseout', function () {
+            var class_name = prefix(this.className) + '-hover';
+            remove_button_class($(this), class_name);
+        });
+}
+
+var make_mobile_menu = function () {
+    if ($('#mobile-menu-container').is(':visible')) {
+        $('#mobile-menu').mmenu({
+            position: 'right',
+            zposition: 'front',
+            slidingSubmenus: false,
+            searchfield: true,
+            onClick: {
+                close: true
+            },
+        }, {
+            selectedClass: 'active',
+        });
+    }
+};
+
 onLoad.queue(function () {
     $('.tm-ul > li').hover(
         function () {
@@ -1552,6 +1679,9 @@ onLoad.queue(function () {
     );
 
     MenuContent.init($('.content-tab-container').find('.tm-ul'));
+
+    add_click_effect_to_button();
+    make_mobile_menu();
 
     // attach the class to account form's div/fieldset for CSS visual effects
     var objFormEffect = new formEffects();
@@ -1573,7 +1703,7 @@ onLoad.queue(function () {
     attach_date_picker('.has-date-picker');
     attach_time_picker('.has-time-picker');
     attach_inpage_popup('.has-inpage-popup');
-    attach_tabs('nav[type=tabs]');
+    attach_tabs('.has-tabs');
 });
 ;DatePicker = function(component_id, select_type) {
     this.component_id = component_id;
@@ -1853,6 +1983,49 @@ TimePicker.prototype = {
         return config;
     },
 };
+;window._trackJs = {
+    onError: function(payload, error) {
+
+        function itemExistInList(item, list) {
+            for (var i = 0; i < list.length; i++) {
+                if (item.indexOf(list[i]) > -1) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        var ignorableErrors = [
+            // General script error, not actionable
+            "[object Event]",
+            // General script error, not actionable
+            "Script error.",
+            // error when user  interrupts script loading, nothing to fix
+            "Error loading script",
+            // an error caused by DealPly (http://www.dealply.com/) chrome extension
+            "DealPly",
+            // this error is reported when a post request returns error, i.e. html body
+            // the details provided in this case are completely useless, thus discarded
+            "Unexpected token <"
+        ];
+
+        if (itemExistInList(payload.message, ignorableErrors)) {
+            return false;
+        }
+
+        payload.network = payload.network.filter(function(item) {
+
+            // ignore random errors from Intercom
+            if (item.statusCode === 403 && payload.message.indexOf("intercom") > -1) {
+                return false;
+            }
+
+            return true;
+        });
+
+        return true;
+    }
+};
 ;//
 //
 //
@@ -1933,13 +2106,13 @@ function updateLiveChart(config) {
 var LiveChart = function(config) {
     //Required for inheritence.
     if (!config) return;
-    
+
     this.config = config;
     this.shift = false;
     if (!config.trade_visualization) {
         this.on_duration_change();
         this.highlight_duration();
-    }    
+    }
 };
 
 LiveChart.prototype = {
@@ -1955,7 +2128,9 @@ LiveChart.prototype = {
         }
 
         if (!chart_closed && live_chart) {
-            this.chart.destroy();
+            if (this.chart) {
+                this.chart.destroy();
+            }
             chart_closed = true;
             live_chart = null;
         }
@@ -2077,7 +2252,10 @@ LiveChart.prototype = {
                 min: this.config.from * 1000,
             },
             yAxis: {
+                opposite: false,
                 labels: {
+                    align: 'left',
+                    x: 0,
                     formatter: function() { return this.value; }
                 },
                 title: {
@@ -2186,6 +2364,10 @@ LiveChartTick.prototype.process_data = function(point) {
             epoch: parseInt(point[1]),
             quote: parseFloat(point[2])
         };
+        
+        if (!this.chart) return;
+        if (!this.chart.series) return;
+
         this.chart.series[0].addPoint(
             [tick.epoch * 1000, tick.quote], false, this.shift, false
         );
@@ -2259,6 +2441,9 @@ LiveChartOHLC.prototype.process_corp_action = function(action) {
 
 LiveChartOHLC.prototype.process_ohlc = function(ohlc) {
     var epoch = parseInt(ohlc[0]);
+    if (!this.chart && !this.chart.series) {
+        return;
+    }
     var ohlc_pt = {
         x:     epoch * 1000,
         open:  parseFloat(ohlc[1]),
@@ -2280,8 +2465,8 @@ LiveChartOHLC.prototype.process_tick = function(tickInput) {
     };
     this.spot = tick.quote;
 
-    if (!this.chart.series) {
-        return; 
+    if (!this.chart && !this.chart.series) {
+        return;
     }
 
     var data = this.chart.series[0].options.data;
@@ -2741,11 +2926,6 @@ var asset_index_init = function() {
 };
 
 function confirm_popup_action() {
-    SpotLight.attach_click_event('a.tm-a-2', function (e){
-        e.preventDefault();
-        $(this).parents('#bom-confirm-popup').find('a.tm-a-2').removeClass('a-active').end().end().addClass('a-active');
-        $('#'+this.id+'-content').siblings('div.rbox-content').addClass('invisible').end().removeClass('invisible');
-    });
 
     $('.bom_confirm_popup_link').on('click', function (e){
         e.preventDefault();
@@ -2796,6 +2976,36 @@ onLoad.queue_for_url(function() {
         return false;
     });
 }, '/c/paymentagent_list');
+;var signup = function() {
+    var signup = $('.login-button, .dialog, .overlay').on('click', function() {
+        $('.overlay').toggleClass('hidden');
+    });
+};
+
+var xscroll = function() {
+    var xscroll = $("#xscroll").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#section2").offset().top
+        }, 1000);
+    });
+};
+
+pjax_config_page('/home3', function() {
+    return {
+        onLoad: function() {
+            signup();
+        },
+    };
+});
+
+pjax_config_page('/home4', function() {
+    return {
+        onLoad: function() {
+            signup();
+            xscroll();
+        },
+    };
+});
 ;var trade_contract_back = function () {
     $('#find_another_contract').on('click', function (e) {
         if (page.url.history_supported) {
@@ -3042,7 +3252,7 @@ pjax_config_page('chart_application', function () {
             var daily_prices_url = changeUrlToSameDomain(form.action);
             var daily_prices_params = $(form).serialize()+'&id='+Math.floor(Math.random()*83720);
 
-            var go_button = div.find('span.button');
+            var go_button = div.find('.button');
             go_button.addClass('invisible');
             go_button.after(getImageLink());
 
@@ -3205,7 +3415,7 @@ pjax_config_page('chart_application', function () {
     this.chart_config = {
         chart: {
                 renderTo:'last_digit_histo',
-                defaultSeriesType:'column',                
+                defaultSeriesType:'column',
                 backgroundColor:'#eee',
                 borderWidth:1,
                 borderColor:'#ccc',
@@ -3266,7 +3476,10 @@ pjax_config_page('chart_application', function () {
             tickColor:'#ccc',
             lineColor:'#ccc',
             endOnTick:true,
+            opposite: false,
             labels: {
+                align: 'left',
+                x: 0,
                 enabled: false,
                 formatter: function() {
                     var total = $("select[name='tick_count']").val();
@@ -3569,7 +3782,6 @@ BetAnalysis.tab_last_digit = new BetAnalysis.DigitInfo();
             return moment.utc(page.header.time_now);
         },
         error_message: function () {
-            $('#betInputBox').removeClass("indicate-loading");
             BetPrice.error_handler();
         },
         actions: function() {
@@ -3660,7 +3872,6 @@ BetAnalysis.tab_last_digit = new BetAnalysis.DigitInfo();
                     }
 
                     var that = this;
-                    $('#betInputBox').addClass("indicate-loading");
                     betform_request = $.ajax({
                             url     : this.form_url(form_name),
                             success : function (data) {
@@ -3681,7 +3892,6 @@ BetAnalysis.tab_last_digit = new BetAnalysis.DigitInfo();
                     }
 
                     var that = this;
-                    $('#betInputBox').addClass("indicate-loading");
                     betform_request = $.ajax({
                         url     : this.form_url('', underlying),
                         success : function (data) {
@@ -3713,7 +3923,6 @@ BetAnalysis.tab_last_digit = new BetAnalysis.DigitInfo();
                     this.on_amount_type_change();
                     this.on_other_input_change();
 
-                    $('#betInputBox').removeClass("indicate-loading");
                     $('#bet_calculate').focus(); //Focus on the Get Prices button.
                     this.hide_sub_trade();
 
@@ -5215,7 +5424,7 @@ BetForm.Time.Duration.prototype = {
                 min_span.removeClass('error');
             } else {
                 $(this).addClass('error');
-                min_span.addClass('error').effect('pulsate', {times: 2});
+                min_span.addClass('error');
             }
         };
 
@@ -5348,7 +5557,7 @@ BetForm.Time.EndTime.prototype = {
     var _buy_response_container = null;
     return {
         deregister: function() {
-            $('button.buy_bet_button').off('click');
+            $('#content button.buy_bet_button').off('click');
         },
         container: function() {
             return $('#bet_calculation_container');
@@ -5412,7 +5621,7 @@ BetForm.Time.EndTime.prototype = {
         },
         on_buy: function() {
             var that = this;
-            $('button.buy_bet_button').on('click', function (e) {
+            $('#content button.buy_bet_button').on('click', function (e) {
                 e = e || window.event;
                 if (typeof e.preventDefault == 'function') {
                     e.preventDefault();
@@ -5465,6 +5674,7 @@ BetForm.Time.EndTime.prototype = {
                 this.display_buy_error(data.error);
             } else if (data.display) {
                 this.display_buy_results(data);
+                BetSell.register();
             } else {
                 throw new Error("Invalid server response: " + data);
             }
@@ -5525,6 +5735,7 @@ BetForm.Time.EndTime.prototype = {
                     $self.ev.close();
                     $self.digit_tick_count = 0;
                     $self.applicable_ticks = [];
+                    $self.info_for_display = [];
                 },
                 process: function(start_moment) {
                     var $self = this;
@@ -5534,9 +5745,8 @@ BetForm.Time.EndTime.prototype = {
                     $self.info_for_display = [];
                     var symbol = BetForm.attributes.underlying();
                     var how_many_ticks = $('#tick-count').data('count');
-                    var end = start_moment.clone().add(3, 'minutes');
                     var stream_url = window.location.protocol + '//' + page.settings.get('streaming_server');
-                    stream_url += "/stream/ticks/" + symbol + "/" + start_moment.unix() + "/" + end.unix();
+                    stream_url += "/stream/ticks/" + symbol + "/" + start_moment.unix();
                     $self.ev = new EventSource(stream_url, { withCredentials: true });
 
                     $self.ev.onmessage = function(msg) {
@@ -5568,6 +5778,7 @@ BetForm.Time.EndTime.prototype = {
                                         if ($self.applicable_ticks.length === how_many_ticks) {
                                             $self.evaluate_digit_outcome();
                                             $self.reset();
+                                            break; // need to break the loop else it will keep on processing the extra tick
                                         }
                                     }
                                 }
@@ -5757,7 +5968,7 @@ BetForm.Time.EndTime.prototype = {
                     return prices;
                 },
                 prices_from_form: function () {
-
+                    
                     var prices = [],
                         order_forms = $('.orderform'),
                         order_forms_count = order_forms ? order_forms.length : 0,
@@ -5765,7 +5976,7 @@ BetForm.Time.EndTime.prototype = {
                         id,
                         prob,
                         error;
-
+                    
                     if (order_forms_count > 0 ) {
                         for (i = 0; i < order_forms_count; i++) {
                             id = $('input[name="display_id"]', form).val();
@@ -5776,7 +5987,7 @@ BetForm.Time.EndTime.prototype = {
                             if (error_box_html.length > 0 &&
                                 error_box_html != BetForm.amount.payout_err &&
                                 error_box_html != BetForm.amount.stake_err) {
-                                error = error_box.html();
+                                error = error_box_html;
                             }
                             prices.push(this.calculate_price(id, prob, error));
                         }
@@ -5804,6 +6015,8 @@ BetForm.Time.EndTime.prototype = {
                     var amount = BetForm.amount.calculation_value;
                     var price;
                     var payout;
+                    var profit;
+                    var roi;
                     if(BetForm.attributes.is_amount_stake()) {
                         payout = this.virgule_amount(Math.round((amount / prob) * 100));
                         price = this.virgule_amount(amount * 100);
@@ -5812,10 +6025,19 @@ BetForm.Time.EndTime.prototype = {
                         payout = this.virgule_amount(amount * 100);
                     }
 
-                    var prev_price = parseFloat($('input[name="price"]', form).val());
-                    var prev_payout = parseFloat($('input[name="payout"]', form).val());
-                    var profit =  this.virgule_amount(payout.raw - price.raw);
-                    var roi = Math.round(profit.raw / price.raw * 100);
+                    var prev_price = $('input[name="price"]', form).length ? parseFloat($('input[name="price"]', form).val()) : 0;
+                    var prev_payout = $('input[name="payout"]', form).length ? parseFloat($('input[name="payout"]', form).val()) : 0;
+
+                    if (payout && price) {
+                        profit =  this.virgule_amount(payout.raw - price.raw);
+                        roi = Math.round(profit.raw / price.raw * 100);
+                    } else {
+                        profit = this.virgule_amount(0);
+                        roi = this.virgule_amount(0);
+                    }
+
+                    payout = payout ? payout : this.virgule_amount(0);
+                    price = price ? price : this.virgule_amount(0);
 
                     return {
                         id: id,
@@ -7026,7 +7248,6 @@ BetForm.Time.EndTime.prototype = {
             if(this.popup().length > 0) {
                 this.on_open_debug_link();
                 this.on_close();
-                this.on_historic_vol();
             }
         },
         on_open_debug_link: function() {
@@ -7038,10 +7259,6 @@ BetForm.Time.EndTime.prototype = {
 
                 $('#' + popup.children(':first').attr('id')).tabs();
 
-                $('a.vcal_tab', popup).on('click', function() {
-                    that.vcal_datepicker_handler.init();
-                }).addClass('unbind_later');
-
                 event.preventDefault();
             }).addClass('unbind_later');
         },
@@ -7052,82 +7269,9 @@ BetForm.Time.EndTime.prototype = {
                 event.preventDefault();
             }).addClass('unbind_later');
         },
-        on_historic_vol: function() {
-            var that = this;
-            $('a[class^="hvol_tab_"]').on('click', function(event) {
-                event.preventDefault();
-                that.get_historic_vol();
-            }).addClass('unbind_later');
-        },
         popup: function() {
             return $('#pricing_details_popup');
-        },
-        get_historic_vol: function() {
-            $.post(
-                    page.url.url_for('trade_get.cgi'),
-                    {
-                        controller_action : 'historical_vol',
-            underlying        : $('#bet_underlying').val()
-                    },
-                    function(data) {
-                        $('#hvol').html(data);
-                    },
-                    "html"
-                  );
-        },
-        vcal_datepicker_handler: function() {
-            var that = {};
-            var cache = {};
-
-            var getWeight = function(date) {
-                var year = date.getFullYear();
-                var underlying_symbol = $('#bet_underlying').val();
-
-                var cache_key = underlying_symbol + '-' + year;
-                var lookup = year + '-' + (date.getMonth()+1) + '-' + date.getDate();
-
-                if (typeof cache[cache_key] === 'undefined') {
-                    $.ajax({
-                        url: page.url.url_for('trade_get.cgi'),
-                        data: { controller_action: 'vcal_weights',
-                            underlying_symbol: underlying_symbol,
-                        year: year,
-                        },
-                        success: function(vcal_weights) {
-                            cache[cache_key] = vcal_weights;
-                        },
-                        dataType:'json',
-                        async: false
-                    });
-                }
-
-                return cache[cache_key][lookup];
-            };
-
-            var beforeShowDay = function(date) {
-                window.setTimeout(
-                        function() {
-                            var tds = $("div.vcal").find("td").filter(function() { return $(this).attr("class").match(/weight/); });
-
-                            tds.find('a').html( function() {
-                                var td = $(this).parent('td');
-                                var weight = td.attr("class").match('\\d\\.?\\d?\\d?')[0];
-                                return weight;
-                            });
-                        },
-                        0);
-                return [true, "weight" + getWeight(date), date.getDate()];
-            };
-
-            that.init = function() {
-                $(".vcal").datepicker({
-                    numberOfMonths: 2,
-                    beforeShowDay: beforeShowDay
-                });
-            };
-
-            return that;
-        }()
+        }
     };
 }();
 ;var TickDisplay = function() {
@@ -7240,7 +7384,12 @@ BetForm.Time.EndTime.prototype = {
                     labels: { enabled: false, }
                 },
                 yAxis: {
-                    title: '',
+                    opposite: false,
+                    labels: {
+                        align: 'left',
+                        x: 0,
+                    },
+                    title: ''
                 },
                 series: [{
                     data: [],
@@ -7272,36 +7421,41 @@ BetForm.Time.EndTime.prototype = {
                 }
 
                 var data = JSON.parse(msg.data);
-                if (!(data[0] instanceof Array)) {
+                if (data && !(data[0] instanceof Array)) {
                     data = [ data ];
                 }
-                for (var i = 0; i < data.length; i++) {
-                    if (data[i][0] === 'tick') {
-                        var tick = {
-                            epoch: parseInt(data[i][1]),
-                            quote: parseFloat(data[i][2])
-                        };
+                if (data) {
+                    for (var i = 0; i < data.length; i++) {
+                        if (data[i][0] === 'tick') {
+                            var tick = {
+                                epoch: parseInt(data[i][1]),
+                                quote: parseFloat(data[i][2])
+                            };
 
-                        if (tick.epoch > contract_start_moment.unix()) {
-                            if ($self.applicable_ticks.length >= $self.ticks_needed) {
-                                $self.ev.close();
-                                $self.evaluate_contract_outcome();
-                                return;
-                            } else {
-                                $self.chart.series[0].addPoint([$self.counter, tick.quote], true, false);
-                                $self.applicable_ticks.push(tick);
-                                var indicator_key = '_' + $self.counter;
-                                if (typeof $self.x_indicators[indicator_key] !== 'undefined') {
-                                    $self.x_indicators[indicator_key]['index'] = $self.counter;
-                                    $self.add($self.x_indicators[indicator_key]);
+                            if (tick.epoch > contract_start_moment.unix()) {
+                                if ($self.applicable_ticks.length >= $self.ticks_needed) {
+                                    $self.ev.close();
+                                    $self.evaluate_contract_outcome();
+                                    return;
+                                } else {
+                                    if (!$self.chart && !$self.chart.series) {
+                                        return;
+                                    }
+                                    $self.chart.series[0].addPoint([$self.counter, tick.quote], true, false);
+                                    $self.applicable_ticks.push(tick);
+                                    var indicator_key = '_' + $self.counter;
+                                    if (typeof $self.x_indicators[indicator_key] !== 'undefined') {
+                                        $self.x_indicators[indicator_key]['index'] = $self.counter;
+                                        $self.add($self.x_indicators[indicator_key]);
+                                    }
+
+                                    $self.add_barrier();
+                                    $self.apply_chart_background_color(tick);
+                                    $self.counter++;
                                 }
-
-                                $self.add_barrier();
-                                $self.apply_chart_background_color(tick);
-                                $self.counter++;
                             }
-                        }
 
+                        }
                     }
                 }
             };
@@ -7676,7 +7830,7 @@ function listen_to_chart_element () {
                 overlays
                     .filter(':last').after(
                         '<li><a href="#">' +
-                        chart_overlay_or_new.find('h3').html() +
+                        chart_overlay_or_new.find('h4').html() +
                         '</a><input type="checkbox" checked="checked" value="'+previous_selected_radio[chart_overlay_or_new.data('related_input_name')]+'" name="overlay"></li>'
                     );
 
@@ -7694,9 +7848,10 @@ function listen_to_chart_element () {
 }
 
 var draw_chart = function (callback_after_complete) {
-    if($("#chart_director_imageholder").length === 0){
-        return;
-    }
+
+    var chart_director_imageholder = document.getElementById('chart_director_imageholder');
+
+    if (chart_director_imageholder === null) return;
 
     var all_li = $('#chart_compare_underlying').find('li');
     if (all_li.length == 1) {
@@ -7805,16 +7960,18 @@ onLoad.queue(function() {
         client_form = new ClientForm({restricted_countries: page.settings.get('restricted_countries'), valid_loginids: page.settings.get('valid_loginids')});
 });
 
-$(function() {
-    onLoad.queue_if_id_present(function () {
-        $('#promotionalcode').blur(togglePromoCodeTnC);
-        client_form.on_residence_change();
-        select_user_country();
-        if(page.client.is_logged_in) {
-            client_form.set_virtual_login_id(page.client.loginid);
-            client_form.set_virtual_email_id(page.client.email);
+pjax_config_page('linkto_acopening', function() {
+    return {
+        onLoad: function() {
+            $('#promotionalcode').blur(togglePromoCodeTnC);
+            client_form.on_residence_change();
+            select_user_country();
+            if(page.client.is_logged_in) {
+                client_form.set_virtual_login_id(page.client.loginid);
+                client_form.set_virtual_email_id(page.client.email);
+            }
         }
-    },'openAccForm');
+    };
 });
 ;var ClientForm = function(init_params) {
     this.restricted_countries = new RegExp(init_params['restricted_countries']);
@@ -7925,15 +8082,6 @@ ClientForm.prototype = {
 
         return true;
     },
-    custom_check_file_format: function() {
-            var file_name = $('#Screenshot').attr('value');
-            if (file_name && file_name.length > 0) {
-                    if (!file_name.match(/(?:jpg|jpeg|png|gif)/i)) {
-                            return false;
-                    }
-            }
-            return true;
-    },
     self_exclusion: function() {
         return {
             has_something_to_save: function() {
@@ -7965,15 +8113,28 @@ ClientForm.prototype = {
             },
             validate_exclusion_date: function() {
                 var exclusion_date = $('#EXCLUDEUNTIL').val();
-                exclusion_date = new Date(exclusion_date);
 
-                // self exclusion date must >= 6 month from now
-                var six_month_date = new Date();
-                six_month_date.setMonth(six_month_date.getMonth() + 6);
+                if (exclusion_date) {
+                    var error_element_errorEXCLUDEUNTIL = clearInputErrorField('errorEXCLUDEUNTIL');
 
-                if (exclusion_date < six_month_date) {
-                    return false;
+                    exclusion_date = new Date(exclusion_date);
+                    // self exclusion date must >= 6 month from now
+                    var six_month_date = new Date();
+                    six_month_date.setMonth(six_month_date.getMonth() + 6);
+
+                    if (exclusion_date < six_month_date) {
+                        error_element_errorEXCLUDEUNTIL.innerHTML = text.localize("Please enter a date that is at least 6 months from now.");
+                        return false ;
+                    }
+
+                    if (confirm(text.localize("When you click 'Ok' you will be excluded from trading on the site until the selected date.")) === true) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+
                 }
+
                 return true;
             },
         };
@@ -8029,204 +8190,7 @@ ClientForm.prototype = {
         $('#Email').disableSelection();
     }
 };
-;var cs_is_available =  function() {
-    var date = new Date();
-
-    //More accurate sync'd time, when available
-    if(page.header.time_now) {
-        date = new Date(page.header.time_now);
-    }
-
-    //Is it weekend? Sunday = 0 and Saturday  = 6
-    if(date.getUTCDay() === 0 || date.getUTCDay() === 6) {
-        return false;
-    }
-
-    var available = false;
-    var cs_times = page.settings.get('cs_times');
-    var cs_time = cs_times.length;
-    while(cs_time--) {
-        var start_hour = parseInt(cs_times[cs_time]['start']);
-        var end_hour = parseInt(cs_times[cs_time]['end']);
-        if(date.getUTCHours() >= start_hour && date.getUTCHours() <= end_hour) {
-            available = true;
-        }
-    }
-    return available;
-};
-
-var change_chat_icon = function () {
-  // desk.com change icon - crude way
-  var len = $('#live-help-button').length;
-  if( len > 0 ) {
-      var timer = null;
-      var updateIcon =  function () {
-          var image_link = page.settings.get('image_link');
-          var desk_widget = $('.a-desk-widget');
-          var image_str = desk_widget.css('background-image');
-          if(image_str) {
-              desk_widget.css({
-                  'background-image': 'url("' + image_link['livechaticon'] + '")',
-                  'width': 146,
-                  'height' : 26
-              });
-              desk_widget.hover(function() {
-                  $(this).css({
-                      'background': 'url("' + image_link['livechaticon'] + '") no-repeat scroll 0 0'
-                  });
-              });
-
-              if(image_str.match(/live-chat-icon/g)){
-                  clearInterval(timer);
-              }
-          }
-      };
-      timer = setInterval(updateIcon, 500);
-  }
-};
-
-var render_desk_widget = function() {
-       new DESK.Widget({
-                version: 1,
-                site: 'binary.desk.com',
-                port: '80',
-                type: 'chat',
-                id: 'live-help-button',
-                displayMode: 0,  //0 for popup, 1 for lightbox
-                features: {
-                        offerAlways: true,
-                        offerAgentsOnline: false,
-                        offerRoutingAgentsAvailable: false,
-                        offerEmailIfChatUnavailable: false
-                },
-                fields: {
-                        ticket: {
-                                // desc: &#x27;&#x27;,
-                // labels_new: &#x27;&#x27;,
-                // priority: &#x27;&#x27;,
-                // subject: &#x27;&#x27;,
-                // custom_loginid: &#x27;&#x27;
-                        },
-                        interaction: {
-                                // email: &#x27;&#x27;,
-                // name: &#x27;&#x27;
-                        },
-                        chat: {
-                                //subject: ''
-                        },
-                        customer: {
-                                // company: &#x27;&#x27;,
-                // desc: &#x27;&#x27;,
-                // first_name: &#x27;&#x27;,
-                // last_name: &#x27;&#x27;,
-                // locale_code: &#x27;&#x27;,
-                // title: &#x27;&#x27;,
-                // custom_loginid: &#x27;&#x27;
-                        }
-                }
-        }).render();
-};
-
-var add_qq = function() {
-    $('#live-help-button').html('<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2597352559&site=qq&menu=yes" id="qq_chat_icon">Live Chat</a>');
-};
-
-var show_live_chat_icon = function() {
-    if(typeof DESK === 'undefined') {
-        loadCSS("https://d3jyn100am7dxp.cloudfront.net/assets/widget_embed_191.cssgz?1367387331");
-        loadJS("https://d3jyn100am7dxp.cloudfront.net/assets/widget_embed_libraries_191.jsgz?1367387332");
-    }
-
-
-    var desk_load = setInterval(function() {
-        if(typeof DESK !== "undefined") {
-            render_desk_widget();
-            change_chat_icon();
-            clearInterval(desk_load);
-        }
-    }, 80);
-};
-
-var fill_contact_us = function(country) {
-    var loginid = page.client.loginid;
-    if(loginid) {
-        $('#login_id').val(loginid);
-    }
-
-    var name = page.client.name;
-    if(name) {
-        $('#Name2').val(name);
-    }
-
-    var email = page.client.email;
-    if(email) {
-        $('#Email2').val(email);
-    }
-
-    $('#country').on('change', function() {
-        var tel = $('#phone');
-        if (!tel.val() || tel.val().length < 6) {
-            var country = $(this).val();
-            var idd_code = idd_codes[country];
-            tel.val(idd_code ? '+' + idd_code : '');
-        }
-    });
-
-    var idd_code = idd_codes[country];
-    $('#country').val(country).change();
-
-    var phone = page.client.phone;
-    if(phone) {
-        $('#phone').val(phone);
-    } else {
-        $('#country').change();
-    }
-};
-
-
-pjax_config_page('contact', function() {
-    return {
-        onLoad: function() {
-            get_user_country(function() {
-                    var restricted_countries = new RegExp(page.settings.get('restricted_countries'));
-                    if(cs_is_available() && !restricted_countries.test(this.country)) {
-                        $('.live-help').removeClass('invisible');
-                        $('#telephone_callback').removeClass('invisible');
-                    }
-
-                    fill_contact_us(this.country);
-            });
-        },
-    };
-});
-
-onLoad.queue_if_id_present(function() {
-    if (cs_is_available()) {
-        show_live_chat_icon();
-    }
-}, 'live-help-button');
-;var slider = function() {
-    var slider = $('#slider');
-    if (slider.size()) {
-        $('.invisibleslides').show();
-        slider.slides({
-            container: 'slides-container',
-            paginationClass: 'slides-pagination',
-            generatePagination: false,
-            generateNextPrev: false,
-            start: 1,
-            preload: true,
-            play: 10000,
-            slideSpeed: 800,
-        });
-        if ($('.slides_control').height() < 300) {
-            $('.slides_control').css('min-height', '300px');
-        }
-    }
-};
-
-
-var sidebar_scroll = function(elm_selector) {
+;var sidebar_scroll = function(elm_selector) {
     elm_selector.on('click', '#sidebar-nav li', function() {
         var clicked_li = $(this);
         $.scrollTo($('.section:eq(' + clicked_li.index() + ')'), 500);
@@ -8309,7 +8273,7 @@ var get_started_behaviour = function() {
         return false;
     };
     var to_show;
-    var nav = $('.get-started-content').find('.subsection-navigation');
+    var nav = $('.get-started').find('.subsection-navigation');
     var fragment;
     var len = nav.length;
 
@@ -8395,17 +8359,100 @@ var display_cs_contacts = function () {
     $('#cs_contact_eaddress').html("<n uers=\"znvygb:fhccbeg@ovanel.pbz\" ery=\"absbyybj\">fhccbeg@ovanel.pbz</n>".replace(/[a-zA-Z]/g, function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);}));
 };
 
-var show_live_chat = function () {
-    $('.contact-content').on("click", "#live-chat-icon", function (e) {
-        e.preventDefault();
-        Intercom('show');
-    });
+var change_chat_icon = function () {
+  // desk.com change icon - crude way
+  var len = $('#live-chat-icon').length;
+  if( len > 0 ) {
+      var timer = null;
+      var updateIcon =  function () {
+          var image_link = page.settings.get('image_link');
+          var desk_widget = $('.a-desk-widget');
+          var image_str = desk_widget.css('background-image');
+          if(image_str) {
+              desk_widget.css({
+                  'background-image': 'url("' + image_link['livechaticon'] + '")',
+                  'background-size': 'contain',
+                  'min-width': 50,
+                  'min-height': 50,
+                  'width': 'auto'
+              });
+              desk_widget.hover(function() {
+                  $(this).css({
+                      'background': 'url("' + image_link['livechaticon'] + '") no-repeat scroll 0 0',
+                      'background-size': 'contain',
+                  });
+              });
+
+              if(image_str.match(/live-chat-icon/g)){
+                  clearInterval(timer);
+              }
+          }
+      };
+      timer = setInterval(updateIcon, 500);
+  }
+};
+
+var render_desk_widget = function() {
+       new DESK.Widget({
+                version: 1,
+                site: 'binary.desk.com',
+                port: '80',
+                type: 'chat',
+                id: 'live-chat-icon',
+                displayMode: 0,  //0 for popup, 1 for lightbox
+                features: {
+                        offerAlways: true,
+                        offerAgentsOnline: false,
+                        offerRoutingAgentsAvailable: false,
+                        offerEmailIfChatUnavailable: false
+                },
+                fields: {
+                        ticket: {
+                                // desc: &#x27;&#x27;,
+                // labels_new: &#x27;&#x27;,
+                // priority: &#x27;&#x27;,
+                // subject: &#x27;&#x27;,
+                // custom_loginid: &#x27;&#x27;
+                        },
+                        interaction: {
+                                // email: &#x27;&#x27;,
+                // name: &#x27;&#x27;
+                        },
+                        chat: {
+                                //subject: ''
+                        },
+                        customer: {
+                                // company: &#x27;&#x27;,
+                // desc: &#x27;&#x27;,
+                // first_name: &#x27;&#x27;,
+                // last_name: &#x27;&#x27;,
+                // locale_code: &#x27;&#x27;,
+                // title: &#x27;&#x27;,
+                // custom_loginid: &#x27;&#x27;
+                        }
+                }
+        }).render();
+};
+
+var show_live_chat_icon = function() {
+    if(typeof DESK === 'undefined') {
+        loadCSS("https://d3jyn100am7dxp.cloudfront.net/assets/widget_embed_191.cssgz?1367387331");
+        loadJS("https://d3jyn100am7dxp.cloudfront.net/assets/widget_embed_libraries_191.jsgz?1367387332");
+    }
+
+
+    var desk_load = setInterval(function() {
+        if(typeof DESK !== "undefined") {
+            render_desk_widget();
+            change_chat_icon();
+            clearInterval(desk_load);
+        }
+    }, 80);
 };
 
 pjax_config_page('/$|/home', function() {
     return {
         onLoad: function() {
-            slider();
             select_user_country();
             get_ticker();
             home_bomoverlay.init();
@@ -8485,7 +8532,7 @@ pjax_config_page('/contact', function() {
     return {
         onLoad: function() {
             display_cs_contacts();
-            show_live_chat();
+            show_live_chat_icon();
         },
     };
 });
@@ -8984,9 +9031,16 @@ var self_exclusion_date_picker = function () {
     });
 };
 
+var self_exclusion_validate_date = function () {
+    $('#selfExclusion').on('click', '#self_exclusion_submit', function () {
+        return client_form.self_exclusion.validate_exclusion_date();
+    });
+};
+
 onLoad.queue_for_url(function () {
 // date picker for self exclusion
     self_exclusion_date_picker();
+    self_exclusion_validate_date();
 }, 'self_exclusion');
 ;onLoad.queue_for_url(function() {
     $('#portfolio-table')
@@ -9000,6 +9054,27 @@ onLoad.queue_for_url(function() {
         $('#submit-date').removeClass('invisible');
     });
 }, 'statement');
+;window._trackJs = {
+    onError: function(payload, error) {
+
+        // ignore an error caused by DealPly (http://www.dealply.com/) chrome extension
+        if (payload.message.indexOf("DealPly") > 0) {
+            return false;
+        }
+
+        payload.network = payload.network.filter(function(item) {
+
+            // ignore random errors from Intercom
+            if (item.statusCode === 403 && payload.message.indexOf("intercom") > 0) {
+                return false;
+            }
+
+            return true;
+        });
+
+        return true;
+    }
+};
 ;//////////////////////////////////////////////////////////////////
 // Purpose: Write loading image to a container for ajax request
 // Parameters:
@@ -9381,7 +9456,7 @@ function attach_inpage_popup(element) {
     return popups;
 }
 
-/**
+/** 
  * Calculate container width for chart as of now but can
  * be used to get current container width
  */
@@ -9445,9 +9520,3 @@ function attach_tabs(element) {
     });
     return targets;
 }
-
-$(function() {
-    $('nav.tabs a').on('click', function() {
-        console.log($(this).attr('href'))
-    });
-})

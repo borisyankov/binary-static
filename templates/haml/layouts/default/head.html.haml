@@ -4,11 +4,12 @@
 - );
 
 %head
+
   - my $route = current_route;
-  - my $curr_lang = stash->{language};
-  - if ($route eq "home" and $curr_lang eq 'EN') {
+  - my $on_production = on_production();
+  - if ($on_production and $route eq "home") {
     %script
-      != "function utmx_section(){}function utmx(){}(function(){var k='73768344-10',d=document,l=d.location,c=d.cookie; if(l.search.indexOf('utm_expid='+k)>0)return; function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write('<sc'+'ript src=\"'+'http'+(l.protocol=='https:'?'s://ssl':'://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+'\" type=\"text/javascript\" charset=\"utf-8\"><\/sc'+'ript>')})();"
+      != "function utmx_section(){}function utmx(){}(function(){var k='73768344-15',d=document,l=d.location,c=d.cookie;if(l.search.indexOf('utm_expid='+k)>0)return;function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write('<sc'+'ript src=\"'+'http'+(l.protocol=='https:'?'s://ssl':'://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+'\" type=\"text/javascript\" charset=\"utf-8\"><\/sc'+'ript>')})();"
     %script
       != "utmx('url','A/B');"
   - }
@@ -27,9 +28,25 @@
 
   %title= stash('website_name') . (stash('title') ? " : ".stash('title'): '')
 
-  %script{:src => "//use.typekit.net/bfu3ywb.js"}
   :javascript
-    try{Typekit.load();}catch(e){}
+     (function() {
+      var config = {
+        kitId: 'bfu3ywb'
+      };
+      var d = false;
+      var tk = document.createElement('script');
+      tk.src = '//use.typekit.net/' + config.kitId + '.js';
+      tk.type = 'text/javascript';
+      tk.async = 'true';
+      tk.onload = tk.onreadystatechange = function() {
+        var rs = this.readyState;
+        if (d || rs && rs != 'complete' && rs != 'loaded') return;
+        d = true;
+        try { Typekit.load(config); } catch (e) {}
+      };
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(tk, s);
+    })();
 
   %link{:href => url_for("/images/favicons/apple-touch-icon-57x57.png"), :rel => "apple-touch-icon", :sizes => "57x57"}
   %link{:href => url_for("/images/favicons/apple-touch-icon-114x114.png"), :rel => "apple-touch-icon", :sizes => "114x114"}
@@ -46,15 +63,15 @@
   %link{:href => url_for("/images/favicons/favicon-16x16.png"), :rel => "icon", :sizes => "16x16", :type => "image/png"}
   %link{:href => url_for("/images/favicons/favicon-32x32.png"), :rel => "icon", :sizes => "32x32", :type => "image/png"}
 
-- foreach my $css (css()->files) {
-    %link{:rel=>"stylesheet" :href=> $css}
-- }
-
   - my $languages = available_languages();
   - my $path = get_current_path();
   - foreach (keys %{ $languages }) {
     - my $complete_path = $path . "?l=" . $_;
     %link{:rel=>"alternate", :hreflang=>$_, :href=>$complete_path}
+  - }
+
+  - foreach my $css (css()->files) {
+    %link{:rel=>"stylesheet" :href=> $css}
   - }
 
   = include('layouts/default/javascripts')

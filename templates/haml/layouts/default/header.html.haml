@@ -1,19 +1,45 @@
-.header-wrapper
-  .header
-    %a.logo{:href=>url_for("/")}
-      %img{:src => url_for('images/logo.svg')}
-    = include('layouts/default/menu')
-    %label.language-selector{:for => "lang-pick"}
-      %select#lang-pick.flag
-        - my $languages = available_languages();
-        - my $sel_code = stash->{language};
-        - my $sel_name = $languages->{$sel_code};
-        - foreach (keys %{ $languages }) {
-          - my ($code, $name) = ($_, $languages->{$_});
-          - if ($code ne $sel_code) {
-            %option{:value => $code}= $name
-          - } else {
-            %option{:value => $code, :selected => 'selected'}= $name
-          - }
-        - }
-    %button.login-button= l('Log in')
+- stash (
+-    loginholder => l('Login ID'),
+-    pwdholder   => l('Password'),
+-    logintext   => l('Log in'),
+- );
+
+%header
+  .header-content
+    %a#logo{:href=>url_for("/")}
+      %img{:src => url_for('images/pages/binary-symbol-logo.svg')}
+      %img{:src => url_for('images/pages/binary-text.svg')}
+    %nav
+      %a.pjaxload{:href=>url_for('why-us')}= l('Why Us?')
+      %a.pjaxload{:href=>url_for('get-started')}= l('Get Started')
+      %a.pjaxload{:href=>url_for('tour')}= l('Tour')
+      %a.pjaxload{:href=>url_for('trade.cgi')}= l('Trade')
+    %a.button.login-btn.pjaxload{:href=>url_for('login')}= l('Log in')
+
+#header
+  .grd-container
+      .grd-grid-3.grd-grid-mobile-2.grd-grid-phablet-1
+        %a#logo{:href=>url_for("/")}
+          .grd-grid-3.grd-grid-mobile-12.grd-grid-phablet-12.grd-no-gutter
+            %img{:class => 'responsive grd-float-left', src => url_for('images/pages/binary-symbol-logo.svg')}
+          .grd-grid-9.grd-hide-mobile.grd-hide-phablet#binary-logo-text
+            %img{:class => 'responsive', src => url_for('images/pages/binary-type-logo.svg')}
+      .grd-grid-6.grd-hide-mobile.grd-hide-phablet
+        = include('layouts/default/nav')
+      .grd-grid-3.grd-grid-mobile-9.grd-grid-phablet-10.by_client_type.client_virtual.client_real#client-logged-in{ :style => 'display: none;'}
+        #logout
+          %a.pjaxload#client_loginid{:href => url_for('/user/my_account')}
+          %a.button{:href => url_for('/logout')}= l('Log out')
+      .grd-grid-3.grd-grid-mobile-9.grd-grid-phablet-10.grd-no-gutter-left.by_client_type.client_logged_out#client-logged-out
+        %form#login-form{:action => url_for('/login'), :method => 'post'}
+          %span#login-fields
+            %input{:name => 'loginid', :type => 'text', :placeholder => stash('loginholder')}
+            %input{:name => 'password', :type => 'password', :placeholder => stash('pwdholder')}
+            %input{:type => 'submit', :value => stash('logintext')}
+          %span#login-links
+            %a.pjaxload#register{:href=>url_for('/user/open_account')}= l('Register')
+            %a.pjaxload#lost-password{:href=>url_for('lost_password.cgi')}= l('Lost password?')
+      .grd-grid-1.grd-hide.grd-show-mobile.grd-no-gutter-mobile.grd-show-phablet
+        #mobile-menu-icon-container
+          %a{:href => '#mobile-menu', :id => 'mobile-menu-icon'}
+            %img{:class => 'responsive', :src => url_for('images/pages/binary-mobile-menu.svg')}

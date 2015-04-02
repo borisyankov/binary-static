@@ -2,9 +2,11 @@
 #content.$content_class
   != google_tag_tracking_code
   = include('layouts/default/page_info')
-  .grd-grid-3.grd-hide-mobile
-    = include('layouts/get_started/nav')
-  .grd-grid-6.grd-grid-mobile-12.grd-parent
-    = content
-  .grd-grid-3.grd-hide-mobile
-    = include('layouts/get_started/more')
+  .grd-container
+    .get-started
+      .grd-grid-3.grd-hide-mobile
+        = include('layouts/get_started/nav')
+      .grd-grid-6.grd-grid-mobile-12.grd-parent
+        = content
+      .grd-grid-3.grd-hide-mobile
+        = include('layouts/get_started/more')

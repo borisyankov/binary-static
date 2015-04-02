@@ -1,5 +1,5 @@
 <div class="bet_confirm_wrapper">
-    <h3>[% l('Sorry, an error occurred') %]</h3>
+    <h4>[% l('Sorry, an error occurred') %]</h4>
 [% FOREACH msg IN messages %]
     <div class="bet_confirm_error_message">[% l(msg) %]</div>
 [% END %]

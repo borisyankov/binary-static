@@ -9,7 +9,12 @@
   - my $body_id = current_route;
   - my $lang = stash->{language};
   %body#$body_id.$lang
-    = include('layouts/default/header')
-    .content-wrapper
-      = include('layouts/default/content')
-    = include('layouts/default/footer')
+    #page-wrapper
+      = include('layouts/default/topbar')
+      = include('layouts/default/header')
+      #content-holder
+        .tab-menu.hidden#main-menu
+          = include('layouts/default/main_menu')
+        = include('layouts/default/mobile_menu')
+        = include('layouts/default/content')
+      = include('layouts/default/footer')

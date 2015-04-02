@@ -3,7 +3,7 @@ var BetPrice = function() {
     var _buy_response_container = null;
     return {
         deregister: function() {
-            $('button.buy_bet_button').off('click');
+            $('#content button.buy_bet_button').off('click');
         },
         container: function() {
             return $('#bet_calculation_container');
@@ -67,7 +67,7 @@ var BetPrice = function() {
         },
         on_buy: function() {
             var that = this;
-            $('button.buy_bet_button').on('click', function (e) {
+            $('#content button.buy_bet_button').on('click', function (e) {
                 e = e || window.event;
                 if (typeof e.preventDefault == 'function') {
                     e.preventDefault();
@@ -120,6 +120,7 @@ var BetPrice = function() {
                 this.display_buy_error(data.error);
             } else if (data.display) {
                 this.display_buy_results(data);
+                BetSell.register();
             } else {
                 throw new Error("Invalid server response: " + data);
             }
@@ -180,6 +181,7 @@ var BetPrice = function() {
                     $self.ev.close();
                     $self.digit_tick_count = 0;
                     $self.applicable_ticks = [];
+                    $self.info_for_display = [];
                 },
                 process: function(start_moment) {
                     var $self = this;
@@ -189,9 +191,8 @@ var BetPrice = function() {
                     $self.info_for_display = [];
                     var symbol = BetForm.attributes.underlying();
                     var how_many_ticks = $('#tick-count').data('count');
-                    var end = start_moment.clone().add(3, 'minutes');
                     var stream_url = window.location.protocol + '//' + page.settings.get('streaming_server');
-                    stream_url += "/stream/ticks/" + symbol + "/" + start_moment.unix() + "/" + end.unix();
+                    stream_url += "/stream/ticks/" + symbol + "/" + start_moment.unix();
                     $self.ev = new EventSource(stream_url, { withCredentials: true });
 
                     $self.ev.onmessage = function(msg) {
@@ -223,6 +224,7 @@ var BetPrice = function() {
                                         if ($self.applicable_ticks.length === how_many_ticks) {
                                             $self.evaluate_digit_outcome();
                                             $self.reset();
+                                            break; // need to break the loop else it will keep on processing the extra tick
                                         }
                                     }
                                 }
@@ -412,7 +414,7 @@ var BetPrice = function() {
                     return prices;
                 },
                 prices_from_form: function () {
-
+                    
                     var prices = [],
                         order_forms = $('.orderform'),
                         order_forms_count = order_forms ? order_forms.length : 0,
@@ -420,7 +422,7 @@ var BetPrice = function() {
                         id,
                         prob,
                         error;
-
+                    
                     if (order_forms_count > 0 ) {
                         for (i = 0; i < order_forms_count; i++) {
                             id = $('input[name="display_id"]', form).val();
@@ -431,7 +433,7 @@ var BetPrice = function() {
                             if (error_box_html.length > 0 &&
                                 error_box_html != BetForm.amount.payout_err &&
                                 error_box_html != BetForm.amount.stake_err) {
-                                error = error_box.html();
+                                error = error_box_html;
                             }
                             prices.push(this.calculate_price(id, prob, error));
                         }
@@ -459,6 +461,8 @@ var BetPrice = function() {
                     var amount = BetForm.amount.calculation_value;
                     var price;
                     var payout;
+                    var profit;
+                    var roi;
                     if(BetForm.attributes.is_amount_stake()) {
                         payout = this.virgule_amount(Math.round((amount / prob) * 100));
                         price = this.virgule_amount(amount * 100);
@@ -467,10 +471,19 @@ var BetPrice = function() {
                         payout = this.virgule_amount(amount * 100);
                     }
 
-                    var prev_price = parseFloat($('input[name="price"]', form).val());
-                    var prev_payout = parseFloat($('input[name="payout"]', form).val());
-                    var profit =  this.virgule_amount(payout.raw - price.raw);
-                    var roi = Math.round(profit.raw / price.raw * 100);
+                    var prev_price = $('input[name="price"]', form).length ? parseFloat($('input[name="price"]', form).val()) : 0;
+                    var prev_payout = $('input[name="payout"]', form).length ? parseFloat($('input[name="payout"]', form).val()) : 0;
+
+                    if (payout && price) {
+                        profit =  this.virgule_amount(payout.raw - price.raw);
+                        roi = Math.round(profit.raw / price.raw * 100);
+                    } else {
+                        profit = this.virgule_amount(0);
+                        roi = this.virgule_amount(0);
+                    }
+
+                    payout = payout ? payout : this.virgule_amount(0);
+                    price = price ? price : this.virgule_amount(0);
 
                     return {
                         id: id,

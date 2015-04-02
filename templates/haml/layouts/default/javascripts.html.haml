@@ -6,3 +6,5 @@
 - foreach my $lib (@{ $configs->{libs} }) {
   %script{:src => $lib :defer=>"true"}
 - }
+
+%script{:async => "", :defer => "", :src => "https://apis.google.com/js/platform.js"}

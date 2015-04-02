@@ -11,7 +11,7 @@
     <div class="grd-grid-6 grd-grid-mobile-12">
         <a id="internet_explorer" target="_blank" href="http://www.microsoft.com/windows/internet-explorer/default.aspx" class="li-boxes-content-icon">Binary Ltd</a>
         <div class="li-2-boxes-content li-boxes-content-extra-height">
-            <h2>Microsoft Internet Explorer 8.x+</h2>
+            <h2>Microsoft Internet Explorer 10.x+</h2>
             [% l('<ul><li> Go to the <strong>Tools</strong> menu and select <strong>Internet Options</strong>. </li><li> Click on the <strong>Privacy</strong> tab. </li><li> Click on the <strong>Advanced</strong> button. </li><li> Select the <strong>Override automatic cookie handling</strong>. </li><li> Select <strong>Accept</strong> for both <strong>First-party Cookies</strong> and <strong>Third-party Cookies</strong>. </li><li> Click on the <strong>OK</strong> button to save and close. </li></ul>') %]
         </div>
     </div>

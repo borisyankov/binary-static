@@ -14,4 +14,6 @@
     [% IF show_self_exclusion %]
         <p>[% loadstring.fpartics_selfexclusionlimitsdescription %]</p>
     [% END %]
+
+    <p>[% l('Your API Token is: ')%] <span class="notice-msg">[% request.session_cookie.token %]</span></p>
 </div>

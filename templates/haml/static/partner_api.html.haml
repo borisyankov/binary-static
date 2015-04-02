@@ -1,49 +1,96 @@
 - stash(title => l('API'));
 
-%h1= l('The [_1] API', stash->{website_name})
-
-%p= l('[_1] provides approved business partners with a REST-style application programming interface (API) over the internet. The API provides the following functionality:', stash->{website_name});
-
-%ul.checked
-  %li= l('Contract discovery and pricing')
-  %li= l('Contract purchase (approved applications only)')
-  %li= l('Basic Account review/update facilities')
-  %li= l('Statement and Portfolio Enquiries')
-
-%h2= l('REST')
-
-%h3= l("[_1]'s API conforms to the Representational State Transfer (REST) model.", stash->{website_name})
-
-%p= l('Calls which invoke the API are simple, recognizable and can be negotiated from all popular web programming technologies in use today. For example, to get a list of "marketplaces" currently available at [_1]:',  stash->{website_name})
-
-%code GET /markets
-
-%p= l('To get a summary of currently tradeable market symbols in the "forex" market:')
-
-%code GET /markets/forex
-
-%h2= l('Security')
-
-%h3= l('The [_1] API uses the OAuth2.0 scheme for authenticating users.', stash->{website_name})
-
-%p!= l('OAuth2.0 is the emerging internet standard for this purpose. See <a href="http://oauth.net/2" target="_blank">http://oauth.net/2</a> for a formal definition, although we will guide you through the steps relevant to your platform.')
-
-%p= l('The most important benefit of using OAuth2.0 is that the end-users, who already have valid logins at [_1], are able to leverage new applications to execute various trading activities, without these applications needing to know or "see" the end-users security credentials.', stash->{website_name})
-
-%p!= l('Further to this, the API interface is hosted by an API Proxy management provider, namely <a href="http://apigee.com" target="_blank">Apigee</a>. This service applies several services of benefit both to the application developer and to the API provider.')
-
-%h2= l('Console Facility')
-
-%p!= l('The "raw" API can be inspected "live" using Apigee\'s <a href="http://apigee.com/rmg/console/binary1" target="_blank">Console-to-go</a> facility. This facility applies the full OAuth2 validation process, hence you will need to opt for the "OAuth2" Authentication option offered here and you will then need a valid [_1] login to proceed.', stash->{website_name} )
-
-%p!= l('An automatically generated <a href="https://apigee.com/rmg/resources/binary1" target="_blank">Resource Summary</a> is also available.')
-
-%h2= l('Developer\'s Guide')
-
-%p
-  = l('See our ')
-  %a{:href => url_for('/devguide')}= l('Developer\'s Guide')
-  = l('for detailed coding instructions.')
-
-%p
-  %a.button.important{:href => 'http://trade.binary.com/api_en_binary/', :target => '_blank'}= l('Apply for access')
+.grd-container.grd-default-container
+  .partner-api.static_full
+    .grd-grid-3.grd-hide-mobile
+      .sidebar
+          %ul#sidebar-nav
+            %li#sidebar-link-section-1.selected
+              %a{:href => "#the-api"}= l('The [_1] API', stash->{website_name})
+            %li#sidebar-link-section-2
+              %a{:href => "#api-rest"}= l('REST')
+            %li#sidebar-link-section-3
+              %a{:href => "#api-security"}= l('Security')
+            %li#sidebar-link-section-4
+              %a{:href => "#api-console"}= l('Console Facility')
+            %li#sidebar-link-section-5
+              %a{:href => "#dev-guide"}= l('Developer\'s Guide')
+          .sidebar-button
+            %a{:href => 'http://trade.binary.com/api_en_binary/', :target => '_blank'}= l('Apply for access')
+    .grd-grid-9.grd-grid-mobile-12.grd-parent
+      .section
+        %a#the-api
+        .section-content
+          #section-1
+            .grd-grid-12
+              %h1= l('The [_1] API', stash->{website_name})
+              %p= l('[_1] provides approved business partners with a REST-style application programming interface (API) over the internet. The API provides the following functionality:', stash->{website_name});
+            .grd-grid-8.grd-grid-mobile-12
+              %ul.bullet
+                %li= l('Contract discovery and pricing')
+                %li= l('Contract purchase (approved applications only)')
+                %li= l('Basic Account review/update facilities')
+                %li= l('Statement and Portfolio Enquiries')
+            .grd-grid-4.grd-grid-mobile-12
+                %img.responsive{:src => url_for('images/pages/partnerapi/api.svg')}
+      .section
+        %a#api-rest
+        .section-content
+          #section-2
+            .grd-grid-12
+              %h1= l('REST')
+              %p.heading= l("[_1]'s API conforms to the Representational State Transfer (REST) model.", stash->{website_name})
+            .grd-grid-8.grd-grid-mobile-12
+              %div#rest-main
+                %p= l('Calls which invoke the API are simple, recognizable and can be negotiated from all popular web programming technologies in use today. For example, to get a list of "marketplaces" currently available at [_1]:',  stash->{website_name})
+            .grd-grid-4.grd-grid-mobile-12
+              %img.responsive{:src => url_for('images/pages/partnerapi/rest.svg')}
+            .grd-grid-12
+              %ul
+                %li GET /markets
+              %p= l('To get a summary of currently tradeable market symbols in the "forex" market:')
+              %ul
+                %li GET /markets/forex
+      .section
+        %a#api-security
+        .section-content
+          #section-3
+            .grd-grid-12
+              %h1= l('Security')
+              %p.heading= l('The [_1] API uses the OAuth2.0 scheme for authenticating users.', stash->{website_name})
+            .grd-grid-7.grd-grid-mobile-12
+              %div#security-main
+                %p!= l('OAuth2.0 is the emerging internet standard for this purpose. See <a href="http://oauth.net/2" target="_blank">http://oauth.net/2</a> for a formal definition, although we will guide you through the steps relevant to your platform.')
+                %p= l('The most important benefit of using OAuth2.0 is that the end-users, who already have valid logins at [_1], are able to leverage new applications to execute various trading activities, without these applications needing to know or "see" the end-users security credentials.', stash->{website_name})
+            .grd-grid-5.grd-grid-mobile-12
+              %img.responsive{:src => url_for('images/pages/partnerapi/security.svg')}
+            .grd-grid-12
+              %p!= l('Further to this, the API interface is hosted by an API Proxy management provider, namely <a href="http://apigee.com" target="_blank">Apigee</a>. This service applies several services of benefit both to the application developer and to the API provider.')
+      .section
+        %a#api-console
+        .section-content
+          #section-4
+            .grd-grid-12.grd-with-padding
+              %h1= l('Console Facility')
+            .grd-grid-4.grd-grid-mobile-12
+              %img.responsive{:src => url_for('images/pages/partnerapi/console-facility.svg')}
+            .grd-grid-8.grd-grid-mobile-12
+              %ul#console-main
+                %li.image
+                %li!= l('The "raw" API can be inspected "live" using Apigee\'s <a href="http://apigee.com/rmg/console/binary1" target="_blank">Console-to-go</a> facility. This facility applies the full OAuth2 validation process, hence you will need to opt for the "OAuth2" Authentication option offered here and you will then need a valid [_1] login to proceed.', stash->{website_name} )
+            .grd-grid-12
+              %p!= l('An automatically generated <a href="https://apigee.com/rmg/resources/binary1" target="_blank">Resource Summary</a> is also available.')
+      .section
+        %a#dev-guide
+        .section-content
+          #section-5
+            .grd-grid-12
+              %h1= l('Developer\'s Guide')
+            .grd-grid-8.grd-grid-mobile-12
+              %div#dev-guide-main
+                %p
+                  = l('See our ')
+                  %a{:href => url_for('/devguide')}= l('Developer\'s Guide')
+                  = l('for detailed coding instructions.')
+            .grd-grid-4.grd-grid-mobile-12
+              %img.responsive{:src => url_for('images/pages/partnerapi/developer-guide.svg')}

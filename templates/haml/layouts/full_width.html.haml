@@ -8,7 +8,12 @@
   = include('layouts/default/head')
   - my $lang = stash->{language};
   %body.$lang
-    = include('layouts/default/header')
-    .content-wrapper
-      = include('layouts/full_width/content')
-    = include('layouts/default/footer')
+    #page-wrapper
+      = include('layouts/default/topbar')
+      = include('layouts/default/header')
+      #content-holder
+        .tab-menu.hidden#main-menu
+         = include('layouts/default/main_menu')
+        = include('layouts/default/mobile_menu')
+        = include('layouts/full_width/content')
+      = include('layouts/default/footer')

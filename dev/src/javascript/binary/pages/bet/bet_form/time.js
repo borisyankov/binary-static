@@ -519,7 +519,7 @@ BetForm.Time.Duration.prototype = {
                 min_span.removeClass('error');
             } else {
                 $(this).addClass('error');
-                min_span.addClass('error').effect('pulsate', {times: 2});
+                min_span.addClass('error');
             }
         };
 

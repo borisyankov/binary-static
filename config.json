@@ -2,8 +2,8 @@
 	"website_name": "Binary.com",
 	"display_languages": "EN,ID,RU,ES,FR,PT,DE,ZH_CN,PL,AR",
 	"static": {
-		"url": "https://borisyankov.github.io/binary-static/",
-		"version": "3.3.1"
+		"url": "https://static.binary.com/",
+		"version": "3.4.2"
 	},
 	"marketing": {
 		"google_tag_manager": "GTM-MZWFF7"
@@ -13,6 +13,7 @@
 		"telephone": {
 			"Australia": "+61 (0) 2 8005 0136",
 			"Ireland": "+353 (0) 76 622 3220",
+			"Malta": "+356 3550 0608",
 			"Mexico": "+52 55 4169 2160",
 			"Poland": "+48 22 208 4441",
 			"South Africa": "+27 21 832 0907",
@@ -27,10 +28,15 @@
 		},
 		"default_telephone": {
 			"country": "United Kingdom"
+		},
+		"skype_helpline": {
+			"EN": "binaryhelpline",
+			"ID": "binaryhelplineid",
+			"RU": "binaryhelplineru"
 		}
 	},
-	"binary_js_hash": "62654d3b99cad8872644249eb557290a",
-	"binary_lib_hash": "c1ee07e3cadd5878a72a83710a297fdd",
-	"binary_data_hash": "37609d7277b9e542d70bd4411ccd068f",
-	"binary_css_hash": "3b19b2fc46baadd82ef489dccbeefda7"
+	"binary_js_hash": "04c244fe8f09f495d2630aa7fa1ace74",
+	"binary_lib_hash": "4894e859e34325781b703674a4745ff6",
+	"binary_data_hash": "b57bbba8987f96d93d13358f8d72a719",
+	"binary_css_hash": "009196d39d7814d0bc8585b8f2c05279"
 }

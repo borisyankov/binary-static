@@ -48,11 +48,6 @@ var asset_index_init = function() {
 };
 
 function confirm_popup_action() {
-    SpotLight.attach_click_event('a.tm-a-2', function (e){
-        e.preventDefault();
-        $(this).parents('#bom-confirm-popup').find('a.tm-a-2').removeClass('a-active').end().end().addClass('a-active');
-        $('#'+this.id+'-content').siblings('div.rbox-content').addClass('invisible').end().removeClass('invisible');
-    });
 
     $('.bom_confirm_popup_link').on('click', function (e){
         e.preventDefault();

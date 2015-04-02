@@ -237,7 +237,7 @@ function listen_to_chart_element () {
                 overlays
                     .filter(':last').after(
                         '<li><a href="#">' +
-                        chart_overlay_or_new.find('h3').html() +
+                        chart_overlay_or_new.find('h4').html() +
                         '</a><input type="checkbox" checked="checked" value="'+previous_selected_radio[chart_overlay_or_new.data('related_input_name')]+'" name="overlay"></li>'
                     );
 
@@ -255,9 +255,10 @@ function listen_to_chart_element () {
 }
 
 var draw_chart = function (callback_after_complete) {
-    if($("#chart_director_imageholder").length === 0){
-        return;
-    }
+
+    var chart_director_imageholder = document.getElementById('chart_director_imageholder');
+
+    if (chart_director_imageholder === null) return;
 
     var all_li = $('#chart_compare_underlying').find('li');
     if (all_li.length == 1) {

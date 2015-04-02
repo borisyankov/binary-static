@@ -2,32 +2,21 @@
 -   title => l('Charting'),
 - );
 
-.grd-grid-12
-  %h1= l('Charting')
-  %p= l('[_1] provides a variety of charts to help you determine what markets to trade on. Try them out.',stash->{website_name})
-.grd-grid-6.grd-grid-mobile-12.grd-parent
-  .grd-grid-6.grd-parent
-    .grd-grid-8.grd-with-padding
-      %a.pjaxload{:href => url_for('chart_application.cgi')}
-        %img.chart-type-icon{:src => url_for('images/pages/charting/interactive-charts.svg')}
-    .grd-grid-12
-      %h3
-        %a.pjaxload{:href => url_for('chart_application.cgi')}= l('Java Charts')
-      %p= l('Try our downloadable charting application with an extensive range of indicators.')
-  .grd-grid-6.grd-parent
-    .grd-grid-8.grd-with-padding
-      %a.pjaxload{:href => url_for('smartchart.cgi?market=forex&underlying_symbol=frxUSDJPY&chart_type=CANDLESTICK')}
-        %img.chart-type-icon{:src => url_for('images/pages/charting/light-charts.svg')}
-    .grd-grid-12
-      %h3
-        %a.pjaxload{:href => url_for('smartchart.cgi?market=forex&underlying_symbol=frxUSDJPY&chart_type=CANDLESTICK')}= l('Light Charts')
-      %p= l('You\'ll enjoy using this comprehensive charting tool with 27 technical indicators.')
-.grd-grid-6.grd-grid-mobile-12.grd-parent
-  .grd-grid-6.grd-parent
-    .grd-grid-8.grd-with-padding
-      %a.pjaxload{:href => url_for('livechart.cgi')}
-        %img.chart-type-icon{:src => url_for('images/pages/charting/popup-charts.svg')}
-    .grd-grid-12
-      %h3
-        %a.pjaxload{:href => url_for('livechart.cgi')}= l('Live Charts')
-      %p= l('This is our \'next generation\' charting tool.')
+%h1= l('Charting')
+%p= l('[_1] provides a variety of charts to help you determine what markets to trade on. Try them out.',stash->{website_name})
+.row
+  .col
+    %a.pjaxload{:href => url_for('/charting/application')}
+      %img.responsive.chart-type-icon{:src => url_for('images/pages/charting/interactive-charts.svg')}
+    %p= l('Try our downloadable charting application with an extensive range of indicators.')
+    %a.pjaxload.button{:href => url_for('/charting/application')}= l('Java Charts')
+  .col
+    %a.pjaxload{:href => url_for('smartchart.cgi?market=forex&underlying_symbol=frxUSDJPY&chart_type=CANDLESTICK')}
+      %img.responsive.chart-type-icon{:src => url_for('images/pages/charting/light-charts.svg')}
+    %p= l('You\'ll enjoy using this comprehensive charting tool with 27 technical indicators.')
+    %a.pjaxload.button{:href => url_for('smartchart.cgi?market=forex&underlying_symbol=frxUSDJPY&chart_type=CANDLESTICK')}= l('Light Charts')
+  .col
+    %a.pjaxload{:href => url_for('/charting/livechart')}
+      %img.responsive.chart-type-icon{:src => url_for('images/pages/charting/popup-charts.svg')}
+    %p= l('This is our \'next generation\' charting tool.')
+    %a.pjaxload.button{:href => url_for('/charting/livechart')}= l('Live Charts')
