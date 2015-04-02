@@ -881,7 +881,7 @@ blockquote p:after {
   padding: 2em;
 }
 
-.home-container:nth-child(even) {
+.home-container:nth-child(odd) {
   background: #f5f5f6;
 }
 
