@@ -7,7 +7,7 @@
 - );
 - my $lang = stash->{language};
 
-.home-container
+.home-container.hero
   .home-body
     %hgroup
       %h2!= l('<i>The Premier Platform for</i>')
@@ -22,9 +22,9 @@
         %input#actype{:type => 'hidden', :name => 'actype', :value => 'virtual'}
         %input{:type => 'hidden', :name => 'l', :value => $lang}
       %p
-        %input{:id => 'btn_registration',:type => 'submit', :value => stash('createacc')}
+        %input.inverse{:id => 'btn_registration',:type => 'submit', :value => stash('createacc')}
 
-.home-container
+.home-container.darkish
   .home-body
     %hgroup
       %h1!= l('<i>The Easiest Way</i> to Get Started')
@@ -65,7 +65,7 @@
         %h3= l('Go With the Leader')
         %p= l('Binary.com is the award-winning industry pioneer in online options trading.')
 
-.home-container
+.home-container.darkish
   .home-body
     %hgroup
       %h1!= l('What Our <i>Clients</i> Think of Us?')
@@ -87,4 +87,4 @@
       %h1!= l('<i>Payment</i> Methods')
     %a.pjaxload{:href => url_for('/cashier/available_payment_methods')}
       %img{:src => url_for("images/pages/home/payment-methods.svg")}
-    %p= l('Hundreds of deposit and withdrawal options.')
+    %p{:style => "margin-bottom: -1em")}= l('Hundreds of deposit and withdrawal options.')

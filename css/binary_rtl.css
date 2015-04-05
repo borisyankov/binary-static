@@ -466,10 +466,6 @@ ul.bullet li {
   margin-top: 3px;
 }
 
-#content {
-  margin: 1em 0;
-}
-
 .separator-line {
   border-bottom: 1px solid #dedede;
   margin-top: 10px;
@@ -602,7 +598,7 @@ select, textarea, input[type=text], input[type=email], input[type=password], inp
 
 select, textarea, input[type=text], input[type=email], input[type=password], input[type=tel], input[type=number], input[type=date], input[type=datepicker], .dob {
   border: 1px solid #dadada;
-  border-radius: 3px;
+  border-radius: 2px;
   vertical-align: bottom;
 }
 select:hover, textarea:hover, input[type=text]:hover, input[type=email]:hover, input[type=password]:hover, input[type=tel]:hover, input[type=number]:hover, input[type=date]:hover, input[type=datepicker]:hover, .dob:hover {
@@ -725,7 +721,7 @@ fieldset .error-msg {
 }
 
 #dobdd {
-  border-radius: 3px 0 0 3px;
+  border-radius: 2px 0 0 2px;
 }
 
 #dobmm {
@@ -733,7 +729,7 @@ fieldset .error-msg {
 }
 
 #dobyy {
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 2px 2px 0;
 }
 
 .row {
@@ -754,7 +750,7 @@ header {
 
 .header-content {
   display: flex;
-  padding: .5em 0;
+  padding: .75em 0;
   height: 2em;
   width: 100%;
   max-width: 940px;
@@ -787,21 +783,108 @@ nav a {
   margin: .2em 0;
 }
 
+.sitemap, .regulatory {
+  margin: 0 auto;
+  padding: 2em 0;
+  max-width: 940px;
+}
+
+.sitemap {
+  font-size: 0.75rem;
+}
+.sitemap h4 {
+  font-weight: bold;
+  line-height: 1.5;
+}
+.sitemap a {
+  color: #404448;
+  font-weight: normal;
+  display: block;
+  line-height: 1.5;
+}
+
+.regulatory {
+  font-size: 0.5625rem;
+}
+.regulatory img {
+  height: 5em;
+}
+.regulatory a + a {
+  margin-left: 1em;
+}
+
+.regulatory-text {
+  text-align: justify;
+  flex: 5;
+}
+
+.social-icons {
+  text-align: right;
+}
+
+.social-icons img {
+  width: 2em;
+  padding: .25em;
+}
+
+.fb-gplus-follow {
+  margin-top: 10px;
+}
+.fb-gplus-follow .fb-like {
+  margin-right: 5px;
+}
+.fb-gplus-follow .gplus {
+  position: relative;
+  display: inline-block;
+  top: 3px;
+}
+
+#appcache-reload-message {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fef1cf;
+  z-index: 999;
+  text-align: center;
+}
+#appcache-reload-message .message {
+  margin: 12px;
+  font-style: italic;
+  color: #cc0033;
+}
+#appcache-reload-message .message a {
+  color: #2e8836;
+}
+
+#suspend-message {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #fef1cf;
+  z-index: 999;
+  text-align: center;
+}
+#suspend-message .message {
+  margin: 12px;
+  font-style: italic;
+  color: #cc0033;
+}
+
 button,
 input[type=submit],
 input[type=button],
 a.button {
   border: 0;
-  border-radius: 3px;
+  border-radius: 2px;
   cursor: pointer;
   color: white;
-  background: linear-gradient(#2d3459, #272c4b);
+  background: linear-gradient(#ea8832, #e77817);
   text-transform: capitalize;
   line-height: 1;
   padding: .5em 1em;
   font-weight: normal;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
 }
 button:focus,
 input[type=submit]:focus,
@@ -814,10 +897,14 @@ input[type=submit]:hover,
 input[type=button]:hover,
 a.button:hover {
   border: 1px solid rgba(0, 0, 0, 0.3);
+  background: linear-gradient(#e77817, #d97116);
 }
 
-.inverse, .login-btn, .logout-btn {
-  background: linear-gradient(#ea852d, #e87b1b) !important;
+.inverse {
+  background: linear-gradient(#2f365c, #252a48) !important;
+}
+.inverse:hover {
+  background: linear-gradient(#252a48, #20243e) !important;
 }
 
 a.button {
@@ -834,6 +921,12 @@ button:disabled,
 
 .home-content#content {
   width: 100%;
+}
+
+.hero {
+  background-image: url("/images/pages/home2/map.png");
+  backgroud-repeat: no-repeat;
+  background-size: cover;
 }
 
 blockquote p {
@@ -861,7 +954,7 @@ blockquote p:after {
 }
 
 #open-account {
-  border-radius: 3px;
+  border-radius: 2px;
   overflow: hidden;
   color: white;
   background: #e98024;
@@ -881,7 +974,7 @@ blockquote p:after {
   padding: 2em;
 }
 
-.home-container:nth-child(odd) {
+.darkish {
   background: #f5f5f6;
 }
 
@@ -939,7 +1032,7 @@ blockquote p:after {
   position: absolute;
   display: none;
   background: #15212d;
-  border-radius: 0 0 3px 3px;
+  border-radius: 0 0 2px 2px;
   margin: 1px 0 0 0;
   padding: 5px 10px 10px 10px;
 }
@@ -951,7 +1044,7 @@ blockquote p:after {
   border-radius: 0;
   padding: 2px 5px 2px 5px;
   display: block;
-  border-radius: 3px;
+  border-radius: 2px;
   line-height: 1.5;
 }
 #topbar ul li:active > ul, #topbar ul li:focus, #topbar ul li:hover {
@@ -1037,97 +1130,6 @@ blockquote p:after {
 
 #login-form, #header {
   display: none;
-}
-
-#footer-menu {
-  background: #f5f5f6;
-  padding: 1em 0;
-}
-#footer-menu h1 {
-  color: #2a3052;
-  font-weight: bold;
-  font-size: 0.75rem;
-}
-#footer-menu a {
-  color: #404448;
-  font-size: 0.75rem;
-  font-weight: normal;
-}
-#footer-menu li {
-  line-height: 1;
-}
-#footer-menu #accounts_links {
-  padding-bottom: 10px;
-}
-
-#footer-regulatory {
-  padding: 1em 0;
-}
-#footer-regulatory a,
-#footer-regulatory span {
-  display: inline-block;
-}
-#footer-regulatory #regulatory-text {
-  line-height: 1.2em;
-  text-align: justify;
-  font-size: 0.5625rem;
-}
-#footer-regulatory #iom_icon_footer {
-  max-width: 90px;
-}
-#footer-regulatory #lga_icon_footer {
-  max-width: 140px;
-}
-#footer-regulatory #eighteen_plus {
-  max-width: 45px;
-}
-#footer-regulatory .social-network-icon {
-  width: 30px;
-  height: 30px;
-  padding-right: 5px;
-  padding-top: 10px;
-}
-#footer-regulatory .fb-gplus-follow {
-  margin-top: 10px;
-}
-#footer-regulatory .fb-gplus-follow .fb-like {
-  margin-right: 5px;
-}
-#footer-regulatory .fb-gplus-follow .gplus {
-  position: relative;
-  display: inline-block;
-  top: 3px;
-}
-#footer-regulatory #appcache-reload-message {
-  display: none;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: #fef1cf;
-  z-index: 999;
-  text-align: center;
-}
-#footer-regulatory #appcache-reload-message .message {
-  margin: 12px;
-  font-style: italic;
-  color: #cc0033;
-}
-#footer-regulatory #appcache-reload-message .message a {
-  color: #2e8836;
-}
-
-#suspend-message {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: #fef1cf;
-  z-index: 999;
-  text-align: center;
-}
-#suspend-message .message {
-  margin: 12px;
-  font-style: italic;
-  color: #cc0033;
 }
 
 #main-menu {
@@ -1219,13 +1221,12 @@ blockquote p:after {
   padding: 0;
   margin-left: 0;
   background: none;
-  border-bottom: 1px solid #44484c;
 }
 #content ul.tm-ul li {
   border: none;
   list-style-image: none;
   background: #f2f2f2;
-  border-radius: 3px 3px 0 0;
+  border-radius: 2px 2px 0 0;
   margin: 0 6px 0 0;
   padding: 0 10px;
 }
@@ -1285,14 +1286,13 @@ blockquote p:after {
   padding: 0;
   margin-left: 0;
   background: none;
-  border-bottom: 1px solid #44484c;
   font: inherit !important;
 }
 .has-tabs ul.ui-tabs-nav li {
   border: none;
   list-style-image: none;
   background: #f2f2f2;
-  border-radius: 3px 3px 0 0;
+  border-radius: 2px 2px 0 0;
   margin: 0 6px 0 0;
   padding: 0 10px;
 }
@@ -1350,14 +1350,12 @@ blockquote p:after {
 }
 #content .page-section > .tab-menu {
   width: 100%;
-  height: 32px;
   background-color: #f2f2f2;
   border-bottom: 1px solid #dedede;
 }
 #content .page-section > .tab-menu ul.tm-ul {
   margin: 0;
   background-color: #f2f2f2;
-  border-bottom: 1px solid #dedede;
   font-size: 100%;
 }
 #content .page-section > .tab-menu ul.tm-ul li {
@@ -1422,7 +1420,7 @@ blockquote p:after {
   font-size: 14px;
   line-height: 1.5;
   background: #FFF1CF;
-  border-radius: 3px;
+  border-radius: 2px;
   border: 1px solid #c2c2c2;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
   position: absolute;
@@ -1503,7 +1501,7 @@ abbr {
   margin: 5px;
 }
 .home2-content #open-account #virtual-fields input, .home2-content #open-account #virtual-fields select, .home2-content #open-account #virtual-fields textarea {
-  border-radius: 3px;
+  border-radius: 2px;
   margin-right: 20px;
   margin-left: 20px;
 }
@@ -1925,7 +1923,7 @@ abbr {
   margin-bottom: 10px;
   min-width: 250px;
   font-size: 16px;
-  border-radius: 3px;
+  border-radius: 2px;
 }
 
 .zpass {
@@ -1934,7 +1932,7 @@ abbr {
   margin-bottom: 20px;
   min-width: 250px;
   font-size: 16px;
-  border-radius: 3px;
+  border-radius: 2px;
 }
 
 .overlay {
@@ -1976,7 +1974,7 @@ abbr {
   text-decoration: none;
   text-align: center;
   line-height: 100%;
-  border-radius: 3px;
+  border-radius: 2px;
   display: inline-block;
   background: #2a3052;
   padding: 9px 10.83333%;
@@ -2213,7 +2211,7 @@ abbr {
   margin-bottom: 10px;
   min-width: 250px;
   font-size: 16px;
-  border-radius: 3px;
+  border-radius: 2px;
 }
 
 .ypass {
@@ -2222,7 +2220,7 @@ abbr {
   margin-bottom: 20px;
   min-width: 250px;
   font-size: 16px;
-  border-radius: 3px;
+  border-radius: 2px;
 }
 
 .overlay {
@@ -2264,7 +2262,7 @@ abbr {
   text-decoration: none;
   text-align: center;
   line-height: 100%;
-  border-radius: 3px;
+  border-radius: 2px;
   display: inline-block;
   background: #2a3052;
   padding: 9px 10.83333%;
@@ -2345,7 +2343,7 @@ abbr {
   overflow: hidden;
 }
 .get-started .sidebar-left ul {
-  border-radius: 3px;
+  border-radius: 2px;
   overflow: hidden;
 }
 .get-started .sidebar-left ul li {
@@ -2379,7 +2377,7 @@ abbr {
   border-bottom: #dedede;
   margin-bottom: 20px;
   padding: 1em;
-  border-radius: 3px;
+  border-radius: 2px;
   overflow: hidden;
   text-align: center;
 }
@@ -4555,7 +4553,7 @@ table .loss, table .lower {
   margin-top: 40px;
 }
 .static_full .sidebar ul {
-  border-radius: 3px;
+  border-radius: 2px;
   overflow: hidden;
 }
 .static_full .sidebar ul li {
