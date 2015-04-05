@@ -924,7 +924,7 @@ button:disabled,
 }
 
 .hero {
-  background-image: url("/images/pages/home2/map.png");
+  background-image: url("../images/pages/home2/map.png");
   backgroud-repeat: no-repeat;
   background-size: cover;
 }
