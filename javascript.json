@@ -16,7 +16,6 @@
     "src/javascript/lib/jquery_color_animation.js",
     "src/javascript/lib/loadCSS.js",
     "src/javascript/lib/loadJS.js",
-    "src/javascript/lib/mmenu/jquery.mmenu.min.all.js",
     "src/javascript/lib/moment/locale/ar.js",
     "src/javascript/lib/moment/locale/de.js",
     "src/javascript/lib/moment/locale/es.js",

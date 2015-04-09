@@ -159,12 +159,16 @@ var home_bomoverlay = {
     }
 };
 
+var email_rot13 = function(str) {
+    return str.replace(/[a-zA-Z]/g, function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);});
+};
+
 var display_cs_contacts = function () {
     $('.contact-content').on("change", '#cs_telephone_number', function () {
         var val = $(this).val();
         $('#display_cs_telephone').text(val);
     });
-    $('#cs_contact_eaddress').html("<n uers=\"znvygb:fhccbeg@ovanel.pbz\" ery=\"absbyybj\">fhccbeg@ovanel.pbz</n>".replace(/[a-zA-Z]/g, function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);}));
+    $('#cs_contact_eaddress').html(email_rot13("<n uers=\"znvygb:fhccbeg@ovanel.pbz\" ery=\"absbyybj\">fhccbeg@ovanel.pbz</n>"));
 };
 
 var change_chat_icon = function () {
@@ -258,6 +262,10 @@ var show_live_chat_icon = function() {
     }, 80);
 };
 
+var display_career_email = function() {
+    $("#hr_contact_eaddress").html(email_rot13("<n uers=\"znvygb:ue@ovanel.pbz\" ery=\"absbyybj\">ue@ovanel.pbz</n>"));
+};
+
 pjax_config_page('/$|/home', function() {
     return {
         onLoad: function() {
@@ -341,6 +349,14 @@ pjax_config_page('/contact', function() {
         onLoad: function() {
             display_cs_contacts();
             show_live_chat_icon();
+        },
+    };
+});
+
+pjax_config_page('/careers', function() {
+    return {
+        onLoad: function() {
+            display_career_email();
         },
     };
 });

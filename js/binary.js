@@ -1126,13 +1126,17 @@ var Page = function(config) {
 
 Page.prototype = {
     language: function() {
-        if ($('#language_select').length > 0) {
-            return $('#language_select').attr('class').toUpperCase(); //Required as mojo still provides lower case lang codes and most of our system expects upper case.
+        if ($('.language-selector').length > 0) {
+            return $('.language-selector select').val().toUpperCase(); //Required as mojo still provides lower case lang codes and most of our system expects upper case.
         } else if(page.url.param('l')) {
             return page.url.param('l');
         } else {
             return 'EN';
         }
+    },
+    flag: function() {
+        var idx = $('.language-selector select option:selected').index();
+        $('.language-selector select').css('background-position', '0 -' + idx * 15 + 'px');
     },
     on_load: function() {
         this.url.reset();
@@ -1142,6 +1146,7 @@ Page.prototype = {
         this.record_affiliate_exposure();
         this.contents.on_load();
         $('#current_width').val(get_container_width());//This should probably not be here.
+        this.flag();
     },
     on_unload: function() {
         this.header.on_unload();
@@ -1149,8 +1154,8 @@ Page.prototype = {
     },
     on_change_language: function() {
         var that = this;
-        $('#language_select').on('change', 'select', function() {
-            var language = $(this).find('option:selected').attr('class');
+        $('.language-selector').on('change', 'select', function() {
+            var language = $(this).val();
             document.location = that.url_for_language(language);
         });
     },
@@ -1611,7 +1616,7 @@ function formEffects() {
 function add_click_effect_to_button() {
     var prefix = function (class_name) {
         var class_names = class_name.split(/\s+/);
-        
+
         var _prefix = 'button';
         var cn = class_names.shift();
 
@@ -1652,22 +1657,6 @@ function add_click_effect_to_button() {
         });
 }
 
-var make_mobile_menu = function () {
-    if ($('#mobile-menu-container').is(':visible')) {
-        $('#mobile-menu').mmenu({
-            position: 'right',
-            zposition: 'front',
-            slidingSubmenus: false,
-            searchfield: true,
-            onClick: {
-                close: true
-            },
-        }, {
-            selectedClass: 'active',
-        });
-    }
-};
-
 onLoad.queue(function () {
     $('.tm-ul > li').hover(
         function () {
@@ -1681,7 +1670,6 @@ onLoad.queue(function () {
     MenuContent.init($('.content-tab-container').find('.tm-ul'));
 
     add_click_effect_to_button();
-    make_mobile_menu();
 
     // attach the class to account form's div/fieldset for CSS visual effects
     var objFormEffect = new formEffects();
@@ -8351,12 +8339,16 @@ var home_bomoverlay = {
     }
 };
 
+var email_rot13 = function(str) {
+    return str.replace(/[a-zA-Z]/g, function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);});
+};
+
 var display_cs_contacts = function () {
     $('.contact-content').on("change", '#cs_telephone_number', function () {
         var val = $(this).val();
         $('#display_cs_telephone').text(val);
     });
-    $('#cs_contact_eaddress').html("<n uers=\"znvygb:fhccbeg@ovanel.pbz\" ery=\"absbyybj\">fhccbeg@ovanel.pbz</n>".replace(/[a-zA-Z]/g, function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);}));
+    $('#cs_contact_eaddress').html(email_rot13("<n uers=\"znvygb:fhccbeg@ovanel.pbz\" ery=\"absbyybj\">fhccbeg@ovanel.pbz</n>"));
 };
 
 var change_chat_icon = function () {
@@ -8450,6 +8442,10 @@ var show_live_chat_icon = function() {
     }, 80);
 };
 
+var display_career_email = function() {
+    $("#hr_contact_eaddress").html(email_rot13("<n uers=\"znvygb:ue@ovanel.pbz\" ery=\"absbyybj\">ue@ovanel.pbz</n>"));
+};
+
 pjax_config_page('/$|/home', function() {
     return {
         onLoad: function() {
@@ -8533,6 +8529,14 @@ pjax_config_page('/contact', function() {
         onLoad: function() {
             display_cs_contacts();
             show_live_chat_icon();
+        },
+    };
+});
+
+pjax_config_page('/careers', function() {
+    return {
+        onLoad: function() {
+            display_career_email();
         },
     };
 });

@@ -1,13 +1,5 @@
 <select>
 [% FOREACH o IN options %]
-    [% IF o.selected %]
-        <option class='[% o.code %]' selected='selected'>
-            [% o.text %]
-        </option>
-    [% ELSE %]
-        <option class='[% o.code %]'>
-            [% o.text %]
-        </option>
-    [% END %]
+    <option value='[% o.code %]' [% IF o.selected %] selected[% END %]>[% o.text %]</option>    
 [% END %]
 </select>

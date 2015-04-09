@@ -1,54 +1,54 @@
 %footer
-  .home-content.darkish
-      .sitemap.row
-        .col
-          %h4= l('Partners')
-          %a.pjaxload{:href=>url_for("/affiliate/signup")}= l('Affiliate Program')
-          %a.pjaxload{:href=>url_for("white-labels")}= l('White Labels')
-          %a.pjaxload{:href=>url_for("partnerapi")}= l('Partner API')
-          %a.pjaxload{:href=>url_for("open-source-projects")}= l('Open Source')
-        .col
-          %h4= l('Education')
-          %a.pjaxload{:href=>url_for("/why-us")}= l('Why Us?')
-          %a.pjaxload{:href=>url_for("/get-started")}= l('Getting Started')
-          %a.pjaxload{:href=>url_for("/tour")}= l('Platform Tour')
-          %a{:href=>"http://www.gamcare.org.uk/"}= l('GamCare')
-          %a{:href=>"http://blog.binary.com/en/webinar/"}= l('Webinars')
-        .col
-          %h4= l('Trading')
-          %a.pjaxload{:href=>url_for("pricing_table.cgi")}= l('Pricing Table')
-          %a.pjaxload{:href=>url_for("rise_fall_table.cgi")}= l('Rise/Fall Table')
-          %a.pjaxload{:href=>url_for("asset_index.cgi")}= l('Asset Index')
-          %a.pjaxload{:href=>url_for("/cashier/available_payment_methods")}= l('Payment Methods')
-          %a.pjaxload{:href=>url_for("/charting/application")}= l('Chart Application')
-          %a.pjaxload{:href=>url_for("smartchart.cgi")}= l('Light Charts')
-          %a.pjaxload{:href=>url_for("/charting/livechart")}= l('Live Charts')
-        .col
-          %h4= l('Terms')
-          %a.pjaxload{:href=>url_for("c_template.cgi?filecode=legal")}= l('Terms and Conditions')
-          %a.pjaxload{:href=>url_for("c_template.cgi?filecode=legal#privacy-tab")}= l('Security and Privacy')
-          %a.pjaxload{:href=>url_for("responsible-trading")}= l('Responsible Trading')
-          %a.pjaxload{:href=>url_for("c_template.cgi?filecode=legal&selected_tab=complaints-disputes-tac-tab")}= l('Complaints and Disputes')
-        .col
-          %h4= l('About Us')
-          %a.pjaxload{:href=>url_for("about-us"), :class => 'pjaxload'}= l('Group Information')
-          %a.pjaxload{:href=>url_for("group-history"), :class => 'pjaxload'}= l('Group History')
-          %a.pjaxload{:href=>url_for("/legal/us_patents"), :class=>"us_patent_link"}= l('Patents')
-          %a.pjaxload{:href=>url_for("careers")}= l('Careers')
-          %a{:href=>"http://blog.binary.com"}= l('Blog')
-          %a{:href=>"http://binarycom.statuspage.io"}= l('Network Status')
-          %a.pjaxload{:href=>url_for("contact")}= l('Contact Us')
-        .col
-          = include('layouts/default/social')
-  .home-content
-    .row.regulatory
-        .col
-          %a{:href => "http://www.gov.im/gambling/"}
-            %img{:src => url_for('images/pages/footer/isle-of-man.png')}
-          %a{:href => "http://www.mga.org.mt/"}
-            %img{:src => url_for('images/pages/footer/mga-logo-footer.svg')}
-        .col.regulatory-text
-          != l("This website is marketed in the UK and Isle of Man by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles, licenced and regulated by (1) the Gambling Supervision Commission in the Isle of Man, British Isles, current online gambling licence issued on 31 August 2012, and for UK clients by (2) the UK Gambling Commission - <a href='[_1]' target='_blank'>view license</a>. This website is marketed in the rest of the EU by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated by (1) the Malta Gaming Authority in Malta, licence no MGA/CL2/118/2000, 26th May 2010 and for UK clients by (2) the UK Gambling Commission - <a href='[_2]' target='_blank'>view license</a>. This website's services are not made available in the USA, Japan or Hong Kong, or to persons under age 18.", "https://secure.gamblingcommission.gov.uk/gccustomweb/PublicRegister/PRSearch.aspx?ExternalAccountId=39172", "https://secure.gamblingcommission.gov.uk/gccustomweb/PublicRegister/PRSearch.aspx?ExternalAccountId=39495")
+    .home-content.darkish
+        .sitemap.row
+            .col
+                %h4= l('Partners')
+                %a.pjaxload{:href=>url_for("/affiliate/signup")}= l('Affiliate Program')
+                %a.pjaxload{:href=>url_for("white-labels")}= l('White Labels')
+                %a.pjaxload{:href=>url_for("partnerapi")}= l('Partner API')
+                %a.pjaxload{:href=>url_for("open-source-projects")}= l('Open Source')
+            .col
+                %h4= l('Education')
+                %a.pjaxload{:href=>url_for("/why-us")}= l('Why Us?')
+                %a.pjaxload{:href=>url_for("/get-started")}= l('Getting Started')
+                %a.pjaxload{:href=>url_for("/tour")}= l('Platform Tour')
+                %a{:href=>"http://www.gamcare.org.uk/"}= l('GamCare')
+                %a{:href=>"http://blog.binary.com/en/webinar/"}= l('Webinars')
+            .col
+                %h4= l('Trading')
+                %a.pjaxload{:href=>url_for("pricing_table.cgi")}= l('Pricing Table')
+                %a.pjaxload{:href=>url_for("rise_fall_table.cgi")}= l('Rise/Fall Table')
+                %a.pjaxload{:href=>url_for("asset_index.cgi")}= l('Asset Index')
+                %a.pjaxload{:href=>url_for("/cashier/available_payment_methods")}= l('Payment Methods')
+                %a.pjaxload{:href=>url_for("/charting/application")}= l('Chart Application')
+                %a.pjaxload{:href=>url_for("smartchart.cgi")}= l('Light Charts')
+                %a.pjaxload{:href=>url_for("/charting/livechart")}= l('Live Charts')
+            .col
+                %h4= l('Terms')
+                %a.pjaxload{:href=>url_for("c_template.cgi?filecode=legal")}= l('Terms and Conditions')
+                %a.pjaxload{:href=>url_for("c_template.cgi?filecode=legal#privacy-tab")}= l('Security and Privacy')
+                %a.pjaxload{:href=>url_for("responsible-trading")}= l('Responsible Trading')
+                %a.pjaxload{:href=>url_for("c_template.cgi?filecode=legal&selected_tab=complaints-disputes-tac-tab")}= l('Complaints and Disputes')
+            .col
+                %h4= l('About Us')
+                %a.pjaxload{:href=>url_for("about-us"), :class => 'pjaxload'}= l('Group Information')
+                %a.pjaxload{:href=>url_for("group-history"), :class => 'pjaxload'}= l('Group History')
+                %a.pjaxload{:href=>url_for("/legal/us_patents"), :class=>"us_patent_link"}= l('Patents')
+                %a.pjaxload{:href=>url_for("careers")}= l('Careers')
+                %a{:href=>"http://blog.binary.com"}= l('Blog')
+                %a{:href=>"http://binarycom.statuspage.io"}= l('Network Status')
+                %a.pjaxload{:href=>url_for("contact")}= l('Contact Us')
+            .col
+                = include('layouts/default/social')
+    .home-content
+        .row.regulatory
+            .col.regulatory-logos
+                %a{:href => "http://www.gov.im/gambling/"}
+                    %img{:src => url_for('images/pages/footer/isle-of-man.png')}
+                %a{:href => "http://www.mga.org.mt/"}
+                    %img{:src => url_for('images/pages/footer/mga-logo-footer.svg')}
+            .col.regulatory-text
+                != l("This website is marketed in the UK and Isle of Man by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles, licenced and regulated by (1) the Gambling Supervision Commission in the Isle of Man, British Isles, current online gambling licence issued on 31 August 2012, and for UK clients by (2) the UK Gambling Commission - <a href='[_1]' target='_blank'>view license</a>. This website is marketed in the rest of the EU by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated by (1) the Malta Gaming Authority in Malta, licence no MGA/CL2/118/2000, 26th May 2010 and for UK clients by (2) the UK Gambling Commission - <a href='[_2]' target='_blank'>view license</a>. This website's services are not made available in the USA, Japan or Hong Kong, or to persons under age 18.", "https://secure.gamblingcommission.gov.uk/gccustomweb/PublicRegister/PRSearch.aspx?ExternalAccountId=39172", "https://secure.gamblingcommission.gov.uk/gccustomweb/PublicRegister/PRSearch.aspx?ExternalAccountId=39495")
 
 #appcache-reload-message
-  .message!= l("A new version of the interface is available. Please <a href='#' id='appcache-refresh-link'>refresh</a> this page to try again.")
+    .message!= l("A new version of the interface is available. Please <a href='#' id='appcache-refresh-link'>refresh</a> this page to try again.")

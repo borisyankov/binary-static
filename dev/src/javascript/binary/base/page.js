@@ -581,13 +581,17 @@ var Page = function(config) {
 
 Page.prototype = {
     language: function() {
-        if ($('#language_select').length > 0) {
-            return $('#language_select').attr('class').toUpperCase(); //Required as mojo still provides lower case lang codes and most of our system expects upper case.
+        if ($('.language-selector').length > 0) {
+            return $('.language-selector select').val().toUpperCase(); //Required as mojo still provides lower case lang codes and most of our system expects upper case.
         } else if(page.url.param('l')) {
             return page.url.param('l');
         } else {
             return 'EN';
         }
+    },
+    flag: function() {
+        var idx = $('.language-selector select option:selected').index();
+        $('.language-selector select').css('background-position', '0 -' + idx * 15 + 'px');
     },
     on_load: function() {
         this.url.reset();
@@ -597,6 +601,7 @@ Page.prototype = {
         this.record_affiliate_exposure();
         this.contents.on_load();
         $('#current_width').val(get_container_width());//This should probably not be here.
+        this.flag();
     },
     on_unload: function() {
         this.header.on_unload();
@@ -604,8 +609,8 @@ Page.prototype = {
     },
     on_change_language: function() {
         var that = this;
-        $('#language_select').on('change', 'select', function() {
-            var language = $(this).find('option:selected').attr('class');
+        $('.language-selector').on('change', 'select', function() {
+            var language = $(this).val();
             document.location = that.url_for_language(language);
         });
     },

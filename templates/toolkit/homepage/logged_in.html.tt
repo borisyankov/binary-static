@@ -33,13 +33,13 @@
     <div class='grd-grid-6 grd-grid-mobile-12 grd-parent'>
         <div class='grd-grid-6 grd-parent'>
             <div class='grd-grid-8 grd-with-padding'>
-                <a href="[% request.url_for('portfolio.cgi') %]" class="pjaxload">
+                <a href="[% request.url_for('/user/portfolio') %]" class="pjaxload">
                     <img class='responsive' src="[% request.url_for('images/pages/my_account/portfolio-icon.svg') %]"/>
                 </a>
             </div>
             <div class='grd-grid-12'>
                 <h4>
-                    <a href="[% request.url_for('portfolio.cgi') %]" class="pjaxload">[% l('Portfolio') %]</a>
+                    <a href="[% request.url_for('/user/portfolio') %]" class="pjaxload">[% l('Portfolio') %]</a>
                 </h4>
                 <p>
                     [% l('View your open positions.') %]
@@ -48,13 +48,13 @@
         </div>
         <div class='grd-grid-6 grd-parent'>
             <div class='grd-grid-8 grd-with-padding'>
-                <a href="[% request.url_for('profit_table.cgi') %]" class="pjaxload">
+                <a href="[% request.url_for('/user/profit_table') %]" class="pjaxload">
                     <img class='responsive' src="[% request.url_for('images/pages/my_account/profit-table-icon.svg') %]"/>
                 </a>
             </div>
             <div class='grd-grid-12'>
                 <h4>
-                    <a href="[% request.url_for('profit_table.cgi') %]" class="pjaxload">[% l('Profit Table') %]</a>
+                    <a href="[% request.url_for('/user/profit_table') %]" class="pjaxload">[% l('Profit Table') %]</a>
                 </h4>
                 <p>
                     [% l('View your trading profit/loss.') %]

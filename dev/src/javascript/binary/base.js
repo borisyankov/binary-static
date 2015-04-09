@@ -96,7 +96,7 @@ function formEffects() {
 function add_click_effect_to_button() {
     var prefix = function (class_name) {
         var class_names = class_name.split(/\s+/);
-        
+
         var _prefix = 'button';
         var cn = class_names.shift();
 
@@ -137,22 +137,6 @@ function add_click_effect_to_button() {
         });
 }
 
-var make_mobile_menu = function () {
-    if ($('#mobile-menu-container').is(':visible')) {
-        $('#mobile-menu').mmenu({
-            position: 'right',
-            zposition: 'front',
-            slidingSubmenus: false,
-            searchfield: true,
-            onClick: {
-                close: true
-            },
-        }, {
-            selectedClass: 'active',
-        });
-    }
-};
-
 onLoad.queue(function () {
     $('.tm-ul > li').hover(
         function () {
@@ -166,7 +150,6 @@ onLoad.queue(function () {
     MenuContent.init($('.content-tab-container').find('.tm-ul'));
 
     add_click_effect_to_button();
-    make_mobile_menu();
 
     // attach the class to account form's div/fieldset for CSS visual effects
     var objFormEffect = new formEffects();

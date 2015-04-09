@@ -60,7 +60,7 @@
           #section-3
             .grd-grid-12
               %h1= l('Random Quotidians')
-              %p.heading= l('Don’t be put off by the name. Quotidian just means something that happens everyday.')
+              %h2= l('Don’t be put off by the name. Quotidian just means something that happens everyday.')
               %p
                 != l('[_1] are markets that reset back to a price of 1000 at the start of each trading day (00:00:00 GMT), and all trades settle before the end of the trading day (23:59:59 GMT).', pjax_link_for(l('Random Quotidians'), url_for('trade.cgi?market=random&form_name=risefall&underlying_symbol=RDBEAR')))
             #random-quotidians-container

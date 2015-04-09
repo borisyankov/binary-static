@@ -39,7 +39,7 @@
           #section-2
             .grd-grid-12
               %h1= l('REST')
-              %p.heading= l("[_1]'s API conforms to the Representational State Transfer (REST) model.", stash->{website_name})
+              %h2= l("[_1]'s API conforms to the Representational State Transfer (REST) model.", stash->{website_name})
             .grd-grid-8.grd-grid-mobile-12
               %div#rest-main
                 %p= l('Calls which invoke the API are simple, recognizable and can be negotiated from all popular web programming technologies in use today. For example, to get a list of "marketplaces" currently available at [_1]:',  stash->{website_name})
@@ -57,7 +57,7 @@
           #section-3
             .grd-grid-12
               %h1= l('Security')
-              %p.heading= l('The [_1] API uses the OAuth2.0 scheme for authenticating users.', stash->{website_name})
+              %h2= l('The [_1] API uses the OAuth2.0 scheme for authenticating users.', stash->{website_name})
             .grd-grid-7.grd-grid-mobile-12
               %div#security-main
                 %p!= l('OAuth2.0 is the emerging internet standard for this purpose. See <a href="http://oauth.net/2" target="_blank">http://oauth.net/2</a> for a formal definition, although we will guide you through the steps relevant to your platform.')

@@ -1,13 +1,48 @@
-#main-navigation
-  %ul#menu-top
-    - my @nav = ({route => '/why-us',      text => l('Why us?')},
-    -            {route => '/get-started', text => l('Get started')},
-    -            {route => '/tour',        text => l('Tour')});
-    - foreach my $item (@nav) {
-      - my ($route, $text) = ($item->{route}, $item->{text});
-      - my $class = (index(url_for, $route) != -1) ? 'active' : '';
-      %li.$class
-        %a{:href=>url_for($route), :class => 'pjaxload'}= $text
-    - }
+%nav
+  %ul.nav1st
     %li
-      %a{:href=>url_for('trade.cgi'), :class => 'pjaxload'}= l('Trade')
+      .nav-trade
+        %a.pjaxload{:href => url_for('trade.cgi')}= l('Trade')
+    %li
+      .nav-cashier
+        %a.pjaxload{:href => url_for('available_payment_methods.cgi')}= l('Cashier')
+    %li
+      .nav-resources
+        %a= l('Resources')
+      %ul.nav2nd
+        %li
+          %a.pjaxload{:href=>url_for("asset_index.cgi")}= l('Asset Index')
+        %li
+          %a.pjaxload{:href => url_for('trading_times.cgi')}= l('Trading Times')
+        %li
+          %a.pjaxload{:href => url_for('contract_guide.cgi')}= l('Trading Guide')
+        %li
+          %a.pjaxload{:href=>url_for("pricing_table.cgi")}= l('Pricing Table')
+        %li
+          %a.pjaxload{:href=>url_for("rise_fall_table.cgi")}= l('Rise/Fall Table')
+        %li
+          %a.pjaxload{:href=>url_for("chart_application.cgi")}= l('Chart Application')
+        %li
+          %a.pjaxload{:href=>url_for("smartchart.cgi")}= l('Light Charts')
+        %li
+          %a.pjaxload{:href=>url_for("livechart.cgi")}= l('Live Charts')
+    %li
+      .nav-help
+        %a= l('Help')
+      %ul.nav2nd
+        %li
+          %a.pjaxload{:href=>url_for("/why-us")}= l('Why Us?')
+        %li
+          %a.pjaxload{:href=>url_for("/get-started")}= l('Training Center')
+        %li
+          %a.pjaxload{:href=>url_for("/tour")}= l('Tour')
+        %li
+          %a{:href=>"http://blog.binary.com/en/webinar/"}= l('Webinars')
+        %li
+          %a{:href=>"http://blog.binary.com"}= l('Blog')
+        %li
+          %a{:href=>"http://www.gamcare.org.uk/"}= l('GamCare')
+        %li
+          %a.pjaxload{:href=>url_for("responsible-trading")}= l('Responsible Trading')
+        %li
+          %a.pjaxload{:href=>url_for("contact")}= l('Contact Us')
