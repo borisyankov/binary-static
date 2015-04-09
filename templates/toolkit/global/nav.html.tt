@@ -50,7 +50,7 @@
                     <a class="pjaxload" href="[% request.url_for('why-us') %]" [% target %]>[% l("Why Us?") %]</a>
                 </li>
                 <li>
-                    <a class="pjaxload" href="[% request.url_for('get-started') %]" [% target %]>[% l("Training Center") %]</a>
+                    <a class="pjaxload" href="[% request.url_for('get-started') %]" [% target %]>[% l("Get Started") %]</a>
                 </li>
                 <li>
                     <a class="pjaxload" href="[% request.url_for('tour.cgi') %]" [% target %]>[% l("Tour") %]</a>

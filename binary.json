@@ -46,6 +46,5 @@
     "src/javascript/binary/pages/profit_table.js",
     "src/javascript/binary/pages/selfexclusion.js",
     "src/javascript/binary/pages/statement.js",
-    "src/javascript/binary/trackjs_onerror.js",
     "src/javascript/binary/utility.js"
 ]

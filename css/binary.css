@@ -1225,6 +1225,32 @@ body {
   padding: 1rem;
 }
 
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead, tbody {
+  border-bottom: 2px solid #dadada;
+}
+
+th, td {
+  padding: .5rem;
+}
+
+th {
+  color: #2a3052;
+}
+
+tr {
+  border-bottom: 1px solid #dadada;
+}
+
+table ul {
+  padding-left: 0;
+  list-style: none;
+}
+
 button,
 input[type=submit],
 input[type=button],
@@ -1296,20 +1322,23 @@ button:disabled,
 blockquote p {
   quotes: "\201C" "\201D" "\2018" "\2019";
   margin: 0 2rem 1rem 2rem;
+  text-indent: 3rem;
 }
 blockquote p:before, blockquote p:after {
   color: #e98024;
   font-size: 5rem;
   line-height: 0;
-  vertical-align: -.4rem;
+  position: absolute;
 }
 blockquote p:before {
   content: open-quote;
-  margin-right: .1rem;
+  margin-left: -5rem;
+  margin-top: 1.5rem;
 }
 blockquote p:after {
   content: close-quote;
-  margin-left: .1rem;
+  margin-left: -3rem;
+  margin-top: 2.2rem;
 }
 
 .iconic {
@@ -3318,12 +3347,6 @@ a.close:hover {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.bet_confirm_wrapper table {
-  font-size: 14px;
-}
-.bet_confirm_wrapper table .even {
-  background: #f2f2f2;
-}
 .bet_confirm_wrapper #confirmation_table {
   font-size: 16px;
   border: none;
@@ -3563,9 +3586,6 @@ a.close:hover {
 #content .rbox-content {
   background-color: white;
   padding: 0.3em 0;
-}
-#content .rbox-content table td {
-  border: 0;
 }
 #content .rbox-content .half-1 {
   width: 50%;
@@ -4582,148 +4602,6 @@ form#rise_fall_form label {
 }
 #content #client_message.errorbox .rbox-wrap .rbox-content ul {
   margin: 1em 0;
-}
-
-table {
-  border-collapse: collapse;
-  font-size: 0.9em;
-  line-height: 1.5em;
-  width: 100%;
-}
-table .even {
-  background-color: white;
-}
-table * {
-  font-size: 1em;
-}
-table thead, table th {
-  line-height: 1.1em;
-  font-weight: bold;
-  padding: 3px 8px;
-  background: #f2f2f2;
-  border-bottom: 1px solid #44484c;
-  vertical-align: middle;
-}
-table thead#pf-bet-details, table th#pf-bet-details {
-  text-align: left;
-}
-table thead.total, table th.total {
-  background: none;
-}
-table thead.num, table th.num {
-  font-weight: bold;
-}
-table td {
-  vertical-align: top;
-  border-width: 0 1px;
-  padding: 4px 4px;
-  border-bottom: 3px solid #f2f2f2;
-}
-table td.num {
-  text-align: center;
-}
-table td.text {
-  text-align: center;
-  vertical-align: middle;
-}
-table td.tip {
-  text-align: left;
-}
-table td a.button-analyse, table td a.button-analyse:visited {
-  background: none;
-  display: inline;
-  padding: 0;
-}
-table td a.button-analyse span, table td a.button-analyse:visited span {
-  font-weight: normal;
-  background: none;
-  text-transform: capitalize;
-  padding: 0;
-}
-table td a.button-analyse span:hover, table td a.button-analyse span:active, table td a.button-analyse:visited span:hover, table td a.button-analyse:visited span:active {
-  background: none;
-  text-decoration: underline;
-}
-table tr.rbox-sub-header {
-  font-weight: bold;
-}
-table tr.rbox-sub-header .first {
-  text-align: left;
-}
-table .rbox-sub-header {
-  background-color: white;
-  font-size: 1.1em;
-  font-weight: bold;
-  padding: 1.5em 0.2em 0.8em;
-}
-table .action, table .icon {
-  text-align: center;
-}
-table .total, table .num {
-  text-align: right;
-}
-table .status, table .time {
-  text-align: left;
-}
-table .ref {
-  text-align: center;
-}
-table .range {
-  padding: 4px 36px;
-  text-align: left;
-}
-table .percent {
-  text-align: center;
-}
-table .loss, table .lower {
-  color: #cc0033;
-}
-
-/* Gridle based table styling */
-.table-header {
-  clear: both;
-  overflow: auto;
-  font-weight: bold;
-  font-size: 90%;
-  border-bottom: 1px solid #808080;
-  background: none repeat scroll 0% 0% #F2F2F2;
-}
-.table-header [class*="grd-grid-"] {
-  word-wrap: break-word;
-  white-space: normal;
-}
-
-.table-body {
-  clear: both;
-  line-height: 1.5em;
-  padding-top: 20px;
-  font-size: 90%;
-  padding-bottom: 0px;
-}
-.table-body .profit {
-  color: #2e8836;
-}
-.table-body .loss, .table-body .lower {
-  color: #cc0033;
-}
-.table-body a.button-analyse, .table-body a.button-analyse:visited {
-  background: none;
-  display: inline;
-  padding: 0;
-}
-.table-body a.button-analyse span, .table-body a.button-analyse:visited span {
-  font-weight: normal;
-  background: none;
-  text-transform: capitalize;
-  padding: 0;
-}
-.table-body a.button-analyse span:hover, .table-body a.button-analyse span:active, .table-body a.button-analyse:visited span:hover, .table-body a.button-analyse:visited span:active {
-  background: none;
-  text-decoration: underline;
-}
-
-.table-body-lines {
-  border-bottom: 3px solid #F2F2F2;
 }
 
 #cashier-content h3 {
