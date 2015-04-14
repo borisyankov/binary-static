@@ -13,12 +13,6 @@
                 <a class="pjaxload" href="[% request.url_for('white-labels') %]" >[% l('White Labels') %]</a>
                 <a class="pjaxload" href="[% request.url_for('partnerapi') %]">[% l('Partner API') %]</a>
                 <a class="pjaxload" href="[% request.url_for('open-source-projects') %]" >[% l('Open Source') %]</a>
-            </div>
-            <div class="col">
-                <h4>[% l('Education') %]</h4>
-                <a class="pjaxload" href="[% request.url_for('why-us') %]">[% l('Why Us?') %]</a>
-                <a class="pjaxload" href="[% request.url_for('get-started') %]">[% l('Getting Started') %]</a>
-                <a class="pjaxload" href="[% request.url_for('tour') %]">[% l('Platform Tour') %]</a>
                 <a href="http://www.gamcare.org.uk/">[% l('GamCare') %]</a>
                 <a href="http://blog.binary.com/en/webinar/">[% l('Webinars') %]</a>
             </div>
@@ -27,7 +21,6 @@
                 <a class="pjaxload" href="[% request.url_for('pricing_table.cgi') %]">[% l('Pricing Table') %]</a>
                 <a class="pjaxload" href="[% request.url_for('rise_fall_table.cgi') %]">[% l('Rise/Fall Table') %]</a>
                 <a class="pjaxload" href="[% request.url_for('asset_index.cgi') %]">[% l('Asset Index') %]</a>
-                <a class="pjaxload" href="[% request.url_for('/cashier/available_payment_methods') %]">[% l('Payment Methods') %]</a>
                 <a class="pjaxload" href="[% request.url_for('/charting/application') %]">[% l('Chart Application') %]</a>
                 <a class="pjaxload" href="[% request.url_for('smartchart.cgi') %]">[% l('Light Charts') %]</a>
                 <a class="pjaxload" href="[% request.url_for('/charting/livechart') %]">[% l('Live Charts') %]</a>
@@ -49,7 +42,7 @@
                 <a href="http://binarycom.statuspage.io">[% l('Network Status') %]</a>
                 <a class="pjaxload" href="[% request.url_for('contact') %]">[% l('Contact Us') %]</a>
             </div>
-            <div class="col">
+            <div class="col social-col">
                 [% INCLUDE global/social.html.tt %]
             </div>
         </div>

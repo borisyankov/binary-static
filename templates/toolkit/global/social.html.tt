@@ -1,17 +1,15 @@
-<div class="social-icons">
-    <a href="http://www.youtube.com/user/BinaryTradingVideos">
-        <img src="[% request.url_for('images/pages/footer/youtube.svg') %]"/>
-    </a>
-    <a href="https://plus.google.com/106251151552682209951">
-        <img src="[% request.url_for('images/pages/footer/google-plus.svg') %]"/>
-    </a>
-    <a href="https://www.facebook.com/binarydotcom">
-        <img src="[% request.url_for('images/pages/footer/facebook.svg') %]"/>
-    </a>
-    <a href="https://twitter.com/Binarydotcom">
-        <img src="[% request.url_for('images/pages/footer/twitter.svg') %]"/>
-    </a>
-    <a href="http://www.linkedin.com/groups/Binarycom-5137612">
-        <img src="[% request.url_for('images/pages/footer/linkedin.svg') %]"/>
-    </a>
-</div>
+<a href="https://www.facebook.com/binarydotcom">
+    <img src="[% request.url_for('images/pages/footer/facebook.svg') %]"/>
+</a>
+<a href="http://www.youtube.com/user/BinaryTradingVideos">
+    <img src="[% request.url_for('images/pages/footer/youtube.svg') %]"/>
+</a>
+<a href="https://twitter.com/Binarydotcom">
+    <img src="[% request.url_for('images/pages/footer/twitter.svg') %]"/>
+</a>
+<a href="https://plus.google.com/106251151552682209951">
+    <img src="[% request.url_for('images/pages/footer/google-plus.svg') %]"/>
+</a>
+<a href="http://www.linkedin.com/groups/Binarycom-5137612">
+    <img src="[% request.url_for('images/pages/footer/linkedin.svg') %]"/>
+</a>

@@ -7,11 +7,6 @@
                 %a.pjaxload{:href=>url_for("white-labels")}= l('White Labels')
                 %a.pjaxload{:href=>url_for("partnerapi")}= l('Partner API')
                 %a.pjaxload{:href=>url_for("open-source-projects")}= l('Open Source')
-            .col
-                %h4= l('Education')
-                %a.pjaxload{:href=>url_for("/why-us")}= l('Why Us?')
-                %a.pjaxload{:href=>url_for("/get-started")}= l('Getting Started')
-                %a.pjaxload{:href=>url_for("/tour")}= l('Platform Tour')
                 %a{:href=>"http://www.gamcare.org.uk/"}= l('GamCare')
                 %a{:href=>"http://blog.binary.com/en/webinar/"}= l('Webinars')
             .col
@@ -19,7 +14,6 @@
                 %a.pjaxload{:href=>url_for("pricing_table.cgi")}= l('Pricing Table')
                 %a.pjaxload{:href=>url_for("rise_fall_table.cgi")}= l('Rise/Fall Table')
                 %a.pjaxload{:href=>url_for("asset_index.cgi")}= l('Asset Index')
-                %a.pjaxload{:href=>url_for("/cashier/available_payment_methods")}= l('Payment Methods')
                 %a.pjaxload{:href=>url_for("/charting/application")}= l('Chart Application')
                 %a.pjaxload{:href=>url_for("smartchart.cgi")}= l('Light Charts')
                 %a.pjaxload{:href=>url_for("/charting/livechart")}= l('Live Charts')
@@ -38,7 +32,7 @@
                 %a{:href=>"http://blog.binary.com"}= l('Blog')
                 %a{:href=>"http://binarycom.statuspage.io"}= l('Network Status')
                 %a.pjaxload{:href=>url_for("contact")}= l('Contact Us')
-            .col
+            .col.social-col
                 = include('layouts/default/social')
     .home-content
         .row.regulatory

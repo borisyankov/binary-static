@@ -1,22 +1,22 @@
 <h1>[% l('Payment methods') %]</h1>
 
+<h4>[% l('You can fund your account with a minimum of &#36;/&pound;/&euro; 5 via any of the methods.') %]</h4>
+
 <p>
-    [% l('You can fund your account with a minimum of &#36;/&pound;/&euro; 5 via any of the methods.') %]
-</p>
-<p>
-    <a href="[% request.url_for('linkto_acopening.cgi', {actype => " real "}) %]" class="button important by_client_type client_logged_out">
-        [% l('Open An Account Now') %]
-    </a>
-    <a href="[% request.url_for('linkto_acopening.cgi', {actype => real}) %]" class="button important by_client_type client_virtual">
-        <span>[% l('Open Real Account') %]</span>
-    </a>
-    <a href="[% deposit_url %]" class="button button_large by_client_type client_real with_login_cookies">
-        <span>[% l('Deposit') %]</span>
-    </a>
-    <a href="[% withdrawal_url %]" class="button by_client_type client_real with_login_cookies">
-        <span>[% l('Withdraw') %]</span>
-    </a>
-</p>
+
+<a href="[% request.url_for('linkto_acopening.cgi', {actype => " real "}) %]" class="button important by_client_type client_logged_out">
+    [% l('Open An Account Now') %]
+</a>
+<a href="[% request.url_for('linkto_acopening.cgi', {actype => real}) %]" class="button important by_client_type client_virtual">
+    <span>[% l('Open Real Account') %]</span>
+</a>
+<a href="[% deposit_url %]" class="button button_large by_client_type client_real with_login_cookies">
+    <span>[% l('Deposit') %]</span>
+</a>
+<a href="[% withdrawal_url %]" class="button by_client_type client_real with_login_cookies">
+    <span>[% l('Withdraw') %]</span>
+</a>
+
 
 <h2>[% l('Bank wire/Money transfer') %]</h2>
 
@@ -123,6 +123,8 @@
         </tr>
     </tbody>
 </table>
+
+<p>
 
 <h2>[% l('Credit/Debit Card') %]</h2>
 
@@ -468,17 +470,17 @@
 
 <h2>[% l('Payment agents') %]</h2>
 <p>
-    [% l('You can use an authorized payment agent to process deposits and withdrawals for e-cash methods or local currencies not supported by') %] [% website_name %].
-</p>
+
+[% l('You can use an authorized payment agent to process deposits and withdrawals for e-cash methods or local currencies not supported by') %] [% website_name %].
 
 <p>
-    <a href="[% paymentagent_list_url %]" class="button important" id="deposit_to_payment_agent">
-        [% l('Deposit to Payment Agent') %]
-    </a>
-</p>
+
+<a href="[% paymentagent_list_url %]" class="button important" id="deposit_to_payment_agent">
+    [% l('Deposit to Payment Agent') %]
+</a>
 
 <p>
-    <a href="[% paymentagent_withdraw_url %]" class="button important by_client_type client_real with_login_cookies" id="withdraw_to_payment_agent">
-        <span>[% l('Withdraw via Payment Agent') %]</span>
-    </a>
-</p>
+
+<a href="[% paymentagent_withdraw_url %]" class="button important by_client_type client_real with_login_cookies" id="withdraw_to_payment_agent">
+    [% l('Withdraw via Payment Agent') %]
+</a>
