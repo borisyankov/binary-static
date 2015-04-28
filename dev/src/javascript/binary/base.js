@@ -2,7 +2,7 @@
 //http://stackoverflow.com/questions/11487216/cors-with-jquery-and-xdomainrequest-in-ie8-9
 //
 $(document).ajaxSuccess(function () {
-    var contents = new Contents(page.client);
+    var contents = new Contents(page.client, page.user);
     contents.on_load();
 });
 
@@ -171,5 +171,6 @@ onLoad.queue(function () {
     attach_date_picker('.has-date-picker');
     attach_time_picker('.has-time-picker');
     attach_inpage_popup('.has-inpage-popup');
-    attach_tabs('.has-tabs');
+    attach_tabs();
+    initTabs();
 });

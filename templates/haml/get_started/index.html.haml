@@ -1,67 +1,38 @@
 - stash(title => l('Get Started'));
-%dl
-  .list.grd-grid-6.grd-no-gutter-right
-    .section
-      %a.pjaxload{:href => url_for('/get-started/what-is-binary-trading')}
-        %div{:id => 'what-is-binary-trading'}
-        .section-header
-          = l('Why choose binary trading?')
-      .section-info
-        = l('Learn about one of the fastest growing sectors of the finance industry.')
-    .section
-      %a.pjaxload{:href => url_for('/get-started/binary-options-basics')}
-        %div{:id => 'binary-options-basics'}
-        .section-header
-          = l('Binary options basics')
-      .section-info
-        = l('Learn the basics, from choosing your asset to winning your payout.')
-    .section
-      %a.pjaxload{:href => url_for('/get-started/how-to-trade-binaries')}
-        %div{:id => 'how-to-trade-binaries'}
-        .section-header
-          = l('How to trade binaries?')
-      .section-info
-        = l('Follow a simple step-by-step guide to binary trading.')
-    .section
-      %a.pjaxload{:href => url_for('/get-started/beginners-faq')}
-        %div{:id => 'beginners-faq'}
-        .section-header
-          = l("FAQ")
-      .section-info
-        = l('Read the answers to some common questions.')
-    .section
-      %a.pjaxload{:href => url_for('/get-started/glossary')}
-        %div{:id => 'glossary'}
-        .section-header
-          = l('Glossary')
-      .section-info
-        = l('Check out some technical terms before you start.')
-  .list.grd-grid-6.grd-no-gutter-left
-    .section
-      %a.pjaxload{:href => url_for('/get-started/types-of-trades')}
-        %div{:id => 'types-of-trades'}
-        .section-header
-          = l('Types of trades')
-      .section-info
-        = l('Read about the five types of trade offered by [_1].', stash->{website_name})
-    .section
-      %a.pjaxload{:href => url_for('/get-started/benefits-of-trading-binaries')}
-        %div{:id => 'benefits-of-trading-binaries'}
-        .section-header
-          = l('Benefits of trading binaries')
-      .section-info
-        = l('Learn about the simplicity, transparency and flexibility of binary trading.')
-    .section
-      %a.pjaxload{:href => url_for('/get-started/random-markets')}
-        %div{:id => 'random-trades'}
-        .section-header
-          = l('How to trade the random markets?')
-      .section-info
-        = l('Discover our indices generated from random numbers.')
-    .section
-      %a.pjaxload{:href => url_for('/smart-indices')}
-        %div{:id => 'smart-indices'}
-        .section-header
-          = l('Smart indices')
-      .section-info
-        = l('Discover our Smart indices.')
+
+%section.col
+    #what-is-binary-trading
+    %p= l('Learn about one of the fastest growing sectors of the finance industry.')
+    %a.button.pjaxload{:href => url_for('/get-started/what-is-binary-trading')}= l('Why choose binary trading?')
+%section.col
+    #binary-options-basics
+    %p= l('Learn the basics, from choosing your asset to winning your payout.')
+    %a.button.pjaxload{:href => url_for('/get-started/binary-options-basics')}= l('Binary options basics')
+%section.col
+    #how-to-trade-binaries
+    %p= l('Follow a simple step-by-step guide to binary trading.')
+    %a.button.pjaxload{:href => url_for('/get-started/how-to-trade-binaries')}= l('How to trade binaries?')
+%section.col
+    #beginners-faq
+    %p= l('Read the answers to some common questions.')
+    %a.button.pjaxload{:href => url_for('/get-started/beginners-faq')}= l('FAQ')
+%section.col
+    #glossary
+    %p= l('Check out some technical terms before you start.')
+    %a.button.pjaxload{:href => url_for('/get-started/glossary')}= l('Glossary')
+%section.col
+    #types-of-trades
+    %p= l('Read about the five types of trade offered by [_1].', stash->{website_name})
+    %a.button.pjaxload{:href => url_for('/get-started/types-of-trades')}= l('Types of trades')
+%section.col
+    #benefits-of-trading-binaries
+    %p= l('Learn about the simplicity, transparency and flexibility of binary trading.')
+    %a.button.pjaxload{:href => url_for('/get-started/benefits-of-trading-binaries')}= l('Benefits of trading binaries')
+%section.col
+    #random-trades
+    %p= l('Discover our indices generated from random numbers.')
+    %a.button.pjaxload{:href => url_for('/get-started/random-markets')}= l('How to trade the random markets?')
+%section.col
+    #smart-indices
+    %p= l('Discover our Smart Markets.')
+    %a.button.pjaxload{:href => url_for('/smart-indices')}= l('Smart Markets')

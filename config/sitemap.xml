@@ -10,16 +10,6 @@
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://www.binary.com/d/linkto_acopening.cgi?actype=real&amp;l=EN</loc>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.binary.com/d/linkto_acopening.cgi?actype=virtual&amp;l=EN</loc>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
   <loc>https://www.binary.com/affiliate/signup?l=EN</loc>
   <changefreq>monthly</changefreq>
   <priority>0.80</priority>
@@ -35,12 +25,12 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.binary.com/d/pricing_table.cgi?l=EN</loc>
+  <loc>https://www.binary.com/resources/pricing_table?l=EN</loc>
   <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.binary.com/d/rise_fall_table.cgi?l=EN</loc>
+  <loc>https://www.binary.com/resources/rise_fall_table?l=EN</loc>
   <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>

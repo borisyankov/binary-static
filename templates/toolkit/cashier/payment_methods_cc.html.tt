@@ -1,0 +1,84 @@
+<h2>[% l('Credit/Debit Card') %]</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>
+                [% l('Method') %]
+            </th>
+            <th>
+                [% l('Currencies') %]
+            </th>
+            <th>
+                [% l('Min-Max Deposit') %]
+            </th>
+            <th>
+                [% l('Min-Max Withdrawal') %]
+            </th>
+            <th>
+                [% l('Processing Time') %]
+            </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>
+                <div id="visa"></div>
+            </td>
+            <td>
+                USD GBP
+                <br> EUR AUD
+            </td>
+            <td>
+                10 - 10,000
+            </td>
+            <td>
+                10 - 10,000
+            </td>
+            <td>
+                [% l('Instant') %]
+                <br>[% l('Withdraw: [_1] working days', 3) %]
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <div id="mastercard"></div>
+            </td>
+            <td>
+                USD GBP
+                <br> EUR AUD
+            </td>
+            <td>
+                10 - 10,000
+            </td>
+            <td>
+                10 - 10,000
+            </td>
+            <td>
+                [% l('Deposit: Instant')%]
+                <br> [% l('Withdraw: [_1] working days', 3) %]
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <div id="cuo-credit-card"></div>
+            </td>
+            <td>
+                USD
+            </td>
+            <td>
+                10 - 1,000
+            </td>
+            <td>
+            </td>
+            <td>
+                [% l('Deposit: Instant')%]
+                <br> [% l('Withdraw: Not applicable') %]
+            </td>
+        </tr>
+
+    </tbody>
+</table>

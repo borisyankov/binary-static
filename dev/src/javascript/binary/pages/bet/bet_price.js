@@ -80,7 +80,8 @@ var BetPrice = function() {
         buy_bet: function (form) {
             var that = this;
             var timeout = 60000;
-            that.disable_buy_buttons();
+            BetPrice.order_form.disable_buy_buttons();
+            that.hide_buy_buttons();
 
             if(!page.client.is_logged_in) {
                 window.location.href = page.url.url_for('login');
@@ -125,7 +126,8 @@ var BetPrice = function() {
                 throw new Error("Invalid server response: " + data);
             }
             $('.price_box').fadeTo(0, 1);
-            this.enable_buy_buttons();
+            BetPrice.order_form.enable_buy_buttons();
+            this.display_buy_buttons();
         },
         on_buy_bet_error: function (form, jqXHR, resp_status, exp) {
             var details = '' + exp;
@@ -139,7 +141,8 @@ var BetPrice = function() {
             var width = this.container().width(); // since the error message could be any size, set the continer size to a good value
             this.display_buy_error('<div style="width: ' + width + 'px;"><h3>Error</h3><p>' + details + ' </p></div>');
             $('.price_box').fadeTo(0, 1);
-            this.enable_buy_buttons();
+            BetPrice.order_form.enable_buy_buttons();
+            this.display_buy_buttons();
         },
         buy_response_container: function () {
             if (!_buy_response_container) {
@@ -293,6 +296,7 @@ var BetPrice = function() {
             var that = this;
             var con = this.buy_response_container();
             con.addClass('bet_confirm_error');
+            data += '<p>' + text.localize('Please confirm the trade on your statement before proceeding.') + '</p>';
             con.children('div').first().html(data);
             con.show();
             var _clear_results = function () { that.clear_buy_results(); };
@@ -310,11 +314,11 @@ var BetPrice = function() {
             con.hide().remove();
             _buy_response_container = null;
         },
-        disable_buy_buttons: function() {
+        hide_buy_buttons: function() {
             this.deregister();
             this.order_form.hide_buy_button();
         },
-        enable_buy_buttons: function() {
+        display_buy_buttons: function() {
             this.on_buy();
             this.order_form.show_buy_button();
         },
@@ -389,6 +393,12 @@ var BetPrice = function() {
                 },
                 show_buy_button: function() {
                     return $('button[name^="btn_buybet"]').parent().show();
+                },
+                disable_buy_buttons: function() {
+                    $('button[name^="btn_buybet"]').attr('disabled','disabled');
+                },
+                enable_buy_buttons: function() {
+                    $('button[name^="btn_buybet"]').removeAttr('disabled');
                 },
                 update_from_stream: function(stream) {
                     var prices = this.prices_from_stream(stream);

@@ -1,0 +1,105 @@
+<h2>[% l('Bank wire/Money transfer') %]</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>
+                [% l('Method') %]
+            </th>
+            <th>
+                [% l('Currencies') %]
+            </th>
+            <th>
+                [% l('Min-Max Deposit') %]
+            </th>
+            <th>
+                [% l('Min-Max Withdrawal') %]
+            </th>
+            <th>
+                [% l('Processing Time') %]
+            </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>
+                <div id="int_bank_wire"></div>
+            </td>
+            <td>
+                USD GBP
+                <br> EUR AUD
+            </td>
+            <td>
+                25 - 100,000
+            </td>
+            <td>
+                25 - 100,000
+            </td>
+            <td>
+                [% l('Deposit: [_1] working days', 5)%]
+                <br> [% l('Withdraw: [_1] working days', 5) %]
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <div id="local_bank_transfer"></div>
+            </td>
+            <td>
+                USD GBP
+                <br> EUR AUD
+            </td>
+            <td>
+                25 - 50,000
+            </td>
+            <td>
+                25 - 10,000
+            </td>
+            <td>
+                [% l('Deposit: [_1] working days', 5)%]
+                <br> [% l('Withdraw: [_1] working days', 5) %]
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <div id="western_union"></div>
+            </td>
+            <td>
+                USD GBP
+                <br> EUR AUD
+            </td>
+            <td>
+                10 - 3,000
+            </td>
+            <td>
+                50 - 250
+            </td>
+            <td>
+                [% l('Deposit: [_1] working days', 1)%]
+                <br> [% l('Withdraw: [_1] working days', 2) %]
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <div id="citadel"></div>
+            </td>
+            <td>
+                USD GBP
+                <br> EUR AUD
+            </td>
+            <td>
+                100 - 5,000
+            </td>
+            <td>
+                100 - 5,000
+            </td>
+            <td>
+                [% l('Deposit: [_1] working days', 5)%]
+                <br> [% l('Withdraw: [_1] working days', 5) %]
+            </td>
+        </tr>
+    </tbody>
+</table>

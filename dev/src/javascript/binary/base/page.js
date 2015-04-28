@@ -30,6 +30,38 @@ var gtm_data_layer_info = function() {
     return gtm_data_layer_info;
 };
 
+var User = function() {
+    this.email =  $.cookie('email');
+    var loginid_list = $.cookie('loginid_list');
+
+    if(this.email === null || typeof this.email === "undefined") {
+        this.is_logged_in = false;
+    } else {
+        this.is_logged_in = true;
+
+        if(loginid_list !== null && typeof loginid_list !== "undefined") {
+            var loginid_array = [];
+            var loginids = loginid_list.split('+').sort();
+
+            for (var i = 0; i < loginids.length; i++) {
+                var real = 0;
+                var disabled = 0;
+                var items = loginids[i].split(':');
+                if (items[1] == 'R') {
+                    real = 1;
+                }
+                if (items[2] == 'D') {
+                    disabled = 1;
+                }
+
+                loginid_array.push({'id':items[0], 'real':real, 'disabled':disabled });
+            }
+
+            this.loginid_array = loginid_array;
+        }
+    }
+};
+
 var Client = function() {
     this.loginid =  $.cookie('loginid');
     this.is_logged_in = false;
@@ -318,6 +350,7 @@ Menu.prototype = {
 };
 
 var Header = function(params) {
+    this.user = params['user'];
     this.client = params['client'];
     this.settings = params['settings'];
     this.menu = new Menu(params['url']);
@@ -335,8 +368,33 @@ Header.prototype = {
         this.menu.reset();
     },
     show_or_hide_login_form: function() {
-        if (this.client.is_logged_in) {
-            $("#client_loginid").html(this.client.loginid);
+        if (this.user.is_logged_in && this.client.is_logged_in) {
+            var loginid_select;
+            var loginid_array = this.user.loginid_array;
+            for (var i=0;i<loginid_array.length;i++) {
+                var curr_loginid = loginid_array[i].id;
+                var real = loginid_array[i].real;
+                var disabled = loginid_array[i].disabled;
+                var selected = '';
+                if (curr_loginid == this.client.loginid) {
+                    selected = ' selected="selected" ';
+                }
+
+                var loginid_text;
+                if (real == 1) {
+                    loginid_text = text.localize('Real Money') + ' (' + curr_loginid + ')';
+                } else {
+                    loginid_text = text.localize('Virtual Money') + ' (' + curr_loginid + ')';
+                }
+
+                var disabled_text = '';
+                if (disabled == 1) {
+                    disabled_text = ' disabled="disabled" ';
+                }
+
+                loginid_select += '<option value="' + curr_loginid + '" ' + selected + disabled_text + '>' + loginid_text +  '</option>';
+            }
+            $("#client_loginid").html(loginid_select);
         }
     },
     simulate_input_placeholder_for_ie: function() {
@@ -521,8 +579,9 @@ ToolTip.prototype = {
     },
 };
 
-var Contents = function(client) {
+var Contents = function(client, user) {
     this.client = client;
+    this.user = user;
     this.tooltip = new ToolTip();
 };
 
@@ -546,13 +605,38 @@ Contents.prototype = {
             if(this.client.is_real) {
                 $('.by_client_type.client_real').removeClass('invisible');
                 $('.by_client_type.client_real').show();
+
+                $('#topbar').addClass('dark-blue');
+                $('#topbar').removeClass('orange');
             } else {
                 $('.by_client_type.client_virtual').removeClass('invisible');
                 $('.by_client_type.client_virtual').show();
+
+                var loginid_array = this.user.loginid_array;
+                var has_real = 0;
+                for (var i=0;i<loginid_array.length;i++) {
+                    var loginid = loginid_array[i].id;
+                    var real = loginid_array[i].real;
+
+                    if (real == 1) {
+                        has_real = 1;
+                        break;
+                    }
+                }
+                if (has_real == 1) {
+                    $('.virtual-upgrade-link').addClass('invisible');
+                    $('.virtual-upgrade-link').hide();
+                }
+
+                $('#topbar').addClass('orange');
+                $('#topbar').removeClass('dark-blue');
             }
         } else {
             $('.by_client_type.client_logged_out').removeClass('invisible');
             $('.by_client_type.client_logged_out').show();
+
+            $('#topbar').removeClass('orange');
+            $('#topbar').addClass('dark-blue');
         }
     },
     update_body_id: function() {
@@ -562,8 +646,10 @@ Contents.prototype = {
     },
     update_content_class: function() {
         //This is required for our css to work.
-        $('#content').removeClass();
-        $('#content').addClass($('#content_class').html());
+        //var contentClass = $('#content_class').html();
+        //$('#content').parent()
+        //    .removeClass()
+        //    .addClass(contentClass);
     },
     init_draggable: function() {
         $('.draggable').draggable();
@@ -572,11 +658,12 @@ Contents.prototype = {
 
 var Page = function(config) {
     config = typeof config !== 'undefined' ? config : {};
+    this.user = new User();
     this.client = new Client();
     this.url = new URL();
     this.settings = new InScriptStore(config['settings']);
-    this.header = new Header({ client: this.client, settings: this.settings, url: this.url});
-    this.contents = new Contents(this.client);
+    this.header = new Header({ user: this.user, client: this.client, settings: this.settings, url: this.url});
+    this.contents = new Contents(this.client, this.user);
 };
 
 Page.prototype = {
@@ -590,14 +677,16 @@ Page.prototype = {
         }
     },
     flag: function() {
-        var idx = $('.language-selector select option:selected').index();
-        $('.language-selector select').css('background-position', '0 -' + idx * 15 + 'px');
+        var idx = $('.language-selector select option:selected').index(),
+            offset = (idx + 1) * 15;
+        $('.language-selector select').css('background-position', '0 -' + offset + 'px');
     },
     on_load: function() {
         this.url.reset();
-        this.header.on_load();
         this.localize_for(this.language());
+        this.header.on_load();
         this.on_change_language();
+        this.on_change_loginid();
         this.record_affiliate_exposure();
         this.contents.on_load();
         $('#current_width').val(get_container_width());//This should probably not be here.
@@ -610,8 +699,14 @@ Page.prototype = {
     on_change_language: function() {
         var that = this;
         $('.language-selector').on('change', 'select', function() {
-            var language = $(this).val();
+            var language = $(this).find('option:selected').val();
             document.location = that.url_for_language(language);
+        });
+    },
+    on_change_loginid: function() {
+        var that = this;
+        $('#client_loginid').on('change', function() {
+            $('#loginid-switch-form').submit();
         });
     },
     localize_for: function(language) {

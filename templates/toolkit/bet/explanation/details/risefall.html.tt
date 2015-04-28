@@ -6,7 +6,6 @@
 [% l("If you select a <strong>start time</strong> in the future, the <strong>start time</strong> is that which is selected and the <strong>entry spot</strong> is the price in effect at that time.") %]
 </li>
 </ul>
-<br><br>
 <h4>[% l("Exit spot") %]</h4>
 <p>[% l("The <strong>exit spot</strong> is the spot at the <strong>end time</strong>.") %]</p>
 <ul>

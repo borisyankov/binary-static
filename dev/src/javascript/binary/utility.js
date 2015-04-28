@@ -379,7 +379,7 @@ function attach_inpage_popup(element) {
     return popups;
 }
 
-/** 
+/**
  * Calculate container width for chart as of now but can
  * be used to get current container width
  */
@@ -423,17 +423,15 @@ function find_active_jqtab(el) {
  *
  * @param element any jquery selector or DOM/jQuery object
  */
-function attach_tabs(element) {
-    var targets = $(element);
-    targets.each(function () {
+function attach_tabs() {
+    $('.has-tabs').each(function () {
         var jqel = $(this);
         var conf = {};
         var active = 0;
         try {
             active = find_active_jqtab(jqel);
         } catch (e) {
-            console.log(e);
-            console.log(jqel);
+            console.log(e, jqel);
         }
         if (active) {
             conf['active'] = active;
@@ -441,5 +439,28 @@ function attach_tabs(element) {
         }
         jqel.tabs(conf);
     });
-    return targets;
+}
+
+function initTabs() {
+
+    function updateTabs($tabs) {
+        $tabs.each(function() {
+            var $tab = $(this);
+            var href = $tab.find('a').attr('href');
+            console.log($tab, href, $tab.hasClass('active'));
+            $(href).toggle($tab.hasClass('active'));
+        });
+    }
+
+    var $tabs = $('*[role=tabs] li,*[role=segmented] li');
+    
+    updateTabs($tabs);
+
+    $tabs.on('click', function(e) {
+        var $tabs = $(this).parent().find('li');
+        $tabs.removeClass('active');
+        $(this).addClass('active');
+        updateTabs($tabs);
+        e.preventDefault();
+    });
 }

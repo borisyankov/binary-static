@@ -1,0 +1,43 @@
+<div class="grd-grid-12">
+<h1>[% l('Authentication') %]</h1>
+
+[% IF client.small_timer == 'yes' %]
+<p>[% l('View your <a href="[_1]">withdrawal limits</a>.', request.url_for('/cashier/limits')) %]</p>
+[% END %]
+
+[% IF client.small_timer.search('^notarised') || (client.small_timer == 'no' && companyaddr.size == 0) %]
+<p class="success_msg">
+[% l('Your account is fully authenticated. You can view your <a href="[_1]">trading limits here</a>.', request.url_for('/cashier/limits')) %]</p>
+
+[% ELSIF client.residence == 'gb' AND client.small_timer == 'yes' AND NOT manual AND ((NOT has_done_192_proveid_request AND NOT is_uploaded_id_doc AND NOT is_uploaded_addr_doc) OR request.is_logged_into_bo) %]
+[% id_auth_form.build() %]
+
+[%# Isle of Man or Malta, ask for original docs %]
+[% ELSIF country == 'Isle of Man' || country == 'Malta' %]
+<p>[% l('We were unable to verify your identity and prove your residential address using our automated verification procedure.') +%] [%+ l('You can still authenticate your account by sending us scans of the following documents by email') %]</p>
+<ul class="checked">
+    <li>[% l('A scanned copy of your current valid passport, current driving license (provisional or full), or identity card') %]</li>
+    <li>[% l('A recent (less than 3 months old) scanned copy of your paper utility bill, or your paper bank, credit union, building society, credit, or debit card statement, or passbook') %]</li>
+</ul>
+<p>[% l('Please send this email to [_1].', "<a href=\"mailto:$cs_email\">$cs_email</a>") %]</p>
+
+[%# Costa Rica - only ask for clients that have withdrawn over 5000, and ask for scans only %]
+[% ELSIF country == 'Costa Rica' AND client.total_withdrawal_value >= 5000 %]
+<p><em><strong>[% l('Your account is fully operational and you may begin depositing money and buying contracts.') %]</strong>
+[%+ l('However, in order to increase your withdrawal limits, you are kindly requested to follow the instructions below.') %]</em></p>
+
+<p>[% l('To fully authenticate your account, please email scanned copies of the document listed below.') %]</p>
+<ul>
+    <li>[% l('Current signed Passport OR') %]</li>
+    <li>[% l('Current photocard Driving Licence (Provisional or Full)') %]</li>
+</ul>
+<p>[% l('and') %]</p>
+<ul>
+    <li>[% l('ORIGINAL Utility bill (within last 3 months) ; or') %]</li>
+    <li>[% l('ORIGINAL Bank/Credit Union/Building Society/Credit/Debit Card statement or passbook (within last 3 months)') %]</li>
+</ul>
+<p>[% l('Our email address is [_1].', cs_email) %]</p>
+
+[% ELSE %]
+[% l("Your account does not require authentication at this time."); %]
+[% END %]

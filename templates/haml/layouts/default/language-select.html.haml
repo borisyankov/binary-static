@@ -5,8 +5,8 @@
   - foreach (keys %{ $languages }) {
     - my ($code, $name) = ($_, $languages->{$_});
     - if ($code ne $sel_code) {
-      %option{:class => $code}= $name
+      %option{:value => $code}= $name
     - } else {
-      %option{:class => $code, :selected => true}= $name
+      %option{:value => $code, :selected => true}= $name
     - }
   - }

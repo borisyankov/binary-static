@@ -1,7 +1,6 @@
 - stash(title => l('API Developer Guide'));
 
-.static_full.grd-container
-  .grd-grid-12
+.static_full
     .grd-row-padding
       %h1= l('API Developer Guide')
       %ul.bullet
@@ -20,10 +19,10 @@
         .section-content
           %h2(id=>'registration')= l('Registration')
           %p
-            = l('You must already have a valid "Real money account" with Binary.com.')
+            = l('You must already have a valid account with Binary.com.')
             = l('It is not necessary to actually trade or to deposit funds to your account.')
             = l('You can open your account')
-            %a{:href=>url_for('/linkto_acopening.cgi?actype=real')}= l('here')
+            %a{:href=>url_for('/')}= l('here')
             = '.'
           %p
             = l('After logging into binary.com, you can register as an API Developer')

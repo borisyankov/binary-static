@@ -1,7 +1,7 @@
 - stash(
 -   title => l('[_1]: Online Trading platform for binary options on Forex, Indices, Commodities and Smart Indices',stash('broker_name')),
 -   next_link => '/why-us',
--   createacc => l('Create free account'),
+-   createacc => l('Create account'),
 - );
 - my $lang = stash->{language};
 %link{:href => "//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css", :rel => "stylesheet"}
@@ -25,7 +25,7 @@
           .grd-grid-12.center
             .ycta
               .button.pjaxload.yvirtual.pjaxload-focus.login-button
-                %span Daftar akun demo sekarang
+                %span Daftar akun sekarang
               .button#xscroll.pjaxload.ylearn.pjaxload-focus
                 %span Pelajari lebih lanjut
 #section2
@@ -51,10 +51,6 @@
               Pilih Strategi Anda sendiri.
         .grd-grid-7.grd-grid-mobile-12
           %img.responsive{:alt => "", :src => url_for('images/pages/home4/trade-tutorial1.svg')}/
-      .grd-grid-12
-        .ystart
-          .button.pjaxload.pjaxload-focus.login-button
-            %span Mulai trading
 #section3
   .ycontent3
     .grd-container
@@ -86,11 +82,6 @@
             %h3 Didalam/Keluar
             %p Menganalisa market akan NAIK atau TURUN dari harga spot terkini.
       .grd-grid-12
-        .ystart
-          .button.pjaxload.pjaxload-focus.login-button
-            %span Daftar akun demo
-          %a.pjaxload.yreal{:href => "https://www.binary.com/c/linkto_acopening.cgi?actype=real&l=ID", :class => 'button'}
-            %span Daftar akun uang riil
         .center
           %i.fa.fa-lock{:style => "color:#e98024"}
             %span{:style => "color:#000;font-size:12px;"} Kami Menghormati Privasi Anda dan Tidak Akan Membagikan informasi data Anda dengan siapapun.
@@ -128,13 +119,9 @@
       .grd-grid-12.center
         %h2 Agen Pembayaran
         %p Anda dapat menggunakan agen pembayaran resmi Binary.com untuk deposit dan penarikan dana menggunakan berbagai pilihan bank lokal atau metode e-cash yang tidak disediakan oleh Binary.com.
-      .grd-grid-12
-        .ystart
-          .button.pjaxload.pjaxload-focus.login-button
-            %span Mulai Trading Sekarang
 .overlay.shown.hidden
   .dialog
-    %p.yvirtual-money Dapatkan Gratis $10k pada Akun Virtual Anda
+    %p.yvirtual-money Buka akun anda sekarang
     %form#virtual-acc-form{:action => "https://www.binary.com/d/create_account.cgi?l=ID", :method => "post", :name => "oppAccForm"}
       %span#virtual-fields
         %span.grd-grid-12.grd-no-gutter.center
@@ -144,7 +131,4 @@
             %input#actype{:name => "actype", :type => "hidden", :value => "virtual"}
               %input{:name => "l", :type => "hidden", :value => $lang}
         %span.grd-grid-12.grd-no-gutter.center
-          %input#btn_registration.button.submit-button{:type => "submit", :value => "Daftar Akun Gratis"}
-    %p.yreal-money
-      Atau
-      %a{:href => "https://www.binary.com/c/linkto_acopening.cgi?actype=real&l=ID"} Daftar Akun Riil Anda
+          %input#btn_registration.button.submit-button{:type => "submit", :value => "Daftar Akun"}

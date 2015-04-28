@@ -575,6 +575,38 @@ var gtm_data_layer_info = function() {
     return gtm_data_layer_info;
 };
 
+var User = function() {
+    this.email =  $.cookie('email');
+    var loginid_list = $.cookie('loginid_list');
+
+    if(this.email === null || typeof this.email === "undefined") {
+        this.is_logged_in = false;
+    } else {
+        this.is_logged_in = true;
+
+        if(loginid_list !== null && typeof loginid_list !== "undefined") {
+            var loginid_array = [];
+            var loginids = loginid_list.split('+').sort();
+
+            for (var i = 0; i < loginids.length; i++) {
+                var real = 0;
+                var disabled = 0;
+                var items = loginids[i].split(':');
+                if (items[1] == 'R') {
+                    real = 1;
+                }
+                if (items[2] == 'D') {
+                    disabled = 1;
+                }
+
+                loginid_array.push({'id':items[0], 'real':real, 'disabled':disabled });
+            }
+
+            this.loginid_array = loginid_array;
+        }
+    }
+};
+
 var Client = function() {
     this.loginid =  $.cookie('loginid');
     this.is_logged_in = false;
@@ -863,6 +895,7 @@ Menu.prototype = {
 };
 
 var Header = function(params) {
+    this.user = params['user'];
     this.client = params['client'];
     this.settings = params['settings'];
     this.menu = new Menu(params['url']);
@@ -880,8 +913,33 @@ Header.prototype = {
         this.menu.reset();
     },
     show_or_hide_login_form: function() {
-        if (this.client.is_logged_in) {
-            $("#client_loginid").html(this.client.loginid);
+        if (this.user.is_logged_in && this.client.is_logged_in) {
+            var loginid_select;
+            var loginid_array = this.user.loginid_array;
+            for (var i=0;i<loginid_array.length;i++) {
+                var curr_loginid = loginid_array[i].id;
+                var real = loginid_array[i].real;
+                var disabled = loginid_array[i].disabled;
+                var selected = '';
+                if (curr_loginid == this.client.loginid) {
+                    selected = ' selected="selected" ';
+                }
+
+                var loginid_text;
+                if (real == 1) {
+                    loginid_text = text.localize('Real Money') + ' (' + curr_loginid + ')';
+                } else {
+                    loginid_text = text.localize('Virtual Money') + ' (' + curr_loginid + ')';
+                }
+
+                var disabled_text = '';
+                if (disabled == 1) {
+                    disabled_text = ' disabled="disabled" ';
+                }
+
+                loginid_select += '<option value="' + curr_loginid + '" ' + selected + disabled_text + '>' + loginid_text +  '</option>';
+            }
+            $("#client_loginid").html(loginid_select);
         }
     },
     simulate_input_placeholder_for_ie: function() {
@@ -1066,8 +1124,9 @@ ToolTip.prototype = {
     },
 };
 
-var Contents = function(client) {
+var Contents = function(client, user) {
     this.client = client;
+    this.user = user;
     this.tooltip = new ToolTip();
 };
 
@@ -1091,13 +1150,38 @@ Contents.prototype = {
             if(this.client.is_real) {
                 $('.by_client_type.client_real').removeClass('invisible');
                 $('.by_client_type.client_real').show();
+
+                $('#topbar').addClass('dark-blue');
+                $('#topbar').removeClass('orange');
             } else {
                 $('.by_client_type.client_virtual').removeClass('invisible');
                 $('.by_client_type.client_virtual').show();
+
+                var loginid_array = this.user.loginid_array;
+                var has_real = 0;
+                for (var i=0;i<loginid_array.length;i++) {
+                    var loginid = loginid_array[i].id;
+                    var real = loginid_array[i].real;
+
+                    if (real == 1) {
+                        has_real = 1;
+                        break;
+                    }
+                }
+                if (has_real == 1) {
+                    $('.virtual-upgrade-link').addClass('invisible');
+                    $('.virtual-upgrade-link').hide();
+                }
+
+                $('#topbar').addClass('orange');
+                $('#topbar').removeClass('dark-blue');
             }
         } else {
             $('.by_client_type.client_logged_out').removeClass('invisible');
             $('.by_client_type.client_logged_out').show();
+
+            $('#topbar').removeClass('orange');
+            $('#topbar').addClass('dark-blue');
         }
     },
     update_body_id: function() {
@@ -1107,8 +1191,10 @@ Contents.prototype = {
     },
     update_content_class: function() {
         //This is required for our css to work.
-        $('#content').removeClass();
-        $('#content').addClass($('#content_class').html());
+        //var contentClass = $('#content_class').html();
+        //$('#content').parent()
+        //    .removeClass()
+        //    .addClass(contentClass);
     },
     init_draggable: function() {
         $('.draggable').draggable();
@@ -1117,11 +1203,12 @@ Contents.prototype = {
 
 var Page = function(config) {
     config = typeof config !== 'undefined' ? config : {};
+    this.user = new User();
     this.client = new Client();
     this.url = new URL();
     this.settings = new InScriptStore(config['settings']);
-    this.header = new Header({ client: this.client, settings: this.settings, url: this.url});
-    this.contents = new Contents(this.client);
+    this.header = new Header({ user: this.user, client: this.client, settings: this.settings, url: this.url});
+    this.contents = new Contents(this.client, this.user);
 };
 
 Page.prototype = {
@@ -1135,14 +1222,16 @@ Page.prototype = {
         }
     },
     flag: function() {
-        var idx = $('.language-selector select option:selected').index();
-        $('.language-selector select').css('background-position', '0 -' + idx * 15 + 'px');
+        var idx = $('.language-selector select option:selected').index(),
+            offset = (idx + 1) * 15;
+        $('.language-selector select').css('background-position', '0 -' + offset + 'px');
     },
     on_load: function() {
         this.url.reset();
-        this.header.on_load();
         this.localize_for(this.language());
+        this.header.on_load();
         this.on_change_language();
+        this.on_change_loginid();
         this.record_affiliate_exposure();
         this.contents.on_load();
         $('#current_width').val(get_container_width());//This should probably not be here.
@@ -1155,8 +1244,14 @@ Page.prototype = {
     on_change_language: function() {
         var that = this;
         $('.language-selector').on('change', 'select', function() {
-            var language = $(this).val();
+            var language = $(this).find('option:selected').val();
             document.location = that.url_for_language(language);
+        });
+    },
+    on_change_loginid: function() {
+        var that = this;
+        $('#client_loginid').on('change', function() {
+            $('#loginid-switch-form').submit();
         });
     },
     localize_for: function(language) {
@@ -1522,7 +1617,7 @@ Localizable.prototype = {
 //http://stackoverflow.com/questions/11487216/cors-with-jquery-and-xdomainrequest-in-ie8-9
 //
 $(document).ajaxSuccess(function () {
-    var contents = new Contents(page.client);
+    var contents = new Contents(page.client, page.user);
     contents.on_load();
 });
 
@@ -1691,7 +1786,8 @@ onLoad.queue(function () {
     attach_date_picker('.has-date-picker');
     attach_time_picker('.has-time-picker');
     attach_inpage_popup('.has-inpage-popup');
-    attach_tabs('.has-tabs');
+    attach_tabs();
+    initTabs();
 });
 ;DatePicker = function(component_id, select_type) {
     this.component_id = component_id;
@@ -2014,6 +2110,9 @@ TimePicker.prototype = {
         return true;
     }
 };
+
+// if Track:js is already loaded, we need to initialize it
+if (typeof trackJs !== 'undefined') trackJs.configure(window._trackJs);
 ;//
 //
 //
@@ -2352,7 +2451,7 @@ LiveChartTick.prototype.process_data = function(point) {
             epoch: parseInt(point[1]),
             quote: parseFloat(point[2])
         };
-        
+
         if (!this.chart) return;
         if (!this.chart.series) return;
 
@@ -2429,9 +2528,8 @@ LiveChartOHLC.prototype.process_corp_action = function(action) {
 
 LiveChartOHLC.prototype.process_ohlc = function(ohlc) {
     var epoch = parseInt(ohlc[0]);
-    if (!this.chart && !this.chart.series) {
-        return;
-    }
+    if (!this.chart) return;
+    if (!this.chart.series) return;
     var ohlc_pt = {
         x:     epoch * 1000,
         open:  parseFloat(ohlc[1]),
@@ -2453,9 +2551,8 @@ LiveChartOHLC.prototype.process_tick = function(tickInput) {
     };
     this.spot = tick.quote;
 
-    if (!this.chart && !this.chart.series) {
-        return;
-    }
+    if (!this.chart) return;
+    if (!this.chart.series) return;
 
     var data = this.chart.series[0].options.data;
     if (data.length > 0 && data[data.length - 1].x > (tick.epoch - this.candlestick.period)) {
@@ -2800,9 +2897,18 @@ LiveChartIndicator['Barrier'] = function(params) {
 
 LiveChartIndicator['Barrier'].prototype = {
     remove: function(that) {
+        if(!that.chart){
+            return;
+        }
         if (this.axis == 'y') {
+            if(!that.chart.yAxis){
+                return;
+            }
             that.chart.yAxis[0].removePlotLine(this.id);
         } else {
+            if(!that.chart.xAxis){
+                return;
+            }
             that.chart.xAxis[0].removePlotLine(this.id);
         }
     },
@@ -2837,9 +2943,18 @@ LiveChartIndicator['Barrier'].prototype = {
                 plot_option.label = {text: text.localize(this.label), align: 'center'};
             }
         }
+        if (!that.chart) {
+            return;
+        }
         if (this.axis == 'y') {
+            if (!that.chart.yAxis) {
+                return;
+            }
             that.chart.yAxis[0].addPlotLine(plot_option);
         } else {
+            if (!that.chart.xAxis) {
+                return;
+            }
             that.chart.xAxis[0].addPlotLine(plot_option);
         }
         this.painted = true;
@@ -3096,7 +3211,7 @@ pjax_config_page('rise_fall_table', function() {
                 $(this).hide();
                 $('#rise_fall_calculating').show();
                 var form = $('form[name=rise_fall]').get(0);
-                var url = page.url.url_for('rise_fall_table.cgi', getFormParams(form));
+                var url = page.url.url_for('resources/rise_fall_table', getFormParams(form));
                 $('#rise_fall_prices_div').html('');
                 $.ajax({
                     url: url,
@@ -5622,7 +5737,8 @@ BetForm.Time.EndTime.prototype = {
         buy_bet: function (form) {
             var that = this;
             var timeout = 60000;
-            that.disable_buy_buttons();
+            BetPrice.order_form.disable_buy_buttons();
+            that.hide_buy_buttons();
 
             if(!page.client.is_logged_in) {
                 window.location.href = page.url.url_for('login');
@@ -5667,7 +5783,8 @@ BetForm.Time.EndTime.prototype = {
                 throw new Error("Invalid server response: " + data);
             }
             $('.price_box').fadeTo(0, 1);
-            this.enable_buy_buttons();
+            BetPrice.order_form.enable_buy_buttons();
+            this.display_buy_buttons();
         },
         on_buy_bet_error: function (form, jqXHR, resp_status, exp) {
             var details = '' + exp;
@@ -5681,7 +5798,8 @@ BetForm.Time.EndTime.prototype = {
             var width = this.container().width(); // since the error message could be any size, set the continer size to a good value
             this.display_buy_error('<div style="width: ' + width + 'px;"><h3>Error</h3><p>' + details + ' </p></div>');
             $('.price_box').fadeTo(0, 1);
-            this.enable_buy_buttons();
+            BetPrice.order_form.enable_buy_buttons();
+            this.display_buy_buttons();
         },
         buy_response_container: function () {
             if (!_buy_response_container) {
@@ -5835,6 +5953,7 @@ BetForm.Time.EndTime.prototype = {
             var that = this;
             var con = this.buy_response_container();
             con.addClass('bet_confirm_error');
+            data += '<p>' + text.localize('Please confirm the trade on your statement before proceeding.') + '</p>';
             con.children('div').first().html(data);
             con.show();
             var _clear_results = function () { that.clear_buy_results(); };
@@ -5852,11 +5971,11 @@ BetForm.Time.EndTime.prototype = {
             con.hide().remove();
             _buy_response_container = null;
         },
-        disable_buy_buttons: function() {
+        hide_buy_buttons: function() {
             this.deregister();
             this.order_form.hide_buy_button();
         },
-        enable_buy_buttons: function() {
+        display_buy_buttons: function() {
             this.on_buy();
             this.order_form.show_buy_button();
         },
@@ -5931,6 +6050,12 @@ BetForm.Time.EndTime.prototype = {
                 },
                 show_buy_button: function() {
                     return $('button[name^="btn_buybet"]').parent().show();
+                },
+                disable_buy_buttons: function() {
+                    $('button[name^="btn_buybet"]').attr('disabled','disabled');
+                },
+                enable_buy_buttons: function() {
+                    $('button[name^="btn_buybet"]').removeAttr('disabled');
                 },
                 update_from_stream: function(stream) {
                     var prices = this.prices_from_stream(stream);
@@ -7426,9 +7551,8 @@ BetForm.Time.EndTime.prototype = {
                                     $self.evaluate_contract_outcome();
                                     return;
                                 } else {
-                                    if (!$self.chart && !$self.chart.series) {
-                                        return;
-                                    }
+                                    if (!$self.chart) return;
+                                    if (!$self.chart.series) return;
                                     $self.chart.series[0].addPoint([$self.counter, tick.quote], true, false);
                                     $self.applicable_ticks.push(tick);
                                     var indicator_key = '_' + $self.counter;
@@ -8759,16 +8883,6 @@ function checkCurrencyAmountFormat(input_value)
     return false;
 }
 
-function activate_copy_granters() {
-    $('#portfolio-table').on('click', '.paste_all_granters', function () {
-            $(this).prev('textarea.granter_loginids_input').val(document.getElementById('all_approved_granter_loginids').innerHTML);
-            $(this).siblings('span.button').children('.open_contract_details').attr('granter_loginids', document.getElementById('all_approved_granter_loginids').innerHTML);
-    });
-    $('#portfolio-table').on('change', '.granter_loginids_input', function () {
-            $(this).siblings('span.button').children('.open_contract_details').attr('granter_loginids', $(this).val());
-    });
-}
-
 var Portfolio = function () {
     var _price_request = null;
     var elements = $('button.open_contract_details');
@@ -8865,7 +8979,6 @@ pjax_config_page('portfolio', function() {
     return {
         onLoad: function() {
             $('#portfolio-table .hourglass').hide();
-            activate_copy_granters();
             $('#currencyfrom').change(function(event) { currencyConvertorCalculator(event.target); });
             $('#currencyfrom').keyup(function(event) { currencyConvertorCalculator(event.target); });
             $('#currencyfromvalue').change(function(event) { checkCurrencyAmountFormat(event.target); });
@@ -8878,7 +8991,7 @@ pjax_config_page('portfolio', function() {
     $('#pricingtable_calculate').on('click', function(e) {
         e.preventDefault();
         var form = $('form[name=pricing_table_input]').get(0);
-        var url = page.url.url_for('pricing_table.cgi', getFormParams(form));
+        var url = page.url.url_for('resources/pricing_table', getFormParams(form));
         $('#pricingtable_calculate').hide();
         $('#pricingtable_calculating').show();
         $('#pricing_table_prices_div').html('');
@@ -8923,7 +9036,7 @@ var bet_type_select = function() {
         var prev_underlying = $("#pricingtable_underlying").val();
 
         // change underlying option list
-        var ajax_url = page.url.url_for('pricing_table.cgi');
+        var ajax_url = page.url.url_for('resources/pricing_table');
         $.post(
             ajax_url,
             {
@@ -8950,7 +9063,7 @@ var select_underlying_change = function() {
     $("#pricingtable_underlying").on("change", function() {
         var underlying = $(this).val();
         // change lower strike
-        var ajax_url = page.url.url_for('pricing_table.cgi');
+        var ajax_url = page.url.url_for('resources/pricing_table');
         $.post(
             ajax_url,
             {
@@ -9047,13 +9160,6 @@ onLoad.queue_for_url(function () {
     self_exclusion_validate_date();
 }, 'self_exclusion');
 ;onLoad.queue_for_url(function() {
-    $('#portfolio-table')
-        .on('click', '.paste_all_granters', function () {
-            $(this).prev('textarea[name=granter_loginids]').val(document.getElementById('all_approved_granter_loginids').innerHTML);
-        });
-}, 'portfolio|statement|f_manager_history|f_manager_statement|f_manager_confodeposit');
-
-onLoad.queue_for_url(function() {
     $('#statement-date').on('change', function() {
         $('#submit-date').removeClass('invisible');
     });
@@ -9439,7 +9545,7 @@ function attach_inpage_popup(element) {
     return popups;
 }
 
-/** 
+/**
  * Calculate container width for chart as of now but can
  * be used to get current container width
  */
@@ -9483,17 +9589,15 @@ function find_active_jqtab(el) {
  *
  * @param element any jquery selector or DOM/jQuery object
  */
-function attach_tabs(element) {
-    var targets = $(element);
-    targets.each(function () {
+function attach_tabs() {
+    $('.has-tabs').each(function () {
         var jqel = $(this);
         var conf = {};
         var active = 0;
         try {
             active = find_active_jqtab(jqel);
         } catch (e) {
-            console.log(e);
-            console.log(jqel);
+            console.log(e, jqel);
         }
         if (active) {
             conf['active'] = active;
@@ -9501,5 +9605,28 @@ function attach_tabs(element) {
         }
         jqel.tabs(conf);
     });
-    return targets;
+}
+
+function initTabs() {
+
+    function updateTabs($tabs) {
+        $tabs.each(function() {
+            var $tab = $(this);
+            var href = $tab.find('a').attr('href');
+            console.log($tab, href, $tab.hasClass('active'));
+            $(href).toggle($tab.hasClass('active'));
+        });
+    }
+
+    var $tabs = $('*[role=tabs] li,*[role=segmented] li');
+    
+    updateTabs($tabs);
+
+    $tabs.on('click', function(e) {
+        var $tabs = $(this).parent().find('li');
+        $tabs.removeClass('active');
+        $(this).addClass('active');
+        updateTabs($tabs);
+        e.preventDefault();
+    });
 }

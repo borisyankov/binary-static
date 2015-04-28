@@ -10,14 +10,6 @@
                 %a{:href=>"http://www.gamcare.org.uk/"}= l('GamCare')
                 %a{:href=>"http://blog.binary.com/en/webinar/"}= l('Webinars')
             .col
-                %h4= l('Trading')
-                %a.pjaxload{:href=>url_for("pricing_table.cgi")}= l('Pricing Table')
-                %a.pjaxload{:href=>url_for("rise_fall_table.cgi")}= l('Rise/Fall Table')
-                %a.pjaxload{:href=>url_for("asset_index.cgi")}= l('Asset Index')
-                %a.pjaxload{:href=>url_for("/charting/application")}= l('Chart Application')
-                %a.pjaxload{:href=>url_for("smartchart.cgi")}= l('Light Charts')
-                %a.pjaxload{:href=>url_for("/charting/livechart")}= l('Live Charts')
-            .col
                 %h4= l('Terms')
                 %a.pjaxload{:href=>url_for("c_template.cgi?filecode=legal")}= l('Terms and Conditions')
                 %a.pjaxload{:href=>url_for("c_template.cgi?filecode=legal#privacy-tab")}= l('Security and Privacy')
@@ -33,7 +25,22 @@
                 %a{:href=>"http://binarycom.statuspage.io"}= l('Network Status')
                 %a.pjaxload{:href=>url_for("contact")}= l('Contact Us')
             .col.social-col
-                = include('layouts/default/social')
+                %h4= l('Social')
+                %a{:href=>"https://www.facebook.com/binarydotcom"}
+                    %img{:src => url_for('images/pages/footer/facebook.svg')}
+                    %span= l('Facebook')
+                %a{:href=>"http://www.youtube.com/user/BinaryTradingVideos"}
+                    %img{:src => url_for('images/pages/footer/youtube.svg')}
+                    %span= l('YouTube')
+                %a{:href=>"https://www.twitter.com/Binarydotcom"}
+                    %img{:src => url_for('images/pages/footer/twitter.svg')}
+                    %span= l('Twitter')
+                %a{:href=>"https://plus.google.com/106251151552682209951"}
+                    %img{:src => url_for('images/pages/footer/google-plus.svg')}
+                    %span= l('Google Plus')
+                %a{:href=>"http://www.linkedin.com/groups/Binarycom-5137612"}
+                    %img{:src => url_for('images/pages/footer/linkedin.svg')}
+                    %span= l('LinkedIn')
     .home-content
         .row.regulatory
             .col.regulatory-logos

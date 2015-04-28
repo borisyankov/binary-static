@@ -1,6 +1,3 @@
-[% IF !full_width %]
-</div> [% # closes grd-container %]
-[% END %]
 </div> [% # closes div#content %]
 </div>[% #closes div#content-holder %]
 
@@ -15,15 +12,6 @@
                 <a class="pjaxload" href="[% request.url_for('open-source-projects') %]" >[% l('Open Source') %]</a>
                 <a href="http://www.gamcare.org.uk/">[% l('GamCare') %]</a>
                 <a href="http://blog.binary.com/en/webinar/">[% l('Webinars') %]</a>
-            </div>
-            <div class="col">
-                <h4>[% l('Trading') %]</h4>
-                <a class="pjaxload" href="[% request.url_for('pricing_table.cgi') %]">[% l('Pricing Table') %]</a>
-                <a class="pjaxload" href="[% request.url_for('rise_fall_table.cgi') %]">[% l('Rise/Fall Table') %]</a>
-                <a class="pjaxload" href="[% request.url_for('asset_index.cgi') %]">[% l('Asset Index') %]</a>
-                <a class="pjaxload" href="[% request.url_for('/charting/application') %]">[% l('Chart Application') %]</a>
-                <a class="pjaxload" href="[% request.url_for('smartchart.cgi') %]">[% l('Light Charts') %]</a>
-                <a class="pjaxload" href="[% request.url_for('/charting/livechart') %]">[% l('Live Charts') %]</a>
             </div>
             <div class="col">
                 <h4>[% l('Terms') %]</h4>
@@ -43,7 +31,27 @@
                 <a class="pjaxload" href="[% request.url_for('contact') %]">[% l('Contact Us') %]</a>
             </div>
             <div class="col social-col">
-                [% INCLUDE global/social.html.tt %]
+                <h4>[% l('Social') %]</h4>
+                <a href="https://www.facebook.com/binarydotcom">
+                    <img src="[% request.url_for('images/pages/footer/facebook.svg') %]"/>
+                    <span>[% l('Facebook') %]</span>
+                </a>
+                <a href="http://www.youtube.com/user/BinaryTradingVideos">
+                    <img src="[% request.url_for('images/pages/footer/youtube.svg') %]"/>
+                    <span>[% l('YouTube') %]</span>
+                </a>
+                <a href="https://twitter.com/Binarydotcom">
+                    <img src="[% request.url_for('images/pages/footer/twitter.svg') %]"/>
+                    <span>[% l('Twitter') %]</span>
+                </a>
+                <a href="https://plus.google.com/106251151552682209951">
+                    <img src="[% request.url_for('images/pages/footer/google-plus.svg') %]"/>
+                    <span>[% l('Google Plus') %]</span>
+                </a>
+                <a href="http://www.linkedin.com/groups/Binarycom-5137612">
+                    <img src="[% request.url_for('images/pages/footer/linkedin.svg') %]"/>
+                    <span>[% l('LinkedIn') %]</span>
+                </a>
             </div>
         </div>
     </div>

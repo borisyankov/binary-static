@@ -281,7 +281,7 @@ LiveChartTick.prototype.process_data = function(point) {
             epoch: parseInt(point[1]),
             quote: parseFloat(point[2])
         };
-        
+
         if (!this.chart) return;
         if (!this.chart.series) return;
 
@@ -358,9 +358,8 @@ LiveChartOHLC.prototype.process_corp_action = function(action) {
 
 LiveChartOHLC.prototype.process_ohlc = function(ohlc) {
     var epoch = parseInt(ohlc[0]);
-    if (!this.chart && !this.chart.series) {
-        return;
-    }
+    if (!this.chart) return;
+    if (!this.chart.series) return;
     var ohlc_pt = {
         x:     epoch * 1000,
         open:  parseFloat(ohlc[1]),
@@ -382,9 +381,8 @@ LiveChartOHLC.prototype.process_tick = function(tickInput) {
     };
     this.spot = tick.quote;
 
-    if (!this.chart && !this.chart.series) {
-        return;
-    }
+    if (!this.chart) return;
+    if (!this.chart.series) return;
 
     var data = this.chart.series[0].options.data;
     if (data.length > 0 && data[data.length - 1].x > (tick.epoch - this.candlestick.period)) {

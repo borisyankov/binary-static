@@ -1,10 +1,10 @@
-#topbar
+#topbar.dark-blue
   .grd-container
     .grd-parent
       .grd-grid-6.grd-grid-mobile-12.by_client_type.client_virtual{ :id => 'virtualupgrade', :style => 'display: none;'}
         %span.grd-hide-mobile
-          %span= l('You\'re using a virtual money account.')
-        %a.pjaxload.with_login_cookies{:href =>url_for("linkto_acopening.cgi?actype=real") }= l('Upgrade to a real money account')
+          %span#virtual-text= l('You\'re using a virtual money account.')
+        %a.virtual-upgrade-link.pjaxload.with_login_cookies.pulser{:href =>url_for("linkto_acopening.cgi?actype=real") }= l('Upgrade to a real money account')
       .grd-grid-6.grd-grid-mobile-12.grd-parent#topbar-info
         .grd-grid-5.grd-grid-mobile-7#gmt-clock
         .grd-grid-3.grd-hide-mobile#contact-us

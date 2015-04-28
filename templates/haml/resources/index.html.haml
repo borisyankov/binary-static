@@ -7,10 +7,10 @@
 
 .row
   .col
-    %a.pjaxload{:href => url_for('asset_index.cgi'), :id => 'asset-index'}
+    %a.pjaxload{:href => url_for('/resources/asset_index'), :id => 'asset-index'}
       %img#charting_icon.responsive.charting-page-icon{:src => url_for('images/pages/resources/asset-index.svg')}
     %p= l('View the full list of assets, contract types and durations.')
-    %a.pjaxload.button{:href => url_for('asset_index.cgi')}= l('Asset Index')
+    %a.pjaxload.button{:href => url_for('/resources/asset_index')}= l('Asset Index')
   .col
     %a.pjaxload{:href => url_for('trading_times.cgi'),:id => 'trading-times'}
       %img#charting_icon.responsive.charting-page-icon{:src => url_for('images/pages/resources/trading-times.svg')}
@@ -22,12 +22,12 @@
     %p= l('Learn about the different ways to trade on the markets.')
     %a.pjaxload.button{:href => url_for('contract_guide.cgi')}= l('Trading Guide')
   .col
-    %a.pjaxload{:href => url_for('pricing_table.cgi'),:id => 'pricing-table'}
+    %a.pjaxload{:href => url_for('/resources/pricing_table'),:id => 'pricing-table'}
       %img#charting_icon.responsive.charting-page-icon{:src => url_for('images/pages/resources/pricing-table.svg')}
     %p= l('View contract prices across a range of barriers and durations.')
-    %a.pjaxload.button{:href => url_for('pricing_table.cgi')}= l('Pricing Table')
+    %a.pjaxload.button{:href => url_for('/resources/pricing_table')}= l('Pricing Table')
   .col
-    %a.pjaxload{:href => url_for('rise_fall_table.cgi'),:id => 'contract-guide'}
+    %a.pjaxload{:href => url_for('/resources/rise_fall_table'),:id => 'contract-guide'}
       %img#charting_icon.responsive.charting-page-icon{:src => url_for('images/pages/resources/rise-fall-table.svg')}
     %p= l('View Rise/Fall contract prices across a range of markets.')
-    %a.pjaxload.button{:href => url_for('rise_fall_table.cgi')}= l('Rise/Fall Table')
+    %a.pjaxload.button{:href => url_for('/resources/rise_fall_table')}= l('Rise/Fall Table')

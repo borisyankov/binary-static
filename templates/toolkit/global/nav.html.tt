@@ -16,7 +16,7 @@
             </div>
             <ul class="nav2nd">
                 <li>
-                    <a class="pjaxload" href="[% request.url_for('asset_index.cgi') %]" [% target %]>[% l("Asset Index") %]</a>
+                    <a class="pjaxload" href="[% request.url_for('/resources/asset_index') %]" [% target %]>[% l("Asset Index") %]</a>
                 </li>
                 <li>
                     <a class="pjaxload" href="[% request.url_for('trading_times.cgi') %]" [% target %]>[% l("Trading Times") %]</a>
@@ -25,19 +25,19 @@
                     <a class="pjaxload" href="[% request.url_for('contract_guide.cgi') %]" [% target %]>[% l("Trading Guide") %]</a>
                 </li>
                 <li>
-                    <a class="pjaxload" href="[% request.url_for('pricing_table.cgi') %]" [% target %]>[% l("Pricing Table") %]</a>
+                    <a class="pjaxload" href="[% request.url_for('/resources/pricing_table') %]" [% target %]>[% l("Pricing Table") %]</a>
                 </li>
                 <li>
                     <a class="pjaxload" href="[% request.url_for('rise_fall_table.cgi') %]" [% target %]>[% l("Rise/Fall Table") %]</a>
                 </li>
                 <li>
-                    <a class="pjaxload" href="[% request.url_for('chart_application.cgi') %]" [% target %]>[% l("Chart Application") %]</a>
+                    <a class="pjaxload" href="[% request.url_for('charting/application') %]" [% target %]>[% l("Chart Application") %]</a>
                 </li>
                 <li>
                     <a class="pjaxload" href="[% request.url_for('smartchart.cgi') %]" [% target %]>[% l("Light Charts") %]</a>
                 </li>
                 <li>
-                    <a class="pjaxload" href="[% request.url_for('livechart.cgi') %]" [% target %]>[% l("Live Charts") %]</a>
+                    <a class="pjaxload" href="[% request.url_for('charting/livechart') %]" [% target %]>[% l("Live Charts") %]</a>
                 </li>
             </ul>
         </li>
@@ -53,7 +53,7 @@
                     <a class="pjaxload" href="[% request.url_for('get-started') %]" [% target %]>[% l("Get Started") %]</a>
                 </li>
                 <li>
-                    <a class="pjaxload" href="[% request.url_for('tour.cgi') %]" [% target %]>[% l("Tour") %]</a>
+                    <a class="pjaxload" href="[% request.url_for('tour') %]" [% target %]>[% l("Tour") %]</a>
                 </li>
                 <li>
                     <a href="http://blog.binary.com/en/webinar/">[% l("Webinars") %]</a>

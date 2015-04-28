@@ -1,7 +1,7 @@
 - stash(
 -   title => l('Online Trading platform for binary options on Forex, Indices, Commodities and Smart Indices'),
 -   next_link => '/why-us',
--   createacc => l('Create free account now'),
+-   createacc => l('Create account now'),
 - );
 - my $lang = stash->{language};
 :css
@@ -88,7 +88,7 @@
     line-height: 100%;
     border-radius: 0px;
     font-weight: 700;
-    text-transform: uppercase;
+    text-transform: capitalize;
     display: inline-block;
     background: #2a3052;
     padding: 18px;
@@ -175,10 +175,10 @@
                   %span.acc-input{:style=>'margin-top:9px'}
                     .grd-grid-12{:style=>'margin:0px;padding:0px'}
                       %button{:id => 'no_btn_registration',:style=>'margin:0px',:class=>'input-button button'}
-                        != l('Create free<br/>account now')
+                        != l('Create<br/>account now')
                 %input#actype{:type => 'hidden', :name => 'actype', :value => 'virtual'}
                 %input{:type => 'hidden', :name => 'l', :value => $lang}
-              %p.paragraph-style{:style=>'margin:0px;padding:0px;line-height: 1.5em;font-weight: bold;'}= l('Get your free $10k virtual money account')
+              %p.paragraph-style{:style=>'margin:0px;padding:0px;line-height: 1.5em;font-weight: bold;'}= l('Get started now')
         .bottom-dark-box.acc-input-security{:style=>'margin:0 0 0 -9px;overflow:hidden;bottom:0;padding: 0px 0;background:#15212d;font-size: 72%;width:100%;text-align:center;color:#fff'}
           %p.paragraph-style{style=>'color:inherit; padding: 1px 8px;line-height: 1.3em;font-size: 0.9em;'}
             %img.acc-input-security-icon{:src=>url_for('images/pages/home5/security-w.svg'),:style=>'margin: -6px 5px 0;max-width:13px;'}
@@ -205,10 +205,10 @@
                   %span.acc-input{:style=>'margin-top:9px'}
                     .grd-grid-12{:style=>'margin:0px;padding:0px'}
                       %button{:id => 'no_btn_registration',:style=>'margin:0px',:class=>'input-button button'}
-                        != l('Create free<br/>account now')
+                        != l('Create<br/>account now')
                 %input#actype{:type => 'hidden', :name => 'actype', :value => 'virtual'}
                 %input{:type => 'hidden', :name => 'l', :value => $lang}
-              %p.paragraph-style{:style=>'margin:0px;padding:0px;line-height: 1.5em;font-weight: bold;'}= l('Get your free $10k virtual money account')
+              %p.paragraph-style{:style=>'margin:0px;padding:0px;line-height: 1.5em;font-weight: bold;'}= l('Get started now')
         .bottom-dark-box.acc-input-security{:style=>'margin:0;overflow:hidden;bottom:0;padding: 0px 0;background:#15212d;font-size: 72%;width:100%;text-align:center;color:#fff'}
           %p.paragraph-style{style=>'color:inherit; padding: 1px 8px;line-height: 1.3em;font-size: 0.9em;'}
             %img.acc-input-security-icon{:src=>url_for('images/pages/home5/security-w.svg'),:style=>'margin: -6px 5px 0;max-width:13px;'}
@@ -317,10 +317,10 @@
                         %span.acc-input{:style=>'margin-top:9px'}
                           .grd-grid-12{:style=>'margin:0px;padding:0px'}
                             %button{:id => 'no_btn_registration',:style=>'margin:0px',:class=>'input-button button'}
-                              != l('Create free<br/>account now')
+                              != l('Create<br/>account now')
                       %input#actype{:type => 'hidden', :name => 'actype', :value => 'virtual'}
                       %input{:type => 'hidden', :name => 'l', :value => $lang}
-                    %p.paragraph-style{:style=>'margin:0px;padding:0px;line-height: 1.5em;font-weight: bold;'}= l('Get your free $10k virtual money account')
+                    %p.paragraph-style{:style=>'margin:0px;padding:0px;line-height: 1.5em;font-weight: bold;'}= l('Get started now')
                 .clearfix
             .bottom-dark-box.acc-input-security{:style=>'margin:0;overflow:hidden;position:absolute;bottom:0;padding: 0px 0;background:#15212d;font-size: 72%;width:100%;text-align:center;color:#fff'}
               %p.paragraph-style{style=>'color:inherit; padding: 1px 10px;line-height: 1.3em;font-size: 0.9em;'}
@@ -334,7 +334,7 @@
             %header{:style=>'background-color:inherit;'}
               .img-w
                 %img.responsive#new-trader-icon{:style=>'max-width:100%;width:144px;',:src => url_for('images/pages/home5/step-1.svg')}
-              %h4.title.padding.text-center{:style=>'font-weight:400;'}= l('1) Register for free account')
+              %h4.title.padding.text-center{:style=>'font-weight:400;'}= l('1) Register for account')
       .grd-grid-4.grd-parent.grd-grid-mobile-12.grd-grid-phablet-6.grd-grid-tablet-4{:style=>'margin-bottom:20px;'}
         .box-wrap.section-margin{:style=>'margin-top: 0;padding: 0 9px;'}
           .dark-background{:style=>'padding: 20px;border:solid 2px #F5F5F5'}

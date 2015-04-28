@@ -22,7 +22,7 @@
         = l('No Hidden Fees')
 
       %form.col#open-account{:name => 'oppAccForm', :action => url_for('create_account.cgi'), :method => 'post'}
-        %h3= l('Get Your Free $10k')
+        %h3= l('Get Started Now')
         %h3= l('Virtual Money Account')
         %input{:name => 'Email', :id => 'Email', :type => 'email', :required => true, :placeholder => stash('emailtext')}
         %input#chooseapassword{:name => 'chooseapassword', :type => 'password', :maxlength => '25', :required => true, :placeholder => stash('passwordstext')}
@@ -51,7 +51,7 @@
 .home-container
   .home-body
     %hgroup
-      %h1!= l('Why <i>Choose</i> Us')
+      %h1!= l('Why <i>1,000,000</i> people around the world trust us')
     .row
       .col
         %img.iconic{:src => url_for("images/pages/home/icon1.svg")}

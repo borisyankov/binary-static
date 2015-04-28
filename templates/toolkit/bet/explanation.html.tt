@@ -16,44 +16,31 @@
     flash.updown          = static_url.copy.append("flash/betguide-updown.swf")
 %]
 
-<div class='grd-grid-12 grd-parent'>
-
-    [% IF show_flash %]
-        [% IF flash.$form_name %]
-        <div class='grd-grid-4 grd-grid-mobile-12'>
-            <div id="bet-guide-demo">
-                <object width="245" height="160" type="application/x-shockwave-flash" data="[% flash.$form_name %]">
-                    <param name="movie" value="[% flash.$form_name %]" />
-                    <param name="menu" value="false" />
-                    <param name="quality" value="high" />
-                    <param name="bgcolor" value="#FFFFFF" />
-                    <param name="wMode" value="transparent" />
-                </object>
-            </div>
-        </div>
+<div class="row">
+    <div class="col">
+        [% IF show_winning && show_flash && flash.$form_name  %]
+            <h4>[% l("Winning the contract") %]</h4>
+            [% INCLUDE "$winning" %]
         [% END %]
-    [% END %]
-
-    [% IF show_winning && show_flash && flash.$form_name  %]
-        <div class='grd-grid-8 grd-grid-mobile-12'>
-            <h4>
-                [% l("Winning the contract") %]
-            </h4>
-            [% INCLUDE "$winning" %]
-        </div>
-    [% ELSIF show_winning %]
-        <div class='grd-grid-12'>
-            <h4>
-                [% l("Winning the contract") %]
-            </h4>
-            [% INCLUDE "$winning" %]
-        </div>
-    [% END %]
-    [% IF show_explain %]
-    <div class='grd-grid-12'>
+        [% IF show_flash %]
+            [% IF flash.$form_name %]
+                <div id="bet-guide-demo">
+                    <object width="245" height="160" type="application/x-shockwave-flash" data="[% flash.$form_name %]">
+                        <param name="movie" value="[% flash.$form_name %]" />
+                        <param name="menu" value="false" />
+                        <param name="quality" value="high" />
+                        <param name="bgcolor" value="#FFFFFF" />
+                        <param name="wMode" value="transparent" />
+                    </object>
+                </div>
+            [% END %]
+        [% END %]
+    </div>
+    <div class="col">
+        [% IF show_explain %]
         <div id='explanation-content'>
             [% INCLUDE "$explanation" %]
         </div>
+        [% END %]
     </div>
-    [% END %]
-</div><!-- grd-parent closes -->
+</div>
