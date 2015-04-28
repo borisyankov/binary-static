@@ -1,41 +1,42 @@
-<div id="trading-tabs" class="has-tabs">
-    <ul role="tabs">
-        [% FOREACH market IN fullinfo %]
-        <li><a href="#[% market.tabid %]">[% market.name %]</a></li>
-        [% END %]
-    </ul>
+<ul role="segmented">
     [% FOREACH market IN fullinfo %]
-    <div id="[% market.tabid %]">
-        [% FOREACH submarket IN market.submarkets %]
-        <table>
-            <thead>
-                <tr>
-                    <th colspan="5">
-                        [% submarket.name %]
-                    </th>
-                <tr/>
-                <tr>
-                    <th>[% l('Asset') %]</th>
-                    <th>[% l('Opens') %]</th>
-                    <th>[% l('Closes') %]</th>
-                    <th>[% l('Settles') %]</th>
-                    <th>[% l('Upcoming Events') %]</th>
-                </tr>
-            </thead>
+    <li>
+        <a href="#[% market.tabid %]">[% market.name %]</a>
+    </li>
+    [% END %]
+</ul>
 
-            <tbody>
-            [% FOREACH underlying IN submarket.underlyings %]
-                <tr>
-                    <td><a href="[% underlying.link %]">[% underlying.name %]</a>[% underlying.tooltip %]</td>
-                    <td>[% underlying.times.open %][% IF underlying.times.pm_open %]<br>[% underlying.times.pm_open %][% END %]</td>
-                    <td>[% IF underlying.times.am_close %][% underlying.times.am_close %]<br>[% END %][% underlying.times.close %]</td>
-                    <td>[% underlying.times.settlement %]</td>
-                    <td>[% FOREACH event IN underlying.events %][% event.descrip %]: [% event.dates %]</br>[% END %]</td>
-                </tr>
-            [% END %]
-            </tbody>
-        </table>
+[% FOREACH market IN fullinfo %]
+<div id="[% market.tabid %]">
+    [% FOREACH submarket IN market.submarkets %]
+    <table>
+        <thead>
+            <tr>
+                <th colspan="5">
+                    [% submarket.name %]
+                </th>
+            <tr/>
+            <tr>
+                <th>[% l('Asset') %]</th>
+                <th>[% l('Opens') %]</th>
+                <th>[% l('Closes') %]</th>
+                <th>[% l('Settles') %]</th>
+                <th>[% l('Upcoming Events') %]</th>
+            </tr>
+        </thead>
+
+        <tbody>
+        [% FOREACH underlying IN submarket.underlyings %]
+            <tr>
+                <td><a href="[% underlying.link %]">[% underlying.name %]</a>[% underlying.tooltip %]</td>
+                <td>[% underlying.times.open %][% IF underlying.times.pm_open %]<br>[% underlying.times.pm_open %][% END %]</td>
+                <td>[% IF underlying.times.am_close %][% underlying.times.am_close %]<br>[% END %][% underlying.times.close %]</td>
+                <td>[% underlying.times.settlement %]</td>
+                <td>[% FOREACH event IN underlying.events %][% event.descrip %]: [% event.dates %]</br>[% END %]</td>
+            </tr>
         [% END %]
-    </div>
+        </tbody>
+    </table>
     [% END %]
 </div>
+[% END %]

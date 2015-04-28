@@ -1,4 +1,5 @@
 <div id="page_info" style="display:none;">
     <title>[% title %]</title>
     <div id="body_id">[% body_id %]</div>
+    <div id="content_class"> [% h.current_route %]-content</div>
 </div>

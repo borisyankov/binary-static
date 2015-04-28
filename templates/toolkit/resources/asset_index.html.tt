@@ -1,87 +1,86 @@
 <h1>[% l('Asset Index') %]</h1>
 
-<div id="asset-tabs" class='has-tabs'>
-    <ul role="tabs">
-        [% FOREACH market IN fullinfo %]
-        <li>
-            <a href="#[% market.tabid %]">[% market.name %]</a>
-        </li>
-        [% END %]
-    </ul>
+<ul role="segmented">
     [% FOREACH market IN fullinfo %]
-    <div id="[% market.tabid %]">
-        [% FOREACH submarket IN market.submarkets %]
-        <table>
-            <thead>
-                <tr>
-                    <th colspan="100">
-                        [% submarket.name %]
-                    </th>
-                </tr>
+    <li>
+        <a href="#[% market.tabid %]">[% market.name %]</a>
+    </li>
+    [% END %]
+</ul>
 
-                [% market_name = market.code %]
-                [% number_of_cat = categories.$market_name.size - 1 %]
+[% FOREACH market IN fullinfo %]
+<div id="[% market.tabid %]">
+    [% FOREACH submarket IN market.submarkets %]
+    <table>
+        <thead>
+            <tr>
+                <th colspan="100">
+                    [% submarket.name %]
+                </th>
+            </tr>
 
-                <tr>
-                    <th></th>
-                    [%- FOREACH category IN [0..number_of_cat] -%]
-                        [% name = categories.$market_name.item(category) %]
-                        [% IF (matches = name.match('(Asian|Digit)')) %]
-                            [% cat_name = matches.0 _ 's' %]
-                        [% ELSE %]
-                            [% cat_name = categories.$market_name.item(category) %]
+            [% market_name = market.code %]
+            [% number_of_cat = categories.$market_name.size - 1 %]
+
+            <tr>
+                <th></th>
+                [%- FOREACH category IN [0..number_of_cat] -%]
+                    [% name = categories.$market_name.item(category) %]
+                    [% IF (matches = name.match('(Asian|Digit)')) %]
+                        [% cat_name = matches.0 _ 's' %]
+                    [% ELSE %]
+                        [% cat_name = categories.$market_name.item(category) %]
+                    [% END %]
+                    <th>[% cat_name %]</th>
+                [%- END %]
+            </tr>
+        </thead>
+
+        <tbody>
+
+            [% FOREACH underlying IN submarket.underlyings %]
+            <tr>
+                <td>
+                    [% underlying.name %]
+                </td>
+                [% prev_column_order = 0 %]
+                [% FOREACH column IN [0..number_of_cat] -%]
+                <td>
+                    [% category = underlying.contract_categories.$column %]
+                    [% IF category.obj.code == 'asian' or category.obj.code ==  'digits' %]
+                        [% column_grid_size = 1 %]
+                    [% ELSE %]
+                        [% column_grid_size = 2 %]
+                    [% END %]
+                    [% IF category %]
+                        [% column_order = column + 1%]
+                        [% IF prev_column_order >= column_order %]
+                            [% column_order = prev_column_order + 1 %]
                         [% END %]
-                        <th>[% cat_name %]</th>
-                    [%- END %]
-                </tr>
-            </thead>
-
-            <tbody>
-
-                [% FOREACH underlying IN submarket.underlyings %]
-                <tr>
-                    <td>
-                        [% underlying.name %]
-                    </td>
-                    [% prev_column_order = 0 %]
-                    [% FOREACH column IN [0..number_of_cat] -%]
-                    <td>
-                        [% category = underlying.contract_categories.$column %]
-                        [% IF category.obj.code == 'asian' or category.obj.code ==  'digits' %]
-                            [% column_grid_size = 1 %]
-                        [% ELSE %]
-                            [% column_grid_size = 2 %]
-                        [% END %]
-                        [% IF category %]
-                            [% column_order = column + 1%]
-                            [% IF prev_column_order >= column_order %]
-                                [% column_order = prev_column_order + 1 %]
+                        [% IF category.obj.display_order > column_order%]
+                            [% WHILE column_order < category.obj.display_order %]
+                                [% column_order = column_order + 1 %]
                             [% END %]
-                            [% IF category.obj.display_order > column_order%]
-                                [% WHILE column_order < category.obj.display_order %]
-                                    [% column_order = column_order + 1 %]
-                                [% END %]
-                            [% END %]
-                            [%- IF category.expiries.formatted -%]
-                                <a class="pjaxload" href="[% request.url_for(category.link_page, category.link_params) %]">
-                                    [% category.expiries.formatted %]
-                                </a>
-                            [%- ELSIF category.expiries.min -%]
-                                [% category.link_params.time = category.expiries.min %]
-                                <a class="pjaxload" href="[% request.url_for(category.link_page, category.link_params) %]">
-                                    [% category.expiries.min %] - [%  category.expiries.max %]
-                                </a>
-                            [% ELSE %]
-                            [%- END %]
-                            </td>
-                            [% prev_column_order = column_order %]
                         [% END %]
+                        [%- IF category.expiries.formatted -%]
+                            <a class="pjaxload" href="[% request.url_for(category.link_page, category.link_params) %]">
+                                [% category.expiries.formatted %]
+                            </a>
+                        [%- ELSIF category.expiries.min -%]
+                            [% category.link_params.time = category.expiries.min %]
+                            <a class="pjaxload" href="[% request.url_for(category.link_page, category.link_params) %]">
+                                [% category.expiries.min %] - [%  category.expiries.max %]
+                            </a>
+                        [% ELSE %]
+                        [%- END %]
+                        </td>
+                        [% prev_column_order = column_order %]
                     [% END %]
                 [% END %]
-                </tr>
             [% END %]
-            </tbody>
-        </table>
-    </div>
-    [% END %]
+            </tr>
+        [% END %]
+        </tbody>
+    </table>
 </div>
+[% END %]

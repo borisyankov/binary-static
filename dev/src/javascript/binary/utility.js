@@ -447,13 +447,14 @@ function initTabs() {
         $tabs.each(function() {
             var $tab = $(this);
             var href = $tab.find('a').attr('href');
-            console.log($tab, href, $tab.hasClass('active'));
             $(href).toggle($tab.hasClass('active'));
         });
     }
 
     var $tabs = $('*[role=tabs] li,*[role=segmented] li');
-    
+
+    if (!$tabs.hasClass('active')) $tabs.first().addClass('active');
+
     updateTabs($tabs);
 
     $tabs.on('click', function(e) {
