@@ -1145,12 +1145,14 @@ Contents.prototype = {
         }
     },
     activate_by_client_type: function() {
+        $('#client-logged-in').toggle(this.client.is_logged_in);
+        $('#client-logged-out').toggle(!this.client.is_logged_in);
         $('.by_client_type').addClass('invisible');
         if(this.client.is_logged_in) {
+
             if(this.client.is_real) {
                 $('.by_client_type.client_real').removeClass('invisible');
                 $('.by_client_type.client_real').show();
-
                 $('#topbar').addClass('dark-blue');
                 $('#topbar').removeClass('orange');
             } else {
@@ -1192,7 +1194,7 @@ Contents.prototype = {
     update_content_class: function() {
 
         var contentClass = $('#content_class').html();
-        
+
         $('#content').parent()
             .removeClass()
             .addClass(contentClass);
@@ -1235,7 +1237,6 @@ Page.prototype = {
         this.on_change_loginid();
         this.record_affiliate_exposure();
         this.contents.on_load();
-        $('#current_width').val(get_container_width());//This should probably not be here.
         this.flag();
     },
     on_unload: function() {
@@ -8198,31 +8199,18 @@ ClientForm.prototype = {
     self_exclusion: function() {
         return {
             has_something_to_save: function() {
-                    var MAXCASHBAL = document.getElementById('MAXCASHBAL');
-                    var DAILYTURNOVERLIMIT = document.getElementById('DAILYTURNOVERLIMIT');
-                    var MAXOPENPOS = document.getElementById('MAXOPENPOS');
-                    var SESSIONDURATION = document.getElementById('SESSIONDURATION');
-                    var EXCLUDEUNTIL = document.getElementById('EXCLUDEUNTIL');
-                    var input_length = 0;
-
-                    if (MAXCASHBAL) { input_length += MAXCASHBAL.value.length; }
-
-                    if (DAILYTURNOVERLIMIT) { input_length += DAILYTURNOVERLIMIT.value.length; }
-
-                    if (MAXOPENPOS) { input_length += MAXOPENPOS.value.length; }
-
-                    if (SESSIONDURATION) { input_length += SESSIONDURATION.value.length; }
-
-                    if (EXCLUDEUNTIL) { input_length += EXCLUDEUNTIL.value.length; }
-
-                    if (input_length > 0)
-                    {
-                            return true;
+                var el, i;
+                var names = ['MAXCASHBAL', 'MAXOPENPOS',
+                             'DAILYTURNOVERLIMIT', 'DAILYLOSSLIMIT',
+                             '7DAYTURNOVERLIMIT', '7DAYLOSSLIMIT',
+                             'SESSIONDURATION', 'EXCLUDEUNTIL'];
+                for (i=0; i<names.length; i++) {
+                    el = document.getElementById(names[i]);
+                    if (el && el.value.length > 0) {
+                        return true;
                     }
-                    else
-                    {
-                            return false;
-                    }
+                }
+                return false;
             },
             validate_exclusion_date: function() {
                 var exclusion_date = $('#EXCLUDEUNTIL').val();

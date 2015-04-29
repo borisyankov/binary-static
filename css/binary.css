@@ -900,9 +900,8 @@ nav a:hover {
   text-decoration: none;
 }
 
-.login-btn, .logout-btn {
+.login-btn, .logout-btn, #client_loginid {
   font-size: 0.75rem;
-  margin: .2rem 0;
 }
 
 .language-selector select {
@@ -910,7 +909,7 @@ nav a:hover {
   border: none;
   width: 20px;
   height: 15px;
-  margin: 1em;
+  margin: 1.1rem;
   background-position: 0 0;
   padding: 0;
   background: url("../images/common/flags.png");
@@ -1175,7 +1174,7 @@ body {
   padding: .5em 0;
 }
 
-.login-btn {
+.login-btn, #loginid-switch-form {
   margin: .7rem 0;
 }
 
@@ -1294,10 +1293,6 @@ body {
 
 .logo-text {
   padding: .5em 0;
-}
-
-.sitemap {
-  margin-top: 1rem;
 }
 
 .sitemap h4 {
@@ -1464,7 +1459,8 @@ ul[role=segmented] li.active a {
 .smart-indices-content #content,
 .random-markets-content #content,
 .affiliate-signup-content #content, .affiliatesignup-content #content,
-.chartingapplication-content #content {
+.chartingapplication-content #content,
+.resourcesrise_fall_table-content #content {
   max-width: 700px;
 }
 
@@ -3959,7 +3955,7 @@ table.half-2 {
   background-image: url("../images/pages/contract_guide/in-out.svg");
 }
 
-#duration_amount, #strike_type, #amount, #expiry_step, #from_expiry, #pricingtable_bet_type {
+#strike_type, #amount, #expiry_step, #from_expiry, #pricingtable_bet_type {
   width: 100%;
 }
 
@@ -4457,14 +4453,6 @@ div#price_table_notes {
   margin-bottom: 1em;
 }
 
-form#rise_fall_form fieldset {
-  padding-top: 1em;
-  margin-bottom: 1em;
-}
-form#rise_fall_form label {
-  width: auto;
-}
-
 /* Terms and conditions */
 .tab-menu-wrap ul#legal-menu {
   margin-bottom: 2em;
@@ -4572,142 +4560,106 @@ form#rise_fall_form label {
   margin: auto;
 }
 
-#cashier-content h3 {
-  margin: 10px 0;
+.resourcesrise_fall_table-content #duration_container {
+  -webkit-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+.resourcesrise_fall_table-content #atleast, .resourcesrise_fall_table-content #bet_currency {
+  width: 100%;
+}
+.resourcesrise_fall_table-content form {
+  padding-bottom: 1rem;
+}
+.resourcesrise_fall_table-content label {
+  display: block;
+}
+.resourcesrise_fall_table-content #duration_container input, .resourcesrise_fall_table-content #duration_container select {
+  width: 40%;
 }
 
-#int_bank_wire {
-  background: url("../images/pages/cashier/payment_methods_sprite_1.png") no-repeat -7px -9px;
-  width: 72px;
-  height: 57px;
-}
-
-#local_bank_transfer {
-  background: url("../images/pages/cashier/payment_methods_sprite_1.png") no-repeat -90px -9px;
-  width: 72px;
-  height: 57px;
-}
-
-#western_union {
-  background: url("../images/pages/cashier/payment_methods_sprite_1.png") no-repeat -174px -9px;
-  width: 72px;
-  height: 57px;
-}
-
-#citadel {
-  background: url("../images/pages/cashier/payment_methods_sprite_1.png") no-repeat -257px -9px;
-  width: 72px;
-  height: 57px;
+.cashieravailable_payment_methods-content img,
+.cashier-content img {
+  width: 100px;
+  height: 60px;
+  background-image: url("../images/pages/cashier/payment-methods-sprite.png");
+  background-size: 100px 1140px;
 }
 
 #visa {
-  background: url("../images/pages/cashier/payment_methods_sprite_1.png") no-repeat -338px -10px;
-  width: 72px;
-  height: 57px;
+  background-position: 0 -300px;
 }
 
 #mastercard {
-  background: url("../images/pages/cashier/payment_methods_sprite_1.png") no-repeat -421px -11px;
-  width: 72px;
-  height: 57px;
+  background-position: 0 -240px;
 }
 
 #cuo-credit-card {
-  background: url("../images/pages/cashier/payment_methods_sprite_1.png") no-repeat -108px -214px;
-  width: 72px;
-  height: 57px;
+  background-position: 0 -360px;
 }
 
-#moneybrokers {
-  background: url("../images/pages/cashier/payment_methods_sprite_1.png") no-repeat -8px -72px;
-  width: 72px;
-  height: 57px;
+#int_bank_wire {
+  background-position: 0 -0;
 }
 
-#neteller {
-  background: url("../images/pages/cashier/payment_methods_sprite_1.png") no-repeat -90px -72px;
-  width: 72px;
-  height: 57px;
+#local_bank_transfer {
+  background-position: 0 -60px;
 }
 
-#moneta {
-  background: url("../images/pages/cashier/payment_methods_sprite_1.png") no-repeat -174px -72px;
-  width: 72px;
-  height: 57px;
+#western_union {
+  background-position: 0 -120px;
 }
 
-#webmoney {
-  background: url("../images/pages/cashier/payment_methods_sprite_1.png") no-repeat -257px -73px;
-  width: 72px;
-  height: 57px;
-}
-
-#ukash {
-  background: url("../images/pages/cashier/payment_methods_sprite_1.png") no-repeat -341px -73px;
-  width: 72px;
-  height: 57px;
-}
-
-#qiwi {
-  background: url("../images/pages/cashier/payment_methods_sprite_1.png") no-repeat -10px -136px;
-  width: 72px;
-  height: 57px;
-}
-
-#icbc {
-  background: url("../images/pages/cashier/payment_methods_sprite_1.png") no-repeat -9px -348px;
-  width: 72px;
-  height: 57px;
-}
-
-#fastpay {
-  background: url("../images/pages/cashier/payment_methods_sprite_1.png") no-repeat -12px -429px;
-  width: 72px;
-  height: 57px;
-}
-
-#perfect_money {
-  background: url("../images/pages/cashier/payment_methods_sprite_1.png") no-repeat -106px -428px;
-  width: 72px;
-  height: 57px;
-}
-
-#yandex {
-  background: url("../images/pages/cashier/payment_methods_sprite_1.png") no-repeat -102px -348px;
-  width: 72px;
-  height: 57px;
-}
-
-#paysafecard {
-  background: url("../images/pages/cashier/payment_methods_sprite_1.png") no-repeat -372px -425px;
-  width: 72px;
-  height: 57px;
+#citadel {
+  background-position: 0 -180px;
 }
 
 #okpay {
-  background: url("../images/pages/cashier/payment_methods_sprite_1.png") no-repeat -285px -426px;
-  width: 72px;
-  height: 57px;
+  background-position: 0 -420px;
 }
 
 #cashu {
-  background: url("../images/pages/cashier/payment_methods_sprite_1.png") no-repeat -200px -427px;
-  width: 72px;
-  height: 57px;
+  background-position: 0 -480px;
 }
 
-#visa_verified {
-  background: url("../images/pages/cashier/payment_methods_sprite_1.png") no-repeat -12px -210px;
-  display: inline-block;
-  width: 78px;
-  height: 46px;
+#fastpay {
+  background-position: 0 -540px;
 }
 
-#securecode {
-  background: url("../images/pages/cashier/payment_methods_sprite_1.png") no-repeat -7px -294px;
-  display: inline-block;
-  width: 111px;
-  height: 38px;
+#perfect_money {
+  background-position: 0 -600px;
+}
+
+#moneybrokers {
+  background-position: 0 -660px;
+}
+
+#neteller {
+  background-position: 0 -720px;
+}
+
+#moneta {
+  background-position: 0 -780px;
+}
+
+#webmoney {
+  background-position: 0 -840px;
+}
+
+#ukash {
+  background-position: 0 -900px;
+}
+
+#qiwi {
+  background-position: 0 -960px;
+}
+
+#yandex {
+  background-position: 0 -1020px;
+}
+
+#paysafecard {
+  background-position: 0 -1080px;
 }
 
 .sidebar .button {

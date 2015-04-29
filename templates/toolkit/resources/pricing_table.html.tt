@@ -1,86 +1,73 @@
-<div class='grd-row-padding grd-grid-12'>
-    [% BLOCK price_tab %]
-      <div id="[% price_method %]_pricing_table-content" class="[% class %] toggle-content">
-        <div class="grd-parent grd-grid-12 table-header grd-row-padding center-aligned">
-          <div class="grd-grid-2">[% l('Expiry') %]</div>
-          [%
-              count = strikes.size - 1
-              iterator = [ 0 .. count ]
-          %]
-          [% FOREACH i = iterator %]
-            <div class="grd-grid-1 grd-grid-mobile-2 [%- "grd-hide-mobile" IF (loop.index < 3 || loop.index > 7) %]">
-              [% IF selected_strike_type == 'Moneyness terms' %]
-                [% strikes_percent.$i %]
-                  <br>
-                  <span>[% strikes.$i %]</span>
-              [% ELSE %]
-                [% strikes.$i %]
-              [% END %]
-            </div>
-          [% END %]
-        </div>
+[% BLOCK price_tab %]
+<div id="[% price_method %]_pricing_table-content" class="[% class %]">
+    <table>
+        <thead>
+            <tr>
+                <th>[% l('Expiry') %]</th>
+                [%
+                    count = strikes.size - 1
+                    iterator = [ 0 .. count ]
+                %]
+                [% FOREACH i = iterator %]
+                <th>
+                    [% IF selected_strike_type == 'Moneyness terms' %]
+                        [% strikes_percent.$i %]
+                        <br>
+                        <span>[% strikes.$i %]</span>
+                    [% ELSE %]
+                        [% strikes.$i %]
+                    [% END %]
+                </th>
+                [% END %]
+            <tr>
+        </thead>
 
-        [%
-            row_cnt = expiries.size - 1
-            column_cnt = strikes.size - 1
-            rows = [ 0 .. row_cnt ]
-            columns = [ 0 .. column_cnt ]
-        %]
+    [%
+        row_cnt = expiries.size - 1
+        column_cnt = strikes.size - 1
+        rows = [ 0 .. row_cnt ]
+        columns = [ 0 .. column_cnt ]
+    %]
 
+    <tbody>
         [% FOREACH r = rows %]
-         <div class="grd-parent grd-grid-12 table-body table-body-lines grd-row-padding center-aligned">
-            <div class="grd-grid-2">[% expiries.$r %]</div>
+        <tr>
+            <td>[% expiries.$r %]</td>
             [% FOREACH c = columns %]
-              <div class="grd-grid-1 grd-grid-mobile-2 [%- "grd-hide-mobile" IF (loop.index < 3 || loop.index > 7) %]">
-                <a href=[% bet_prices.$r.$c.url %]>[% bet_prices.$r.$c.$price_method %]</a>
-              </div>
+                <td><a href=[% bet_prices.$r.$c.url %]>[% bet_prices.$r.$c.$price_method %]</a></td>
             [% END %]
-          </div>
+         </tr>
         [% END %]
-      </div>
-    [% END %]
+        </tbody>
+    </table>
+[% END %]
 
-    <div id="pricing_table_tabs" class="has-tabs">
-          <ul>
-            <li>
-              <a href="#mid_pricing_table">[% l('Mid') %]</a></li>
-            <li>
-              <a href="#bid_pricing_table">[% l('Bid') %]</a></li>
-            <li>
-              <a href="#ask_pricing_table">[% l('Ask') %]</a></li>
-            <li>
-              <a href="#spread_pricing_table">[% l('Spread') %]</a></li>
-          </ul>
-          <div id='mid_pricing_table'>
-              [% PROCESS price_tab price_method='mid' %]
-          </div>
-          <div id='bid_pricing_table'>
-              [% PROCESS price_tab price_method='bid' %]
-          </div>
-          <div id='ask_pricing_table'>
-              [% PROCESS price_tab price_method='ask' %]
-          </div>
-          <div id='spread_pricing_table'>
-              [% PROCESS price_tab price_method='spread' %]
-          </div>
-    </div>
+<ul role="segmented">
+    <li><a href="#mid_pricing_table">[% l('Mid') %]</a></li>
+    <li><a href="#bid_pricing_table">[% l('Bid') %]</a></li>
+    <li><a href="#ask_pricing_table">[% l('Ask') %]</a></li>
+    <li><a href="#spread_pricing_table">[% l('Spread') %]</a></li>
+</ul>
+<div id='mid_pricing_table'>
+    [% PROCESS price_tab price_method='mid' %]
+</div>
+<div id='bid_pricing_table'>
+    [% PROCESS price_tab price_method='bid' %]
+</div>
+<div id='ask_pricing_table'>
+    [% PROCESS price_tab price_method='ask' %]
+</div>
+<div id='spread_pricing_table'>
+    [% PROCESS price_tab price_method='spread' %]
+</div>
 
-    <div id="price_table_notes" class='grd-grid-12 grd-row-padding'>
-      <span>[% l('Notes:') %]</span>
-      <ul>
-        <li>
-          [% l('The Ask price represents the price at which the contract may be purchased at the present time.') %]
-        </li>
-        <li>
-          [% l('The Bid price represents the re-sale price of the contract once it appears on your Portfolio. It is approximately 100 minus the price of the opposite contract.') %]
-        </li>
-        <li>
-          [% l('The Mid price represents the average of the Bid and Ask.') %]
-        </li>
-        <li>
-          [% l('The Spread represents the difference between the Bid and Ask.') %]
-        </li>
-      </ul>
-    </div>
-    <div class="grd-row-padding"></div>
+
+<div id="price_table_notes">
+    <h4>[% l('Notes:') %]</h4>
+    <ul class="bullet">
+        <li>[% l('The Ask price represents the price at which the contract may be purchased at the present time.') %]</li>
+        <li>[% l('The Bid price represents the re-sale price of the contract once it appears on your Portfolio. It is approximately 100 minus the price of the opposite contract.') %]</li>
+        <li>[% l('The Mid price represents the average of the Bid and Ask.') %]</li>
+        <li>[% l('The Spread represents the difference between the Bid and Ask.') %]</li>
+    </ul>
 </div>

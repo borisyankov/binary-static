@@ -19,6 +19,7 @@
                 <a class="pjaxload" href="[% request.url_for('c_template.cgi', {filecode => 'legal'}) %]#privacy-tab">[% l('Security and Privacy') %]</a>
                 <a class="pjaxload" href="[% request.url_for('responsible-trading') %]">[% l('Responsible Trading') %]</a>
                 <a class="pjaxload" href="[% request.url_for('c_template.cgi', {filecode => 'legal', selected_tab => 'complaints-disputes-tac-tab'}) %]">[% l('Complaints and Disputes') %]</a>
+                <a href="http://www.gamcare.org.uk">[% l("GamCare") %]</a>
             </div>
             <div class="col">
                 <h4>[% l('About Us') %]</h4>
@@ -28,7 +29,6 @@
                 <a class="pjaxload" href="[% request.url_for('careers') %]">[% l('Careers') %]</a>
                 <a href="http://blog.binary.com">[% l('Blog') %]</a>
                 <a href="http://binarycom.statuspage.io">[% l('Network Status') %]</a>
-                <a class="pjaxload" href="[% request.url_for('contact') %]">[% l('Contact Us') %]</a>
             </div>
             <div class="col social-col">
                 <h4>[% l('Social') %]</h4>

@@ -1,38 +1,36 @@
 [%- MACRO pagination_links BLOCK -%]
-<div class="grd-grid-12 grd-row-padding">
-        <div class="grd-grid-2 grd-grid-mobile-6 grd-grid-phablet-6 left-aligned">
-                [% IF has_newer %]
-                <a class="pjaxload button" href="[% request.url_for('/user/statement', { after => transactions.first.transaction_time, currency => currency }) %]"><span>&laquo;[% l('Newer') %]</span></a>
-                [% END %]
-        </div>
 
-        <span class="grd-grid-8 grd-hide-mobile grd-hide-phablet center-aligned" [% IF position != 'top' %] style="visibility:hidden" [% END %]>
-            <form action="[% request.url_for('/user/statement') %]">
-                <div class="grd-row-padding grd-parent grd-grid-7 right-aligned">
-                    <label for='before' class='left-aligned'>[% l('Jump to') %]</label>
-                    <input id='statement-date' class='has-date-picker' name='before' value='[% before %]'/>
-                    <input type='hidden' name='jump_to' value='1'/>
-                </div>
-                <span id="submit-date" class="invisible button grd-grid-5 left-aligned">
-                    <button class="button">[% l('Go') %]</button>
-                </span>
-            </form>
+[% IF has_newer %]
+<a class="pjaxload button" href="[% request.url_for('/user/statement', { after => transactions.first.transaction_time, currency => currency }) %]"><span>&laquo;[% l('Newer') %]</span></a>
+[% END %]
+
+
+<span class="grd-grid-8 grd-hide-mobile grd-hide-phablet center-aligned" [% IF position != 'top' %] style="visibility:hidden" [% END %]>
+    <form action="[% request.url_for('/user/statement') %]">
+        <div class="grd-row-padding grd-parent grd-grid-7 right-aligned">
+            <label for='before' class='left-aligned'>[% l('Jump to') %]</label>
+            <input id='statement-date' class='has-date-picker' name='before' value='[% before %]'/>
+            <input type='hidden' name='jump_to' value='1'/>
+        </div>
+        <span id="submit-date" class="invisible button grd-grid-5 left-aligned">
+            <button class="button">[% l('Go') %]</button>
         </span>
+    </form>
+</span>
 
-        <div class="grd-grid-2 grd-grid-mobile-6 grd-grid-phablet-6 right-aligned">
-                [% IF has_older %]
-                <a class="pjaxload button" href="[% request.url_for('/user/statement', { before => transactions.last.transaction_time, currency => currency }) %]"><span>[% l('Older') %]&raquo;</span></a>
-                [% END %]
-        </div>
+<div class="grd-grid-2 grd-grid-mobile-6 grd-grid-phablet-6 right-aligned">
+    [% IF has_older %]
+    <a class="pjaxload button" href="[% request.url_for('/user/statement', { before => transactions.last.transaction_time, currency => currency }) %]"><span>[% l('Older') %]&raquo;</span></a>
+    [% END %]
 </div>
 [%- END -%]
 
 [%- MACRO display_amount(amount) BLOCK -%]
-        [% IF amount >= 0 %]
-                <span class="profit">[% to_monetary_number_format(amount) %]</span>
-        [% ELSE %]
-                <span class="loss">[% to_monetary_number_format(amount) %]</span>
-        [% END %]
+    [% IF amount >= 0 %]
+        <span class="profit">[% to_monetary_number_format(amount) %]</span>
+    [% ELSE %]
+        <span class="loss">[% to_monetary_number_format(amount) %]</span>
+    [% END %]
 [%- END -%]
 
 [%- MACRO describe_contract(transaction) BLOCK;
@@ -103,68 +101,59 @@ END -%]
         </div>
 [% END %]
 
-<div class="grd-grid-12">
-    <h1>[% l('Statement') %]</h1><br>
+<h1>[% l('Statement') %]</h1><br>
 
-    [% IF balance.amount == 0 %]
-        <div class="grd-grid-12 grd-hide-mobile grd-hide-phablet right-aligned">
-            <a href="[% deposit_url %]" class="button button_large by_client_type client_real with_login_cookies">
-            <span>[% l('Make a Deposit') %]</span>
-            </a>
-        </div>
-    [% END %]
+[% IF balance.amount == 0 %]
+    <div class="grd-grid-12 grd-hide-mobile grd-hide-phablet right-aligned">
+        <a href="[% deposit_url %]" class="button button_large by_client_type client_real with_login_cookies">
+        <span>[% l('Make a Deposit') %]</span>
+        </a>
+    </div>
+[% END %]
 
-    <div id="statement-table">
-    [% pagination_links(position='top') %]
-    [% IF transactions.size == 0 %]
-        <p>[% l('There are no items during this period') %]</p>
-    [% ELSE %]
-        <div class="grd-parent grd-grid-12 table-header grd-row-padding">
-            <div class="grd-grid-3 grd-hide-mobile grd-grid-phablet-3">
-                    <div class="grd-grid-6 grd-grid-mobile-12 grd-grid-phablet-12">[% l('Date'); %]</div>
-                    <div class="grd-grid-6 grd-grid-mobile-12 grd-grid-phablet-12">[% l('Ref.'); %]</div>
+<div id="statement-table">
+[% pagination_links(position='top') %]
+[% IF transactions.size == 0 %]
+    <p>[% l('There are no items during this period') %]</p>
+[% ELSE %]
+    <table>
+        <thead>
+            <tr>
+                <th>[% l('Date'); %]</th>
+                <th>[% l('Ref.'); %]</th>
+                <th>[% l('Action'); %]</th>
+                <th>[% l('Description'); %]</th>
+                <th>[% l('Credit/<wbr/>Debit'); %]</th>
+                <th>[% l('Balance'); %] ([% currency %])</th>
+            </tr>
+        </thead>
+        <tbody>
+            [% FOREACH transaction IN transactions %]
+            <tr>
+                <td>
+                    [% transaction.date.date_yyyymmdd %]<br/>[% transaction.date.time_hhmmss %]
+                </td>
+                <td>
+                    <br/>[% l('Ref.'); %]:
+                </td>
+                <td>[% transaction.id %]</td>
             </div>
-            <div class="grd-grid-5 grd-grid-mobile-8 grd-grid-phablet-6">
-                    <div class="grd-grid-3 grd-grid-mobile-12 grd-grid-phablet-12 grd-grid-tablet-12">[% l('Action'); %]</div>
-                    <div class="grd-grid-9 grd-grid-mobile-12 grd-grid-phablet-12 grd-grid-tablet-12">[% l('Description'); %]</div>
-            </div>
-            <div class="grd-grid-4 grd-grid-mobile-4 grd-grid-phablet-3">
-                    <div class="grd-grid-6 grd-grid-mobile-12 grd-grid-phablet-12 right-aligned">[% l('Credit/<wbr/>Debit'); %]</div>
-                    <div class="grd-grid-6 grd-hide-mobile grd-hide-phablet right-aligned">[% l('Balance'); %] ([% currency %])</div>
-            </div>
-        </div>
-        [% FOREACH transaction IN transactions %]
-            <div class="grd-parent grd-grid-12 table-body table-body-lines grd-row-padding">
-                <div class="grd-grid-3 grd-hide-mobile grd-grid-phablet-3">
-                        <div class="grd-grid-6 grd-grid-mobile-12 grd-grid-phablet-12">
-                                [% transaction.date.date_yyyymmdd %]<br/>[% transaction.date.time_hhmmss %]
-                        </div>
-                        <div class="grd-hide grd-show-mobile grd-grid-mobile-12 grd-show-phablet grd-grid-phablet-12">
-                                <br/>[% l('Ref.'); %]:
-                        </div>
-                        <div class="grd-grid-6 grd-grid-mobile-12 grd-grid-phablet-12">[% transaction.id %]</div>
-                </div>
-                [% IF transaction.financial_market_bet_id.defined;
-                        display_contract(transaction);
-                ELSE;
-                        display_payment(transaction);
-                END; %]
-            </div>
-        [% END %]
-    [% END %]
-    <div class="grd-parent grd-grid-12 table-header grd-row-padding">
-            <div class="grd-grid-8 grd-grid-mobile-7 grd-grid-phablet-7">
-                [% balance.date.date %]
-            </div>
-            <div class="grd-grid-4 grd-grid-mobile-5 grd-grid-phablet-5 right-aligned">
-                <div class="grd-grid-6 grd-hide-mobile grd-hide-phablet right-aligned">
-                        [% to_monetary_number_format(total_credit_debit) %]
-                </div>
-                <div class="grd-grid-6 grd-grid-mobile-12 grd-grid-phablet-12 right-aligned">
-                        [% to_monetary_number_format(balance.amount) %]
-                </div>
-            </div>
-    </div>
-    [% pagination_links(position='bottom') %]
-    </div>
+            [% IF transaction.financial_market_bet_id.defined;
+                display_contract(transaction);
+            ELSE;
+                display_payment(transaction);
+            END; %]
+            </tr>
+            [% END %]
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="4">[% balance.date.date %]</th>
+                <th>[% to_monetary_number_format(total_credit_debit) %]</th>
+                <th>[% to_monetary_number_format(balance.amount) %]</div>
+            </tr>
+        </tfoot>
+    </table>
+[% END %]
+[% pagination_links(position='bottom') %]
 </div>

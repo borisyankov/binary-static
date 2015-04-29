@@ -15,6 +15,7 @@
                 %a.pjaxload{:href=>url_for("c_template.cgi?filecode=legal#privacy-tab")}= l('Security and Privacy')
                 %a.pjaxload{:href=>url_for("responsible-trading")}= l('Responsible Trading')
                 %a.pjaxload{:href=>url_for("c_template.cgi?filecode=legal&selected_tab=complaints-disputes-tac-tab")}= l('Complaints and Disputes')
+                %a{:href=>'http://www.gamcare.org.uk/'}= l('GamCare')
             .col
                 %h4= l('About Us')
                 %a.pjaxload{:href=>url_for("about-us"), :class => 'pjaxload'}= l('Group Information')
@@ -23,7 +24,6 @@
                 %a.pjaxload{:href=>url_for("careers")}= l('Careers')
                 %a{:href=>"http://blog.binary.com"}= l('Blog')
                 %a{:href=>"http://binarycom.statuspage.io"}= l('Network Status')
-                %a.pjaxload{:href=>url_for("contact")}= l('Contact Us')
             .col.social-col
                 %h4= l('Social')
                 %a{:href=>"https://www.facebook.com/binarydotcom"}

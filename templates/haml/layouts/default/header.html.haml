@@ -5,11 +5,16 @@
 - );
 
 %header
-  .header-content
-    %a#logo{:href=>url_for("/")}
-      %img{:src => url_for('images/pages/binary-symbol-logo.svg')}
-      %img{:src => url_for('images/pages/binary-text.svg')}
-    = include('layouts/default/nav')
-    .language-selector
-      = include('layouts/default/language-select')    
-    %a.button.login-btn.pjaxload{:href=>url_for('login')}= l('Log in')
+    .header-content
+        %a#logo{:href=>url_for("/")}
+            %img{:src => url_for('images/pages/binary-symbol-logo.svg')}
+            %img{:src => url_for('images/pages/binary-text.svg')}
+        = include('layouts/default/nav')
+        .language-selector
+            = include('layouts/default/language-select')
+        #client-logged-out
+            %a.button.login-btn{:href=>url_for('login')}= l('Log in')
+        #client-logged-in
+            %form#loginid-switch-form{:action => "[% request.url_for('user/loginid_switch?l=EN') %]", :method => "post"}
+                %select#client_loginid
+                %a.button.logout-btn{:href=>url_for('logout')}= l('Log out')

@@ -24,7 +24,7 @@
     <tbody>
         <tr>
             <td>
-                <div id="int_bank_wire"></div>
+                <img id="int_bank_wire"></div>
             </td>
             <td>
                 USD GBP
@@ -44,7 +44,7 @@
 
         <tr>
             <td>
-                <div id="local_bank_transfer"></div>
+                <img id="local_bank_transfer"></div>
             </td>
             <td>
                 USD GBP
@@ -64,7 +64,7 @@
 
         <tr>
             <td>
-                <div id="western_union"></div>
+                <img id="western_union"></div>
             </td>
             <td>
                 USD GBP
@@ -84,7 +84,7 @@
 
         <tr>
             <td>
-                <div id="citadel"></div>
+                <img id="citadel"></div>
             </td>
             <td>
                 USD GBP

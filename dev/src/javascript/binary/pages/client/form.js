@@ -110,31 +110,18 @@ ClientForm.prototype = {
     self_exclusion: function() {
         return {
             has_something_to_save: function() {
-                    var MAXCASHBAL = document.getElementById('MAXCASHBAL');
-                    var DAILYTURNOVERLIMIT = document.getElementById('DAILYTURNOVERLIMIT');
-                    var MAXOPENPOS = document.getElementById('MAXOPENPOS');
-                    var SESSIONDURATION = document.getElementById('SESSIONDURATION');
-                    var EXCLUDEUNTIL = document.getElementById('EXCLUDEUNTIL');
-                    var input_length = 0;
-
-                    if (MAXCASHBAL) { input_length += MAXCASHBAL.value.length; }
-
-                    if (DAILYTURNOVERLIMIT) { input_length += DAILYTURNOVERLIMIT.value.length; }
-
-                    if (MAXOPENPOS) { input_length += MAXOPENPOS.value.length; }
-
-                    if (SESSIONDURATION) { input_length += SESSIONDURATION.value.length; }
-
-                    if (EXCLUDEUNTIL) { input_length += EXCLUDEUNTIL.value.length; }
-
-                    if (input_length > 0)
-                    {
-                            return true;
+                var el, i;
+                var names = ['MAXCASHBAL', 'MAXOPENPOS',
+                             'DAILYTURNOVERLIMIT', 'DAILYLOSSLIMIT',
+                             '7DAYTURNOVERLIMIT', '7DAYLOSSLIMIT',
+                             'SESSIONDURATION', 'EXCLUDEUNTIL'];
+                for (i=0; i<names.length; i++) {
+                    el = document.getElementById(names[i]);
+                    if (el && el.value.length > 0) {
+                        return true;
                     }
-                    else
-                    {
-                            return false;
-                    }
+                }
+                return false;
             },
             validate_exclusion_date: function() {
                 var exclusion_date = $('#EXCLUDEUNTIL').val();

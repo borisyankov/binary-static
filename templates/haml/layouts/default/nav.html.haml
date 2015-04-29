@@ -5,7 +5,7 @@
         %a.pjaxload{:href => url_for('trade.cgi')}= l('Trade')
     %li
       .nav-cashier
-        %a.pjaxload{:href => url_for('cashier/available_payment_methods')}= l('Cashier')
+        %a.pjaxload{:href => url_for('/cashier/available_payment_methods')}= l('Cashier')
     %li
       .nav-resources
         %a= l('Resources')
@@ -15,21 +15,21 @@
         %li
           %a.pjaxload{:href => url_for('trading_times.cgi')}= l('Trading Times')
         %li
-          %a.pjaxload{:href => url_for('contract_guide.cgi')}= l('Trading Guide')
-        %li
           %a.pjaxload{:href=>url_for('/resources/pricing_table')}= l('Pricing Table')
         %li
-          %a.pjaxload{:href=>url_for('rise_fall_table.cgi')}= l('Rise/Fall Table')
+          %a.pjaxload{:href=>url_for('/resources/rise_fall_table')}= l('Rise/Fall Table')
         %li
-          %a.pjaxload{:href=>url_for('charting/application')}= l('Chart Application')
+          %a.pjaxload{:href=>url_for('/charting/application')}= l('Chart Application')
         %li
           %a.pjaxload{:href=>url_for('smartchart.cgi')}= l('Light Charts')
         %li
-          %a.pjaxload{:href=>url_for('charting/livechart')}= l('Live Charts')
+          %a.pjaxload{:href=>url_for('/charting/livechart')}= l('Live Charts')
     %li
       .nav-help
         %a= l('Help')
       %ul.nav2nd
+        %li
+          %a.pjaxload{:href => url_for('contract_guide.cgi')}= l('Trading Guide')
         %li
           %a.pjaxload{:href=>url_for('/why-us')}= l('Why Us?')
         %li
@@ -40,8 +40,6 @@
           %a{:href=>'http://blog.binary.com/en/webinar/'}= l('Webinars')
         %li
           %a{:href=>'http://blog.binary.com'}= l('Blog')
-        %li
-          %a{:href=>'http://www.gamcare.org.uk/'}= l('GamCare')
         %li
           %a.pjaxload{:href=>url_for('responsible-trading')}= l('Responsible Trading')
         %li

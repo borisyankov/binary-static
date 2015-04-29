@@ -600,12 +600,14 @@ Contents.prototype = {
         }
     },
     activate_by_client_type: function() {
+        $('#client-logged-in').toggle(this.client.is_logged_in);
+        $('#client-logged-out').toggle(!this.client.is_logged_in);
         $('.by_client_type').addClass('invisible');
         if(this.client.is_logged_in) {
+
             if(this.client.is_real) {
                 $('.by_client_type.client_real').removeClass('invisible');
                 $('.by_client_type.client_real').show();
-
                 $('#topbar').addClass('dark-blue');
                 $('#topbar').removeClass('orange');
             } else {
@@ -647,7 +649,7 @@ Contents.prototype = {
     update_content_class: function() {
 
         var contentClass = $('#content_class').html();
-        
+
         $('#content').parent()
             .removeClass()
             .addClass(contentClass);
@@ -690,7 +692,6 @@ Page.prototype = {
         this.on_change_loginid();
         this.record_affiliate_exposure();
         this.contents.on_load();
-        $('#current_width').val(get_container_width());//This should probably not be here.
         this.flag();
     },
     on_unload: function() {
