@@ -1,0 +1,17 @@
+.nav-resources
+    %a= l('Resources')
+%ul.nav2nd
+    %li
+        %a.pjaxload{:href=>url_for('/resources/asset_index')}= l('Asset Index')
+    %li
+        %a.pjaxload{:href => url_for('trading_times.cgi')}= l('Trading Times')
+    %li
+        %a.pjaxload{:href=>url_for('/resources/pricing_table')}= l('Pricing Table')
+    %li
+        %a.pjaxload{:href=>url_for('/resources/rise_fall_table')}= l('Rise/Fall Table')
+    %li
+        %a.pjaxload{:href=>url_for('/charting/application')}= l('Chart Application')
+    %li
+        %a.pjaxload{:href=>url_for('smartchart.cgi')}= l('Light Charts')
+    %li
+        %a.pjaxload{:href=>url_for('/charting/livechart')}= l('Live Charts')

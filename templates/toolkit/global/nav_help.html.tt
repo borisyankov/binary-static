@@ -1,0 +1,29 @@
+<div class="nav-help">
+    <a>[% l("Help") %]</a>
+</div>
+<ul class="nav2nd">
+    <li>
+        <a class="pjaxload" href="[% request.url_for('contract_guide.cgi') %]" [% target %]>[% l("Trading Guide") %]</a>
+    </li>
+    <li>
+        <a class="pjaxload" href="[% request.url_for('why-us') %]" [% target %]>[% l("Why Us?") %]</a>
+    </li>
+    <li>
+        <a class="pjaxload" href="[% request.url_for('get-started') %]" [% target %]>[% l("Get Started") %]</a>
+    </li>
+    <li>
+        <a class="pjaxload" href="[% request.url_for('tour') %]" [% target %]>[% l("Tour") %]</a>
+    </li>
+    <li>
+        <a href="http://blog.binary.com/en/webinar/">[% l("Webinars") %]</a>
+    </li>
+    <li>
+        <a href="http://blog.binary.com">[% l("Blog") %]</a>
+    </li>
+    <li>
+        <a class="pjaxload" href="[% request.url_for('responsible-trading') %]">[% l('Responsible Trading') %]</a>
+    </li>
+    <li>
+        <a class="pjaxload" href="[% request.url_for('contact') %]" [% target %]>[% l("Contact Us") %]</a>
+    </li>
+</ul>

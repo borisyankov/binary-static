@@ -1,0 +1,19 @@
+.nav-help
+    %a= l('Help')
+%ul.nav2nd
+    %li
+        %a.pjaxload{:href => url_for('contract_guide.cgi')}= l('Trading Guide')
+    %li
+        %a.pjaxload{:href=>url_for('/why-us')}= l('Why Us?')
+    %li
+        %a.pjaxload{:href=>url_for('/get-started')}= l('Get Started')
+    %li
+        %a.pjaxload{:href=>url_for('/tour')}= l('Tour')
+    %li
+        %a{:href=>'http://blog.binary.com/en/webinar/'}= l('Webinars')
+    %li
+        %a{:href=>'http://blog.binary.com'}= l('Blog')
+    %li
+        %a.pjaxload{:href=>url_for('responsible-trading')}= l('Responsible Trading')
+    %li
+        %a.pjaxload{:href=>url_for('contact')}= l('Contact Us')

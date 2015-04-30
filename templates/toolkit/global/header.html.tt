@@ -5,17 +5,5 @@
             <img src="[% request.url_for('images/pages/binary-text.svg') %]"/>
         </a>
         [% INCLUDE global/nav.html.tt %]
-        <div class="language-selector">
-            [% language_select %]
-        </div>
-        <div id="client-logged-out">
-            <a href="[% request.url_for('login') %]" class="button login-btn">[% l("Log in") %]</a>
-        </div>
-        <div id="client-logged-in">
-            <form id="loginid-switch-form" action="[% request.url_for('user/loginid_switch?l=EN') %]" method="post">
-                <select id="client_loginid"></select>
-                <a id="btn_logout" class="button logout-btn" href="[% request.url_for('logout') %]"[% target %]>[% l('Log out') %]</a>
-            </form>
-        </div>
     </div>
 </header>

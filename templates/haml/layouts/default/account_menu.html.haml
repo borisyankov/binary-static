@@ -1,0 +1,14 @@
+.nav-account
+    %a= l('My Account')
+%ul.nav2nd
+    %li
+        %a.pjaxload{:href=>url_for('/user/portfolio')}= l('Portfolio')
+    %li
+        %a.pjaxload{:href => url_for('/user/profit_table')}= l('Profit Table')
+    %li
+        %a.pjaxload{:href=>url_for('/user/statement')}= l('Statement')
+    %li
+        %form#loginid-switch-form{:action => "[% request.url_for('user/loginid_switch?l=EN') %]", :method => "post"}
+            %select#client_loginid
+    %li
+        %a.pjaxload{:href=>url_for('logout')}= l('Log out')

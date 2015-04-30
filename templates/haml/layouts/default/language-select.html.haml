@@ -1,12 +1,14 @@
 - my $languages = available_languages();
 - my $sel_code = stash->{language};
 - my $sel_name = $languages->{$sel_code};
-%select
-  - foreach (keys %{ $languages }) {
-    - my ($code, $name) = ($_, $languages->{$_});
-    - if ($code ne $sel_code) {
-      %option{:value => $code}= $name
-    - } else {
-      %option{:value => $code, :selected => true}= $name
-    - }
-  - }
+
+.language-selector
+    %select
+        - foreach (keys %{ $languages }) {
+            - my ($code, $name) = ($_, $languages->{$_});
+            - if ($code ne $sel_code) {
+            %option{:value => $code}= $name
+            - } else {
+            %option{:value => $code, :selected => true}= $name
+            - }
+        - }

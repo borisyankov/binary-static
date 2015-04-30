@@ -1,0 +1,26 @@
+<div class="nav-resources">
+    <a>[% l("Resources") %]</a>
+</div>
+<ul class="nav2nd">
+    <li>
+        <a class="pjaxload" href="[% request.url_for('/resources/asset_index') %]" [% target %]>[% l("Asset Index") %]</a>
+    </li>
+    <li>
+        <a class="pjaxload" href="[% request.url_for('trading_times.cgi') %]" [% target %]>[% l("Trading Times") %]</a>
+    </li>
+    <li>
+        <a class="pjaxload" href="[% request.url_for('/resources/pricing_table') %]" [% target %]>[% l("Pricing Table") %]</a>
+    </li>
+    <li>
+        <a class="pjaxload" href="[% request.url_for('/resources/rise_fall_table') %]" [% target %]>[% l("Rise/Fall Table") %]</a>
+    </li>
+    <li>
+        <a class="pjaxload" href="[% request.url_for('/charting/application') %]" [% target %]>[% l("Chart Application") %]</a>
+    </li>
+    <li>
+        <a class="pjaxload" href="[% request.url_for('smartchart.cgi') %]" [% target %]>[% l("Light Charts") %]</a>
+    </li>
+    <li>
+        <a class="pjaxload" href="[% request.url_for('/charting/livechart') %]" [% target %]>[% l("Live Charts") %]</a>
+    </li>
+</ul>

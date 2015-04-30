@@ -6,7 +6,7 @@
 %img{:src => url_for('images/pages/smart-indices/smart-indices-1.svg')}
 
 %h2= l("Smart Indices")
-%p= l('[_1]’s Smart Indices are created using relevant market data like Futures to track the Index. With real time quotes and live charts, availability of short term contracts and extended market hours,  they provide more exciting opportunities to trade on financial markets',stash->{website_name});
+%p= l('[_1]’s Smart Indices are created using relevant market data like futures to track the Index. With real time quotes and live charts, availability of short term contracts and extended market hours,  they provide more exciting opportunities to trade on financial markets',stash->{website_name});
 
 %h2= l('Smart FX')
 %p= l('[_1]’s Smart FX are smart markets that measure the value of a currency against a basket of major currencies.', stash->{website_name})
@@ -17,14 +17,5 @@
 %p= l('The AUD Index is a weighted Index, measuring the Australian Dollar’s value against a basket of 5 global currencies (USD, EUR, GBP, JPY, CAD), each weighted by 20%.')
 %p= l('The EUR Index is a weighted Index, measuring the Euro’s value against a basket of 5 global currencies (USD, AUD, GBP, JPY, CAD), each weighted by 20%.')
 %p= l('The GBP Index is a weighted Index, measuring the British Pound’s value against a basket of 5 global currencies (USD, EUR, AUD, JPY, CAD), each weighted by 20%.')
-
-%h2= l('Outperformance Indices')
-%p= l('[_1]’s Outperformance Indices are Smart Indices that track the performance of one index against another. These indices are the ratios of the respective market spots multiplied by 1000.', stash->{website_name})
-%p= ' '
-%img{:src => url_for('images/pages/smart-indices/smart-indices-3.svg')}
-%p= l('The German vs UK Index measures the performance of the German Index relative to the UK Index. This outperformance index rises if the German Index performs better than the UK Index, and decreases if the UK Index performs better than the German Index.')
-%p= l('The German vs Swiss Index measures the performance of the German Index relative to the Swiss Index. This outperformance index rises if the German Index performs better than the Swiss Index, and decreases if the Swiss Index performs better than the German Index.')
-%p= l('The German vs French Index measures the performance of the German Index relative to the French Index. This outperformance index rises if the German Index performs better than the French Index, and decreases if the French Index performs better than the German Index.')
-%p= l('The German vs Dutch Index measures the performance of the German Index relative to the Dutch Index. This outperformance index rises if the German Index performs better than the Dutch Index, and decreases if the Dutch Index performs better than the German Index.')
 
 %a.button.pjaxload{:href => url_for('trade.cgi?market=smarties')}= l('Trade Smart Markets')

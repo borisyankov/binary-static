@@ -1,0 +1,22 @@
+<div class="nav-account">
+    <a>[% l("My Account") %]</a>
+</div>
+<ul class="nav2nd">
+    <li>
+        <a class="pjaxload" href="[% request.url_for('/user/portfolio') %]">[% l('Portfolio') %]</a>
+    </li>
+    <li>
+        <a class="pjaxload" href="[% request.url_for('/user/profit_table') %]">[% l('Profit Table') %]</a>
+    </li>
+    <li>
+        <a class="pjaxload" href="[% request.url_for('/user/statement') %]">[% l('Statement') %]</a>
+    </li>
+    <li>
+        <form id="loginid-switch-form" action="[% request.url_for('user/loginid_switch?l=EN') %]" method="post">
+            <select id="client_loginid"></select>
+        </form>
+    </li>
+    <li>
+        <a id="btn_logout" href="[% request.url_for('logout') %]"[% target %]>[% l('Log out') %]</a>
+    </li>
+</ul>

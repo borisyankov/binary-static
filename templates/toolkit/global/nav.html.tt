@@ -1,73 +1,33 @@
 <nav>
     <ul class="nav1st">
-        <li>
+        <li class="submenu">
             <div class="nav-trade">
                 <a class="pjaxload" href="[% request.url_for('trade.cgi') %]" [% target %]>[% l("Trade") %]</a>
             </div>
         </li>
-        <li>
+        <li class="submenu">
             <div class="nav-cashier">
                 <a class="pjaxload" href="[% request.url_for('/cashier/available_payment_methods') %]" [% target %]>[% l("Cashier") %]</a>
             </div>
         </li>
-        <li>
-            <div class="nav-resources">
-                <a>[% l("Resources") %]</a>
-            </div>
-            <ul class="nav2nd">
-                <li>
-                    <a class="pjaxload" href="[% request.url_for('/resources/asset_index') %]" [% target %]>[% l("Asset Index") %]</a>
-                </li>
-                <li>
-                    <a class="pjaxload" href="[% request.url_for('trading_times.cgi') %]" [% target %]>[% l("Trading Times") %]</a>
-                </li>
-                <li>
-                    <a class="pjaxload" href="[% request.url_for('/resources/pricing_table') %]" [% target %]>[% l("Pricing Table") %]</a>
-                </li>
-                <li>
-                    <a class="pjaxload" href="[% request.url_for('/resources/rise_fall_table') %]" [% target %]>[% l("Rise/Fall Table") %]</a>
-                </li>
-                <li>
-                    <a class="pjaxload" href="[% request.url_for('/charting/application') %]" [% target %]>[% l("Chart Application") %]</a>
-                </li>
-                <li>
-                    <a class="pjaxload" href="[% request.url_for('smartchart.cgi') %]" [% target %]>[% l("Light Charts") %]</a>
-                </li>
-                <li>
-                    <a class="pjaxload" href="[% request.url_for('/charting/livechart') %]" [% target %]>[% l("Live Charts") %]</a>
-                </li>
-            </ul>
+        <li class="submenu">
+            [% INCLUDE global/nav_resources.html.tt %]
+        </li>
+        <li class="submenu">
+            [% INCLUDE global/nav_help.html.tt %]
+        </li>
+        <li class="nav-spacer">
         </li>
         <li>
-            <div class="nav-help">
-                <a>[% l("Help") %]</a>
+            <div class="language-selector">
+                [% language_select %]
             </div>
-            <ul class="nav2nd">
-                <li>
-                    <a class="pjaxload" href="[% request.url_for('contract_guide.cgi') %]" [% target %]>[% l("Trading Guide") %]</a>
-                </li>            
-                <li>
-                    <a class="pjaxload" href="[% request.url_for('why-us') %]" [% target %]>[% l("Why Us?") %]</a>
-                </li>
-                <li>
-                    <a class="pjaxload" href="[% request.url_for('get-started') %]" [% target %]>[% l("Get Started") %]</a>
-                </li>
-                <li>
-                    <a class="pjaxload" href="[% request.url_for('tour') %]" [% target %]>[% l("Tour") %]</a>
-                </li>
-                <li>
-                    <a href="http://blog.binary.com/en/webinar/">[% l("Webinars") %]</a>
-                </li>
-                <li>
-                    <a href="http://blog.binary.com">[% l("Blog") %]</a>
-                </li>
-                <li>
-                    <a class="pjaxload" href="[% request.url_for('responsible-trading') %]">[% l('Responsible Trading') %]</a>
-                </li>
-                <li>
-                    <a class="pjaxload" href="[% request.url_for('contact') %]" [% target %]>[% l("Contact Us") %]</a>
-                </li>
-            </ul>
+        </li>
+        <li id="client-logged-out">
+            <a href="[% request.url_for('login') %]" class="button login-btn">[% l("Log in") %]</a>
+        </li>
+        <li id="client-logged-in" class="submenu">
+            [% INCLUDE global/account_menu.html.tt %]
         </li>
     </ul>
 </nav>

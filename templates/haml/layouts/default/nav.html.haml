@@ -1,46 +1,19 @@
 %nav
-  %ul.nav1st
-    %li
-      .nav-trade
-        %a.pjaxload{:href => url_for('trade.cgi')}= l('Trade')
-    %li
-      .nav-cashier
-        %a.pjaxload{:href => url_for('/cashier/available_payment_methods')}= l('Cashier')
-    %li
-      .nav-resources
-        %a= l('Resources')
-      %ul.nav2nd
+    %ul.nav1st
+        %li.submenu
+            .nav-trade
+                %a.pjaxload{:href => url_for('trade.cgi')}= l('Trade')
+        %li.submenu
+            .nav-cashier
+                %a.pjaxload{:href => url_for('/cashier/available_payment_methods')}= l('Cashier')
+        %li.submenu
+            = include('layouts/default/nav_resources')
+        %li.submenu
+            = include('layouts/default/nav_help')
+        %li.nav-spacer
         %li
-          %a.pjaxload{:href=>url_for('/resources/asset_index')}= l('Asset Index')
-        %li
-          %a.pjaxload{:href => url_for('trading_times.cgi')}= l('Trading Times')
-        %li
-          %a.pjaxload{:href=>url_for('/resources/pricing_table')}= l('Pricing Table')
-        %li
-          %a.pjaxload{:href=>url_for('/resources/rise_fall_table')}= l('Rise/Fall Table')
-        %li
-          %a.pjaxload{:href=>url_for('/charting/application')}= l('Chart Application')
-        %li
-          %a.pjaxload{:href=>url_for('smartchart.cgi')}= l('Light Charts')
-        %li
-          %a.pjaxload{:href=>url_for('/charting/livechart')}= l('Live Charts')
-    %li
-      .nav-help
-        %a= l('Help')
-      %ul.nav2nd
-        %li
-          %a.pjaxload{:href => url_for('contract_guide.cgi')}= l('Trading Guide')
-        %li
-          %a.pjaxload{:href=>url_for('/why-us')}= l('Why Us?')
-        %li
-          %a.pjaxload{:href=>url_for('/get-started')}= l('Get Started')
-        %li
-          %a.pjaxload{:href=>url_for('/tour')}= l('Tour')
-        %li
-          %a{:href=>'http://blog.binary.com/en/webinar/'}= l('Webinars')
-        %li
-          %a{:href=>'http://blog.binary.com'}= l('Blog')
-        %li
-          %a.pjaxload{:href=>url_for('responsible-trading')}= l('Responsible Trading')
-        %li
-          %a.pjaxload{:href=>url_for('contact')}= l('Contact Us')
+            = include('layouts/default/language-select')
+        %li#client-logged-out
+            %a.button.login-btn{:href=>url_for('login')}= l('Log in')
+        %li#client-logged-in.submenu
+            = include('layouts/default/account_menu')
