@@ -962,6 +962,10 @@ nav a:hover {
   border-bottom: 1px solid #2a3052;
 }
 
+.nav-trade a, .nav-cashier a {
+  display: block;
+}
+
 .nav2nd li:hover {
   color: white;
   background: #e98024;
@@ -1440,7 +1444,7 @@ ul[role=segmented] li.active a {
 .smart-indices-content #content,
 .random-markets-content #content,
 .affiliate-signup-content #content, .affiliatesignup-content #content,
-.chartingapplication-content #content,
+.chartingapplication-content #content, charting-application-content #content,
 .resourcesrise_fall_table-content #content {
   max-width: 700px;
 }
@@ -4486,7 +4490,8 @@ div#price_table_notes {
 }
 
 .cashieravailable_payment_methods-content img,
-.cashier-content img {
+.cashier-content img,
+.cashier-apm-content img {
   width: 100px;
   height: 60px;
   background-image: url("../images/pages/cashier/payment-methods-sprite.png");
