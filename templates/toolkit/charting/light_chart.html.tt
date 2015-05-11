@@ -10,120 +10,118 @@
     <li id="max_overlay">6</li>
 </ul>
 
-<div class='grd-grid-12 grd-parent grd-row-padding'>
-    <form id="form_chart_director" action="[% request.url_for('smartchart.cgi') %]" method="post">
-        <input type="hidden" name="print_chart" value="1" />
-        <input type="hidden" name="chart_size" value="[% template_data.default_chart_size %]" />
-        <input type="hidden" name="symbol" value="" />
+<form id="form_chart_director" action="[% request.url_for('smartchart.cgi') %]" method="post">
+    <input type="hidden" name="print_chart" value="1" />
+    <input type="hidden" name="chart_size" value="[% template_data.default_chart_size %]" />
+    <input type="hidden" name="symbol" value="" />
 
-        [% WRAPPER 'container/drop_down_menu.html.tt' %]
-            <li class="tm-li">
-                <a id="instrument" href="#" class="tm-a">[% l('Instruments') %] <span class="down-arrow-1"></span></a>
-                [% WRAPPER 'container/rounded_box.html.tt' id='instrument-content' extra_class='drop-down-content' %]
-                    <div class="rbox-content">
-                        [% FOREACH underlying_input IN template_data.underlying_input %]
-                            <div class="underlying_group">
-                                <h6 id="[% underlying_input.group_id %]">[% underlying_input.title %]</h6>
-                                <ul id="opt_[% underlying_input.group_id %]" class="not-li[% IF underlying_input.selected %] selected[% END %]">
-                                [% FOREACH input IN underlying_input.inputs %]
-                                    <li>[% input.input %] [% input.label %]</li>
-                                [% END %]
-                                </ul>
-                            </div>
-                        [% END %]
-                    </div>
-                    <div class="clear"></div>
-                [% END %]
-            </li>
-            <li class="tm-li">
-                <a id="settings" class="tm-a" href="#">[% l('Settings') %] <span class="down-arrow-1"></span></a>
-                [% WRAPPER 'container/rounded_box.html.tt' id='settings-content' extra_class='drop-down-content' %]
-                    <div class="rbox-content">
-                        <ul class="half-1 with-separator not-li">
-                            [% FOREACH chart_type IN template_data.chart_types %]
-                                <li>[% chart_type.input %] [% chart_type.label %]</li>
+    [% WRAPPER 'container/drop_down_menu.html.tt' %]
+        <li class="tm-li">
+            <a id="instrument" href="#" class="tm-a">[% l('Instruments') %] <span class="down-arrow-1"></span></a>
+            [% WRAPPER 'container/rounded_box.html.tt' id='instrument-content' extra_class='drop-down-content' %]
+                <div class="rbox-content">
+                    [% FOREACH underlying_input IN template_data.underlying_input %]
+                        <div class="underlying_group">
+                            <h6 id="[% underlying_input.group_id %]">[% underlying_input.title %]</h6>
+                            <ul id="opt_[% underlying_input.group_id %]" class="not-li[% IF underlying_input.selected %] selected[% END %]">
+                            [% FOREACH input IN underlying_input.inputs %]
+                                <li>[% input.input %] [% input.label %]</li>
                             [% END %]
-                        </ul>
-                        <ul class="half-2 not-li">
-                            <li><input id="vgrid" name="vgrid" type="checkbox" checked="checked" value="on" /><label for="vgrid">[% l('Vertical Grid') %]</label></li>
-                            <li><input id="hgrid" name="hgrid" type="checkbox" checked="checked" value="on" /><label for="hgrid">[% l('Horizontal Grid') %]</label></li>
-                            <li><input id="log_scale" name="log_scale" type="checkbox" value="on"><label for="log_scale">[% l('Log Scale') %]</label></li>
-                        </ul>
-                        <div class="clear"></div>
-                    </div>
-                [% END %]
-            </li>
-            <li class="tm-li">
-                <a id="band" class="tm-a" href="#">[% l('Price Band') %] <span class="down-arrow-1"></span></a>
-                [% WRAPPER 'container/rounded_box.html.tt' id='band-content' extra_class='drop-down-content' %]
-                    <div class="rbox-content">
-                        <ul class="not-li">
-                            [% FOREACH band IN template_data.bands %]
-                                <li>[% band.input %] [% band.label %]</li>
-                            [% END %]
-                        </ul>
-                    </div>
-                [% END %]
-            </li>
-            <li class="tm-li">
-                <a id="moving-average" class="tm-a" href="#">[% l('Moving Average') %] <span class="down-arrow-1"></span></a>
-                [% WRAPPER 'container/rounded_box.html.tt' id='moving-average-content' extra_class='drop-down-content' %]
-                    <div class="rbox-content">
-                        <ul class="half-1 with-separator not-li">
-                            [% FOREACH moving_average IN template_data.chart_moving_average_1 %]
-                                <li>[% moving_average.input %] [% moving_average.label %]</li>
-                            [% END %]
-                        </ul>
-                        <ul class="half-2 not-li">
-                            [% FOREACH moving_average IN template_data.chart_moving_average_2 %]
-                                <li>[% moving_average.input %] [% moving_average.label %]</li>
-                            [% END %]
-                        </ul>
-                        <div class="clear"></div>
-                    </div>
-                [% END %]
-            </li>
-            <li class="tm-li">
-                <a id="indicator" class="tm-a" href="#">[% l('Indicator') %] <span class="down-arrow-1"></span></a>
-                [% WRAPPER 'container/rounded_box.html.tt' id='indicator-content' extra_class='drop-down-content' %]
-                    <div class="rbox-content">
-                        <ul class="not-li">
-                            [% FOREACH study IN template_data.studies_input %]
-                                <li>[% study.input %] [% study.label %]</li>
-                            [% END %]
-                        </ul>
-                    </div>
-                [% END %]
-            </li>
-        [% END %]
-        <div id="ticker">[% template_data.ticker_data_table %]</div>
-
-        <fieldset id="chart_compare_underlying">
-            <ul class="button-menu not-li"><li class="line_1">[% template_data.default_underlying.name %]<input type="checkbox" name="overlay" value="[% template_data.default_underlying.code %]-" checked="checked" /> </li></ul>
-        </fieldset>
-
-        <fieldset id="chart_period">
-            <ul class="button-menu not-li">
-                [% IF template_data.intraday_interval_input %]
-                    <li class="interval first">
-                        <input type="radio" value="1" id="pr_1" name="period"><label class="button button-small" for="pr_1"><span class="button-small">[% l('Intraday') %]</span></label>
-                        <div id="intraday_interval">
-                            <ul class="not-li">
-                                [% FOREACH period IN template_data.intraday_interval_input %]
-                                    <li>[% period.input %][% period.label %]</li>
-                                [% END %]
                             </ul>
                         </div>
-                    </li>
-                [% END %]
+                    [% END %]
+                </div>
+                <div class="clear"></div>
+            [% END %]
+        </li>
+        <li class="tm-li">
+            <a id="settings" class="tm-a" href="#">[% l('Settings') %] <span class="down-arrow-1"></span></a>
+            [% WRAPPER 'container/rounded_box.html.tt' id='settings-content' extra_class='drop-down-content' %]
+                <div class="rbox-content">
+                    <ul class="half-1 with-separator not-li">
+                        [% FOREACH chart_type IN template_data.chart_types %]
+                            <li>[% chart_type.input %] [% chart_type.label %]</li>
+                        [% END %]
+                    </ul>
+                    <ul class="half-2 not-li">
+                        <li><input id="vgrid" name="vgrid" type="checkbox" checked="checked" value="on" /><label for="vgrid">[% l('Vertical Grid') %]</label></li>
+                        <li><input id="hgrid" name="hgrid" type="checkbox" checked="checked" value="on" /><label for="hgrid">[% l('Horizontal Grid') %]</label></li>
+                        <li><input id="log_scale" name="log_scale" type="checkbox" value="on"><label for="log_scale">[% l('Log Scale') %]</label></li>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+            [% END %]
+        </li>
+        <li class="tm-li">
+            <a id="band" class="tm-a" href="#">[% l('Price Band') %] <span class="down-arrow-1"></span></a>
+            [% WRAPPER 'container/rounded_box.html.tt' id='band-content' extra_class='drop-down-content' %]
+                <div class="rbox-content">
+                    <ul class="not-li">
+                        [% FOREACH band IN template_data.bands %]
+                            <li>[% band.input %] [% band.label %]</li>
+                        [% END %]
+                    </ul>
+                </div>
+            [% END %]
+        </li>
+        <li class="tm-li">
+            <a id="moving-average" class="tm-a" href="#">[% l('Moving Average') %] <span class="down-arrow-1"></span></a>
+            [% WRAPPER 'container/rounded_box.html.tt' id='moving-average-content' extra_class='drop-down-content' %]
+                <div class="rbox-content">
+                    <ul class="half-1 with-separator not-li">
+                        [% FOREACH moving_average IN template_data.chart_moving_average_1 %]
+                            <li>[% moving_average.input %] [% moving_average.label %]</li>
+                        [% END %]
+                    </ul>
+                    <ul class="half-2 not-li">
+                        [% FOREACH moving_average IN template_data.chart_moving_average_2 %]
+                            <li>[% moving_average.input %] [% moving_average.label %]</li>
+                        [% END %]
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+            [% END %]
+        </li>
+        <li class="tm-li">
+            <a id="indicator" class="tm-a" href="#">[% l('Indicator') %] <span class="down-arrow-1"></span></a>
+            [% WRAPPER 'container/rounded_box.html.tt' id='indicator-content' extra_class='drop-down-content' %]
+                <div class="rbox-content">
+                    <ul class="not-li">
+                        [% FOREACH study IN template_data.studies_input %]
+                            <li>[% study.input %] [% study.label %]</li>
+                        [% END %]
+                    </ul>
+                </div>
+            [% END %]
+        </li>
+    [% END %]
+    <div id="ticker">[% template_data.ticker_data_table %]</div>
 
-                [% FOREACH period IN template_data.period_daily_input %]
-                    <li>[% period.input %][% period.label %]</li>
-                [% END %]
-            </ul>
-        </fieldset>
+    <fieldset id="chart_compare_underlying">
+        <ul class="button-menu not-li"><li class="line_1">[% template_data.default_underlying.name %]<input type="checkbox" name="overlay" value="[% template_data.default_underlying.code %]-" checked="checked" /> </li></ul>
+    </fieldset>
 
-        <div id="chart_director_imageholder" class="chart_holder grd-grid-12 grd-no-gutter"></div>
-        <div id="chart_properties"></div>
-    </form>
-</div>
+    <fieldset id="chart_period">
+        <ul role="tabs">
+            [% IF template_data.intraday_interval_input %]
+                <li class="interval first">
+                    <input type="radio" value="1" id="pr_1" name="period"><label for="pr_1">[% l('Intraday') %]</label>
+                    <div id="intraday_interval">
+                        <ul class="not-li">
+                            [% FOREACH period IN template_data.intraday_interval_input %]
+                                <li>[% period.input %][% period.label %]</li>
+                            [% END %]
+                        </ul>
+                    </div>
+                </li>
+            [% END %]
+
+            [% FOREACH period IN template_data.period_daily_input %]
+                <li>[% period.input %][% period.label %]</li>
+            [% END %]
+        </ul>
+    </fieldset>
+
+    <div id="chart_director_imageholder" class="chart_holder"></div>
+    <div id="chart_properties"></div>
+</form>

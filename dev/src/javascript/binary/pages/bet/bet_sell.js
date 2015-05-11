@@ -214,7 +214,7 @@ var BetSell = function() {
         },
         get_loading_html: function() {
             var image_link = page.settings.get('image_link');
-            return '<span class="loading">'+text.localize('loading...')+'&nbsp;<img src="'+image_link['hourglass']+'" /></span>';
+            return '<div class="progress"></div>';
         },
         show_inpage_popup: function (data) {
             var con = this.container(true);
@@ -1063,7 +1063,7 @@ var BetSell = function() {
                 if (liveChartConfig.has_indicator('entry_spot_time')) {
                     live_chart.remove_indicator('entry_spot_time');
                 }
-                
+
                 if (start_time && entry_spot_time < start_time) {
                     indicator = new LiveChartIndicator.Barrier({ name: "entry_spot_time", label: 'Entry Spot', value: that.get_date_from_seconds(parseInt(entry_spot_time)), color: '#e98024', axis: 'x'});
                 } else {

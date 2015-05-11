@@ -31,10 +31,10 @@
                 <br> EUR AUD
             </td>
             <td>
-                25 - 100,000
+                25&ndash;100,000
             </td>
             <td>
-                25 - 100,000
+                25&ndash;100,000
             </td>
             <td>
                 [% l('Deposit: [_1] working days', 5)%]
@@ -51,10 +51,10 @@
                 <br> EUR AUD
             </td>
             <td>
-                25 - 50,000
+                25&ndash;50,000
             </td>
             <td>
-                25 - 10,000
+                25&ndash;10,000
             </td>
             <td>
                 [% l('Deposit: [_1] working days', 5)%]
@@ -71,10 +71,10 @@
                 <br> EUR AUD
             </td>
             <td>
-                10 - 3,000
+                10&ndash;3,000
             </td>
             <td>
-                50 - 250
+                50&ndash;250
             </td>
             <td>
                 [% l('Deposit: [_1] working days', 1)%]
@@ -91,10 +91,10 @@
                 <br> EUR AUD
             </td>
             <td>
-                100 - 5,000
+                100&ndash;5,000
             </td>
             <td>
-                100 - 5,000
+                100&ndash;5,000
             </td>
             <td>
                 [% l('Deposit: [_1] working days', 5)%]

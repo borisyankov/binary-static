@@ -4,25 +4,20 @@
 <a class="pjaxload button" href="[% request.url_for('/user/statement', { after => transactions.first.transaction_time, currency => currency }) %]"><span>&laquo;[% l('Newer') %]</span></a>
 [% END %]
 
-
-<span class="grd-grid-8 grd-hide-mobile grd-hide-phablet center-aligned" [% IF position != 'top' %] style="visibility:hidden" [% END %]>
+<div class="media" [% IF position != 'top' %] style="visibility:hidden" [% END %]>
     <form action="[% request.url_for('/user/statement') %]">
-        <div class="grd-row-padding grd-parent grd-grid-7 right-aligned">
-            <label for='before' class='left-aligned'>[% l('Jump to') %]</label>
-            <input id='statement-date' class='has-date-picker' name='before' value='[% before %]'/>
-            <input type='hidden' name='jump_to' value='1'/>
-        </div>
-        <span id="submit-date" class="invisible button grd-grid-5 left-aligned">
+        <input id='statement-date' class='has-date-picker' name='before' value='[% before %]' type="text"/>
+        <input type='hidden' name='jump_to' value='1'/>
+        <span id="submit-date" class="invisible">
             <button class="button">[% l('Go') %]</button>
         </span>
     </form>
-</span>
-
-<div class="grd-grid-2 grd-grid-mobile-6 grd-grid-phablet-6 right-aligned">
-    [% IF has_older %]
-    <a class="pjaxload button" href="[% request.url_for('/user/statement', { before => transactions.last.transaction_time, currency => currency }) %]"><span>[% l('Older') %]&raquo;</span></a>
-    [% END %]
 </div>
+
+[% IF has_older %]
+<a class="pjaxload button" href="[% request.url_for('/user/statement', { before => transactions.last.transaction_time, currency => currency }) %]"><span>[% l('Older') %]&raquo;</span></a>
+[% END %]
+
 [%- END -%]
 
 [%- MACRO display_amount(amount) BLOCK -%]
@@ -62,53 +57,25 @@ END -%]
 
 
 [%- MACRO display_contract(transaction) BLOCK -%]
-        <div class="grd-grid-5 grd-grid-mobile-8 grd-grid-phablet-6">
-                <div class="grd-grid-3 grd-grid-mobile-12 grd-grid-phablet-12 grd-grid-tablet-12">[% transaction_type(transaction) %]</div>
-                <div class="grd-grid-9 grd-grid-mobile-12 grd-grid-phablet-12 grd-grid-tablet-12">
-                        [% describe_contract(transaction) %]
-                </div>
-        </div>
-        <div class="grd-grid-4 grd-grid-mobile-4 grd-grid-phablet-3">
-                <div class="grd-grid-6 grd-grid-mobile-12 grd-grid-phablet-12 right-aligned">
-                        [% display_amount(transaction.amount) %]
-                </div>
-                <div class="grd-hide grd-show-mobile grd-grid-mobile-12 grd-show-phablet grd-grid-phablet-12">
-                        <br/>[% l('Balance'); %]:
-                </div>
-                <div class="grd-grid-6 grd-grid-mobile-12 grd-grid-phablet-12 right-aligned">
-                        [% to_monetary_number_format(transaction.balance) %]
-                </div>
-        </div>
+    <td>[% transaction_type(transaction) %]</td>
+    <td>[% describe_contract(transaction) %]</td>
+    <td>[% display_amount(transaction.amount) %]</td>
+    <td>[% to_monetary_number_format(transaction.balance) %]</td>
 [%- END -%]
 
 [%- MACRO display_payment(transaction) BLOCK -%]
-        <div class="grd-grid-5 grd-grid-mobile-8 grd-grid-phablet-6">
-                <div class="grd-grid-3 grd-grid-mobile-12 grd-grid-phablet-12 grd-grid-tablet-12">[% transaction_type(transaction) %]</div>
-                <div class="grd-grid-9 grd-grid-mobile-12 grd-grid-phablet-12 grd-grid-tablet-12">
-                        [% transaction.payment_remark | replace('\s+:\s+', ': ') %]
-                </div>
-        </div>
-        <div class="grd-grid-4 grd-grid-mobile-4 grd-grid-phablet-3">
-                <div class="grd-grid-6 grd-grid-mobile-12 grd-grid-phablet-12 right-aligned">
-                        [% display_amount(transaction.amount) %]
-                </div>
-                <div class="grd-hide grd-show-mobile grd-grid-mobile-12 grd-show-phablet grd-grid-phablet-12">
-                        <br/>[% l('Balance'); %]:
-                </div>
-                <div class="grd-grid-6 grd-grid-mobile-12 grd-grid-phablet-12 right-aligned">
-                        [% to_monetary_number_format(transaction.balance) %]
-                </div>
-        </div>
+    <td>[% transaction_type(transaction) %]</td>
+    <td>[% transaction.payment_remark | replace('\s+:\s+', ': ') %]</td>
+    <td>[% display_amount(transaction.amount) %]</td>
+    <td>[% to_monetary_number_format(transaction.balance) %]</td>
 [% END %]
 
 <h1>[% l('Statement') %]</h1><br>
 
 [% IF balance.amount == 0 %]
-    <div class="grd-grid-12 grd-hide-mobile grd-hide-phablet right-aligned">
-        <a href="[% deposit_url %]" class="button button_large by_client_type client_real with_login_cookies">
-        <span>[% l('Make a Deposit') %]</span>
-        </a>
-    </div>
+    <p>
+        <a href="[% deposit_url %]" class="buttonby_client_type client_real with_login_cookies">[% l('Make a Deposit') %]</a>
+    </p>
 [% END %]
 
 <div id="statement-table">
@@ -116,7 +83,7 @@ END -%]
 [% IF transactions.size == 0 %]
     <p>[% l('There are no items during this period') %]</p>
 [% ELSE %]
-    <table>
+    <table id="statement-table">
         <thead>
             <tr>
                 <th>[% l('Date'); %]</th>
@@ -133,11 +100,7 @@ END -%]
                 <td>
                     [% transaction.date.date_yyyymmdd %]<br/>[% transaction.date.time_hhmmss %]
                 </td>
-                <td>
-                    <br/>[% l('Ref.'); %]:
-                </td>
                 <td>[% transaction.id %]</td>
-            </div>
             [% IF transaction.financial_market_bet_id.defined;
                 display_contract(transaction);
             ELSE;

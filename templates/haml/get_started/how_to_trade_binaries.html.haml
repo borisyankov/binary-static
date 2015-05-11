@@ -1,21 +1,23 @@
 - stash(title => l('How to trade binaries?'));
+
 %h1= stash->{title}
 %p= l('Trading binaries is remarkably easy, and requires only 3 simple steps:')
 
 .row
     .col
-        %img.responsive{:src => url_for('images/pages/home/step-1.svg')}
+        %img.h10{:src => url_for('images/pages/home/step-1.svg')}
         %p= l('Define your position')
     .col
-        %img.responsive{:src => url_for('images/pages/home/step-2.svg')}
+        %img.h10{:src => url_for('images/pages/home/step-2.svg')}
         %p= l('Get your price')
     .col
-        %img.responsive{:src => url_for('images/pages/home/step-3.svg')}
+        %img.h10{:src => url_for('images/pages/home/step-3.svg')}
         %p= l('Make your trade')
 
 %h2= l('Step 1: Define your position')
 %p= l('First, you need to set the parameters of your trade. Here’s what you need to consider.')
-%img.responsive{:src => url_for('images/pages/get-started/define-your-position.svg')}
+%p.media
+    %img.h10{:src => url_for('images/pages/get-started/define-your-position.svg')}
 
 %h2= l('Choose a trade type')
 %ul.bullet
@@ -32,17 +34,20 @@
     %li!= l("<strong>Random Indices</strong> - trade [_1]'s propietary random indices.", stash->{website_name})
 
 %h2= l('Choose the duration')
-    %img.responsive{:src => url_for('images/pages/get-started/duration.svg')}
+%p.media
+    %img.h10{:src => url_for('images/pages/get-started/duration.svg')}
 %p!= l('You can set the length of your trade, from 10 seconds to 365 days.')
 %p!= l("But there's no need to wait until expiry. You can sell back long-term trades at any time to profit from changing market conditions.")
 
 %h2= l('Choose the barrier(s)')
-%img.responsive{:src => url_for('images/pages/get-started/barriers.svg')}
+%p.media
+    %img.h10{:src => url_for('images/pages/get-started/barriers.svg')}
 %p= l("The barrier(s) you choose defines your position and triggers your payout.")
 %p= l("You set the barrier(s) to define your position.")
 
 %h2= l('Choose the payout')
-%img.responsive{:src => url_for('images/pages/get-started/payout.svg')}
+%p.media
+    %img.h10{:src => url_for('images/pages/get-started/payout.svg')}
 %p= l('Each binary trade is for a pre-determined payout amount. You win the payout if your prediction is correct.')
 %p= l('You can choose payouts from $1 to $100,000. This wide payout range is ideal for both small and large traders.')
 
@@ -56,5 +61,5 @@
     %li= l("With [_1]'s unique platform, there's no risk of 'slippage' or gapping markets. And no hidden fees.", stash->{website_name})
     %li= l("You can sell back long-term trades at any time to profit from changing market conditions.")
 
-%a.button.pjaxload{:href => url_for("/")}= l('Try it now')
-%p= l('No risk, $10K virtual money account')
+%p.media
+    %a.button.pjaxload{:href => url_for("/")}= l('Try it now')

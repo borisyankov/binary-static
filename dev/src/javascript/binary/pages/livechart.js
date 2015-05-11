@@ -83,11 +83,6 @@ var init_live_chart = function () {
 
 
     $(".notice").hide();
-    $("#live_chart_extended_options").hide();
-    $("#live_charts_show_extended_options").on('click', function(e){
-        e.preventDefault();
-        $("#live_chart_extended_options").toggle();
-    });
     $("#live_charts_high_barrier").change(function(){
         var val = $(this).val();
         if(liveChartConfig.has_indicator('high') || !val) {

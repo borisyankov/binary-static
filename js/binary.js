@@ -780,7 +780,7 @@ Menu.prototype = {
                 this.show_main_menu();
             }
         } else {
-            var is_mojo_page = /\/$|\/login|\/home|\/smart-indices|\/open-source-projects|\/white-labels|\/partnerapi$/.test(window.location.pathname);
+            var is_mojo_page = /^\/$|\/login|\/home|\/smart-indices|\/ad|\/open-source-projects|\/white-labels|\/partnerapi$/.test(window.location.pathname);
             if(!is_mojo_page) {
                 trading.addClass('active');
                 this.show_main_menu();
@@ -914,7 +914,7 @@ Header.prototype = {
     },
     show_or_hide_login_form: function() {
         if (this.user.is_logged_in && this.client.is_logged_in) {
-            var loginid_select;
+            var loginid_select = '';
             var loginid_array = this.user.loginid_array;
             for (var i=0;i<loginid_array.length;i++) {
                 var curr_loginid = loginid_array[i].id;
@@ -1710,50 +1710,6 @@ function formEffects() {
     };
 }
 
-function add_click_effect_to_button() {
-    var prefix = function (class_name) {
-        var class_names = class_name.split(/\s+/);
-
-        var _prefix = 'button';
-        var cn = class_names.shift();
-
-        while (cn) {
-            if (cn && cn != _prefix && !cn.match(/-focus|-hover/)) {
-                _prefix = cn;
-                break;
-            }
-            cn = class_names.shift();
-        }
-
-        return _prefix;
-    };
-
-    var remove_button_class = function (button, class_name) {
-        button.removeClass(class_name).children('.button').removeClass(class_name).end().parent('.button').removeClass(class_name);
-    };
-    var add_button_class = function (button, class_name) {
-        button.addClass(class_name).children('.button').addClass(class_name).end().parent('.button').addClass(class_name);
-    };
-
-    $('#content,#popup')
-        .delegate('.button', 'mousedown', function () {
-            var class_name = prefix(this.className) + '-focus';
-            add_button_class($(this), class_name);
-        })
-        .delegate('.button', 'mouseup', function () {
-            var class_name = prefix(this.className) + '-focus';
-            remove_button_class($(this), class_name);
-        })
-        .delegate('.button', 'mouseover', function () {
-            var class_name = prefix(this.className) + '-hover';
-            add_button_class($(this), class_name);
-        })
-        .delegate('.button', 'mouseout', function () {
-            var class_name = prefix(this.className) + '-hover';
-            remove_button_class($(this), class_name);
-        });
-}
-
 onLoad.queue(function () {
     $('.tm-ul > li').hover(
         function () {
@@ -1765,8 +1721,6 @@ onLoad.queue(function () {
     );
 
     MenuContent.init($('.content-tab-container').find('.tm-ul'));
-
-    add_click_effect_to_button();
 
     // attach the class to account form's div/fieldset for CSS visual effects
     var objFormEffect = new formEffects();
@@ -2985,11 +2939,12 @@ $(function() { onLoad.fire(); });
 var trade_event_bindings = {};
 
 function contract_guide_popup() {
-    $('#bet_guide_content').on('click', 'a.bet_demo_link', function (e){
+    $('.contract-guide-content').on('click', '.bet_demo_link', function (e){
         e.preventDefault();
         var ip = new InPagePopup();
         ip.ajax_conf = { url: this.href, data: 'ajax_only=1' };
         ip.fetch_remote_content(true, '', function (data) {
+            attach_tabs();
             attach_tabs('#contract_demo_container');
             return data;
         });
@@ -3006,7 +2961,7 @@ var trading_times_init = function() {
      onSelect: function( dateText, picker ){
          trading_times.tabs( "destroy" );
          showLoadingImage(trading_times);
-         url = page.url.url_for('trading_times.cgi', 'date=' + dateText, 'cached');
+         url = page.url.url_for('resources/trading_times', 'date=' + dateText, 'cached');
          $.ajax({
                   url: url,
                   data:  { 'ajax_only': 1 },
@@ -3081,35 +3036,9 @@ onLoad.queue_for_url(function() {
         return false;
     });
 }, '/c/paymentagent_list');
-;var signup = function() {
-    var signup = $('.login-button, .dialog, .overlay').on('click', function() {
-        $('.overlay').toggleClass('hidden');
-    });
-};
 
-var xscroll = function() {
-    var xscroll = $("#xscroll").click(function() {
-        $('html, body').animate({
-            scrollTop: $("#section2").offset().top
-        }, 1000);
-    });
-};
-
-pjax_config_page('/home3', function() {
-    return {
-        onLoad: function() {
-            signup();
-        },
-    };
-});
-
-pjax_config_page('/home4', function() {
-    return {
-        onLoad: function() {
-            signup();
-            xscroll();
-        },
-    };
+$('.login-content button').on('click', function() {
+    $('.form-logo').addClass('spinner');
 });
 ;var trade_contract_back = function () {
     $('#find_another_contract').on('click', function (e) {
@@ -3488,7 +3417,7 @@ pjax_config_page('chart_application', function () {
                         data: formData,
                         success: function(prices) {
                             tab.content.html(prices);
-                            attach_tabs('#pricing_table_tabs');
+                            initTabs();
                         },
                         error: function(xhr, status) {
                             tab.content.html(status);
@@ -4061,6 +3990,7 @@ BetAnalysis.tab_last_digit = new BetAnalysis.DigitInfo();
                         BetForm.underlying_drop_down.update_for_submarket(this.value);
                         //If Underlying Changed because of submarket
                         if (BetForm.attributes.model.underlying() != BetForm.attributes.underlying()) {
+                            BetForm.attributes.model.underlying(BetForm.attributes.underlying());
                             that.update_for_underlying(BetForm.attributes.underlying());
                         }
                     }).addClass('unbind_later');
@@ -4577,7 +4507,7 @@ BetAnalysis.tab_last_digit = new BetAnalysis.DigitInfo();
             model: function() {
                 return {
                     form_name: function(form_name) {
-                        var fallback = 'bets_tab_risefall';
+                        var fallback = 'bets_tab_callput';
                         if(form_name) {
                             LocalStore.set('bet_page.form_name', form_name);
                         }
@@ -5024,8 +4954,18 @@ BetForm.Time.prototype = {
         this.trading_time.init();
         this.duration.init();
         this.end_time.init();
-        $('#expiry_type').val(this.model.expiry_type);
         this.register();
+        if (BetForm.attributes.model.form_name() == "digits" || BetForm.attributes.model.form_name() == "asian") {
+            var expiry_val = 'duration';
+            $('#expiry_type').val(expiry_val);
+            page.url.invalidate();
+            LocalStore.set('bet_page.expiry_type', expiry_val);
+            BetForm.attributes.model.expiry_type(expiry_val);
+            this.model.expiry_type = expiry_val;
+            $('#duration_amount').val(this.trading_time.min_unit().min);
+        } else {
+            $('#expiry_type').val(this.model.expiry_type);
+        }
         this.update_ui();
     },
     register: function() {
@@ -5383,13 +5323,17 @@ BetForm.TradingTime.prototype = {
         return trading_dates;
     },
     get_trading_days: function() {
-        var underlying_symbol = this.underlying();
+        var underlying_symbol = BetForm.attributes.underlying();
+        var barrier = BetForm.attributes.barrier_1();
         if (typeof this.trading_info[underlying_symbol] === 'undefined') {
             var that = this;
             $.ajax({
                 url: page.url.url_for('trade_get.cgi'),
                 data: { controller_action: 'trading_days',
-                        underlying_symbol: underlying_symbol
+                        underlying_symbol: underlying_symbol,
+                        form_name: BetForm.attributes.form_name(),
+                        date_start: BetForm.attributes.start_time(),
+                        barrier: barrier,
                     },
                 dataType:'json',
                 async: false
@@ -5707,7 +5651,7 @@ BetForm.Time.EndTime.prototype = {
             }
         },
         error_handler: function() {
-            this.container().find('div.rbox-lowpad:first').html("There was a problem accessing the server.");
+            this.container().find('div.rbox-lowpad:first').html(text.localize("There was a problem accessing the server."));
             this.streaming.stop();
         },
         price_update: function(data) {
@@ -5795,7 +5739,7 @@ BetForm.Time.EndTime.prototype = {
             } else if (document.location.href.match(/^http:/) && (!details || details.match(/access/i))) {
                 details += '<ul>Please <a href="' + document.location.href.replace('http://', 'https://') + '">continue browsing using HTTPS secure protocol</a></ul>';
             } else {
-                details += 'There was a problem accessing the server during purchase.';
+                details += text.localize('There was a problem accessing the server during purchase.');
             }
             var width = this.container().width(); // since the error message could be any size, set the continer size to a good value
             this.display_buy_error('<div style="width: ' + width + 'px;"><h3>Error</h3><p>' + details + ' </p></div>');
@@ -5983,7 +5927,7 @@ BetForm.Time.EndTime.prototype = {
         },
         show_loading: function() {
             var image_link = page.settings.get('image_link');
-            var loading_html = '<p id="loading-price">'+text.localize('loading...')+'<br /><img src="'+image_link['hourglass']+'" /></p>';
+            var loading_html = '<div class="progress"></div>';
             this.container().find('div.rbox-lowpad:first').show().html('<div class="rbox rbox-bg-alt"><div class="rbox-wrap"><div class="rbox-content">'+loading_html+'</div></div><span class="tl">&nbsp;</span><span class="tr">&nbsp;</span><span class="bl">&nbsp;</span><span class="br">&nbsp;</span></div></div>');
             this.container().show();
         },
@@ -6083,7 +6027,7 @@ BetForm.Time.EndTime.prototype = {
                     return prices;
                 },
                 prices_from_form: function () {
-                    
+
                     var prices = [],
                         order_forms = $('.orderform'),
                         order_forms_count = order_forms ? order_forms.length : 0,
@@ -6091,7 +6035,7 @@ BetForm.Time.EndTime.prototype = {
                         id,
                         prob,
                         error;
-                    
+
                     if (order_forms_count > 0 ) {
                         for (i = 0; i < order_forms_count; i++) {
                             id = $('input[name="display_id"]', form).val();
@@ -6471,7 +6415,7 @@ BetForm.Time.EndTime.prototype = {
         },
         get_loading_html: function() {
             var image_link = page.settings.get('image_link');
-            return '<span class="loading">'+text.localize('loading...')+'&nbsp;<img src="'+image_link['hourglass']+'" /></span>';
+            return '<div class="progress"></div>';
         },
         show_inpage_popup: function (data) {
             var con = this.container(true);
@@ -7320,7 +7264,7 @@ BetForm.Time.EndTime.prototype = {
                 if (liveChartConfig.has_indicator('entry_spot_time')) {
                     live_chart.remove_indicator('entry_spot_time');
                 }
-                
+
                 if (start_time && entry_spot_time < start_time) {
                     indicator = new LiveChartIndicator.Barrier({ name: "entry_spot_time", label: 'Entry Spot', value: that.get_date_from_seconds(parseInt(entry_spot_time)), color: '#e98024', axis: 'x'});
                 } else {
@@ -7407,8 +7351,8 @@ BetForm.Time.EndTime.prototype = {
             $self.symbol = data.symbol;
             $self.display_symbol = data.display_symbol;
             $self.contract_start_ms = parseInt(data.contract_start * 1000);
-            $self.contract_type = data.contract_type;
-            $self.set_barrier = ($self.contract_type.match('DIGIT')) ? false : true;
+            $self.contract_category = data.contract_category;
+            $self.set_barrier = ($self.contract_category.match('digits')) ? false : true;
             $self.display_decimal = 0;
             var tick_frequency = 5;
 
@@ -7436,7 +7380,7 @@ BetForm.Time.EndTime.prototype = {
             var $self = this;
 
             var exit_tick_index = $self.number_of_ticks - 1;
-            if ($self.contract_type.match('ASIAN')) {
+            if ($self.contract_category.match('asian')) {
                 $self.ticks_needed = $self.number_of_ticks;
                 $self.x_indicators = {
                     '_0': { label: 'Tick 1', id: 'start_tick'},
@@ -7445,7 +7389,7 @@ BetForm.Time.EndTime.prototype = {
                     label: 'Exit Spot',
                     id: 'exit_tick',
                 };
-            } else if ($self.contract_type.match('FLASH')) {
+            } else if ($self.contract_category.match('callput')) {
                 $self.ticks_needed = $self.number_of_ticks + 1;
                 $self.x_indicators = {
                     '_0': { label: 'Entry Spot', id: 'entry_tick'},
@@ -7454,7 +7398,7 @@ BetForm.Time.EndTime.prototype = {
                     label: 'Exit Spot',
                     id: 'exit_tick',
                 };
-            } else if ($self.contract_type.match('DIGIT')) {
+            } else if ($self.contract_category.match('digits')) {
                 $self.ticks_needed = $self.number_of_ticks;
                 $self.x_indicators = {
                     '_0': { label: 'Tick 1', id: 'start_tick'},
@@ -7600,7 +7544,7 @@ BetForm.Time.EndTime.prototype = {
                 return;
             }
 
-            var barrier_type = $self.contract_type.match('ASIAN') ? 'asian' : 'static';
+            var barrier_type = $self.contract_category.match('asian') ? 'asian' : 'static';
 
             if (barrier_type === 'static') {
                 var barrier_tick = $self.applicable_ticks[0];
@@ -8047,37 +7991,14 @@ onLoad.queue_for_url(function() {
         }
     });
 };
-;//// togglePromoCodeTnC ////////////////////////////////////////////
-//
-// triggered when the promocode field on the account opening form
-// loses focus. If a promocode is entered, additional T&C will be
-// shown, and the Client will have to agree to them when opening
-// the account.
-//
-////////////////////////////////////////////////////////////////////
-var togglePromoCodeTnC = function(event)
-{
-    var o = $(event.target);
-
-    if (o.val() !== '')
-    {
-        $('#formlayout').find('#comment').find('span').removeClass('invisible');
-    }
-    else
-    {
-        $('#formlayout').find('#comment').find('span').addClass('invisible');
-    }
-};
-
-var client_form;
+;var client_form;
 onLoad.queue(function() {
         client_form = new ClientForm({restricted_countries: page.settings.get('restricted_countries'), valid_loginids: page.settings.get('valid_loginids')});
 });
 
-pjax_config_page('linkto_acopening', function() {
+pjax_config_page('user/upgrade', function() {
     return {
         onLoad: function() {
-            $('#promotionalcode').blur(togglePromoCodeTnC);
             client_form.on_residence_change();
             select_user_country();
             if(page.client.is_logged_in) {
@@ -8262,7 +8183,7 @@ ClientForm.prototype = {
             if(that.is_allowed_opening_account_country($(this).val())) {
                 $.ajax({
                     crossDomain:true,
-                    url: page.url.url_for('states_list.cgi'),
+                    url: page.url.url_for('states_list'),
                     data: {"c":$('#residence').get(0).value,"l": page.language()},
                     async: true,
                     dataType: "html"
@@ -8459,7 +8380,7 @@ var email_rot13 = function(str) {
 var display_cs_contacts = function () {
     $('.contact-content').on("change", '#cs_telephone_number', function () {
         var val = $(this).val();
-        $('#display_cs_telephone').text(val);
+        $('#display_cs_telephone').html('<a href="tel:' + val + '">' + val + '</a>');
     });
     $('#cs_contact_eaddress').html(email_rot13("<n uers=\"znvygb:fhccbeg@ovanel.pbz\" ery=\"absbyybj\">fhccbeg@ovanel.pbz</n>"));
 };
@@ -8738,11 +8659,6 @@ var init_live_chart = function () {
 
 
     $(".notice").hide();
-    $("#live_chart_extended_options").hide();
-    $("#live_charts_show_extended_options").on('click', function(e){
-        e.preventDefault();
-        $("#live_chart_extended_options").toggle();
-    });
     $("#live_charts_high_barrier").change(function(){
         var val = $(this).val();
         if(liveChartConfig.has_indicator('high') || !val) {
@@ -8995,7 +8911,7 @@ pjax_config_page('portfolio', function() {
             page.url.update(url);
             $('#pricingtable_calculating').hide();
             $('#pricingtable_calculate').show();
-            attach_tabs('#pricing_table_tabs');
+            initTabs();
         });
     });
 };
@@ -9148,6 +9064,112 @@ onLoad.queue_for_url(function () {
     self_exclusion_date_picker();
     self_exclusion_validate_date();
 }, 'self_exclusion');
+;$(function() {
+
+    function validate($parent) {
+        $('.error').remove();
+        $parent.find('input, select').each(function() {
+            if ($(this).val() === '') {
+                var $el = $(this);
+                if ($el.parent().is('p')) {
+                    $el = $el.parent();
+                }
+                if ($el.parent().is('.dob')) {
+                    $el = $el.parent().parent();
+                }
+                $el.after('<div class="error">You can\'t leave this empty</div>');
+            }
+        });
+        $('.error + .error').remove();
+        return $('.error').length === 0;
+    }
+
+    $('form[novalidate]').on('submit', function(e) {
+        var $form = $(this);
+        $form.find('.error').remove();
+        if (validate($form)) {
+            $form.find('img').toggleClass('spinner');
+        }
+        e.preventDefault();
+    });
+
+    $('.language-selector select').on('change', function() {
+        var idx = this.selectedIndex;
+        $('.flag').css('background-position', '0 -' + idx * 15 + 'px');
+    });
+
+
+
+    $('*[data-modal]').on('click', function() {
+
+        var modal = $(this).attr('data-modal');
+
+        $(modal).show();
+        $('.overlay').removeClass('hidden');
+        $(modal).trigger('modalShow');
+    });
+
+    $('.overlay').on('click', function(e) {
+
+        if (!$(e.target).hasClass('overlay')) return;
+
+        $('.overlay').addClass('hidden');
+        setTimeout(function() {
+            $('.overlay form').hide();
+        }, 200);
+
+        $(this).find('form').trigger('modalHide');
+    });
+
+    $('#real-account-form').on('modalShow', function() {
+        currentStep = 0;
+        gotoStep[currentStep]();
+    });
+
+    $('form').on('modalShow', function() {
+        $(this).find('.error').hide();
+        $(this).find('input').val('');
+        $('.form-logo').removeClass('spinner');
+    });
+
+    var gotoStep = [
+        function step1() {
+            $('.step1').show();
+            $('.step2').hide();
+            $('.step3').hide();
+        },
+        function step2() {
+            $('.step1').hide();
+            $('.step2').show();
+            $('.step3').hide();
+        },
+        function step3() {
+            $('.step1').hide();
+            $('.step2').hide();
+            $('.step3').show();
+        },
+        function step4() {
+            $('#real-account-form img').toggleClass('spinner');
+            $('#open-real-acount').prop('disabled', true);
+        }
+    ];
+
+    function gotoStep4() {
+        $form.find('img').toggleClass('spinner');
+    }
+
+    $('#open-real-acount').on('click', function(e) {
+
+        var valid = validate($('.step' + (currentStep + 1)));
+
+        e.preventDefault();
+        if (valid) {
+            currentStep++;
+            $('[class^=step]').hide();
+            gotoStep[currentStep]();
+        }
+    });
+});
 ;onLoad.queue_for_url(function() {
     $('#statement-date').on('change', function() {
         $('#submit-date').removeClass('invisible');
@@ -9162,7 +9184,7 @@ function showLoadingImage(container)
 {
     var image_link = page.settings.get('image_link');
 
-    container.empty().append('<div id="std_loading_img"><p>'+text.localize('loading...')+'</p><img src="'+image_link['hourglass']+'" /></div>');
+    container.html('<div class="progress"></div>');
 }
 
 /////////////////////////////////////////////////////////////////
@@ -9540,13 +9562,7 @@ function attach_inpage_popup(element) {
  */
 
 function get_container_width() {
-    var width = 960;
-    if ($('.chart_holder').length > 0) {
-        width = $('.chart_holder').width();
-    } else {
-        width = $('.grd-container').width();
-    }
-    return width;
+    return $('.chart_holder').length > 0 ? $('.chart_holder') : $('#content').width();
 }
 
 /**
@@ -9599,20 +9615,25 @@ function attach_tabs() {
 function initTabs() {
 
     function updateTabs($tabs) {
+
         $tabs.each(function() {
             var $tab = $(this);
-            var href = $tab.find('a').attr('href');
-            $(href).toggle($tab.hasClass('active'));
+                href = $tab.find('a').attr('href');
+            try {
+                $(href).toggle($tab.hasClass('active'));
+            }
+            catch(err) {}
         });
     }
 
-    var $tabs = $('*[role=tabs] li,*[role=segmented] li');
+    var tabSelector = '*[role=tabs] li,*[role=segmented] li',
+        $tabs = $(tabSelector);
 
     if (!$tabs.hasClass('active')) $tabs.first().addClass('active');
 
     updateTabs($tabs);
 
-    $tabs.on('click', function(e) {
+    $('body').on('click', tabSelector, function(e) {
         var $tabs = $(this).parent().find('li');
         $tabs.removeClass('active');
         $(this).addClass('active');

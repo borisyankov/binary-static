@@ -17,10 +17,10 @@
     %p= l('View the operating hours of the markets you can trade.')
     %a.pjaxload.button{:href => url_for('trading_times.cgi')}= l('Trading Times')
   .col
-    %a.pjaxload{:href => url_for('contract_guide.cgi'),:id => 'contract-guide'}
+    %a.pjaxload{:href => url_for('/resources/contract_guide'),:id => 'contract-guide'}
       %img#charting_icon.responsive.charting-page-icon{:src => url_for('images/pages/resources/contract-guide.svg')}
     %p= l('Learn about the different ways to trade on the markets.')
-    %a.pjaxload.button{:href => url_for('contract_guide.cgi')}= l('Trading Guide')
+    %a.pjaxload.button{:href => url_for('/resources/contract_guide')}= l('Trading Guide')
   .col
     %a.pjaxload{:href => url_for('/resources/pricing_table'),:id => 'pricing-table'}
       %img#charting_icon.responsive.charting-page-icon{:src => url_for('images/pages/resources/pricing-table.svg')}

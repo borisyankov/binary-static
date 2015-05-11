@@ -1,5 +1,4 @@
 [% BLOCK price_tab %]
-<div id="[% price_method %]_pricing_table-content" class="[% class %]">
     <table>
         <thead>
             <tr>

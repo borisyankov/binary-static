@@ -5,11 +5,9 @@
 <div class="row">
     [% FOREACH bet_type IN bet_types %]
     <div class="col">
-        <img src="[%= request.url_for('images/pages/contract_guide/' _  bet_type.id _ '.svg') =%]"></img>
-        <p>
-        [% bet_type.explanation %]
-        <p>
-        <a class="button bet_demo_link" href="[%= request.url_for('contract_demo.cgi', { bet_type =>  bet_type.default}) =%]">[% bet_type.title %]</a>
+        <p class="media"><img src="[%= request.url_for('images/pages/contract_guide/' _ bet_type.id _ '.svg') =%]"></p>
+        <p>[% bet_type.explanation %]<p>
+        <p class="media"><a class="button bet_demo_link" href="[%= request.url_for('/resources/contract_demo', { bet_type =>  bet_type.default}) =%]">[% bet_type.title %]</a></p>
     </div>
     [% END %]
 </div>

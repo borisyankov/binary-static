@@ -3,7 +3,7 @@
 </div>
 <ul class="nav2nd">
     <li>
-        <a class="pjaxload" href="[% request.url_for('contract_guide.cgi') %]" [% target %]>[% l("Trading Guide") %]</a>
+        <a class="pjaxload" href="[% request.url_for('/resources/contract_guide') %]" [% target %]>[% l("Trading Guide") %]</a>
     </li>
     <li>
         <a class="pjaxload" href="[% request.url_for('why-us') %]" [% target %]>[% l("Why Us?") %]</a>

@@ -1,3 +1,7 @@
+[% UNLESS ajax_only %]
+[% INCLUDE resources/trading_times_header.html.tt %]
+[% END %]
+
 <ul role="segmented">
     [% FOREACH market IN fullinfo %]
     <li>

@@ -61,7 +61,7 @@
                 <a href="http://www.gov.im/gambling/">
                     <img src="[% request.url_for('images/pages/footer/isle-of-man.png') %]"/>
                 </a>
-                <a href="http://www.mga.org.mt/">
+                <a href="https://www.authorisation.mga.org.mt/verification.aspx?lang=en&company=a5fd1edc-d072-4c26-b0cd-ab3fa0f0cc40">
                     <img src="[% request.url_for('images/pages/footer/mga-logo-footer.svg') %]"/>
                 </a>
             </div>

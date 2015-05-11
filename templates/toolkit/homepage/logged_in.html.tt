@@ -27,31 +27,47 @@
 
 <div class="row">
     <div class="col by_client_type client_real">
-        <a href="[% request.url_for('/cashier/available_payment_methods') %]" class="pjaxload">
-            <img src="[% request.url_for('images/pages/my_account/cashier-icon.svg') %]"/>
-        </a>
-        <p>[% l('Make a deposit or withdraw') %]</p>
-        <a class="pjaxload button" href="[% request.url_for('/cashier/available_payment_methods') %]">[% l('Cashier') %]</a>
+        <p class="media">
+            <a href="[% request.url_for('/cashier/available_payment_methods') %]" class="pjaxload">
+                <img src="[% request.url_for('images/pages/my_account/cashier-icon.svg') %]"/>
+            </a>
+        </p>
+        <p class="media">[% l('Make a deposit or withdraw') %]</p>
+        <p class="media">
+            <a class="pjaxload button" href="[% request.url_for('/cashier/available_payment_methods') %]">[% l('Cashier') %]</a>
+        </p>
     </div>
     <div class="col">
-        <a href="[% request.url_for('/user/portfolio') %]" class="pjaxload">
-            <img src="[% request.url_for('images/pages/my_account/portfolio-icon.svg') %]"/>
-        </a>
-        <p>[% l('View your open positions.') %]</p>
-        <a class="pjaxload button" href="[% request.url_for('/user/portfolio') %]">[% l('Portfolio') %]</a>
+        <p class="media">
+            <a href="[% request.url_for('/user/portfolio') %]" class="pjaxload">
+                <img src="[% request.url_for('images/icons/portfolio.svg') %]"/>
+            </a>
+        </p>
+        <p class="media">[% l('View your open positions.') %]</p>
+        <p class="media">
+            <a class="pjaxload button" href="[% request.url_for('/user/portfolio') %]">[% l('Portfolio') %]</a>
+        </p>
     </div>
     <div class="col">
-        <a href="[% request.url_for('/user/profit_table') %]" class="pjaxload">
-            <img src="[% request.url_for('images/pages/my_account/profit-table-icon.svg') %]"/>
-        </a>
-        <p>[% l('View your trading profit/loss.') %]</p>
-        <a class="pjaxload button" href="[% request.url_for('/user/profit_table') %]">[% l('Profit Table') %]</a>
+        <p class="media">
+            <a href="[% request.url_for('/user/profit_table') %]" class="pjaxload">
+                <img src="[% request.url_for('images/icons/profit-table.svg') %]"/>
+            </a>
+        </p>
+        <p class="media">[% l('View your trading profit/loss.') %]</p>
+        <p class="media">
+            <a class="pjaxload button" href="[% request.url_for('/user/profit_table') %]">[% l('Profit Table') %]</a>
+        </p>
     </div>
     <div class="col">
-        <a href="[% request.url_for('/user/statement') %]" class="pjaxload">
-            <img src="[% request.url_for('images/pages/my_account/statement-icon.svg') %]"/>
-        </a>
-        <p>[% l('View your historical transactions.') %]</p>
-        <a class="pjaxload button" href="[% request.url_for('/user/statement') %]">[% l('Statement') %]</a>
+        <p class="media">
+            <a href="[% request.url_for('/user/statement') %]" class="pjaxload">
+                <img src="[% request.url_for('images/icons/statement.svg') %]"/>
+            </a>
+        </p>
+        <p class="media">[% l('View your historical transactions.') %]</p>
+        <p class="media">
+            <a class="pjaxload button" href="[% request.url_for('/user/statement') %]">[% l('Statement') %]</a>
+        </p>
     </div>
 </div>

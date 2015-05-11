@@ -5,8 +5,6 @@
     #content
         = include('layouts/page_info')
         .row
-            .col
-                = include('layouts/get_started/nav')
-            .col.sections
-                .row
-                    = content
+            = include('layouts/get_started/nav')
+            .get-started-content
+                = content

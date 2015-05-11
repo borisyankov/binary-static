@@ -1,7 +1,6 @@
-
-    <h2>[%l('Partner API Registration for')%] [%client.loginid%] [%client.full_name%]</h2>
-    <p class="error-msg">[% results %]</p>
-    <form method="post">
+<h2>[%l('Partner API Registration for')%] [%client.loginid%] [%client.full_name%]</h2>
+<p class="error-msg">[% results %]</p>
+<form method="post">
     <table>
         <tr>
             <td>*[%l('Application Name')%]</td>
@@ -28,4 +27,4 @@
             </td>
         </tr>
     </table>
-    </form>
+</form>

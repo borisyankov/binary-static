@@ -21,7 +21,6 @@
             [% END %]
 
             <div id="submit" class="form_button">
-                <img id="hourglass" style="display:none;" src="[% hourglass_url %]" />
                 <span class="button">
                     <button type="submit" id="bet_calculate" class="button"
                             value="[% price_this_bet_button_text %]">

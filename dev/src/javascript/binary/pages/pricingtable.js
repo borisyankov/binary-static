@@ -17,7 +17,7 @@ var calculate_button_event = function() {
             page.url.update(url);
             $('#pricingtable_calculating').hide();
             $('#pricingtable_calculate').show();
-            attach_tabs('#pricing_table_tabs');
+            initTabs();
         });
     });
 };

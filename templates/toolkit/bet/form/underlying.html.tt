@@ -1,11 +1,11 @@
-<span class="grd-grid-5 form_label">
+<span class="form_label">
     <select id="submarket" name="submarket" class="selectMarketType">
         [% FOREACH submarket IN submarket_options %]
             <option value="[% submarket.name %]" [% IF submarket.name == selected_submarket %] selected="selected" [% END %]>[% submarket.translated_name %]</option>
         [% END %]
     </select>
 </span>
-<span class='grd-grid-7'>
+<span>
     <select id="bet_underlying" name="underlying_symbol">
         [% FOREACH underlying IN underlying_options %]
             <option [% IF underlying.class %] class="[% underlying.class %]" [% END %] value="[% underlying.value %]" [% IF underlying.disabled %] disabled="disabled" [% END %] [% IF underlying.value == selected_underlying %] selected="selected" [% END %]>[% underlying.text %]</option>

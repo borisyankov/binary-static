@@ -14,8 +14,18 @@ BetForm.Time.prototype = {
         this.trading_time.init();
         this.duration.init();
         this.end_time.init();
-        $('#expiry_type').val(this.model.expiry_type);
         this.register();
+        if (BetForm.attributes.model.form_name() == "digits" || BetForm.attributes.model.form_name() == "asian") {
+            var expiry_val = 'duration';
+            $('#expiry_type').val(expiry_val);
+            page.url.invalidate();
+            LocalStore.set('bet_page.expiry_type', expiry_val);
+            BetForm.attributes.model.expiry_type(expiry_val);
+            this.model.expiry_type = expiry_val;
+            $('#duration_amount').val(this.trading_time.min_unit().min);
+        } else {
+            $('#expiry_type').val(this.model.expiry_type);
+        }
         this.update_ui();
     },
     register: function() {
@@ -373,13 +383,17 @@ BetForm.TradingTime.prototype = {
         return trading_dates;
     },
     get_trading_days: function() {
-        var underlying_symbol = this.underlying();
+        var underlying_symbol = BetForm.attributes.underlying();
+        var barrier = BetForm.attributes.barrier_1();
         if (typeof this.trading_info[underlying_symbol] === 'undefined') {
             var that = this;
             $.ajax({
                 url: page.url.url_for('trade_get.cgi'),
                 data: { controller_action: 'trading_days',
-                        underlying_symbol: underlying_symbol
+                        underlying_symbol: underlying_symbol,
+                        form_name: BetForm.attributes.form_name(),
+                        date_start: BetForm.attributes.start_time(),
+                        barrier: barrier,
                     },
                 dataType:'json',
                 async: false

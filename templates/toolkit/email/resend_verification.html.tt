@@ -1,0 +1,7 @@
+[% l("Dear Valued Customer,
+
+In order to verify your email address, please click on following link:
+
+[_1]
+
+", link) %]

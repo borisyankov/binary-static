@@ -16,8 +16,8 @@ var TickDisplay = function() {
             $self.symbol = data.symbol;
             $self.display_symbol = data.display_symbol;
             $self.contract_start_ms = parseInt(data.contract_start * 1000);
-            $self.contract_type = data.contract_type;
-            $self.set_barrier = ($self.contract_type.match('DIGIT')) ? false : true;
+            $self.contract_category = data.contract_category;
+            $self.set_barrier = ($self.contract_category.match('digits')) ? false : true;
             $self.display_decimal = 0;
             var tick_frequency = 5;
 
@@ -45,7 +45,7 @@ var TickDisplay = function() {
             var $self = this;
 
             var exit_tick_index = $self.number_of_ticks - 1;
-            if ($self.contract_type.match('ASIAN')) {
+            if ($self.contract_category.match('asian')) {
                 $self.ticks_needed = $self.number_of_ticks;
                 $self.x_indicators = {
                     '_0': { label: 'Tick 1', id: 'start_tick'},
@@ -54,7 +54,7 @@ var TickDisplay = function() {
                     label: 'Exit Spot',
                     id: 'exit_tick',
                 };
-            } else if ($self.contract_type.match('FLASH')) {
+            } else if ($self.contract_category.match('callput')) {
                 $self.ticks_needed = $self.number_of_ticks + 1;
                 $self.x_indicators = {
                     '_0': { label: 'Entry Spot', id: 'entry_tick'},
@@ -63,7 +63,7 @@ var TickDisplay = function() {
                     label: 'Exit Spot',
                     id: 'exit_tick',
                 };
-            } else if ($self.contract_type.match('DIGIT')) {
+            } else if ($self.contract_category.match('digits')) {
                 $self.ticks_needed = $self.number_of_ticks;
                 $self.x_indicators = {
                     '_0': { label: 'Tick 1', id: 'start_tick'},
@@ -209,7 +209,7 @@ var TickDisplay = function() {
                 return;
             }
 
-            var barrier_type = $self.contract_type.match('ASIAN') ? 'asian' : 'static';
+            var barrier_type = $self.contract_category.match('asian') ? 'asian' : 'static';
 
             if (barrier_type === 'static') {
                 var barrier_tick = $self.applicable_ticks[0];

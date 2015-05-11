@@ -4,7 +4,7 @@
     %li
         %a.pjaxload{:href=>url_for('/resources/asset_index')}= l('Asset Index')
     %li
-        %a.pjaxload{:href => url_for('trading_times.cgi')}= l('Trading Times')
+        %a.pjaxload{:href => url_for('/resources/trading_times')}= l('Trading Times')
     %li
         %a.pjaxload{:href=>url_for('/resources/pricing_table')}= l('Pricing Table')
     %li
@@ -15,3 +15,5 @@
         %a.pjaxload{:href=>url_for('smartchart.cgi')}= l('Light Charts')
     %li
         %a.pjaxload{:href=>url_for('/charting/livechart')}= l('Live Charts')
+    %li
+        %a{:href => '//highcharts.binary.com'}= l('HighCharts')

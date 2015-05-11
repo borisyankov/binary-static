@@ -7,16 +7,14 @@ unchanged
 [%- END -%]
 [% MACRO change_percent(change,final) GET (100 * change / ( final - change )) FILTER format('%.2f%%') %]
 
-<div>
-    <form action="[% request.url_for('/trade/daily_prices') %]" method="post">
-        <input type="hidden" name="underlying_symbol" value="[% underlying.symbol %]"/>
-        <input type="hidden" name="type" value="[% contract_type_inp %]"/>
+<form action="[% request.url_for('/trade/daily_prices') %]" method="post" class="media">
+    <input type="hidden" name="underlying_symbol" value="[% underlying.symbol %]"/>
+    <input type="hidden" name="type" value="[% contract_type_inp %]"/>
 
-        <label for="days_to_display_input">[% l('Days to display') %]</label>
-        <input type='text' size='3' value="[% days_to_display %]" name='days_to_display' id='days_to_display_input'/>
-        <button class="button" value="[% l('View') %]" type="submit">[% l('View') %]</button>
-    </form>
-</div>
+    <label for="days_to_display_input">[% l('Days to display') %]</label>
+    <input type='text' size='3' value="[% days_to_display %]" name='days_to_display' id='days_to_display_input'/>
+    <button class="button" value="[% l('View') %]" type="submit">[% l('View') %]</button>
+</form>
 
 [% IF underlying.feed_license == 'chartonly' || !ohlc_table %]
     <h4>[% l("Sorry, OHLC is not available for [_1].", underlying.display_name) %]<h4>

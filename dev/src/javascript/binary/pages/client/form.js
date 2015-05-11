@@ -173,7 +173,7 @@ ClientForm.prototype = {
             if(that.is_allowed_opening_account_country($(this).val())) {
                 $.ajax({
                     crossDomain:true,
-                    url: page.url.url_for('states_list.cgi'),
+                    url: page.url.url_for('states_list'),
                     data: {"c":$('#residence').get(0).value,"l": page.language()},
                     async: true,
                     dataType: "html"

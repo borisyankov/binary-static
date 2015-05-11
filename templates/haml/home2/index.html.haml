@@ -5,79 +5,81 @@
 -   emailtext   => l('Enter your email'),
 -   passwordstext   => l('Choose a password'),
 - );
-- my $lang = stash->{language};
 #banner
   .grd-container
-    .grd-grid-12.grd-row-padding
-      #q-top
-        %h1.dark= l('The Premier Platform for Binary Options Trading')
-        %p= l('Trade 24/7, even on weekends. Customize your trades to meet your needs.')
-    .grd-grid-12.grd-grid-mobile-12.grd-grid-phablet-12.grd-parent
-  .grd-container
-    .grd-grid-12.grd-grid-mobile-12.grd-grid-phablet-12.grd-parent
-      %p.q-cta-text= l('Get started now')
-      #open-account
+      .grd-grid-12.grd-row-padding
+        #xtop
+          %h1.dark= l('The Premier Platform for Binary Options Trading')
+          %p= l('Trade 24/7, even on weekends. Customize your trades to meet your needs.')
+      .grd-grid-12.grd-grid-mobile-12.grd-grid-phablet-12.grd-parent
+      .grd-grid-2.grd-hide-mobile.grd-hide-phablet
+      #open-account.grd-grid-8.grd-grid-mobile-12.grd-grid-phablet-12
+        %p= l('Get started now')
         %form#virtual-acc-form{ :name => 'oppAccForm', :action => url_for('create_account.cgi'), :method => 'post' }
           %span#virtual-fields
-            %input.q-email{:name => 'Email', :id => 'Email', :type => 'email', :required => true, :placeholder => stash('emailtext')}
-            %input#chooseapassword.q-pass{:name => 'chooseapassword', :type => 'password', :maxlength => '25', :required => true, :placeholder => stash('passwordstext')}
-            %input#actype{:type => 'hidden', :name => 'actype', :value => 'virtual'}
-            %input{:type => 'hidden', :name => 'l', :value => $lang}
-            %input.button.q-topcta{:id => 'btn_registration',:type => 'submit', :value => stash('createacc')}
+            %span.grd-grid-12.grd-no-gutter
+              %input.xemail{:name => 'Email', :id => 'Email', :type => 'email', :required => true, :placeholder => stash('emailtext')}
+              %input#chooseapassword.xpass{:name => 'chooseapassword', :type => 'password', :maxlength => '25', :required => true, :placeholder => stash('passwordstext')}
+              %input#actype{:type => 'hidden', :name => 'actype', :value => 'virtual'}
+              %input{:type => 'hidden', :name => 'l', :value => stash('language')}
+            %span.grd-grid-12.grd-no-gutter
+              %input.button.xtopcta{:id => 'btn_registration',:type => 'submit', :value => stash('createacc')}
+      .grd-grid-2.grd-hide-mobile.grd-hide-phablet
 .grd-container
-  #q-section1
+  %hr.xtopseparator
+  #xsection1
     .grd-grid-12.grd-parent
       %h1.center= l('The easiest way to get started in the financial markets')
       %p.center= l('Trade in the world\'s financial markets in a simple, user-friendly platform.')
       .grd-grid-7.grd-grid-mobile-12.grd-parent
-        %img.responsive{:alt => "", :src => url_for("images/pages/tour/trade-tutorial_1.svg")}
+        %img.responsive{:alt => "", :src => url_for("images/pages/home2/rises-falls.png")}
       .grd-grid-5.grd-grid-mobile-12.grd-parent
         %ul
           %li!= l('<span>All markets:</span> currencies, stock indices, and commodities.')
           %li!= l('<span>All market conditions:</span> up/down, touch/no-touch, stays in/goes out.')
           %li!= l('<span>All durations:</span> from 10 seconds to 365 days.')
           %li!= l('<span>All payouts:</span> from $1 to $100,000.')
-#q-cta
-  #q-reason
+#xcta
+  #xreason
     .grd-container
       .grd-row-padding
-        %h1.center-aligned.q-head= l('Why choose us')
+        %h1.center-aligned.xhead= l('Why choose us')
         .grd-grid-6.grd-grid-mobile-12.grd-grid-phablet-12
           %ul
-            %li.q-list1
+            %li.xlist1
               %h3= l('Sharp prices')
               %p= l('Binary.com\'s patented pricing technology allows you to benefit from the same rates of return as traders in the interbank market.')
-            %li.q-list2
+            %li.xlist2
               %h3= l('Your funds are safe')
               %p= l('With Binary.com, your money is secure. We segregate and hold client funds in secure AAA-rated banks.')
         .grd-grid-6.grd-grid-mobile-12.grd-grid-phablet-12
           %ul
-            %li.q-list3
+            %li.xlist3
               %h3= l('Trade your way')
               %p= l('Don\'t limit yourself! Whatever your market view, Binary.com allows you to put your strategy to work and profit from your predictions.')
-            %li.q-list4
+            %li.xlist4
               %h3= l('Go with the leader')
               %p= l('Binary.com is the award-winning industry pioneer in online options trading.')
 #xtestimonial
   .grd-container
     .grd-row-padding
-      %h1.center-aligned.q-head2= l('What our clients are saying')
+      %h1.center-aligned.xhead2= l('What our clients are saying')
       .grd-grid-6.grd-grid-mobile-12.grd-grid-phablet-6
-        .q-quote
+        .xquote
           %p!= l('&#8220;We have used www.binary.com for the last 8 years and highly recommend binary to all our members worldwide&#8221;')
-        .q-bubble-left
-        .q-quoter-left
+        .xbubble-left
+        .xquoter-left
           %p!= l('Joshua Cavallaro <span> Markets And You Trader.</span>')
       .grd-grid-6.grd-grid-mobile-12.grd-grid-phablet-6
-        .q-quote
+        .xquote
           %p!= l('&#8220;Binary.com is one of the oldest and trustworthy partners we ever had. We have worked together for many years.&#8221;')
-        .q-bubble-right
-        .q-quoter-right
+        .xbubble-right
+        .xquoter-right
           %p!= l('Andrei Asavei <span>Top Binary Options Brokers</span>')
-#q-payment.center-aligned
+#xpayment.center-aligned
   .grd-container
     .grd-row-padding
-      %h1.center-aligned.q-head2= l('Payment methods')
+      %h1.center-aligned.xhead2= l('Payment methods')
       .grd-grid-12
         %a.pjaxload{:href => url_for('/cashier/available_payment_methods')}
           #visa.inlined
@@ -88,7 +90,6 @@
           #citadel.inlined
           #cuo-credit-card.inlined
           #okpay.inlined
-          #cashu.inlined
           #fastpay.inlined
           #perfect_money.inlined
           #moneybrokers.inlined

@@ -1,4 +1,4 @@
-<p align="left">[% l('The following table reflects the corporate actions that happened during contract period.') %]</p>
+<p align="left">[% l('The following table reflects the corporate actions that happened during the contract period.') %]</p>
 
 <table>
     <thead>
@@ -23,7 +23,7 @@
     </tbody>
 </table>
 
-<p align="left">[% l('To reflect the corporate action, the contract's barrier had been adjusted as follow:') %]</p>
+<p align="left">[% l("Due to the corporate action, the contract's barrier had been adjusted as follow:") %]</p>
 <table>
     <thead>
         [% IF is_double_barrier %]

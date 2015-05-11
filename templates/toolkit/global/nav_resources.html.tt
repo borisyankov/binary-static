@@ -6,7 +6,7 @@
         <a class="pjaxload" href="[% request.url_for('/resources/asset_index') %]" [% target %]>[% l("Asset Index") %]</a>
     </li>
     <li>
-        <a class="pjaxload" href="[% request.url_for('trading_times.cgi') %]" [% target %]>[% l("Trading Times") %]</a>
+        <a class="pjaxload" href="[% request.url_for('/resources/trading_times') %]" [% target %]>[% l("Trading Times") %]</a>
     </li>
     <li>
         <a class="pjaxload" href="[% request.url_for('/resources/pricing_table') %]" [% target %]>[% l("Pricing Table") %]</a>
@@ -22,5 +22,8 @@
     </li>
     <li>
         <a class="pjaxload" href="[% request.url_for('/charting/livechart') %]" [% target %]>[% l("Live Charts") %]</a>
+    </li>
+    <li>
+        <a class="pjaxload" href="[% request.url_for('//highcharts.binary.com') %]" [% target %]>[% l("HighCharts") %]</a>
     </li>
 </ul>

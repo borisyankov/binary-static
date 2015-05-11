@@ -2,11 +2,12 @@
 var trade_event_bindings = {};
 
 function contract_guide_popup() {
-    $('#bet_guide_content').on('click', 'a.bet_demo_link', function (e){
+    $('.contract-guide-content').on('click', '.bet_demo_link', function (e){
         e.preventDefault();
         var ip = new InPagePopup();
         ip.ajax_conf = { url: this.href, data: 'ajax_only=1' };
         ip.fetch_remote_content(true, '', function (data) {
+            attach_tabs();
             attach_tabs('#contract_demo_container');
             return data;
         });
@@ -23,7 +24,7 @@ var trading_times_init = function() {
      onSelect: function( dateText, picker ){
          trading_times.tabs( "destroy" );
          showLoadingImage(trading_times);
-         url = page.url.url_for('trading_times.cgi', 'date=' + dateText, 'cached');
+         url = page.url.url_for('resources/trading_times', 'date=' + dateText, 'cached');
          $.ajax({
                   url: url,
                   data:  { 'ajax_only': 1 },
@@ -98,3 +99,7 @@ onLoad.queue_for_url(function() {
         return false;
     });
 }, '/c/paymentagent_list');
+
+$('.login-content button').on('click', function() {
+    $('.form-logo').addClass('spinner');
+});

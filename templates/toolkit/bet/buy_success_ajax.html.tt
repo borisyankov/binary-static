@@ -2,19 +2,19 @@
     <h4 id="bet-confirm-header">[% l('Trade Confirmation') %]</h4>
     <p id="bet-confirm-exp">[% l('You have purchased the following contract:') %]</p>
     <div id='tick_info' style="display:none">
-            [% WRAPPER 'container/full_table.html.tt' table_id="confirmation_table_second" %]
+        <table>
             <tr>
                 <th>[% l('Entry spot') %]</th><td id='entry'></td>
                 <th>[% l('Exit spot') %]</th><td id='exit'></td>
             </tr>
-            [% END %]
+        </table>
     </div>
 
     <div class="bet_confirm_desc">
         [% longcode %]
     </div>
 
-    <div id='confirmation_table' class='grd-parent grd-grid-12 grd-row-padding'>
+    <div id='confirmation_table'>
         <span class="grd-grid-4 grd-no-col-padding standin">
             <span class="grd-grid-12 grd-no-col-padding standin">[% l('Potential Payout') %]</span>
             <span class="grd-grid-12 grd-with-top-padding standin">[% payout %]</span>
@@ -37,7 +37,7 @@
         </span>
         [% END %]
     </div>
-    <div id='contract-outcome-details' class="grd-row-padding" style="display:none">
+    <div id='contract-outcome-details' style="display:none">
         <span class="grd-grid-4 grd-no-col-padding standin">
             <span class="grd-grid-12 grd-no-col-padding standin">[% l('Buy Price') %]</span>
             <span id="contract-outcome-buyprice" class="grd-grid-12 grd-with-top-padding standin">[% price %]</span>

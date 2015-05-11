@@ -48,7 +48,7 @@ var BetPrice = function() {
             }
         },
         error_handler: function() {
-            this.container().find('div.rbox-lowpad:first').html("There was a problem accessing the server.");
+            this.container().find('div.rbox-lowpad:first').html(text.localize("There was a problem accessing the server."));
             this.streaming.stop();
         },
         price_update: function(data) {
@@ -136,7 +136,7 @@ var BetPrice = function() {
             } else if (document.location.href.match(/^http:/) && (!details || details.match(/access/i))) {
                 details += '<ul>Please <a href="' + document.location.href.replace('http://', 'https://') + '">continue browsing using HTTPS secure protocol</a></ul>';
             } else {
-                details += 'There was a problem accessing the server during purchase.';
+                details += text.localize('There was a problem accessing the server during purchase.');
             }
             var width = this.container().width(); // since the error message could be any size, set the continer size to a good value
             this.display_buy_error('<div style="width: ' + width + 'px;"><h3>Error</h3><p>' + details + ' </p></div>');
@@ -324,7 +324,7 @@ var BetPrice = function() {
         },
         show_loading: function() {
             var image_link = page.settings.get('image_link');
-            var loading_html = '<p id="loading-price">'+text.localize('loading...')+'<br /><img src="'+image_link['hourglass']+'" /></p>';
+            var loading_html = '<div class="progress"></div>';
             this.container().find('div.rbox-lowpad:first').show().html('<div class="rbox rbox-bg-alt"><div class="rbox-wrap"><div class="rbox-content">'+loading_html+'</div></div><span class="tl">&nbsp;</span><span class="tr">&nbsp;</span><span class="bl">&nbsp;</span><span class="br">&nbsp;</span></div></div>');
             this.container().show();
         },
@@ -424,7 +424,7 @@ var BetPrice = function() {
                     return prices;
                 },
                 prices_from_form: function () {
-                    
+
                     var prices = [],
                         order_forms = $('.orderform'),
                         order_forms_count = order_forms ? order_forms.length : 0,
@@ -432,7 +432,7 @@ var BetPrice = function() {
                         id,
                         prob,
                         error;
-                    
+
                     if (order_forms_count > 0 ) {
                         for (i = 0; i < order_forms_count; i++) {
                             id = $('input[name="display_id"]', form).val();

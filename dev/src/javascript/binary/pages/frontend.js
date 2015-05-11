@@ -166,7 +166,7 @@ var email_rot13 = function(str) {
 var display_cs_contacts = function () {
     $('.contact-content').on("change", '#cs_telephone_number', function () {
         var val = $(this).val();
-        $('#display_cs_telephone').text(val);
+        $('#display_cs_telephone').html('<a href="tel:' + val + '">' + val + '</a>');
     });
     $('#cs_contact_eaddress').html(email_rot13("<n uers=\"znvygb:fhccbeg@ovanel.pbz\" ery=\"absbyybj\">fhccbeg@ovanel.pbz</n>"));
 };

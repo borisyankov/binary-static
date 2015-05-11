@@ -1,7 +1,7 @@
 - stash(title => l('Why Us?'));
 
 %h1= l('Why pay more?')
-%p= l('[_1]\'s patented pricing technology allows you to benefit from the same rates of return as traders in the interbank market.', stash->{website_name});
+%p= l('[_1]\'s patented pricing technology allows you to benefit from the same rates of return as traders in the interbank market.', stash->{website_name})
 
 %ul.bullet
     %li= l('Real-time prices, benchmarked against interbank options markets.')
@@ -33,31 +33,29 @@
 
 %p= l('[_1] offers the world\'s financial markets in a simple, user-friendly platform.', stash->{website_name})
 
-%img{:src => url_for('images/pages/why-us/trade-sample.svg')}
-%img{:src => url_for('images/pages/why-us/trade-direct-value.svg')}
-%img{:src => url_for('images/pages/why-us/trade-opposite-value.svg')}
-
 %ul.bullet
     %li= l('Find the right trade for every market condition.')
     %li= l('Execute your trade in seconds.')
     %li= l('Monitor your portfolio in real time.')
     %li= l('Sell back trades at market prices.')
 
-%h2= l('Your funds are safe')
-%p= l('With [_1], your money is secure.', stash->{website_name})
-%ul.bullet
-    %li= l('We segregate and hold client funds in secure AAA-rated banks.')
-    %li= l('We are fully licensed in the British Isles and Malta.')
-    %li= l('We have a proven track record since starting in 2000.')
+.row
+    %img{:src => url_for('images/pages/why-us/trade-direct-value.svg')}
+    %img{:src => url_for('images/pages/why-us/trade-opposite-value.svg')}
 
-%img{:src => url_for('images/pages/why-us/mga-logo.svg')}
-%img{:src => url_for('images/pages/why-us/why-us-proven-record_1.svg')}
-%img{:src => url_for('images/pages/footer/isle-of-man.png')}
+%h2= l('Your funds are safe')
+.row
+    .col
+        %p= l('With [_1], your money is secure.', stash->{website_name})
+        %ul.bullet
+            %li= l('We segregate and hold client funds in secure AAA-rated banks.')
+            %li= l('We are fully licensed in the British Isles and Malta.')
+            %li= l('We have a proven track record since starting in 2000.')
+    .col.q
+        %img{:src => url_for('images/pages/why-us/authorities.png')}
 
 %h1= l('Go with the leader')
 .row
-    .col
-        %img{:src => url_for('images/pages/why-us/why-us-GBAF-award-2012.svg')}
     .col
         %p= l('[_1] is the award-winning industry pioneer in online options trading. We boast:', stash->{website_name})
         %ul.bullet
@@ -65,5 +63,8 @@
             %li= l('First-class client service.')
             %li= l('Multi award-winning trading platform.')
             %li= l('Exclusive binary trading technology.')
+    .col.q
+        %img{:src => url_for('images/pages/why-us/why-us-GBAF-award-2012.svg')}
 
- %a.button.pjaxload{:href => url_for('/')}= l('Open a free account')
+%p.media
+    %a.button.pjaxload{:href => url_for('/')}= l('Open a free account')

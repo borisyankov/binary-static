@@ -199,6 +199,7 @@ var BetForm = function () {
                         BetForm.underlying_drop_down.update_for_submarket(this.value);
                         //If Underlying Changed because of submarket
                         if (BetForm.attributes.model.underlying() != BetForm.attributes.underlying()) {
+                            BetForm.attributes.model.underlying(BetForm.attributes.underlying());
                             that.update_for_underlying(BetForm.attributes.underlying());
                         }
                     }).addClass('unbind_later');

@@ -7,7 +7,7 @@ function showLoadingImage(container)
 {
     var image_link = page.settings.get('image_link');
 
-    container.empty().append('<div id="std_loading_img"><p>'+text.localize('loading...')+'</p><img src="'+image_link['hourglass']+'" /></div>');
+    container.html('<div class="progress"></div>');
 }
 
 /////////////////////////////////////////////////////////////////
@@ -385,13 +385,7 @@ function attach_inpage_popup(element) {
  */
 
 function get_container_width() {
-    var width = 960;
-    if ($('.chart_holder').length > 0) {
-        width = $('.chart_holder').width();
-    } else {
-        width = $('.grd-container').width();
-    }
-    return width;
+    return $('.chart_holder').length > 0 ? $('.chart_holder') : $('#content').width();
 }
 
 /**
@@ -444,20 +438,25 @@ function attach_tabs() {
 function initTabs() {
 
     function updateTabs($tabs) {
+
         $tabs.each(function() {
             var $tab = $(this);
-            var href = $tab.find('a').attr('href');
-            $(href).toggle($tab.hasClass('active'));
+                href = $tab.find('a').attr('href');
+            try {
+                $(href).toggle($tab.hasClass('active'));
+            }
+            catch(err) {}
         });
     }
 
-    var $tabs = $('*[role=tabs] li,*[role=segmented] li');
+    var tabSelector = '*[role=tabs] li,*[role=segmented] li',
+        $tabs = $(tabSelector);
 
     if (!$tabs.hasClass('active')) $tabs.first().addClass('active');
 
     updateTabs($tabs);
 
-    $tabs.on('click', function(e) {
+    $('body').on('click', tabSelector, function(e) {
         var $tabs = $(this).parent().find('li');
         $tabs.removeClass('active');
         $(this).addClass('active');
