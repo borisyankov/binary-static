@@ -35,7 +35,7 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.binary.com/cashier/available_payment_methods?l=EN</loc>
+  <loc>https://www.binary.com/cashier?l=EN</loc>
   <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>

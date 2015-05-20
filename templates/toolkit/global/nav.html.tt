@@ -7,7 +7,7 @@
         </li>
         <li class="submenu">
             <div class="nav-cashier">
-                <a class="pjaxload" href="[% request.url_for('/cashier/available_payment_methods') %]" [% target %]>[% l("Cashier") %]</a>
+                <a class="pjaxload" href="[% request.url_for('/cashier/payment_methods') %]" [% target %]>[% l("Cashier") %]</a>
             </div>
         </li>
         <li class="submenu">

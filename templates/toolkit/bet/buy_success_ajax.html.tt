@@ -15,17 +15,17 @@
     </div>
 
     <div id='confirmation_table'>
-        <span class="grd-grid-4 grd-no-col-padding standin">
-            <span class="grd-grid-12 grd-no-col-padding standin">[% l('Potential Payout') %]</span>
-            <span class="grd-grid-12 grd-with-top-padding standin">[% payout %]</span>
+        <span>
+            <span>[% l('Potential Payout') %]</span>
+            <span>[% payout %]</span>
         </span>
-        <span class="grd-grid-4 grd-no-col-padding standout with_left_border with_right_border">
-            <span class="grd-grid-12 grd-no-col-padding standout"><span class='price'>[% l('Total Cost') %]</span></span>
-            <span class="grd-grid-12 grd-with-top-padding standout"><span class='price'>[% price %]</span></span>
+        <span>
+            <span class='price'>[% l('Total Cost') %]</span>
+            <span class='price'>[% price %]</span>
         </span>
-        <span class="grd-grid-4 grd-no-col-padding standin">
-            <span class="grd-grid-12 grd-no-col-padding standin">[% l('Potential Profit') %]</span>
-            <span class="grd-grid-12 grd-with-top-padding standin">[% win %]</span>
+        <span>
+            <span>[% l('Potential Profit') %]</span>
+            <span>[% win %]</span>
         </span>
         [% IF notes %]
         <span class="notes">
@@ -38,22 +38,22 @@
         [% END %]
     </div>
     <div id='contract-outcome-details' style="display:none">
-        <span class="grd-grid-4 grd-no-col-padding standin">
-            <span class="grd-grid-12 grd-no-col-padding standin">[% l('Buy Price') %]</span>
-            <span id="contract-outcome-buyprice" class="grd-grid-12 grd-with-top-padding standin">[% price %]</span>
+        <span>
+            <span>[% l('Buy Price') %]</span>
+            <span id="contract-outcome-buyprice">[% price %]</span>
         </span>
-        <span class="grd-grid-4 grd-no-col-padding standin with_left_border with_right_border">
-            <span class="grd-grid-12 grd-no-col-padding standin">[% l('Final Price') %]</span>
-            <span id="contract-outcome-payout" class="grd-grid-12 grd-with-top-padding standin"></span>
+        <span>
+            <span>[% l('Final Price') %]</span>
+            <span id="contract-outcome-payout"></span>
         </span>
-        <span class="grd-grid-4 grd-no-col-padding standin">
-            <span id="contract-outcome-label" class="grd-grid-12 grd-no-col-padding standout profit">[% l('Profit') %]</span>
-            <span id="contract-outcome-profit" class="grd-grid-12 grd-with-top-padding standout">[% win %]</span>
+        <span>
+            <span id="contract-outcome-label" class="standout profit">[% l('Profit') %]</span>
+            <span id="contract-outcome-profit" class="standout">[% win %]</span>
         </span>
     </div>
 
     [% IF transaction_msg %]
-        <span class="trade_ref grd-grid-12 grd-row-padding">[% transaction_msg%]</span>
+        <span class="trade_ref">[% transaction_msg%]</span>
     [% END %]
     [% IF contract_visualization %]
         [% contract_visualization %]

@@ -25,4 +25,6 @@
     %p
         %button= l('Sign in')
     %p
-        %a{:href=>url_for('/user/lost_password')}= l('Forgot password?')
+        %a.pjaxload{:href=>url_for('/user/lost_password')}= l('Forgot password?')
+    %p
+        %a.pjaxload{:href=>url_for('/')}= l('Open an Account')

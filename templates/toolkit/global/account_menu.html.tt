@@ -12,7 +12,7 @@
         <a class="pjaxload" href="[% request.url_for('/user/statement') %]">[% l('Statement') %]</a>
     </li>
     <li>
-        <a class="pjaxload" href="[% request.url_for('/settings.cgi') %]">[% l('Settings') %]</a>
+        <a class="pjaxload" href="[% request.url_for('/user/settings') %]">[% l('Settings') %]</a>
     </li>
     <li>
         <a class="pjaxload" href="[% request.url_for('/user/change_password') %]">[% l('Password') %]</a>

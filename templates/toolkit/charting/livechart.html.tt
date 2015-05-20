@@ -14,14 +14,14 @@
         <div>
             <p>
                 <label for="live_charts_from_date">[% l("From:") %]</label>
-                <span class="row">
+                <span class="interval">
                     <input type="text" size="11" id="live_charts_from_date" class="live_charts_date_time" />
                     <input type="text" size="9" id="live_charts_from_time" class="live_charts_date_time" />
                 </span>
             </p>
             <p>
                 <label for="live_charts_to_date">[% l("To:") %]</label>
-                <span class="row">
+                <span class="interval">
                     <input type="text" size="11" id="live_charts_to_date" class="live_charts_date_time" />
                     <input type="text" size="9" id="live_charts_to_time" class="live_charts_date_time" />
                 </span>

@@ -90,6 +90,6 @@
   .home-body
     %hgroup
       %h1!= l('<i>Payment</i> Methods')
-    %a.pjaxload{:href => url_for('/cashier/available_payment_methods')}
+    %a.pjaxload{:href => url_for('/cashier/payment_methods')}
       %img{:src => url_for("images/pages/home/payment-methods.svg")}
     %p{:style => "margin-bottom: -1em")}= l('Hundreds of deposit and withdrawal options.')

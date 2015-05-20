@@ -1144,6 +1144,11 @@ Contents.prototype = {
                 $('.by_client_type.client_real').show();
                 $('#topbar').addClass('dark-blue');
                 $('#topbar').removeClass('orange');
+
+                if (!/^Q?CR/.test(this.client.loginid)) {
+                    $('#payment-agent-section').addClass('invisible');
+                    $('#payment-agent-section').hide();
+                }
             } else {
                 $('.by_client_type.client_virtual').removeClass('invisible');
                 $('.by_client_type.client_virtual').show();
@@ -3010,7 +3015,7 @@ onLoad.queue_for_url(contract_guide_popup, 'contract_guide');
 onLoad.queue_for_url(trading_times_init, 'trading_times');
 onLoad.queue_for_url(asset_index_init, 'asset_index');
 onLoad.queue_for_url(confirm_popup_action, 'my_account|confirm_popup');
-onLoad.queue_for_url(hide_payment_agents, 'available_payment_methods');
+onLoad.queue_for_url(hide_payment_agents, 'cashier');
 
 onLoad.queue_for_url(function() {
     $('div.further-info')

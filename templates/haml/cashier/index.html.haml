@@ -1,0 +1,22 @@
+- stash(
+-   title => l('Cashier'),
+- );
+
+%h1= l('Cashier')
+
+%a.pjaxload{:href => stash('deposit_url'), :id => 'payment_methods'}
+    %img#payment_methods_icon.responsive.charting-page-icon{:src => url_for('images/pages/cashier/payment-methods.svg')}
+%p= l('Deposit or withdraw to your account via bank-wire, credit card, or e-cash wallet.')
+
+%a.button.by_client_type.client_real.with_login_cookies{ :href => stash('deposit_url') }= l('Deposit')
+
+%a.button.by_client_type.client_real.with_login_cookies{ :href => stash('withdraw_url') }= l('Withdraw')
+
+%a.pjaxload{:href => url_for('/cashier/payment_agent_list'), :id => 'payment_agent'}
+    %img#payment_agent_icon.responsive.charting-page-icon{:src => url_for('images/pages/cashier/payment-agents.svg')}
+
+%p= l('You can use an authorized payment agent to process deposits and withdrawals for e-cash methods or local currencies not supported by [_1].', stash->{website_name})
+
+%a.button.by_client_type.client_real.with_login_cookies{:href => url_for('/cashier/payment_agent_list')}= l('Deposit To Payment Agent')
+
+%a.button.by_client_type.client_real.with_login_cookies{:href => url_for('paymentagent_withdraw.cgi')}= l('Withdraw Via Payment Agent')

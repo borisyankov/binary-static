@@ -8,13 +8,13 @@
     %li
         %a.pjaxload{:href=>url_for('/user/statement')}= l('Statement')
     %li
-        %a.pjaxload{:href=>url_for('/settings.cgi')}= l('Settings')
+        %a.pjaxload{:href=>url_for('/user/settings')}= l('Settings')
     %li
         %a.pjaxload{:href=>url_for('/user/change_password')}= l('Password')
     %li
         %a.pjaxload{:href=>url_for('/affiliate/signup')}= l('Affiliate')
     %li
-        %a.pjaxload{:href=>url_for('/cashier/authenticate')}= l('Authenticate')                        
+        %a.pjaxload{:href=>url_for('/cashier/authenticate')}= l('Authenticate')
     %li
         %form#loginid-switch-form{:action => "[% request.url_for('user/loginid_switch?l=EN') %]", :method => "post"}
             %select#client_loginid

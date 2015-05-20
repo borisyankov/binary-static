@@ -1286,6 +1286,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   padding: .5rem 1rem;
+  margin: 0;
 }
 
 .login-button {
@@ -3782,16 +3783,15 @@ abbr {
   padding: 3px;
 }
 #content .rbox-heading {
-  font-weight: bold;
   background-color: #f2f2f2;
 }
 #content .rbox-heading h4 {
-  font-size: 1em;
   margin: 0;
+  padding: .5rem 1rem;
 }
 #content .rbox-content {
   background-color: white;
-  padding: 0.3em 0;
+  padding: 1rem;
 }
 #content .rbox-content .half-1 {
   width: 50%;
@@ -4110,7 +4110,11 @@ table.half-2 {
   background-image: url("../images/icons/trade-in-out.svg");
 }
 
-#strike_type, #amount, #expiry_step, #from_expiry, #pricingtable_bet_type {
+#strike_type,
+#amount,
+#expiry_step,
+#from_expiry,
+#pricingtable_bet_type {
   width: 100%;
 }
 
@@ -4166,7 +4170,7 @@ table.half-2 {
 
 /* Light chart */
 #form_chart_director ul.tm-ul li.tm-li a.tm-a {
-  padding: 0 1em;
+  padding: 0 0 0 1rem;
   display: block;
 }
 #form_chart_director ul.tm-ul li.tm-li a.tm-a span {
@@ -4182,20 +4186,31 @@ table.half-2 {
 #form_chart_director li.hover .drop-down-content, #form_chart_director .tab-menu-wrap ul li.active .drop-down-content, .tab-menu-wrap ul #form_chart_director li.active .drop-down-content {
   margin-top: 0;
   border: 1px solid #dedede;
-  margin: 0;
-  top: 24px;
 }
-#form_chart_director li.hover .drop-down-content .half-1, #form_chart_director .tab-menu-wrap ul li.active .drop-down-content .half-1, .tab-menu-wrap ul #form_chart_director li.active .drop-down-content .half-1, #form_chart_director li.hover .drop-down-content .half-2, #form_chart_director .tab-menu-wrap ul li.active .drop-down-content .half-2, .tab-menu-wrap ul #form_chart_director li.active .drop-down-content .half-2 {
+#form_chart_director li.hover .drop-down-content .half-1, #form_chart_director .tab-menu-wrap ul li.active .drop-down-content .half-1, .tab-menu-wrap ul #form_chart_director li.active .drop-down-content .half-1,
+#form_chart_director li.hover .drop-down-content .half-2,
+#form_chart_director .tab-menu-wrap ul li.active .drop-down-content .half-2,
+.tab-menu-wrap ul #form_chart_director li.active .drop-down-content .half-2 {
   width: 47%;
   height: auto;
 }
 #form_chart_director li.hover .drop-down-content .half-1.with-separator, #form_chart_director .tab-menu-wrap ul li.active .drop-down-content .half-1.with-separator, .tab-menu-wrap ul #form_chart_director li.active .drop-down-content .half-1.with-separator {
   border-right: 1px solid #dedede;
 }
-#form_chart_director li.hover .drop-down-content .tl, #form_chart_director .tab-menu-wrap ul li.active .drop-down-content .tl, .tab-menu-wrap ul #form_chart_director li.active .drop-down-content .tl, #form_chart_director li.hover .drop-down-content .tr, #form_chart_director .tab-menu-wrap ul li.active .drop-down-content .tr, .tab-menu-wrap ul #form_chart_director li.active .drop-down-content .tr, #form_chart_director li.hover .drop-down-content .bl, #form_chart_director .tab-menu-wrap ul li.active .drop-down-content .bl, .tab-menu-wrap ul #form_chart_director li.active .drop-down-content .bl, #form_chart_director li.hover .drop-down-content .br, #form_chart_director .tab-menu-wrap ul li.active .drop-down-content .br, .tab-menu-wrap ul #form_chart_director li.active .drop-down-content .br {
+#form_chart_director li.hover .drop-down-content .tl, #form_chart_director .tab-menu-wrap ul li.active .drop-down-content .tl, .tab-menu-wrap ul #form_chart_director li.active .drop-down-content .tl,
+#form_chart_director li.hover .drop-down-content .tr,
+#form_chart_director .tab-menu-wrap ul li.active .drop-down-content .tr,
+.tab-menu-wrap ul #form_chart_director li.active .drop-down-content .tr,
+#form_chart_director li.hover .drop-down-content .bl,
+#form_chart_director .tab-menu-wrap ul li.active .drop-down-content .bl,
+.tab-menu-wrap ul #form_chart_director li.active .drop-down-content .bl,
+#form_chart_director li.hover .drop-down-content .br,
+#form_chart_director .tab-menu-wrap ul li.active .drop-down-content .br,
+.tab-menu-wrap ul #form_chart_director li.active .drop-down-content .br {
   display: none;
 }
 #form_chart_director li.hover .drop-down-content .rbox-content, #form_chart_director .tab-menu-wrap ul li.active .drop-down-content .rbox-content, .tab-menu-wrap ul #form_chart_director li.active .drop-down-content .rbox-content {
+  font-size: 0.71429rem;
   height: auto;
   overflow: auto;
 }
@@ -4207,13 +4222,7 @@ table.half-2 {
 }
 #form_chart_director li.hover .drop-down-content ul.not-li li, #form_chart_director .tab-menu-wrap ul li.active .drop-down-content ul.not-li li, .tab-menu-wrap ul #form_chart_director li.active .drop-down-content ul.not-li li {
   background: none;
-  height: 20px;
   display: list-item;
-  margin: 0;
-  padding: 0;
-}
-#form_chart_director li.hover .drop-down-content ul.not-li li label, #form_chart_director .tab-menu-wrap ul li.active .drop-down-content ul.not-li li label, .tab-menu-wrap ul #form_chart_director li.active .drop-down-content ul.not-li li label {
-  float: none;
 }
 #form_chart_director li.hover .drop-down-content ul.not-li, #form_chart_director .tab-menu-wrap ul li.active .drop-down-content ul.not-li, .tab-menu-wrap ul #form_chart_director li.active .drop-down-content ul.not-li {
   position: relative;
@@ -4224,17 +4233,22 @@ table.half-2 {
   margin-top: 0;
   border: 1px solid #dedede;
 }
-#form_chart_director .drop-down-content .half-1, #form_chart_director .drop-down-content .half-2 {
+#form_chart_director .drop-down-content .half-1,
+#form_chart_director .drop-down-content .half-2 {
   width: 47%;
   height: auto;
 }
 #form_chart_director .drop-down-content .half-1.with-separator {
   border-right: 1px solid #dedede;
 }
-#form_chart_director .drop-down-content .tl, #form_chart_director .drop-down-content .tr, #form_chart_director .drop-down-content .bl, #form_chart_director .drop-down-content .br {
+#form_chart_director .drop-down-content .tl,
+#form_chart_director .drop-down-content .tr,
+#form_chart_director .drop-down-content .bl,
+#form_chart_director .drop-down-content .br {
   display: none;
 }
 #form_chart_director .drop-down-content .rbox-content {
+  font-size: 0.71429rem;
   height: auto;
   overflow: auto;
 }
@@ -4246,13 +4260,7 @@ table.half-2 {
 }
 #form_chart_director .drop-down-content ul.not-li li {
   background: none;
-  height: 20px;
   display: list-item;
-  margin: 0;
-  padding: 0;
-}
-#form_chart_director .drop-down-content ul.not-li li label {
-  float: none;
 }
 #form_chart_director .popupbox .rbox.rbox-bg-alt {
   margin: 0;
@@ -4260,7 +4268,6 @@ table.half-2 {
 }
 #form_chart_director .popupbox .rbox.rbox-bg-alt ul.button-menu {
   list-style: none;
-  height: 3em;
   text-align: center;
 }
 #form_chart_director .popupbox .rbox.rbox-bg-alt ul.button-menu li {
@@ -4274,7 +4281,7 @@ table.half-2 {
 }
 
 #instrument-content {
-  width: 80em;
+  width: 80rem;
 }
 
 #instrument-content label {
@@ -4283,30 +4290,21 @@ table.half-2 {
 
 #moving-average-content,
 #settings-content {
-  width: 25em;
+  width: 25rem;
 }
 
 #indicator-content,
 #band-content {
-  width: 20em;
+  width: 20rem;
 }
 
-#intraday_interval ul.not-li {
-  margin: 0 0 0 1em;
-}
-#intraday_interval ul.not-li label {
-  cursor: pointer;
-  width: auto;
-}
-
-.underlying_group {
+.underlying_group, .underlying_group > * {
   float: left;
-  margin: 0 0.5em;
 }
 
 .drop-down-content {
   left: auto;
-  top: 27px;
+  top: 2rem;
   position: absolute;
   background-color: white;
   display: none;
@@ -4326,11 +4324,18 @@ table.half-2 {
 #intraday_interval {
   position: absolute;
   display: none;
-  background-color: white;
-  padding: 0 0.7em 0.7em;
-  border: 1px solid #dedede;
-  width: 8em;
+  background-color: #2a3052;
+  margin-left: -1rem;
+  width: 10rem;
   z-index: 2;
+}
+#intraday_interval ul.not-li {
+  margin: 0 0 0 1rem;
+}
+#intraday_interval ul.not-li label {
+  color: white;
+  cursor: pointer;
+  width: auto;
 }
 
 #intraday_interval li {
@@ -4339,8 +4344,7 @@ table.half-2 {
 
 #chart_compare_underlying,
 #chart_period {
-  z-index: 2;
-  padding-bottom: 25px;
+  margin: 2rem 0;
 }
 
 #chart_properties label {
@@ -4352,12 +4356,6 @@ table.half-2 {
 
 #chart_properties input {
   width: 30%;
-}
-
-.desc_box {
-  padding: 8px;
-  background-color: white;
-  border: 1px solid #dedede;
 }
 
 #chart_compare_underlying li {
@@ -4447,7 +4445,7 @@ table.half-2 {
 
 h2.finder {
   font-size: 1.0em;
-  padding: .4em 50px .4em 0;
+  padding: 0.4em 50px 0.4em 0;
   margin-right: 3px;
   margin-left: 3px;
   border-top: 1px solid #dedede;
@@ -4616,7 +4614,8 @@ div#price_table_notes {
       -ms-flex: 2;
           flex: 2;
 }
-.resourcesrise_fall_table-content #atleast, .resourcesrise_fall_table-content #bet_currency {
+.resourcesrise_fall_table-content #atleast,
+.resourcesrise_fall_table-content #bet_currency {
   width: 100%;
 }
 .resourcesrise_fall_table-content form {
@@ -4625,7 +4624,8 @@ div#price_table_notes {
 .resourcesrise_fall_table-content label {
   display: block;
 }
-.resourcesrise_fall_table-content #duration_container input, .resourcesrise_fall_table-content #duration_container select {
+.resourcesrise_fall_table-content #duration_container input,
+.resourcesrise_fall_table-content #duration_container select {
   width: 40%;
 }
 
@@ -4642,7 +4642,8 @@ div#price_table_notes {
 .login-content .form-logo {
   width: 7rem;
 }
-.login-content input, .login-content button {
+.login-content input,
+.login-content button {
   width: 100%;
 }
 .login-content .errorfield {
@@ -4658,7 +4659,8 @@ div#price_table_notes {
 .signup-content .form-logo {
   width: 7rem;
 }
-.signup-content input, .signup-content button {
+.signup-content input,
+.signup-content button {
   width: 100%;
 }
 .signup-content .errorfield {
@@ -4672,14 +4674,16 @@ div#price_table_notes {
   height: 7rem;
 }
 
-.contract-guide-content img, .usermy_account-content img {
+.contract-guide-content img,
+.usermy_account-content img {
   height: 5rem;
 }
 
 .pricing-table-content label {
   display: block;
 }
-.pricing-table-content input, .pricing-table-content select {
+.pricing-table-content input,
+.pricing-table-content select {
   width: 100%;
 }
 .pricing-table-content .row {
@@ -4691,7 +4695,8 @@ div#price_table_notes {
   min-width: 25%;
 }
 
-.charting-livechart-content select, .charting-livechart-content input {
+.charting-livechart-content select,
+.charting-livechart-content input {
   width: 100%;
 }
 .charting-livechart-content .btnrow {
@@ -4702,6 +4707,11 @@ div#price_table_notes {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+.charting-livechart-content .interval {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
 
 .open-source-projects-content img {
   height: 5rem;
@@ -4711,7 +4721,8 @@ div#price_table_notes {
   color: #e98024;
 }
 
-.userprofit_table-content table thead th:first-child, .userprofit_table-content table thead th:nth-child(5) {
+.userprofit_table-content table thead th:first-child,
+.userprofit_table-content table thead th:nth-child(5) {
   width: 20%;
 }
 .userprofit_table-content table tfoot th:first-child {
