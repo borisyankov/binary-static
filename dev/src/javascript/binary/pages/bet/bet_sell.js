@@ -225,14 +225,6 @@ var BetSell = function() {
             con.css('position', 'fixed').css('z-index', get_highest_zindex() + 100);
             body.append(con);
             con.show();
-            // push_data_layer();
-            if ($('#sell_bet_desc', con).length > 0) {
-                con.draggable({
-                    handle: '#sell_bet_desc'
-                });
-            } else {
-                con.draggable();
-            }
             this.reposition_confirmation();
             return con;
         },

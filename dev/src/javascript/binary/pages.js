@@ -7,8 +7,6 @@ function contract_guide_popup() {
         var ip = new InPagePopup();
         ip.ajax_conf = { url: this.href, data: 'ajax_only=1' };
         ip.fetch_remote_content(true, '', function (data) {
-            attach_tabs();
-            attach_tabs('#contract_demo_container');
             return data;
         });
     });

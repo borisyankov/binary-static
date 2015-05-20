@@ -32,10 +32,10 @@
                 <img src="[% request.url_for('images/pages/my_account/cashier-icon.svg') %]"/>
             </a>
         </p>
-        <p class="media">[% l('Make a deposit or withdraw') %]</p>
         <p class="media">
             <a class="pjaxload button" href="[% request.url_for('/cashier/available_payment_methods') %]">[% l('Cashier') %]</a>
-        </p>
+        </p>        
+        <p class="media">[% l('Make a deposit or withdraw') %]</p>
     </div>
     <div class="col">
         <p class="media">
@@ -43,10 +43,10 @@
                 <img src="[% request.url_for('images/icons/portfolio.svg') %]"/>
             </a>
         </p>
-        <p class="media">[% l('View your open positions.') %]</p>
         <p class="media">
             <a class="pjaxload button" href="[% request.url_for('/user/portfolio') %]">[% l('Portfolio') %]</a>
         </p>
+        <p class="media">[% l('View your open positions.') %]</p>
     </div>
     <div class="col">
         <p class="media">
@@ -54,10 +54,10 @@
                 <img src="[% request.url_for('images/icons/profit-table.svg') %]"/>
             </a>
         </p>
-        <p class="media">[% l('View your trading profit/loss.') %]</p>
         <p class="media">
             <a class="pjaxload button" href="[% request.url_for('/user/profit_table') %]">[% l('Profit Table') %]</a>
         </p>
+        <p class="media">[% l('View your trading profit/loss.') %]</p>
     </div>
     <div class="col">
         <p class="media">
@@ -65,9 +65,9 @@
                 <img src="[% request.url_for('images/icons/statement.svg') %]"/>
             </a>
         </p>
-        <p class="media">[% l('View your historical transactions.') %]</p>
         <p class="media">
             <a class="pjaxload button" href="[% request.url_for('/user/statement') %]">[% l('Statement') %]</a>
         </p>
+        <p class="media">[% l('View your historical transactions.') %]</p>
     </div>
 </div>

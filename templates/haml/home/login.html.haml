@@ -8,6 +8,8 @@
 
     - if (flash('error')) {
         %p.errorfield.bigerror= l('Binary.com now requires your email and password to log in. If you have both a real-money and a virtual-money account, please use the password from your real-money account.')
+        %p
+            %a.pjaxload#lost-password{:href=>url_for('/user/logintrouble')}= l('Login Trouble?')
     - }
 
     %p

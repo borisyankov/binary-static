@@ -1,5 +1,5 @@
 <div class="nav-account">
-    <a>[% l("My Account") %]</a>
+    <a>[% l("My&nbsp;Account") %]</a>
 </div>
 <ul class="nav2nd">
     <li>
@@ -10,6 +10,18 @@
     </li>
     <li>
         <a class="pjaxload" href="[% request.url_for('/user/statement') %]">[% l('Statement') %]</a>
+    </li>
+    <li>
+        <a class="pjaxload" href="[% request.url_for('/settings.cgi') %]">[% l('Settings') %]</a>
+    </li>
+    <li>
+        <a class="pjaxload" href="[% request.url_for('/user/change_password') %]">[% l('Password') %]</a>
+    </li>
+    <li>
+        <a class="pjaxload" href="[% request.url_for('/affiliate/signup') %]">[% l('Affiliate') %]</a>
+    </li>
+    <li>
+        <a class="pjaxload" href="[% request.url_for('/cashier/authenticate') %]">[% l('Authenticate') %]</a>
     </li>
     <li>
         <form id="loginid-switch-form" action="[% request.url_for('user/loginid_switch?l=EN') %]" method="post">

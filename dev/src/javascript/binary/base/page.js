@@ -591,7 +591,6 @@ Contents.prototype = {
         this.update_body_id();
         this.update_content_class();
         this.tooltip.attach();
-        this.init_draggable();
     },
     on_unload: function() {
         this.tooltip.detach();
@@ -653,10 +652,7 @@ Contents.prototype = {
         $('#content').parent()
             .removeClass()
             .addClass(contentClass);
-    },
-    init_draggable: function() {
-        $('.draggable').draggable();
-    },
+    }
 };
 
 var Page = function(config) {

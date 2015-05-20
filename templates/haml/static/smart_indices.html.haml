@@ -2,19 +2,21 @@
 
 %h1= l('What are Smart Markets?')
 
-%p= l('[_1]’s exclusive Smart Markets are built to key on a particular subset of the world’s markets. With a price derived from related assets, Smart Markets allow traders to take positions on a variety of market action.', stash->{website_name});
-%p.media
+.row
+    %p.col.f3= l('[_1]’s exclusive Smart Markets are built to key on a particular subset of the world’s markets. With a price derived from related assets, Smart Markets allow traders to take positions on a variety of market action.', stash->{website_name});
     %img{:src => url_for('images/pages/smart-indices/smart-indices-1.svg')}
 
 %h2= l("Smart Indices")
 %p= l('[_1]’s Smart Indices are created using the relevant market data and [_1]’s proprietary algorithms to represent the equities market movement for a country. These instruments are designed to tick at higher frequency and have extended market hours. With real time quotes and live charts, availability of short term contracts and extended hours, they provide more exciting opportunities to trade on financial markets.',stash->{website_name});
 
 %h2= l('Smart FX')
-%p= l('[_1]’s Smart FX are smart markets that measure the value of a currency against a basket of major currencies.', stash->{website_name})
-%p.media
+
+.row
+    .col.f3
+        %p= l('[_1]’s Smart FX are smart markets that measure the value of a currency against a basket of major currencies.', stash->{website_name})
+        %p= l('The USD Index is a weighted Index, measuring the US Dollar’s value against a basket of 5 global currencies (EUR, GBP, JPY, CAD, AUD), each weighted by 20%.')
     %img{:src => url_for('images/pages/smart-indices/smart-indices-2.svg')}
 
-%p= l('The USD Index is a weighted Index, measuring the US Dollar’s value against a basket of 5 global currencies (EUR, GBP, JPY, CAD, AUD), each weighted by 20%.')
 %p= l('The AUD Index is a weighted Index, measuring the Australian Dollar’s value against a basket of 5 global currencies (USD, EUR, GBP, JPY, CAD), each weighted by 20%.')
 %p= l('The EUR Index is a weighted Index, measuring the Euro’s value against a basket of 5 global currencies (USD, AUD, GBP, JPY, CAD), each weighted by 20%.')
 %p= l('The GBP Index is a weighted Index, measuring the British Pound’s value against a basket of 5 global currencies (USD, EUR, AUD, JPY, CAD), each weighted by 20%.')

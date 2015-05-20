@@ -37,7 +37,6 @@
         <td>[% contract.sale_date.datetime %]</td>
         <td>[% to_monetary_number_format(contract.sell_price) %]</td>
         <td>[% display_amount(contract.sell_price - contract.buy_price) %]</td>
-        <td>[% contract_info.analyse_link %]</td>
     </tr>
 [%- END -%]
 

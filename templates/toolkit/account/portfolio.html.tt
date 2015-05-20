@@ -3,8 +3,8 @@
 <p>[% l("Account balance : [_1] [_2]", currency, to_monetary_number_format(balance)) %]</p>
 
 [% IF balance <=  0 %]
-    <a href="[% deposit_url %]" class="button button_large by_client_type client_real with_login_cookies">
-    <span>[% l('Make a Deposit') %]</span>
+    <a href="[% deposit_url %]" class="button by_client_type client_real with_login_cookies">
+    [% l('Make a Deposit') %]
     </a>
 [% END %]
 

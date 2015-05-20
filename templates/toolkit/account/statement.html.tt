@@ -74,7 +74,7 @@ END -%]
 
 [% IF balance.amount == 0 %]
     <p>
-        <a href="[% deposit_url %]" class="buttonby_client_type client_real with_login_cookies">[% l('Make a Deposit') %]</a>
+        <a href="[% deposit_url %]" class="button by_client_type client_real with_login_cookies">[% l('Make a Deposit') %]</a>
     </p>
 [% END %]
 

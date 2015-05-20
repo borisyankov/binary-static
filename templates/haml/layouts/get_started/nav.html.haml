@@ -15,5 +15,5 @@
       %li.$class
         %a{:href=>url_for($route), :class => 'pjaxload'}= $text
     - }
-  .open-account.by_client_type.client_logged_out.client_virtual
+  %p.by_client_type.client_logged_out.client_virtual
     %a.button.pjaxload{:href => url_for('/')}= l('Open a Free account')

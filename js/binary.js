@@ -36,7 +36,6 @@ var InPagePopup = function(conf) {
     this._container = null;
     this.width = conf.width || null;
     this.close_on_escape = typeof conf.close_on_escape == 'undefined' ? true : conf.close_on_escape;
-    this.draggable = typeof conf.draggable == 'undefined' ? true : conf.draggable;
     this.drag_handle = conf.drag_handle || '.drag-handle';
     this.ajax_conf = conf.ajax_conf || null;
     this._content = conf.content || '';
@@ -49,7 +48,6 @@ var InPagePopup = function(conf) {
 InPagePopup.prototype.config = function(conf) {
     if (conf.width) this.width = conf.width;
     if (typeof conf.close_on_escape != 'undefined') this.close_on_escape = !!conf.close_on_escape;
-    if (typeof conf.draggable != 'undefined') this.draggable = !!conf.draggable;
     if (conf.drag_handle) this.drag_handle = conf.drag_handle;
     if (conf.ajax_conf) this.ajax_conf = conf.ajax_conf;
 };
@@ -158,14 +156,6 @@ InPagePopup.prototype._init_container = function() {
         $(document).on('keydown', function(e) {
             if (e.which == 27) me.close();
         });
-    }
-    if (this.draggable) {
-        handle = this.drag_handle;
-        drag_opts = {};
-        if ( $(handle, container).length ) {
-            drag_opts['handle'] = handle;
-        }
-        container.draggable(drag_opts);
     }
     this.reposition();
     return container;
@@ -1136,7 +1126,6 @@ Contents.prototype = {
         this.update_body_id();
         this.update_content_class();
         this.tooltip.attach();
-        this.init_draggable();
     },
     on_unload: function() {
         this.tooltip.detach();
@@ -1198,10 +1187,7 @@ Contents.prototype = {
         $('#content').parent()
             .removeClass()
             .addClass(contentClass);
-    },
-    init_draggable: function() {
-        $('.draggable').draggable();
-    },
+    }
 };
 
 var Page = function(config) {
@@ -2944,8 +2930,6 @@ function contract_guide_popup() {
         var ip = new InPagePopup();
         ip.ajax_conf = { url: this.href, data: 'ajax_only=1' };
         ip.fetch_remote_content(true, '', function (data) {
-            attach_tabs();
-            attach_tabs('#contract_demo_container');
             return data;
         });
     });
@@ -6426,14 +6410,6 @@ BetForm.Time.EndTime.prototype = {
             con.css('position', 'fixed').css('z-index', get_highest_zindex() + 100);
             body.append(con);
             con.show();
-            // push_data_layer();
-            if ($('#sell_bet_desc', con).length > 0) {
-                con.draggable({
-                    handle: '#sell_bet_desc'
-                });
-            } else {
-                con.draggable();
-            }
             this.reposition_confirmation();
             return con;
         },
@@ -7313,7 +7289,6 @@ BetForm.Time.EndTime.prototype = {
             var that = this;
             $('a.pricing-details').on('click', function (event) {
                 var popup = that.popup();
-                $('.draggable').draggable(); // This is overkill, but nobody cares.
                 popup.toggleClass('invisible');
 
                 $('#' + popup.children(':first').attr('id')).tabs();

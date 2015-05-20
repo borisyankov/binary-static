@@ -2,16 +2,16 @@
 
 <form name="rise_fall" id="rise_fall_form" method="post" action="[%= request.url_for('/resources/rise_fall_table') %]">
     <div class="row">
-        <div class="col">
+        <fieldset>
             <label for="atleast">[% l('Start time') %]:</label>
             <select id="atleast" name="date_start">
                 [% FOREACH option IN start_options.options %]
                 <option value="[% option.value %]" [% IF start_options.selected == option.value %] selected="selected" [% END %]>[% option.text %]</option>
                 [% END %]
             </select>
-        </div>
+        </fieldset>
 
-        <div id="duration_container" class="col">
+        <fieldset id="duration_container">
             <label for="duration_amount">[% l('Duration') %]:</label>
             <input type="text" name="duration_amount" id="duration_amount" size="4" maxlength="5" value="[% duration_selected.duration_amount %]"/>
 
@@ -28,16 +28,16 @@
                     <span class="[% IF pair.key == 'forward_starting' %]forward_starting [% END %]non_input [% minimum.unit %]"><abbr rel='tooltip' title="[% l("minimum available duration") %]">[% l("min") %]</abbr>: [% minimum.value %]</span>
                 [% END %]
             [% END %]
-        </div>
+        </fieldset>
 
-        <div class="col">
+        <fieldset>
             <label for="payout">[% l('Payout Currency') %]:</label>
             <select id="bet_currency" name="currency">
                 [% FOREACH currency = currency_options %]
                     <option value=[% currency %] [% IF selected_currency == currency %] selected="selected" [% END %]>[% currency %]</option>
                 [% END %]
             </select>
-        </div>
+        </fieldset>
     </div>
 
     <input type="hidden" name="table_action" value="price"></input>
@@ -48,4 +48,4 @@
 
 <div id="rise_fall_prices_div">
     [% prices %]
-</div>    
+</div>

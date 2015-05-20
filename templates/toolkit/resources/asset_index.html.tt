@@ -10,18 +10,17 @@
 
 [% FOREACH market IN fullinfo %]
 <div id="[% market.tabid %]">
-    [% FOREACH submarket IN market.submarkets %]
     <table>
+    [% FOREACH submarket IN market.submarkets %]
+        [% market_name = market.code %]
+        [% number_of_cat = categories.$market_name.size - 1 %]
+
         <thead>
             <tr>
                 <th colspan="100">
                     [% submarket.name %]
                 </th>
             </tr>
-
-            [% market_name = market.code %]
-            [% number_of_cat = categories.$market_name.size - 1 %]
-
             <tr>
                 <th></th>
                 [%- FOREACH category IN [0..number_of_cat] -%]
@@ -37,7 +36,6 @@
         </thead>
 
         <tbody>
-
             [% FOREACH underlying IN submarket.underlyings %]
             <tr>
                 <td>

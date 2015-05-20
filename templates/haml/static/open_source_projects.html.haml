@@ -2,56 +2,53 @@
 
 %h1= l('Binary.com open-source projects')
 
-.row
-    .col
-        %p= l('Binary.com is an active proponent of the open-source movement and is in the process of open-sourcing a number of components of its codebase.')
-    .col
-        %img{:src => url_for('images/pages/open-source-projects/open-source-projects-1.svg')}
+%p= l('Binary.com is an active proponent of the open-source movement and is in the process of open-sourcing a number of components of its codebase.')
 
 %h2= l('ExtJS front-end')
-%h4= l('A next-generation front-end interface with Sencha ExtJS-5')
+%h3= l('A next-generation front-end interface with Sencha ExtJS-5')
 .row
-    .col
+    .col.f3
         %p!= l('Participate in the development of Binary.com’s next-generation user-interface. This project, open-sourced as <a target="_blank" href="[_1]">BinaryUI</a> on github, is written entirely in Sencha ExtJS 5, and consumes the Binary.com <a href="[_2]">RESTful API</a>.', 'https://github.com/binary-com/binary-ui-scaffolding', url_for("partnerapi"))
-    .col
+    .col.media
         %img{:src => url_for('images/pages/open-source-projects/open-source-projects-2.svg')}
 
 %h2= l('Static content')
-%h4= l('Improve Binary.com’s front-end content')
+%h3= l('Improve Binary.com’s front-end content')
 .row
-    .col
-        %p!= l('The Binary.com website’s static content (CSS, Javascript) is available as the <a target="_blank" href="[_1]">binary-static</a> open-source project on github. Would you like to re-skin the Binary.com website, or improve browser compatibility, site rendering speed, or Javascript performance? Please fork the project and submit pull-requests of your suggested code changes.', 'https://github.com/binary-com/binary-static')
-    .col
+    .col.f3
+        != l('The Binary.com website’s static content (CSS, Javascript) is available as the <a target="_blank" href="[_1]">binary-static</a> open-source project on github. Would you like to re-skin the Binary.com website, or improve browser compatibility, site rendering speed, or Javascript performance? Please fork the project and submit pull-requests of your suggested code changes.', 'https://github.com/binary-com/binary-static')
+    .col.media
         %img{:src => url_for('images/pages/open-source-projects/open-source-projects-3.png')}
 
 %h2= l('Perl modules')
-%h4= l('Binary.com’s CPAN contributions')
+%h3= l('Binary.com’s CPAN contributions')
 .row
-    .col
-        %p!= l('Binary.com is an active member of the Perl community and is in the process of uploading a number of its internal utility modules to <a target="_blank" href="[_1]">CPAN</a>. If you are a Perl enthusiast, contribute by reviewing these modules, and submitting pull-requests on <a target="_blank" href="[_2]">github</a>.', 'http://search.cpan.org/~binary/', 'https://github.com/binary-com')
-    .col
+    .col.f3
+        != l('Binary.com is an active member of the Perl community and is in the process of uploading a number of its internal utility modules to <a target="_blank" href="[_1]">CPAN</a>. If you are a Perl enthusiast, contribute by reviewing these modules, and submitting pull-requests on <a target="_blank" href="[_2]">github</a>.', 'http://search.cpan.org/~binary/', 'https://github.com/binary-com')
+    .col.media
         %img{:src => url_for('images/pages/open-source-projects/open-source-projects-4.svg')}
 
 %h2= l('Translations')
 .row
-    .col
-        %p= l('Do you want to see Binary.com in other languages, or can you suggest improvements to our current translations?')
-        %a.pjaxload.button{:href => url_for('contact')}= l('Contact us')
-    .col
+    .col.f3
+        %p!= l('Do you want to see Binary.com in other languages, or can you suggest improvements to our current translations?')
+        %p
+            %a.pjaxload.button{:href => url_for('contact')}= l('Contact us')
+    .col.media
         %img.responsive{:src => url_for('images/pages/open-source-projects/open-source-projects-5.png')}
 
 %h2= l('Mobile application')
-%h4= l('A Phonegap mobile application for Binary.com')
+%h3= l('A Phonegap mobile application for Binary.com')
 .row
-    .col
-        %p!= l('The Binary.com mobile application is developed with <a target="_blank" href="[_1]">Phonegap</a> and is open-sourced as <a target="_blank" href="[_2]">client-app</a> on github. Phonegap developers are invited to participate in this project by forking the repository.', 'http://phonegap.com/', 'https://github.com/binary-com/client-app')
-    .col
+    .col.f3
+        != l('The Binary.com mobile application is developed with <a target="_blank" href="[_1]">Phonegap</a> and is open-sourced as <a target="_blank" href="[_2]">client-app</a> on github. Phonegap developers are invited to participate in this project by forking the repository.', 'http://phonegap.com/', 'https://github.com/binary-com/client-app')
+    .col.media
         %img{:src => url_for('images/pages/open-source-projects/open-source-projects-6.svg')}
 
 %h2= l('Bulk Trader')
-%h4= l('A Web Application using the Binary.com API')
+%h3= l('A Web Application using the Binary.com API')
 .row
-    .col
-        %p!= l('Bulk Trader is a Perl web application which demonstrates how to authenticate and make server-side calls to the Binary.com API.  It is developed with <a target="_blank" href="[_1]">Mojolicious</a> and is open-sourced as <a target="_blank" href="[_2]">bulktrader</a> on github. Perl/Mojolicious developers are invited to participate in this project by forking the repository.', 'http://mojolicio.us/', 'https://github.com/binary-com/bulktrader')
-    .col
+    .col.f3
+        != l('Bulk Trader is a Perl web application which demonstrates how to authenticate and make server-side calls to the Binary.com API.  It is developed with <a target="_blank" href="[_1]">Mojolicious</a> and is open-sourced as <a target="_blank" href="[_2]">bulktrader</a> on github. Perl/Mojolicious developers are invited to participate in this project by forking the repository.', 'http://mojolicio.us/', 'https://github.com/binary-com/bulktrader')
+    .col.media
         %img{:src => url_for('images/pages/open-source-projects/open-source-projects-1.svg')}

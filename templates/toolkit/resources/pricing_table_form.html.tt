@@ -2,73 +2,73 @@
 
 <form id="pricing_table_input" name="pricing_table_input" method="GET" action=[% form_url %]>
     <div class="row">
-        <div>
+        <fieldset>
             <label for="pricingtable_bet_type">[% l('Contract Type') %]:</label>
             <select id="pricingtable_bet_type" name="bet_type">
                 [% FOREACH bet_type = bet_types %]
                 <option value=[% bet_type.value %] [% IF bet_type.value == selected_bet_type %] selected="selected" [% END %]>[% bet_type.name %]</option>
                 [% END %]
             </select>
-        </div>
+        </fieldset>
 
-        <div>
+        <fieldset>
             <label for="pricingtable_underlying">[% l('Market') %]:</label>
             <span id="pricingtable_underlying_div">
                 [% select_underlying %]
             </span>
-        </div>
+        </fieldset>
 
-        <div>
+        <fieldset>
             <label for="pricingtable_currency">[% l('Payout Currency') %]:</label>
             <select id="pricingtable_currency" name="currency">
                 [% FOREACH currency = currencies %]
                 <option value="[% currency %]" [% IF currency == selected_currency %]selected[% END %]> [% currency %] </option>
                 [% END %]
             </select>
-        </div>
+        </fieldset>
 
         [% IF selected_bet_type == 'RANGE' || selected_bet_type == 'UPORDOWN' || selected_bet_type == 'EXPIRYRANGE' || selected_bet_type == 'EXPIRYMISS' %]
             [% double_barrier = 1 %]
         [% ELSE %]
             [% double_barrier = 0 %]
         [% END %]
-        <div id="lower_strike" [% IF double_barrier == 0 %] style="display:none;" [% END %]>
+        <fieldset id="lower_strike" [% IF double_barrier == 0 %] style="display:none;" [% END %]>
             <label for="low_strike">[% l('Low barrier') %]:</label>
             <input size="5" type="text" id="low_strike" name="low_strike" [% IF selected_low_strike %] value="[% selected_low_strike %]" [% END %] />
             <span>([% l('Absolute barrier') %])</span>
-        </div>
+        </fieldset>
 
-        <div>
+        <fieldset>
             <label>[% l('Horizontal') %]:</label>
-            <label id="strike_label" class="inputlike" [% IF double_barrier == 1 %] style="display:none;" [% END %]>[% l('Barrier') %]</label>
-            <label id="high_strike_label" class="inputlike" [% IF double_barrier == 0 %] style="display:none;" [% END %]>[% l('High barrier') %]</label>
-        </div>
+            <label id="strike_label" [% IF double_barrier == 1 %] style="display:none;" [% END %]>[% l('Barrier') %]</label>
+            <label id="high_strike_label" [% IF double_barrier == 0 %] style="display:none;" [% END %]>[% l('High barrier') %]</label>
+        </fieldset>
 
-        <div>
+        <fieldset>
             <label for="from_strike" id="from_strike_percent">[% l('From') %] (%):</label>
             <label for="from_strike" id="from_strike_label" style="display:none;">[% l('From') %]:</label>
             <input size="5" type="text" id="from_strike" name="from_strike" [% IF selected_from_strike %] value=[% selected_from_strike %] [% END %]  />
-        </div>
+        </fieldset>
 
-        <div>
+        <fieldset>
             <label>[% l('Vertical') %]:</label>
-            <label class="inputlike">[% l('Expiry') %]</label>
-        </div>
-        <div>
+            <label>[% l('Expiry') %]</label>
+        </fieldset>
+        <fieldset>
             <label for="expiry_step">[% l('Step') %]:</label>
             <select name="expiry_step" id="expiry_step">
                 [% FOREACH expiry_step = expiry_steps %]
                 <option value="[% expiry_step.value %]" [% IF expiry_step.value == selected_expiry_step %] selected="selected" [% END %]> [% expiry_step.label %] </option>
                 [% END %]
             </select>
-        </div>
+        </fieldset>
 
-        <div>
+        <fieldset>
             <label for="from_expiry" id="from_expiry_label">[% l('From') %]:</label>
             <input size="9" type="text" id="from_expiry" name="from_expiry" [% IF selected_from_expiry %] value=[% selected_from_expiry %] [% END %] />
-        </div>
+        </fieldset>
 
-        <div>
+        <fieldset>
             <label for="strike_step">[% l('Step') %] (%):</label>
             <div class="row">
                 <div>
@@ -84,7 +84,7 @@
                     </select>
                 </div>
             </div>
-        </div>
+        </fieldset>
     </div>
 
     <input type="hidden" value="price" name="action" />

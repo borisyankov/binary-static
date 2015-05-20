@@ -12,8 +12,8 @@
 
 [% FOREACH market IN fullinfo %]
 <div id="[% market.tabid %]">
-    [% FOREACH submarket IN market.submarkets %]
     <table>
+    [% FOREACH submarket IN market.submarkets %]
         <thead>
             <tr>
                 <th colspan="5">
@@ -39,8 +39,8 @@
                 <td>[% FOREACH event IN underlying.events %][% event.descrip %]: [% event.dates %]</br>[% END %]</td>
             </tr>
         [% END %]
-        </tbody>
-    </table>
+        </tbody>    
     [% END %]
+    </table>
 </div>
 [% END %]
