@@ -378,8 +378,9 @@ form {
 
 ul.bullet li {
   background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSIxOHB4IiBoZWlnaHQ9IjE4cHgiIHZpZXdCb3g9IjAgMCAyNCAyMCI+DQo8cG9seWdvbiBmaWxsPSIjRTk4MDI1IiBwb2ludHM9IjguNjIzLDE5LjU1NyAwLDEwLjkzNiAzLjczNiw3LjE5OCA4LjYyMywxMi4wODIgMjAuMjYyLDAuNDQzIDI0LDQuMTggOC42MjMsMTkuNTU3Ii8+DQo8L3N2Zz4NCg==") no-repeat;
-  background-position: 2px;
+  background-position: 0 2px;
   padding-left: 1.5em;
+  margin-bottom: .25rem;
 }
 
 a.close {
@@ -835,6 +836,9 @@ fieldset .error-msg {
   display: -ms-flexbox;
   display: flex;
   margin-left: -1rem;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
 }
 
 .row > * {
@@ -882,12 +886,12 @@ header {
 }
 
 #logo img:nth-child(1) {
-  height: 2em;
+  height: 2rem;
 }
 #logo img:nth-child(2) {
-  height: 1.5em;
-  margin-left: .2em;
-  margin-top: .2em;
+  height: 1.5rem;
+  margin-left: .25rem;
+  margin-top: .25rem;
 }
 
 nav {
@@ -1197,7 +1201,7 @@ body {
 
 #logo {
   width: 8rem;
-  padding: .5em 0;
+  padding: .5rem 0;
 }
 
 .nav2nd {
@@ -1586,8 +1590,13 @@ button:disabled,
   -webkit-flex: 2;
       -ms-flex: 2;
           flex: 2;
-  padding: 4rem 0;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
   text-align: left;
+}
+
+hgroup {
+  margin-bottom: 2rem;
 }
 
 .sitemap h4, .hero h1, .hero h2, .hero h3, .home-container hgroup h1, .trade-desc h4 {
@@ -1636,6 +1645,7 @@ blockquote p:after {
 
 #open-account {
   padding: 4rem 2rem;
+  margin-bottom: 0;
   background: rgba(42, 48, 82, 0.1);
 }
 #open-account legend {
@@ -4706,6 +4716,10 @@ div#price_table_notes {
 }
 .userprofit_table-content table tfoot th:first-child {
   text-align: left;
+}
+
+.userlogintrouble-content .col {
+  min-width: 33.3333%;
 }
 
 .cashieravailable_payment_methods-content img,

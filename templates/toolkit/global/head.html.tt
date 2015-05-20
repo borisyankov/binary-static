@@ -20,7 +20,7 @@
         <meta property="og:type" content="website" />
         <meta property="og:image" content="[% request.url_for('images/common/og_image.gif') %]" />
 
-        <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700&subset=latin,vietnamese,cyrillic-ext,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700&subset=latin,vietnamese,cyrillic-ext,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
         <script>
           (function() {
             var config = {

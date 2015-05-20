@@ -1,19 +1,22 @@
 [% USE String %]
-
-[% FOREACH bet_type_demo IN bet_type_demos %]
-<h2>[% bet_type_demo.name %]</h2>
-[% winning = String.new( "bet/explanation/winning/$bet_type_demo.id" ) %]
-[% CALL winning.append(".html.tt") %]
-<div id="bet-guide-demo">
-    <object width="245" height="160" type="application/x-shockwave-flash" data="[% bet_type_demo.video %]">
-        <param name="movie" value="[% bet_type_demo.video %]" />
-        <param name="menu" value="true" />
-        <param name="quality" value="high" />
-        <param name="bgcolor" value="#FFFFFF" />
-        <param name="wMode" value="transparent" />
-    </object>
-    <p>[% l("Please click on the \"Play\" button to start the video.") %]</p>
+<div class="row">
+    [% FOREACH bet_type_demo IN bet_type_demos %]
+    <div class="col">
+        <h2>[% bet_type_demo.name %]</h2>
+        [% winning = String.new( "bet/explanation/winning/$bet_type_demo.id" ) %]
+        [% CALL winning.append(".html.tt") %]
+        <div id="bet-guide-demo">
+            <object width="245" height="160" type="application/x-shockwave-flash" data="[% bet_type_demo.video %]">
+                <param name="movie" value="[% bet_type_demo.video %]" />
+                <param name="menu" value="true" />
+                <param name="quality" value="high" />
+                <param name="bgcolor" value="#FFFFFF" />
+                <param name="wMode" value="transparent" />
+            </object>
+            <p>[% l("Please click on the \"Play\" button to start the video.") %]</p>
+        </div>
+        [% INCLUDE "$winning" %]
+        <a class="button" href="[% bet_type_demo.bet_url %]">[% l("Start trading") %]</a>
+    </div>
+    [% END %]
 </div>
-[% INCLUDE "$winning" %]
-<a class="button" href="[% bet_type_demo.bet_url %]">[% l("Start trading") %]</a>
-[% END %]
