@@ -11,10 +11,10 @@
                 %a{:href=>"http://blog.binary.com/en/webinar/"}= l('Webinars')
             .col
                 %h4= l('Terms')
-                %a.pjaxload{:href=>url_for("c_template.cgi?filecode=legal")}= l('Terms and Conditions')
-                %a.pjaxload{:href=>url_for("c_template.cgi?filecode=legal#privacy-tab")}= l('Security and Privacy')
+                %a.pjaxload{:href=>url_for("/terms-and-conditions")}= l('Terms and Conditions')
+                %a.pjaxload{:href=>url_for("/terms-and-conditions#privacy-tab")}= l('Security and Privacy')
                 %a.pjaxload{:href=>url_for("responsible-trading")}= l('Responsible Trading')
-                %a.pjaxload{:href=>url_for("c_template.cgi?filecode=legal&selected_tab=complaints-disputes-tac-tab")}= l('Complaints and Disputes')
+                %a.pjaxload{:href=>url_for("/terms-and-conditions?selected_tab=complaints-disputes-tac-tab")}= l('Complaints and Disputes')
                 %a{:href=>'http://www.gamcare.org.uk/'}= l('GamCare')
             .col
                 %h4= l('About Us')

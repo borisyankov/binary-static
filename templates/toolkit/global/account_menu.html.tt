@@ -29,6 +29,6 @@
         </form>
     </li>
     <li>
-        <a id="btn_logout" href="[% request.url_for('logout') %]"[% target %]>[% l('Log out') %]</a>
+        <a href="[% request.url_for('logout') %]"[% target %]>[% l('Log out') %]</a>
     </li>
 </ul>
