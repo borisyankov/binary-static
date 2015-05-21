@@ -598,17 +598,31 @@ Contents.prototype = {
             $('.unbind_later').off();
         }
     },
+    has_real_account: function() {
+
+        if (!this.user.is_logged_in) return false;
+
+        for (var i = 0; i < this.user.loginid_array.length; i++) {
+            if (this.user.loginid_array[i].real == 1) return true;
+        }
+        return false;
+    },
     activate_by_client_type: function() {
-        $('#client-logged-in').toggle(this.client.is_logged_in);
-        $('#client-logged-out').toggle(!this.client.is_logged_in);
+
+        $('body').removeClass();
+        $('body').toggleClass('client-logged-in', this.client.is_logged_in);
+        $('body').toggleClass('client-not-logged-in', !this.client.is_logged_in);
+        $('body').toggleClass('client-is-real', this.client.is_real);
+        $('body').toggleClass('client-is-virtual', this.client.is_virtual);
+        $('body').toggleClass('client-has-real', this.has_real_account());
+
         $('.by_client_type').addClass('invisible');
-        if(this.client.is_logged_in) {
+
+        if (this.client.is_logged_in) {
 
             if(this.client.is_real) {
                 $('.by_client_type.client_real').removeClass('invisible');
                 $('.by_client_type.client_real').show();
-                $('#topbar').addClass('dark-blue');
-                $('#topbar').removeClass('orange');
 
                 if (!/^Q?CR/.test(this.client.loginid)) {
                     $('#payment-agent-section').addClass('invisible');
@@ -617,32 +631,10 @@ Contents.prototype = {
             } else {
                 $('.by_client_type.client_virtual').removeClass('invisible');
                 $('.by_client_type.client_virtual').show();
-
-                var loginid_array = this.user.loginid_array;
-                var has_real = 0;
-                for (var i=0;i<loginid_array.length;i++) {
-                    var loginid = loginid_array[i].id;
-                    var real = loginid_array[i].real;
-
-                    if (real == 1) {
-                        has_real = 1;
-                        break;
-                    }
-                }
-                if (has_real == 1) {
-                    $('.virtual-upgrade-link').addClass('invisible');
-                    $('.virtual-upgrade-link').hide();
-                }
-
-                $('#topbar').addClass('orange');
-                $('#topbar').removeClass('dark-blue');
             }
         } else {
             $('.by_client_type.client_logged_out').removeClass('invisible');
             $('.by_client_type.client_logged_out').show();
-
-            $('#topbar').removeClass('orange');
-            $('#topbar').addClass('dark-blue');
         }
     },
     update_body_id: function() {

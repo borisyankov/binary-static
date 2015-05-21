@@ -20,7 +20,7 @@
     <li>
         <a class="pjaxload" href="[% request.url_for('/affiliate/signup') %]">[% l('Affiliate') %]</a>
     </li>
-    <li>
+    <li class="authenticate-menu">
         <a class="pjaxload" href="[% request.url_for('/cashier/authenticate') %]">[% l('Authenticate') %]</a>
     </li>
     <li>

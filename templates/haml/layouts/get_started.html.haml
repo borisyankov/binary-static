@@ -6,10 +6,11 @@
 %html
   - }
   = include('layouts/default/head')
-  - my $body_id = current_route;  
+  - my $body_id = current_route;
   - my $lang = stash->{language};
   %body#$body_id.$lang
     #page-wrapper
+      = include('layouts/default/topbar') 
       = include('layouts/default/header')
       #content-holder
         = include('layouts/get_started/content')

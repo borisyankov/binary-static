@@ -1,0 +1,4 @@
+<div id="topbar">
+    [% l("You're using a virtual money account.") %]
+    <a class="button pjaxload" href="[% request.url_for('/user/upgrade/') %]">[% l("Upgrade to a real money account") %]</a>
+</div>

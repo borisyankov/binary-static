@@ -7,7 +7,7 @@
         </li>
         <li class="submenu">
             <div class="nav-cashier">
-                <a class="pjaxload" href="[% request.url_for('/cashier/payment_methods') %]" [% target %]>[% l("Cashier") %]</a>
+                <a class="pjaxload" href="[% request.url_for('/cashier') %]" [% target %]>[% l("Cashier") %]</a>
             </div>
         </li>
         <li class="submenu">
@@ -23,10 +23,10 @@
                 [% language_select %]
             </div>
         </li>
-        <li id="client-logged-out">
+        <li class="login-container">
             <a href="[% request.url_for('login') %]" class="button login-btn">[% l("Log in") %]</a>
         </li>
-        <li id="client-logged-in" class="submenu">
+        <li class="submenu account-container">
             [% INCLUDE global/account_menu.html.tt %]
         </li>
     </ul>

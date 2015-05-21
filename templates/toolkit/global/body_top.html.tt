@@ -1,6 +1,7 @@
 [% UNLESS is_pjax_request %]
 <body[% IF body_id %] id="[% body_id %]"[% END %][% IF lang %] class="[% language %]"[% END %]>
     <div id='page-wrapper'>
+    [% INCLUDE global/topbar.html.tt %]
     [% INCLUDE global/header.html.tt %]
         <div id="content-holder">
     <!-- FlushHead -->

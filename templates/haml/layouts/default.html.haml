@@ -10,6 +10,7 @@
   - my $lang1 = stash->{language};
   %body#$body_id.$lang1
     #page-wrapper
+      = include('layouts/default/topbar')    
       = include('layouts/default/header')
       #content-holder
         = include('layouts/default/content')
