@@ -1,0 +1,24 @@
+<h1>[% l('Security and Privacy') %]</h1>
+
+<ul id="legal-menu" role="segmented">
+    <li><a href="#privacy">[% l('Security and Privacy') %]</a></li>
+    <li><a href="#datafeed">[% l('Data Feed') %]</a></li>
+    <li><a href="#copyright">[% l('Copyright') %]</a></li>
+    <li><a href="#risk">[% l('Risk Disclaimer') %]</a></li>
+    <li><a href="#order-execution">[% l('Order Execution') %]</a></li>
+</ul>
+<div id="datafeed" class="tab-content">
+    [% INCLUDE legal/datafeed.html.tt %]
+</div>
+<div id="privacy" class="tab-content">
+    [% INCLUDE legal/privacy.html.tt %]
+</div>
+<div id="copyright" class="tab-content">
+    [% INCLUDE legal/copyright.html.tt %]
+</div>
+<div id="risk" class="tab-content">
+    [% INCLUDE legal/risk_disclaimer.html.tt %]
+</div>
+<div id="order-execution" class="tab-content">
+    [% INCLUDE legal/order_execution.html.tt %]
+</div>

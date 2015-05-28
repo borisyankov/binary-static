@@ -1,13 +1,16 @@
 <h2>[% l("Terms and Conditions") %]</h2>
 <p>
-    <i>[% l("Version 35. Last modified 2015-03-26.") %]</i>
+    <i>[% l("Version 36. Last modified 2015-05-19.") %]</i>
 </p>
 <p>
     [% l("It is the responsibility of each Client to read and understand this legal notice and the terms and conditions pursuant to which an acquisition of financial contracts via this site is governed.") %]
 </p>
 <h2>A. [% l("Interpretation") %]</h2>
 <p>
-    [% l("The term \"the Company\" shall denote either of Binary (IOM) Ltd., Binary (Europe) Ltd. or Binary (CR) S.A., depending on the jurisdiction to which a Client\'s account has been attached in accordance with the account opening procedures of the website and as detailed in the About Us section of the website.") %]
+    [% l("The term \"the Company\" shall denote either Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles, licenced and regulated by (1) the Gambling Supervision Commission in the Isle of Man, British Isles, current online gambling licence issued on 31 August 2012, and for UK clients by (2) the UK Gambling Commission; Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated by (1) the Malta Gaming Authority in Malta for the Gaming products, licence no MGA/CL2/118/2000 dated 26th May 2010 and for UK clients by (2) the UK Gambling Commission; Binary Investments (Europe) Ltd Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, regulated by the Malta Financial Services Authority for Investment products, holder of a Category 3 Investment Services licence no IS/ 70156; or Binary (CR) S.A., depending on the jurisdiction to which a Client\'s account has been attached in accordance with the account opening procedures of the website and as detailed in the About Us section of the website.") %]
+</p>
+<p>
+    These Terms and Conditions may be supplemented from time to time by Supplementary Terms and Conditions applicable to a particular Company or products.
 </p>
 <h2>B. [% l("Introduction") %]</h2>
 <p>
@@ -32,7 +35,13 @@
 <p>
     [% l('These Terms and Conditions, for the convenience of our Clients are provided in several different languages; however, these translations do reflect the same principles. We attempt, as much as possible to provide a faithful translation in English of the prevailing language. In the event of any differences between the English version of the website and any other language, the English version shall prevail.') %]
 </p>
-<h2>D. [% l("Governing Laws and Jurisdiction") %]</h3>
+<p>
+    You may communicate with us through this website, by email or, exceptionally, by post. Details can be found in the Contact Us page.
+</p>
+<p>
+    Generally we will communicate with you through this website or by email to the email address used when opening your account. We will communicate with you in English or, if you select another preferred language when opening your account, in that language.
+</p>
+<h2>D. [% l("Governing Laws and Jurisdiction") %]</h2>
 <p>
     [% l("Laws regarding financial contracts vary throughout the world, and it is the responsibility of persons accessing this site to ensure that they understand and fully comply with any laws or regulations relevant to themselves in their own country. This site does not constitute, and may not be used for the purposes of, an offer or solicitation to anyone in any jurisdiction in which such offer or solicitation is not authorised or to any person to whom it is unlawful to make such offer or solicitation. Access to this site and the offering of financial contracts via this site in certain jurisdictions may be restricted and, accordingly, persons accessing this site are required to inform themselves about and to observe such restrictions.") %]
 </p>
@@ -61,29 +70,37 @@
     [% l("The company holds customer funds in separate bank accounts to the operational accounts which would not, in the event of insolvency, form part of the Company's assets. This meets the Gambling Commission’s requirements for the segregation of customer funds at the level: medium protection.") %]
 </p>
 <p>
-    [% l("Your account should not be used as a banking facility and deposits should only be made with a view to using funds to place contracts. Should you make repeated deposits and withdrawals without commensurate contracts being placed, we reserve the right to pass on to your accounts, without prior notice, any bank charges we have incurred before closing the account.") %]
+[% l("The company has various deposit methods available, each with their own timing for deposits, some of which might not be available for withdrawals. Full details of deposits and withdrawals methods available including settlement times are available <a href='[_1]' class='pjaxload'>here:</a>", request.url_for('cashier/payment_methods')) %]
+</p>
+<p>
+    [% l("Your account should not be used as a banking facility and deposits should only be made with a view to using funds to place contracts. The Company is not a financial institution, Clients will not receive interest on deposits. Should you make repeated deposits and withdrawals without commensurate contracts being placed, we reserve the right to pass on to your accounts, without prior notice, any bank charges we have incurred before closing the account.") %]
 </p>
 <h2>H. [% l("Fraud and Money Laundering") %]</h2>
 <p>
-    [% l("No person shall abuse this site for the purpose of money laundering. The Company employs best-practice anti-money laundering procedures, which may have several effects on Clients. The Company reserves the right to refuse to do business with, to discontinue to do business with, and to reverse the transactions of, Clients who do not accept or adhere to these anti-money laundering processes. The Company is bound to report suspicious transactions to relevant authorities.") %]
+    [% l("No person shall abuse this site for the purpose of money laundering. The Company employs best-practice anti-money laundering procedures. All transactions are checked to prevent money laundering which may have several effects on Clients. The Company reserves the right to refuse to do business with, to discontinue to do business with, and to reverse the transactions of, Clients who do not accept or adhere to these anti-money laundering processes. Acceptable funds should not originate from criminal activity. The Company is bound to report suspicious transactions to relevant authorities.") %]
 </p>
 <p>
     [% l("The anti-money laundering processes have the following effects on Clients:") %]
     <ul class='bullet'>
         <li>
-            [% l("Clients must fill into the account opening form all requested details that establish their identity.") %]
+            [% l("Clients must fill into the account opening form all requested details that establish their identity. Clients must give a valid identification, address, and contact email and personal telephone number.") %]
         </li>
         <li>
             [% l("Winnings may only be paid to the initiator of an account. When a Client maintains an account by means of telegraphic deposits, winnings are only paid to the holder of the originating bank account, and it is the onus of the Client to ensure that account number and name accompany all transfers to the Company. When a Client maintains an account by means of credit/debit card deposits, winnings are only paid back to the same card.") %]
         </li>
         <li>
+            [% l("Clients must register personally.") %]
+        <li>
             [% l("Clients shall not hold or pool third party funds into their own account held with the Company.") %]
+        </li>
+        <li>
+            [% l("It is prohibited to sell, transfer and/or acquire accounts to/from other clients. Transfer of funds among other clients is also prohibited.") %]
         </li>
         <li>
             [% l("Only one account is allowed per person. No winnings and/or refunds may be collected on accounts opened in false names or on multiple accounts opened by the same person.") %]
         </li>
         <li>
-            [% l('The Company may, from time to time, at its sole discretion, or as required by regulations in place to conduct appropriate "Know Your Customer" procedures and require a Client to provide proof of identity (such as notarized copy of passport or other means of identity verification as the Company deems required under the circumstances) and may at its sole discretion suspend an account until such proof has been provided to its satisfaction.') %]
+            [% l('The Company may, from time to time, at its sole discretion, or as required by regulations in place to conduct appropriate "Know Your Customer" procedures and require a Client to provide proof of identity (such as notarized copy of passport or other means of identity verification as the Company deems required under the circumstances) and may at its sole discretion suspend an account until such proof has been provided to its satisfaction. Know Your Customer documentation will be required when a Client deposits money in the account. In the case of a client opening an account with Binary (Europe) Ltd, the threshold for verifying clients is on cumulative withdrawals of EUR 2,300.') %]
         </li>
         <li>
             [% l("You agree that we may use Personal information provided by you in order to conduct appropriate anti-fraud checks. Personal Information that you provide may be disclosed to a credit reference or fraud prevention agency, which may keep a record of that information.") %]
@@ -131,7 +148,7 @@
 </p>
 <h2>J. [% l("Dormant and Inactive Accounts") %]</h2>
 <p>
-    [% l("The company reserves the right to charge a dormant fee of up to USD/EUR/AUD/GBP25 every 6 months for every Client account that has had no transaction recorded for over 24 months. If a Client is subject to the laws and regulations of Malta, and his account has had no activity for a period of thirty months, and the Client cannot be located or contacted, the Company shall remit the balance of the account to the Authority.") %]
+    [% l("The company reserves the right to charge a dormant fee of up to USD/EUR/AUD/GBP25 every 6 months for every Client account that has had no transaction recorded for over 24 months. If a Client's account is with Binary (Europe) Ltd., and his account has had no activity for a period of thirty months, and the Client cannot be located or contacted, the Company shall remit the balance of the account to the Malta Gaming Authority. Clients need to contact our helpdesk to recover funds from inactive, closed, blocked or excluded accounts.") %]
 </p>
 <h2>K. [% l("Liability") %]</h2>
 <p>

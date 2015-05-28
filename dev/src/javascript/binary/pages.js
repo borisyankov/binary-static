@@ -16,11 +16,10 @@ var trading_times_init = function() {
       var tabset_name = "#trading-tabs";
 
      var trading_times = $(tabset_name);
-     trading_times.tabs();
      var url = location.href;
-     $( "#tradingdate" ).datepicker({ minDate: 0, maxDate:'+1y', dateFormat: "yy-mm-dd", autoSize: true,
+     return;
+     $( "#tradingdate" ).pickadate({ minDate: 0, maxDate:'+1y', dateFormat: "yy-mm-dd", autoSize: true,
      onSelect: function( dateText, picker ){
-         trading_times.tabs( "destroy" );
          showLoadingImage(trading_times);
          url = page.url.url_for('resources/trading_times', 'date=' + dateText, 'cached');
          $.ajax({
@@ -29,7 +28,6 @@ var trading_times_init = function() {
                   success: function(html){
                             trading_times.replaceWith(html);
                             trading_times = $("#trading-tabs");
-                            trading_times.tabs();
                             page.url.update(url);
                          },
                   error: function(xhr, textStatus, errorThrown){
@@ -38,12 +36,6 @@ var trading_times_init = function() {
                 });
          }
      });
-};
-
-var asset_index_init = function() {
-    var tabset_name = "#asset-tabs";
-    // jQueryUI tabs
-    $(tabset_name).tabs();
 };
 
 function confirm_popup_action() {
@@ -85,7 +77,6 @@ function get_login_page_url() {
 
 onLoad.queue_for_url(contract_guide_popup, 'contract_guide');
 onLoad.queue_for_url(trading_times_init, 'trading_times');
-onLoad.queue_for_url(asset_index_init, 'asset_index');
 onLoad.queue_for_url(confirm_popup_action, 'my_account|confirm_popup');
 onLoad.queue_for_url(hide_payment_agents, 'cashier');
 

@@ -1,3 +1,7 @@
+[% IF content %]
+    [% INCLUDE global/client_message.html.tt %]
+[% ELSE %]
+
 <div id="bet_container">
 
     [% INCLUDE bet/markets.html.tt %]

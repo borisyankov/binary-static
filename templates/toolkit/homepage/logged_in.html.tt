@@ -1,6 +1,12 @@
 <h1>[% l('Welcome!') %]</h1>
 <p>[% welcome_text %] <span class="clientid">([% client.loginid %]).</span></p>
 
+[% IF show_authenticate_button %]
+    <a class="button pjaxload" href="[% request.url_for('/cashier/authenticate') %]">
+        [% l('Authenticate your account') %]
+    </a>
+[% END %]
+
 [% IF client.is_virtual %]
     [% IF virtual_topup_link %]
         <p>
@@ -22,18 +28,27 @@
         [% END %]
     </div>
     [% END %]
+    <div class='notice-msg invisible' id="investment_message">
+        <img class="responsive" src="[% request.url_for('images/pages/cashier/protection-icon.svg') %]"/>
+        <p>
+            [% l('Due to changes in regulation within the European Union, binary options on financial indices are now considered to be an investment activity.') %]
+        </p>
+        <p>
+            [% l('Accordingly, to continue trading binary options on forex/stock indices/commodities, please <a href="[_1]" class="pjaxload">open an account with Binary Investments (Europe) Ltd</a>., which is regulated by the Malta Financial Services Authority.', request.url_for('user/upgrade/financial')) %]
+        </p>
+    </div>
 [% END %]
 
 
 <div class="row">
-    <div class="col by_client_type client_real">
+    <div class="col cashier-link">
         <p class="media">
-            <a href="[% request.url_for('/cashier/payment_methods') %]" class="pjaxload">
-                <img src="[% request.url_for('images/pages/my_account/cashier-icon.svg') %]"/>
+            <a href="[% request.url_for('/cashier') %]" class="pjaxload">
+                <img src="[% request.url_for('images/icons/cashier.svg') %]"/>
             </a>
         </p>
         <p class="media">
-            <a class="pjaxload button" href="[% request.url_for('/cashier/payment_methods') %]">[% l('Cashier') %]</a>
+            <a class="pjaxload button" href="[% request.url_for('/cashier') %]">[% l('Cashier') %]</a>
         </p>
         <p class="media">[% l('Make a deposit or withdraw') %]</p>
     </div>

@@ -4,15 +4,13 @@
     <a class="pjaxload button" href="[% request.url_for('/user/profit_table', { after => sold_contracts.first.purchase_time }) %]"><span>&laquo;[% l('Newer') %]</span></a>
     [% END %]
 
-    <div class="media" [% IF position != 'top' %] style="visibility:hidden" [% END %]>
-        <form action="[% request.url_for('/user/profit_table') %]">
-            <input id='profit-table-date' class='has-date-picker' name='before' value='[% before %]' type="text"/>
-            <input type='hidden' name='jump_to' value='1'/>
-            <span id="submit-date" class="invisible">
-                <button class="button">[% l('Go') %]</button>
-            </span>
-        </form>
-    </div>
+    <form action="[% request.url_for('/user/profit_table') %]" [% IF position != 'top' %] style="visibility:hidden" [% END %]>
+        <input id="profit-table-date" type="date" name="before" value="[% before %]" type="text"/>
+        <input type='hidden' name='jump_to' value='1'/>
+        <span id="submit-date" class="invisible">
+            <button class="button">[% l('Go') %]</button>
+        </span>
+    </form>
 
     [% IF has_older %]
     <a class="pjaxload button" href="[% request.url_for('/user/profit_table', { before => sold_contracts.last.purchase_time }) %]"><span>[% l('Older') %]&raquo;</span></a>
@@ -40,7 +38,7 @@
     </tr>
 [%- END -%]
 
-<h1>[% l('Profit Table') %]</h1><br>
+<h1>[% l('Profit Table') %]</h1>
 
 [% pagination_links(position='top') %]
 [% IF sold_contracts.size == 0 %]

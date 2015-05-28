@@ -1,0 +1,6 @@
+<p>
+    [% l('The provided email address [_1] is already in use by another Login ID.', email) %]
+</p>
+<p>
+[% l('According to our terms and conditions, you may only register once through our site. If you have forgotten the password of your existing account, please <a href="[_1]">try our password recovery tool</a> or contact customer service.', request.url_for('/user/lost_password')) %]
+</p>

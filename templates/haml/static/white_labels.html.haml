@@ -2,25 +2,15 @@
 
 %h1= l('White labels')
 
-.row
-    .col
-        %p!= l('The Binary.com White Label program allows affiliates to create their own branded versions of the Binary.com platform.')
-    .col
-        %img{:src => url_for('images/pages/white-label/white-label-img.svg')}
+%p= l('The Binary.com White Label program allows affiliates to create their own branded versions of the Binary.com platform.')
 
 %h2= l('How does it work?')
 
 %p!= l('To create a White Label, first <a href="[_1]">sign up as an affiliate</a>. This will allow you to earn commissions from clients of your White Label.', url_for('/affiliate/signup'))
 
-%a.button.pjaxload{:href => url_for('/affiliate/signup')}= l("Sign up as an affiliate")
-
-%p
-    
-.row
-    .col
-        %img{:src => url_for('images/pages/white-label/how-does-it-work-2.svg')}
-    .col
-        %p!= l("Then please ask your IT developer to fork the [_2] repo on github, and to make the changes you require to the HTML, Javascript, CSS, and images of the website. If you don't have an IT developer at your disposal, you can recruit one by placing a free advert on [_1].", '<a href="http://www.odesk.com" target="_blank">odesk.com</a>', '<a href="https://github.com/binary-com/binary-static" target="_blank">binary-static</a>')
+%p.row
+    %span.col.f3!= l("Then please ask your IT developer to fork the [_2] repo on github, and to make the changes you require to the HTML, Javascript, CSS, and images of the website. If you don't have an IT developer at your disposal, you can recruit one by placing a free advert on [_1].", '<a href="http://www.odesk.com" target="_blank">odesk.com</a>', '<a href="https://github.com/binary-com/binary-static" target="_blank">binary-static</a>')
+    %img{:src => url_for('images/pages/white-label/white-label-img.svg')}
 
 %p= l('Once you are satisfied with the design of your white label, your IT developer should submit a pull-request of his fork.')
 %p= l('The Binary.com IT, Marketing, and Compliance teams will then review your pull-request, and may provide you with some feedback. Once we approve the pull-‎request, we will link your fork to the domain you wish to use for the white-label.')
@@ -28,3 +18,6 @@
 
 %h2= l('Are there any costs?')
 %p= l('There are no costs involved on the Binary.com side. However you will bear the costs of your own IT developers who develop the white-label for you.');
+
+%p.media
+    %a.button.pjaxload{:href => url_for('/affiliate/signup')}= l("Sign up as an affiliate")

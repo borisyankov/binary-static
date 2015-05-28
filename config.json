@@ -3,7 +3,7 @@
 	"display_languages": "EN,ID,RU,ES,FR,PT,DE,ZH_CN,PL,AR",
 	"static": {
 		"url": "https://borisyankov.github.io/binary-static/",
-		"version": "3.6.0"
+		"version": "3.7.1"
 	},
 	"marketing": {
 		"google_tag_manager": "GTM-MZWFF7"
@@ -35,8 +35,8 @@
 			"RU": "binaryhelplineru"
 		}
 	},
-	"binary_js_hash": "669171e43f35bd4924ae39c95b548e80",
-	"binary_lib_hash": "9f02afb4f59f27a2929750118038ad2d",
-	"binary_data_hash": "f1e111b7e9ed8868367cf9c71704a884",
-	"binary_css_hash": "3d627d65f0734a1066c2bf552dd45001"
+	"binary_js_hash": "441ce73401e74d494565b78d7c9687bd",
+	"binary_lib_hash": "7848f148b6bf9a6e724ad56781ed7017",
+	"binary_data_hash": "f9298af23019d2758e8d2f5eaa5e3198",
+	"binary_css_hash": "05271eca82ee5e8861e3f519290245ed"
 }

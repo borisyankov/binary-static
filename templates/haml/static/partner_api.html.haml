@@ -4,23 +4,21 @@
 %p= l('[_1] provides approved business partners with a REST-style application programming interface (API) over the internet. The API provides the following functionality:', stash->{website_name});
 
 .row
-    .col
+    .col.f3
         %ul.bullet
             %li= l('Contract discovery and pricing')
             %li= l('Contract purchase (approved applications only)')
             %li= l('Basic Account review/update facilities')
             %li= l('Statement and Portfolio Enquiries')
-    .col
-        %img{:src => url_for('images/pages/partnerapi/api.svg')}
+    .col.media
+        %img{:src => url_for('images/pages/partnerapi/developer-guide.svg')}
 
 %h2= l('REST')
 %h3= l("[_1]'s API conforms to the Representational State Transfer (REST) model.", stash->{website_name})
 
-.row
-    .col
-        %p= l('Calls which invoke the API are simple, recognizable and can be negotiated from all popular web programming technologies in use today. For example, to get a list of "marketplaces" currently available at [_1]:',  stash->{website_name})
-    .col
-        %img{:src => url_for('images/pages/partnerapi/rest.svg')}
+%p.row
+    %span.col.f3= l('Calls which invoke the API are simple, recognizable and can be negotiated from all popular web programming technologies in use today. For example, to get a list of "marketplaces" currently available at [_1]:',  stash->{website_name})
+    %img{:src => url_for('images/pages/partnerapi/rest.svg')}
 
 %code GET /markets
 
@@ -32,10 +30,10 @@
 %h3= l('The [_1] API uses the OAuth2.0 scheme for authenticating users.', stash->{website_name})
 
 .row
-    .col
+    .col.f3
         %p!= l('OAuth2.0 is the emerging internet standard for this purpose. See <a href="http://oauth.net/2" target="_blank">http://oauth.net/2</a> for a formal definition, although we will guide you through the steps relevant to your platform.')
         %p= l('The most important benefit of using OAuth2.0 is that the end-users, who already have valid logins at [_1], are able to leverage new applications to execute various trading activities, without these applications needing to know or "see" the end-users security credentials.', stash->{website_name})
-    .col
+    .col.media
         %img{:src => url_for('images/pages/partnerapi/security.svg')}
 
 %p!= l('Further to this, the API interface is hosted by an API Proxy management provider, namely <a href="http://apigee.com" target="_blank">Apigee</a>. This service applies several services of benefit both to the application developer and to the API provider.')
@@ -43,21 +41,17 @@
 %h2= l('Console Facility')
 
 .row
-    .col
-        %img{:src => url_for('images/pages/partnerapi/console-facility.svg')}
-    .col
+    .col.f3
         %p!= l('The "raw" API can be inspected "live" using Apigee\'s <a href="http://apigee.com/rmg/console/binary1" target="_blank">Console-to-go</a> facility. This facility applies the full OAuth2 validation process, hence you will need to opt for the "OAuth2" Authentication option offered here and you will then need a valid [_1] login to proceed.', stash->{website_name} )
         %p!= l('An automatically generated <a href="https://apigee.com/rmg/resources/binary1" target="_blank">Resource Summary</a> is also available.')
+    .col.media
+        %img{:src => url_for('images/pages/partnerapi/console-facility.svg')}
 
 %h2= l('Developer\'s Guide')
 
-.row
-    .col
-        %p
-            = l('See our ')
-            %a{:href => url_for('/devguide')}= l('Developer\'s Guide')
-            = l('for detailed coding instructions.')
-    .col
-        %img{:src => url_for('images/pages/partnerapi/developer-guide.svg')}
+%p
+    = l('See our ')
+    %a{:href => url_for('/devguide')}= l('Developer\'s Guide')
+    = l('for detailed coding instructions.')
 
 %a.button{:href => "http://trade.binary.com/api_en_binary/"}= l('Apply for access')

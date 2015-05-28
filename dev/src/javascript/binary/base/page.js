@@ -54,7 +54,14 @@ var User = function() {
                     disabled = 1;
                 }
 
-                loginid_array.push({'id':items[0], 'real':real, 'disabled':disabled });
+                var id_obj = { 'id':items[0], 'real':real, 'disabled':disabled };
+                if (/MLT/.test(items[0])) {
+                    id_obj['non_financial']= true;
+                }
+                if (/MF/.test(items[0])) {
+                    id_obj['financial']= true;
+                }
+                loginid_array.push(id_obj);
             }
 
             this.loginid_array = loginid_array;
@@ -213,159 +220,17 @@ URL.prototype = {
     },
 };
 
-var Menu = function(url) {
-    this.page_url = url;
-    var that = this;
-    $(this.page_url).on('change', function() { that.activate(); });
-};
-
-Menu.prototype = {
-    on_unload: function() {
-        this.reset();
-    },
-    activate: function() {
-        $('#menu-top li').removeClass('active');
-        this.hide_main_menu();
-
-        var active = this.active_menu_top();
-        var trading = $('#menu-top li:eq(3)');
-        if(active) {
-            active.addClass('active');
-            if(trading.is(active)) {
-                this.show_main_menu();
-            }
-        } else {
-            var is_mojo_page = /^\/$|\/login|\/home|\/smart-indices|\/ad|\/open-source-projects|\/white-labels|\/partnerapi$/.test(window.location.pathname);
-            if(!is_mojo_page) {
-                trading.addClass('active');
-                this.show_main_menu();
-            }
-        }
-    },
-    show_main_menu: function() {
-        $("#main-menu").removeClass('hidden');
-        this.activate_main_menu();
-    },
-    hide_main_menu: function() {
-        $("#main-menu").addClass('hidden');
-    },
-    activate_main_menu: function() {
-        //First unset everything.
-        $("#main-menu li.item").removeClass('active');
-        $("#main-menu li.item").removeClass('hover');
-        $("#main-menu li.sub_item a").removeClass('a-active');
-
-        var active = this.active_main_menu();
-        if(active.subitem) {
-            active.subitem.addClass('a-active');
-        }
-
-        if(active.item) {
-            active.item.addClass('active');
-            active.item.addClass('hover');
-        }
-
-        this.on_mouse_hover(active.item);
-    },
-    reset: function() {
-        $("#main-menu .item").unbind();
-        $("#main-menu").unbind();
-    },
-    on_mouse_hover: function(active_item) {
-        $("#main-menu .item").on( 'mouseenter', function() {
-            $("#main-menu li.item").removeClass('hover');
-            $(this).addClass('hover');
-        });
-
-        $("#main-menu").on('mouseleave', function() {
-            $("#main-menu li.item").removeClass('hover');
-            if(active_item)
-                active_item.addClass('hover');
-        });
-    },
-    active_menu_top: function() {
-        var active;
-        var path = window.location.pathname;
-        $('#menu-top li a').each(function() {
-            if(path.indexOf(this.pathname) >= 0) {
-                active = $(this).closest('li');
-            }
-        });
-
-        return active;
-    },
-    active_main_menu: function() {
-        var path = window.location.pathname;
-        path = path.replace(/\/$/, "");
-        path = decodeURIComponent(path);
-
-        var item;
-        var subitem;
-
-        var that = this;
-        //Is something selected in main items list
-        $("#main-menu .items a").each(function () {
-            var url = new URL($(this).attr('href'));
-            if(url.is_in(that.page_url)) {
-                item = $(this).closest('.item');
-            }
-        });
-
-        $("#main-menu .sub_items a").each(function(){
-            var url = new URL($(this).attr('href'));
-            if(url.is_in(that.page_url)) {
-                item = $(this).closest('.item');
-                subitem = $(this);
-            }
-        });
-
-        return { item: item, subitem: subitem };
-    },
-    register_dynamic_links: function() {
-        var stored_market = page.url.param('market') || LocalStore.get('bet_page.market');
-        var start_trading = $('#topMenuStartBetting a:first');
-        var trade_url = start_trading.attr("href");
-        if(stored_market) {
-            if(/market=/.test(trade_url)) {
-                trade_url = trade_url.replace(/market=\w+/, 'market=' + stored_market);
-            } else {
-                trade_url += '&market=' + stored_market;
-            }
-            start_trading.attr("href", trade_url);
-
-            $('#menu-top li:eq(3) a').attr('href', trade_url);
-        }
-
-        start_trading.on('click', function(event) {
-            event.preventDefault();
-            load_with_pjax(trade_url);
-        }).addClass('unbind_later');
-
-        $('#menu-top li:eq(3) a').on('click', function(event) {
-            event.preventDefault();
-            load_with_pjax(trade_url);
-        }).addClass('unbind_later');
-
-    }
-};
-
 var Header = function(params) {
     this.user = params['user'];
     this.client = params['client'];
     this.settings = params['settings'];
-    this.menu = new Menu(params['url']);
     this.clock_started = false;
 };
 
 Header.prototype = {
     on_load: function() {
         this.show_or_hide_login_form();
-        this.register_dynamic_links();
         if (!this.clock_started) this.start_clock();
-        this.simulate_input_placeholder_for_ie();
-    },
-    on_unload: function() {
-        this.menu.reset();
     },
     show_or_hide_login_form: function() {
         if (this.user.is_logged_in && this.client.is_logged_in) {
@@ -382,9 +247,15 @@ Header.prototype = {
 
                 var loginid_text;
                 if (real == 1) {
-                    loginid_text = text.localize('Real Money') + ' (' + curr_loginid + ')';
+                    if(loginid_array[i].financial){
+                        loginid_text = text.localize('Investment Account') + ' (' + curr_loginid + ')';
+                    } else if(loginid_array[i].non_financial) {
+                        loginid_text = text.localize('Gaming Account') + ' (' + curr_loginid + ')';
+                    } else {
+                        loginid_text = text.localize('Real Account') + ' (' + curr_loginid + ')';
+                    }
                 } else {
-                    loginid_text = text.localize('Virtual Money') + ' (' + curr_loginid + ')';
+                    loginid_text = text.localize('Virtual Account') + ' (' + curr_loginid + ')';
                 }
 
                 var disabled_text = '';
@@ -397,37 +268,11 @@ Header.prototype = {
             $("#client_loginid").html(loginid_select);
         }
     },
-    simulate_input_placeholder_for_ie: function() {
-        var test = document.createElement('input');
-        if ('placeholder' in test)
-            return;
-        $('input[placeholder]').each(function() {
-            var input = $(this);
-            $(input).val(input.attr('placeholder'));
-            $(input).focus(function() {
-                if (input.val() == input.attr('placeholder')) {
-                    input.val('');
-                }
-            });
-            $(input).blur(function() {
-                if (input.val() === '' || input.val() == input.attr('placeholder')) {
-                    input.val(input.attr('placeholder'));
-                }
-            });
-        });
-    },
     register_dynamic_links: function() {
         var logged_in_url = page.url.url_for('');
         if(this.client.is_logged_in) {
             logged_in_url = page.url.url_for('user/my_account');
         }
-
-        $('#logo').attr('href', logged_in_url).on('click', function(event) {
-            event.preventDefault();
-            load_with_pjax(logged_in_url);
-        }).addClass('unbind_later');
-
-        this.menu.register_dynamic_links();
     },
     start_clock: function() {
         var clock = $('#gmt-clock');
@@ -628,6 +473,12 @@ Contents.prototype = {
                     $('#payment-agent-section').addClass('invisible');
                     $('#payment-agent-section').hide();
                 }
+
+                // temporary only show for internal staff
+                if (!$.cookie('staff') || !/^Q?MF|MLT/.test(this.client.loginid)) {
+                    $('#account-transfer-section').addClass('invisible');
+                    $('#account-transfer-section').hide();
+                }
             } else {
                 $('.by_client_type.client_virtual').removeClass('invisible');
                 $('.by_client_type.client_virtual').show();
@@ -643,7 +494,6 @@ Contents.prototype = {
         $('body').attr('id', $('#body_id').html());
     },
     update_content_class: function() {
-
         var contentClass = $('#content_class').html();
 
         $('#content').parent()
@@ -674,21 +524,24 @@ Page.prototype = {
     },
     flag: function() {
         var idx = $('.language-selector select option:selected').index(),
-            offset = (idx + 1) * 15;
-        $('.language-selector select').css('background-position', '0 -' + offset + 'px');
+            offset = (idx + 1) * 15,
+            cssStyle = '-' + offset + 'px';
+        $('.language-selector select').css('background-position-y', offset);
+        console.log(cssStyle);
     },
     on_load: function() {
         this.url.reset();
         this.localize_for(this.language());
         this.header.on_load();
+        this.flag();
         this.on_change_language();
         this.on_change_loginid();
         this.record_affiliate_exposure();
         this.contents.on_load();
-        this.flag();
+        this.on_click_signup();
+        this.on_change_password();
     },
     on_unload: function() {
-        this.header.on_unload();
         this.contents.on_unload();
     },
     on_change_language: function() {
@@ -704,6 +557,42 @@ Page.prototype = {
             $('#loginid-switch-form').submit();
         });
     },
+    on_change_password: function() {
+        $('#chooseapassword').on('input', function() {
+            $('#reenter-password').removeClass('invisible');
+            $('#reenter-password').show();
+        });
+    },
+    on_click_signup: function() {
+        $('#btn_registration').on('click', function() {
+            var pwd = $('#chooseapassword').val();
+            var pwd_2 = $('#chooseapassword_2').val();
+            var email = $('#Email').val();
+
+            if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email)) {
+                $('#signup_error').text(text.localize('Invalid email address'));
+                $('#signup_error').removeClass('invisible');
+                $('#signup_error').show();
+                return false;
+            }
+            if (!client_form.compare_new_password(pwd, pwd_2)) {
+                $('#signup_error').text(text.localize('The two passwords that you entered do not match.'));
+                $('#signup_error').removeClass('invisible');
+                $('#signup_error').show();
+                return false;
+            }
+            // email != password
+            if (email == pwd) {
+                $('#signup_error').text(text.localize('Your password cannot be the same as your email'));
+                $('#signup_error').removeClass('invisible');
+                $('#signup_error').show();
+                return false;
+            }
+
+            $('#virtual-acc-form').submit();
+        });
+    },
+
     localize_for: function(language) {
         text = texts[language];
         moment.locale(language.toLowerCase());

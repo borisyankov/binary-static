@@ -1,8 +1,2 @@
 %h1= title
-- if (stash->{client_message}) {
-    #client_message.rbox.errorbox
-        .rbox-wrap
-            #client_message_content.rbox-content
-                = stash->{client_message}
-- }
-!= $form->build()
+= include('common/form_content')

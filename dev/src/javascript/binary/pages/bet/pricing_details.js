@@ -11,9 +11,6 @@ var PricingDetails = function() {
             $('a.pricing-details').on('click', function (event) {
                 var popup = that.popup();
                 popup.toggleClass('invisible');
-
-                $('#' + popup.children(':first').attr('id')).tabs();
-
                 event.preventDefault();
             }).addClass('unbind_later');
         },

@@ -13,10 +13,9 @@
                 <param name="bgcolor" value="#FFFFFF" />
                 <param name="wMode" value="transparent" />
             </object>
-            <p>[% l("Please click on the \"Play\" button to start the video.") %]</p>
         </div>
-        [% INCLUDE "$winning" %]
         <a class="button" href="[% bet_type_demo.bet_url %]">[% l("Start trading") %]</a>
+        [% INCLUDE "$winning" %]
     </div>
     [% END %]
 </div>

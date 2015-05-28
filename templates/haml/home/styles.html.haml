@@ -45,10 +45,10 @@
 %p.errorfield= "error in loginid"
 
 %label{:for => 'date'}= 'Date'
-%input.has-date-picker{:name => 'date'}
+%input{:type => 'date' :name => 'date'}
 
 %label{:for => 'time'}= 'Time'
-%input.has-time-picker{:name => 'time' :time:minTimeHour => "8"}
+%input{:type => 'time' :name => 'time' :time:minTimeHour => "8"}
 
 %button= "Button"
 

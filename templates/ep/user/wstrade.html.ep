@@ -1,0 +1,251 @@
+
+% layout 'default';
+% title 'Contract Watch';
+
+<link href="//code.jquery.com/ui/1.10.3/themes/pepper-grinder/jquery-ui.min.css" rel="stylesheet">
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.4/jquery.mousewheel.min.js" defer></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/globalize/0.1.1/globalize.min.js" defer></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/globalize/0.1.1/cultures/globalize.culture.ja-JP.js" defer></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/globalize/0.1.1/cultures/globalize.culture.en-AU.js" defer></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/globalize/0.1.1/cultures/globalize.culture.en-GB.js" defer></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/globalize/0.1.1/cultures/globalize.culture.en-US.js" defer></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/globalize/0.1.1/cultures/globalize.culture.de-DE.js" defer></script>
+<script src="//code.jquery.com/ui/1.10.3/jquery-ui.min.js" defer></script>
+
+<style>
+    div#content-holder { font:65.0% "Trebuchet MS",sans-serif }
+    span.bigtext { font-size: 1.75em }
+    div.inputzone { margin: 12px; width: 320px }
+    div.butonzone { margin: 12px; display: inline-block }
+    div.innerzone { padding: 12px }
+    div.innerzone .ui-state-active { color: #f00 }
+    div.buttonset    { display: inline-block; margin-bottom: 6px }
+    div#symbolbuts   { display: none }
+    div#durationflds { display: none }
+    div#payoutflds   { display: none }
+    div#contractbuts { display: none }
+    div#startflds    { display: none }
+    div#barriers     { margin-top: 8px }
+    div.cts          { display: none }
+    div.contract  { float: left; width: 220px; height: 220px; padding: 6px }
+    div.contract .contract_header { height: 50px }
+    div.contract .error { display: none }
+    div.contract .longcode { font-style: italic }
+    div.contract div { margin: 2px 0 0 0 }
+    div.contract div.elbow { display: inline-block; width: 60px; text-align: right; margin-right: 12px }
+    input.thininput { width: 60px }
+    div#rangeslider { width: 200px }
+    #slider1, #slider2 { margin-top: 12px }
+    /* turn off some binary.min.css styles.. */
+    div#content-holder .button span { margin-bottom: 0; text-transform: none; padding: .4em 2.1em .4em 1em; letter-spacing: normal }
+</style>
+
+<%
+  my @NICETYPES = (
+    {bc=>'euro_atm'     ,cts =>[[CALL       =>'Rises'        ],[PUT       =>'Falls'         ]]},
+    {bc=>'euro_non_atm' ,cts =>[[CALL       =>'Higher'       ],[PUT       =>'Lower'         ]]},
+    {bc=>'euro_atm'     ,cts =>[[EXPIRYRANGE=>'Ends Outside' ],[EXPIRYMISS=>'Ends Between'  ]]},
+    {bc=>'american'     ,cts =>[[RANGE      =>'Stays Between'],[UPORDOWN  =>'Goes Outside'  ]]},
+    {bc=>'american'     ,cts =>[[ONETOUCH   =>'Touches'      ],[NOTOUCH   =>'Does Not Touch']]},
+    {bc=>'asian'        ,cts =>[[ASIANU     =>'Asian Up'     ],[ASIAND    =>'Asian Down'    ]]},
+    {bc=>'non_financial',cts =>[[DIGITMATCH =>'Digit Matches'],[DIGITDIFF =>'Digit Differs' ]]},
+);
+%>
+
+    <div class="ui-widget ui-helper-clearfix ui-widget-content ui-corner-all" id="inhalf">
+
+    <form id="pricing_form">
+
+        <div class="ui-helper-clearfix">
+
+            <div class="left">
+                <div class="inputzone">
+                    <button id="select_symbol" type="button" class="button" rcon="ui-icon-arrowthickstop-1-s">
+                        <span id="display_name">Trading</span>&hellip;</button>
+                    <div class="innerzone ui-state-highlight" id="symbolbuts" title="Choose Symbol">
+                        Retrieving tradeable symbols..
+                    </div>
+                </div>
+            </div>
+
+            <div class="left">
+
+                <div class="inputzone">
+                    <div>
+                        <button id="select_contract" type="button" class="button" rcon="ui-icon-arrowthickstop-1-s">
+                            <span id="contract_name">Contract Type</span>&hellip;
+                        </button>
+                    </div>
+                    <div class="innerzone ui-state-highlight" id="contractbuts" title="Contract Type">
+                        <div>
+                            %  my $g_count = 0;
+                            %  for my $group (@NICETYPES) {
+                                %== $g_count++>1? '<br/>': '';
+                                %= t div => class=>'buttonset' => begin
+                                    %  my $bc  = $group->{bc};
+                                    %  my $cts = $group->{cts};
+                                    %  for my $pair (@$cts) {
+                                       %  my ($ct,$name) = @$pair;
+                                       %  my $ct_bc = "$ct-$bc";
+                                       %= radio_button ct_bc => $ct_bc, value => $ct_bc, id => $ct_bc
+                                       %= label_for $ct_bc => $name, ct => $ct
+                                    %  }
+                                %  end
+                            %  }
+                        </div>
+                        <div id="barriers">
+                            <div class="cts CALL PUT ONETOUCH NOTOUCH euro_non_atm american">
+                                %= label_for barrier => 'Target Value'
+                                %= input_tag barrier => 0, id => 'barrier', class=>"thininput"
+                                <div id="slider1"></div>
+                            </div>
+                            <div class="cts EXPIRYRANGE EXPIRYMISS RANGE UPORDOWN euro_non_atm american">
+                                %= label_for barrier2 => 'Low Barrier '
+                                %= input_tag barrier2 => -5, id => 'barrier2', class=>"thininput"
+                                &mdash;
+                                %= input_tag barrier => +5, id => 'barrier', class=>"thininput"
+                                %= label_for barrier => ' High Barrier'
+                                <div id="slider2"></div>
+                            </div>
+                            <div class="cts DIGITMATCH DIGITDIFF non_financial">
+                                Last Digit<br/><br/>
+                                <div class="buttonset">
+                                    %  for my $d (0..9) {
+                                           %= radio_button barrier => $d, value => $d, id => "digit$d"
+                                           %= label_for "digit$d" => $d
+                                    %  }
+                                </div>
+                            </div>
+                        </div>
+                        <div class="memo"></div>
+                       %= hidden_field contract_type    => '', id => 'contract_type'
+                       %= hidden_field barrier_category => '', id => 'barrier_category'
+                    </div>
+                </div>
+
+                <div class="inputzone">
+                    <div>
+                        <button id="select_payout" type="button" class="button" rcon="ui-icon-arrowthickstop-1-s">
+                            <span id="payout_name">Contract Value</span>&hellip;
+                        </button>
+                    </div>
+                    <div class="innerzone ui-state-highlight buttonset" id="payoutflds" title="Contract Value">
+                        <div class="buttonset">
+                        %  for my $b ( 'Payout', 'Stake' ) {
+                           %= radio_button basis => $b, value => lc($b), id => $b
+                           %= label_for $b => $b
+                        %  }
+                        </div>
+                        <br/>
+                        <div class="buttonset" id="currencies">
+                        %  for my $c ( 'USD', 'EUR', 'AUD', 'GBP', 'YEN' ) {
+                           %= radio_button currency => $c, value => $c, id => $c
+                           %= label_for $c => $c
+                        %  }
+                        </div>
+                        <br/>
+                        <div>
+                           %= input_tag    amount_str => 10, id => 'amount_str'
+                           %= label_for    amount_str => 'Value'
+                           %= hidden_field amount_val => 10, id => 'amount_val'
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="left">
+
+                <div class="inputzone">
+                    <div>
+                        <button id="select_start" type="button" class="button" rcon="ui-icon-arrowthickstop-1-s">
+                            <span id="start_str">Starting..</span>&hellip;
+                        </button>
+                    </div>
+                    <div class="innerzone ui-state-highlight" id="startflds" title="Contract Starts">
+                        <div class="ui-helper-clearfix">
+                            <div class="left buttonset">
+                               %= radio_button start_when => 'start_immed', id => 'start_immed'
+                               %= label_for start_immed => 'Start Immediately'
+                               %= radio_button start_when => 'start_in', id => 'start_in'
+                               %= label_for start_in => 'Start In..'
+                               %= radio_button start_when => 'start_at', id => 'start_at'
+                               %= label_for start_at => 'Start At..'
+                            </div>
+                            <div class="left date_start_in_ctr" style="margin-top:15px; clear:left">
+                               %= input_tag date_start_in => '0', id => 'date_start_in', class=>"thininput"
+                            </div>
+                            <div class="buttonset left date_start_in_ctr" style="margin-top:12px">
+                                %  for my $d ( 'Days', 'Hours', 'Minutes', 'Seconds') {
+                                   %= radio_button date_start_unit => $d, value => lc(substr($d,0,1)), id => "date_start_unit_$d"
+                                   %= label_for "date_start_unit_$d" => $d
+                                %  }
+                            </div>
+                            <div class="left date_start_at_ctr" style="margin-top:12px; clear:left">
+                               %= input_tag date_start_at => '', id => 'date_start_at', class=>"thininput"
+                            </div>
+                        </div>
+                        <div class="memo"></div>
+                       %= hidden_field date_start => 0, id => 'date_start'
+                    </div>
+                </div>
+
+                <div class="inputzone">
+                    <div>
+                        <button id="select_duration" type="button" class="button" rcon="ui-icon-arrowthickstop-1-s">
+                            <span id="duration_str">Contract Duration</span>&hellip;
+                        </button>
+                    </div>
+                    <div class="innerzone ui-state-highlight" id="durationflds" title="Contract Duration">
+                        <div class="ui-helper-clearfix">
+                            <div class="left" style="margin-top:3px">
+                               %= label_for duration => 'Expires in '
+                               %= input_tag duration => 900, id => 'duration', class=>"thininput"
+                            </div>
+                            <div class="buttonset left">
+                                %  for my $d ( 'Days', 'Hours', 'Minutes', 'Seconds', 'Ticks' ) {
+                                   %= radio_button duration_unit => $d, value => lc(substr($d,0,1)), id => $d
+                                   %= label_for $d => $d
+                                %  }
+                            </div>
+                            <div class="left" style="margin-top:12px; clear:left">
+                                OR Expires at end of
+                            </div>
+                            <div class="left" style="clear:left">
+                                <input type="text" id="duration_date"></input>
+                            </div>
+                        </div>
+                        <div class="memo"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="ui-widget ui-widget-content ui-corner-all" id="buthalf">
+
+        <div class="butonzone buttonset">
+            %= t button => class=>"button", size=>"huge", icon=>"ui-icon-refresh", 'Get Price'
+        </div>
+
+    </form>
+
+    <form id="portfol_form" style="display:inline-block">
+        <div class="butonzone buttonset">
+            %= t button => class=>"button", size=>"huge", icon=>"ui-icon-suitcase", 'Portfolio'
+        </div>
+    </form>
+
+    </div>
+
+    <div class="ui-widget ui-widget-content ui-corner-all" id="outhalf">
+        %= t div => (id=>'contracts'), (class=>'ui-helper-clearfix') => begin
+        %  end
+    </div>
+
+<script>
+    GlobalWSTrade = { websockets_svr: "<%=$websockets_svr%>/websockets/contracts" }
+</script>
+

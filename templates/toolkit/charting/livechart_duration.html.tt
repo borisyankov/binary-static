@@ -1,4 +1,4 @@
-<ul id="live_chart_duration" role="tabs">
+<ul id="live_chart_duration" role="segmented">
     <li id="600" class="live_charts_stream_button" data-live='10min'>
         [% l("10min") %]
     </li>

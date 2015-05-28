@@ -65,10 +65,10 @@
 
         <fieldset>
             <label for="from_expiry" id="from_expiry_label">[% l('From') %]:</label>
-            <input size="9" type="text" id="from_expiry" name="from_expiry" [% IF selected_from_expiry %] value=[% selected_from_expiry %] [% END %] />
+            <input size="9" type="date" id="from_expiry" name="from_expiry" [% IF selected_from_expiry %] value=[% selected_from_expiry %] [% END %] />
         </fieldset>
 
-        <fieldset>
+        <fieldset class="strike-step">
             <label for="strike_step">[% l('Step') %] (%):</label>
             <div class="row">
                 <div>

@@ -18,9 +18,6 @@
         <a class="pjaxload" href="[% request.url_for('/charting/application') %]" [% target %]>[% l("Chart Application") %]</a>
     </li>
     <li>
-        <a class="pjaxload" href="[% request.url_for('smartchart.cgi') %]" [% target %]>[% l("Light Charts") %]</a>
-    </li>
-    <li>
         <a class="pjaxload" href="[% request.url_for('/charting/livechart') %]" [% target %]>[% l("Live Charts") %]</a>
     </li>
     <li>

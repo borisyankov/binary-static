@@ -4,15 +4,13 @@
 <a class="pjaxload button" href="[% request.url_for('/user/statement', { after => transactions.first.transaction_time, currency => currency }) %]"><span>&laquo;[% l('Newer') %]</span></a>
 [% END %]
 
-<div class="media" [% IF position != 'top' %] style="visibility:hidden" [% END %]>
-    <form action="[% request.url_for('/user/statement') %]">
-        <input id='statement-date' class='has-date-picker' name='before' value='[% before %]' type="text"/>
-        <input type='hidden' name='jump_to' value='1'/>
-        <span id="submit-date" class="invisible">
-            <button class="button">[% l('Go') %]</button>
-        </span>
-    </form>
-</div>
+<form action="[% request.url_for('/user/statement') %]" [% IF position != 'top' %] style="visibility:hidden" [% END %]>
+    <input id="statement-date" type="date" name="before" value="[% before %]" type="text"/>
+    <input type='hidden' name='jump_to' value='1'/>
+    <span id="submit-date" class="invisible">
+        <button class="button">[% l('Go') %]</button>
+    </span>
+</form>
 
 [% IF has_older %]
 <a class="pjaxload button" href="[% request.url_for('/user/statement', { before => transactions.last.transaction_time, currency => currency }) %]"><span>[% l('Older') %]&raquo;</span></a>
@@ -70,7 +68,7 @@ END -%]
     <td>[% to_monetary_number_format(transaction.balance) %]</td>
 [% END %]
 
-<h1>[% l('Statement') %]</h1><br>
+<h1>[% l('Statement') %]</h1>
 
 [% IF balance.amount == 0 %]
     <p>
@@ -111,7 +109,8 @@ END -%]
         </tbody>
         <tfoot>
             <tr>
-                <th colspan="4">[% balance.date.date %]</th>
+                <th>[% balance.date.date %]</th>
+                <th colspan="3"></th>
                 <th>[% to_monetary_number_format(total_credit_debit) %]</th>
                 <th>[% to_monetary_number_format(balance.amount) %]</div>
             </tr>

@@ -4,23 +4,9 @@
 
 :plain
     <style>
-        div.preamble   { margin: 4px 8px 0 8px }
-        div.preamble button  { float: right; padding: 2px 8px }
-        div#main-menu  { margin-bottom: 12px }
-        iframe#wstrade { width:100%; height:600px; clear: both}
     </style>
     <script>
-        function heighten_wstrade(by) {
-            var was = $('iframe#wstrade').height();
-            $('iframe#wstrade').height(was+by);
-            return false
-        }
     </script>
 
-.preamble
-    %button{onclick => 'heighten_wstrade(+60)', title => 'See More'} +
-    %button{onclick => 'heighten_wstrade(-60)', title => 'See Less'} -
-    %h3 Multi-Contract Trading
-
-%iframe{:id => 'wstrade', :src => 'https://bulktrader.binary.com/contract/price?embed=1'}
+= $inner
 

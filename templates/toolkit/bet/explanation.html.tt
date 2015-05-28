@@ -19,7 +19,7 @@
 <div class="row">
     <div class="col">
         [% IF show_winning && show_flash && flash.$form_name  %]
-            <h4>[% l("Winning the contract") %]</h4>
+            <h3>[% l("Winning the contract") %]</h3>
             [% INCLUDE "$winning" %]
         [% END %]
         [% IF show_flash %]

@@ -30,26 +30,6 @@
 
   %link{:href => "https://fonts.googleapis.com/css?family=Roboto:400,300,700&subset=latin,vietnamese,cyrillic-ext,latin-ext,cyrillic", :rel => "stylesheet", :type => "text/css"}/
 
-  :javascript
-     (function() {
-      var config = {
-        kitId: 'bfu3ywb'
-      };
-      var d = false;
-      var tk = document.createElement('script');
-      tk.src = '//use.typekit.net/' + config.kitId + '.js';
-      tk.type = 'text/javascript';
-      tk.async = 'true';
-      tk.onload = tk.onreadystatechange = function() {
-        var rs = this.readyState;
-        if (d || rs && rs != 'complete' && rs != 'loaded') return;
-        d = true;
-        try { Typekit.load(config); } catch (e) {}
-      };
-      var s = document.getElementsByTagName('script')[0];
-      s.parentNode.insertBefore(tk, s);
-    })();
-
   %link{:href => url_for("/images/favicons/apple-touch-icon-57x57.png"), :rel => "apple-touch-icon", :sizes => "57x57"}
   %link{:href => url_for("/images/favicons/apple-touch-icon-114x114.png"), :rel => "apple-touch-icon", :sizes => "114x114"}
   %link{:href => url_for("/images/favicons/apple-touch-icon-72x72.png"), :rel => "apple-touch-icon", :sizes => "72x72"}

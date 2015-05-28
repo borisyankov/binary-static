@@ -1,48 +1,6 @@
 <h1>[% l('Self-Exclusion Facilities') %]</h1>
 
-<p>[% l('Trading the financial markets can become addictive. Fill in the form below to limit your participation on the website or send a signed letter or fax to our customer support team. Limits will only be removed or altered after 7 days with the exception of the self-exclusion date, which cannot be removed or altered once you have confirmed it.') %]</p>
-
-[% IF self_exclusion %]
-    <h2>[% l('Your current self-exclusion settings are as follows:') %]</h2>
-    <ul>
-        [% IF self_exclusion.max_balance.defined %]
-        <li>[% l('Maximum account cash balance is currently set to <strong>[_1] [_2]</strong>',
-                client.currency, self_exclusion.max_balance) %]</li>
-        [% END %]
-
-        [% IF self_exclusion.max_turnover.defined %]
-        <li>[% l('Daily stake limit is currently set to <strong>[_1] [_2]</strong>',
-                client.currency, self_exclusion.max_turnover) %]</li>
-        [% END %]
-
-        [% IF self_exclusion.max_losses.defined %]
-        <li>[% l('Daily limit on losses is currently set to <strong>[_1] [_2]</strong>',
-                client.currency, self_exclusion.max_losses) %]</li>
-        [% END %]
-
-        [% IF self_exclusion.max_7day_turnover.defined %]
-        <li>[% l('7-Day stake limit is currently set to <strong>[_1] [_2]</strong>',
-                client.currency, self_exclusion.max_7day_turnover) %]</li>
-        [% END %]
-
-        [% IF self_exclusion.max_7day_losses.defined %]
-        <li>[% l('7-Day limit on losses is currently set to <strong>[_1] [_2]</strong>',
-                client.currency, self_exclusion.max_7day_losses) %]</li>
-        [% END %]
-
-        [% IF self_exclusion.max_open_bets.defined %]
-        <li>[% l('Maximum number of open positions is currently set to <strong>[_1]</strong>', self_exclusion.max_open_bets) %]</li>
-        [% END %]
-
-        [% IF self_exclusion.session_duration_limit.defined %]
-        <li>[% l('Session duration limit is currently set to <strong>[_1] minutes.</strong>', self_exclusion.session_duration_limit) %]</li>
-        [% END %]
-
-        [% IF until_date %]
-        <li>[% l('Website exclusion is currently set to <strong>[_1].</strong>', until_date) %]</li>
-        [% END %]
-    </ul>
-[% END %]
+<p>[% l('Trading the financial markets can become addictive. Fill in the form below to limit your participation on the website or send a signed letter or fax to our customer support team. Once set, you can only tighten your limits. Limits will only be removed or loosened after 7 days with the exception of the self-exclusion date, which cannot be removed or altered once you have confirmed it. To remove or alter your limits, please contact <a href="[_1]">customer support</a>.', request.url_for('contact')) %]</p>
 
 [% IF form %]
 [% form.build() %]

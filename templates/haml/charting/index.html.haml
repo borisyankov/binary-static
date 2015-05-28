@@ -10,11 +10,6 @@
         %p= l('Try our downloadable charting application with an extensive range of indicators.')
         %a.pjaxload.button{:href => url_for('/charting/application')}= l('Java Charts')
     .col
-        %a.pjaxload{:href => url_for('smartchart.cgi?market=forex&underlying_symbol=frxUSDJPY&chart_type=CANDLESTICK')}
-            %img.chart-type-icon{:src => url_for('images/pages/charting/light-charts.svg')}
-        %p= l('You\'ll enjoy using this comprehensive charting tool with 27 technical indicators.')
-        %a.pjaxload.button{:href => url_for('smartchart.cgi?market=forex&underlying_symbol=frxUSDJPY&chart_type=CANDLESTICK')}= l('Light Charts')
-    .col
         %a.pjaxload{:href => url_for('/charting/livechart')}
             %img.chart-type-icon{:src => url_for('images/pages/charting/popup-charts.svg')}
         %p= l('This is our \'next generation\' charting tool.')

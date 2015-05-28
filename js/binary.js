@@ -360,164 +360,6 @@ SubMarket.prototype = {
         return;
     },
 };
-;var MenuContent = (function () {
-    var listeners_events = [];
-
-    var that = {
-        init: function (_menu_containers) {
-            _menu_containers.filter(':not(.follow-default)').delegate('.tm-a,.tm-a-2', 'click', function (event) {
-                event.preventDefault();
-
-                var target = $(event.target);
-                var tab_id = target.parents('li:first').attr('id');
-
-                if (tab_id)
-                {
-                    var tab_container = target.parents('.tm-ul');
-
-                    var selected_tab =
-                        // find previously active tab
-                        tab_container.find('.tm-a,.tm-a-2')
-                        // remove previously active tab
-                        .removeClass('a-active').end()
-                        // unwrap previously active tab
-                        .find('.menu-wrap-a .tm-a').unwrap().unwrap()
-                        // go back to selected target
-                        .end().end()
-                        // set active class to it
-                        .addClass('a-active')
-                        // set active class to its parent as well
-                        .parents('.tm-li').addClass('active').removeClass('hover').find('.tm-li-2').addClass('active').end()
-                        // wrap it
-                        .find('.tm-a').wrap('<span class="menu-wrap-a"><span class="menu-wrap-b"></span></span>').end()
-                        // remove previously active parent
-                        .siblings().removeClass('active').find('.tm-li-2').removeClass('active').end()
-                        .end().end();
-
-                    // replace span to a, to make it clickable for real
-                    var span_tm_a = tab_container.find('span.tm-a');
-                    span_tm_a.replaceWith('<a href="#" class="'+span_tm_a.attr('class')+'">'+span_tm_a.html()+'</a>');
-
-                    var menu_li = selected_tab.parents('li');
-                    var sub_menu_selected = menu_li.find('.tm-ul-2 .a-active');
-                    var selected_tab_id = menu_li.attr('id');
-
-                    if (!sub_menu_selected.length)
-                    {
-                        sub_menu_selected = menu_li.find('.tm-a-2:first').addClass('a-active');
-
-                        if (sub_menu_selected.length)
-                        {
-                            selected_tab = sub_menu_selected;
-                            selected_tab_id = sub_menu_selected.parents('li').attr('id');
-                            selected_content = $('#'+selected_tab_id+'-content').removeClass('invisible');
-                        }
-                        else
-                        {
-                            selected_tab_id = menu_li.attr('id');
-                        }
-                    }
-
-                    var selected_content = $('#'+selected_tab_id+'-content')
-                        // show selected tab content
-                        .removeClass('invisible')
-                        // and hide the rest
-                        .siblings(':not(.sticky)').addClass('invisible').end();
-
-                    that.push_to_listeners({
-                        'id': selected_tab_id,
-                        'target': selected_tab,
-                        'content': selected_content,
-                        'menu': menu_li.parents('ul.tm-ul'),
-                        'event': event
-                    });
-                }
-
-                return false;
-            });
-        },
-        push_to_listeners: function (info)
-        {
-            // push to listeners events
-            for (var i=0; i<listeners_events.length; i++)
-            {
-                listeners_events[i](info);
-            }
-        },
-        listen_click: function (callback)
-        {
-            if (typeof callback != 'function')
-            {
-                return false;
-            }
-
-            listeners_events.push(callback);
-        },
-        find_selected_tab: function (menu_id)
-        {
-            var menu = $('#'+menu_id);
-            var selected_tab = menu.find('.a-active').parents('.tm-li');
-
-            if (!selected_tab.length)
-            {
-                selected_tab = menu.find('.active');
-            }
-
-            return selected_tab;
-        },
-        is_tab_selected: function (tab)
-        {
-            return tab.hasClass('active');
-        },
-        hide_tab: function (tab)
-        {
-            tab.addClass('invisible').find('.menu-wrap-a .tm-a').unwrap().unwrap();
-            $('#'+tab.attr('id')+'-content').addClass('invisible');
-        },
-        show_tab: function (tab)
-        {
-            tab.removeClass('invisible');
-        },
-        trigger: function (id)
-        {
-            var tab_id = id['tab_id'];
-            var content_id = id['content_id'];
-
-            if (!tab_id && typeof content_id != 'undefined') {
-                var matched = content_id.match(/^(.+)-content$/);
-                if (matched && matched[1]) {
-                    tab_id = matched[1];
-                }
-            }
-
-            if (!tab_id)
-            {
-                return false;
-            }
-
-            var tab_to_trigger = $('#'+tab_id);
-
-            if (!tab_to_trigger.size() || tab_to_trigger.hasClass('invisible'))
-            {
-                return false;
-            }
-            else
-            {
-                var tab = tab_to_trigger.find('.tm-a');
-                if (tab.size())
-                {
-                    return tab.trigger('click');
-                }
-                else
-                {
-                    return tab_to_trigger.find('.tm-a-2').trigger('click');
-                }
-            }
-        }
-    };
-
-    return that;
-})();
 ;(function () {
     'use strict';
 
@@ -589,7 +431,14 @@ var User = function() {
                     disabled = 1;
                 }
 
-                loginid_array.push({'id':items[0], 'real':real, 'disabled':disabled });
+                var id_obj = { 'id':items[0], 'real':real, 'disabled':disabled };
+                if (/MLT/.test(items[0])) {
+                    id_obj['non_financial']= true;
+                }
+                if (/MF/.test(items[0])) {
+                    id_obj['financial']= true;
+                }
+                loginid_array.push(id_obj);
             }
 
             this.loginid_array = loginid_array;
@@ -748,159 +597,17 @@ URL.prototype = {
     },
 };
 
-var Menu = function(url) {
-    this.page_url = url;
-    var that = this;
-    $(this.page_url).on('change', function() { that.activate(); });
-};
-
-Menu.prototype = {
-    on_unload: function() {
-        this.reset();
-    },
-    activate: function() {
-        $('#menu-top li').removeClass('active');
-        this.hide_main_menu();
-
-        var active = this.active_menu_top();
-        var trading = $('#menu-top li:eq(3)');
-        if(active) {
-            active.addClass('active');
-            if(trading.is(active)) {
-                this.show_main_menu();
-            }
-        } else {
-            var is_mojo_page = /^\/$|\/login|\/home|\/smart-indices|\/ad|\/open-source-projects|\/white-labels|\/partnerapi$/.test(window.location.pathname);
-            if(!is_mojo_page) {
-                trading.addClass('active');
-                this.show_main_menu();
-            }
-        }
-    },
-    show_main_menu: function() {
-        $("#main-menu").removeClass('hidden');
-        this.activate_main_menu();
-    },
-    hide_main_menu: function() {
-        $("#main-menu").addClass('hidden');
-    },
-    activate_main_menu: function() {
-        //First unset everything.
-        $("#main-menu li.item").removeClass('active');
-        $("#main-menu li.item").removeClass('hover');
-        $("#main-menu li.sub_item a").removeClass('a-active');
-
-        var active = this.active_main_menu();
-        if(active.subitem) {
-            active.subitem.addClass('a-active');
-        }
-
-        if(active.item) {
-            active.item.addClass('active');
-            active.item.addClass('hover');
-        }
-
-        this.on_mouse_hover(active.item);
-    },
-    reset: function() {
-        $("#main-menu .item").unbind();
-        $("#main-menu").unbind();
-    },
-    on_mouse_hover: function(active_item) {
-        $("#main-menu .item").on( 'mouseenter', function() {
-            $("#main-menu li.item").removeClass('hover');
-            $(this).addClass('hover');
-        });
-
-        $("#main-menu").on('mouseleave', function() {
-            $("#main-menu li.item").removeClass('hover');
-            if(active_item)
-                active_item.addClass('hover');
-        });
-    },
-    active_menu_top: function() {
-        var active;
-        var path = window.location.pathname;
-        $('#menu-top li a').each(function() {
-            if(path.indexOf(this.pathname) >= 0) {
-                active = $(this).closest('li');
-            }
-        });
-
-        return active;
-    },
-    active_main_menu: function() {
-        var path = window.location.pathname;
-        path = path.replace(/\/$/, "");
-        path = decodeURIComponent(path);
-
-        var item;
-        var subitem;
-
-        var that = this;
-        //Is something selected in main items list
-        $("#main-menu .items a").each(function () {
-            var url = new URL($(this).attr('href'));
-            if(url.is_in(that.page_url)) {
-                item = $(this).closest('.item');
-            }
-        });
-
-        $("#main-menu .sub_items a").each(function(){
-            var url = new URL($(this).attr('href'));
-            if(url.is_in(that.page_url)) {
-                item = $(this).closest('.item');
-                subitem = $(this);
-            }
-        });
-
-        return { item: item, subitem: subitem };
-    },
-    register_dynamic_links: function() {
-        var stored_market = page.url.param('market') || LocalStore.get('bet_page.market');
-        var start_trading = $('#topMenuStartBetting a:first');
-        var trade_url = start_trading.attr("href");
-        if(stored_market) {
-            if(/market=/.test(trade_url)) {
-                trade_url = trade_url.replace(/market=\w+/, 'market=' + stored_market);
-            } else {
-                trade_url += '&market=' + stored_market;
-            }
-            start_trading.attr("href", trade_url);
-
-            $('#menu-top li:eq(3) a').attr('href', trade_url);
-        }
-
-        start_trading.on('click', function(event) {
-            event.preventDefault();
-            load_with_pjax(trade_url);
-        }).addClass('unbind_later');
-
-        $('#menu-top li:eq(3) a').on('click', function(event) {
-            event.preventDefault();
-            load_with_pjax(trade_url);
-        }).addClass('unbind_later');
-
-    }
-};
-
 var Header = function(params) {
     this.user = params['user'];
     this.client = params['client'];
     this.settings = params['settings'];
-    this.menu = new Menu(params['url']);
     this.clock_started = false;
 };
 
 Header.prototype = {
     on_load: function() {
         this.show_or_hide_login_form();
-        this.register_dynamic_links();
         if (!this.clock_started) this.start_clock();
-        this.simulate_input_placeholder_for_ie();
-    },
-    on_unload: function() {
-        this.menu.reset();
     },
     show_or_hide_login_form: function() {
         if (this.user.is_logged_in && this.client.is_logged_in) {
@@ -917,9 +624,15 @@ Header.prototype = {
 
                 var loginid_text;
                 if (real == 1) {
-                    loginid_text = text.localize('Real Money') + ' (' + curr_loginid + ')';
+                    if(loginid_array[i].financial){
+                        loginid_text = text.localize('Investment Account') + ' (' + curr_loginid + ')';
+                    } else if(loginid_array[i].non_financial) {
+                        loginid_text = text.localize('Gaming Account') + ' (' + curr_loginid + ')';
+                    } else {
+                        loginid_text = text.localize('Real Account') + ' (' + curr_loginid + ')';
+                    }
                 } else {
-                    loginid_text = text.localize('Virtual Money') + ' (' + curr_loginid + ')';
+                    loginid_text = text.localize('Virtual Account') + ' (' + curr_loginid + ')';
                 }
 
                 var disabled_text = '';
@@ -932,37 +645,11 @@ Header.prototype = {
             $("#client_loginid").html(loginid_select);
         }
     },
-    simulate_input_placeholder_for_ie: function() {
-        var test = document.createElement('input');
-        if ('placeholder' in test)
-            return;
-        $('input[placeholder]').each(function() {
-            var input = $(this);
-            $(input).val(input.attr('placeholder'));
-            $(input).focus(function() {
-                if (input.val() == input.attr('placeholder')) {
-                    input.val('');
-                }
-            });
-            $(input).blur(function() {
-                if (input.val() === '' || input.val() == input.attr('placeholder')) {
-                    input.val(input.attr('placeholder'));
-                }
-            });
-        });
-    },
     register_dynamic_links: function() {
         var logged_in_url = page.url.url_for('');
         if(this.client.is_logged_in) {
             logged_in_url = page.url.url_for('user/my_account');
         }
-
-        $('#logo').attr('href', logged_in_url).on('click', function(event) {
-            event.preventDefault();
-            load_with_pjax(logged_in_url);
-        }).addClass('unbind_later');
-
-        this.menu.register_dynamic_links();
     },
     start_clock: function() {
         var clock = $('#gmt-clock');
@@ -1163,6 +850,12 @@ Contents.prototype = {
                     $('#payment-agent-section').addClass('invisible');
                     $('#payment-agent-section').hide();
                 }
+
+                // temporary only show for internal staff
+                if (!$.cookie('staff') || !/^Q?MF|MLT/.test(this.client.loginid)) {
+                    $('#account-transfer-section').addClass('invisible');
+                    $('#account-transfer-section').hide();
+                }
             } else {
                 $('.by_client_type.client_virtual').removeClass('invisible');
                 $('.by_client_type.client_virtual').show();
@@ -1178,7 +871,6 @@ Contents.prototype = {
         $('body').attr('id', $('#body_id').html());
     },
     update_content_class: function() {
-
         var contentClass = $('#content_class').html();
 
         $('#content').parent()
@@ -1209,21 +901,24 @@ Page.prototype = {
     },
     flag: function() {
         var idx = $('.language-selector select option:selected').index(),
-            offset = (idx + 1) * 15;
-        $('.language-selector select').css('background-position', '0 -' + offset + 'px');
+            offset = (idx + 1) * 15,
+            cssStyle = '-' + offset + 'px';
+        $('.language-selector select').css('background-position-y', offset);
+        console.log(cssStyle);
     },
     on_load: function() {
         this.url.reset();
         this.localize_for(this.language());
         this.header.on_load();
+        this.flag();
         this.on_change_language();
         this.on_change_loginid();
         this.record_affiliate_exposure();
         this.contents.on_load();
-        this.flag();
+        this.on_click_signup();
+        this.on_change_password();
     },
     on_unload: function() {
-        this.header.on_unload();
         this.contents.on_unload();
     },
     on_change_language: function() {
@@ -1239,6 +934,42 @@ Page.prototype = {
             $('#loginid-switch-form').submit();
         });
     },
+    on_change_password: function() {
+        $('#chooseapassword').on('input', function() {
+            $('#reenter-password').removeClass('invisible');
+            $('#reenter-password').show();
+        });
+    },
+    on_click_signup: function() {
+        $('#btn_registration').on('click', function() {
+            var pwd = $('#chooseapassword').val();
+            var pwd_2 = $('#chooseapassword_2').val();
+            var email = $('#Email').val();
+
+            if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email)) {
+                $('#signup_error').text(text.localize('Invalid email address'));
+                $('#signup_error').removeClass('invisible');
+                $('#signup_error').show();
+                return false;
+            }
+            if (!client_form.compare_new_password(pwd, pwd_2)) {
+                $('#signup_error').text(text.localize('The two passwords that you entered do not match.'));
+                $('#signup_error').removeClass('invisible');
+                $('#signup_error').show();
+                return false;
+            }
+            // email != password
+            if (email == pwd) {
+                $('#signup_error').text(text.localize('Your password cannot be the same as your email'));
+                $('#signup_error').removeClass('invisible');
+                $('#signup_error').show();
+                return false;
+            }
+
+            $('#virtual-acc-form').submit();
+        });
+    },
+
     localize_for: function(language) {
         text = texts[language];
         moment.locale(language.toLowerCase());
@@ -1442,64 +1173,6 @@ var load_with_pjax = function(url) {
         config.history = true;
         pjax.invoke(config);
 };
-;var SpotLight = function (){
-    var that = {};
-
-    that.spot_light_box = function () {
-        var spot_light_box = $('#spot-light-box');
-        if (!spot_light_box.size())
-        {
-            spot_light_box = $('<div id="spot-light-box" class="invisible"></div>').appendTo('body');
-        }
-
-        return spot_light_box;
-    };
-
-    that.cover_page = function () {
-        var transparent_cover = $('#transparent-cover');
-        if (!transparent_cover.size())
-        {
-            transparent_cover = $('<div id="transparent-cover"></div>').appendTo('body');
-        }
-
-        transparent_cover.removeClass('invisible');
-    };
-    that.uncover_page = function () {
-        $('#transparent-cover').addClass('invisible');
-    };
-
-    that.show = function () {
-        that.spot_light_box().removeClass('invisible');
-        that.cover_page();
-        that.activate_buttons();
-    };
-    that.hide = function () {
-        that.spot_light_box().addClass('invisible');
-        that.uncover_page();
-    };
-
-    that.set_content = function (content) {
-        that.spot_light_box().get(0).innerHTML = content;
-    };
-
-    that.attach_click_event = function (selector, event) {
-        that.spot_light_box().delegate(selector, 'click', event);
-    };
-
-    that.activate_buttons = function() {
-        $('.close_button').on('click', function (event) {
-            $(this).parents('.rbox-shadow-popup').toggleClass('invisible');
-            $('#transparent-cover').toggleClass('invisible');
-        });
-
-        $('.no_button').on('click', function (event) {
-            $(this).parents('.rbox-shadow-popup').toggleClass('invisible');
-            $('#transparent-cover').toggleClass('invisible');
-        });
-    };
-
-    return that;
-}();
 ;var isStorageSupported = function(storage) {
     if(typeof storage === 'undefined') {
         return false;
@@ -1703,8 +1376,6 @@ onLoad.queue(function () {
         }
     );
 
-    MenuContent.init($('.content-tab-container').find('.tm-ul'));
-
     // attach the class to account form's div/fieldset for CSS visual effects
     var objFormEffect = new formEffects();
     objFormEffect.set($('form.formObject'));
@@ -1722,336 +1393,10 @@ onLoad.queue(function () {
 });
 
 onLoad.queue(function () {
-    attach_date_picker('.has-date-picker');
-    attach_time_picker('.has-time-picker');
     attach_inpage_popup('.has-inpage-popup');
-    attach_tabs();
     initTabs();
+    initDateTimePicker();
 });
-;DatePicker = function(component_id, select_type) {
-    this.component_id = component_id;
-    this.select_type = (typeof select_type === "undefined") ? "date" : select_type;
-
-    this.localizations = {};
-    this.localizations.monthNames = [text.localize('January'), text.localize('February'), text.localize('March'), text.localize('April'), text.localize('May'), text.localize('June'),text.localize('July'), text.localize('August'), text.localize('September'), text.localize('October'), text.localize('November'), text.localize('December') ];
-
-    this.localizations.monthNamesShort = [text.localize('Jan'), text.localize('Feb'), text.localize('Mar'), text.localize('Apr'), text.localize('May'), text.localize('Jun'), text.localize('Jul'), text.localize('Aug'), text.localize('Sep'), text.localize('Oct'), text.localize('Nov'), text.localize('Dec')];
-
-    this.localizations.dayNames = [text.localize('Sunday'), text.localize('Monday'), text.localize('Tuesday'), text.localize('Wednesday'), text.localize('Thursday'), text.localize('Friday'), text.localize('Saturday')];
-
-    this.localizations.nextText = text.localize('Next');
-    this.localizations.prevText = text.localize('Previous');
-};
-
-DatePicker.prototype = {
-    show: function(max_days) {
-        this.create(this.config(max_days));
-    },
-    hide: function() {
-        if($('#' + this.component_id + '.hasDatepicker').length > 0)
-            $('#' + this.component_id).datepicker('destroy');
-        $('#' + this.component_id).off('keydown');
-    },
-    create: function(config) {
-        var that = this;
-        $('#' + this.component_id).keydown(function(e) {
-                if(e.which == 13) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    if(that.select_type == "date") {
-                        $(this).datepicker('setDate', $(this).val());
-                    }
-                    $(this).datepicker('hide');
-                    $(this).blur();
-                    $(that).trigger('enter_pressed');
-                    return false;
-                }
-        }).datepicker(config);
-
-        // Not possible to tell datepicker where to put it's
-        // trigger calendar icon on the page, so we remove it
-        // from the DOM and use our own one.
-        $('button.ui-datepicker-trigger').remove();
-    },
-    config: function(max_days) {
-        max_days = (typeof max_days == "undefined") ? 365 : max_days;
-        var today = new Date();
-        var next_year = new Date();
-        next_year.setDate(today.getDate() + max_days);
-
-        var config = {
-            dateFormat: 'yy-mm-dd',
-            monthNames: this.localizations.monthNames,
-            monthNamesShort: this.localizations.monthNamesShort,
-            dayNames: this.localizations.dayNames,
-            nextText: this.localizations.nextText,
-            prevText: this.localizations.prevText,
-            minDate: today,
-            maxDate: next_year,
-        };
-
-        var that = this;
-        config.onSelect = function(date_text) {
-            if(that.select_type == "diff") {
-                var today = moment.utc();
-                var selected_date = moment.utc(date_text + " 23:59:59");
-                var duration  = selected_date.diff(today, 'days');
-                $(this).val(duration);
-                $(that).trigger("change", [ duration ]);
-            } else if(that.select_type == "date") {
-                $(this).val(date_text);
-                $(that).trigger("change", [ date_text ]);
-            }
-        };
-
-        return config;
-    },
-};
-;DatePicker.SelectedDates = function(component_id, select_type) {
-    this.component_id = component_id;
-    this._super = new DatePicker(component_id, select_type);
-    this.dates = [];
-
-    var that = this;
-    $(this._super).on('enter_pressed', function() {
-        $(that).trigger('enter_pressed');
-    });
-
-    $(this._super).on('change', function(event, selected) {
-        $(that).trigger('change', [ selected ]);
-    });
-};
-
-DatePicker.SelectedDates.prototype = {
-    show: function(dates) {
-        this.dates = dates;
-        this._super.create(this.config());
-    },
-    hide: function() {
-        if($('#' + this.component_id + '.hasDatepicker').length > 0)
-            $('#' + this.component_id).datepicker('destroy');
-    },
-    config: function() {
-        var config = this._super.config();
-        var that = this;
-        config.beforeShowDay = function(date) {
-            var lookup = moment.utc([ date.getFullYear(), date.getMonth(), date.getDate() ]).format("YYYY-MM-DD");
-            if(that.dates.indexOf(lookup) >= 0) {
-                return [1];
-            }
-
-            return [0];
-        };
-
-        config.beforeShow = function(input, inst) {
-            return { defaultDate: $('#' + that.component_id).val()};
-        };
-
-        return config;
-    },
-//    handlers: function() {
-//        var handlers = {};
-//        var that = this;
-//        if (that.all_days_selectable) {
-//            handlers.beforeShowDay = function(date) {
-//                return [1];
-//            }
-//        } else if(that.today_selectable) {
-//            handlers.beforeShowDay = function(date) {
-//                if(new Date().toDateString() == date.toDateString()) {
-//                    return [1];
-//                } else {
-//                    return [that.isTradingDay(date)];
-//                }
-//            }
-//        } else {
-//            handlers.beforeShowDay = function(date) {
-//                return [that.isTradingDay(date)];
-//            }
-//        };
-//
-//        handlers.beforeShow = function(input, inst) {
-//            that.hideToday(inst);
-//            return { defaultDate: $('#duration_amount').val()};
-//        };
-//    
-//        handlers.onChangeMonthYear = function(year, month, inst) {
-//            that.hideToday(inst);
-//        };
-//
-//        return handlers;
-//    },
-//    isTradingDay: function(date) {
-//        var year = date.getFullYear();
-//        var underlying_symbol = this.underlying_symbol;
-//        var form_name = this.form_name;
-//
-//        var cache_key = underlying_symbol + '-' + form_name;
-//        varyy lookup = year + '-' + (date.getMonth()+1) + '-' + date.getDate();
-//
-//        if (typeof this.cache[cache_key] === 'undefined') {
-//            var that = this;
-//            $.ajax({
-//                url: page.url.url_for('trade_get.cgi'),
-//                data: { controller_action: 'trading_days',
-//                        underlying_symbol: underlying_symbol,
-//                        form_name: form_name
-//                    },
-//                success: function(trading_days) {
-//                        that.cache[cache_key] = trading_days;
-//                    },
-//                dataType:'json',
-//                async: false
-//            });
-//        }
-//        return this.cache[cache_key][lookup];
-//    },
-//    hideToday: function(inst) {
-//        window.setTimeout(function() {
-//                $(inst.dpDiv).find('.ui-state-highlight').removeClass('ui-state-highlight');
-//            }, 0);
-//    },
-//    localizations: function() {
-//        var localizations = {};
-//
-//        localizations.monthNames = [text.localize('January'), text.localize('February'), text.localize('March'), text.localize('April'), text.localize('May'), text.localize('June'),text.localize('July'), text.localize('August'), text.localize('September'), text.localize('October'), text.localize('November'), text.localize('December') ];
-//
-//        localizations.monthNamesShort = [text.localize('Jan'), text.localize('Feb'), text.localize('Mar'), text.localize('Apr'), text.localize('May'), text.localize('Jun'), text.localize('Jul'), text.localize('Aug'), text.localize('Sep'), text.localize('Oct'), text.localize('Nov'), text.localize('Dec')];
-//
-//        localizations.dayNames = [text.localize('Sunday'), text.localize('Monday'), text.localize('Tuesday'), text.localize('Wednesday'), text.localize('Thursday'), text.localize('Friday'), text.localize('Saturday')];
-//
-//        localizations.nextText = text.localize('Next');
-//        localizations.prevText = text.localize('Previous');
-//
-//        return localizations;
-//    },
-};
-;TimePicker = function(component_id) {
-    this.component_id = component_id;
-};
-
-TimePicker.prototype = {
-    show: function(min_time, max_time) {
-        var that = this;
-
-        $('#' + this.component_id).keydown(function(e) {
-                if(e.which == 13) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    $(this).timepicker('setTime', $(this).val());
-                    $(this).timepicker('hide');
-                    $(this).blur();
-                    $(that).trigger('enter_pressed');
-                    return false;
-                }
-        }).timepicker(this.config(min_time, max_time));
-    },
-    hide: function() {
-        if($('#' + this.component_id + '.hasTimepicker').length > 0)
-            $('#' + this.component_id).timepicker('destroy');
-        $('#' + this.component_id).off('keydown');
-    },
-    time_now: function() {
-        return moment.utc(page.header.time_now);
-    },
-    config: function(min_time, max_time) {
-        var that = this;
-        min_time = moment.utc(min_time);
-        max_time = moment.utc(max_time);
-        var time_now = this.time_now();
-
-        if(min_time.isBefore(time_now)) {
-            min_time = this.time_now();
-        }
-
-        var config = {
-            minTime: {hour: parseInt(min_time.hour()), minute: parseInt(min_time.minute())},
-            maxTime: {hour: parseInt(max_time.hour()), minute: parseInt(max_time.minute())},
-        };
-
-        config.onSelect = function(time, inst) {
-            if (!time.match(/^(:?[0-3]\d):(:?[0-5]\d):(:?[0-5]\d)$/)) {
-                var invalid = time.match(/([a-z0-9]*):([a-z0-9]*):?([a-z0-9]*)?/);
-                var hour = that.time_now().format("hh");
-                var minute = that.time_now().format("mm");
-                var second = that.time_now().format("ss");
-
-                if (typeof invalid[1] !== 'undefined' && isFinite(invalid[1])) {
-                    hour = parseInt(invalid[1]);
-                    if(hour < 10) {
-                        hour = "0" + hour;
-                    }
-                }
-                if (typeof invalid[2] !== 'undefined' && isFinite(invalid[2])) {
-                    minute = parseInt(invalid[2]);
-                    if(parseInt(minute) < 10) {
-                        minute = "0" + minute;
-                    }
-                }
-                if (typeof invalid[3] !== 'undefined' && isFinite(invalid[3])) {
-                    second = parseInt(invalid[3]);
-                    if(second < 10) {
-                        second = "0" + minute;
-                    }
-                }
-
-                var new_time = moment(that.time_now().format("YYYY-MM-DD") + ' ' + hour +':'+minute+':'+second);
-                $(this).val(new_time.format("HH:mm"));
-                $(that).trigger('change', [new_time.format("HH:mm")]);
-            } else {
-                $(that).trigger('change', [time]);
-            }
-        };
-
-        return config;
-    },
-};
-;window._trackJs = {
-    onError: function(payload, error) {
-
-        function itemExistInList(item, list) {
-            for (var i = 0; i < list.length; i++) {
-                if (item.indexOf(list[i]) > -1) {
-                    return true;
-                }
-            }
-            return false;
-        }
-
-        var ignorableErrors = [
-            // General script error, not actionable
-            "[object Event]",
-            // General script error, not actionable
-            "Script error.",
-            // error when user  interrupts script loading, nothing to fix
-            "Error loading script",
-            // an error caused by DealPly (http://www.dealply.com/) chrome extension
-            "DealPly",
-            // this error is reported when a post request returns error, i.e. html body
-            // the details provided in this case are completely useless, thus discarded
-            "Unexpected token <"
-        ];
-
-        if (itemExistInList(payload.message, ignorableErrors)) {
-            return false;
-        }
-
-        payload.network = payload.network.filter(function(item) {
-
-            // ignore random errors from Intercom
-            if (item.statusCode === 403 && payload.message.indexOf("intercom") > -1) {
-                return false;
-            }
-
-            return true;
-        });
-
-        return true;
-    }
-};
-
-// if Track:js is already loaded, we need to initialize it
-if (typeof trackJs !== 'undefined') trackJs.configure(window._trackJs);
 ;//
 //
 //
@@ -2735,90 +2080,6 @@ var configure_livechart = function () {
     }
     configured_livechart = true;
 };
-;function DateTimePicker(params) {
-    var $self = this;
-    this.date_inp = "#" + params.id + "_date";
-    this.time_inp = "#" + params.id + "_time";
-    this.minDateTime = params.minDateTime || new Date(2010, 1, 1);
-    this.maxDateTime = params.maxDateTime || new Date();
-    this.onChange = params.onChange || function() {};
-    $(this.date_inp).datepicker({
-        minDate: this.minDateTime,
-        maxDate: this.maxDateTime,
-        dateFormat: "yy-mm-dd",
-        monthNames: [text.localize('January'), text.localize('February'), text.localize('March'), text.localize('April'), text.localize('May'), text.localize('June'),
-                     text.localize('July'), text.localize('August'), text.localize('September'), text.localize('October'), text.localize('November'), text.localize('December') ],
-        dayNamesShort: [text.localize('Su'), text.localize('Mo'), text.localize('Tu'), text.localize('We'),
-                        text.localize('Th'), text.localize('Fr'), text.localize('Sa')],
-                nextText: text.localize('Next'),
-                prevText: text.localize('Previous'),
-    });
-    $(this.date_inp).change(function() {
-        var date = $self.getDateTime();
-        if (date < $self.minDateTime)
-            $self.setDateTime($self.minDateTime);
-        else if (date > $self.maxDateTime)
-            $self.setDateTime($self.maxDateTime);
-        $self.onChange($self.getDateTime());
-    });
-    $(this.time_inp).change(function() {
-        if(!$(this).val().match(/^([01][0-9]|2[0-3]):[0-5][0-9](:[0-5][0-9])?$/)) {
-            $(this).val("00:00:00");
-        }
-        var date = $self.getDateTime();
-        if (date < $self.minDateTime)
-            $self.setDateTime($self.minDateTime);
-        else if (date > $self.maxDateTime)
-            $self.setDateTime($self.maxDateTime);
-        $self.onChange($self.getDateTime());
-    });
-}
-
-DateTimePicker.prototype = {
-    getDateTime: function() {
-        var date = $(this.date_inp).val().match(/^(\d\d\d\d)-(\d\d)-(\d\d)$/);
-        if (!date) return null;
-            var year = date[1], month = date[2], day = date[3];
-        var time = $(this.time_inp).val().match(/^([01][0-9]|2[0-3]):([0-5]\d)(:([0-5]\d))?$/);
-        var hour = 0, minute = 0, second = 0;
-        if (time) {
-            hour = time[1];
-            minute = time[2];
-            second = time[3] ? time[4] : 0;
-        }
-        return new Date(Date.UTC(year, month - 1, day, hour, minute, second));
-    },
-    setDateTime: function(date) {
-        var dateStr = date.getUTCFullYear() + "-" + (date.getUTCMonth() + 1) + "-" + date.getUTCDate();
-        $(this.date_inp).datepicker("setDate", dateStr);
-        var hours = date.getUTCHours() || 0;
-        if (hours < 10) hours = '0' + hours;
-            var minutes = date.getUTCMinutes() || 0;
-        if (minutes < 10) minutes = '0' + minutes;
-            var seconds = date.getUTCSeconds() || 0;
-        if (seconds < 10) seconds = '0' + seconds;
-            $(this.time_inp).val(hours + ':' + minutes + ':' + seconds);
-        this.onChange(this.getDateTime());
-    },
-    setMinDateTime: function(date) {
-        this.minDateTime = date;
-        if (this.getDateTime < date) {
-            this.setDateTime(date);
-        }
-        $(this.date_inp).datepicker("option", "minDate", date);
-    },
-    setMaxDateTime: function(date) {
-        this.maxDateTime = date;
-        if (this.getDateTime > date) {
-            this.setDateTime(date);
-        }
-        $(this.date_inp).datepicker("option", "maxDate", date);
-    },
-    clear: function() {
-        $(this.date_inp).val("");
-        $(this.time_inp).val("");
-    }
-};
 ;var LiveChartIndicator = {};
 LiveChartIndicator['Barrier'] = function(params) {
     this.name = params['name'];
@@ -2936,11 +2197,10 @@ var trading_times_init = function() {
       var tabset_name = "#trading-tabs";
 
      var trading_times = $(tabset_name);
-     trading_times.tabs();
      var url = location.href;
-     $( "#tradingdate" ).datepicker({ minDate: 0, maxDate:'+1y', dateFormat: "yy-mm-dd", autoSize: true,
+     return;
+     $( "#tradingdate" ).pickadate({ minDate: 0, maxDate:'+1y', dateFormat: "yy-mm-dd", autoSize: true,
      onSelect: function( dateText, picker ){
-         trading_times.tabs( "destroy" );
          showLoadingImage(trading_times);
          url = page.url.url_for('resources/trading_times', 'date=' + dateText, 'cached');
          $.ajax({
@@ -2949,7 +2209,6 @@ var trading_times_init = function() {
                   success: function(html){
                             trading_times.replaceWith(html);
                             trading_times = $("#trading-tabs");
-                            trading_times.tabs();
                             page.url.update(url);
                          },
                   error: function(xhr, textStatus, errorThrown){
@@ -2958,12 +2217,6 @@ var trading_times_init = function() {
                 });
          }
      });
-};
-
-var asset_index_init = function() {
-    var tabset_name = "#asset-tabs";
-    // jQueryUI tabs
-    $(tabset_name).tabs();
 };
 
 function confirm_popup_action() {
@@ -3005,7 +2258,6 @@ function get_login_page_url() {
 
 onLoad.queue_for_url(contract_guide_popup, 'contract_guide');
 onLoad.queue_for_url(trading_times_init, 'trading_times');
-onLoad.queue_for_url(asset_index_init, 'asset_index');
 onLoad.queue_for_url(confirm_popup_action, 'my_account|confirm_popup');
 onLoad.queue_for_url(hide_payment_agents, 'cashier');
 
@@ -5667,7 +4919,8 @@ BetForm.Time.EndTime.prototype = {
             BetPrice.order_form.disable_buy_buttons();
             that.hide_buy_buttons();
 
-            if(!page.client.is_logged_in) {
+            if(!$.cookie('login')) {
+                page.client.is_logged_in = false;
                 window.location.href = page.url.url_for('login');
                 return;
             }
@@ -7287,9 +6540,6 @@ BetForm.Time.EndTime.prototype = {
             $('a.pricing-details').on('click', function (event) {
                 var popup = that.popup();
                 popup.toggleClass('invisible');
-
-                $('#' + popup.children(':first').attr('id')).tabs();
-
                 event.preventDefault();
             }).addClass('unbind_later');
         },
@@ -7974,9 +7224,55 @@ pjax_config_page('user/upgrade', function() {
             client_form.on_residence_change();
             select_user_country();
             if(page.client.is_logged_in) {
-                client_form.set_virtual_login_id(page.client.loginid);
                 client_form.set_virtual_email_id(page.client.email);
             }
+        }
+    };
+});
+
+var upgrade_investment_disabled_field = function () {
+    var fields = ['mrms', 'fname', 'lname', 'dobdd', 'dobmm', 'dobyy', 'residence', 'secretquestion', 'secretanswer'];
+    fields.forEach(function (element, index, array) {
+        var obj = $('#'+element);
+        if (obj.length > 0) {
+            $('#'+element).attr('disabled', true);
+        }
+    });
+};
+
+var enable_fields_form_submit = function () {
+    var fields = ['mrms', 'fname', 'lname', 'dobdd', 'dobmm', 'dobyy', 'residence', 'secretquestion', 'secretanswer'];
+    $('form#openAccForm').submit(function (event) {
+        fields.forEach(function (element, index, array) {
+            var obj = $('#'+element);
+            if (obj.length > 0) {
+                obj.removeAttr('disabled');
+            }
+        });
+    });
+};
+
+var hide_account_opening_for_risk_disclaimer = function () {
+    var risk_section = $('#risk_disclaimer_section');
+    if (risk_section.length > 0) {
+        $('.formObject fieldset').not("#risk_disclaimer_section").hide();
+    }
+};
+
+pjax_config_page('user/upgrade/financial|create_account', function() {
+    return {
+        onLoad: function() {
+            upgrade_investment_disabled_field();
+            enable_fields_form_submit();
+            hide_account_opening_for_risk_disclaimer();
+        }
+    };
+});
+
+pjax_config_page('user/assessment', function() {
+    return {
+        onLoad: function() {
+            hide_account_opening_for_risk_disclaimer();
         }
     };
 });
@@ -8006,27 +7302,6 @@ ClientForm.prototype = {
         } else {
             return true;
         }
-    },
-    validate_promo_code_expiry: function() {
-        var has_expired = $('#promo_code_expired').val();
-        if(has_expired == "true") {
-            return false;
-        }
-
-        return true;
-    },
-    validate_promo_code_country: function() {
-        var country_list = $('#promo_code_countries').val();
-        if(country_list.indexOf('ALL') >= 0) {
-                return true;
-        } else {
-            var residence = $('#residence').val();
-            if(country_list.indexOf(residence) >= 0) {
-                return true;
-            }
-        }
-
-        return false;
     },
     compare_new_password: function(new_password1, new_password2) {
         if (new_password1.length > 0 && new_password2.length > 0)
@@ -8091,7 +7366,7 @@ ClientForm.prototype = {
     },
     self_exclusion: function() {
         return {
-            has_something_to_save: function() {
+            has_something_to_save: function(init) {
                 var el, i;
                 var names = ['MAXCASHBAL', 'MAXOPENPOS',
                              'DAILYTURNOVERLIMIT', 'DAILYLOSSLIMIT',
@@ -8099,7 +7374,9 @@ ClientForm.prototype = {
                              'SESSIONDURATION', 'EXCLUDEUNTIL'];
                 for (i=0; i<names.length; i++) {
                     el = document.getElementById(names[i]);
-                    if (el && el.value.length > 0) {
+                    if (el) {
+                        el.value = el.value.replace(/^\s*/, '').replace(/\s*$/, '');
+                        if (el.value == (init[names[i]]===undefined ? '' : init[names[i]])) continue;
                         return true;
                     }
                 }
@@ -8144,6 +7421,8 @@ ClientForm.prototype = {
         var that = this;
         $('#residence').on('change', function() {
             that.set_idd_for_residence($(this).val());
+            var address_state = $('#AddressState');
+            var current_state = address_state.length > 0 ? address_state.val() : '';
 
             var postcodeLabel = $('label[for=AddressPostcode]');
             if ($(this).val() == 'GB') {
@@ -8161,140 +7440,28 @@ ClientForm.prototype = {
                     dataType: "html"
                 }).done(function(response) {
                     $('#AddressState').html(response);
-                    that.hide_state_list_if_empty();
+                    that.hide_state_list_if_empty(current_state);
                 });
             } else {
                 $("#AddressState").parents(".row").first().hide(); //Hide States list.
             }
         });
     },
-    hide_state_list_if_empty: function() {
+    hide_state_list_if_empty: function(current_state) {
         var addr_state = $("#AddressState");
         if (addr_state.children().size() > 2) {
             addr_state.parents(".row").first().show();
+            addr_state.val(current_state);
         } else {
             addr_state.parents(".row").first().hide();
         }
-    },
-    set_virtual_login_id: function(loginid) {
-        $('#virtual_loginid').val(loginid);
     },
     set_virtual_email_id: function(email) {
         $('#Email').val(email);
         $('#Email').disableSelection();
     }
 };
-;var sidebar_scroll = function(elm_selector) {
-    elm_selector.on('click', '#sidebar-nav li', function() {
-        var clicked_li = $(this);
-        $.scrollTo($('.section:eq(' + clicked_li.index() + ')'), 500);
-        return false;
-    }).addClass('unbind_later');
-
-    if (elm_selector.size()) {
-        // grab the initial top offset of the navigation
-        var selector = elm_selector.find('.sidebar');
-        var width = selector.width();
-        var sticky_navigation_offset_top = selector.offset().top;
-        // With thanks:
-        // http://www.backslash.gr/content/blog/webdevelopment/6-navigation-menu-that-stays-on-top-with-jquery
-
-        // our function that decides weather the navigation bar should have "fixed" css position or not.
-        var sticky_navigation = function() {
-            var scroll_top = $(window).scrollTop(); // our current vertical position from the top
-
-            // if we've scrolled more than the navigation, change its position to fixed to stick to top,
-            // otherwise change it back to relative
-            if (scroll_top > sticky_navigation_offset_top) {
-                selector.css({'position': 'fixed', 'top': 0, 'width': width});
-            } else {
-                selector.css({'position': 'relative'});
-            }
-        };
-
-        //run our function on load
-        sticky_navigation();
-
-        var sidebar_nav = selector.find('#sidebar-nav');
-        var length = elm_selector.find('.section').length;
-        $(window).on('scroll', function() {
-            // and run it again every time you scroll
-            sticky_navigation();
-
-            for (var i = 0; i < length; i++) {
-                if ($(window).scrollTop() === 0 || $(this).scrollTop() >= $('.section:eq(' + i + ')').offset().top - 5) {
-                    sidebar_nav.find('li').removeClass('selected');
-
-                    if ($(window).scrollTop() === 0) {
-                        // We're at the top of the screen, so highlight first nav item
-                        sidebar_nav.find('li:first-child').addClass('selected');
-                    } else if ($(window).scrollTop() + $(window).height() >= $(document).height()) {
-                        // We're at bottom of screen so highlight last nav item.
-                        sidebar_nav.find('li:last-child').addClass('selected');
-                    } else {
-                        sidebar_nav.find('li:eq(' + i + ')').addClass('selected');
-                    }
-                }
-            }
-        });
-    }
-};
-
-var get_started_behaviour = function() {
-    // Get Started behaviour:
-    var update_active_subsection = function(to_show) {
-        var fragment;
-        var subsection = $('.subsection');
-        subsection.addClass('hidden');
-        to_show.removeClass('hidden');
-        var nav_back = $('.subsection-navigation .back');
-        var nav_next = $('.subsection-navigation .next');
-
-        if (to_show.hasClass('first')) {
-            nav_back.addClass('disabled');
-            nav_next.removeClass('disabled');
-        } else if (to_show.hasClass('last')) {
-            nav_back.removeClass('disabled');
-            nav_next.addClass('disabled');
-        } else {
-            nav_back.removeClass('disabled');
-            nav_next.removeClass('disabled');
-        }
-
-        fragment = to_show.find('a[name]').attr('name').slice(0, -8);
-        document.location.hash = fragment;
-
-        return false;
-    };
-    var to_show;
-    var nav = $('.get-started').find('.subsection-navigation');
-    var fragment;
-    var len = nav.length;
-
-    if (len) {
-        nav.on('click', 'a', function() {
-            var button = $(this);
-            if (button.hasClass('disabled')) {
-                return false;
-            }
-            var now_showing = $('.subsection:not(.hidden)');
-            var show = button.hasClass('next') ? now_showing.next('.subsection') : now_showing.prev('.subsection');
-            return update_active_subsection(show);
-        });
-
-        fragment = (location.href.split('#'))[1];
-        to_show = fragment ? $('a[name=' + fragment + '-section]').parent('.subsection') : $('.subsection.first');
-        update_active_subsection(to_show);
-    }
-
-    var random_market = $('.random-markets');
-    if (random_market.length > 0) {
-        sidebar_scroll(random_market);
-    }
-};
-
-
-var get_ticker = function() {
+;var get_ticker = function() {
     var ticker = $('#hometicker');
     if (ticker.size()) {
         $.ajax({ crossDomain: true, url: page.url.url_for('ticker'), async: true, dataType: "html" }).done(function(ticks) {
@@ -8309,10 +7476,11 @@ var select_user_country = function() {
     if($('#residence').length > 0) {
         get_user_country(function() {
             var restricted_countries = new RegExp(page.settings.get('restricted_countries'));
-            if(restricted_countries.test(this.country)) {
+            var current_selected = $('#residence').val() || this.country;
+            if(restricted_countries.test(current_selected)) {
                 $('#residence').val('default').change();
             } else {
-                $('#residence').val(this.country).change();
+                $('#residence').val(current_selected).change();
             }
         });
     }
@@ -8448,88 +7616,6 @@ var show_live_chat_icon = function() {
     }, 80);
 };
 
-var display_career_email = function() {
-    $("#hr_contact_eaddress").html(email_rot13("<n uers=\"znvygb:ue@ovanel.pbz\" ery=\"absbyybj\">ue@ovanel.pbz</n>"));
-};
-
-pjax_config_page('/$|/home', function() {
-    return {
-        onLoad: function() {
-            select_user_country();
-            get_ticker();
-            home_bomoverlay.init();
-        }
-    };
-});
-
-pjax_config_page('/why-us', function() {
-    return {
-        onLoad: function() {
-            var whyus = $('.why-us');
-            sidebar_scroll(whyus);
-        },
-        onUnload: function() {
-            $(window).off('scroll');
-        }
-    };
-});
-
-pjax_config_page('/smart-indices', function() {
-    return {
-        onLoad: function() {
-            sidebar_scroll($('.smart-indices'));
-        },
-        onUnload: function() {
-            $(window).off('scroll');
-        }
-    };
-});
-
-pjax_config_page('/open-source-projects', function() {
-    return {
-        onLoad: function() {
-            sidebar_scroll($('.open-source-projects'));
-        },
-        onUnload: function() {
-            $(window).off('scroll');
-        }
-    };
-});
-
-pjax_config_page('/white-labels', function() {
-    return {
-        onLoad: function() {
-            sidebar_scroll($('.white-labels'));
-        },
-        onUnload: function() {
-            $(window).off('scroll');
-        }
-    };
-});
-
-pjax_config_page('/partnerapi', function() {
-    return {
-        onLoad: function() {
-            var partnerapi = $('.partnerapi-content');
-            sidebar_scroll(partnerapi);
-        },
-        onUnload: function() {
-            $(window).off('scroll');
-        }
-    };
-});
-
-pjax_config_page('/get-started', function() {
-    return {
-        onLoad: function() {
-            get_started_behaviour();
-        },
-        onUnload: function() {
-            $(window).off('scroll');
-        },
-    };
-});
-
 pjax_config_page('/contact', function() {
     return {
         onLoad: function() {
@@ -8542,7 +7628,8 @@ pjax_config_page('/contact', function() {
 pjax_config_page('/careers', function() {
     return {
         onLoad: function() {
-            display_career_email();
+            $("#hr_contact_eaddress")
+                .html(email_rot13("<n uers=\"znvygb:ue@ovanel.pbz\" ery=\"absbyybj\">ue@ovanel.pbz</n>"));
         },
     };
 });
@@ -8969,32 +8056,12 @@ var select_strike_type = function() {
     }).change();
 };
 
-var expiry_date_picker = function() {
-    var today = new Date();
-    var three_month = new Date();
-    three_month.setDate(today.getDate() + 60);
-
-    var id = $('#from_expiry');
-    id.datepicker({
-        dateFormat: 'yy-mm-dd',
-        monthNames: [text.localize('January'), text.localize('February'), text.localize('March'), text.localize('April'), text.localize('May'), text.localize('June'),
-            text.localize('July'), text.localize('August'), text.localize('September'), text.localize('October'), text.localize('November'), text.localize('December')],
-        dayNamesShort: [text.localize('Su'), text.localize('Mo'), text.localize('Tu'), text.localize('We'),
-            text.localize('Th'), text.localize('Fr'), text.localize('Sa')],
-        minDate: today,
-        maxDate: three_month,
-        onSelect: function(dateText, inst) {
-            id.attr("value", dateText);
-        },
-    }).datepicker('setDate', "0");
-};
 
 function initialize_pricing_table() {
     calculate_button_event();
     bet_type_select();
     select_underlying_change();
     select_strike_type();
-    expiry_date_picker();
 }
 
 onLoad.queue_for_url(initialize_pricing_table, 'pricing_table');
@@ -9147,6 +8214,826 @@ onLoad.queue_for_url(function () {
         $('#submit-date').removeClass('invisible');
     });
 }, 'statement');
+;
+function WSTrade() {
+
+    var g = GlobalWSTrade;
+
+    function buttonmaker() {
+        var $this = $(this);
+        var icon = $this.attr('icon');
+        var rcon = $this.attr('rcon');
+        var mute = $this.attr('mute');
+        var size = $this.attr('size');
+        var opts = {icons:{}};
+        if (0) {
+            // buttons w/ icons are hopelessly broken in binary.com stylesheet..
+            if (icon) opts.icons.primary = icon;
+            if (rcon) opts.icons.secondary = rcon;
+        }
+        if (mute) opts.text = false;
+        $this.button(opts);
+        if (size && size=='baby') $this.css({'font-size':'0.75em'});
+        if (size && size=='huge') $this.css({'font-size':'1.75em'});
+    }
+
+    function ws_setup() {
+
+        //prepare a 'timespinner' widget extension to 'spinner' as per http://jqueryui.com/spinner/#time
+        $.widget( "ui.timespinner", $.ui.spinner, {
+            options: { /*secs*/step: 60 * 1000, /*hours*/page: 60 },
+            _parse: function( value ) {
+                if ( typeof value !== "string" ) return value;
+                if ( Number( value ) == value ) return Number( value );
+                return +Globalize.parseDate( value );
+            },
+            _format: function(value) {return Globalize.format(new Date(value), "t")}
+        });
+
+        g.currency_cultures = {USD:'en-US',GBP:'en-GB',AUD:'en-AU', EUR:'de-DE',YEN:'ja-JP'};
+        g.nicetypes = {};
+        g.live_contracts = {};
+        g.limits_for = {};
+        g.fmb_ids = {};
+        g.$live_symbols = {};
+        g.$contracts = $('#contracts');
+        g.init_trade = {symbol:'R_100',ct_bc:'CALL-euro_atm',duration:900,duration_unit:'Seconds',basis:'Payout',currency:'USD',amount_val:10,date_start:0};
+        g.contracts_built = 0;
+        g.timezone_offset = (new Date()).getTimezoneOffset()*60;
+        g.Contract = function(data) {
+            console.log("new contract data %o", data);
+            var symobj = g.all_symbols[data.symbol];
+            if (!symobj) {
+                console.log("will not build, no symbol " + data.symbol);
+                return
+            }
+            var ct_bc = data.contract_type;
+            if (data.barrier_category) ct_bc += '-' + data.barrier_category;
+            var brief = symobj.display_name + '<br/>' + (g.nicetypes[ct_bc]||data.contract_type);
+            this.bSell = !!data.fmb_id;
+            var buysell = this.bSell? 'SELL': 'BUY';
+            var div = '<div id="' + data.id + '" class="contract ui-state-default">'
+                         + '<div class="contract_header ui-helper-clearfix">'
+                             + '<button class="forget right" size="baby" mute="1" icon="ui-icon-circle-close">Close</button>'
+                             + '<button class="dtldlg right" size="baby" mute="1" icon="ui-icon-help">Details</button>'
+                             + '<div class="proposal">Offer</div>'
+                             + '<span class="error"></span>'
+                             + '<button class="purchase" size="huge" icon="ui-icon-cart">' + buysell + '</button>'
+                         + '</div>'
+                         + '<div><span class="bigtext">' + brief + '</span></div>'
+                         + '<div><div class="ttype elbow">Not Offered</div><span class="price bigtext"></span></div>'
+                         + '<div><div class="basis elbow">Payout</div><span class="payout bigtext"></span></div>'
+                         + '<div><div class="symbol elbow"></div><span class="spot bigtext"></span></div>'
+                         + '<div class="longcode"></div>'
+                         + '<div class="contract_dlg" title="Contract Details"></div>'
+                      + '</div>'
+            $('#contracts').append(div);
+            this.d0 = data;
+            this.$div = $('#'+data.id, g.$contracts);
+            this.$dlg = $('div.contract_dlg', this.$div).dialog({autoOpen:false});
+            $('button', this.$div).each(buttonmaker);
+            $('button.forget', this.$div).click(forget);
+            $('button.dtldlg', this.$div).click(dtldlg);
+            $('button.purchase', this.$div).click(purchase);
+            if (this.bSell) {
+                this.$div.removeClass('ui-state-active').addClass('ui-state-highlight');
+                $('.proposal', this.$div).html('Contract ' + data.fmb_id);
+            }
+        };
+        g.Contract.prototype.update = function(data) {
+            //console.log("update with %o", data);
+            var cul;
+            for (var fld in data) {
+                var $div = $('.'+fld, this.$div);
+                $div.html(data[fld]);
+                this.d0[fld] = data[fld];
+            }
+            if (data.payout) {
+                cul = g.currency_cultures[this.d0.currency];
+                var pay = Globalize.format(parseFloat(data.payout   ), 'C', cul);
+                $('.payout', this.$div).html(pay);
+            }
+            var ttype, price;
+            if (data.sell) {
+                ttype = 'Sold for';
+                price = data.sold_for;
+            } else if (this.bSell) {
+                ttype = 'Sell for';
+                price = data.bid_price;
+            } else {
+                ttype = 'Buy for';
+                price = data.ask_price;
+            }
+            if (!price && data.buy_price) {
+                ttype = 'Bought for';
+                price = data.buy_price;
+            }
+            if (price) {
+                cul = g.currency_cultures[this.d0.currency];
+                var val = Globalize.format(parseFloat(price), 'C', cul);
+                $('.price', this.$div).html(val);
+                $('.ttype', this.$div).html(ttype);
+            }
+            if (data.fmb_id && data.trx_id) {
+                this.bSell = true;
+                $('button.purchase', this.$div).button('option', 'label', data.fmb_id);
+                this.$div.removeClass('ui-state-active').addClass('ui-state-highlight');
+                $('.proposal', this.$div).html('Contract ' + data.fmb_id);
+            }
+            var details = '';
+            if (this.bSell) {
+                if (data.fmb_id) {
+                    details += 'Contract Number '+ data.fmb_id + '<br/>';
+                    if (data.trx_id)        details += 'Transaction Number '+ data.trx_id + '<br/>';
+                    if (data.buy_price)     details += 'Bought for '+ data.buy_price + '<br/>';
+                    if (data.expiry_time)   details += 'Expires '   + niceDate(data.expiry_time) + '<br/>';
+                    if (data.purchase_time) details += 'Purchased ' + niceDate(data.purchase_time) + '<br/>';
+                    if (data.start_time)    details += 'Contract Starts ' + niceDate(data.start_time) + '<br/>';
+                    if (data.balance_after) details += 'Balance After ' + data.balance_after + '<br/>';
+                }
+            } else {
+                details += 'Not yet purchased<br/>';
+                if (data.date_start)    details += 'Proposed Start Time '+ niceDate(data.date_start) + '<br/>';
+            }
+
+            if (details) this.$dlg.html(details);
+            if (data.error) {
+                this.$div.removeClass('ui-state-active').addClass('ui-state-error');
+                $('button.purchase', this.$div).hide();
+                $('span.error', this.$div).show();
+                var detail = data.detail || 
+                            ( (data.basis? (data.basis||' '): ''                          )
+                            + (data.amount_str? (data.amount_str + ' '): ''               )
+                            + (data.duration && data.duration_unit? ('over '+data.duration+data.duration_unit+' '): '')
+                            + (data.data_start? ('starting '+niceDate(data.date_start)+' '): '' ) );
+                $('.longcode', this.$div).html(detail);
+            }
+        };
+        g.Contract.prototype.destroy = function() {
+            this.$div && this.$div.remove();
+        };
+    }
+
+    // http://freeda.dbnet.com.au/pub/globalize/0.1.1/examples/browser/
+    function niceDayUTC(epochStr) {
+        var epoch = parseInt(epochStr) + g.timezone_offset;
+        return Globalize.format(new Date(epoch*1000), "dd-MMM-yyyy", 'en-GB');
+    }
+    function niceTimeUTC(epochStr) {
+        var epoch = parseInt(epochStr) + g.timezone_offset;
+        return Globalize.format(new Date(epoch*1000), "HH:mm:ss", 'en-GB');
+    }
+    function niceDate(epochStr) {
+        var d = new Date(parseInt(epochStr)*1000);
+        return Globalize.format(d, "dd-MMM-yyyy HH:mm:ss", 'en-GB');
+    }
+    function build_symbols(offerings) {
+        var buttonsets = '';
+        $.each(offerings.offerings, function(i, mkt) {
+            $.each(mkt.available, function(i, sbm) {
+                var emptyset = true;
+                $.each(sbm.available, function(i, sym) {
+                    var symbol = sym.symbol_display;
+                    var symobj = g.all_symbols[symbol];
+                    if (!symobj) return;
+                    if (emptyset) buttonsets += '<h3>' + mkt.market + ' &mdash; ' + sbm.submarket + '</h3>' + '<div class="buttonset">';
+                    emptyset = false;
+                    var s = symobj.symbol;
+                    g.all_symbols[s] = symobj; // this map is now keyed by both short- and display-name
+                    buttonsets += '<input type="radio" name="symbol" value="' + s + '" id="' + s + '"/>'
+                               + '<label for="' + s + '">' + symbol + '</label>';
+                })
+                if (!emptyset) buttonsets += '</div>';
+            })
+        });
+        //console.log("buttonset now %o", buttonset);
+        $('#symbolbuts').html(buttonsets).accordion({collapsible:true, heightStyle:'content'});
+        $('#symbolbuts .buttonset').buttonset();
+        $('#symbolbuts label').tooltip({items:"label", open: opensym, close: closesym, content: showsym});
+        $('#symbolbuts input[name=symbol]').change(change_symbol);
+        // initial trading values..
+        $('#symbolbuts input#' + g.init_trade.symbol).prop('checked',true).button('refresh').change();
+        $('#contractbuts input#' + g.init_trade.ct_bc).prop('checked',true).button('refresh').change();
+        $('#durationflds input#duration').val(g.init_trade.duration);
+        $('#durationflds input#' + g.init_trade.duration_unit).prop('checked',true).button('refresh').change();
+        $('#payoutflds input#' + g.init_trade.basis).prop('checked',true).button('refresh');
+        $('#payoutflds input#' + g.init_trade.currency).prop('checked',true).button('refresh');
+        $('#payoutflds #amount_str').spinner('value', g.init_trade.amount_val); change_payout(0);
+        // first proposal..
+        $('#pricing_form').trigger("submit");
+    }
+    function closesym(ev, ui) {
+        var symbol = ui.tooltip.data('symbol');
+        delete g.$live_symbols[symbol];
+        var symbol_id = ui.tooltip.data('symbol_id');
+        if (symbol_id) {
+            delete g.$live_symbols[symbol_id];
+            g.ws.send(JSON.stringify({forget:symbol_id}));
+        }
+    }
+    function opensym(ev, ui) {
+        var symbol = $('h2.livesym', ui.tooltip).attr('symbol');
+        ui.tooltip.data('symbol', symbol);
+        g.$live_symbols[symbol] = ui.tooltip;
+        g.ws.send(JSON.stringify({ticks:symbol}));
+    }
+    function spot_report(s) {
+        var d = new Date(s.spot_time*1000);
+        var str = '<h2 class="livesym" symbol="' + s.symbol + '">'
+                + s.display_name + ": " + s.quoted_currency_symbol + " " + s.spot + "</h2>"
+                + "<div>" + s.exchange_name + " &mdash; " + s.symbol + "</div>"
+                + "<div> as at " + d.toUTCString() + "</div>";
+        if (s.error) str += '<div class="ui-state-error">' + s.error + '</div>';
+        return str
+    }
+    function showsym() {
+        var $this = $(this);
+        var symbol = $this.text();
+        return spot_report(g.all_symbols[symbol]);
+    }
+    function onmessage(m) {
+        var data = JSON.parse(m.data);
+        var contract, symbol;
+        //console.log('got message %o', data);
+        if (data.ticks) {
+            symbol = data.ticks;
+            var $live_symbol = g.$live_symbols[symbol];
+            if (!$live_symbol) {
+                if (data.id) g.ws.send(JSON.stringify({forget:data.id}));
+                return;
+            }
+            if (data.id && !g.$live_symbols[data.id]) g.$live_symbols[data.id] = $live_symbol; 
+            var s = g.all_symbols[symbol];
+            if (data.error) {
+                s.error = data.error
+            } else {
+                delete s.error;
+                s.spot = data.quote;
+                s.spot_time = data.epoch;
+            }
+            $live_symbol.html(spot_report(s));
+            return;
+        }
+        if (data.active_symbols) {
+            g.all_symbols = data.active_symbols;
+            g.ws.send(JSON.stringify({offerings:{}}));
+            return;
+        }
+        if (data.offerings) {
+            console.log("offerings data is %o", data.offerings);
+            build_symbols(data.offerings);
+            return;
+        }
+        if (data.buy) {
+            console.log("buy result data is %o", data);
+            contract = g.live_contracts[data.buy];
+            if (!contract) {
+                console.log("dropping buy result for " + data.buy);
+                g.ws.send(JSON.stringify({forget:data.buy}));
+                return;
+            }
+            g.fmb_ids[data.fmb_id] = contract;
+            contract.update(data);
+            return
+        }
+        if (data.sell) {
+            console.log("sell result data is %o", data);
+            contract = g.live_contracts[data.sell];
+            if (!contract) {
+                console.log("dropping sell result for " + data.sell);
+                g.ws.send(JSON.stringify({forget:data.sell}));
+                return;
+            }
+            contract.update(data);
+            return
+        }
+        if (data.portfolio_stats) {
+            g.portfolio_stats = data.portfolio_stats;
+            console.log("portfolio stats: %o", g.portfolio_stats);
+            if (g.portfolio_stats.batch_count==0) $('#portfol_form button').button('enable');
+            return;
+        }
+        if (data.contracts_for) {
+            symbol = data.contracts_for.symbol;
+            delete data.contracts_for.symbol;
+            console.log("limits_for " + symbol + ": %o", data.contracts_for);
+            g.limits_for[symbol] = data.contracts_for;
+            apply_limits();
+            return;
+        }
+        // any other input message should be about a contract.
+        var contract_id = data.id;
+        contract = g.live_contracts[contract_id];
+        if (!contract) {
+            if (data.fmb_id) {
+                if (data.batch_index == data.batch_count) {
+                    $('#portfol_form button').button('enable');
+                }
+                if (g.fmb_ids[data.fmb_id]) {
+                    console.log("already showing fmb_id " + data.fmb_id +"; forget " + data.id);
+                    g.ws.send(JSON.stringify({forget:data.id}));
+                    return
+                }
+            }
+            contract = new g.Contract(data);
+            if (!contract.d0) { // means not built successfully
+                console.log("did not build; forget " + contract_id);
+                g.ws.send(JSON.stringify({forget:contract_id}));
+                contract.destroy();
+                return
+            }
+            g.live_contracts[contract_id] = contract;
+            g.contracts_built++;
+            if (data.fmb_id) g.fmb_ids[data.fmb_id] = contract;
+        }
+        contract.update(data);
+    }
+    function apply_limits() {
+        var sym = $('#symbolbuts input[name=symbol]:checked').attr('id');
+        if (!sym) return;
+        var limits = g.limits_for[sym];
+        if (!limits) return;
+        console.log("apply limits for " + sym + " using %o", limits);
+        $('#contractbuts input[name=ct_bc]').button('disable').removeData('limits');
+        $.each(limits.available, function(i,limit){
+            var ct_bc = limit.contract_type + '-' + limit.barrier_category;
+            var $but = $('#contractbuts input#'+ct_bc);
+            $but.button('enable');
+            var limits = $but.data('limits') || [];
+            limits.push(limit);
+            $but.data('limits',limits);
+        });
+        if ($('#contractbuts input[name=ct_bc]:checked:disabled').length) {
+            $('#contractbuts input[name=ct_bc]:enabled').first().prop('checked',true).button('refresh');
+        }
+        var $but = $('#contractbuts input[name=ct_bc]:checked');
+        console.log("with data %o", $but.data('limits'));
+        $but.change();
+    }
+    function forget() {
+        var contract_id = $(this).parents('.contract').attr('id');
+        //console.log("I want to forget " + contract_id);
+        g.ws.send(JSON.stringify({forget:contract_id}));
+        var contract = g.live_contracts[contract_id];
+        if (contract.d0.fmb_id) delete g.fmb_ids[contract.d0.fmb_id];
+        delete g.live_contracts[contract_id];
+        contract.destroy();
+    }
+    function dtldlg() {
+        var contract_id = $(this).parents('.contract').attr('id');
+        var contract = g.live_contracts[contract_id];
+        console.log("detail for %o!", contract);
+        contract.$dlg.dialog('open');
+    }
+    function purchase() {
+        var contract_id = $(this).parents('.contract').attr('id');
+        var contract = g.live_contracts[contract_id];
+        var price;
+        $(this).button('disable').button('option', 'label', 'Wait..');
+        if (contract.bSell) {
+            price = contract.d0.bid_price;
+            console.log("selling " + contract_id + " from %o " + " for " + price, contract);
+            g.ws.send(JSON.stringify({sell:contract_id, price:price}));
+            return;
+        }
+        price = contract.d0.ask_price;
+        console.log("buying " + contract_id + " from %o " + " for " + price, contract);
+        g.ws.send(JSON.stringify({buy:contract_id, price:price}));
+    }
+    function pricing_submit(e) {
+        var data = {};
+        var arr = $('input, select', $('.innerzone')).serializeArray();
+        $.each(arr,function(idx,val){data[val.name]=val.value});
+        console.log("submitting data %o", data);
+        g.ws.send(JSON.stringify(data));
+        if (e) e.preventDefault();
+    }
+    function portfol_submit(e) {
+        $('#portfol_form button').button('disable');
+        g.ws.send(JSON.stringify({portfolio:1}));
+        $('.innerzone.ui-dialog-content').dialog('close');
+        if (e) e.preventDefault();
+    }
+    function change_payout(e) {
+        var cur = $('input[name=currency]:checked').val();
+        var cul = g.currency_cultures[cur];
+        Globalize.culture(cul); // this is to also set the start_at timespinner format
+        $('#amount_str').spinner('option', 'culture', cul);
+        var val = $('#amount_str').spinner('value');
+        $('#amount_val').val(val);
+        var basis = $('input[name=basis]:checked').val();
+        if (basis) $('#payout_name').html("For a " + basis + " of " + $('#amount_str').val());
+    }
+    function change_symbol(e) {
+        var symbol = this.id;
+        var symobj = g.all_symbols[symbol];
+        $('#display_name').html("Trading " + symobj.display_name);
+        if (g.limits_for[symbol]) {
+            apply_limits();
+            return
+        }
+        g.ws.send(JSON.stringify({contracts_for:symbol}));
+    }
+    function change_contract(e) {
+        var $ct_bc = $('input[name=ct_bc]:checked');
+        var ct_bc = $ct_bc.val();
+        $('#contract_name').html(g.nicetypes[ct_bc] || ct_bc);
+        var match = /(.*)-(.*)/.exec(ct_bc);
+        var ct = match[1];
+        var bc = match[2];
+        $('#contract_type').val(ct);
+        $('#barrier_category').val(bc);
+        $('#barriers .cts'           ).hide().find('input').prop('disabled', true);
+        $('#barriers .cts.'+ct+'.'+bc).show().find('input').prop('disabled', false);
+        var limits = $ct_bc.data('limits');
+        if (!limits) return;
+        console.log("chosen ct " + ct + " bc " + bc + ' with limits %o', limits);
+        // disable all start options and enable relevant ones..
+        $('#startflds input[name=start_when]').button('disable');
+        var fs_memo = '';
+        var du_memo = '';
+        var cb_memo = '';
+        $.each(limits, function(i, lim) {
+            //console.log("report limit " + i + " %o", lim);
+            if (lim.start_type == 'spot')    $('#startflds input#start_immed').button('enable');
+            if (lim.start_type == 'forward') {
+                $('#startflds input#start_in').button('enable');
+                $('#startflds input#start_at').button('enable');
+                if (lim.forward_starting_options) {
+                    $.each(lim.forward_starting_options, function(i, fso) {
+                        fs_memo += '<div>on ' + niceDayUTC(fso.date)
+                                + ' between ' + niceTimeUTC(fso.open)
+                                + ' and ' + niceTimeUTC(fso.close) + '</div>';
+                    });
+                }
+            }
+            $('#startflds input[name=start_when]:enabled').first().prop('checked',true).button('refresh');
+            change_startwhen();
+            var du_label = '';
+            if (lim.expiry_type == 'intraday') du_label = 'Today';
+            if (lim.expiry_type == 'daily'   ) du_label = 'Whole days';
+            if (lim.expiry_type == 'tick'    ) du_label = 'Ticks';
+            if (lim.start_type == 'forward'  ) du_label += '(delayed start)';
+            du_memo += '<div>' + du_label + ' between ' + lim.min_contract_duration + ' and ' + lim.max_contract_duration + '</div>';
+            if (lim.barriers == 1 && lim.barrier_category != 'non_financial')
+                cb_memo += '<div>' + lim.expiry_type + ' durations: ' + lim.barrier + '</div>';
+            if (lim.barriers == 2 && lim.barrier_category != 'non_financial')
+                cb_memo += '<div>' + lim.expiry_type + ' durations: Between ' + lim.low_barrier + ' and ' + lim.high_barrier + '</div>';
+        });
+        if (fs_memo) fs_memo = '<p>Start times available (UTC) for this contract..' + fs_memo + '</p>';
+        if (du_memo) du_memo = '<p>Durations available for this contract..'         + du_memo + '</p>';
+        if (cb_memo) cb_memo = '<p>Valid targets for this contract..'               + cb_memo + '</p>';
+        $('#startflds    div.memo').html(fs_memo);
+        $('#durationflds div.memo').html(du_memo);
+        $('#contractbuts div.memo').html(cb_memo);
+
+    }
+    function change_duration_date(datestr,dp) {
+        var today = new Date();
+        var thatDate = $(this).datepicker('getDate');
+        var days = Math.round((thatDate - today)/(1000*60*60*24));
+        $("input#Days").prop("checked",true).button('refresh');
+        $('#duration').spinner("value", days+1);
+        change_duration(0);
+    }
+    function change_duration(e) {
+        var duration_str = $('input[name=duration]').val() + ' ' + $('input[name=duration_unit]:checked').attr('id');
+        $('#duration_str').html("Expiry in " + duration_str);
+    }
+    function load_nicetypes(i,v) {
+        var ct_bc = $(v).attr('for');
+        var ct    = $(v).attr('ct');
+        // map both ct on its own and the ct_bc pair; this allows lookup when we only have ct available.
+        g.nicetypes[ct] = $(v).text();
+        g.nicetypes[ct_bc] = $(v).text();
+    }
+    function change_slider1(e,rs) {
+        $('#barrier').val(rs.value);
+    }
+    function change_slider2(e,rs) {
+        $('#barrier').val(rs.values[0]);
+        $('#barrier2').val(rs.values[1]);
+    }
+    function change_startwhen(e) {
+        var start_when = $('input[name=start_when]:checked').val();
+        $('#date_start_in').prop('disabled',true);
+        $('input[name=date_start_unit]').button('disable');
+        $('#date_start_at').timespinner('disable');
+        $('.date_start_in_ctr, .date_start_at_ctr').hide();
+        if (start_when == 'start_immed') {
+            $('#date_start').prop('disabled',true);
+            $('#start_str').html("Starting immediately");
+            return;
+        }
+        $('#date_start').prop('disabled',false);
+        if (start_when == 'start_in') {
+            $('#date_start_in').prop('disabled',false);
+            $('input[name=date_start_unit]').button('enable');
+            $('.date_start_in_ctr').show();
+            change_start_in(0);
+            return;
+        }
+        if (start_when =='start_at') {
+            $('#date_start_at').timespinner('enable');
+            $('.date_start_at_ctr').show();
+            change_start_at(0);
+            return;
+        }
+    }
+    function change_start_str() {
+        var datestart = new Date($('#date_start').val() * 1000);
+        var mid_night = new Date(); mid_night.setHours(24,0,0,0); // this is midnight tonight
+        var days = ((datestart - mid_night)/(1000*60*60*24));
+        var time_part = Globalize.format(datestart, "t");
+        var when;
+             if (days<0) when = "at " + time_part;
+        else if (days<1) when = "tomorrow at " + time_part;
+        else             when = (datestart.toDateString() + ' ' + datestart.toTimeString());
+        $('#start_str').html('Start ' + when);
+    }
+    function change_start_in(e) {
+        var date_start_unit = $('input[name=date_start_unit]:checked').val();
+        var units = {d:24*60*60, h:60*60, m:60, s:1}[date_start_unit];
+        var seconds = $('#date_start_in').val() * units;
+        var date_start = Math.ceil(new Date().getTime()/1000 + seconds);
+        $('#date_start').val(date_start);
+        change_start_str();
+    }
+    function change_start_at(e) {
+        var d = new Date($('#date_start_at').timespinner('value'));
+        var proposed = new Date();
+        proposed.setHours(d.getHours(), d.getMinutes(), 0, 0);
+        var now = new Date();
+        if (proposed < now) proposed.setDate(proposed.getDate()+1);
+        $('#date_start').val( proposed.getTime()/1000 );
+        change_start_str();
+    }
+
+    function onclose(ev) {
+        if (g.degrade) g.degrade *= 1.2
+        else g.degrade = 1;
+        console.log("websocket closed with event %o.  Re-opening in " + g.degrade + ' secs', ev);
+        if (ev.code==1006) {
+            // this is the usual failure code, even for auth failure; message to be generic:
+            // see http://dev.w3.org/html5/websockets/
+            // and http://stackoverflow.com/questions/18803971/websocket-onerror-how-to-read-error-description
+            //alert('Connection with Server not currently available');
+        } else {
+            //alert('Connection with Server closed with code' + ' ' + ev.code + (ev.reason?('('+ev.reason+')'):''));
+        }
+        $('button.purchase').button('disable');
+        window.setTimeout(opensocket, g.degrade*1000, {onclose:onclose,onmessage:onmessage,onopen:onreopen});
+    }
+
+    function get_initial() {
+        console.log("socket open; getting initial data..");
+        g.ws.send(JSON.stringify({active_symbols:'display_name'}));
+    }
+
+    function onreopen() {
+        console.log("socket re-opened");
+        delete g.degrade;
+        if (g.contracts_built > 0) return;
+        console.log("re-trying opening sequence");
+        get_initial();
+    }
+
+    function opensocket(opts) {
+        g.ws  = new WebSocket(g.websockets_svr);
+        for (var opt in opts) {
+            g.ws[opt] = opts[opt];
+        }
+    }
+
+    function ws_stop() {
+        console.log("Stopping WSTrade.  Closing websocket..");
+        g.ws.onopen = g.ws.onmessage = g.ws.onclose = function(){};
+        g.ws.close();
+    }
+
+    function position(of) {
+        return {width: '640px', position:{my:'left top', at: 'left bottom', of:of} /*, modal:true*/}
+    }
+
+    function ws_init() { 
+
+        // setup handlers and widgets..
+        $('.button').each(buttonmaker);
+        $('#select_symbol')  .click(function(){$('#symbolbuts')  .toggle('medium')}); //dialog(position('#select_symbol')));
+        $('#select_contract').click(function(){$('#contractbuts').toggle('medium')});
+        $('#select_duration').click(function(){$('#durationflds').toggle('medium')});
+        $('#select_start')   .click(function(){$('#startflds')   .toggle('medium')});
+        $('#select_payout')  .click(function(){$('#payoutflds')  .toggle('medium')});
+        $('.buttonset').buttonset();
+        $('#amount_str').spinner({min:0,numberFormat:"C",change:change_payout});
+        $("input[name=currency]").change(change_payout);
+        $("input[name=basis]").change(change_payout);
+        $("input[name=duration_unit]").change(change_duration);
+        $("input[name=ct_bc]").change(change_contract);
+        $('#duration').spinner({min:0,change:change_duration});
+        $('#duration_date').datepicker({onSelect:change_duration_date});
+        $("input#Seconds").prop("checked",true).button('refresh');
+
+        // date_start_in
+        $('#date_start_in').spinner({min:0,change:change_start_in});
+        $("input#date_start_unit_Seconds").prop("checked",true).button('refresh');
+        $("input[name=date_start_unit]").change(change_start_in);
+
+        // date_start_at
+        {
+            var start_time = new Date();
+            start_time.setMinutes(start_time.getMinutes()+10);
+            $('#date_start_at').timespinner({change:change_start_at}).timespinner('value', start_time);
+        }
+
+        // date_start_when
+        $("input[name=start_when]").change(change_startwhen);
+
+        // init to start immed
+        $('#startflds  input#start_immed').prop('checked',true).button('refresh').change();
+
+        // contract names
+        $('#contractbuts label').each(load_nicetypes);
+
+        //barriers
+        $('#slider2').slider({range:true, min:-10, max:+10, values:[-4,4], slide:change_slider2});
+        $('#slider1').slider({min:-10, max:+10, value:0, slide:change_slider1});
+
+        // form submit
+        $('#pricing_form').submit(pricing_submit);
+        $('#portfol_form').submit(portfol_submit);
+
+        // create a single socket..
+        opensocket({onclose:onclose,onmessage:onmessage,onopen:get_initial});
+    }
+
+    onUnload.queue(ws_stop);
+    ws_setup();
+    ws_init();
+}
+
+if ('GlobalWSTrade' in window) {
+    onLoad.queue(WSTrade)
+}
+
+;RealityCheck = (function ($) {
+    "use strict";
+
+    var reality_check_url = page.url.url_for('user/reality_check');
+
+    function RealityCheck(cookieName, persistentStore, logoutLocation) {
+        var val;
+        
+        this.cookieName = cookieName;
+        this.storage = persistentStore;
+
+        val = ($.cookie(this.cookieName)||'').split(',');
+        val[0] = parseInt(val[0]);
+        if (isNaN(val[0]) || val[0]<=0) return;  // no or invalid cookie
+
+        if (val[1] && val[1] != persistentStore.get('reality_check.srvtime')) {
+            persistentStore.set('reality_check.srvtime', val[1]);
+            persistentStore.set('reality_check.basetime', (new Date()).getTime());
+            persistentStore.set('reality_check.ack', 1);
+        }
+
+        this.logoutLocation = logoutLocation;
+        if (!this.logoutLocation) return; // not logged in?
+
+        this.interval = parseInt(val) * 60 * 1000; // convert minutes to millisec
+
+        this.basetime = persistentStore.get('reality_check.basetime');
+
+        return this.setAlarm();
+    }
+
+    RealityCheck.prototype.setAlarm = function () {
+        var that = this;
+        var alrm = this.interval - ((new Date()).getTime() - this.basetime) % this.interval;
+
+        // console.log('interval = '+this.interval+', next alarm in '+alrm+' ms');
+        // console.log('alrm at '+(new Date((new Date()).getTime()+alrm)).toUTCString());
+
+        if (this.tmout) window.clearTimeout(this.tmout);
+
+        this.tmout = window.setTimeout(function () {
+            // console.log('fire at '+(new Date()).toUTCString());
+            that.fire();
+        }, alrm);
+    };
+
+    RealityCheck.prototype.fire = function () {
+        var that = this;
+
+        $.ajax({
+            url: reality_check_url,
+            dataType: 'text',
+            success: function (data) {
+                that.display(data);
+            },
+            error: function (xhr) {
+                if (xhr.status === 404) return; // no MF loginid
+                window.setTimeout(function () {
+                    that.fire();
+                }, 5000);
+            },
+        });
+    };
+
+    RealityCheck.prototype.display = function (data) {
+        var that = this, outer, middle, storage_handler; 
+
+        outer = $('#reality-check');
+        if (outer) outer.remove();
+
+        outer = $("<div id='reality-check'></div>").appendTo('body');
+        middle = $('<div />').appendTo(outer);
+        $('<div>' + data + '</div>').appendTo(middle);
+
+        storage_handler = function (jq_event) {
+            var ack;
+
+            if (jq_event.originalEvent.key !== 'reality_check.ack') return;
+            ack = parseInt(jq_event.originalEvent.newValue || 1);
+            if (ack > that.lastAck) {
+                $(window).off('storage', storage_handler);
+                that.setAlarm();
+                $('#reality-check').remove();
+            }
+        };
+
+        // in case the client works with multiple windows, check if he has acknowleged
+        // it in another window.
+        $(window).on('storage', storage_handler);
+
+        this.lastAck = parseInt(this.storage.get('reality_check.ack') || 1);
+        $('#reality-check [bcont=1]').on('click', function () {
+            that.storage.set('reality_check.ack', that.lastAck+1);
+            $(window).off('storage', storage_handler);
+            that.setAlarm();
+            $('#reality-check').remove();
+        });
+
+        $('#reality-check .blogout').on('click', function () {
+            window.location.href = that.logoutLocation;
+        });
+    };
+
+    return RealityCheck;
+}(jQuery));
+
+onLoad.queue(function () {
+    var logoutBtn = $('#btn_logout')[0];
+    if (!logoutBtn) return;
+    if (window.reality_check_object) return;
+    window.reality_check_object = new RealityCheck('reality_check', LocalStore, logoutBtn.getAttribute('href'));
+});
+;window._trackJs = {
+    onError: function(payload, error) {
+
+        function itemExistInList(item, list) {
+            for (var i = 0; i < list.length; i++) {
+                if (item.indexOf(list[i]) > -1) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        var ignorableErrors = [
+            // General script error, not actionable
+            "[object Event]",
+            // General script error, not actionable
+            "Script error.",
+            // error when user  interrupts script loading, nothing to fix
+            "Error loading script",
+            // an error caused by DealPly (http://www.dealply.com/) chrome extension
+            "DealPly",
+            // this error is reported when a post request returns error, i.e. html body
+            // the details provided in this case are completely useless, thus discarded
+            "Unexpected token <"
+        ];
+
+        if (itemExistInList(payload.message, ignorableErrors)) {
+            return false;
+        }
+
+        payload.network = payload.network.filter(function(item) {
+
+            // ignore random errors from Intercom
+            if (item.statusCode === 403 && payload.message.indexOf("intercom") > -1) {
+                return false;
+            }
+
+            return true;
+        });
+
+        return true;
+    }
+};
+
+// if Track:js is already loaded, we need to initialize it
+if (typeof trackJs !== 'undefined') trackJs.configure(window._trackJs);
 ;//////////////////////////////////////////////////////////////////
 // Purpose: Write loading image to a container for ajax request
 // Parameters:
@@ -9422,86 +9309,6 @@ function snake_case_to_camel_case(snake, lower_case_first_char, chars) {
 }
 
 /**
- * attaches a datepicker to the specified element
- * This is a thin wrapper for datepicker, helps to keep a unique site-wide
- * default configurations for the datepicker.
- *
- * @param element any jquery selector or DOM/jQuery object to attach the datepicker to
- * @param config custom configurations for the datepicker
- */
-function attach_date_picker(element, conf) {
-    var k,
-        target = $(element);
-    if (!target || !target.length) return false;
-    var today = new Date();
-    var next_year = new Date();
-    next_year.setDate(today.getDate() + 365);
-    var options = {
-        dateFormat: 'yy-mm-dd',
-        maxDate: next_year,
-    };
-    for (k in conf) if (conf.hasOwnProperty(k)) {
-        options[k] = conf[k];
-    }
-    return target.datepicker(options);
-}
-
-/**
- * attaches a timepicker to the specified element.
- * This is a thin wrapper for timepicker, helps to keep a unique site-wide
- * default configurations for the timepicker.
- *
- * @param element any jquery selector or DOM/jQuery object to attach the timepicker to
- * @param config custom configurations for the timepicker
- */
-function attach_time_picker(element, conf) {
-    var attr, k, target = $(element);
-    if (!target || !target.length) return false;
-    var opts = {
-        timeSeparator: ':',
-        showLeadingZero: true,
-        howMinutesLeadingZero: true,
-        hourText: text.localize("Hour"),
-        minuteText: text.localize("Minute"),
-        minTime: {},
-        maxTime: {},
-    };
-    var data_attrs = element_data_attrs(target);
-    var regex = /^time\:(.+)/;
-    for (attr in data_attrs) if (data_attrs.hasOwnProperty(attr)) {
-        var matched = attr.match(regex);
-        if (matched) {
-            var data = data_attrs[attr];
-            var opt_name = matched[1].trim();
-            if (data == 'true') {
-                data = true;
-            } else if (data == 'false') {
-                data = false;
-            }
-            opt_name = snake_case_to_camel_case(opt_name, true).toLowerCase();
-            switch (opt_name) {
-                case 'mintimehour':
-                    opts.minTime.hour = data;
-                    break;
-                case 'mintimeminute':
-                    opts.minTime.minute = data;
-                    break;
-                case 'maxtimehour':
-                    opts.maxTime.hour = data;
-                    break;
-                case 'maxtimeminute':
-                    opts.maxTime.minute = data;
-                    break;
-            }
-        }
-    }
-    for (k in conf) if (conf.hasOwnProperty(k)) {
-        opts[k] = conf[k];
-    }
-    return target.timepicker(opts);
-}
-
-/**
  * attaches an inpage popup to the specified element.
  *
  * @param element any jquery selector or DOM/jQuery object to attach the inpage popups to
@@ -9561,28 +9368,6 @@ function find_active_jqtab(el) {
     return 0;
 }
 
-/**
- * attaches tabs to the specified element selector
- *
- * @param element any jquery selector or DOM/jQuery object
- */
-function attach_tabs() {
-    $('.has-tabs').each(function () {
-        var jqel = $(this);
-        var conf = {};
-        var active = 0;
-        try {
-            active = find_active_jqtab(jqel);
-        } catch (e) {
-            console.log(e, jqel);
-        }
-        if (active) {
-            conf['active'] = active;
-            $('li.active', jqel).removeClass('active');
-        }
-        jqel.tabs(conf);
-    });
-}
 
 function initTabs() {
 
@@ -9612,4 +9397,67 @@ function initTabs() {
         updateTabs($tabs);
         e.preventDefault();
     });
+}
+
+function initDateTimePicker() {
+    jQuery.extend( jQuery.fn.pickadate.defaults, {
+        monthsFull: [
+            text.localize('January'),
+            text.localize('February'),
+            text.localize('March'),
+            text.localize('April'),
+            text.localize('May'),
+            text.localize('June'),
+            text.localize('July'),
+            text.localize('August'),
+            text.localize('September'),
+            text.localize('October'),
+            text.localize('November'),
+            text.localize('December')
+        ],
+        monthsShort: [
+            text.localize('Jan'),
+            text.localize('Feb'),
+            text.localize('Mar'),
+            text.localize('Apr'),
+            text.localize('May'),
+            text.localize('Jun'),
+            text.localize('Jul'),
+            text.localize('Aug'),
+            text.localize('Sep'),
+            text.localize('Oct'),
+            text.localize('Nov'),
+            text.localize('Dec')
+        ],
+        weekdaysFull: [
+            text.localize('Sunday'),
+            text.localize('Moonday'),
+            text.localize('Tuesday'),
+            text.localize('Wednesday'),
+            text.localize('Thursday'),
+            text.localize('Friday'),
+            text.localize('Saturday')
+        ],
+        weekdaysShort: [
+            text.localize('Su'),
+            text.localize('Mo'),
+            text.localize('Tu'),
+            text.localize('We'),
+            text.localize('Th'),
+            text.localize('Fr'),
+            text.localize('Sa')
+        ],
+        today: text.localize('Today'),
+        clear: text.localize('Clear'),
+        firstDay: 1,
+        format: 'd mmmm yyyy г.',
+        formatSubmit: 'yyyy/mm/dd'
+    });
+
+    jQuery.extend( jQuery.fn.pickatime.defaults, {
+        clear: text.localize('Clear'),
+    });
+
+    $('input[type=date]').pickadate(); // .has-date-picker
+    $('input[type=time]').pickatime(); // .has-time-picker
 }
