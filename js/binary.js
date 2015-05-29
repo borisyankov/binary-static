@@ -9400,7 +9400,7 @@ function initTabs() {
 }
 
 function initDateTimePicker() {
-    jQuery.extend( jQuery.fn.pickadate.defaults, {
+    $('input[type=date]').pickadate({
         monthsFull: [
             text.localize('January'),
             text.localize('February'),
@@ -9454,10 +9454,7 @@ function initDateTimePicker() {
         formatSubmit: 'yyyy/mm/dd'
     });
 
-    jQuery.extend( jQuery.fn.pickatime.defaults, {
+    $('input[type=time]').pickatime({
         clear: text.localize('Clear'),
-    });
-
-    $('input[type=date]').pickadate(); // .has-date-picker
-    $('input[type=time]').pickatime(); // .has-time-picker
+    }); // .has-time-picker
 }

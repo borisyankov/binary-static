@@ -926,19 +926,6 @@ nav a:hover {
   box-shadow: none;
 }
 
-.header nav {
-  color: white;
-}
-
-.header nav a {
-  color: white;
-  font-weight: normal;
-}
-
-.header nav a:hover {
-  text-decoration: none;
-}
-
 .submenu {
   border-left: 1px solid transparent;
   border-right: 1px solid transparent;
@@ -990,7 +977,7 @@ nav a:hover {
 
 .sitemap, .regulatory {
   margin: 0 auto;
-  padding: 2rem 0;
+  padding: 2rem .5rem;
   max-width: 1000px;
 }
 
@@ -1014,24 +1001,37 @@ nav a:hover {
 .regulatory {
   font-size: 0.44444rem;
 }
-.regulatory img {
-  height: 5em;
-}
 
 .regulatory-logos {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+.regulatory-logos a {
+  width: 30%;
+}
+.regulatory-logos a + a {
+  margin-left: 5%;
+}
+.regulatory-logos a:nth-child(3) {
+  margin-top: .5rem;
+}
+.regulatory-logos a:last-child {
+  margin-left: 0;
+  width: 100%;
+}
 
 .regulatory-text {
   text-align: justify;
-  -webkit-flex: 5;
-      -ms-flex: 5;
-          flex: 5;
+  -webkit-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
 }
 
 .social-col img {
@@ -1095,8 +1095,8 @@ html, body {
   min-height: 100vh;
 }
 
-body, .msgbar, .header, .sitemap,
-.msgbar-wrapper, .header-wrapper, .content-wrapper, .sitemap-wrapper, .footer-wrapper {
+body, .msgbar, .sitemap,
+.msgbar-wrapper, .content-wrapper, .sitemap-wrapper, .footer-wrapper {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -1108,24 +1108,10 @@ body {
           flex-direction: column;
 }
 
-.header-wrapper {
+header {
   position: fixed;
   z-index: 50;
   width: 100%;
-}
-
-.content-wrapper {
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  margin: 3em 0;
-}
-
-.header-wrapper, .content-wrapper, .footer-wrapper {
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 0 1rem;
 }
 
 #page-wrapper {
@@ -1136,6 +1122,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 100vh;
+  padding-top: 3rem;
 }
 
 #content-holder {
@@ -1186,7 +1173,7 @@ body {
   font-size: 0.66667rem;
 }
 
-.msgbar, .header, .sitemap {
+.msgbar, .sitemap {
   -webkit-flex-flow: row wrap;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
@@ -1194,21 +1181,6 @@ body {
 
 .gmt-clock {
   text-align: center;
-}
-
-.header nav {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-.header nav ul {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 #logo {
@@ -1225,22 +1197,6 @@ body {
   text-align: left;
 }
 
-.header nav li {
-  cursor: pointer;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-grow: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
 .nav1st {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1253,10 +1209,6 @@ body {
           justify-content: center;
   padding-left: .5rem;
   margin: 0;
-}
-
-.header nav a {
-  display: block;
 }
 
 .nav1st li div {
@@ -4414,9 +4366,7 @@ div#price_table_notes {
   min-width: 33.3333%;
 }
 
-.cashieravailable_payment_methods-content img,
-.cashier-content img,
-.cashier-apm-content img {
+.cashierpayment_methods-content img {
   width: 100px;
   height: 60px;
   background-image: url("../images/pages/cashier/payment-methods-sprite.png");

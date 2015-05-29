@@ -7,7 +7,7 @@
     <li><a href="#affiliate-tac">[% l('Affiliate') %]</a></li>
     [% IF request.country != 'JAPAN' %]<li><a href="#trading-agent-tac">[% l('Trading Agent') %]</a></li>[% END %]
     <li><a href="#complaints-disputes-tac">[% l('Complaints and Disputes') %]</a></li>
-    <li><a href="#conflicts-policy-tac">[% l('conflicts Policy') %]</a></li>
+    <li><a href="#conflicts-policy-tac">[% l('Conflicts Policy') %]</a></li>
     <li><a href="#biel-terms-tac">[% l('BIEL Terms') %]</a></li>
 </ul>
 <div id="legal-tac" class="tab-content">

@@ -4,8 +4,7 @@
             .nav-trade
                 %a.pjaxload{:href => url_for('trade.cgi')}= l('Trade')
         %li.submenu
-            .nav-cashier
-                %a.pjaxload{:href => url_for('/cashier')}= l('Cashier')
+            = include('layouts/default/nav_cashier')
         %li.submenu
             = include('layouts/default/nav_resources')
         %li.submenu

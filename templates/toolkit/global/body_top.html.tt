@@ -1,10 +1,10 @@
 [% UNLESS is_pjax_request %]
 <body[% IF body_id %] id="[% body_id %]"[% END %][% IF lang %] class="[% language %]"[% END %]>
-    <div id='page-wrapper'>
     [% INCLUDE global/header.html.tt %]
-    [% INCLUDE global/topbar.html.tt %]
-    <div id="content-holder">
-    <!-- FlushHead -->
+    <div id='page-wrapper'>
+        [% INCLUDE global/topbar.html.tt %]
+        <div id="content-holder">
+        <!-- FlushHead -->
 [% END %]
 
 [% google_tag_tracking_code %]

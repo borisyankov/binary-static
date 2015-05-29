@@ -1,17 +1,17 @@
 !!! 5
-  - if(stash('appcache_manifest')) {
-    - my $manifest = stash->{language} . '_appcache.appcache';
+- if(stash('appcache_manifest')) {
+- my $manifest = stash->{language} . '_appcache.appcache';
 %html{:manifest => url_for($manifest)}
-  - } else {
+- } else {
 %html
-  - }
-  = include('layouts/default/head')
-  - my $body_id = current_route;
-  - my $lang1 = stash->{language};
-  %body#$body_id.$lang1
-    #page-wrapper
-      = include('layouts/default/header')    
-      = include('layouts/default/topbar')
-      #content-holder
-        = include('layouts/default/content')
-      = include('layouts/default/footer')
+- }
+    = include('layouts/default/head')
+    - my $body_id = current_route;
+    - my $lang1 = stash->{language};
+    %body#$body_id.$lang1
+        = include('layouts/default/header')
+        #page-wrapper
+            = include('layouts/default/topbar')
+            #content-holder
+                = include('layouts/default/content')
+            = include('layouts/default/footer')

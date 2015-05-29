@@ -2,62 +2,27 @@
 
 %h1= l('Cashier')
 
-%a.pjaxload{:href => stash('deposit_url'), :id => 'payment_methods'}
-    %img#payment_methods_icon.responsive.charting-page-icon{:src => url_for('images/pages/cashier/payment-methods.svg')}
-%p= l('Deposit or withdraw to your account via bank-wire, credit card, or e-cash wallet.')
-
-%a.button.by_client_type.client_real.with_login_cookies{ :href => stash('deposit_url') }= l('Deposit')
-
-%a.button.by_client_type.client_real.with_login_cookies{ :href => stash('withdraw_url') }= l('Withdraw')
-
-%a.pjaxload{:href => url_for('/cashier/payment_agent_list'), :id => 'payment_agent'}
-    %img#payment_agent_icon.responsive.charting-page-icon{:src => url_for('images/pages/cashier/payment-agents.svg')}
-
-%p= l('You can use an authorized payment agent to process deposits and withdrawals for e-cash methods or local currencies not supported by [_1].', stash->{website_name})
-
-%a.button.by_client_type.client_real.with_login_cookies{:href => url_for('/cashier/payment_agent_list')}= l('Deposit To Payment Agent')
-
-%a.button.by_client_type.client_real.with_login_cookies{:href => url_for('paymentagent_withdraw.cgi')}= l('Withdraw Via Payment Agent')
-
-
-  %a.pjaxload{:href => stash('deposit_url'), :id => 'payment_methods'}
-        %img#payment_methods_icon.responsive.charting-page-icon{:src => url_for('images/pages/cashier/payment-methods.svg')}
-  .grd-grid-5
-    %p= l('Deposit or withdraw to your account via bank-wire, credit card, or e-cash wallet.')
-    %a.pjaxload#view_payment_methods{:href=>url_for('cashier/payment_methods')}= l('View available payment methods')
-  .grd-grid-5
-    .grd-row-padding
-      %a.pjaxload.button.button_large.by_client_type.client_real.with_login_cookies{ :href => stash('deposit_url') }
-        %span= l('Deposit')
-    .grd-row-padding
-      %a.pjaxload.button.button_large.by_client_type.client_real.with_login_cookies{ :href => stash('withdraw_url') }
-        %span= l('Withdraw')
-
-
-
-#payment-agent-section.grd-row-padding.table-body
-  .grd-grid-2
-    .grd-grid-12
-      %a.pjaxload{:href => url_for('/cashier/payment_agent_list'), :id => 'payment_agent'}
-        %img#payment_agent_icon.responsive.charting-page-icon{:src => url_for('images/pages/cashier/payment-agents.svg')}
-  .grd-grid-5
-    %p= l('You can use an authorized payment agent to process deposits and withdrawals for e-cash methods or local currencies not supported by [_1].', stash->{website_name})
-  .grd-grid-5
-    .grd-row-padding
-      %a.pjaxload.button.button_large.by_client_type.client_real.with_login_cookies{:href => url_for('/cashier/payment_agent_list')}
-        %span= l('Deposit To Payment Agent')
-    .grd-row-padding
-      %a.pjaxload.button.button_large.by_client_type.client_real.with_login_cookies{:href => url_for('paymentagent_withdraw.cgi')}
-        %span= l('Withdraw Via Payment Agent')
-
-#account-transfer-section.grd-row-padding.table-body
-  .grd-grid-2
-    .grd-grid-12
-      %a.pjaxload{:href => url_for('/cashier/account_transfer'), :id => 'account_transfer'}
-        %img#acc_transfer_icon.responsive.charting-page-icon{:src => url_for('images/pages/cashier/account-transfer.svg')}
-  .grd-grid-5
-    %p= l('Transfer between your gaming and financial accounts.')
-  .grd-grid-5
-    .grd-row-padding
-      %a.pjaxload.button.button_large.by_client_type.client_real.with_login_cookies{:href => url_for('/cashier/account_transfer')}
-        %span= l('Transfer')
+.row
+    .col
+        %p.media
+            %img{:src => url_for('images/pages/cashier/payment-methods.svg')}
+        %p= l('Deposit or withdraw to your account via bank-wire, credit card, or e-cash wallet.')
+        %p.media
+            %a.button.pjaxload{:href=>url_for('cashier/payment_methods')}= l('View available payment methods')
+        %p.media
+            %a.pjaxload.button{ :href => stash('deposit_url') }= l('Deposit')
+            %a.pjaxload.button{ :href => stash('withdraw_url') }= l('Withdraw')
+    .col
+        %p.media
+            %img{:src => url_for('images/pages/cashier/payment-agents.svg')}
+        %p= l('You can use an authorized payment agent to process deposits and withdrawals for e-cash methods or local currencies not supported by [_1].', stash->{website_name})
+        %p.media
+            %a.pjaxload.button{:href => url_for('/cashier/payment_agent_list')}= l('Deposit To Payment Agent')
+        %p.media
+            %a.pjaxload.button{:href => url_for('paymentagent_withdraw.cgi')}= l('Withdraw Via Payment Agent')
+    .col
+        %p.media
+            %img{:src => url_for('images/pages/cashier/account-transfer.svg')}
+        %p= l('Transfer between your gaming and financial accounts.')
+        %p.media
+            %a.pjaxload.button{:href => url_for('/cashier/account_transfer')}= l('Transfer')

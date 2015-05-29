@@ -1,5 +1,5 @@
 .nav-resources
-    %a= l('Resources')
+    %a{:href => url_for('/resources')}= l('Resources')
 %ul.nav2nd
     %li
         %a.pjaxload{:href=>url_for('/resources/asset_index')}= l('Asset Index')

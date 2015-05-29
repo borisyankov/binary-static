@@ -1,5 +1,5 @@
 .nav-help
-    %a= l('Help')
+    %a.pjaxload{:href=>url_for('/get-started')}= l('Help')    
 %ul.nav2nd
     %li
         %a.pjaxload{:href => url_for('/resources/contract_guide')}= l('Trading Guide')

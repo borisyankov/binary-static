@@ -6,9 +6,7 @@
             </div>
         </li>
         <li class="submenu">
-            <div class="nav-cashier">
-                <a class="pjaxload" href="[% request.url_for('/cashier') %]" [% target %]>[% l("Cashier") %]</a>
-            </div>
+            [% INCLUDE global/nav_cashier.html.tt %]
         </li>
         <li class="submenu">
             [% INCLUDE global/nav_resources.html.tt %]
