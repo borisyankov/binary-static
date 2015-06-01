@@ -6,28 +6,45 @@
 %p= l('Do you want to learn more about the markets and how to trade them? Check out the resources below.')
 
 .row
-  .col
-    %a.pjaxload{:href => url_for('/resources/asset_index'), :id => 'asset-index'}
-      %img#charting_icon.responsive.charting-page-icon{:src => url_for('images/pages/resources/asset-index.svg')}
-    %p= l('View the full list of assets, contract types and durations.')
-    %a.pjaxload.button{:href => url_for('/resources/asset_index')}= l('Asset Index')
-  .col
-    %a.pjaxload{:href => url_for('trading_times.cgi'),:id => 'trading-times'}
-      %img#charting_icon.responsive.charting-page-icon{:src => url_for('images/pages/resources/trading-times.svg')}
-    %p= l('View the operating hours of the markets you can trade.')
-    %a.pjaxload.button{:href => url_for('trading_times.cgi')}= l('Trading Times')
-  .col
-    %a.pjaxload{:href => url_for('/resources/contract_guide'),:id => 'contract-guide'}
-      %img#charting_icon.responsive.charting-page-icon{:src => url_for('images/pages/resources/contract-guide.svg')}
-    %p= l('Learn about the different ways to trade on the markets.')
-    %a.pjaxload.button{:href => url_for('/resources/contract_guide')}= l('Trading Guide')
-  .col
-    %a.pjaxload{:href => url_for('/resources/pricing_table'),:id => 'pricing-table'}
-      %img#charting_icon.responsive.charting-page-icon{:src => url_for('images/pages/resources/pricing-table.svg')}
-    %p= l('View contract prices across a range of barriers and durations.')
-    %a.pjaxload.button{:href => url_for('/resources/pricing_table')}= l('Pricing Table')
-  .col
-    %a.pjaxload{:href => url_for('/resources/rise_fall_table'),:id => 'contract-guide'}
-      %img#charting_icon.responsive.charting-page-icon{:src => url_for('images/pages/resources/rise-fall-table.svg')}
-    %p= l('View Rise/Fall contract prices across a range of markets.')
-    %a.pjaxload.button{:href => url_for('/resources/rise_fall_table')}= l('Rise/Fall Table')
+    .col
+        %p.media
+            %img{:src => url_for('images/pages/resources/asset-index.svg')}
+        %p.media
+            %a.pjaxload.button{:href => url_for('/resources/asset_index')}= l('Asset Index')
+        %p= l('View the full list of assets, contract types and durations.')
+    .col
+        %p.media
+            %img{:src => url_for('images/pages/resources/trading-times.svg')}
+        %p.media
+            %a.pjaxload.button{:href => url_for('trading_times.cgi')}= l('Trading Times')
+        %p= l('View the operating hours of the markets you can trade.')
+    .col
+        %p.media
+            %img{:src => url_for('images/pages/resources/pricing-table.svg')}
+        %p.media
+            %a.pjaxload.button{:href => url_for('/resources/pricing_table')}= l('Pricing Table')
+        %p= l('View contract prices across a range of barriers and durations.')
+    .col
+        %p.media
+            %img{:src => url_for('images/pages/resources/rise-fall-table.svg')}
+        %p.media
+            %a.pjaxload.button{:href => url_for('/resources/rise_fall_table')}= l('Rise/Fall Table')
+        %p= l('View Rise/Fall contract prices across a range of markets.')
+    .col
+        %p.media
+            %img{:src => url_for('images/pages/charting/interactive-charts.svg')}
+        %p.media
+            %a.pjaxload.button{:href => url_for('/charting/application')}= l('Java Charts')
+        %p= l('Try our downloadable charting application with an extensive range of indicators.')
+    .col
+        %p.media
+            %img{:src => url_for('images/pages/charting/popup-charts.svg')}
+        %p.media
+            %a.pjaxload.button{:href => url_for('/charting/livechart')}= l('Live Charts')
+        %p= l('This is our \'next generation\' charting tool.')
+    .col
+        %p.media
+            %img{:src => url_for('images/pages/charting/highcharts.svg')}
+        %p.media
+            %a.pjaxload.button{:href => '//highcharts.binary.com'}= l('HighCharts')
+        %p.media= l('It has the best features of our Java and Live charts.')

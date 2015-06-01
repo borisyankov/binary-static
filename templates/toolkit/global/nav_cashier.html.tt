@@ -6,10 +6,10 @@
         <a class="pjaxload" href="[% request.url_for('cashier/payment_methods') %]">[% l("Payment Methods") %]</a>
     </li>
     <li>
-        <a class="pjaxload" href="[% stash('deposit_url') %]">[% l("Deposit") %]</a>
+        <a class="pjaxload" href="[% request.url_for('cashier/forward?act=deposit') %]">[% l("Deposit") %]</a>
     </li>
     <li>
-        <a class="pjaxload" href="[% stash('withdraw_url') %]">[% l("Withdraw") %]</a>
+        <a class="pjaxload" href="[% request.url_for('cashier/forward?act=withdraw') %]">[% l("Withdraw") %]</a>
     </li>
     <li>
         <a class="pjaxload" href="[% request.url_for('cashier/payment_agent_list') %]">[% l("Deposit To Payment Agent") %]</a>

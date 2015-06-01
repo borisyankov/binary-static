@@ -2,11 +2,11 @@
     %a.pjaxload{:href => url_for('cashier')}= l('Cashier')
 %ul.nav2nd
     %li
-        %a.pjaxload{:href=>url_for('cashier/payment_methods')}= l('Payment Methods')
+        %a.pjaxload{:href=> url_for('cashier/payment_methods')}= l('Payment Methods')
     %li
-        %a.pjaxload{:href => stash('deposit_url')}= l('Deposit')
+        %a.pjaxload{:href => url_for('cashier/forward?act=deposit')}= l('Deposit')
     %li
-        %a.pjaxload{:href => stash('withdraw_url')}= l('Withdraw')
+        %a.pjaxload{:href => url_for('cashier/forward?act=withdraw')}= l('Withdraw')
     %li
         %a.pjaxload{:href => url_for('cashier/payment_agent_list')}= l('Deposit To Payment Agent')
     %li

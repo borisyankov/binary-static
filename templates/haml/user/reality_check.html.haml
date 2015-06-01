@@ -1,4 +1,4 @@
-%div
+%div#reality-check-content
   %h1= l('Reality Check')
   - my @tm = gmtime $login_time;
   - my $time = time;
@@ -41,7 +41,7 @@
           %td= $to_monetary_number_format->($el->{pot_profit})
       - }
     - }
-%div
+%div#reality-check-nav
   %span.button
     %button.button{:bcont => 1}= l('Continue Trading')
   %span

@@ -51,7 +51,6 @@
     "src/javascript/binary/pages/bet/bet_sell.js",
     "src/javascript/binary/pages/bet/pricing_details.js",
     "src/javascript/binary/pages/bet/tick_trade.js",
-    "src/javascript/binary/pages/chart.js",
     "src/javascript/binary/pages/chartapp.js",
     "src/javascript/binary/pages/client.js",
     "src/javascript/binary/pages/client/form.js",

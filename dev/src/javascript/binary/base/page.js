@@ -452,14 +452,20 @@ Contents.prototype = {
         }
         return false;
     },
+    init_access_classes: function() {
+        $('body')
+            .removeClass()
+            .toggleClass('client-logged-in', this.client.is_logged_in)
+            .toggleClass('client-not-logged-in', !this.client.is_logged_in)
+            .toggleClass('client-is-real', this.client.is_real)
+            .toggleClass('client-is-virtual', this.client.is_virtual)
+            .toggleClass('client-has-real', this.has_real_account())
+            .toggleClass('client-1', !$.cookie('staff') || !/^Q?MF|MLT/.test(this.client.loginid))
+            .toggleClass('client-2', !/^Q?CR/.test(this.client.loginid));
+    },
     activate_by_client_type: function() {
 
-        $('body').removeClass();
-        $('body').toggleClass('client-logged-in', this.client.is_logged_in);
-        $('body').toggleClass('client-not-logged-in', !this.client.is_logged_in);
-        $('body').toggleClass('client-is-real', this.client.is_real);
-        $('body').toggleClass('client-is-virtual', this.client.is_virtual);
-        $('body').toggleClass('client-has-real', this.has_real_account());
+        this.init_access_classes();
 
         $('.by_client_type').addClass('invisible');
 
@@ -539,7 +545,9 @@ Page.prototype = {
         this.record_affiliate_exposure();
         this.contents.on_load();
         this.on_click_signup();
-        this.on_change_password();
+        this.on_input_password();
+        this.on_click_acc_transfer();
+        this.on_click_view_balances();
     },
     on_unload: function() {
         this.contents.on_unload();
@@ -557,7 +565,7 @@ Page.prototype = {
             $('#loginid-switch-form').submit();
         });
     },
-    on_change_password: function() {
+    on_input_password: function() {
         $('#chooseapassword').on('input', function() {
             $('#reenter-password').removeClass('invisible');
             $('#reenter-password').show();
@@ -575,7 +583,7 @@ Page.prototype = {
                 $('#signup_error').show();
                 return false;
             }
-            if (!client_form.compare_new_password(pwd, pwd_2)) {
+            if (pwd.length === 0 || pwd_2.length === 0 || !client_form.compare_new_password(pwd, pwd_2)) {
                 $('#signup_error').text(text.localize('The two passwords that you entered do not match.'));
                 $('#signup_error').removeClass('invisible');
                 $('#signup_error').show();
@@ -592,7 +600,45 @@ Page.prototype = {
             $('#virtual-acc-form').submit();
         });
     },
+    on_click_acc_transfer: function() {
+        $('#acc_transfer_submit').on('click', function() {
+            var amount = $('#acc_transfer_amount').val();
+            if (!/^[0-9]+\.?[0-9]{0,2}$/.test(amount) || amount < 0.1) {
+                $('#invalid_amount').removeClass('invisible');
+                $('#invalid_amount').show();
+                return false;
+            }
+            $('#acc_transfer_submit').submit();
+        });
+    },
+    on_click_view_balances: function() {
+        $('#view-balances').on('click', function(event) {
+            event.preventDefault();
+            if ($(this).hasClass("disabled")) {
+                return false;
+            }
+            $(this).addClass("disabled");
 
+            $.ajax({
+                url: page.url.url_for('user/balance'),
+                dataType: 'text',
+                success: function (data) {
+                    var outer = $('#client-balances');
+                    if (outer) outer.remove();
+
+                    outer = $("<div id='client-balances' class='lightbox'></div>").appendTo('body');
+                    middle = $('<div />').appendTo(outer);
+                    $('<div>' + data + '</div>').appendTo(middle);
+
+                    $('#client-balances [bcont=1]').on('click', function () {
+                        $('#client-balances').remove();
+                    });
+                },
+            }).always(function() {
+                $('#view-balances').removeClass("disabled");
+            });
+        });
+    },
     localize_for: function(language) {
         text = texts[language];
         moment.locale(language.toLowerCase());
