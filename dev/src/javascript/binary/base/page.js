@@ -44,14 +44,14 @@ var User = function() {
             var loginids = loginid_list.split('+').sort();
 
             for (var i = 0; i < loginids.length; i++) {
-                var real = 0;
-                var disabled = 0;
+                var real = false;
+                var disabled = false;
                 var items = loginids[i].split(':');
                 if (items[1] == 'R') {
-                    real = 1;
+                    real = true;
                 }
                 if (items[2] == 'D') {
-                    disabled = 1;
+                    disabled = true;
                 }
 
                 var id_obj = { 'id':items[0], 'real':real, 'disabled':disabled };
@@ -237,16 +237,17 @@ Header.prototype = {
             var loginid_select = '';
             var loginid_array = this.user.loginid_array;
             for (var i=0;i<loginid_array.length;i++) {
+                if (loginid_array[i].disabled) continue;
+
                 var curr_loginid = loginid_array[i].id;
                 var real = loginid_array[i].real;
-                var disabled = loginid_array[i].disabled;
                 var selected = '';
                 if (curr_loginid == this.client.loginid) {
                     selected = ' selected="selected" ';
                 }
 
                 var loginid_text;
-                if (real == 1) {
+                if (real) {
                     if(loginid_array[i].financial){
                         loginid_text = text.localize('Investment Account') + ' (' + curr_loginid + ')';
                     } else if(loginid_array[i].non_financial) {
@@ -258,12 +259,7 @@ Header.prototype = {
                     loginid_text = text.localize('Virtual Account') + ' (' + curr_loginid + ')';
                 }
 
-                var disabled_text = '';
-                if (disabled == 1) {
-                    disabled_text = ' disabled="disabled" ';
-                }
-
-                loginid_select += '<option value="' + curr_loginid + '" ' + selected + disabled_text + '>' + loginid_text +  '</option>';
+                loginid_select += '<option value="' + curr_loginid + '" ' + selected + '>' + loginid_text +  '</option>';
             }
             $("#client_loginid").html(loginid_select);
         }
@@ -520,20 +516,17 @@ var Page = function(config) {
 
 Page.prototype = {
     language: function() {
-        if ($('.language-selector').length > 0) {
-            return $('.language-selector select').val().toUpperCase(); //Required as mojo still provides lower case lang codes and most of our system expects upper case.
-        } else if(page.url.param('l')) {
+        if(page.url.param('l')) {
             return page.url.param('l');
         } else {
             return 'EN';
         }
     },
     flag: function() {
-        var idx = $('.language-selector select option:selected').index(),
-            offset = (idx + 1) * 15,
-            cssStyle = '-' + offset + 'px';
-        $('.language-selector select').css('background-position-y', offset);
-        console.log(cssStyle);
+        var idx = $('.language-options li a.selected').parent().index(),
+            offset = - (idx + 1) * 15,
+            cssStyle = offset + 'px';
+        $('.nav-languages a').css('background-position-y', offset);
     },
     on_load: function() {
         this.url.reset();
@@ -554,9 +547,10 @@ Page.prototype = {
     },
     on_change_language: function() {
         var that = this;
-        $('.language-selector').on('change', 'select', function() {
-            var language = $(this).find('option:selected').val();
+        $('.language-options').on('click', 'li', function(e) {
+            var language = $(this).find('a').attr('data-langcode');
             document.location = that.url_for_language(language);
+            e.preventDefault();
         });
     },
     on_change_loginid: function() {

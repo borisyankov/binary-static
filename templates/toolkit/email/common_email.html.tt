@@ -712,7 +712,7 @@
                                                         <tr>
                                                             <td class="leftColumnContent-footer">
                                                                 <b>[% l("Have a question? Need Help?") %]</b>
-                                                                <br/>[% l("Visit our") %] <a style="color:#699A7D;" href="https://binary.desk.com/customer/en/portal/articles">[% l("FAQ") %]</a> [% l("or Email us at") %] <a style="color:#699A7D;" href="mailto:helpdesk@binary.com">helpdesk@binary.com</a>.
+                                                                <br/>[% l("Visit our") %] <a style="color:#699A7D;" href="https://binary.desk.com/customer/en/portal/articles">[% l("FAQ") %]</a> [% l("or Email us at") %] <a style="color:#699A7D;" href="mailto:support@binary.com">support@binary.com</a>.
 
                                                             </td>
                                                         </tr>

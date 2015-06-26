@@ -16,10 +16,8 @@
         </li>
         <li class="nav-spacer">
         </li>
-        <li>
-            <div class="language-selector">
-                [% language_select %]
-            </div>
+        <li class="submenu">
+            [% INCLUDE global/nav_languages.html.tt %]
         </li>
         <li class="login-container">
             <a href="[% request.url_for('login') %]" class="button login-btn">[% l("Log in") %]</a>

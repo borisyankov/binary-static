@@ -1,6 +1,6 @@
 <h2>[% l("Terms and Conditions") %]</h2>
 <p>
-    <i>[% l("Version 36. Last modified 2015-05-19.") %]</i>
+    <i>[% l("Version 37. Last modified 2015-05-29.") %]</i>
 </p>
 <p>
     [% l("It is the responsibility of each Client to read and understand this legal notice and the terms and conditions pursuant to which an acquisition of financial contracts via this site is governed.") %]
@@ -70,7 +70,7 @@
     [% l("The company holds customer funds in separate bank accounts to the operational accounts which would not, in the event of insolvency, form part of the Company's assets. This meets the Gambling Commission’s requirements for the segregation of customer funds at the level: medium protection.") %]
 </p>
 <p>
-[% l("The company has various deposit methods available, each with their own timing for deposits, some of which might not be available for withdrawals. Full details of deposits and withdrawals methods available including settlement times are available <a href='[_1]' class='pjaxload'>here:</a>", request.url_for('cashier/payment_methods')) %]
+[% l("The company has various deposit methods available, each with their own timing for deposits, some of which might not be available for withdrawals. Full details of deposits and withdrawals methods available including settlement times are available <a href='[_1]' class='pjaxload'>here</a>.", request.url_for('cashier/payment_methods')) %]
 </p>
 <p>
     [% l("Your account should not be used as a banking facility and deposits should only be made with a view to using funds to place contracts. The Company is not a financial institution, Clients will not receive interest on deposits. Should you make repeated deposits and withdrawals without commensurate contracts being placed, we reserve the right to pass on to your accounts, without prior notice, any bank charges we have incurred before closing the account.") %]

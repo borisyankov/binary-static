@@ -1,14 +1,14 @@
 !!! 5
+- my $lang = stash->{language};
+- my $body_id = current_route;
 - if(stash('appcache_manifest')) {
 - my $manifest = stash->{language} . '_appcache.appcache';
-%html{:manifest => url_for($manifest)}
+%html{:manifest => url_for($manifest), lang => $lang}
 - } else {
-%html
+%html{lang => $lang}
 - }
     = include('layouts/default/head')
-    - my $body_id = current_route;
-    - my $lang1 = stash->{language};
-    %body#$body_id.$lang1
+    %body#$body_id.$lang
         = include('layouts/default/header')
         #page-wrapper
             = include('layouts/default/topbar')

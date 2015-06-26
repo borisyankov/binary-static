@@ -1,9 +1,5 @@
 <!DOCTYPE html>
-[% IF appcache_manifest %]
-<html manifest='[%= request.url_for(iso639a_language _ "_appcache.appcache") =%]'>
-[% ELSE %]
-<html>
-[% END %]
+<html [% IF appcache_manifest %] manifest='[%= request.url_for(iso639a_language _ "_appcache.appcache") =%]' [% END %] [% IF lang %] lang="[% language %]" [% END %]>
     <head>
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
         <meta http-equiv="Content-Language" content="[%= iso639a_language =%]" />
@@ -20,7 +16,7 @@
         <meta property="og:type" content="website" />
         <meta property="og:image" content="[% request.url_for('images/common/og_image.gif') %]" />
 
-        <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700&subset=latin,vietnamese,cyrillic-ext,latin-ext,cyrillic' rel='stylesheet' type='text/css'>        
+        <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700&subset=latin,vietnamese,cyrillic-ext,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
 
         <link rel="apple-touch-icon" sizes="57x57" href="[% request.url_for('/images/favicons/apple-touch-icon-57x57.png') %]">
         <link rel="apple-touch-icon" sizes="114x114" href="[% request.url_for('/images/favicons/apple-touch-icon-114x114.png') %]">

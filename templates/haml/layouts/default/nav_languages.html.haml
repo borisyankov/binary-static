@@ -1,0 +1,15 @@
+- my $languages = available_languages();
+- my $sel_code = stash->{language};
+
+.nav-languages
+    %a(href='#')!= '&nbsp'
+%ul.nav2nd.language-options
+    - foreach (keys %{ $languages }) {
+        - my ($code, $name) = ($_, $languages->{$_});
+        %li
+            - if ($code ne $sel_code) {
+                %a(href='#', data-langcode=$code)= $name
+            - } else {
+                %a.selected(href='#', data-langcode=$code)= $name
+            - }
+    - }

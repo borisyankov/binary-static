@@ -28,18 +28,17 @@
                 <th>[% l('Upcoming Events') %]</th>
             </tr>
         </thead>
-
         <tbody>
         [% FOREACH underlying IN submarket.underlyings %]
             <tr>
                 <td><a href="[% underlying.link %]">[% underlying.name %]</a>[% underlying.tooltip %]</td>
-                <td>[% underlying.times.open %][% IF underlying.times.pm_open %]<br>[% underlying.times.pm_open %][% END %]</td>
-                <td>[% IF underlying.times.am_close %][% underlying.times.am_close %]<br>[% END %][% underlying.times.close %]</td>
+                <td>[% FOREACH open IN underlying.times.open %][% open %]<br>[% END %]</td>
+                <td>[% FOREACH close IN underlying.times.close %][% close %]<br>[% END %]</td>
                 <td>[% underlying.times.settlement %]</td>
                 <td>[% FOREACH event IN underlying.events %][% event.descrip %]: [% event.dates %]</br>[% END %]</td>
             </tr>
         [% END %]
-        </tbody>    
+        </tbody>
     [% END %]
     </table>
 </div>

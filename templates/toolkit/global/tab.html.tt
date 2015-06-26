@@ -1,0 +1,13 @@
+<ul role="segmented" [% IF menu.id %]id="[% menu.id %]"[% END %] [% IF menu.class %]class="[% menu.class %]"[% END %]>
+    [% FOREACH item IN menu_items %]
+    <li [% IF item.active %]class="active"[% END %]>
+        <a href="#[% item.url %]">[% item.text %]</a>
+    </li>
+    [% END %]
+</ul>
+
+[% FOREACH content IN menu_content %]
+    <div id="[% content.id %]" [% IF content.class %]class="[% content.class %]"[% END %]>
+        [% content.content %]
+    </div>
+[% END %]

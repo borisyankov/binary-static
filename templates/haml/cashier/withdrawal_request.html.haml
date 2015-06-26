@@ -1,0 +1,14 @@
+- stash(title => l('Withdrawal Verification'));
+%div
+    %h1= l('Withdrawal Verification')
+    - if (stash->{client_message}) {
+        %p= stash->{client_message}
+        %p.center-aligned
+          %a.button.pjaxload{:href => url_for('cashier/forward?act=withdraw')}
+            %span= l('Send Verification Email')
+    - } else {
+        .row
+          %p.col.media.s
+            %img.responsive{:src => url_for('images/icons/protection.svg')}
+          %p.col= l("For added security protection against unauthorised withdrawals, an email containing a secure link to the withdrawals page has been sent to your email [_1]. Please check your email to access this link.", $email)
+    - }

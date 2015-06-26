@@ -421,14 +421,14 @@ var User = function() {
             var loginids = loginid_list.split('+').sort();
 
             for (var i = 0; i < loginids.length; i++) {
-                var real = 0;
-                var disabled = 0;
+                var real = false;
+                var disabled = false;
                 var items = loginids[i].split(':');
                 if (items[1] == 'R') {
-                    real = 1;
+                    real = true;
                 }
                 if (items[2] == 'D') {
-                    disabled = 1;
+                    disabled = true;
                 }
 
                 var id_obj = { 'id':items[0], 'real':real, 'disabled':disabled };
@@ -614,16 +614,17 @@ Header.prototype = {
             var loginid_select = '';
             var loginid_array = this.user.loginid_array;
             for (var i=0;i<loginid_array.length;i++) {
+                if (loginid_array[i].disabled) continue;
+
                 var curr_loginid = loginid_array[i].id;
                 var real = loginid_array[i].real;
-                var disabled = loginid_array[i].disabled;
                 var selected = '';
                 if (curr_loginid == this.client.loginid) {
                     selected = ' selected="selected" ';
                 }
 
                 var loginid_text;
-                if (real == 1) {
+                if (real) {
                     if(loginid_array[i].financial){
                         loginid_text = text.localize('Investment Account') + ' (' + curr_loginid + ')';
                     } else if(loginid_array[i].non_financial) {
@@ -635,12 +636,7 @@ Header.prototype = {
                     loginid_text = text.localize('Virtual Account') + ' (' + curr_loginid + ')';
                 }
 
-                var disabled_text = '';
-                if (disabled == 1) {
-                    disabled_text = ' disabled="disabled" ';
-                }
-
-                loginid_select += '<option value="' + curr_loginid + '" ' + selected + disabled_text + '>' + loginid_text +  '</option>';
+                loginid_select += '<option value="' + curr_loginid + '" ' + selected + '>' + loginid_text +  '</option>';
             }
             $("#client_loginid").html(loginid_select);
         }
@@ -897,20 +893,17 @@ var Page = function(config) {
 
 Page.prototype = {
     language: function() {
-        if ($('.language-selector').length > 0) {
-            return $('.language-selector select').val().toUpperCase(); //Required as mojo still provides lower case lang codes and most of our system expects upper case.
-        } else if(page.url.param('l')) {
+        if(page.url.param('l')) {
             return page.url.param('l');
         } else {
             return 'EN';
         }
     },
     flag: function() {
-        var idx = $('.language-selector select option:selected').index(),
-            offset = (idx + 1) * 15,
-            cssStyle = '-' + offset + 'px';
-        $('.language-selector select').css('background-position-y', offset);
-        console.log(cssStyle);
+        var idx = $('.language-options li a.selected').parent().index(),
+            offset = - (idx + 1) * 15,
+            cssStyle = offset + 'px';
+        $('.nav-languages a').css('background-position-y', offset);
     },
     on_load: function() {
         this.url.reset();
@@ -931,9 +924,10 @@ Page.prototype = {
     },
     on_change_language: function() {
         var that = this;
-        $('.language-selector').on('change', 'select', function() {
-            var language = $(this).find('option:selected').val();
+        $('.language-options').on('click', 'li', function(e) {
+            var language = $(this).find('a').attr('data-langcode');
             document.location = that.url_for_language(language);
+            e.preventDefault();
         });
     },
     on_change_loginid: function() {
@@ -2240,29 +2234,26 @@ function contract_guide_popup() {
 }
 
 var trading_times_init = function() {
-      var tabset_name = "#trading-tabs";
+     var url = page.url.url_for('resources/trading_times', 'date=' + dateText, 'cached'),
+         oneYearLater = moment().add(1, 'year').toDate();
 
-     var trading_times = $(tabset_name);
-     var url = location.href;
-     return;
-     $( "#tradingdate" ).pickadate({ minDate: 0, maxDate:'+1y', dateFormat: "yy-mm-dd", autoSize: true,
-     onSelect: function( dateText, picker ){
-         showLoadingImage(trading_times);
-         url = page.url.url_for('resources/trading_times', 'date=' + dateText, 'cached');
-         $.ajax({
-                  url: url,
-                  data:  { 'ajax_only': 1 },
-                  success: function(html){
-                            trading_times.replaceWith(html);
-                            trading_times = $("#trading-tabs");
-                            page.url.update(url);
-                         },
-                  error: function(xhr, textStatus, errorThrown){
-                          trading_times.empty().append(textStatus);
-                       },
-                });
-         }
-     });
+     $("#tradingdate" ).pickadate({
+         max: oneYearLater,
+         onSet: function(context) {
+             showLoadingImage($('#trading-tabs'));
+             $.ajax({
+                url: url,
+                data:  { 'ajax_only': 1 },
+                success: function(html){
+                    $("#trading-tabs").replaceWith(html);
+                    page.url.update(url);
+                },
+                error: function(xhr, textStatus, errorThrown){
+                    trading_times.empty().append(textStatus);
+                },
+            });
+        }
+    });
 };
 
 function confirm_popup_action() {
@@ -5022,7 +5013,7 @@ BetForm.Time.EndTime.prototype = {
                 details += text.localize('There was a problem accessing the server during purchase.');
             }
             var width = this.container().width(); // since the error message could be any size, set the continer size to a good value
-            this.display_buy_error('<div style="width: ' + width + 'px;"><h3>Error</h3><p>' + details + ' </p></div>');
+            this.display_buy_error('<div style="width: ' + width + 'px;"><h3>Error</h3><p>' + details + ' </p></div>', 1);
             $('.price_box').fadeTo(0, 1);
             BetPrice.order_form.enable_buy_buttons();
             this.display_buy_buttons();
@@ -5175,11 +5166,14 @@ BetForm.Time.EndTime.prototype = {
                 },
             };
         }(),
-        display_buy_error: function (data) {
+        display_buy_error: function (data, extra_info) {
             var that = this;
             var con = this.buy_response_container();
             con.addClass('bet_confirm_error');
-            data += '<p>' + text.localize('Please confirm the trade on your statement before proceeding.') + '</p>';
+            if (extra_info) {
+                data += '<p>' + text.localize('Please confirm the trade on your statement before proceeding.') + '</p>';
+            }
+            data = '<p>' + data + '</p>';
             con.children('div').first().html(data);
             con.show();
             var _clear_results = function () { that.clear_buy_results(); };
@@ -7265,8 +7259,8 @@ var change_chat_icon = function () {
               desk_widget.css({
                   'background-image': 'url("' + image_link['livechaticon'] + '")',
                   'background-size': 'contain',
-                  'min-width': 50,
-                  'min-height': 50,
+                  'min-width': 35,
+                  'min-height': 35,
                   'width': 'auto'
               });
               desk_widget.hover(function() {
@@ -7364,11 +7358,13 @@ pjax_config_page('/careers', function() {
 minDT.setUTCFullYear(minDT.getUTCFullYear - 3);
 var liveChartsFromDT, liveChartsToDT, liveChartConfig;
 
+var $liveChartFromDate, $liveChartToDate;
+
 var updateDatesFromConfig = function(config) {
     var duration = $('#live_chart_duration li[data-live=' + config.live + ']').attr('id');
-    var now = new Date();
-    liveChartsFromDT.setDateTime(new Date(now.getTime() - (duration * 1000)));
-    liveChartsToDT.setDateTime(now);
+
+    $liveChartFromDate.set('value', moment().subtract(duration, 'seconds').toDate());
+    $liveChartToDate.set('value', moment().toDate());
 };
 
 var show_chart_for_instrument = function() {
@@ -7425,17 +7421,27 @@ var build_instrument_select = function() {
 };
 
 var init_live_chart = function () {
-    liveChartsFromDT = new DateTimePicker({
-        id: "live_charts_from",
-        onChange: function(date) { liveChartsToDT.setMinDateTime(date); }
+
+    $liveChartFromDate = $('#live_charts_from_date').pickadate().pickadate('picker');
+    $liveChartToDate = $('#live_charts_to_date').pickadate().pickadate('picker');
+
+/*
+    $('#live_charts_from').pickadate({
+        onSet: function(context) {
+            $('#live_charts_from').pickadate({
+                max: $('#live_charts_to').pickadate().val()
+            });
+        }
     });
 
-    liveChartsToDT = new DateTimePicker({
-        id: "live_charts_to",
-        onChange: function(date) { liveChartsFromDT.setMaxDateTime(date); }
+    $('#live_charts_to').pickadate({
+        onSet: function(context) {
+            $('#live_charts_from').pickadate({
+                max: $('#live_charts_from').pickadate().val()
+            });
+        }
     });
-
-
+*/
     liveChartConfig = new LiveChartConfig({
         renderTo: 'live_chart_div',
     });
@@ -7488,8 +7494,8 @@ var init_live_chart = function () {
     $("#live_charts_show_interval").on('click', function() {
         liveChartConfig.update({
             interval: {
-                from: liveChartsFromDT.getDateTime(),
-                to: liveChartsToDT.getDateTime()
+                from: $liveChartFromDate.get('value'),
+                to: $liveChartToDate.get('value')
             },
             update_url: 1
         });
@@ -7512,12 +7518,11 @@ pjax_config_page('livechart', function() {
         },
         onUnload: function() {
             live_chart.close_chart();
-            live_chart = null;
         }
     };
 });
 
-//The first time some one loads live chart in the session, the script might not have finished loading by the time onLoad.fire() was called.
+//The first time someone loads live chart in the session, the script might not have finished loading by the time onLoad.fire() was called.
 //So we check if livechart was not configured when we loaded this script then we initialize it manually.
 $(function() {
     if(!live_chart && /livechart/.test(window.location.pathname)) {
@@ -7797,38 +7802,16 @@ onLoad.queue_for_url(initialize_pricing_table, 'pricing_table');
         $('#submit-date').removeClass('invisible');
     });
 }, 'profit_table');
-;
-var self_exclusion_date_picker = function () {
-    // 6 months from now
-    var start_date = new Date();
-    start_date.setMonth(start_date.getMonth() + 6);
+;onLoad.queue_for_url(function () {
 
-    // 5 years from now
-    var end_date = new Date();
-    end_date.setFullYear(end_date.getFullYear() + 5);
-
-    var id = $('#EXCLUDEUNTIL');
-
-    id.datepicker({
-        dateFormat: 'yy-mm-dd',
-        minDate: start_date,
-        maxDate: end_date,
-        onSelect: function(dateText, inst) {
-            id.attr("value", dateText);
-        },
+    $('#EXCLUDEUNTIL').pickadate({
+        minDate: moment().subtract(6, 'months').toDate(),
+        maxDate: moment.add(5, 'years').toDate()
     });
-};
 
-var self_exclusion_validate_date = function () {
     $('#selfExclusion').on('click', '#self_exclusion_submit', function () {
         return client_form.self_exclusion.validate_exclusion_date();
     });
-};
-
-onLoad.queue_for_url(function () {
-// date picker for self exclusion
-    self_exclusion_date_picker();
-    self_exclusion_validate_date();
 }, 'self_exclusion');
 ;$(function() {
 
@@ -7858,13 +7841,6 @@ onLoad.queue_for_url(function () {
         }
         e.preventDefault();
     });
-
-    $('.language-selector select').on('change', function() {
-        var idx = this.selectedIndex;
-        $('.flag').css('background-position', '0 -' + idx * 15 + 'px');
-    });
-
-
 
     $('*[data-modal]').on('click', function() {
 
@@ -9177,7 +9153,7 @@ function initDateTimePicker() {
         today: text.localize('Today'),
         clear: text.localize('Clear'),
         firstDay: 1,
-        format: 'd mmmm yyyy г.',
+        //format: moment().localeData().longDateFormat('L'), // ?? 'yy-mm-dd'
         formatSubmit: 'yyyy/mm/dd'
     });
 

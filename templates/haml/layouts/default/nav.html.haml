@@ -10,8 +10,8 @@
         %li.submenu
             = include('layouts/default/nav_help')
         %li.nav-spacer
-        %li
-            = include('layouts/default/language-select')
+        %li.submenu
+            = include('layouts/default/nav_languages')
         %li.login-container
             %a.button.login-btn{:href=>url_for('login')}= l('Log in')
         %li.submenu.account-container

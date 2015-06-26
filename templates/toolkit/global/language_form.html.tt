@@ -1,5 +1,0 @@
-<select>
-[% FOREACH o IN options %]
-    <option value='[% o.code %]' [% IF o.selected %] selected[% END %]>[% o.text %]</option>    
-[% END %]
-</select>

@@ -75,8 +75,8 @@ var change_chat_icon = function () {
               desk_widget.css({
                   'background-image': 'url("' + image_link['livechaticon'] + '")',
                   'background-size': 'contain',
-                  'min-width': 50,
-                  'min-height': 50,
+                  'min-width': 35,
+                  'min-height': 35,
                   'width': 'auto'
               });
               desk_widget.hover(function() {

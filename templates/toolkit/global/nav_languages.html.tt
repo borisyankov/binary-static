@@ -1,0 +1,14 @@
+<div class="nav-languages">
+    <a href="#">&nbsp</a>
+</div>
+<ul class="nav2nd language-options">
+    [% FOREACH lang IN languages.keys %]
+    <li>
+        [% IF lang == request.language %]
+            <a class='selected' href="#" data-langcode="[% lang %]">[% languages.$lang %]</a>
+        [% ELSE %]
+            <a href="#" data-langcode="[% lang %]">[% languages.$lang %]</a>
+        [% END %]
+    </li>
+    [% END %]
+</ul>

@@ -140,7 +140,7 @@ var BetPrice = function() {
                 details += text.localize('There was a problem accessing the server during purchase.');
             }
             var width = this.container().width(); // since the error message could be any size, set the continer size to a good value
-            this.display_buy_error('<div style="width: ' + width + 'px;"><h3>Error</h3><p>' + details + ' </p></div>');
+            this.display_buy_error('<div style="width: ' + width + 'px;"><h3>Error</h3><p>' + details + ' </p></div>', 1);
             $('.price_box').fadeTo(0, 1);
             BetPrice.order_form.enable_buy_buttons();
             this.display_buy_buttons();
@@ -293,11 +293,14 @@ var BetPrice = function() {
                 },
             };
         }(),
-        display_buy_error: function (data) {
+        display_buy_error: function (data, extra_info) {
             var that = this;
             var con = this.buy_response_container();
             con.addClass('bet_confirm_error');
-            data += '<p>' + text.localize('Please confirm the trade on your statement before proceeding.') + '</p>';
+            if (extra_info) {
+                data += '<p>' + text.localize('Please confirm the trade on your statement before proceeding.') + '</p>';
+            }
+            data = '<p>' + data + '</p>';
             con.children('div').first().html(data);
             con.show();
             var _clear_results = function () { that.clear_buy_results(); };

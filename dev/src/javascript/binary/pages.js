@@ -13,29 +13,26 @@ function contract_guide_popup() {
 }
 
 var trading_times_init = function() {
-      var tabset_name = "#trading-tabs";
+     var url = page.url.url_for('resources/trading_times', 'date=' + dateText, 'cached'),
+         oneYearLater = moment().add(1, 'year').toDate();
 
-     var trading_times = $(tabset_name);
-     var url = location.href;
-     return;
-     $( "#tradingdate" ).pickadate({ minDate: 0, maxDate:'+1y', dateFormat: "yy-mm-dd", autoSize: true,
-     onSelect: function( dateText, picker ){
-         showLoadingImage(trading_times);
-         url = page.url.url_for('resources/trading_times', 'date=' + dateText, 'cached');
-         $.ajax({
-                  url: url,
-                  data:  { 'ajax_only': 1 },
-                  success: function(html){
-                            trading_times.replaceWith(html);
-                            trading_times = $("#trading-tabs");
-                            page.url.update(url);
-                         },
-                  error: function(xhr, textStatus, errorThrown){
-                          trading_times.empty().append(textStatus);
-                       },
-                });
-         }
-     });
+     $("#tradingdate" ).pickadate({
+         max: oneYearLater,
+         onSet: function(context) {
+             showLoadingImage($('#trading-tabs'));
+             $.ajax({
+                url: url,
+                data:  { 'ajax_only': 1 },
+                success: function(html){
+                    $("#trading-tabs").replaceWith(html);
+                    page.url.update(url);
+                },
+                error: function(xhr, textStatus, errorThrown){
+                    trading_times.empty().append(textStatus);
+                },
+            });
+        }
+    });
 };
 
 function confirm_popup_action() {

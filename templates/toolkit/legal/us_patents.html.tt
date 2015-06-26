@@ -1,6 +1,19 @@
 <h1>[% l("US Patents") %]</h1>
-<ul>
-    [% FOREACH patent = us_patents %]
-        <li><a href="[% patent.url %]">[% patent.title %]</a></li>
-    [% END %]
-</ul>
+
+<div class="row">
+    <div>
+        <h5>Betting system and method</h5>
+        <p>A fixed-odds betting system comprises a user terminal operable to accept parameters input by a user and relating to a fixed-odds bet on an aspect of a financial market; and a central processing machine having a data feed to a source of data concerning a financial market and means operable to calculate the fixed odds for the bet, based on at least some of the parameters input by the user and the data obtained from the data feed.</p>
+        <a class="external" href="http://www.google.com/patents/US7206762">read more</a>
+    </div>
+    <div>
+        <h5>Computer trading system for offering custom financial market speculations</h5>
+        <p>A computer trading system for determining a calculated value for a user defined contract on a future characteristic(s) of a financial market comprises a receiving component for receiving a parameter(s) from a user defining the user defined contract and receiving financial market data concerning the financial market. The system includes a calculating component operable to determine a calculated value, such as a price, payout, or odds, for the user defined contract based on the parameter(s) and the financial market data and a transmission component for transmitting the calculated value to the user. The receiving component may also receive an order for the user defined contract from the user based on the calculated value to thereby create an obligation for a bookmaker to pay a payout amount upon the occurrence of the future characteristic(s) of the financial market satisfying the parameter(s).</p>
+        <a class="external" href="http://www.google.com/patents/US8046293">read more</a>
+    </div>
+    <div>
+        <h5>Computer system and method for speculating on a financial market</h5>
+        <p>A method in a computer system for a user to speculate on a financial market, comprises presenting a prompt to the user requesting parameter(s) defining a custom contract on future characteristic(s) of the financial market, presenting to the user a calculated value, such as a price, payout, or odds, for the custom contract determined based on the parameter(s) and data regarding the financial market, and presenting a prompt to the user requesting the user to purchase the custom contract based on the calculated value. The method thereby allows the user to define the custom contract, a bookmaker to offer the custom contract to the user based on the calculated value, and the user to purchase the custom contract from the bookmaker so that the bookmaker has an obligation to pay a payout amount upon the occurrence of the future characteristic(s) of the financial market satisfying the one or more parameters.</p>
+        <a class="external" href="http://www.google.com/patents/US8046292">read more</a>
+    </div>
+</div>

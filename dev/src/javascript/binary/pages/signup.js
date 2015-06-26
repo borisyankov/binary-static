@@ -27,13 +27,6 @@ $(function() {
         e.preventDefault();
     });
 
-    $('.language-selector select').on('change', function() {
-        var idx = this.selectedIndex;
-        $('.flag').css('background-position', '0 -' + idx * 15 + 'px');
-    });
-
-
-
     $('*[data-modal]').on('click', function() {
 
         var modal = $(this).attr('data-modal');

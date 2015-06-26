@@ -8,93 +8,91 @@
 - );
 
 .hero
-  .home-body.row
-      %hgroup.col
-        %h2!= l('<i>The Premier Platform for</i>')
-        %h1= l('Binary Options Trading')
-        .homerow
-          %h3!= l('<i>Trade 24/7,</i> even on weekends.')
-          %h3!= l('<i>Customize your trades</i> to meet your needs.')
-        = l('Real-time Prices')
-        %img.inlinico{:src => url_for("images/pages/home/icon1.svg")}
-        = l('Returns above 100%')
-        %img.inlinico{:src => url_for("images/pages/home/icon1.svg")}
-        = l('No Hidden Fees')
+    .home-body.row
+        %hgroup
+            %h2!= l('<i>The Premier Platform for</i>')
+            %h1= l('Binary Options Trading')
+            .homerow
+                %h3!= l('<i>Trade 24/7,</i> even on weekends.')
+                %h3!= l('<i>Customize your trades</i> to meet your needs.')
+            = l('Real-time Prices')
+            %img.inlinico{:src => url_for("images/pages/home/icon1.svg")}
+            = l('Returns above 100%')
+            %img.inlinico{:src => url_for("images/pages/home/icon1.svg")}
+            = l('No Hidden Fees')
 
-      %form.col#open-account{:name => 'oppAccForm', :action => url_for('create_account.cgi'), :method => 'post'}
-        %h3= l('Get Started Now')
-        %h3= l('Virtual Money Account')
-        %input{:name => 'Email', :id => 'Email', :type => 'email', :required => true, :placeholder => stash('emailtext')}
-        %input#chooseapassword{:name => 'chooseapassword', :pattern => '.{6,25}', :'required title' => 'Password length should be between 6 and 25 characters', :type => 'password', :maxlength => '25', :required => true, :placeholder => stash('passwordstext')}
-        %input#chooseapassword_2{:name => 'chooseapassword_2', :pattern => '.{6,25}', :'required title' => 'Password length should be between 6 and 25 characters', :type => 'password', :maxlength => '25', :required => true, :placeholder => stash('confirmtext')}
-        %p#signup_error.errorfield.invisible
-        %input{:type => 'hidden', :name => 'actype', :value => 'virtual'}
-        %input{:type => 'hidden', :name => 'l', :value => stash('language')}
-        %input{:id => 'btn_registration',:type => 'submit', :value => stash('createacc')}
-
-
+        %form#open-account{:name => 'oppAccForm', :action => url_for('create_virtual_account.cgi'), :method => 'post'}
+            %h3= l('Get Started Now')
+            %h3= l('Virtual Money Account')
+            %input{:name => 'Email', :id => 'Email', :type => 'email', :required => true, :placeholder => stash('emailtext')}
+            %input#chooseapassword{:name => 'chooseapassword', :pattern => '.{6,25}', :'required title' => 'Password length should be between 6 and 25 characters', :type => 'password', :maxlength => '25', :required => true, :placeholder => stash('passwordstext')}
+            %input#chooseapassword_2{:name => 'chooseapassword_2', :pattern => '.{6,25}', :'required title' => 'Password length should be between 6 and 25 characters', :type => 'password', :maxlength => '25', :required => true, :placeholder => stash('confirmtext')}
+            %p#signup_error.errorfield.invisible
+            %input{:type => 'hidden', :name => 'actype', :value => 'virtual'}
+            %input{:type => 'hidden', :name => 'l', :value => stash('language')}
+            %input{:id => 'btn_registration',:type => 'submit', :value => stash('createacc')}
 
 .home-container.darkish
-  .home-body
-    %hgroup
-      %h1!= l('<i>The Easiest Way</i> to Get Started')
-      %h3= l('Trade With The Most Simple, User-Friendly Platform')
-    .row
-      .col
-        %img{ :src => url_for("images/pages/home/trade-tutorial.svg")}
-      .col.trade-desc
-        %h4= l('All Markets')
-        %p= l('Currencies, Stock Indices and Commodities')
-        %h4= l('All Market Conditions')
-        %p= l('Up/down, Touch/no-touch, Stays In/Goes Out')
-        %h4= l('All Durations')
-        %p= l('From 10 Seconds To 365 Days')
-        %h4= l('All Payouts')
-        %p= l('From $1 To $100,000')
-        %a.button.pjaxload{:href => url_for('/user/upgrade')}= l('View Trading Platform')
+    .home-body
+        %hgroup
+            %h1!= l('<i>The Easiest Way</i> to Get Started')
+            %h3= l('Trade With The Most Simple, User-Friendly Platform')
+        .row
+            .col
+                %img{ :src => url_for("images/pages/home/trade-tutorial.svg")}
+            .col.trade-desc
+                %h5= l('All Markets')
+                %p= l('Currencies, Stock Indices and Commodities')
+                %h5= l('All Market Conditions')
+                %p= l('Up/down, Touch/no-touch, Stays In/Goes Out')
+                %h5= l('All Durations')
+                %p= l('From 10 Seconds To 365 Days')
+                %h5= l('All Payouts')
+                %p= l('From $1 To $100,000')
+                %a.button.pjaxload{:href => url_for('/user/upgrade')}= l('View Trading Platform')
 
 .home-container
-  .home-body
-    %hgroup
-      %h1!= l('Why <i>1,000,000</i> people around the world trust us')
-    .row
-      .col
-        %img.iconic{:src => url_for("images/pages/home/icon1.svg")}
-        %h3= l('Sharp Prices')
-        %div= l('Our patented pricing technology helps you benefit from the same rates of return as traders in the interbank market.')
-      .col
-        %img.iconic{:src => url_for("images/pages/home/icon2.svg")}
-        %h3= l('Trade Your Way')
-        %div= l('Whatever your market view, you can always put your strategy to work and profit from your predictions.')
-      .col
-        %img.iconic{:src => url_for("images/pages/home/icon3.svg")}
-        %h3= l('Safe Funds')
-        %div= l('With us, your money is secure. We segregate and hold client funds in secure AAA-rated banks.')
-      .col
-        %img.iconic{:src => url_for("images/pages/home/icon4.svg")}
-        %h3= l('Go With the Leader')
-        %div= l('Binary.com is the award-winning industry pioneer in online options trading.')
+    .home-body
+        %hgroup
+            %h1!= l('<i>1,000,000</i> People Around The World Trust Us')
+        .row
+            .col
+                %img.iconic{:src => url_for("images/pages/home/icon1.svg")}
+                %h3= l('Sharp Prices')
+                %div= l('Our patented pricing technology helps you benefit from the same rates of return as traders in the interbank market.')
+            .col
+                %img.iconic{:src => url_for("images/pages/home/icon2.svg")}
+                %h3= l('Trade Your Way')
+                %div= l('Whatever your market view, you can always put your strategy to work and profit from your predictions.')
+            .col
+                %img.iconic{:src => url_for("images/pages/home/icon3.svg")}
+                %h3= l('Safe Funds')
+                %div= l('With us, your money is secure. We segregate and hold client funds in secure AAA-rated banks.')
+            .col
+                %img.iconic{:src => url_for("images/pages/home/icon4.svg")}
+                %h3= l('Go With the Leader')
+                %div= l('Binary.com is the award-winning industry pioneer in online options trading.')
 
 .home-container.darkish
-  .home-body
-    %hgroup
-      %h1!= l('What Our <i>Clients</i> Think of Us?')
-    .row
-      %blockquote.col
-        %p!= l('We have used www.binary.com for the last 8 years and highly recommend binary to all our members worldwide.')
-        %cite
-          %h4= l('Joshua Cavallaro')
-          %span= l('Markets And You Trader')
-      %blockquote.col
-        %p!= l('Binary.com is one of the oldest and trustworthy partners we ever had. We have worked together for many years.')
-        %cite
-          %h4= l('Andrei Asavei')
-          %span= l('Top Binary Options Brokers')
+    .home-body
+        %hgroup
+            %h1!= l('Our <i>Clients</i> Love Us?')
+        .row
+            %blockquote
+                %p!= l('We have used www.binary.com for the last 8 years and highly recommend binary to all our members worldwide.')
+                %cite
+                    %h5= l('Joshua Cavallaro')
+                    %span= l('Markets And You Trader')
+            %blockquote
+                %p!= l('Binary.com is one of the oldest and trustworthy partners we ever had. We have worked together for many years.')
+                %cite
+                    %h5= l('Andrei Asavei')
+                    %span= l('Top Binary Options Brokers')
 
 .home-container
-  .home-body
-    %hgroup
-      %h1!= l('<i>Payment</i> Methods')
-    %a.pjaxload{:href => url_for('/cashier/payment_methods')}
-      %img{:src => url_for("images/pages/home/payment-methods.svg")}
-    %p{:style => "margin-bottom: -1em")}= l('Hundreds of deposit and withdrawal options.')
+    .home-body
+        %hgroup
+            %h1!= l('<i>Payment</i> Methods')
+        %a.pjaxload{:href => url_for('/cashier/payment_methods')}
+            %img{:src => url_for("images/pages/home/payment-methods.svg")}
+        %p{:style => "margin-bottom: -1em")}= l('Hundreds of deposit and withdrawal options.')

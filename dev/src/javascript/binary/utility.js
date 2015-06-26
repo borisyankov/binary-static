@@ -414,7 +414,7 @@ function initDateTimePicker() {
         today: text.localize('Today'),
         clear: text.localize('Clear'),
         firstDay: 1,
-        format: 'd mmmm yyyy г.',
+        //format: moment().localeData().longDateFormat('L'), // ?? 'yy-mm-dd'
         formatSubmit: 'yyyy/mm/dd'
     });
 

@@ -2,7 +2,7 @@
 
 <table>
     <thead>
-        <tr class="rbox-table-heading">
+        <tr>
             [% IF quotetimes.size %]
                 <th>[% l('System Time') %]</th>
                 <th>[% l('Trade Time') %]</th>
