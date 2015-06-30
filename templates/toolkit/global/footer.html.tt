@@ -54,19 +54,19 @@
         </div>
     </div>
     <div class="home-content">
-        <div class="regulatory.home-body">
+        <div class="regulatory home-body">
             <div class="regulatory-logos">
-                <a href="http://www.gov.im/gambling/">
+                <a href="http://www.gov.im/gambling/" target="_blank">
                     <img src="[% request.url_for('images/pages/footer/isle-of-man.png') %]"/>
                 </a>
-                <a href="https://www.authorisation.mga.org.mt/verification.aspx?lang=en&company=a5fd1edc-d072-4c26-b0cd-ab3fa0f0cc40">
+                <a href="https://www.authorisation.mga.org.mt/verification.aspx?lang=en&company=a5fd1edc-d072-4c26-b0cd-ab3fa0f0cc40" target="_blank">
                     <img src="[% request.url_for('images/pages/footer/mga-logo-footer.svg') %]"/>
-                </a>
-                <a href="http://mfsa.com.mt/">
-                    <img src="[% request.url_for('images/pages/footer/mifid-logo.svg') %]"/>
                 </a>
                 <a href="http://mfsa.com.mt/" target="_blank">
                     <img src="[% request.url_for('images/pages/footer/mfsa-logo.svg') %]"/>
+                </a>
+                <a href="http://mfsa.com.mt/" target="_blank">
+                    <img src="[% request.url_for('images/pages/footer/mifid-logo.svg') %]"/>
                 </a>
             </div>
             <div class="regulatory-text">

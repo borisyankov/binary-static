@@ -27,8 +27,8 @@
         </span>
     </span>
     <span id="expiry_type_endtime">
-        <input type="text" name="expiry_date" id="expiry_date" size="10" maxlength="11" value="[% date %]"/>
-        <input type="text" name="expiry_time" id="expiry_time" size="9" maxlength="10" value="[% time %]"/>
+        <input type="date" name="expiry_date" id="expiry_date" size="10" maxlength="11" value="[% date %]"/>
+        <input type="time" name="expiry_time" id="expiry_time" size="9" maxlength="10" value="[% time %]"/>
         <a id="market-closed-tip" class="unicode-info-icon" href="#"><abbr rel="tooltip" title="[% l('Close of trading day.') %]">ⓘ</abbr></a>
     </span>
 </div>

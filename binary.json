@@ -38,7 +38,6 @@
     "src/javascript/binary/pages/selfexclusion.js",
     "src/javascript/binary/pages/signup.js",
     "src/javascript/binary/pages/statement.js",
-    "src/javascript/binary/pages/wstrade.js",
     "src/javascript/binary/reality-check.js",
     "src/javascript/binary/trackjs_onerror.js",
     "src/javascript/binary/utility.js"
