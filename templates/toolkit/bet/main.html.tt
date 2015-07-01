@@ -14,5 +14,7 @@
 
     <div id="bet_bottom_container">
         [% bottom_page_content_html %]
+        <div id="bet_bottom_content">
+        </div>
     </div>
 [% END %]

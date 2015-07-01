@@ -355,11 +355,14 @@ function initTabs() {
     updateTabs($tabs);
 
     $('body').on('click', tabSelector, function(e) {
-        var $tabs = $(this).parent().find('li');
+        var elm = $(this);
+        var $tabs = elm.parent().find('li');
         $tabs.removeClass('active');
-        $(this).addClass('active');
+        elm.addClass('active');
         updateTabs($tabs);
-        e.preventDefault();
+        if(!elm.find('a:first').data('doredirect')) {
+            e.preventDefault();
+        }
     });
 }
 
