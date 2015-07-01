@@ -1215,6 +1215,7 @@ header {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 100%;
 }
 
 #content > h1, .get-started-content > h1 {
@@ -1565,23 +1566,6 @@ ul[role=segmented] li.active a {
 
 abbr {
   border-bottom: 1px dotted black;
-}
-
-.partnerapi-content #content,
-.white-labels-content #content,
-.tour-content #content,
-.open-source-projects-content #content,
-.why-us-content #content,
-.responsible-trading-content #content,
-.smart-indices-content #content,
-.random-markets-content #content,
-.affiliate-signup-content #content, .affiliatesignup-content #content,
-.chartingapplication-content #content, charting-application-content #content,
-.resourcesrise_fall_table-content #content,
-.userchange_password-content #content,
-.userlost_password-content #content,
-.devguide-content #content {
-  max-width: 700px;
 }
 
 #topbar,
