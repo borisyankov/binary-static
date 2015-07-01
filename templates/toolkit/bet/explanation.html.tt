@@ -17,12 +17,12 @@
 %]
 
 <div class="row">
-    <div class="col">
-        [% IF show_winning && show_flash && flash.$form_name  %]
-            <h3>[% l("Winning the contract") %]</h3>
-            [% INCLUDE "$winning" %]
-        [% END %]
-        [% IF show_flash %]
+    [% IF !no_flash %]
+        <div class="col">
+            [% IF !no_winning %]
+                <h3>[% l("Winning the contract") %]</h3>
+                [% INCLUDE "$winning" %]
+            [% END %]
             [% IF flash.$form_name %]
                 <div id="bet-guide-demo">
                     <object width="245" height="160" type="application/x-shockwave-flash" data="[% flash.$form_name %]">
@@ -34,13 +34,11 @@
                     </object>
                 </div>
             [% END %]
-        [% END %]
-    </div>
+        </div>
+    [% END %]
     <div class="col">
-        [% IF show_explain %]
         <div id='explanation-content'>
             [% INCLUDE "$explanation" %]
         </div>
-        [% END %]
     </div>
 </div>

@@ -94,14 +94,8 @@ function formEffects() {
 }
 
 onLoad.queue(function () {
-    $('.tm-ul > li').hover(
-        function () {
-            $(this).addClass('hover');
-        },
-        function () {
-            $(this).removeClass('hover');
-        }
-    );
+
+    MenuContent.init($('#betsBottomPage'));
 
     // attach the class to account form's div/fieldset for CSS visual effects
     var objFormEffect = new formEffects();

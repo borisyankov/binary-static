@@ -10,11 +10,13 @@
 - my $helpline = $skype_helpline->{$selected_language} || $skype_helpline->{'EN'};
 
 .row
-    .col.media
+    .col
         %img{:src => url_for('images/icons/contact-us.svg')}
-    .col.f3
+    .col.f7
         %h1= l("Contact us")
-
+.row
+    .col
+        %h2= l("Customer Support")
         %p!= l("You'll find answers to most of your questions on the <a href='[_1]' target='_blank'>FAQ</a> page.", $faq_url)
         %p
             %label= l('Email:')
@@ -46,7 +48,7 @@
         %p
             %label= l('Live chat:')
             %span{:id => "live-chat-icon"}
-
+    .col
         %h2= l("Company addresses")
         %h3= l('Malta')
         %p= l('Binary (Europe) Ltd, Mompalao Building, Suite 2, Tower Road, Msida MSD1825')

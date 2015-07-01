@@ -480,6 +480,10 @@ a.close:hover {
   margin-bottom: 10px;
 }
 
+.margin-bottom {
+  margin-bottom: 30px;
+}
+
 i {
   color: #e98024;
 }
@@ -491,6 +495,11 @@ p.media, div.media {
 
 strong {
   font-weight: bold;
+}
+
+a.external {
+  background: url("../images/pages/patents/link-icon.svg") center right no-repeat;
+  padding-right: 0.3rem;
 }
 
 *,
@@ -893,6 +902,12 @@ fieldset .error-msg {
   -webkit-flex: 3;
       -ms-flex: 3;
           flex: 3;
+}
+
+.col.f7 {
+  -webkit-flex: 7;
+      -ms-flex: 7;
+          flex: 7;
 }
 
 header {
@@ -2871,10 +2886,6 @@ blockquote p:after {
   border-width: 12px;
 }
 
-.beginners-faq-content h3 {
-  color: #e98024;
-}
-
 #betpage .tab-content {
   display: block;
 }
@@ -4010,12 +4021,12 @@ div#price_table_notes {
           flex: 7;
 }
 .about-us-content img {
-  height: 5rem;
+  height: 6rem;
   display: block;
   margin: 0 auto;
 }
 .about-us-content .binary-logo {
-  height: 7em;
+  height: 6em;
 }
 .about-us-content .mga-logo {
   padding: 1rem;
@@ -4140,10 +4151,6 @@ div#price_table_notes {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-}
-
-.affiliate-signup-content h3 {
-  color: #e98024;
 }
 
 .userprofit_table-content table thead th:first-child,

@@ -446,7 +446,7 @@ BetForm.TradingTime.prototype = {
 */
 BetForm.Time.Duration = function(trading_time) {
     this.trading_time = trading_time;
-    this.date_picker = new DatePicker.SelectedDates('duration_amount', 'diff');
+    //this.date_picker = new DatePicker.SelectedDates('duration_amount', 'diff');
 };
 
 BetForm.Time.Duration.prototype = {
@@ -574,8 +574,8 @@ BetForm.Time.Duration.prototype = {
 */
 BetForm.Time.EndTime = function(trading_time) {
     this.trading_time = trading_time;
-    this.time_picker = new TimePicker('expiry_time');
-    this.date_picker = new DatePicker.SelectedDates('expiry_date');
+//    this.time_picker = new TimePicker('expiry_time');
+//    this.date_picker = new DatePicker.SelectedDates('expiry_date');
 };
 
 BetForm.Time.EndTime.prototype = {

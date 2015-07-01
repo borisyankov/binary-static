@@ -2,6 +2,7 @@
     "src/javascript/binary/base/appcache_check.js",
     "src/javascript/binary/base/inpage_popup.js",
     "src/javascript/binary/base/markets.js",
+    "src/javascript/binary/base/menu_content.js",
     "src/javascript/binary/base/onerror.js",
     "src/javascript/binary/base/page.js",
     "src/javascript/binary/base/pjax.js",

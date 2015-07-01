@@ -3,15 +3,13 @@
 - );
 
 %div{:itemscope :itemtype=>'http://schema.org/Organization'}
-    .row
-        .col
-            %img.binary-logo{:src => url_for('images/pages/about/logo-blue.svg')}
+    .row.margin-bottom
         .col.about-col
             %h1= l('About Us')
             %p!= l('The <span itemprop="brand">[_1]</span> service (formerly known as BetOnMarkets.com) is owned and operated by Binary Ltd. Fully licensed and regulated, [_1] has been providing financial trading to a worldwide audience of over 1,000,000 clients since <span itemprop="foundingdate">1999</span>', stash->{website_name}) . "."
-    .row
+    .row.margin-bottom
         .col
-            %img
+            %img.binary-logo{:src => url_for('images/pages/about/logo-blue.svg')}
             %h2{:itemprop=>'legalname'}= 'Binary Ltd'
             %p!= l("Binary Ltd, with registered office address situated at <span itemprop='location'>47 Esplanade, St. Helier, Jersey, JE 0BD Channel Islands</span>, is the holding company for the Binary group.")
         .col
@@ -20,7 +18,7 @@
             %h2= 'Binary (IOM) Ltd'
             %p!= l('Binary (IOM) Ltd, First Floor, Millennium House, Victoria Road, Douglas, Isle of Man, IM2 4RW. Licenced and regulated by the Gambling Supervision Commission in the Isle of Man (current online gambling licence granted on the 31 August 2012) and for UK clients by the UK Gambling Commission - <a href="[_1]" target="_blank">view license</a>.', ('https://secure.gamblingcommission.gov.uk/gccustomweb/PublicRegister/PRSearch.aspx?ExternalAccountId=39172'))
             %p= l('UK and Manx residents will have their account opened with Binary (IOM) Ltd.')
-    .row
+    .row.margin-bottom
         .col
             %a(href='http://www.mga.org.mt/')
                 %img.mga-logo{:src => url_for('images/pages/why-us/mga-logo.svg')}
@@ -33,8 +31,10 @@
             %h2= 'Binary Investments (Europe) Ltd.'
                 %p= l('Binary Investments (Europe) Ltd, Suite 2, Tower Road, Msida MSD1825, Malta. Licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156).')
                 %p= l('European Union residents with the exception of the UK, who wish to trade investment products, will have their account opened with Binary Investments (Europe) Ltd.')
+    .row
         .col
             %img{:src => url_for('images/pages/about/costa-rica.png')}
             %h2= 'Binary (C.R.) S.A.'
             %p= l('Binary (C.R.) S.A., registered in Costa Rica.')
             %p= l('Clients from the rest of the world will have their account opened with Binary (C.R.) S.A.')
+        .col

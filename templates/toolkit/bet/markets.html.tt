@@ -1,8 +1,7 @@
-<ul role="segmented">
-    <li><a href="[% request.url_for('trade.cgi?market=forex') %]">[% l("Forex") %]</a></li>
-    <li><a href="[% request.url_for('trade.cgi?market=indices') %]">[% l("Indices") %]</a></li>
-    <li><a href="[% request.url_for('trade.cgi?market=stocks') %]">[% l("Stocks") %]</a></li>
-    <li><a href="[% request.url_for('trade.cgi?market=commodities') %]">[% l("Commodities") %]</a></li>
-    <li><a href="[% request.url_for('trade.cgi?market=randoms') %]">[% l("Randoms") %]</a></li>
-    <li><a href="[% request.url_for('trade.cgi?market=smarties') %]">[% l("Smart Markets") %]</a></li>
+<ul role="segmented" id="tradingMarketsNav">
+    <li id="forex"><a href="[% request.url_for('trade.cgi?market=forex') %]">[% l("Forex") %]</a></li>
+    <li id="indices"><a href="[% request.url_for('trade.cgi?market=indices') %]">[% l("Indices") %]</a></li>
+    <li id="stocks"><a href="[% request.url_for('trade.cgi?market=stocks') %]">[% l("Stocks") %]</a></li>
+    <li id="commodities"><a href="[% request.url_for('trade.cgi?market=commodities') %]">[% l("Commodities") %]</a></li>
+    <li id="randoms"><a href="[% request.url_for('trade.cgi?market=randoms') %]">[% l("Randoms") %]</a></li>
 </ul>

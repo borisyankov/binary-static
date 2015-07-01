@@ -1,7 +1,7 @@
 <ul role="segmented" [% IF menu.id %]id="[% menu.id %]"[% END %] [% IF menu.class %]class="[% menu.class %]"[% END %]>
     [% FOREACH item IN menu_items %]
-    <li [% IF item.active %]class="active"[% END %]>
-        <a href="#[% item.url %]">[% item.text %]</a>
+    <li [% IF item.class %]class="[% item.class %]"[% END %] [% IF item.id %]id="[% item.id %]"[% END %]>
+        <a href="#[% item.url %]" [% IF item.link_url %]data-linkurl="[% item.link_url %]"[% END %]>[% item.text %]</a>
     </li>
     [% END %]
 </ul>
