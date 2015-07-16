@@ -5,41 +5,47 @@
 .row
     .col
         %p.media
-            %img{:src => url_for('images/pages/settings/detail.svg')}
+            .icon
+                %img{:src => url_for('images/icons/detail.svg')}
         %p.media
-            %a.pjaxload.button{:href => url_for('/user/settings/details')}= l('Personal Details')
+            %a.button{:href => url_for('/user/settings/details')}= l('Personal Details')
         %p= l('View your personal information.')
     - if ($is_real) {
         .col
             %p.media
-                %img{:src => url_for('images/pages/settings/security.svg')}
+                .icon
+                    %img{:src => url_for('images/pages/settings/security.svg')}
             %p.media
-                %a.pjaxload.button{:href => url_for('/user/settings/security')}= l('Security')
+                %a.button{:href => url_for('/user/settings/security')}= l('Security')
             %p= l('Manage your account access and security settings.')
         .col
             %p.media
-                %img{:src => url_for('images/pages/settings/self-exclusion.svg')}
+                .icon
+                    %img{:src => url_for('images/pages/settings/self-exclusion.svg')}
             %p.media
-                %a.pjaxload.button{:href => url_for('/user/self_exclusion')}= l('Self Exclusion')
+                %a.button{:href => url_for('/user/self_exclusion')}= l('Self Exclusion')
             %p= l('Facility that allows you to set limits on your account.')
         .col
             %p.media
-                %img{:src => url_for('images/pages/settings/limits.svg')}
+                .icon
+                    %img{:src => url_for('images/pages/settings/limits.svg')}
             %p.media
-              %a.pjaxload.button{:href => url_for('/cashier/limits')}= l('Limits')
+              %a.button{:href => url_for('/cashier/limits')}= l('Limits')
             %p= l('View your trading and withdrawal limits.')
         - if ($show_financial_assessment) {
-          .col
-              %p.media
-                  %img{:src => url_for('images/pages/settings/financial-assessment.svg')}
-              %p.media
-                  %a.pjaxload.button{:href => url_for('/user/assessment')}= l('Financial Assessment')
+            .col
+                %p.media
+                    .icon
+                        %img.icon{:src => url_for('images/icons/financial-assessment.svg')}
+                %p.media
+                    %a.button{:href => url_for('/user/assessment')}= l('Financial Assessment')
               %p= l('View your financial assessment settings.')
       - }
     - }
     .col
         %p.media
-            %img{:src => url_for('images/pages/settings/api-token.svg')}
+            .icon
+                %img{:src => url_for('images/icons/api-token.svg')}
         %p.media
-            %a.pjaxload.button{:href => url_for('/user/api_token')}= l('API Token')
+            %a.button{:href => url_for('/user/api_token')}= l('API Token')
         %p= l('API token for third party applications.')

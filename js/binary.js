@@ -1060,10 +1060,11 @@ Page.prototype = {
     flag: function() {
         var idx = $('.language-options li a.selected').parent().index(),
             offset = - (idx + 1) * 15,
-            cssStyle = offset + 'px';
-        $('.nav-languages a').css('background-position-y', offset);
+            cssStyle = '0 ' + offset + 'px';
+        $('.nav-languages a').css('background-position', cssStyle);
     },
     on_load: function() {
+        this.apply_pjax_class();
         this.url.reset();
         this.localize_for(this.language());
         this.header.on_load();
@@ -1079,6 +1080,12 @@ Page.prototype = {
     },
     on_unload: function() {
         this.contents.on_unload();
+    },
+    apply_pjax_class: function() {
+        var pjaxableLinks = $('a').filter(function() {
+            return this.hostname == location.hostname;
+        });
+        pjaxableLinks.addClass('pjaxload');
     },
     on_change_language: function() {
         var that = this;
@@ -2462,6 +2469,16 @@ onLoad.queue_for_url(function() {
 $('.login-content button').on('click', function() {
     $('.form-logo').addClass('spinner');
 });
+
+$('.nav2nd a').on('click', function() {
+    var nav2nd = $(this).parent().parent();
+    nav2nd.hide();
+    setTimeout(function() { nav2nd.show() });
+});
+
+if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
+    $(header).css('position', 'sticky');
+}
 ;var trade_contract_back = function () {
     $('#find_another_contract').on('click', function (e) {
         if (page.url.history_supported) {

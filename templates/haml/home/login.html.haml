@@ -9,7 +9,7 @@
     - if (flash('error')) {
         %p.errorfield.bigerror= l('Binary.com now requires your email and password to log in. If you have both a real-money and a virtual-money account, please use the password from your real-money account.')
         %p
-            %a.pjaxload#lost-password{:href=>url_for('/user/logintrouble')}= l('Login Trouble?')
+            %a#lost-password{:href=>url_for('/user/logintrouble')}= l('Login Trouble?')
     - }
 
     %p
@@ -25,6 +25,6 @@
     %p
         %button= l('Sign in')
     %p
-        %a.pjaxload{:href=>url_for('/user/lost_password')}= l('Forgot password?')
+        %a{:href=>url_for('/user/lost_password')}= l('Forgot password?')
     %p
-        %a.pjaxload{:href=>url_for('/')}= l('Open an Account')
+        %a{:href=>url_for('/')}= l('Open an Account')

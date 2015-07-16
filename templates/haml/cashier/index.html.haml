@@ -5,24 +5,27 @@
 .row
     .col
         %p.media
-            %img{:src => url_for('images/pages/cashier/payment-methods.svg')}
+            .icon
+                %img{:src => url_for('images/icons/payment-methods.svg')}
         %p= l('Deposit or withdraw to your account via bank-wire, credit card, or e-cash wallet.')
         %p.media
-            %a.button.pjaxload{:href=>url_for('cashier/payment_methods')}= l('View available payment methods')
+            %a.button{:href=>url_for('cashier/payment_methods')}= l('View available payment methods')
         %p.media
-            %a.pjaxload.button{ :href => stash('deposit_url') }= l('Deposit')
-            %a.pjaxload.button{ :href => stash('withdraw_url') }= l('Withdraw')
+            %a.button{ :href => stash('deposit_url') }= l('Deposit')
+            %a.button{ :href => stash('withdraw_url') }= l('Withdraw')
     .col
         %p.media
-            %img{:src => url_for('images/pages/cashier/payment-agents.svg')}
+            .icon
+                %img{:src => url_for('images/icons/payment-agents.svg')}
         %p= l('You can use an authorized payment agent to process deposits and withdrawals for e-cash methods or local currencies not supported by [_1].', stash->{website_name})
         %p.media
-            %a.pjaxload.button{:href => url_for('/cashier/payment_agent_list')}= l('Deposit To Payment Agent')
+            %a.button{:href => url_for('/cashier/payment_agent_list')}= l('Deposit To Payment Agent')
         %p.media
-            %a.pjaxload.button{:href => url_for('paymentagent_withdraw.cgi')}= l('Withdraw Via Payment Agent')
+            %a.button{:href => url_for('paymentagent_withdraw.cgi')}= l('Withdraw Via Payment Agent')
     .col
         %p.media
-            %img{:src => url_for('images/pages/cashier/account-transfer.svg')}
+            .icon
+                %img{:src => url_for('images/icons/account-transfer.svg')}
         %p= l('Transfer between your gaming and financial accounts.')
         %p.media
-            %a.pjaxload.button{:href => url_for('/cashier/account_transfer')}= l('Transfer')
+            %a.button{:href => url_for('/cashier/account_transfer')}= l('Transfer')

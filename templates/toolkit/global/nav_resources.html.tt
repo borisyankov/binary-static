@@ -1,26 +1,29 @@
 <div class="nav-resources">
-    <a class="pjaxload" href="[% request.url_for('/resources') %]">[% l("Resources") %]</a>
+    <a href="[% request.url_for('/resources') %]">
+        <img href="[% request.url_for('/images/icons/resources.svg') %]">
+        [% l("Resources") %]
+    </a>
 </div>
 <ul class="nav2nd">
     <li>
-        <a class="pjaxload" href="[% request.url_for('/resources/asset_index') %]">[% l("Asset Index") %]</a>
+        <a href="[% request.url_for('/resources/asset_index') %]">[% l("Asset Index") %]</a>
     </li>
     <li>
-        <a class="pjaxload" href="[% request.url_for('/resources/trading_times') %]">[% l("Trading Times") %]</a>
+        <a href="[% request.url_for('/resources/trading_times') %]">[% l("Trading Times") %]</a>
     </li>
     <li>
-        <a class="pjaxload" href="[% request.url_for('/resources/pricing_table') %]">[% l("Pricing Table") %]</a>
+        <a href="[% request.url_for('/resources/pricing_table') %]">[% l("Pricing Table") %]</a>
     </li>
     <li>
-        <a class="pjaxload" href="[% request.url_for('/resources/rise_fall_table') %]">[% l("Rise/Fall Table") %]</a>
+        <a href="[% request.url_for('/resources/rise_fall_table') %]">[% l("Rise/Fall Table") %]</a>
     </li>
     <li>
-        <a class="pjaxload" href="[% request.url_for('/charting/application') %]">[% l("Chart Application") %]</a>
+        <a href="[% request.url_for('/charting/application') %]">[% l("Chart Application") %]</a>
     </li>
     <li>
-        <a class="pjaxload" href="[% request.url_for('/charting/livechart') %]">[% l("Live Charts") %]</a>
+        <a href="[% request.url_for('/charting/livechart') %]">[% l("Live Charts") %]</a>
     </li>
     <li>
-        <a class="pjaxload" href="//highcharts.binary.com">[% l("HighCharts") %]</a>
+        <a href="//highcharts.binary.com">[% l("HighCharts") %]</a>
     </li>
 </ul>

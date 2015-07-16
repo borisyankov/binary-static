@@ -1,7 +1,7 @@
 <ul role="segmented" id="tradingMarketsNav">
-    <li id="forex"><a href="[% request.url_for('trade.cgi?market=forex') %]" data-doredirect="true" class="pjaxload">[% l("Forex") %]</a></li>
-    <li id="indices"><a href="[% request.url_for('trade.cgi?market=indices') %]" data-doredirect="true" class="pjaxload">[% l("Indices") %]</a></li>
-    <li id="stocks"><a href="[% request.url_for('trade.cgi?market=stocks') %]" data-doredirect="true" class="pjaxload">[% l("Stocks") %]</a></li>
-    <li id="commodities"><a href="[% request.url_for('trade.cgi?market=commodities') %]" data-doredirect="true" class="pjaxload">[% l("Commodities") %]</a></li>
-    <li id="randoms"><a href="[% request.url_for('trade.cgi?market=random') %]" data-doredirect="true" class="pjaxload">[% l("Randoms") %]</a></li>
+    <li id="forex"><a href="[% request.url_for('trade.cgi?market=forex') %]" data-doredirect="true">[% l("Forex") %]</a></li>
+    <li id="indices"><a href="[% request.url_for('trade.cgi?market=indices') %]" data-doredirect="true">[% l("Indices") %]</a></li>
+    <li id="stocks"><a href="[% request.url_for('trade.cgi?market=stocks') %]" data-doredirect="true">[% l("Stocks") %]</a></li>
+    <li id="commodities"><a href="[% request.url_for('trade.cgi?market=commodities') %]" data-doredirect="true">[% l("Commodities") %]</a></li>
+    <li id="randoms"><a href="[% request.url_for('trade.cgi?market=random') %]" data-doredirect="true">[% l("Randoms") %]</a></li>
 </ul>

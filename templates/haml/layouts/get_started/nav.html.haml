@@ -13,7 +13,7 @@
       - my ($route, $text) = ($item->{route}, $item->{text});
       - my $class = ($route eq current_route) ? 'selected' : '';
       %li.$class
-        %a{:href=>url_for($route), :class => 'pjaxload'}= $text
+        %a{:href=>url_for($route)}= $text
     - }
   %p.by_client_type.client_logged_out.client_virtual
-    %a.button.pjaxload{:href => url_for('/')}= l('Open a Free account')
+    %a.button{:href => url_for('/')}= l('Open a Free account')

@@ -4,7 +4,7 @@
 .nav-languages
     %a(href='#')!= '&nbsp'
 %ul.nav2nd.language-options
-    - foreach (keys %{ $languages }) {
+    - foreach (sort keys %{ $languages }) {
         - my ($code, $name) = ($_, $languages->{$_});
         %li
             - if ($code ne $sel_code) {

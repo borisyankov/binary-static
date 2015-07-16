@@ -49,7 +49,7 @@
                 %p= l('From 10 Seconds To 365 Days')
                 %h5= l('All Payouts')
                 %p= l('From $1 To $100,000')
-                %a.button.pjaxload{:href => url_for('/user/upgrade')}= l('View Trading Platform')
+                %a.button{:href => url_for('/user/upgrade')}= l('View Trading Platform')
 
 .home-container
     .home-body
@@ -57,19 +57,23 @@
             %h1!= l('<i>1,000,000</i> People Around The World Trust Us')
         .row
             .col
-                %img.iconic{:src => url_for("images/pages/home/icon1.svg")}
+                .icon
+                    %img{:src => url_for("images/icons/sharp-prices.svg")}
                 %h3= l('Sharp Prices')
                 %div= l('Our patented pricing technology helps you benefit from the same rates of return as traders in the interbank market.')
             .col
-                %img.iconic{:src => url_for("images/pages/home/icon2.svg")}
+                .icon
+                    %img{:src => url_for("images/icons/directions.svg")}
                 %h3= l('Trade Your Way')
                 %div= l('Whatever your market view, you can always put your strategy to work and profit from your predictions.')
             .col
-                %img.iconic{:src => url_for("images/pages/home/icon3.svg")}
+                .icon
+                    %img{:src => url_for("images/icons/safety.svg")}
                 %h3= l('Safe Funds')
                 %div= l('With us, your money is secure. We segregate and hold client funds in secure AAA-rated banks.')
             .col
-                %img.iconic{:src => url_for("images/pages/home/icon4.svg")}
+                .icon
+                    %img{:src => url_for("images/icons/prize.svg")}
                 %h3= l('Go With the Leader')
                 %div= l('Binary.com is the award-winning industry pioneer in online options trading.')
 
@@ -93,6 +97,6 @@
     .home-body
         %hgroup
             %h1!= l('<i>Payment</i> Methods')
-        %a.pjaxload{:href => url_for('/cashier/payment_methods')}
+        %a{:href => url_for('/cashier/payment_methods')}
             %img{:src => url_for("images/pages/home/payment-methods.svg")}
         %p{:style => "margin-bottom: -1em")}= l('Hundreds of deposit and withdrawal options.')

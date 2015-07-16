@@ -4,7 +4,7 @@
     - if (stash->{client_message}) {
         %p= stash->{client_message}
         %p.center-aligned
-          %a.button.pjaxload{:href => url_for('cashier/forward?act=withdraw')}
+          %a.button{:href => url_for('cashier/forward?act=withdraw')}
             %span= l('Send Verification Email')
     - } else {
         .row

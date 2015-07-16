@@ -3,7 +3,7 @@
 %h1= l('First, define your position...')
 %p= l('When you start trading with Binary.com, you’ll be directed to the trading screen, where you set your trading parameters, and choose what you want to trade, how and when.')
 %p.media
-    %a.pjaxload{:href => url_for('trade.cgi')}
+    %a{:href => url_for('trade.cgi')}
         %img{:src => url_for('images/pages/tour/trade-tutorial_1.svg')}
 
 %h2= l('2-way pricing')
@@ -25,20 +25,20 @@
 %p.media
     %img{:src => url_for('images/pages/tour/tour-flexible-banking.png')}
 %p.media
-    %a.pjaxload.button{:href => url_for('cashier/payment_methods')}= l('View payment methods')
+    %a.button{:href => url_for('cashier/payment_methods')}= l('View payment methods')
 
 %h2= l('Study our live charts')
 %p= l('Frame your trading strategy using [_1]\'s powerful live charts. Instantly view the trading patterns of forex, indices, commodities and stocks.', stash->{website_name})
-%a.pjaxload{:href => url_for('charting/livechart')}
+%a{:href => url_for('charting/livechart')}
     %img{:src => url_for('images/pages/tour/live-chart-snapshot.svg')}
 
 %h2= l('Learn from us')
 %p= l('Stay informed. [_1] offers daily market reports and market research, as well as frequent trading webinars.', stash->{website_name})
 %p.media
-    %a.pjaxload{:href => url_for('get-started')}
+    %a{:href => url_for('get-started')}
         %img{:src => url_for('images/pages/tour/tour-tools-education.svg')}
 
 %h2= l('Talk to us')
 %p= l('Feel free to contact our friendly and helpful customer service experts. They\'re always available to answer your questions. You can contact us via live chat, email and telephone.')
 %p.media
-    %a.pjaxload.button{:href => url_for('contact')}= l('Contact us')
+    %a.button{:href => url_for('contact')}= l('Contact us')

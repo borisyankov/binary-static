@@ -1,18 +1,21 @@
 <div class="nav-help">
-    <a class="pjaxload" href="[% request.url_for('get-started') %]">[% l("Help") %]</a>
+    <a href="[% request.url_for('get-started') %]">
+        <img href="[% request.url_for('/images/icons/help.svg') %]">
+        [% l("Help") %]
+    </a>
 </div>
 <ul class="nav2nd">
     <li>
-        <a class="pjaxload" href="[% request.url_for('resources/contract_guide') %]">[% l("Trading Guide") %]</a>
+        <a href="[% request.url_for('resources/contract_guide') %]">[% l("Trading Guide") %]</a>
     </li>
     <li>
-        <a class="pjaxload" href="[% request.url_for('why-us') %]">[% l("Why Us?") %]</a>
+        <a href="[% request.url_for('why-us') %]">[% l("Why Us?") %]</a>
     </li>
     <li>
-        <a class="pjaxload" href="[% request.url_for('get-started') %]">[% l("Get Started") %]</a>
+        <a href="[% request.url_for('get-started') %]">[% l("Get Started") %]</a>
     </li>
     <li>
-        <a class="pjaxload" href="[% request.url_for('tour') %]">[% l("Tour") %]</a>
+        <a href="[% request.url_for('tour') %]">[% l("Tour") %]</a>
     </li>
     <li>
         <a href="http://blog.binary.com/en/webinar/">[% l("Webinars") %]</a>
@@ -21,6 +24,6 @@
         <a href="http://blog.binary.com">[% l("Blog") %]</a>
     </li>
     <li>
-        <a class="pjaxload" href="[% request.url_for('contact') %]">[% l("Contact Us") %]</a>
+        <a href="[% request.url_for('contact') %]">[% l("Contact Us") %]</a>
     </li>
 </ul>

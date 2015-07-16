@@ -61,12 +61,12 @@
                             [% END %]
                         [% END %]
                         [%- IF category.expiries.formatted -%]
-                            <a class="pjaxload" href="[% request.url_for(category.link_page, category.link_params) %]">
+                            <a href="[% request.url_for(category.link_page, category.link_params) %]">
                                 [% category.expiries.formatted %]
                             </a>
                         [%- ELSIF category.expiries.min -%]
                             [% category.link_params.time = category.expiries.min %]
-                            <a class="pjaxload" href="[% request.url_for(category.link_page, category.link_params) %]">
+                            <a href="[% request.url_for(category.link_page, category.link_params) %]">
                                 [% category.expiries.min %]&ndash;[%  category.expiries.max %]
                             </a>
                         [% ELSE %]

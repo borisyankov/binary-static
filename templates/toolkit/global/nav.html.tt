@@ -2,7 +2,7 @@
     <ul class="nav1st">
         <li class="submenu">
             <div class="nav-trade">
-                <a class="pjaxload" href="[% request.url_for('trade.cgi') %]" [% target %]>[% l("Trade") %]</a>
+                <a href="[% request.url_for('trade.cgi') %]" [% target %]>[% l("Trade") %]</a>
             </div>
         </li>
         <li class="submenu">
@@ -20,7 +20,7 @@
             [% INCLUDE global/nav_languages.html.tt %]
         </li>
         <li class="login-container">
-            <a href="[% request.url_for('login') %]" class="button login-btn">[% l("Log in") %]</a>
+            <a href="[% request.url_for('login') %]" class="button login-btn">[% l("Log&nbsp;in") %]</a>
         </li>
         <li class="submenu account-container">
             [% INCLUDE global/account_menu.html.tt %]

@@ -1,17 +1,19 @@
 .nav-resources
-    %a{:href => url_for('/resources')}= l('Resources')
+    %a.pjaxload{:href => url_for('/resources')}
+        %img{:src => url_for('/images/icons/resources.svg')}
+        = l('Resources')
 %ul.nav2nd
     %li
-        %a.pjaxload{:href=>url_for('/resources/asset_index')}= l('Asset Index')
+        %a{:href=>url_for('/resources/asset_index')}= l('Asset Index')
     %li
-        %a.pjaxload{:href => url_for('/resources/trading_times')}= l('Trading Times')
+        %a{:href => url_for('/resources/trading_times')}= l('Trading Times')
     %li
-        %a.pjaxload{:href=>url_for('/resources/pricing_table')}= l('Pricing Table')
+        %a{:href=>url_for('/resources/pricing_table')}= l('Pricing Table')
     %li
-        %a.pjaxload{:href=>url_for('/resources/rise_fall_table')}= l('Rise/Fall Table')
+        %a{:href=>url_for('/resources/rise_fall_table')}= l('Rise/Fall Table')
     %li
-        %a.pjaxload{:href=>url_for('/charting/application')}= l('Chart Application')
+        %a{:href=>url_for('/charting/application')}= l('Chart Application')
     %li
-        %a.pjaxload{:href=>url_for('/charting/livechart')}= l('Live Charts')
+        %a{:href=>url_for('/charting/livechart')}= l('Live Charts')
     %li
         %a{:href => '//highcharts.binary.com'}= l('HighCharts')

@@ -2,7 +2,7 @@
 <p>[% welcome_text %] <span class="clientid">([% client.loginid %]).</span></p>
 
 [% IF show_authenticate_button %]
-    <a class="button pjaxload" href="[% request.url_for('/cashier/authenticate') %]">
+    <a class="button" href="[% request.url_for('/cashier/authenticate') %]">
         [% l('Authenticate your account') %]
     </a>
 [% END %]
@@ -17,7 +17,7 @@
     [% IF client.payment_agent && client.payment_agent.is_authenticated %]
         <p>
         [% l('Your account is registered as a Payment Agent.') %]
-        <a class="pjaxload with_login_cookies" href="[% request.url_for('paymentagent_transfer.cgi') %]">[% l('Transfer to client') %]</a>
+        <a class="with_login_cookies" href="[% request.url_for('paymentagent_transfer.cgi') %]">[% l('Transfer to client') %]</a>
         </p>
     [% END %]
 
@@ -34,7 +34,7 @@
             [% l('Due to changes in regulation within the European Union, binary options on financial indices are now considered to be an investment activity.') %]
         </p>
         <p>
-            [% l('Accordingly, to continue trading binary options on forex/stock indices/commodities, please <a href="[_1]" class="pjaxload">open an account with Binary Investments (Europe) Ltd</a>., which is regulated by the Malta Financial Services Authority.', request.url_for('user/upgrade/financial')) %]
+            [% l('Accordingly, to continue trading binary options on forex/stock indices/commodities, please <a href="[_1]">open an account with Binary Investments (Europe) Ltd</a>., which is regulated by the Malta Financial Services Authority.', request.url_for('user/upgrade/financial')) %]
         </p>
     </div>
 [% END %]
@@ -43,45 +43,45 @@
 <div class="row">
     <div class="col cashier-link">
         <p class="media">
-            <a href="[% request.url_for('/cashier') %]" class="pjaxload">
+            <a href="[% request.url_for('/cashier') %]">
                 <img src="[% request.url_for('images/icons/cashier.svg') %]"/>
             </a>
         </p>
         <p class="media">
-            <a class="pjaxload button" href="[% request.url_for('/cashier') %]">[% l('Cashier') %]</a>
+            <a class="button" href="[% request.url_for('/cashier') %]">[% l('Cashier') %]</a>
         </p>
         <p class="media">[% l('Make a deposit or withdraw') %]</p>
     </div>
     <div class="col">
         <p class="media">
-            <a href="[% request.url_for('/user/portfolio') %]" class="pjaxload">
+            <a href="[% request.url_for('/user/portfolio') %]">
                 <img src="[% request.url_for('images/icons/portfolio.svg') %]"/>
             </a>
         </p>
         <p class="media">
-            <a class="pjaxload button" href="[% request.url_for('/user/portfolio') %]">[% l('Portfolio') %]</a>
+            <a class="button" href="[% request.url_for('/user/portfolio') %]">[% l('Portfolio') %]</a>
         </p>
         <p class="media">[% l('View your open positions.') %]</p>
     </div>
     <div class="col">
         <p class="media">
-            <a href="[% request.url_for('/user/profit_table') %]" class="pjaxload">
+            <a href="[% request.url_for('/user/profit_table') %]">
                 <img src="[% request.url_for('images/icons/profit-table.svg') %]"/>
             </a>
         </p>
         <p class="media">
-            <a class="pjaxload button" href="[% request.url_for('/user/profit_table') %]">[% l('Profit Table') %]</a>
+            <a class="button" href="[% request.url_for('/user/profit_table') %]">[% l('Profit Table') %]</a>
         </p>
         <p class="media">[% l('View your trading profit/loss.') %]</p>
     </div>
     <div class="col">
         <p class="media">
-            <a href="[% request.url_for('/user/statement') %]" class="pjaxload">
+            <a href="[% request.url_for('/user/statement') %]">
                 <img src="[% request.url_for('images/icons/statement.svg') %]"/>
             </a>
         </p>
         <p class="media">
-            <a class="pjaxload button" href="[% request.url_for('/user/statement') %]">[% l('Statement') %]</a>
+            <a class="button" href="[% request.url_for('/user/statement') %]">[% l('Statement') %]</a>
         </p>
         <p class="media">[% l('View your historical transactions.') %]</p>
     </div>

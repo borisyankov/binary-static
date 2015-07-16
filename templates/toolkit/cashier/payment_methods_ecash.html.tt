@@ -24,7 +24,7 @@
     <tbody>
         <tr>
             <td>
-                <img id="okpay"></div>
+                <div class="cashier-icon" id="okpay"></div>
             </td>
             <td>
                 USD
@@ -43,7 +43,7 @@
 
         <tr>
             <td>
-                <img id="fastpay"></div>
+                <div class="cashier-icon" id="fastpay"></div>
             </td>
             <td>
                 USD
@@ -62,7 +62,7 @@
 
         <tr>
             <td>
-                <img id="perfect_money"></div>
+                <div class="cashier-icon" id="perfect_money"></div>
             </td>
             <td>
                 USD
@@ -81,7 +81,7 @@
 
         <tr>
             <td>
-                <img id="moneybrokers"></div>
+                <div class="cashier-icon" id="moneybrokers"></div>
             </td>
             <td>
                 USD GBP
@@ -101,7 +101,7 @@
 
         <tr>
             <td>
-                <img id="neteller"></div>
+                <div class="cashier-icon" id="neteller"></div>
             </td>
             <td>
                 USD GBP
@@ -121,7 +121,7 @@
 
         <tr>
             <td>
-                <img id="moneta"></div>
+                <div class="cashier-icon" id="moneta"></div>
             </td>
             <td>
                 USD EUR
@@ -140,7 +140,7 @@
 
         <tr>
             <td>
-                <img id="webmoney"></div>
+                <div class="cashier-icon" id="webmoney"></div>
             </td>
             <td>
                 USD EUR
@@ -159,7 +159,7 @@
 
         <tr>
             <td>
-                <img id="ukash"></div>
+                <div class="cashier-icon" id="ukash"></div>
             </td>
             <td>
                 USD GBP
@@ -183,7 +183,7 @@
 
         <tr>
             <td>
-                <img id="qiwi"></div>
+                <div class="cashier-icon" id="qiwi"></div>
             </td>
             <td>
                 USD EUR
@@ -204,7 +204,7 @@
 
         <tr>
             <td>
-                <img id="yandex"></div>
+                <div class="cashier-icon" id="yandex"></div>
             </td>
             <td>
                 USD EUR
@@ -221,7 +221,7 @@
 
         <tr>
             <td>
-                <img id="paysafecard"></div>
+                <div class="cashier-icon" id="paysafecard"></div>
             </td>
             <td>
                 USD EUR

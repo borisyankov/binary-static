@@ -6,26 +6,26 @@
         <div class="sitemap row">
             <div class="col">
                 <h4>[% l('Partners') %]</h4>
-                <a class="pjaxload" href="[% request.url_for('/affiliate/signup') %]">[% l('Affiliate Program') %]</a>
-                <a class="pjaxload" href="[% request.url_for('white-labels') %]" >[% l('White Labels') %]</a>
-                <a class="pjaxload" href="[% request.url_for('partnerapi') %]">[% l('Partner API') %]</a>
-                <a class="pjaxload" href="[% request.url_for('open-source-projects') %]" >[% l('Open Source') %]</a>
+                <a href="[% request.url_for('/affiliate/signup') %]">[% l('Affiliate Program') %]</a>
+                <a href="[% request.url_for('white-labels') %]" >[% l('White Labels') %]</a>
+                <a href="[% request.url_for('partnerapi') %]">[% l('Partner API') %]</a>
+                <a href="[% request.url_for('open-source-projects') %]" >[% l('Open Source') %]</a>
                 <a href="http://www.gamcare.org.uk/">[% l('GamCare') %]</a>
             </div>
             <div class="col">
                 <h4>[% l('Terms') %]</h4>
-                <a class="pjaxload" href="[% request.url_for('terms-and-conditions') %]">[% l('Terms and Conditions') %]</a>
-                <a class="pjaxload" href="[% request.url_for('security-and-privacy') %]">[% l('Security and Privacy') %]</a>
-                <a class="pjaxload" href="[% request.url_for('complaints-and-disputes') %]">[% l('Complaints and Disputes') %]</a>
-                <a class="pjaxload" href="[% request.url_for('responsible-trading') %]">[% l('Responsible Trading') %]</a>
+                <a href="[% request.url_for('terms-and-conditions') %]">[% l('Terms and Conditions') %]</a>
+                <a href="[% request.url_for('security-and-privacy') %]">[% l('Security and Privacy') %]</a>
+                <a href="[% request.url_for('complaints-and-disputes') %]">[% l('Complaints and Disputes') %]</a>
+                <a href="[% request.url_for('responsible-trading') %]">[% l('Responsible Trading') %]</a>
                 <a href="http://www.gamcare.org.uk">[% l("GamCare") %]</a>
             </div>
             <div class="col">
                 <h4>[% l('About Us') %]</h4>
-                <a class="pjaxload" href="[% request.url_for('about-us') %]">[% l('Group Information') %]</a>
-                <a class="pjaxload" href="[% request.url_for('group-history') %]">[% l('Group History') %]</a>
-                <a class="pjaxload us_patent_link" href="[% request.url_for('/legal/us_patents') %]" >[% l('Patents') %]</a>
-                <a class="pjaxload" href="[% request.url_for('careers') %]">[% l('Careers') %]</a>
+                <a href="[% request.url_for('about-us') %]">[% l('Group Information') %]</a>
+                <a href="[% request.url_for('group-history') %]">[% l('Group History') %]</a>
+                <a class="us_patent_link" href="[% request.url_for('/legal/us_patents') %]" >[% l('Patents') %]</a>
+                <a href="[% request.url_for('careers') %]">[% l('Careers') %]</a>
                 <a href="http://binarycom.statuspage.io">[% l('Network Status') %]</a>
             </div>
             <div class="col social-col">
@@ -76,7 +76,7 @@
     </div>
     <div class="home-content darkish">
         <div class="responsible-trading">
-            [% l('Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset. In regards to binary options which are gambling products, remember that gambling can be addictive - please play responsibly. Read about <a href="[_1]" class="pjaxload">Responsible Trading</a>.', request.url_for('responsible-trading')) %]
+            [% l('Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset. In regards to binary options which are gambling products, remember that gambling can be addictive - please play responsibly. Read about <a href="[_1]">Responsible Trading</a>.', request.url_for('responsible-trading')) %]
         </div>
     </div>
 </footer>

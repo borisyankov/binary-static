@@ -1,23 +1,26 @@
 <div class="nav-cashier">
-    <a class="pjaxload" href="[% request.url_for('cashier') %]">[% l("Cashier") %]</a>
+    <a href="[% request.url_for('cashier') %]">
+        <img href="[% request.url_for('/images/icons/cashier.svg') %]">
+        [% l("Cashier") %]
+    </a>
 </div>
 <ul class="nav2nd">
     <li>
-        <a class="pjaxload" href="[% request.url_for('cashier/payment_methods') %]">[% l("Payment Methods") %]</a>
+        <a href="[% request.url_for('cashier/payment_methods') %]">[% l("Payment Methods") %]</a>
     </li>
     <li>
-        <a class="pjaxload" href="[% request.url_for('cashier/forward?act=deposit') %]">[% l("Deposit") %]</a>
+        <a href="[% request.url_for('cashier/forward?act=deposit') %]">[% l("Deposit") %]</a>
     </li>
     <li>
-        <a class="pjaxload" href="[% request.url_for('cashier/forward?act=withdraw') %]">[% l("Withdraw") %]</a>
+        <a href="[% request.url_for('cashier/forward?act=withdraw') %]">[% l("Withdraw") %]</a>
     </li>
     <li>
-        <a class="pjaxload" href="[% request.url_for('cashier/payment_agent_list') %]">[% l("Deposit To Payment Agent") %]</a>
+        <a href="[% request.url_for('cashier/payment_agent_list') %]">[% l("Deposit To Payment Agent") %]</a>
     </li>
     <li>
-        <a class="pjaxload" href="[% request.url_for('paymentagent_withdraw.cgi') %]">[% l("Withdraw Via Payment Agent") %]</a>
+        <a href="[% request.url_for('paymentagent_withdraw.cgi') %]">[% l("Withdraw Via Payment Agent") %]</a>
     </li>
     <li>
-        <a class="pjaxload" href="[% request.url_for('cashier/account_transfer') %]">[% l("Transfer Between Accounts") %]</a>
+        <a href="[% request.url_for('cashier/account_transfer') %]">[% l("Transfer Between Accounts") %]</a>
     </li>
 </ul>

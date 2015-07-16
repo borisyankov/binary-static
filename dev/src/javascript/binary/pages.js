@@ -89,3 +89,13 @@ onLoad.queue_for_url(function() {
 $('.login-content button').on('click', function() {
     $('.form-logo').addClass('spinner');
 });
+
+$('.nav2nd a').on('click', function() {
+    var nav2nd = $(this).parent().parent();
+    nav2nd.hide();
+    setTimeout(function() { nav2nd.show() });
+});
+
+if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
+    $(header).css('position', 'sticky');
+}

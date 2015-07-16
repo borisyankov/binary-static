@@ -525,10 +525,11 @@ Page.prototype = {
     flag: function() {
         var idx = $('.language-options li a.selected').parent().index(),
             offset = - (idx + 1) * 15,
-            cssStyle = offset + 'px';
-        $('.nav-languages a').css('background-position-y', offset);
+            cssStyle = '0 ' + offset + 'px';
+        $('.nav-languages a').css('background-position', cssStyle);
     },
     on_load: function() {
+        this.apply_pjax_class();
         this.url.reset();
         this.localize_for(this.language());
         this.header.on_load();
@@ -544,6 +545,12 @@ Page.prototype = {
     },
     on_unload: function() {
         this.contents.on_unload();
+    },
+    apply_pjax_class: function() {
+        var pjaxableLinks = $('a').filter(function() {
+            return this.hostname == location.hostname;
+        });
+        pjaxableLinks.addClass('pjaxload');
     },
     on_change_language: function() {
         var that = this;

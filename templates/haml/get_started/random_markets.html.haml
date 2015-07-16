@@ -5,16 +5,16 @@
 
 %ul.bullet
     %li
-        %a.pjaxload{:href=>url_for("trade.cgi?market=random&form_name=risefall")}= l('Rise/Fall')
+        %a{:href=>url_for("trade.cgi?market=random&form_name=risefall")}= l('Rise/Fall')
     %li
-        %a.pjaxload{:href=>url_for("trade.cgi?market=random&form_name=higherlower")}= l('Higher/Lower')
+        %a{:href=>url_for("trade.cgi?market=random&form_name=higherlower")}= l('Higher/Lower')
     %li
-        %a.pjaxload{:href=>url_for("trade.cgi?market=random&form_name=touchnotouch")}= l('Touch/No Touch')
+        %a{:href=>url_for("trade.cgi?market=random&form_name=touchnotouch")}= l('Touch/No Touch')
     %li!= l('In/Out (<a href="[_1]">ends between/outside</a> and <a href="[_2]">stays between/goes outside</a>)', url_for("trade.cgi?market=random&form_name=endsinout"), url_for("trade.cgi?market=random&form_name=staysinout"))
     %li
-        %a.pjaxload{:href=>url_for("trade.cgi?market=random&expiry_type=duration&form_name=digits&underlying_symbol=R_100&time=5t")}= l('Digits')
+        %a{:href=>url_for("trade.cgi?market=random&expiry_type=duration&form_name=digits&underlying_symbol=R_100&time=5t")}= l('Digits')
     %li
-        %a.pjaxload{:href=>url_for("trade.cgi?market=random&expiry_type=duration&form_name=asian&underlying_symbol=R_100&time=5t")}= l('Asian')
+        %a{:href=>url_for("trade.cgi?market=random&expiry_type=duration&form_name=asian&underlying_symbol=R_100&time=5t")}= l('Asian')
 
 %p.media
     %img{:src => url_for('images/pages/get-started/get-started-random-markets.svg')}
@@ -54,4 +54,4 @@
         %p!= l('The [_1] simulates a market that is active during the day (but becomes less volatile at night). The [_2] simulates a market that is quiet during the day (but becomes more volatile at night).', pjax_link_for(l('Random Mars'), url_for('trade.cgi?market=random&form_name=risefall&underlying_symbol=RDMARS')), pjax_link_for(l('Random Venus'), url_for('trade.cgi?market=random&form_name=risefall&underlying_symbol=RDVENUS')));
 
 %p.media
-    %a.button.pjaxload{:href => url_for('trade.cgi?market=random')}= l('Place a random trade')
+    %a.button{:href => url_for('trade.cgi?market=random')}= l('Place a random trade')

@@ -92,5 +92,5 @@
 </p>
 <h2>[% l('Costs and Charges') %]</h2>
 <p>
-[% l('Our costs and charges for depositing and withdrawing money are set out <a href="[_1]" class="pjaxload">here</a>. Please be aware of all costs and charges that apply to you because they will affect your profitability.', request.url_for('cashier/payment_methods') ) %]
+[% l('Our costs and charges for depositing and withdrawing money are set out <a href="[_1]">here</a>. Please be aware of all costs and charges that apply to you because they will affect your profitability.', request.url_for('cashier/payment_methods') ) %]
 </p>

@@ -5,8 +5,8 @@
 
 %ul.bullet
     %li= l('Real-time prices, benchmarked against interbank options markets.')
-    %li!= l("Returns above 100% on simple <a href='[_1]' class='pjaxload'>rise/fall</a> contracts.", url_for('trade.cgi?market=forex&form_name=risefall'))
-    %li!= l("Returns above 1000% on <a href='[_1]' class='pjaxload'>higher/lower</a> and <a href='[_2]' class='pjaxload'>touch/no-touch</a> trades.", url_for('trade.cgi?market=forex&form_name=higherlower'), url_for('trade.cgi?market=forex&form_name=touchnotouch'))
+    %li!= l("Returns above 100% on simple <a href='[_1]'>rise/fall</a> contracts.", url_for('trade.cgi?market=forex&form_name=risefall'))
+    %li!= l("Returns above 1000% on <a href='[_1]'>higher/lower</a> and <a href='[_2]'>touch/no-touch</a> trades.", url_for('trade.cgi?market=forex&form_name=higherlower'), url_for('trade.cgi?market=forex&form_name=touchnotouch'))
     %li= l('No hidden fees or commissions.')
 
 %h2= l('Trade your way')
@@ -68,4 +68,4 @@
         %img{:src => url_for('images/pages/why-us/why-us-GBAF-award-2012.svg')}
 
 %p.media
-    %a.button.pjaxload{:href => url_for('/')}= l('Open a free account')
+    %a.button{:href => url_for('/')}= l('Open a free account')

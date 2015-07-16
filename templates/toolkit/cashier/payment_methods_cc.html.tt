@@ -24,7 +24,7 @@
     <tbody>
         <tr>
             <td>
-                <img id="visa"></div>
+                <div class="cashier-icon" id="visa"></div>
             </td>
             <td>
                 USD GBP
@@ -44,7 +44,7 @@
 
         <tr>
             <td>
-                <img id="mastercard"></div>
+                <div class="cashier-icon" id="mastercard"></div>
             </td>
             <td>
                 USD GBP
@@ -64,7 +64,7 @@
 
         <tr>
             <td>
-                <img id="cuo-credit-card"></div>
+                <div class="cashier-icon" id="cuo-credit-card"></div>
             </td>
             <td>
                 USD

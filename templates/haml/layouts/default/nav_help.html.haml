@@ -1,17 +1,19 @@
 .nav-help
-    %a.pjaxload{:href=>url_for('/get-started')}= l('Help')    
+    %a{:href=>url_for('/get-started')}
+        %img{:src => url_for('/images/icons/help.svg')}
+        = l('Help')
 %ul.nav2nd
     %li
-        %a.pjaxload{:href => url_for('/resources/contract_guide')}= l('Trading Guide')
+        %a{:href => url_for('/resources/contract_guide')}= l('Trading Guide')
     %li
-        %a.pjaxload{:href=>url_for('/why-us')}= l('Why Us?')
+        %a{:href=>url_for('/why-us')}= l('Why Us?')
     %li
-        %a.pjaxload{:href=>url_for('/get-started')}= l('Get Started')
+        %a{:href=>url_for('/get-started')}= l('Get Started')
     %li
-        %a.pjaxload{:href=>url_for('/tour')}= l('Tour')
+        %a{:href=>url_for('/tour')}= l('Tour')
     %li
         %a{:href=>'http://blog.binary.com/en/webinar/'}= l('Webinars')
     %li
         %a{:href=>'http://blog.binary.com'}= l('Blog')
     %li
-        %a.pjaxload{:href=>url_for('contact')}= l('Contact Us')
+        %a{:href=>url_for('contact')}= l('Contact Us')

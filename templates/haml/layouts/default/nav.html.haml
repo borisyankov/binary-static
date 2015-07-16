@@ -2,7 +2,9 @@
     %ul.nav1st
         %li.submenu
             .nav-trade
-                %a.pjaxload{:href => url_for('trade.cgi')}= l('Trade')
+                %a{:href => url_for('trade.cgi')}
+                    %img{:src => url_for('images/pages/binary-symbol-logo.svg')}
+                    = l('Trade')
         %li.submenu
             = include('layouts/default/nav_cashier')
         %li.submenu
@@ -13,6 +15,6 @@
         %li.submenu
             = include('layouts/default/nav_languages')
         %li.login-container
-            %a.button.login-btn{:href=>url_for('login')}= l('Log in')
+            %a.button.login-btn{:href=>url_for('login')}!= l('Log&nbsp;in')
         %li.submenu.account-container
             = include('layouts/default/account_menu')

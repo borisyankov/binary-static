@@ -1,7 +1,7 @@
 [%- MACRO pagination_links BLOCK -%]
 
     [% IF has_newer %]
-    <a class="pjaxload button" href="[% request.url_for('/user/profit_table', { after => sold_contracts.first.purchase_time }) %]"><span>&laquo;[% l('Newer') %]</span></a>
+    <a class="button" href="[% request.url_for('/user/profit_table', { after => sold_contracts.first.purchase_time }) %]"><span>&laquo;[% l('Newer') %]</span></a>
     [% END %]
 
     <form action="[% request.url_for('/user/profit_table') %]" [% IF position != 'top' %] style="visibility:hidden" [% END %]>
@@ -13,7 +13,7 @@
     </form>
 
     [% IF has_older %]
-    <a class="pjaxload button" href="[% request.url_for('/user/profit_table', { before => sold_contracts.last.purchase_time }) %]"><span>[% l('Older') %]&raquo;</span></a>
+    <a class="button" href="[% request.url_for('/user/profit_table', { before => sold_contracts.last.purchase_time }) %]"><span>[% l('Older') %]&raquo;</span></a>
     [% END %]
 
 [%- END -%]

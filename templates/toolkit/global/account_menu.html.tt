@@ -1,30 +1,30 @@
 <div class="nav-account">
-    <a class="pjaxload" href="[% request.url_for('user/my_account') %]">[% l("My&nbsp;Account") %]</a>
+    <a href="[% request.url_for('user/my_account') %]">
+        <img href="[% request.url_for('/images/icons/myaccount.svg') %]">
+        [% l("My&nbsp;Account") %]
+    </a>
 </div>
 <ul class="nav2nd">
     <li>
         <a id="view-balances" href="[% request.url_for('user/balance') %]">[% l('View balances') %]</a>
     </li>
     <li>
-        <a class="pjaxload" href="[% request.url_for('user/portfolio') %]">[% l('Portfolio') %]</a>
+        <a href="[% request.url_for('user/portfolio') %]">[% l('Portfolio') %]</a>
     </li>
     <li>
-        <a class="pjaxload" href="[% request.url_for('user/profit_table') %]">[% l('Profit Table') %]</a>
+        <a href="[% request.url_for('user/profit_table') %]">[% l('Profit Table') %]</a>
     </li>
     <li>
-        <a class="pjaxload" href="[% request.url_for('user/statement') %]">[% l('Statement') %]</a>
+        <a href="[% request.url_for('user/statement') %]">[% l('Statement') %]</a>
     </li>
     <li>
-        <a class="pjaxload" href="[% request.url_for('user/settings') %]">[% l('Settings') %]</a>
+        <a href="[% request.url_for('user/settings') %]">[% l('Settings') %]</a>
     </li>
     <li>
-        <a class="pjaxload" href="[% request.url_for('user/change_password') %]">[% l('Password') %]</a>
-    </li>
-    <li>
-        <a class="pjaxload" href="[% request.url_for('affiliate/signup') %]">[% l('Affiliate') %]</a>
+        <a href="[% request.url_for('affiliate/signup') %]">[% l('Affiliate') %]</a>
     </li>
     <li class="authenticate-menu">
-        <a class="pjaxload" href="[% request.url_for('cashier/authenticate') %]">[% l('Authenticate') %]</a>
+        <a href="[% request.url_for('cashier/authenticate') %]">[% l('Authenticate') %]</a>
     </li>
     <li>
         <form id="loginid-switch-form" action="[% request.url_for('user/loginid_switch?l=EN') %]" method="post">

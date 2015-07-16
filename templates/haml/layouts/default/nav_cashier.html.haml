@@ -1,15 +1,17 @@
 .nav-cashier
-    %a.pjaxload{:href => url_for('cashier')}= l('Cashier')
+    %a{:href => url_for('cashier')}
+        %img{:src => url_for('/images/icons/cashier.svg')}
+        = l('Cashier')
 %ul.nav2nd
     %li
-        %a.pjaxload{:href=> url_for('cashier/payment_methods')}= l('Payment Methods')
+        %a{:href=> url_for('cashier/payment_methods')}= l('Payment Methods')
     %li
-        %a.pjaxload{:href => url_for('cashier/forward?act=deposit')}= l('Deposit')
+        %a{:href => url_for('cashier/forward?act=deposit')}= l('Deposit')
     %li
-        %a.pjaxload{:href => url_for('cashier/forward?act=withdraw')}= l('Withdraw')
+        %a{:href => url_for('cashier/forward?act=withdraw')}= l('Withdraw')
     %li
-        %a.pjaxload{:href => url_for('cashier/payment_agent_list')}= l('Deposit To Payment Agent')
+        %a{:href => url_for('cashier/payment_agent_list')}= l('Deposit To Payment Agent')
     %li
-        %a.pjaxload{:href => url_for('paymentagent_withdraw.cgi')}= l('Withdraw Via Payment Agent')
+        %a{:href => url_for('paymentagent_withdraw.cgi')}= l('Withdraw Via Payment Agent')
     %li
-        %a.pjaxload{:href=>url_for('cashier/account_transfer')}= l('Transfer Between Accounts')
+        %a{:href=>url_for('cashier/account_transfer')}= l('Transfer Between Accounts')
