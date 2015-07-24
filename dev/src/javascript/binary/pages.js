@@ -167,7 +167,7 @@ $('.exhaustive-icon-list').html(function() {
     var iconList = icons.map(function(i) {
             return '<div style="float: left; width: 10rem; height: 10rem">' +
                         '<div class="icon">' +
-                            '<img src="https://static.binary.com/images/icons/' + i + '.svg">' +
+                            '<img src="https://borisyankov.github.io/binary-static/images/icons/' + i + '.svg">' +
                         '</div>' +
                         '<div style="text-align: center; margin-top: .5rem">' + i + '</div>' +
                     '</div>';
