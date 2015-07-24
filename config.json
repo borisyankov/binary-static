@@ -3,7 +3,7 @@
 	"display_languages": "EN,ID,RU,ES,FR,PT,DE,ZH_CN,PL,AR",
 	"static": {
 		"url": "https://borisyankov.github.io/binary-static/",
-		"version": "3.8.0"
+		"version": "3.7.1"
 	},
 	"marketing": {
 		"google_tag_manager": "GTM-MZWFF7"
