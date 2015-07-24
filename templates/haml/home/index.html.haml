@@ -60,22 +60,26 @@
                 .icon
                     %img{:src => url_for("images/icons/sharp-prices.svg")}
                 %h3= l('Sharp Prices')
-                %div= l('Our patented pricing technology helps you benefit from the same rates of return as traders in the interbank market.')
+                .icon-desc
+                    = l('Our patented pricing technology helps you benefit from the same rates of return as traders in the interbank market.')
             .col
                 .icon
                     %img{:src => url_for("images/icons/directions.svg")}
                 %h3= l('Trade Your Way')
-                %div= l('Whatever your market view, you can always put your strategy to work and profit from your predictions.')
+                .icon-desc
+                    = l('Whatever your market view, you can always put your strategy to work and profit from your predictions.')
             .col
                 .icon
                     %img{:src => url_for("images/icons/safety.svg")}
                 %h3= l('Safe Funds')
-                %div= l('With us, your money is secure. We segregate and hold client funds in secure AAA-rated banks.')
+                .icon-desc
+                    = l('With us, your money is secure. We segregate and hold client funds in secure AAA-rated banks.')
             .col
                 .icon
                     %img{:src => url_for("images/icons/prize.svg")}
                 %h3= l('Go With the Leader')
-                %div= l('Binary.com is the award-winning industry pioneer in online options trading.')
+                .icon-desc
+                    = l('Binary.com is the award-winning industry pioneer in online options trading.')
 
 .home-container.darkish
     .home-body
@@ -98,5 +102,5 @@
         %hgroup
             %h1!= l('<i>Payment</i> Methods')
         %a{:href => url_for('/cashier/payment_methods')}
-            %img{:src => url_for("images/pages/home/payment-methods.svg")}
+            %img.payment-methods{:src => url_for("images/pages/home/payment-methods.svg")}
         %p{:style => "margin-bottom: -1em")}= l('Hundreds of deposit and withdrawal options.')

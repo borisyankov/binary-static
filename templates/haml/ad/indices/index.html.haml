@@ -15,7 +15,7 @@
       .grd-grid-2.grd-hide-mobile.grd-hide-phablet
       #open-account.grd-grid-8.grd-grid-mobile-12.grd-grid-phablet-12
         %p= l('Open a free account & get your $10,000 virtual money')
-        %form#virtual-acc-form{ :name => 'oppAccForm', :action => url_for('create_account.cgi'), :method => 'post' }
+        %form#virtual-acc-form{ :name => 'oppAccForm', :action => url_for('new_virtual'), :method => 'post' }
           %span#virtual-fields
             %span.grd-grid-12.grd-no-gutter
               %input.xemail{:name => 'Email', :id => 'Email', :type => 'email', :required => true, :placeholder => stash('emailtext')}

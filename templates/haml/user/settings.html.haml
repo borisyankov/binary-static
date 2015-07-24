@@ -4,48 +4,48 @@
 %h1= stash->{title}
 .row
     .col
-        %p.media
-            .icon
-                %img{:src => url_for('images/icons/detail.svg')}
+        %p.icon
+            %img{:src => url_for('images/icons/detail.svg')}
         %p.media
             %a.button{:href => url_for('/user/settings/details')}= l('Personal Details')
-        %p= l('View your personal information.')
+        %p.icon-desc
+            = l('View your personal information.')
     - if ($is_real) {
         .col
-            %p.media
-                .icon
-                    %img{:src => url_for('images/pages/settings/security.svg')}
+            %p.icon
+                %img{:src => url_for('images/pages/settings/security.svg')}
             %p.media
                 %a.button{:href => url_for('/user/settings/security')}= l('Security')
-            %p= l('Manage your account access and security settings.')
+            %p.icon-desc
+                = l('Manage your account access and security settings.')
         .col
-            %p.media
-                .icon
-                    %img{:src => url_for('images/pages/settings/self-exclusion.svg')}
+            %p.icon
+                %img{:src => url_for('images/pages/settings/self-exclusion.svg')}
             %p.media
                 %a.button{:href => url_for('/user/self_exclusion')}= l('Self Exclusion')
-            %p= l('Facility that allows you to set limits on your account.')
+            %p.icon-desc
+                = l('Facility that allows you to set limits on your account.')
         .col
-            %p.media
-                .icon
-                    %img{:src => url_for('images/pages/settings/limits.svg')}
+            %p.icon
+                %img{:src => url_for('images/pages/settings/limits.svg')}
             %p.media
               %a.button{:href => url_for('/cashier/limits')}= l('Limits')
-            %p= l('View your trading and withdrawal limits.')
+            %p.icon-desc
+                = l('View your trading and withdrawal limits.')
         - if ($show_financial_assessment) {
             .col
-                %p.media
-                    .icon
-                        %img.icon{:src => url_for('images/icons/financial-assessment.svg')}
+                %p.icon
+                    %img{:src => url_for('images/icons/financial-assessment.svg')}
                 %p.media
                     %a.button{:href => url_for('/user/assessment')}= l('Financial Assessment')
-              %p= l('View your financial assessment settings.')
+              %p.icon-desc
+                = l('View your financial assessment settings.')
       - }
     - }
     .col
-        %p.media
-            .icon
-                %img{:src => url_for('images/icons/api-token.svg')}
+        %p.icon
+            %img{:src => url_for('images/icons/api-token.svg')}
         %p.media
             %a.button{:href => url_for('/user/api_token')}= l('API Token')
-        %p= l('API token for third party applications.')
+        %p.icon-desc
+            = l('API token for third party applications.')

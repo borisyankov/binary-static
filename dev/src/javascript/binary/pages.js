@@ -93,9 +93,85 @@ $('.login-content button').on('click', function() {
 $('.nav2nd a').on('click', function() {
     var nav2nd = $(this).parent().parent();
     nav2nd.hide();
-    setTimeout(function() { nav2nd.show() });
+    setTimeout(function() { nav2nd.show(); });
 });
 
 if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
     $(header).css('position', 'sticky');
 }
+
+$('.exhaustive-icon-list').html(function() {
+    var icons = [
+        'account-transfer',
+        'address',
+        'api-token',
+        'asset-index',
+        'cashier',
+        'chat',
+        'contact-us',
+        'customer-service',
+        'directions',
+        'financial-assessment',
+        'get-started-icon-1',
+        'get-started-icon-2',
+        'get-started-icon-3',
+        'get-started-icon-4',
+        'get-started-icon-5',
+        'get-started-icon-6',
+        'get-started-icon-7',
+        'get-started-icon-8',
+        'get-started-icon-9',
+        'help',
+        'highcharts',
+        'javacharts',
+        'limits',
+        'live-chat',
+        'livecharts',
+        'myaccount',
+        'payment-agents',
+        'payment-methods',
+        'portfolio',
+        'pricing-table',
+        'prize',
+        'profit-table',
+        'protection',
+        'resources',
+        'rise-fall-table',
+        'safety',
+        'security',
+        'self-exclusion',
+        'sharp-prices',
+        'skype',
+        'statement',
+        'telephone',
+        'trade-asian-down',
+        'trade-asian-up',
+        'trade-differs',
+        'trade-ends-between',
+        'trade-ends-outside',
+        'trade-fall',
+        'trade-goes-outside',
+        'trade-higher',
+        'trade-lower',
+        'trade-match',
+        'trade-notouch',
+        'trade-rise',
+        'trade-stays-between',
+        'trade-touch',
+        'trade',
+        'trading-guide',
+        'trading-times',
+        'user'
+    ];
+
+    var iconList = icons.map(function(i) {
+            return '<div style="float: left; width: 10rem; height: 10rem">' +
+                        '<div class="icon">' +
+                            '<img src="https://static.binary.com/images/icons/' + i + '.svg">' +
+                        '</div>' +
+                        '<div style="text-align: center; margin-top: .5rem">' + i + '</div>' +
+                    '</div>';
+        }).join('');
+
+    return iconList;
+});

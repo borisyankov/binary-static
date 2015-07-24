@@ -2473,12 +2473,88 @@ $('.login-content button').on('click', function() {
 $('.nav2nd a').on('click', function() {
     var nav2nd = $(this).parent().parent();
     nav2nd.hide();
-    setTimeout(function() { nav2nd.show() });
+    setTimeout(function() { nav2nd.show(); });
 });
 
 if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
     $(header).css('position', 'sticky');
 }
+
+$('.exhaustive-icon-list').html(function() {
+    var icons = [
+        'account-transfer',
+        'address',
+        'api-token',
+        'asset-index',
+        'cashier',
+        'chat',
+        'contact-us',
+        'customer-service',
+        'directions',
+        'financial-assessment',
+        'get-started-icon-1',
+        'get-started-icon-2',
+        'get-started-icon-3',
+        'get-started-icon-4',
+        'get-started-icon-5',
+        'get-started-icon-6',
+        'get-started-icon-7',
+        'get-started-icon-8',
+        'get-started-icon-9',
+        'help',
+        'highcharts',
+        'javacharts',
+        'limits',
+        'live-chat',
+        'livecharts',
+        'myaccount',
+        'payment-agents',
+        'payment-methods',
+        'portfolio',
+        'pricing-table',
+        'prize',
+        'profit-table',
+        'protection',
+        'resources',
+        'rise-fall-table',
+        'safety',
+        'security',
+        'self-exclusion',
+        'sharp-prices',
+        'skype',
+        'statement',
+        'telephone',
+        'trade-asian-down',
+        'trade-asian-up',
+        'trade-differs',
+        'trade-ends-between',
+        'trade-ends-outside',
+        'trade-fall',
+        'trade-goes-outside',
+        'trade-higher',
+        'trade-lower',
+        'trade-match',
+        'trade-notouch',
+        'trade-rise',
+        'trade-stays-between',
+        'trade-touch',
+        'trade',
+        'trading-guide',
+        'trading-times',
+        'user'
+    ];
+
+    var iconList = icons.map(function(i) {
+            return '<div style="float: left; width: 10rem; height: 10rem">' +
+                        '<div class="icon">' +
+                            '<img src="https://static.binary.com/images/icons/' + i + '.svg">' +
+                        '</div>' +
+                        '<div style="text-align: center; margin-top: .5rem">' + i + '</div>' +
+                    '</div>';
+        }).join('');
+
+    return iconList;
+});
 ;var trade_contract_back = function () {
     $('#find_another_contract').on('click', function (e) {
         if (page.url.history_supported) {
@@ -7108,7 +7184,7 @@ onLoad.queue(function() {
         client_form = new ClientForm({restricted_countries: page.settings.get('restricted_countries'), valid_loginids: page.settings.get('valid_loginids')});
 });
 
-pjax_config_page('user/upgrade', function() {
+pjax_config_page('new_real', function() {
     return {
         onLoad: function() {
             client_form.on_residence_change();
@@ -7149,7 +7225,7 @@ var hide_account_opening_for_risk_disclaimer = function () {
     }
 };
 
-pjax_config_page('user/upgrade/financial|create_account', function() {
+pjax_config_page('new_financial', function() {
     return {
         onLoad: function() {
             upgrade_investment_disabled_field();
@@ -7380,29 +7456,6 @@ var Charts = function(charts) {
     window.open(charts, 'DetWin', 'width=580,height=710,scrollbars=yes,location=no,status=no,menubar=no');
 };
 
-var home_bomoverlay = {
-    url : {
-	    param : {
-            get : function(name) {
-                name = name.replace(/[\[]/,"\\[").replace(/[\]]/,"\\]");
-                var regexS = "[\\?&]"+name+"=([^&#]*)";
-                var regex = new RegExp(regexS);
-                var results = regex.exec(window.location.href);
-                return (results === null)? null:results[1];
-            }
-        }
-    },
-
-    init : function() {
-        if (! this.url.param.get('frombom')) return;
-        var obj = document.getElementById('banner').getElementsByClassName('wrapper')[0];
-        var div = document.createElement('div');
-        div.className = 'bomoverlay';
-        obj.appendChild(div);
-        div.addEventListener('click', function() { this.parentNode.removeChild(this); });
-    }
-};
-
 var email_rot13 = function(str) {
     return str.replace(/[a-zA-Z]/g, function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);});
 };
@@ -7505,6 +7558,87 @@ var show_live_chat_icon = function() {
         }
     }, 80);
 };
+
+var display_career_email = function() {
+    $("#hr_contact_eaddress").html(email_rot13("<n uers=\"znvygb:ue@ovanel.pbz\" ery=\"absbyybj\">ue@ovanel.pbz</n>"));
+};
+
+pjax_config_page('/$|/home', function() {
+    return {
+        onLoad: function() {
+            select_user_country();
+            get_ticker();
+        }
+    };
+});
+
+pjax_config_page('/why-us', function() {
+    return {
+        onLoad: function() {
+            var whyus = $('.why-us');
+            sidebar_scroll(whyus);
+        },
+        onUnload: function() {
+            $(window).off('scroll');
+        }
+    };
+});
+
+pjax_config_page('/smart-indices', function() {
+    return {
+        onLoad: function() {
+            sidebar_scroll($('.smart-indices'));
+        },
+        onUnload: function() {
+            $(window).off('scroll');
+        }
+    };
+});
+
+pjax_config_page('/open-source-projects', function() {
+    return {
+        onLoad: function() {
+            sidebar_scroll($('.open-source-projects'));
+        },
+        onUnload: function() {
+            $(window).off('scroll');
+        }
+    };
+});
+
+pjax_config_page('/white-labels', function() {
+    return {
+        onLoad: function() {
+            sidebar_scroll($('.white-labels'));
+        },
+        onUnload: function() {
+            $(window).off('scroll');
+        }
+    };
+});
+
+pjax_config_page('/partnerapi', function() {
+    return {
+        onLoad: function() {
+            var partnerapi = $('.partnerapi-content');
+            sidebar_scroll(partnerapi);
+        },
+        onUnload: function() {
+            $(window).off('scroll');
+        }
+    };
+});
+
+pjax_config_page('/get-started', function() {
+    return {
+        onLoad: function() {
+            get_started_behaviour();
+        },
+        onUnload: function() {
+            $(window).off('scroll');
+        },
+    };
+});
 
 pjax_config_page('/contact', function() {
     return {

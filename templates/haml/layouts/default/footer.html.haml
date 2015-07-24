@@ -2,28 +2,28 @@
     .home-content.darkish
         .sitemap.row
             .col
-                %h4= l('Partners')
+                %h5= l('Partners')
                 %a{:href=>url_for("/affiliate/signup")}= l('Affiliate Program')
                 %a{:href=>url_for("white-labels")}= l('White Labels')
                 %a{:href=>url_for("partnerapi")}= l('Partner API')
                 %a{:href=>url_for("open-source-projects")}= l('Open Source')
                 %a{:href=>"http://www.gamcare.org.uk/"}= l('GamCare')
             .col
-                %h4= l('Terms')
+                %h5= l('Terms')
                 %a{:href=>url_for("terms-and-conditions")}= l('Terms and Conditions')
                 %a{:href=>url_for("security-and-privacy")}= l('Security and Privacy')
                 %a{:href=>url_for("complaints-and-disputes")}= l('Complaints and Disputes')
                 %a{:href=>url_for("responsible-trading")}= l('Responsible Trading')
                 %a{:href=>'http://www.gamcare.org.uk/'}= l('GamCare')
             .col
-                %h4= l('About Us')
+                %h5= l('About Us')
                 %a{:href=>url_for("about-us")}= l('Group Information')
                 %a{:href=>url_for("group-history")}= l('Group History')
                 %a{:href=>url_for("/legal/us_patents"), :class=>"us_patent_link"}= l('Patents')
                 %a{:href=>url_for("careers")}= l('Careers')
                 %a{:href=>"http://binarycom.statuspage.io"}= l('Network Status')
             .col.social-col
-                %h4= l('Social')
+                %h5= l('Social')
                 %a{:href=>"https://www.facebook.com/binarydotcom"}
                     %img{:src => url_for('images/pages/footer/facebook.svg')}
                     %span= l('Facebook')

@@ -27,29 +27,6 @@ var Charts = function(charts) {
     window.open(charts, 'DetWin', 'width=580,height=710,scrollbars=yes,location=no,status=no,menubar=no');
 };
 
-var home_bomoverlay = {
-    url : {
-	    param : {
-            get : function(name) {
-                name = name.replace(/[\[]/,"\\[").replace(/[\]]/,"\\]");
-                var regexS = "[\\?&]"+name+"=([^&#]*)";
-                var regex = new RegExp(regexS);
-                var results = regex.exec(window.location.href);
-                return (results === null)? null:results[1];
-            }
-        }
-    },
-
-    init : function() {
-        if (! this.url.param.get('frombom')) return;
-        var obj = document.getElementById('banner').getElementsByClassName('wrapper')[0];
-        var div = document.createElement('div');
-        div.className = 'bomoverlay';
-        obj.appendChild(div);
-        div.addEventListener('click', function() { this.parentNode.removeChild(this); });
-    }
-};
-
 var email_rot13 = function(str) {
     return str.replace(/[a-zA-Z]/g, function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);});
 };
@@ -152,6 +129,87 @@ var show_live_chat_icon = function() {
         }
     }, 80);
 };
+
+var display_career_email = function() {
+    $("#hr_contact_eaddress").html(email_rot13("<n uers=\"znvygb:ue@ovanel.pbz\" ery=\"absbyybj\">ue@ovanel.pbz</n>"));
+};
+
+pjax_config_page('/$|/home', function() {
+    return {
+        onLoad: function() {
+            select_user_country();
+            get_ticker();
+        }
+    };
+});
+
+pjax_config_page('/why-us', function() {
+    return {
+        onLoad: function() {
+            var whyus = $('.why-us');
+            sidebar_scroll(whyus);
+        },
+        onUnload: function() {
+            $(window).off('scroll');
+        }
+    };
+});
+
+pjax_config_page('/smart-indices', function() {
+    return {
+        onLoad: function() {
+            sidebar_scroll($('.smart-indices'));
+        },
+        onUnload: function() {
+            $(window).off('scroll');
+        }
+    };
+});
+
+pjax_config_page('/open-source-projects', function() {
+    return {
+        onLoad: function() {
+            sidebar_scroll($('.open-source-projects'));
+        },
+        onUnload: function() {
+            $(window).off('scroll');
+        }
+    };
+});
+
+pjax_config_page('/white-labels', function() {
+    return {
+        onLoad: function() {
+            sidebar_scroll($('.white-labels'));
+        },
+        onUnload: function() {
+            $(window).off('scroll');
+        }
+    };
+});
+
+pjax_config_page('/partnerapi', function() {
+    return {
+        onLoad: function() {
+            var partnerapi = $('.partnerapi-content');
+            sidebar_scroll(partnerapi);
+        },
+        onUnload: function() {
+            $(window).off('scroll');
+        }
+    };
+});
+
+pjax_config_page('/get-started', function() {
+    return {
+        onLoad: function() {
+            get_started_behaviour();
+        },
+        onUnload: function() {
+            $(window).off('scroll');
+        },
+    };
+});
 
 pjax_config_page('/contact', function() {
     return {

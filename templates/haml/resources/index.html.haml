@@ -7,44 +7,51 @@
 
 .row
     .col
-        %p.media
-            %img.icon{:src => url_for('images/icons/asset-index.svg')}
+        %p.icon
+            %img{:src => url_for('images/icons/asset-index.svg')}
         %p.media
             %a{:href => url_for('/resources/asset_index')}= l('Asset Index')
-        %p= l('View the full list of assets, contract types and durations.')
+        %p.icon-desc
+            = l('View the full list of assets, contract types and durations.')
     .col
-        %p.media
-            %img.icon{:src => url_for('images/icons/trading-times.svg')}
+        %p.icon
+            %img{:src => url_for('images/icons/trading-times.svg')}
         %p.media
             %a{:href => url_for('trading_times.cgi')}= l('Trading Times')
-        %p= l('View the operating hours of the markets you can trade.')
+        %p.icon-desc
+            = l('View the operating hours of the markets you can trade.')
     .col
-        %p.media
-            %img.icon{:src => url_for('images/icons/pricing-table.svg')}
+        %p.icon
+            %img{:src => url_for('images/icons/pricing-table.svg')}
         %p.media
             %a{:href => url_for('/resources/pricing_table')}= l('Pricing Table')
-        %p= l('View contract prices across a range of barriers and durations.')
+        %p.icon-desc
+            = l('View contract prices across a range of barriers and durations.')
     .col
-        %p.media
-            %img.icon{:src => url_for('images/icons/rise-fall-table.svg')}
+        %p.icon
+            %img{:src => url_for('images/icons/rise-fall-table.svg')}
         %p.media
             %a{:href => url_for('/resources/rise_fall_table')}= l('Rise/Fall Table')
-        %p= l('View Rise/Fall contract prices across a range of markets.')
+        %p.icon-desc
+            = l('View Rise/Fall contract prices across a range of markets.')
     .col
-        %p.media
-            %img.icon{:src => url_for('images/icons/javacharts.svg')}
+        %p.icon
+            %img{:src => url_for('images/icons/javacharts.svg')}
         %p.media
             %a{:href => url_for('/charting/application')}= l('Java Charts')
-        %p= l('Try our downloadable charting application with an extensive range of indicators.')
+        %p.icon-desc
+            = l('Try our downloadable charting application with an extensive range of indicators.')
     .col
-        %p.media
-            %img.icon{:src => url_for('images/icons/livecharts.svg')}
+        %p.icon
+            %img{:src => url_for('images/icons/livecharts.svg')}
         %p.media
             %a{:href => url_for('/charting/livechart')}= l('Live Charts')
-        %p= l('This is our \'next generation\' charting tool.')
+        %p.icon-desc
+            = l('This is our \'next generation\' charting tool.')
     .col
-        %p.media
-            %img.icon{:src => url_for('images/icons/highcharts.svg')}
+        %p.icon
+            %img{:src => url_for('images/icons/highcharts.svg')}
         %p.media
             %a{:href => '//highcharts.binary.com'}= l('HighCharts')
-        %p.media= l('It has the best features of our Java and Live charts.')
+        %p.icon-desc
+            = l('It has the best features of our Java and Live charts.')

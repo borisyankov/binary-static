@@ -7,7 +7,7 @@
     <div class="col">
         <p class="icon"><img src="[%= request.url_for('images/pages/contract_guide/' _ bet_type.id _ '.svg') =%]"></p>
         <p class="media"><a class="bet_demo_link" href="[%= request.url_for('/resources/contract_demo', { bet_type =>  bet_type.default}) =%]">[% bet_type.title %]</a></p>
-        <p>[% bet_type.explanation %]<p>
+        <p class="icon-desc">[% bet_type.explanation %]<p>
     </div>
     [% END %]
 </div>

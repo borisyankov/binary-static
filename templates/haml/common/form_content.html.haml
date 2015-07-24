@@ -7,4 +7,7 @@
     %p.success-msg
       = stash->{success_message}
 - }
+- if (stash->{form_note}) {
+    %p= stash->{form_note};
+- }
 != $form->build()

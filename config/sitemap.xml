@@ -15,7 +15,7 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.binary.com/d/responsible_trading.cgi?l=EN</loc>
+    <loc>https://www.binary.com/responsible-trading?l=EN</loc>
   <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
@@ -61,11 +61,6 @@
 </url>
 <url>
   <loc>https://www.binary.com/charting/application?l=EN</loc>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.binary.com/d/smartchart.cgi?l=EN</loc>
   <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>

@@ -3,7 +3,7 @@ onLoad.queue(function() {
         client_form = new ClientForm({restricted_countries: page.settings.get('restricted_countries'), valid_loginids: page.settings.get('valid_loginids')});
 });
 
-pjax_config_page('user/upgrade', function() {
+pjax_config_page('new_real', function() {
     return {
         onLoad: function() {
             client_form.on_residence_change();
@@ -44,7 +44,7 @@ var hide_account_opening_for_risk_disclaimer = function () {
     }
 };
 
-pjax_config_page('user/upgrade/financial|create_account', function() {
+pjax_config_page('new_financial', function() {
     return {
         onLoad: function() {
             upgrade_investment_disabled_field();

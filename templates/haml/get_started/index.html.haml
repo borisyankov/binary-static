@@ -9,40 +9,48 @@
     %section
         %p.icon
             %img{:src => url_for('images/icons/get-started-icon-2.svg')}
-        %p= l('Learn the basics, from choosing your asset to winning your payout.')
+        %p.icon-desc
+            = l('Learn the basics, from choosing your asset to winning your payout.')
         %a{:href => url_for('/get-started/binary-options-basics')}= l('Binary options basics')
     %section
         %p.icon
             %img{:src => url_for('images/icons/get-started-icon-3.svg')}
-        %p= l('Follow a simple step-by-step guide to binary trading.')
+        %p.icon-desc
+            = l('Follow a simple step-by-step guide to binary trading.')
         %a{:href => url_for('/get-started/how-to-trade-binaries')}= l('How to trade binaries?')
     %section
         %p.icon
             %img{:src => url_for('images/icons/get-started-icon-4.svg')}
-        %p= l('Read the answers to some common questions.')
+        %p.icon-desc
+            = l('Read the answers to some common questions.')
         %a{:href => url_for('/get-started/beginners-faq')}= l('FAQ')
     %section
         %p.icon
             %img{:src => url_for('images/icons/get-started-icon-5.svg')}
-        %p= l('Check out some technical terms before you start.')
+        %p.icon-desc
+            = l('Check out some technical terms before you start.')
         %a{:href => url_for('/get-started/glossary')}= l('Glossary')
     %section
         %p.icon
             %img{:src => url_for('images/icons/get-started-icon-6.svg')}
-        %p= l('Read about the five types of trade offered by [_1].', stash->{website_name})
+        %p.icon-desc
+            = l('Read about the five types of trade offered by [_1].', stash->{website_name})
         %a{:href => url_for('/get-started/types-of-trades')}= l('Types of trades')
     %section
         %p.icon
             %img{:src => url_for('images/icons/get-started-icon-7.svg')}
-        %p= l('Learn about the simplicity, transparency and flexibility of binary trading.')
+        %p.icon-desc
+            = l('Learn about the simplicity, transparency and flexibility of binary trading.')
         %a{:href => url_for('/get-started/benefits-of-trading-binaries')}= l('Benefits of trading binaries')
     %section
         %p.icon
             %img{:src => url_for('images/icons/get-started-icon-8.svg')}
-        %p= l('Discover our indices generated from random numbers.')
+        %p.icon-desc
+            = l('Discover our indices generated from random numbers.')
         %a{:href => url_for('/get-started/random-markets')}= l('How to trade the random markets?')
     %section
         %p.icon
             %img{:src => url_for('images/icons/get-started-icon-9.svg')}
-        %p= l('Discover our Smart Markets.')
+        %p.icon-desc
+            = l('Discover our Smart Markets.')
         %a{:href => url_for('/smart-indices')}= l('Smart Markets')

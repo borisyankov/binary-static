@@ -4,28 +4,28 @@
 
 .row
     .col
-        %p.media
-            .icon
-                %img{:src => url_for('images/icons/payment-methods.svg')}
-        %p= l('Deposit or withdraw to your account via bank-wire, credit card, or e-cash wallet.')
+        %p.icon
+            %img{:src => url_for('images/icons/payment-methods.svg')}
+        %p.icon-desc
+            = l('Deposit or withdraw to your account via bank-wire, credit card, or e-cash wallet.')
         %p.media
             %a.button{:href=>url_for('cashier/payment_methods')}= l('View available payment methods')
         %p.media
             %a.button{ :href => stash('deposit_url') }= l('Deposit')
             %a.button{ :href => stash('withdraw_url') }= l('Withdraw')
     .col
-        %p.media
-            .icon
-                %img{:src => url_for('images/icons/payment-agents.svg')}
-        %p= l('You can use an authorized payment agent to process deposits and withdrawals for e-cash methods or local currencies not supported by [_1].', stash->{website_name})
+        %p.icon
+            %img{:src => url_for('images/icons/payment-agents.svg')}
+        %p.icon-desc
+            = l('You can use an authorized payment agent to process deposits and withdrawals for e-cash methods or local currencies not supported by [_1].', stash->{website_name})
         %p.media
             %a.button{:href => url_for('/cashier/payment_agent_list')}= l('Deposit To Payment Agent')
         %p.media
             %a.button{:href => url_for('paymentagent_withdraw.cgi')}= l('Withdraw Via Payment Agent')
     .col
-        %p.media
-            .icon
-                %img{:src => url_for('images/icons/account-transfer.svg')}
-        %p= l('Transfer between your gaming and financial accounts.')
+        %p.icon
+            %img{:src => url_for('images/icons/account-transfer.svg')}
+        %p.icon-desc
+            = l('Transfer between your gaming and financial accounts.')
         %p.media
             %a.button{:href => url_for('/cashier/account_transfer')}= l('Transfer')
