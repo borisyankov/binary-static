@@ -9,9 +9,9 @@
         %a{:href => url_for('cashier/forward?act=deposit')}= l('Deposit')
     %li
         %a{:href => url_for('cashier/forward?act=withdraw')}= l('Withdraw')
-    %li
+    %li.ja-hide
         %a{:href => url_for('cashier/payment_agent_list')}= l('Deposit To Payment Agent')
-    %li
+    %li.ja-hide
         %a{:href => url_for('paymentagent_withdraw.cgi')}= l('Withdraw Via Payment Agent')
-    %li
+    %li.ja-hide
         %a{:href=>url_for('cashier/account_transfer')}= l('Transfer Between Accounts')

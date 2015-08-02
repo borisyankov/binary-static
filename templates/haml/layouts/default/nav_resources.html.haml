@@ -3,13 +3,13 @@
         %img{:src => url_for('/images/icons/resources.svg')}
         = l('Resources')
 %ul.nav2nd
-    %li
+    %li.ja-hide
         %a{:href=>url_for('/resources/asset_index')}= l('Asset Index')
-    %li
+    %li.ja-hide
         %a{:href => url_for('/resources/trading_times')}= l('Trading Times')
-    %li
+    %li.ja-hide
         %a{:href=>url_for('/resources/pricing_table')}= l('Pricing Table')
-    %li
+    %li.ja-hide
         %a{:href=>url_for('/resources/rise_fall_table')}= l('Rise/Fall Table')
     %li
         %a{:href=>url_for('/charting/application')}= l('Chart Application')

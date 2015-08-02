@@ -21,7 +21,7 @@
             %img.inlinico{:src => url_for("images/pages/home/icon1.svg")}
             = l('No Hidden Fees')
 
-        %form#open-account{:name => 'oppAccForm', :action => url_for('create_virtual_account.cgi'), :method => 'post'}
+        %form#open-account{:name => 'oppAccForm', :action => url_for('new_virtual'), :method => 'post'}
             %h3= l('Get Started Now')
             %h3= l('Virtual Money Account')
             %input{:name => 'Email', :id => 'Email', :type => 'email', :required => true, :placeholder => stash('emailtext')}

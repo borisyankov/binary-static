@@ -4,17 +4,16 @@
             .col
                 %h5= l('Partners')
                 %a{:href=>url_for("/affiliate/signup")}= l('Affiliate Program')
-                %a{:href=>url_for("white-labels")}= l('White Labels')
-                %a{:href=>url_for("partnerapi")}= l('Partner API')
-                %a{:href=>url_for("open-source-projects")}= l('Open Source')
-                %a{:href=>"http://www.gamcare.org.uk/"}= l('GamCare')
+                %a.ja-hide{:href=>url_for("white-labels")}= l('White Labels')
+                %a.ja-hide{:href=>url_for("partnerapi")}= l('Partner API')
+                %a.ja-hide{:href=>url_for("open-source-projects")}= l('Open Source')
             .col
                 %h5= l('Terms')
                 %a{:href=>url_for("terms-and-conditions")}= l('Terms and Conditions')
                 %a{:href=>url_for("security-and-privacy")}= l('Security and Privacy')
                 %a{:href=>url_for("complaints-and-disputes")}= l('Complaints and Disputes')
-                %a{:href=>url_for("responsible-trading")}= l('Responsible Trading')
-                %a{:href=>'http://www.gamcare.org.uk/'}= l('GamCare')
+                %a.ja-hide{:href=>url_for("responsible-trading")}= l('Responsible Trading')
+                %a.ja-hide{:href=>'http://www.gamcare.org.uk/'}= l('GamCare')
             .col
                 %h5= l('About Us')
                 %a{:href=>url_for("about-us")}= l('Group Information')
@@ -41,7 +40,7 @@
                     %span= l('LinkedIn')
     .home-content
         .regulatory.home-body
-            .regulatory-logos
+            .regulatory-logos.ja-hide
                 %a{:href => "http://www.gov.im/gambling/", :target => '_blank'}
                     %img{:src => url_for('images/pages/footer/isle-of-man.png')}
                 %a{:href => "https://www.authorisation.mga.org.mt/verification.aspx?lang=en&company=a5fd1edc-d072-4c26-b0cd-ab3fa0f0cc40", :target => '_blank'}
@@ -54,7 +53,7 @@
                 != l("This website is marketed in the UK and Isle of Man by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles, licenced and regulated by (1) the Gambling Supervision Commission in the Isle of Man, British Isles, current online gambling licence issued on 31 August 2012, and for UK clients by (2) the UK Gambling Commission - <a href='[_1]' target='_blank'>view license</a>. This website is marketed in the rest of the EU, for investment products by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156), and for gaming products by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated by (1) the Malta Gaming Authority in Malta, licence no MGA/CL2/118/2000, 26th May 2015 and for UK clients by (2) the UK Gambling Commission - <a href='[_2]' target='_blank'>view license</a>. This website's services are not made available in the USA, Japan or Hong Kong, or to persons under age 18.", "https://secure.gamblingcommission.gov.uk/gccustomweb/PublicRegister/PRSearch.aspx?ExternalAccountId=39172", "https://secure.gamblingcommission.gov.uk/gccustomweb/PublicRegister/PRSearch.aspx?ExternalAccountId=39495")
     .home-content.darkish
         .responsible-trading
-            != l('Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset. In regards to binary options which are gambling products, remember that gambling can be addictive - please play responsibly. Read about <a href="[_1]">Responsible Trading</a>.', url_for('responsible-trading'))
+            != l('Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset. In regards to binary options which are gambling products, remember that gambling can be addictive - please play responsibly.<span class="ja-hide"> Read about <a href="[_1]">Responsible Trading</a>.</span>', url_for('responsible-trading'))
 
 #appcache-reload-message
     .message!= l("A new version of the interface is available. Please <a href='#' id='appcache-refresh-link'>refresh</a> this page to try again.")

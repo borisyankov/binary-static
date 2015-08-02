@@ -79,7 +79,7 @@ table {
     text-align: center;
   }
 
-  input, button {
+  input, button, select {
     height: 3rem !important;
   }
 
@@ -1551,7 +1551,7 @@ ul[role=tabs] li.active {
 }
 
 ul[role=segmented] {
-  border: 2px solid rgba(42, 48, 82, 0.2);
+  box-shadow: inset 0px 0px 0px 1px rgba(42, 48, 82, 0.2);
   background-color: rgba(42, 48, 82, 0.1);
   border-radius: 2px;
   color: #2a3052;
@@ -4331,6 +4331,10 @@ div#price_table_notes {
           flex: 3;
 }
 
+.skype img {
+  max-width: 35px;
+}
+
 .timeline {
   margin: 0 auto;
   overflow: hidden;
@@ -4486,6 +4490,10 @@ div#price_table_notes {
   width: 5em;
 }
 
+html:lang(JA) .ja-hide {
+  display: none !important;
+}
+
 @media all and (max-width: 759px) {
   html {
     font-size: 0.875rem;
@@ -4512,7 +4520,7 @@ div#price_table_notes {
     text-align: center;
   }
 
-  input, button {
+  input, button, select {
     height: 3rem !important;
   }
 
