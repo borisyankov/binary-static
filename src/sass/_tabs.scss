@@ -4,7 +4,6 @@ ul[role=tabs], ul[role=segmented] {
     margin-bottom: 1rem;
     li {
         flex: 1;
-        padding: .5rem .25rem;
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -14,6 +13,7 @@ ul[role=tabs], ul[role=segmented] {
     a {
         text-decoration: none;
         font-weight: normal;
+        padding: .5rem .25rem;        
         &:hover {
             text-decoration: none;
         }

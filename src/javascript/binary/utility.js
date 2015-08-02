@@ -354,7 +354,7 @@ function initTabs() {
 
     updateTabs($tabs);
 
-    $('body').on('click', tabSelector, function(e) {
+    $('body').on('mousedown', tabSelector, function(e) {
         var elm = $(this);
         var $tabs = elm.parent().find('li');
         $tabs.removeClass('active');
