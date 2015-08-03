@@ -4649,7 +4649,7 @@ html:lang(JA) .ja-hide {
    $BASE-PICKER
    ========================================================================== */
 /**
- * Note: the root picker element should *NOT* be styled more than whatΓÇÖs here.
+ * Note: the root picker element should *NOT* be styled more than what’s here.
  */
 .picker {
   font-size: 16px;
@@ -4672,14 +4672,14 @@ html:lang(JA) .ja-hide {
 }
 
 /**
- * When the picker is opened, the input element is ΓÇ£activatedΓÇ¥.
+ * When the picker is opened, the input element is “activated”.
  */
 .picker__input.picker__input--active {
   border-color: #0089ec;
 }
 
 /**
- * The holder is the only ΓÇ£scrollableΓÇ¥ top-level container element.
+ * The holder is the only “scrollable” top-level container element.
  */
 .picker__holder {
   width: 100%;
@@ -4692,7 +4692,7 @@ html:lang(JA) .ja-hide {
  * Demo: http://amsul.github.io/pickadate.js
  */
 /**
- * Note: the root picker element should *NOT* be styled more than whatΓÇÖs here.
+ * Note: the root picker element should *NOT* be styled more than what’s here.
  */
 .picker {
   width: 100%;
@@ -4724,7 +4724,7 @@ html:lang(JA) .ja-hide {
 
 /**
  * The frame and wrap work together to ensure that
- * clicks within the picker donΓÇÖt reach the holder.
+ * clicks within the picker don’t reach the holder.
  */
 .picker__frame {
   padding: 1px;
@@ -5210,7 +5210,7 @@ html:lang(JA) .ja-hide {
    ========================================================================== */
 /**
  * Note: the root picker element should __NOT__ be styled
- * more than whatΓÇÖs here. Style the `.picker__holder` instead.
+ * more than what’s here. Style the `.picker__holder` instead.
  */
 .picker--time {
   min-width: 256px;
