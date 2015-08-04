@@ -147,7 +147,7 @@ ClientForm.prototype = {
             var current_state = address_state.length > 0 ? address_state.val() : '';
 
             var postcodeLabel = $('label[for=AddressPostcode]');
-            if ($(this).val() == 'GB') {
+            if ($(this).val() == 'gb') {
                 postcodeLabel.prepend('<em class="required_asterisk">* </em>');
             } else {
                 postcodeLabel.find('em').remove();
