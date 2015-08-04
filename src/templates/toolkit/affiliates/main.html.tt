@@ -60,10 +60,6 @@
 <p>[% l("We want to make it as easy as possible for you to bring us prospects. And once you've introduced them to [_1], our team goes to work to convert them to customers, and keep them coming back with free webinars, charting and trading tools, contests and promotions, and an ever-expanding lineup of available markets and contracts.", broker_name) %]</p>
 <p>[% l("When your prospect opens a real account with us, you earn a share of the revenues for life. When you are approved as a [_1] affiliate, we'll give you everything you need to get started right away. Join us as a [_1] affiliate today.", broker_name) %]</p>
 
-<div class="rbox-heading">
-    <h4>[% l('Register') %]</h4>
-</div>
-
 <div class="media">
     <a class="button" href="https://login.binary.com/signup.php">
         [% l('Sign me up') %]

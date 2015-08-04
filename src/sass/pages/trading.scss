@@ -94,9 +94,6 @@
         padding: 10px;
         background: white;
       }
-      .rbox-content {
-        padding: 0;
-      }
       .bet-error-box {
         clear: both;
         margin: 0;
@@ -110,17 +107,6 @@
           margin: 0;
         }
       }
-      .rbox {
-        margin: 0;
-        .rbox-wrap {
-          min-height: 140px;
-          .bet-error-box {
-              margin: 0;
-              padding: 1em;
-              font-size: 0.8em;
-              width: auto;
-          }
-        }
         .form_button {
           margin-bottom: 0;
         }
@@ -449,10 +435,6 @@
 
 
 #bet_calculation_container {
-    .rbox-heading {
-        background-color: transparent;
-        margin-bottom: 0;
-    }
     h4 {
         padding: .5rem 0 .5em 4rem !important;
         text-transform: capitalize;
