@@ -1,11 +1,5 @@
 <p>[% l('Our affiliate program is for investing professionals and webmasters who manage their own website, newsletter or mailing list.') %]</p>
 
-<p class="media">
-   <a class="button" href="https://login.binary.com/signup.php">
-        [% l('Sign me up') %]
-    </a>
-</p>
-
 <h2>[% l('Are your site visitors interested in:') %]</h2>
 <ul class="checked">
     <li>[% l('Learning to trade online') %]</li>
