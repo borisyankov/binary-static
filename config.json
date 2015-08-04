@@ -11,22 +11,12 @@
     "customer_support": {
         "email": "helpdesk@binary.com",
         "telephone": {
-<<<<<<< HEAD
-            "Australia": "+61 (0) 2 8005 0136",
-            "Ireland": "+353 (0) 76 622 3220",
-            "Malta": "+356 3550 0608",
-            "Mexico": "+52 55 4169 2160",
-            "Poland": "+48 22 208 4441",
-            "South Africa": "+27 21 832 0907",
-            "United Kingdom": "+44 (0) 20 3239 2211"
-=======
             "Canada": "+1 (450) 823 1002",
             "Australia": "+61 (02) 8294 5448",
             "Ireland": "+353 076 888 7500",
             "Poland": "+48 58 881 00 02",
             "United Kingdom": "+44 (0) 1666 800042",
             "Germany": "+49 0221 98259000"
->>>>>>> master
         },
         "tollfree_number": {
             "Australia": "1800 093570",
