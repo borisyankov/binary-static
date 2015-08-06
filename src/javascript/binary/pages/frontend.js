@@ -243,17 +243,6 @@ pjax_config_page('/partnerapi', function() {
     };
 });
 
-pjax_config_page('/get-started', function() {
-    return {
-        onLoad: function() {
-            get_started_behaviour();
-        },
-        onUnload: function() {
-            $(window).off('scroll');
-        },
-    };
-});
-
 pjax_config_page('/contact', function() {
     return {
         onLoad: function() {
