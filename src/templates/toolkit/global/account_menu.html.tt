@@ -5,33 +5,33 @@
     </a>
 </div>
 <ul class="nav2nd">
-    <li>
+    <li class="view-balances-link">
         <a id="view-balances" href="[% request.url_for('user/balance') %]">[% l('View balances') %]</a>
     </li>
-    <li>
+    <li class="portfolio-link">
         <a href="[% request.url_for('user/portfolio') %]">[% l('Portfolio') %]</a>
     </li>
-    <li>
+    <li class="profit-table-link">
         <a href="[% request.url_for('user/profit_table') %]">[% l('Profit Table') %]</a>
     </li>
-    <li>
+    <li class="statement-link">
         <a href="[% request.url_for('user/statement') %]">[% l('Statement') %]</a>
     </li>
-    <li>
+    <li class="settings-link">
         <a href="[% request.url_for('user/settings') %]">[% l('Settings') %]</a>
     </li>
-    <li>
+    <li class="affiliate-link">
         <a href="[% request.url_for('affiliate/signup') %]">[% l('Affiliate') %]</a>
     </li>
-    <li class="authenticate-menu">
+    <li class="authenticate-link">
         <a href="[% request.url_for('cashier/authenticate') %]">[% l('Authenticate') %]</a>
     </li>
-    <li>
+    <li class="login-switch">
         <form id="loginid-switch-form" action="[% request.url_for('user/loginid_switch?l=EN') %]" method="post">
             <select id="client_loginid"></select>
         </form>
     </li>
-    <li>
+    <li class="logout-link">
         <a href="[% request.url_for('logout') %]"[% target %]>[% l('Log out') %]</a>
     </li>
 </ul>

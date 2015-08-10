@@ -5,25 +5,25 @@
     </a>
 </div>
 <ul class="nav2nd">
-    <li>
+    <li class="asset-index-link">
         <a href="[% request.url_for('/resources/asset_index') %]">[% l("Asset Index") %]</a>
     </li>
-    <li>
+    <li class="trading-times-link">
         <a href="[% request.url_for('/resources/trading_times') %]">[% l("Trading Times") %]</a>
     </li>
-    <li>
+    <li class="pricing-table-link">
         <a href="[% request.url_for('/resources/pricing_table') %]">[% l("Pricing Table") %]</a>
     </li>
-    <li>
+    <li class="rise-fall-table-link">
         <a href="[% request.url_for('/resources/rise_fall_table') %]">[% l("Rise/Fall Table") %]</a>
     </li>
-    <li>
+    <li class="chart-application-link">
         <a href="[% request.url_for('/charting/application') %]">[% l("Chart Application") %]</a>
     </li>
-    <li>
+    <li class="live-charts-link">
         <a href="[% request.url_for('/charting/livechart') %]">[% l("Live Charts") %]</a>
     </li>
-    <li>
+    <li class="highcharts-link">
         <a href="//highcharts.binary.com">[% l("HighCharts") %]</a>
     </li>
 </ul>

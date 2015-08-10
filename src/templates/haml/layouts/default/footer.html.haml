@@ -3,24 +3,24 @@
         .sitemap.row
             .col
                 %h5= l('Partners')
-                %a{:href=>url_for("/affiliate/signup")}= l('Affiliate Program')
+                %a.affiliate-program-link{:href=>url_for("/affiliate/signup")}= l('Affiliate Program')
                 %a.white-labels-link{:href=>url_for("white-labels")}= l('White Labels')
                 %a.partner-api-link{:href=>url_for("partnerapi")}= l('Partner API')
                 %a.open-source-link{:href=>url_for("open-source-projects")}= l('Open Source')
             .col
                 %h5= l('Terms')
-                %a{:href=>url_for("terms-and-conditions")}= l('Terms and Conditions')
-                %a{:href=>url_for("security-and-privacy")}= l('Security and Privacy')
-                %a{:href=>url_for("complaints-and-disputes")}= l('Complaints and Disputes')
+                %a.terms-link{:href=>url_for("terms-and-conditions")}= l('Terms and Conditions')
+                %a.privacy-link{:href=>url_for("security-and-privacy")}= l('Security and Privacy')
+                %a.disputes-link{:href=>url_for("complaints-and-disputes")}= l('Complaints and Disputes')
                 %a.responsible-trading-link{:href=>url_for("responsible-trading")}= l('Responsible Trading')
                 %a.gemcare-link{:href=>'http://www.gamcare.org.uk/'}= l('GamCare')
             .col
                 %h5= l('About Us')
-                %a{:href=>url_for("about-us")}= l('Group Information')
-                %a{:href=>url_for("group-history")}= l('Group History')
-                %a{:href=>url_for("/legal/us_patents"), :class=>"us_patent_link"}= l('Patents')
-                %a{:href=>url_for("careers")}= l('Careers')
-                %a{:href=>"http://binarycom.statuspage.io"}= l('Network Status')
+                %a.group-info-link{:href=>url_for("about-us")}= l('Group Information')
+                %a.group-history-link{:href=>url_for("group-history")}= l('Group History')
+                %a.patents-link{:href=>url_for("/legal/us_patents")}= l('Patents')
+                %a.careers-link{:href=>url_for("careers")}= l('Careers')
+                %a.network-status-link{:href=>"http://binarycom.statuspage.io"}= l('Network Status')
             .col.social-col
                 %h5= l('Social')
                 %a{:href=>"https://www.facebook.com/binarydotcom"}
