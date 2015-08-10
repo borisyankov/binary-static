@@ -27,6 +27,16 @@
 //    display: list-item;
 }
 
+// settings
+.client-is-virtual {
+    .security-link,
+    .self-exclusion-link,
+    .limits-link,
+    .financial-assessment-link {
+        display: block;
+    }
+}
+
 html:lang(JA) {
     .responsible-trading-link,
     .gemcare-link,
@@ -42,7 +52,8 @@ html:lang(JA) {
     .asset-index-link,
     .trading-times-link,
     .pricing-table-link,
-    .rise-fall-table-link {
-        display: none!important;
+    .rise-fall-table-link,
+    .api-token-link {
+        display: none;
     }
 }
