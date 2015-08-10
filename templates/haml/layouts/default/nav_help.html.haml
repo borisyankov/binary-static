@@ -3,17 +3,17 @@
         %img{:src => url_for('/images/icons/help.svg')}
         = l('Help')
 %ul.nav2nd
-    %li
+    %li.trading-guide-link
         %a{:href => url_for('/resources/contract_guide')}= l('Trading Guide')
-    %li
+    %li.why-us-link
         %a{:href=>url_for('/why-us')}= l('Why Us?')
-    %li
+    %li.get-started-link
         %a{:href=>url_for('/get-started')}= l('Get Started')
-    %li
+    %li.tour-link
         %a{:href=>url_for('/tour')}= l('Tour')
-    %li
+    %li.webinars-link
         %a{:href=>'http://blog.binary.com/en/webinar/'}= l('Webinars')
-    %li
+    %li.blog-link
         %a{:href=>'http://blog.binary.com'}= l('Blog')
-    %li
+    %li.contact-link
         %a{:href=>url_for('contact')}= l('Contact Us')

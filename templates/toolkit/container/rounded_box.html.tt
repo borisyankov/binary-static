@@ -1,9 +1,7 @@
 <div[% IF id %] id="[% id %]"[% END %] class="[% IF extra_class %]rbox [% extra_class %][% ELSE %]rbox[% END %]">
     <div class="rbox-wrap">
         [% IF heading %]
-            <div class="rbox-heading">
-                <h4 class="[% IF class %][% class %][% END %]">[% heading %]</h4>
-            </div>
+            <h4 class="[% IF class %][% class %][% END %]">[% heading %]</h4>
         [% END %]
         [% content %]
         <span class="tl">&nbsp;</span><span class="tr">&nbsp;</span><span class="bl">&nbsp;</span><span class="br">&nbsp;</span>

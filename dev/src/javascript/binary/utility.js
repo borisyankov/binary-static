@@ -136,18 +136,6 @@ function get_highest_zindex(selector) {
     return all.length ? Math.max.apply(Math, all) : null;
 }
 
-var user_country;
-var get_user_country = function(callback) {
-    if(user_country) {
-            callback.call(user_country);
-    } else {
-        $.ajax({ crossDomain: true, url: page.url.url_for('country'), async: true, dataType: "json" }).done(function(response) {
-            user_country = response;
-            callback.call(response);
-        });
-    }
-};
-
 /**
  * Returns a stylized price for a value as units and cents.
  * this could be used anywhere we need to show a float value
@@ -354,7 +342,7 @@ function initTabs() {
 
     updateTabs($tabs);
 
-    $('body').on('mousedown', tabSelector, function(e) {
+    $('body').on('click', tabSelector, function(e) {
         var elm = $(this);
         var $tabs = elm.parent().find('li');
         $tabs.removeClass('active');

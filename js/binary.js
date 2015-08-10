@@ -1497,7 +1497,6 @@ if (isStorageSupported(window.sessionStorage)) {
     if (!LocalStore) {
         LocalStore = new Store(window.sessionStorage);
     }
-
     SessionStore = new Store(window.sessionStorage);
 }
 
@@ -1505,7 +1504,6 @@ if (!SessionStore || !LocalStore) {
     if (!LocalStore) {
         LocalStore = new InScriptStore();
     }
-
     if (!SessionStore) {
         SessionStore = new InScriptStore();
     }
@@ -1595,6 +1593,18 @@ onLoad.queue(function () {
     attach_inpage_popup('.has-inpage-popup');
     initTabs();
     initDateTimePicker();
+});
+
+// this event is fired when there is change in localStorage
+// that looks for active_loginid key change, this was needed for
+// scenario where client has multiple tab/window open and switch
+// account on one tab then we need to load all the open tab/window
+$(window).on('storage', function (jq_event) {
+    if (jq_event.originalEvent.key !== 'active_loginid') return;
+    // wait for 2 seconds as cookie is being set else it will show login screen
+    window.setTimeout(function () {
+        location.href = page.url.url_for('user/my_account?loginid=' + LocalStore.get('active_loginid'));
+    }, 2000);
 });
 ;//
 //
@@ -7184,12 +7194,49 @@ onLoad.queue(function() {
         client_form = new ClientForm({restricted_countries: page.settings.get('restricted_countries'), valid_loginids: page.settings.get('valid_loginids')});
 });
 
+var select_user_country = function() {
+    if ($('#residence').length > 0) {
+        var restricted_countries = new RegExp(page.settings.get('restricted_countries'));
+        var selected_country = $('#residence').val();
+
+        if (selected_country.length > 0) {
+            selected_country = (restricted_countries.test(selected_country)) ? '' : selected_country;
+            $('#residence').val(selected_country).change();
+        } else {
+            $.ajax({
+                crossDomain: true,
+                url: page.url.url_for('country'),
+                async: true,
+                dataType: "json"
+            }).done(function(response) {
+                selected_country = (restricted_countries.test(response.country)) ? '' : response.country;
+                $('#residence').val(selected_country).change();
+            });
+        }
+    }
+};
+
+var disable_residence = function () {
+    var virtual_residence = $('#virtual_residence');
+    if (virtual_residence.length > 0 && virtual_residence.val() == $('#residence').val()) {
+        $('#residence').attr('disabled', true);
+    }
+};
+
+var enable_residence_form_submit = function () {
+    $('form#openAccForm').submit(function (event) {
+        $('#residence').removeAttr('disabled');
+    });
+};
+
 pjax_config_page('new_real', function() {
     return {
         onLoad: function() {
             client_form.on_residence_change();
             select_user_country();
-            if(page.client.is_logged_in) {
+            disable_residence();
+            enable_residence_form_submit();
+            if (page.client.is_logged_in) {
                 client_form.set_virtual_email_id(page.client.email);
             }
         }
@@ -7206,7 +7253,7 @@ var upgrade_investment_disabled_field = function () {
     });
 };
 
-var enable_fields_form_submit = function () {
+var financial_enable_fields_form_submit = function () {
     var fields = ['mrms', 'fname', 'lname', 'dobdd', 'dobmm', 'dobyy', 'residence', 'secretquestion', 'secretanswer'];
     $('form#openAccForm').submit(function (event) {
         fields.forEach(function (element, index, array) {
@@ -7229,7 +7276,7 @@ pjax_config_page('new_financial', function() {
     return {
         onLoad: function() {
             upgrade_investment_disabled_field();
-            enable_fields_form_submit();
+            financial_enable_fields_form_submit();
             hide_account_opening_for_risk_disclaimer();
         }
     };
@@ -7391,7 +7438,7 @@ ClientForm.prototype = {
             var current_state = address_state.length > 0 ? address_state.val() : '';
 
             var postcodeLabel = $('label[for=AddressPostcode]');
-            if ($(this).val() == 'GB') {
+            if ($(this).val() == 'gb') {
                 postcodeLabel.prepend('<em class="required_asterisk">* </em>');
             } else {
                 postcodeLabel.find('em').remove();
@@ -7433,21 +7480,6 @@ ClientForm.prototype = {
         $.ajax({ crossDomain: true, url: page.url.url_for('ticker'), async: true, dataType: "html" }).done(function(ticks) {
             ticker.html(ticks);
             ticker.find('ul').simplyScroll();
-        });
-    }
-};
-
-
-var select_user_country = function() {
-    if($('#residence').length > 0) {
-        get_user_country(function() {
-            var restricted_countries = new RegExp(page.settings.get('restricted_countries'));
-            var current_selected = $('#residence').val() || this.country;
-            if(restricted_countries.test(current_selected)) {
-                $('#residence').val('default').change();
-            } else {
-                $('#residence').val(current_selected).change();
-            }
         });
     }
 };
@@ -7563,10 +7595,68 @@ var display_career_email = function() {
     $("#hr_contact_eaddress").html(email_rot13("<n uers=\"znvygb:ue@ovanel.pbz\" ery=\"absbyybj\">ue@ovanel.pbz</n>"));
 };
 
+var get_residence_list = function() {
+    var url = page.url.url_for('residence_list');
+    $.getJSON(url, function(data) {
+        var countries = [];
+        $.each(data.residence, function(i, country) {
+            var disabled = '';
+            var selected = '';
+            if (country.disabled) {
+                disabled = ' disabled ';
+            } else if (country.selected) {
+                selected = ' selected="selected" ';
+            }
+            countries.push('<option value="' + country.value + '"' + disabled + selected + '>' + country.text + '</option>');
+            $("#residence").html(countries.join(''));
+
+            $('form#virtual-acc-form #btn_registration').removeAttr('disabled');
+        });
+    });
+};
+
+var on_input_password = function() {
+    $('#chooseapassword').on('input', function() {
+        $("#chooseapassword_2").css("visibility", "visible");
+    });
+};
+
+var on_click_signup = function() {
+    $('form#virtual-acc-form #btn_registration').on('click', function() {
+        var pwd = $('#chooseapassword').val();
+        var pwd_2 = $('#chooseapassword_2').val();
+        var email = $('#Email').val();
+        var residence = $('#residence').val();
+
+        var error_msg = '';
+        if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email)) {
+            error_msg = text.localize('Invalid email address');
+        } else if (pwd.length < 6 || pwd.length > 25 || pwd_2.length < 6 || pwd_2.length > 25) {
+            error_msg = text.localize('Password length should be between 6 and 25 characters');
+        } else if (pwd.length === 0 || pwd_2.length === 0 || !client_form.compare_new_password(pwd, pwd_2)) {
+            error_msg = text.localize('The two passwords that you entered do not match.');
+        } else if (email == pwd) {
+            error_msg = text.localize('Your password cannot be the same as your email');
+        } else if (residence.length === 0) {
+            error_msg = text.localize('Please specify your country.');
+        }
+
+        if (error_msg.length > 0) {
+            $('#signup_error').text(error_msg);
+            $('#signup_error').removeClass('invisible');
+            $('#signup_error').show();
+            return false;
+        }
+        $('#virtual-acc-form').submit();
+    });
+};
+
 pjax_config_page('/$|/home', function() {
     return {
         onLoad: function() {
-            select_user_country();
+            on_input_password();
+            on_click_signup();
+            get_residence_list();
             get_ticker();
         }
     };
@@ -7626,17 +7716,6 @@ pjax_config_page('/partnerapi', function() {
         onUnload: function() {
             $(window).off('scroll');
         }
-    };
-});
-
-pjax_config_page('/get-started', function() {
-    return {
-        onLoad: function() {
-            get_started_behaviour();
-        },
-        onUnload: function() {
-            $(window).off('scroll');
-        },
     };
 });
 
@@ -8516,18 +8595,6 @@ function get_highest_zindex(selector) {
     return all.length ? Math.max.apply(Math, all) : null;
 }
 
-var user_country;
-var get_user_country = function(callback) {
-    if(user_country) {
-            callback.call(user_country);
-    } else {
-        $.ajax({ crossDomain: true, url: page.url.url_for('country'), async: true, dataType: "json" }).done(function(response) {
-            user_country = response;
-            callback.call(response);
-        });
-    }
-};
-
 /**
  * Returns a stylized price for a value as units and cents.
  * this could be used anywhere we need to show a float value
@@ -8734,7 +8801,7 @@ function initTabs() {
 
     updateTabs($tabs);
 
-    $('body').on('mousedown', tabSelector, function(e) {
+    $('body').on('click', tabSelector, function(e) {
         var elm = $(this);
         var $tabs = elm.parent().find('li');
         $tabs.removeClass('active');

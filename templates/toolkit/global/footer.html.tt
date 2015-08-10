@@ -6,27 +6,26 @@
         <div class="sitemap row">
             <div class="col">
                 <h5>[% l('Partners') %]</h5>
-                <a href="[% request.url_for('/affiliate/signup') %]">[% l('Affiliate Program') %]</a>
-                <a href="[% request.url_for('white-labels') %]" >[% l('White Labels') %]</a>
-                <a href="[% request.url_for('partnerapi') %]">[% l('Partner API') %]</a>
-                <a href="[% request.url_for('open-source-projects') %]" >[% l('Open Source') %]</a>
-                <a href="http://www.gamcare.org.uk/">[% l('GamCare') %]</a>
+                <a class="affiliate-program-link" href="[% request.url_for('/affiliate/signup') %]">[% l('Affiliate Program') %]</a>
+                <a class="white-labels-link" href="[% request.url_for('white-labels') %]" >[% l('White Labels') %]</a>
+                <a class="partner-api-link" href="[% request.url_for('partnerapi') %]">[% l('Partner API') %]</a>
+                <a class="open-source-link" href="[% request.url_for('open-source-projects') %]" >[% l('Open Source') %]</a>
             </div>
             <div class="col">
                 <h5>[% l('Terms') %]</h5>
-                <a href="[% request.url_for('terms-and-conditions') %]">[% l('Terms and Conditions') %]</a>
-                <a href="[% request.url_for('security-and-privacy') %]">[% l('Security and Privacy') %]</a>
-                <a href="[% request.url_for('complaints-and-disputes') %]">[% l('Complaints and Disputes') %]</a>
-                <a href="[% request.url_for('responsible-trading') %]">[% l('Responsible Trading') %]</a>
-                <a href="http://www.gamcare.org.uk">[% l("GamCare") %]</a>
+                <a class="terms-link" href="[% request.url_for('terms-and-conditions') %]">[% l('Terms and Conditions') %]</a>
+                <a class="privacy-link" href="[% request.url_for('security-and-privacy') %]">[% l('Security and Privacy') %]</a>
+                <a class="disputes-link" href="[% request.url_for('complaints-and-disputes') %]">[% l('Complaints and Disputes') %]</a>
+                <a class="responsible-trading-link" href="[% request.url_for('responsible-trading') %]">[% l('Responsible Trading') %]</a>
+                <a class="gemcare-link" href="http://www.gamcare.org.uk">[% l("GamCare") %]</a>
             </div>
             <div class="col">
                 <h5>[% l('About Us') %]</h5>
-                <a href="[% request.url_for('about-us') %]">[% l('Group Information') %]</a>
-                <a href="[% request.url_for('group-history') %]">[% l('Group History') %]</a>
-                <a class="us_patent_link" href="[% request.url_for('/legal/us_patents') %]" >[% l('Patents') %]</a>
-                <a href="[% request.url_for('careers') %]">[% l('Careers') %]</a>
-                <a href="http://binarycom.statuspage.io">[% l('Network Status') %]</a>
+                <a class="group-info-link" href="[% request.url_for('about-us') %]">[% l('Group Information') %]</a>
+                <a class="group-history-link" href="[% request.url_for('group-history') %]">[% l('Group History') %]</a>
+                <a class="patents-link" href="[% request.url_for('/legal/us_patents') %]" >[% l('Patents') %]</a>
+                <a class="careers-link" href="[% request.url_for('careers') %]">[% l('Careers') %]</a>
+                <a class="network-status-link" href="http://binarycom.statuspage.io">[% l('Network Status') %]</a>
             </div>
             <div class="col social-col">
                 <h5>[% l('Social') %]</h5>

@@ -199,10 +199,6 @@ table {
   .home-content .hero hgroup, .home-content .trade-desc {
     text-align: center;
   }
-
-  .icon-desc {
-    text-align: center;
-  }
 }
 *,
 *:before,
@@ -550,6 +546,10 @@ a.external {
   box-shadow: 0px 0px 0px 1px rgba(42, 48, 82, 0.1);
   background: rgba(42, 48, 82, 0.025);
   border-radius: 100px;
+}
+
+.icon-desc {
+  text-align: center;
 }
 
 *,
@@ -1631,7 +1631,7 @@ abbr {
 .client-not-logged-in #topbar,
 .client-is-real #topbar,
 .client-has-real #topbar .button,
-.client-is-virtual .authenticate-menu {
+.client-is-virtual .authenticate-link {
   display: none;
 }
 
@@ -1640,6 +1640,36 @@ abbr {
 .client-logged-in .account-container,
 .client-is-real .cashier-link {
   display: block;
+}
+
+.client-is-virtual .security-link,
+.client-is-virtual .self-exclusion-link,
+.client-is-virtual .limits-link,
+.client-is-virtual .financial-assessment-link {
+  display: block;
+}
+
+html:lang(JA) .responsible-trading-link,
+html:lang(JA) .gemcare-link,
+html:lang(JA) .white-labels-link,
+html:lang(JA) .partner-api-link,
+html:lang(JA) .open-source-link,
+html:lang(JA) .regulatory-logos,
+html:lang(JA) .deposit-to-payment-agent-link,
+html:lang(JA) .withdraw-via-payment-agent-link,
+html:lang(JA) .transfer-between-accounts-link,
+html:lang(JA) .smart-indices-link,
+html:lang(JA) .random-markets-link,
+html:lang(JA) .asset-index-link,
+html:lang(JA) .trading-times-link,
+html:lang(JA) .pricing-table-link,
+html:lang(JA) .rise-fall-table-link,
+html:lang(JA) .api-token-link,
+html:lang(JA) .start-trading-link,
+html:lang(JA) .bank-your-way-section,
+html:lang(JA) .digits-trades,
+html:lang(JA) .asians-trades {
+  display: none;
 }
 
 button,
@@ -1787,10 +1817,10 @@ blockquote p:after {
 #open-account input {
   width: 100%;
 }
-#open-account *:nth-child(2), #open-account *:nth-child(5) {
+#open-account *:nth-child(2), #open-account *:nth-child(6) {
   margin-bottom: 1rem;
 }
-#open-account *:nth-child(3), #open-account *:nth-child(4) {
+#open-account *:nth-child(3), #open-account *:nth-child(4), #open-account *:nth-child(5) {
   margin-bottom: .5rem;
 }
 
@@ -2887,7 +2917,7 @@ blockquote p:after {
           flex: 1;
   padding-bottom: 3rem;
   text-align: center;
-  min-width: 33%;
+  min-width: 33.3333%;
 }
 
 .baloon {
@@ -3017,9 +3047,6 @@ blockquote p:after {
   padding: 10px;
   background: white;
 }
-#bestpage #content-holder #content #bet_container #bet_calculation_container .rbox-content {
-  padding: 0;
-}
 #bestpage #content-holder #content #bet_container #bet_calculation_container .bet-error-box {
   clear: both;
   margin: 0;
@@ -3033,19 +3060,7 @@ blockquote p:after {
 #bestpage #content-holder #content #bet_container #bet_calculation_container .bet-error-box p {
   margin: 0;
 }
-#bestpage #content-holder #content #bet_container #bet_calculation_container .rbox {
-  margin: 0;
-}
-#bestpage #content-holder #content #bet_container #bet_calculation_container .rbox .rbox-wrap {
-  min-height: 140px;
-}
-#bestpage #content-holder #content #bet_container #bet_calculation_container .rbox .rbox-wrap .bet-error-box {
-  margin: 0;
-  padding: 1em;
-  font-size: 0.8em;
-  width: auto;
-}
-#bestpage #content-holder #content #bet_container #bet_calculation_container .rbox .form_button {
+#bestpage #content-holder #content #bet_container #bet_calculation_container .bet-error-box .form_button {
   margin-bottom: 0;
 }
 #bestpage #content-holder #content #bet_container #bet_calculation_container .rbox-bg-alt {
@@ -3344,10 +3359,6 @@ blockquote p:after {
   padding-bottom: 0 !important;
 }
 
-#bet_calculation_container .rbox-heading {
-  background-color: transparent;
-  margin-bottom: 0;
-}
 #bet_calculation_container h4 {
   padding: .5rem 0 .5em 4rem !important;
   text-transform: capitalize;
@@ -3530,13 +3541,6 @@ blockquote p:after {
 
 #content .rbox-table-heading {
   padding: 3px;
-}
-#content .rbox-heading {
-  background-color: #F2F2F2;
-}
-#content .rbox-heading h4 {
-  margin: 0;
-  padding: .5rem 1rem;
 }
 #content .rbox-content {
   background-color: white;
@@ -4191,6 +4195,7 @@ div#price_table_notes {
 
 .userlogintrouble-content .col, .resources-content .col {
   min-width: 33.3333%;
+  max-width: 33.3333%;
 }
 
 .cashier-icon {
@@ -4490,10 +4495,6 @@ div#price_table_notes {
   width: 5em;
 }
 
-html:lang(JA) .ja-hide {
-  display: none !important;
-}
-
 @media all and (max-width: 759px) {
   html {
     font-size: 0.875rem;
@@ -4638,10 +4639,6 @@ html:lang(JA) .ja-hide {
   }
 
   .home-content .hero hgroup, .home-content .trade-desc {
-    text-align: center;
-  }
-
-  .icon-desc {
     text-align: center;
   }
 }

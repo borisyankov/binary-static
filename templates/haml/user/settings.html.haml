@@ -10,39 +10,35 @@
             %a.button{:href => url_for('/user/settings/details')}= l('Personal Details')
         %p.icon-desc
             = l('View your personal information.')
-    - if ($is_real) {
-        .col
-            %p.icon
-                %img{:src => url_for('images/pages/settings/security.svg')}
-            %p.media
-                %a.button{:href => url_for('/user/settings/security')}= l('Security')
-            %p.icon-desc
-                = l('Manage your account access and security settings.')
-        .col
-            %p.icon
-                %img{:src => url_for('images/pages/settings/self-exclusion.svg')}
-            %p.media
-                %a.button{:href => url_for('/user/self_exclusion')}= l('Self Exclusion')
-            %p.icon-desc
-                = l('Facility that allows you to set limits on your account.')
-        .col
-            %p.icon
-                %img{:src => url_for('images/pages/settings/limits.svg')}
-            %p.media
-              %a.button{:href => url_for('/cashier/limits')}= l('Limits')
-            %p.icon-desc
-                = l('View your trading and withdrawal limits.')
-        - if ($show_financial_assessment) {
-            .col
-                %p.icon
-                    %img{:src => url_for('images/icons/financial-assessment.svg')}
-                %p.media
-                    %a.button{:href => url_for('/user/assessment')}= l('Financial Assessment')
-              %p.icon-desc
-                = l('View your financial assessment settings.')
-      - }
-    - }
-    .col
+    .col.security-link
+        %p.icon
+            %img{:src => url_for('images/pages/settings/security.svg')}
+        %p.media
+            %a.button{:href => url_for('/user/settings/security')}= l('Security')
+        %p.icon-desc
+            = l('Manage your account access and security settings.')
+    .col.self-exclusion-link
+        %p.icon
+            %img{:src => url_for('images/pages/settings/self-exclusion.svg')}
+        %p.media
+            %a.button{:href => url_for('/user/self_exclusion')}= l('Self Exclusion')
+        %p.icon-desc
+            = l('Facility that allows you to set limits on your account.')
+    .col.limits-link
+        %p.icon
+            %img{:src => url_for('images/pages/settings/limits.svg')}
+        %p.media
+            %a.button{:href => url_for('/cashier/limits')}= l('Limits')
+        %p.icon-desc
+            = l('View your trading and withdrawal limits.')
+    .col.financial-assessment-link
+        %p.icon
+            %img{:src => url_for('images/icons/financial-assessment.svg')}
+        %p.media
+            %a.button{:href => url_for('/user/assessment')}= l('Financial Assessment')
+        %p.icon-desc
+            = l('View your financial assessment settings.')
+    .col.api-token-link
         %p.icon
             %img{:src => url_for('images/icons/api-token.svg')}
         %p.media

@@ -3,17 +3,17 @@
         %img{:src => url_for('/images/icons/resources.svg')}
         = l('Resources')
 %ul.nav2nd
-    %li.ja-hide
+    %li.asset-index-link
         %a{:href=>url_for('/resources/asset_index')}= l('Asset Index')
-    %li.ja-hide
+    %li.trading-times-link
         %a{:href => url_for('/resources/trading_times')}= l('Trading Times')
-    %li.ja-hide
+    %li.pricing-table-link
         %a{:href=>url_for('/resources/pricing_table')}= l('Pricing Table')
-    %li.ja-hide
+    %li.rise-fall-table-link
         %a{:href=>url_for('/resources/rise_fall_table')}= l('Rise/Fall Table')
-    %li
+    %li.chart-application-link
         %a{:href=>url_for('/charting/application')}= l('Chart Application')
-    %li
+    %li.live-charts-link
         %a{:href=>url_for('/charting/livechart')}= l('Live Charts')
-    %li
+    %li.highcharts-link
         %a{:href => '//highcharts.binary.com'}= l('HighCharts')
