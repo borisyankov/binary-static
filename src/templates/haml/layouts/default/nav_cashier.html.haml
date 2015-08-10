@@ -3,15 +3,15 @@
         %img{:src => url_for('/images/icons/cashier.svg')}
         = l('Cashier')
 %ul.nav2nd
-    %li
+    %li.payment-methods-link
         %a{:href=> url_for('cashier/payment_methods')}= l('Payment Methods')
-    %li
+    %li.deposit-link
         %a{:href => url_for('cashier/forward?act=deposit')}= l('Deposit')
-    %li
+    %li.withdraw-link
         %a{:href => url_for('cashier/forward?act=withdraw')}= l('Withdraw')
-    %li.ja-hide
+    %li.deposit-to-payment-agent-link
         %a{:href => url_for('cashier/payment_agent_list')}= l('Deposit To Payment Agent')
-    %li.ja-hide
+    %li.withdraw-via-payment-agent-link
         %a{:href => url_for('paymentagent_withdraw.cgi')}= l('Withdraw Via Payment Agent')
-    %li.ja-hide
+    %li.transfer-between-accounts-link
         %a{:href=>url_for('cashier/account_transfer')}= l('Transfer Between Accounts')

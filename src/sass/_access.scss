@@ -26,3 +26,23 @@
 .client-logged-in .account-container {
 //    display: list-item;
 }
+
+html:lang(JA) {
+    .responsible-trading-link,
+    .gemcare-link,
+    .white-labels-link,
+    .partner-api-link,
+    .open-source-link,
+    .regulatory-logos,
+    .deposit-to-payment-agent-link,
+    .withdraw-via-payment-agent-link,
+    .transfer-between-accounts-link,
+    .smart-indices-link,
+    .random-markets-link,
+    .asset-index-link,
+    .trading-times-link,
+    .pricing-table-link,
+    .rise-fall-table-link {
+        display: none!important;
+    }
+}
