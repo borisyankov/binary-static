@@ -2,7 +2,7 @@
 	"website_name": "Binary.com",
 	"display_languages": "EN,ID,RU,ES,FR,PT,DE,ZH_CN,PL,AR",
 	"static": {
-		"url": "borisyankov.github.io/binary-static/",
+		"url": "https://borisyankov.github.io/binary-static/",
 		"version": "3.8.0"
 	},
 	"marketing": {
@@ -35,7 +35,7 @@
 		}
 	},
 	"binary_js_hash": "6f1359b213114d4fe091332d3ce9982c",
-	"binary_lib_hash": "1f2f17d24f330f3827b8fa444c6762e3",
+	"binary_lib_hash": "91c97e7058de68b6e5624844c372bde6",
 	"binary_data_hash": "0137a57bd12f55c99c6bcb3b5ef69cae",
-	"binary_css_hash": "eb13e75a94d060b1a8ea1f7326aa1d32"
+	"binary_css_hash": "b6a856b4c0e3e6aaf595986957d33313"
 }
