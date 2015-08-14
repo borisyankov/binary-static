@@ -4126,23 +4126,6 @@ div#price_table_notes {
   margin-top: 1rem;
 }
 
-.signup-content #content {
-  width: 30rem;
-}
-.signup-content .form-logo {
-  width: 7rem;
-}
-.signup-content input,
-.signup-content button {
-  width: 100%;
-}
-.signup-content .errorfield {
-  margin-top: -1rem;
-}
-.signup-content .bigerror {
-  margin-top: 1rem;
-}
-
 .random-markets-content img {
   height: 7rem;
 }
