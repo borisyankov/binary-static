@@ -5,13 +5,13 @@
     -            {route => '/get-started/binary-options-basics',        text => l('Binary options basics')},
     -            {route => '/get-started/benefits-of-trading-binaries', text => l('Benefits of binary trading')},
     -            {route => '/get-started/how-to-trade-binaries',        text => l('How to trade binaries?')},
-    -            {route => '/get-started/random-markets',               text => l('How to trade the random markets?'), classname => 'random-markets-link'},
-    -            {route => '/smart-indices',                            text => l('Smart Markets'), classname => 'smart-indices-link'},
+    -            {route => '/get-started/random-markets',               text => l('How to trade the random markets?')},
+    -            {route => '/smart-indices',                            text => l('Smart Markets')},
     -            {route => '/get-started/beginners-faq',                text => l("FAQ")},
     -            {route => '/get-started/glossary',                     text => l('Glossary')});
     - foreach my $item (@nav) {
-      - my ($route, $text, $classname) = ($item->{route}, $item->{text}, $item->{classname});
-      - my $class = ($route eq current_route) ? ($classname ? $classname . ' selected' : 'selected') : ($classname ? $classname  : '');
+      - my ($route, $text) = ($item->{route}, $item->{text});
+      - my $class = ($route eq current_route) ? 'selected' : '';
       %li.$class
         %a{:href=>url_for($route)}= $text
     - }

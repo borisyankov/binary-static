@@ -2,7 +2,7 @@
 
 %h1= l('First, define your position...')
 %p= l('When you start trading with Binary.com, you’ll be directed to the trading screen, where you set your trading parameters, and choose what you want to trade, how and when.')
-%p.media.start-trading-link
+%p.media
     %a{:href => url_for('trade.cgi')}
         %img{:src => url_for('images/pages/tour/trade-tutorial_1.svg')}
 
@@ -20,13 +20,12 @@
 %h2= l('Do you want to lock in profits?')
 %p= l('If you do, no worries. With Binary.com, you can sell your trades before expiry to lock in profits. There’s no need to wait until the end time.')
 
-.bank-your-way-section
-    %h2= l('Bank your way')
-    %p= l('Trade with ease with [_1]\'s wide range of deposit and withdrawal methods. Your funds will be segregated and held in AAA-rated banks.', stash->{website_name})
-    %p.media
-        %img{:src => url_for('images/pages/tour/tour-flexible-banking.png')}
-    %p.media
-        %a.button{:href => url_for('cashier/payment_methods')}= l('View payment methods')
+%h2= l('Bank your way')
+%p= l('Trade with ease with [_1]\'s wide range of deposit and withdrawal methods. Your funds will be segregated and held in AAA-rated banks.', stash->{website_name})
+%p.media
+    %img{:src => url_for('images/pages/tour/tour-flexible-banking.png')}
+%p.media
+    %a.button{:href => url_for('cashier/payment_methods')}= l('View payment methods')
 
 %h2= l('Study our live charts')
 %p= l('Frame your trading strategy using [_1]\'s powerful live charts. Instantly view the trading patterns of forex, indices, commodities and stocks.', stash->{website_name})

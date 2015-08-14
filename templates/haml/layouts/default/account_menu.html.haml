@@ -3,22 +3,22 @@
         %img{:src => url_for('/images/icons/myaccount.svg')}
         != l('My&nbsp;Account')
 %ul.nav2nd
-    %li.view-balances-link
+    %li
         %a#view-balances{:href => url_for('/user/balance')}= l('View balances')
-    %li.portfolio-link
+    %li
         %a{:href=>url_for('user/portfolio')}= l('Portfolio')
-    %li.profit-table-link
+    %li
         %a{:href => url_for('user/profit_table')}= l('Profit Table')
-    %li.statement-link
+    %li
         %a{:href=>url_for('user/statement')}= l('Statement')
-    %li.settings-link
+    %li
         %a{:href=>url_for('user/settings')}= l('Settings')
-    %li.affiliate-link
+    %li
         %a{:href=>url_for('affiliate/signup')}= l('Affiliate')
-    %li.authenticate-link
+    %li.authenticate-menu
         %a{:href=>url_for('cashier/authenticate')}= l('Authenticate')
-    %li.login-switch
+    %li
         %form#loginid-switch-form{:action => url_for('user/loginid_switch'), :method => 'post'}
             %select#client_loginid
-    %li.logout-link
+    %li
         %a{:href=>url_for('logout')}= l('Log out')

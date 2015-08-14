@@ -5,22 +5,22 @@
     </a>
 </div>
 <ul class="nav2nd">
-    <li class="payment-methods-link">
+    <li>
         <a href="[% request.url_for('cashier/payment_methods') %]">[% l("Payment Methods") %]</a>
     </li>
-    <li class="deposit-link">
+    <li>
         <a href="[% request.url_for('cashier/forward?act=deposit') %]">[% l("Deposit") %]</a>
     </li>
-    <li class="withdraw-link">
+    <li>
         <a href="[% request.url_for('cashier/forward?act=withdraw') %]">[% l("Withdraw") %]</a>
     </li>
-    <li class="deposit-to-payment-agent-link">
+    <li>
         <a href="[% request.url_for('cashier/payment_agent_list') %]">[% l("Deposit To Payment Agent") %]</a>
     </li>
-    <li class="withdraw-via-payment-agent-link">
+    <li>
         <a href="[% request.url_for('paymentagent_withdraw.cgi') %]">[% l("Withdraw Via Payment Agent") %]</a>
     </li>
-    <li class="transfer-between-accounts-link">
+    <li>
         <a href="[% request.url_for('cashier/account_transfer') %]">[% l("Transfer Between Accounts") %]</a>
     </li>
 </ul>

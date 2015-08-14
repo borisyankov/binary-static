@@ -22,7 +22,7 @@
 </p>
 <h4>[% l('Appropriateness') %]</h4>
 <p>
-    [% l('Investment Products to EEA Residents are provided by Binary Investments (Europe) Ltd ("BIEL") which is authorised and regulated by the Malta Financial Services Authority under the Malta Investment Services Act to deal on own account in Investment Products.') %]
+    [% l('Investment Products to EEA Residents are provided by Binary Investments (Europe) Ltd ("BIEL") which is authorised and regulated by the Malta Investment Services Authority under the Malta Investment Services Act to deal on own account in Investment Products.') %]
 </p>
 <p>
     [% l('Before we open an account for you to trade or invest in Investment Products with BIEL, we are required to make an assessment of whether the Investment Products or services you have chosen are appropriate for you, and to warn you if, on the basis of the information you provide to us, any such product or service is not appropriate. Any decision to open an account and to use our products or services is yours. It is your responsibility to understand the risks involved with our products or services.') %]

@@ -5,25 +5,25 @@
     </a>
 </div>
 <ul class="nav2nd">
-    <li class="trading-guide-link">
+    <li>
         <a href="[% request.url_for('resources/contract_guide') %]">[% l("Trading Guide") %]</a>
     </li>
-    <li class="why-us-link">
+    <li>
         <a href="[% request.url_for('why-us') %]">[% l("Why Us?") %]</a>
     </li>
-    <li class="get-started-link">
+    <li>
         <a href="[% request.url_for('get-started') %]">[% l("Get Started") %]</a>
     </li>
-    <li class="tour-link">
+    <li>
         <a href="[% request.url_for('tour') %]">[% l("Tour") %]</a>
     </li>
-    <li class="webinars-link">
+    <li>
         <a href="http://blog.binary.com/en/webinar/">[% l("Webinars") %]</a>
     </li>
-    <li class="blog-link">
+    <li>
         <a href="http://blog.binary.com">[% l("Blog") %]</a>
     </li>
-    <li class="contact-link">
+    <li>
         <a href="[% request.url_for('contact') %]">[% l("Contact Us") %]</a>
     </li>
 </ul>

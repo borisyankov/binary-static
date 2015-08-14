@@ -199,6 +199,10 @@ table {
   .home-content .hero hgroup, .home-content .trade-desc {
     text-align: center;
   }
+
+  .icon-desc {
+    text-align: center;
+  }
 }
 *,
 *:before,
@@ -346,8 +350,8 @@ abbr {
 }
 
 .button.button-disabled button.button-disabled {
-  color: #dedede;
-  background: #f2f2f2;
+  color: #DEDEDE;
+  background: #F2F2F2;
   cursor: default;
 }
 
@@ -381,7 +385,7 @@ form {
 .errorfield,
 .error-msg {
   color: white;
-  background: #cc0033;
+  background: #c03;
   border-radius: 2px;
   padding: .125rem;
 }
@@ -510,7 +514,7 @@ a.close:hover {
 }
 
 .separator-line {
-  border-bottom: 1px solid #dedede;
+  border-bottom: 1px solid #DEDEDE;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -548,10 +552,6 @@ a.external {
   border-radius: 100px;
 }
 
-.icon-desc {
-  text-align: center;
-}
-
 *,
 *:after,
 *:before {
@@ -563,25 +563,21 @@ a.external {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
-
   to {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
 }
-
 @-webkit-keyframes spinning {
   from {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
-
   to {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
 }
-
 .spinner, .progress {
   -webkit-animation: spinning 1s infinite linear;
   animation: spinning 1s infinite linear;
@@ -591,30 +587,24 @@ a.external {
   0% {
     opacity: 1;
   }
-
   50% {
     opacity: .5;
   }
-
   100% {
     opacity: 1;
   }
 }
-
 @-webkit-keyframes pulsing {
   0% {
     opacity: 1;
   }
-
   50% {
     opacity: .5;
   }
-
   100% {
     opacity: 1;
   }
 }
-
 .pulser {
   -webkit-animation: pulsing 3s infinite ease;
   animation: pulsing 3s infinite ease;
@@ -1199,7 +1189,7 @@ nav a:hover {
 #appcache-reload-message .message {
   margin: 12px;
   font-style: italic;
-  color: #cc0033;
+  color: #c03;
 }
 
 #suspend-message {
@@ -1213,7 +1203,7 @@ nav a:hover {
 #suspend-message .message {
   margin: 12px;
   font-style: italic;
-  color: #cc0033;
+  color: #c03;
 }
 
 *,
@@ -1528,6 +1518,7 @@ ul[role=tabs] li, ul[role=segmented] li {
   -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  padding: .5rem .25rem;
   text-align: center;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1543,7 +1534,6 @@ ul[role=tabs] li, ul[role=segmented] li {
 ul[role=tabs] a, ul[role=segmented] a {
   text-decoration: none;
   font-weight: normal;
-  padding: .5rem .25rem;
 }
 ul[role=tabs] a:hover, ul[role=segmented] a:hover {
   text-decoration: none;
@@ -1587,7 +1577,7 @@ ul[role=segmented] li.active a {
   line-height: 1.5;
   background: #FFF1CF;
   border-radius: 2px;
-  border: 1px solid #dedede;
+  border: 1px solid #DEDEDE;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
   position: absolute;
   z-index: 100;
@@ -1599,7 +1589,7 @@ ul[role=segmented] li.active a {
   height: 0;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-top: 10px solid #dedede;
+  border-top: 10px solid #DEDEDE;
   border-top-color: #FFF1CF;
   content: '';
   position: absolute;
@@ -1610,8 +1600,8 @@ ul[role=segmented] li.active a {
 
 #tooltip.top:after {
   border-top-color: transparent;
-  border-bottom: 10px solid #dedede;
-  border-bottom-color: #dedede;
+  border-bottom: 10px solid #DEDEDE;
+  border-bottom-color: #DEDEDE;
   top: -20px;
   bottom: auto;
 }
@@ -1641,7 +1631,7 @@ abbr {
 .client-not-logged-in #topbar,
 .client-is-real #topbar,
 .client-has-real #topbar .button,
-.client-is-virtual .authenticate-link {
+.client-is-virtual .authenticate-menu {
   display: none;
 }
 
@@ -1650,36 +1640,6 @@ abbr {
 .client-logged-in .account-container,
 .client-is-real .cashier-link {
   display: block;
-}
-
-.client-is-virtual .security-link,
-.client-is-virtual .self-exclusion-link,
-.client-is-virtual .limits-link,
-.client-is-virtual .financial-assessment-link {
-  display: block;
-}
-
-html:lang(JA) .responsible-trading-link,
-html:lang(JA) .gemcare-link,
-html:lang(JA) .white-labels-link,
-html:lang(JA) .partner-api-link,
-html:lang(JA) .open-source-link,
-html:lang(JA) .regulatory-logos,
-html:lang(JA) .deposit-to-payment-agent-link,
-html:lang(JA) .withdraw-via-payment-agent-link,
-html:lang(JA) .transfer-between-accounts-link,
-html:lang(JA) .smart-indices-link,
-html:lang(JA) .random-markets-link,
-html:lang(JA) .asset-index-link,
-html:lang(JA) .trading-times-link,
-html:lang(JA) .pricing-table-link,
-html:lang(JA) .rise-fall-table-link,
-html:lang(JA) .api-token-link,
-html:lang(JA) .start-trading-link,
-html:lang(JA) .bank-your-way-section,
-html:lang(JA) .digits-trades,
-html:lang(JA) .asians-trades {
-  display: none;
 }
 
 button,
@@ -1726,8 +1686,8 @@ a.button {
 
 button:disabled,
 .button-disabled {
-  color: #dedede;
-  background: #f2f2f2;
+  color: #DEDEDE;
+  background: #F2F2F2;
 }
 
 .home-content {
@@ -1783,7 +1743,7 @@ blockquote {
   text-align: center;
 }
 blockquote p {
-  quotes: "\201C" "\201D" "\2018" "\2019";
+  quotes: "“" "”" "‘" "’";
   margin: 0 2rem 1rem 2rem;
   text-indent: 3rem;
 }
@@ -1827,10 +1787,10 @@ blockquote p:after {
 #open-account input {
   width: 100%;
 }
-#open-account *:nth-child(2), #open-account *:nth-child(6) {
+#open-account *:nth-child(2), #open-account *:nth-child(5) {
   margin-bottom: 1rem;
 }
-#open-account *:nth-child(3), #open-account *:nth-child(4), #open-account *:nth-child(5) {
+#open-account *:nth-child(3), #open-account *:nth-child(4) {
   margin-bottom: .5rem;
 }
 
@@ -1901,7 +1861,7 @@ blockquote p:after {
 }
 .ad-content #open-account input[type=submit]:hover {
   text-decoration: none;
-  background-color: #2e8836;
+  background-color: #2E8836;
 }
 .ad-content #open-account form {
   font-size: 100%;
@@ -1920,7 +1880,7 @@ blockquote p:after {
   margin: 1em 0 0;
 }
 .ad-content #xsection1 li span {
-  color: #2e8836;
+  color: #2E8836;
   font-weight: 700;
 }
 .ad-content #xsection1 li i {
@@ -1932,7 +1892,7 @@ blockquote p:after {
 .ad-content #xreason {
   padding-top: 20px;
   padding-bottom: 20px;
-  background-color: #f2f2f2;
+  background-color: #F2F2F2;
   padding-bottom: 40px;
 }
 .ad-content #xtop {
@@ -1956,7 +1916,7 @@ blockquote p:after {
   margin-bottom: 20px;
   margin-top: 30px;
   padding-bottom: 15px;
-  border-bottom: 1px solid #dedede;
+  border-bottom: 1px solid #DEDEDE;
 }
 .ad-content .inlined {
   display: inline-block;
@@ -1965,7 +1925,7 @@ blockquote p:after {
   margin-top: 0px;
   margin-bottom: 20px;
   padding-bottom: 15px;
-  border-bottom: 1px solid #dedede;
+  border-bottom: 1px solid #DEDEDE;
 }
 .ad-content .xlist1 {
   background: url(../images/pages/home/xicon-1.png) no-repeat;
@@ -2008,13 +1968,13 @@ blockquote p:after {
 }
 .ad-content .xcta .xvirtual span:hover {
   text-decoration: none;
-  background-color: #2e8836;
+  background-color: #2E8836;
 }
 .ad-content #xtestimonial {
   padding-top: 40px;
 }
 .ad-content .xquote {
-  background-color: #f2f2f2;
+  background-color: #F2F2F2;
   padding: 20px 40px;
 }
 .ad-content .xquote p {
@@ -2026,7 +1986,7 @@ blockquote p:after {
   height: 0px;
   border-style: solid;
   border-width: 25px 5px 0 10px;
-  border-color: #f2f2f2 transparent transparent transparent;
+  border-color: #F2F2F2 transparent transparent transparent;
   position: relative;
   left: 80%;
 }
@@ -2036,7 +1996,7 @@ blockquote p:after {
   height: 0px;
   border-style: solid;
   border-width: 25px 10px 0 5px;
-  border-color: #f2f2f2 transparent transparent transparent;
+  border-color: #F2F2F2 transparent transparent transparent;
   position: relative;
   left: 10%;
 }
@@ -2163,7 +2123,7 @@ blockquote p:after {
 }
 .ad1-content #open-account input[type=submit]:hover {
   text-decoration: none;
-  background-color: #2e8836;
+  background-color: #2E8836;
 }
 .ad1-content #open-account form {
   font-size: 100%;
@@ -2182,7 +2142,7 @@ blockquote p:after {
   margin: 1em 0 0;
 }
 .ad1-content #xsection1 li span {
-  color: #2e8836;
+  color: #2E8836;
   font-weight: 700;
 }
 .ad1-content #xsection1 li i {
@@ -2194,7 +2154,7 @@ blockquote p:after {
 .ad1-content #xreason {
   padding-top: 20px;
   padding-bottom: 20px;
-  background-color: #f2f2f2;
+  background-color: #F2F2F2;
   padding-bottom: 40px;
 }
 .ad1-content #xtop {
@@ -2218,7 +2178,7 @@ blockquote p:after {
   margin-bottom: 20px;
   margin-top: 30px;
   padding-bottom: 15px;
-  border-bottom: 1px solid #dedede;
+  border-bottom: 1px solid #DEDEDE;
 }
 .ad1-content .inlined {
   display: inline-block;
@@ -2227,7 +2187,7 @@ blockquote p:after {
   margin-top: 0px;
   margin-bottom: 20px;
   padding-bottom: 15px;
-  border-bottom: 1px solid #dedede;
+  border-bottom: 1px solid #DEDEDE;
 }
 .ad1-content .xlist1 {
   background: url(../images/pages/home/xicon-1.png) no-repeat;
@@ -2270,13 +2230,13 @@ blockquote p:after {
 }
 .ad1-content .xcta .xvirtual span:hover {
   text-decoration: none;
-  background-color: #2e8836;
+  background-color: #2E8836;
 }
 .ad1-content #xtestimonial {
   padding-top: 40px;
 }
 .ad1-content .xquote {
-  background-color: #f2f2f2;
+  background-color: #F2F2F2;
   padding: 20px 40px;
 }
 .ad1-content .xquote p {
@@ -2288,7 +2248,7 @@ blockquote p:after {
   height: 0px;
   border-style: solid;
   border-width: 25px 5px 0 10px;
-  border-color: #f2f2f2 transparent transparent transparent;
+  border-color: #F2F2F2 transparent transparent transparent;
   position: relative;
   left: 80%;
 }
@@ -2298,7 +2258,7 @@ blockquote p:after {
   height: 0px;
   border-style: solid;
   border-width: 25px 10px 0 5px;
-  border-color: #f2f2f2 transparent transparent transparent;
+  border-color: #F2F2F2 transparent transparent transparent;
   position: relative;
   left: 10%;
 }
@@ -2425,7 +2385,7 @@ blockquote p:after {
 }
 .ad2-content #open-account input[type=submit]:hover {
   text-decoration: none;
-  background-color: #2e8836;
+  background-color: #2E8836;
 }
 .ad2-content #open-account form {
   font-size: 100%;
@@ -2444,7 +2404,7 @@ blockquote p:after {
   margin: 1em 0 0;
 }
 .ad2-content #xsection1 li span {
-  color: #2e8836;
+  color: #2E8836;
   font-weight: 700;
 }
 .ad2-content #xsection1 li i {
@@ -2456,7 +2416,7 @@ blockquote p:after {
 .ad2-content #xreason {
   padding-top: 20px;
   padding-bottom: 20px;
-  background-color: #f2f2f2;
+  background-color: #F2F2F2;
   padding-bottom: 40px;
 }
 .ad2-content #xtop {
@@ -2480,7 +2440,7 @@ blockquote p:after {
   margin-bottom: 20px;
   margin-top: 30px;
   padding-bottom: 15px;
-  border-bottom: 1px solid #dedede;
+  border-bottom: 1px solid #DEDEDE;
 }
 .ad2-content .inlined {
   display: inline-block;
@@ -2489,7 +2449,7 @@ blockquote p:after {
   margin-top: 0px;
   margin-bottom: 20px;
   padding-bottom: 15px;
-  border-bottom: 1px solid #dedede;
+  border-bottom: 1px solid #DEDEDE;
 }
 .ad2-content .xlist1 {
   background: url(../images/pages/home/xicon-1.png) no-repeat;
@@ -2532,13 +2492,13 @@ blockquote p:after {
 }
 .ad2-content .xcta .xvirtual span:hover {
   text-decoration: none;
-  background-color: #2e8836;
+  background-color: #2E8836;
 }
 .ad2-content #xtestimonial {
   padding-top: 40px;
 }
 .ad2-content .xquote {
-  background-color: #f2f2f2;
+  background-color: #F2F2F2;
   padding: 20px 40px;
 }
 .ad2-content .xquote p {
@@ -2550,7 +2510,7 @@ blockquote p:after {
   height: 0px;
   border-style: solid;
   border-width: 25px 5px 0 10px;
-  border-color: #f2f2f2 transparent transparent transparent;
+  border-color: #F2F2F2 transparent transparent transparent;
   position: relative;
   left: 80%;
 }
@@ -2560,7 +2520,7 @@ blockquote p:after {
   height: 0px;
   border-style: solid;
   border-width: 25px 10px 0 5px;
-  border-color: #f2f2f2 transparent transparent transparent;
+  border-color: #F2F2F2 transparent transparent transparent;
   position: relative;
   left: 10%;
 }
@@ -2687,7 +2647,7 @@ blockquote p:after {
 }
 .ad3-content #open-account input[type=submit]:hover {
   text-decoration: none;
-  background-color: #2e8836;
+  background-color: #2E8836;
 }
 .ad3-content #open-account form {
   font-size: 100%;
@@ -2706,7 +2666,7 @@ blockquote p:after {
   margin: 1em 0 0;
 }
 .ad3-content #xsection1 li span {
-  color: #2e8836;
+  color: #2E8836;
   font-weight: 700;
 }
 .ad3-content #xsection1 li i {
@@ -2718,7 +2678,7 @@ blockquote p:after {
 .ad3-content #xreason {
   padding-top: 20px;
   padding-bottom: 20px;
-  background-color: #f2f2f2;
+  background-color: #F2F2F2;
   padding-bottom: 40px;
 }
 .ad3-content #xtop {
@@ -2742,7 +2702,7 @@ blockquote p:after {
   margin-bottom: 20px;
   margin-top: 30px;
   padding-bottom: 15px;
-  border-bottom: 1px solid #dedede;
+  border-bottom: 1px solid #DEDEDE;
 }
 .ad3-content .inlined {
   display: inline-block;
@@ -2751,7 +2711,7 @@ blockquote p:after {
   margin-top: 0px;
   margin-bottom: 20px;
   padding-bottom: 15px;
-  border-bottom: 1px solid #dedede;
+  border-bottom: 1px solid #DEDEDE;
 }
 .ad3-content .xlist1 {
   background: url(../images/pages/home/xicon-1.png) no-repeat;
@@ -2794,13 +2754,13 @@ blockquote p:after {
 }
 .ad3-content .xcta .xvirtual span:hover {
   text-decoration: none;
-  background-color: #2e8836;
+  background-color: #2E8836;
 }
 .ad3-content #xtestimonial {
   padding-top: 40px;
 }
 .ad3-content .xquote {
-  background-color: #f2f2f2;
+  background-color: #F2F2F2;
   padding: 20px 40px;
 }
 .ad3-content .xquote p {
@@ -2812,7 +2772,7 @@ blockquote p:after {
   height: 0px;
   border-style: solid;
   border-width: 25px 5px 0 10px;
-  border-color: #f2f2f2 transparent transparent transparent;
+  border-color: #F2F2F2 transparent transparent transparent;
   position: relative;
   left: 80%;
 }
@@ -2822,7 +2782,7 @@ blockquote p:after {
   height: 0px;
   border-style: solid;
   border-width: 25px 10px 0 5px;
-  border-color: #f2f2f2 transparent transparent transparent;
+  border-color: #F2F2F2 transparent transparent transparent;
   position: relative;
   left: 10%;
 }
@@ -2927,7 +2887,7 @@ blockquote p:after {
           flex: 1;
   padding-bottom: 3rem;
   text-align: center;
-  min-width: 33.3333%;
+  min-width: 33%;
 }
 
 .baloon {
@@ -3006,7 +2966,7 @@ blockquote p:after {
 }
 #bestpage #content-holder #content > .content-tab-container .tab-content-wrapper #tab_ohlc-content #prices_statistics_table .daily_price_stats_head .table_heading {
   text-align: center;
-  background-color: #f2f2f2;
+  background-color: #F2F2F2;
   font-weight: bold;
   font-size: 1.1em;
 }
@@ -3031,7 +2991,7 @@ blockquote p:after {
   margin: 0;
 }
 #bestpage #content-holder #content #bet_container #betInputBox_container .tab-content {
-  border: 1px solid #dedede;
+  border: 1px solid #DEDEDE;
   min-height: 369px;
 }
 #bestpage #content-holder #content #bet_container #betInputBox_container .tab-content-wrapper, #bestpage #content-holder #content #bet_container #betInputBox_container .tab-content {
@@ -3057,6 +3017,9 @@ blockquote p:after {
   padding: 10px;
   background: white;
 }
+#bestpage #content-holder #content #bet_container #bet_calculation_container .rbox-content {
+  padding: 0;
+}
 #bestpage #content-holder #content #bet_container #bet_calculation_container .bet-error-box {
   clear: both;
   margin: 0;
@@ -3070,7 +3033,19 @@ blockquote p:after {
 #bestpage #content-holder #content #bet_container #bet_calculation_container .bet-error-box p {
   margin: 0;
 }
-#bestpage #content-holder #content #bet_container #bet_calculation_container .bet-error-box .form_button {
+#bestpage #content-holder #content #bet_container #bet_calculation_container .rbox {
+  margin: 0;
+}
+#bestpage #content-holder #content #bet_container #bet_calculation_container .rbox .rbox-wrap {
+  min-height: 140px;
+}
+#bestpage #content-holder #content #bet_container #bet_calculation_container .rbox .rbox-wrap .bet-error-box {
+  margin: 0;
+  padding: 1em;
+  font-size: 0.8em;
+  width: auto;
+}
+#bestpage #content-holder #content #bet_container #bet_calculation_container .rbox .form_button {
   margin-bottom: 0;
 }
 #bestpage #content-holder #content #bet_container #bet_calculation_container .rbox-bg-alt {
@@ -3090,7 +3065,7 @@ blockquote p:after {
   /* Pricing Table */
 }
 #bestpage #content-holder #content #bet_container #bet_cost_container .rbox-wrap {
-  border-bottom: 1px solid #f2f2f2;
+  border-bottom: 1px solid #F2F2F2;
 }
 #bestpage #content-holder #content #bet_container #bet_cost_container form {
   width: 40%;
@@ -3103,20 +3078,20 @@ blockquote p:after {
   width: auto;
 }
 #bestpage #content-holder #content #bet_container #bet_cost_container .draggable .odd {
-  background: #f2f2f2;
+  background: #F2F2F2;
 }
 #bestpage #content-holder #content #bet_container #bet_cost_container .draggable .rbox {
-  border: 1px solid #dedede;
+  border: 1px solid #DEDEDE;
   position: relative;
 }
 #bestpage #content-holder #content #bet_container #bet_cost_container .draggable .rbox-table-full {
-  border: 1px solid #f2f2f2;
+  border: 1px solid #F2F2F2;
   font-size: 93%;
   text-align: left;
 }
 #bestpage #content-holder #content #bet_container #bet_cost_container .draggable .rbox-table-full td {
   text-align: left;
-  border: 1px solid #f2f2f2;
+  border: 1px solid #F2F2F2;
   border-width: 0 1px;
 }
 #bestpage #content-holder #content #bet_container #loading-price {
@@ -3183,7 +3158,7 @@ blockquote p:after {
 }
 
 .price_moved_down {
-  background-color: #cc0033;
+  background-color: #c03;
   color: white;
 }
 
@@ -3216,7 +3191,7 @@ blockquote p:after {
   text-align: center;
   width: 100%;
   margin: auto;
-  background-color: #dedede;
+  background-color: #DEDEDE;
   line-height: 1.8em;
   font-size: 0.7em;
   white-space: nowrap;
@@ -3226,7 +3201,7 @@ blockquote p:after {
 .price_box {
   padding: 0;
   margin-top: 20;
-  border: 1px solid #f2f2f2;
+  border: 1px solid #F2F2F2;
 }
 .price_box a {
   color: #2a3052;
@@ -3234,7 +3209,7 @@ blockquote p:after {
 
 /* added for the underlying highlight */
 .is_intraday {
-  background-color: #dedede;
+  background-color: #DEDEDE;
 }
 
 .trade_confirm_container {
@@ -3242,8 +3217,8 @@ blockquote p:after {
   margin: 0;
   padding: 0;
   text-align: center;
-  border: solid 1px #f2f2f2;
-  background: #f2f2f2;
+  border: solid 1px #F2F2F2;
+  background: #F2F2F2;
 }
 
 .bet_confirm_wrapper {
@@ -3268,7 +3243,7 @@ blockquote p:after {
   margin: 0 10px;
   padding: 10px 5px;
   text-align: justify;
-  border: solid 2px #dedede;
+  border: solid 2px #DEDEDE;
   background: white;
 }
 .bet_confirm_wrapper .account_balance {
@@ -3331,11 +3306,11 @@ blockquote p:after {
 }
 
 .profit {
-  color: #2e8836;
+  color: #2E8836;
 }
 
 .loss {
-  color: #cc0033;
+  color: #c03;
 }
 
 .with_right_border {
@@ -3369,6 +3344,10 @@ blockquote p:after {
   padding-bottom: 0 !important;
 }
 
+#bet_calculation_container .rbox-heading {
+  background-color: transparent;
+  margin-bottom: 0;
+}
 #bet_calculation_container h4 {
   padding: .5rem 0 .5em 4rem !important;
   text-transform: capitalize;
@@ -3552,6 +3531,13 @@ blockquote p:after {
 #content .rbox-table-heading {
   padding: 3px;
 }
+#content .rbox-heading {
+  background-color: #F2F2F2;
+}
+#content .rbox-heading h4 {
+  margin: 0;
+  padding: .5rem 1rem;
+}
 #content .rbox-content {
   background-color: white;
   padding: 1rem;
@@ -3612,7 +3598,7 @@ blockquote p:after {
 }
 
 .disabled {
-  color: #dedede;
+  color: #DEDEDE;
 }
 
 .bigger {
@@ -3627,12 +3613,12 @@ blockquote p:after {
 
 .flipper.focus.win,
 .flipper.win {
-  background: linear-gradient(to bottom, transparent, #2e8836);
+  background: linear-gradient(to bottom, transparent, #2E8836);
 }
 
 .flipper.focus.lose,
 .flipper.lose {
-  background: linear-gradient(to bottom, transparent, #cc0033);
+  background: linear-gradient(to bottom, transparent, #c03);
 }
 
 #digit-contract-details .sign {
@@ -3640,7 +3626,7 @@ blockquote p:after {
 }
 
 .disabled-link {
-  color: #dedede !important;
+  color: #DEDEDE !important;
   pointer-events: none;
 }
 
@@ -3722,7 +3708,7 @@ blockquote p:after {
 }
 
 .half-1.with-separator {
-  border-right: 1px solid #dedede;
+  border-right: 1px solid #DEDEDE;
 }
 
 table.half-1,
@@ -3738,7 +3724,7 @@ table.half-2 {
 
 #WhiteBoxMessage.errorbox {
   text-align: center;
-  border: 1px solid #dedede;
+  border: 1px solid #DEDEDE;
   background-image: none;
 }
 #WhiteBoxMessage.errorbox .rbox-content {
@@ -3778,7 +3764,7 @@ table.half-2 {
 }
 
 .errorbox h3 {
-  color: #cc0033;
+  color: #c03;
 }
 
 .errorbox h3 {
@@ -3795,11 +3781,11 @@ table.half-2 {
 }
 
 .rbox-wrap .rbox-wrap {
-  border: 1px solid #dedede !important;
+  border: 1px solid #DEDEDE !important;
 }
 
 .errorbox h3 {
-  color: #cc0033;
+  color: #c03;
 }
 
 .popupbox {
@@ -3936,7 +3922,7 @@ h2.finder {
   padding: 0.4em 50px 0.4em 0;
   margin-right: 3px;
   margin-left: 3px;
-  border-top: 1px solid #dedede;
+  border-top: 1px solid #DEDEDE;
   color: #2a3052;
 }
 
@@ -3961,10 +3947,10 @@ h2.finder {
   padding-top: 2px;
 }
 #changeAccountForm input {
-  border: 1px solid #dedede;
+  border: 1px solid #DEDEDE;
 }
 #changeAccountForm select {
-  border: 1px solid #dedede;
+  border: 1px solid #DEDEDE;
   background: white;
 }
 
@@ -4117,23 +4103,26 @@ div#price_table_notes {
   height: 5rem;
 }
 
-.login-content #content {
+.login-content #content, .signup-content #content {
   width: 20rem;
 }
-.login-content form {
+.login-content form, .signup-content form {
   text-align: center;
 }
-.login-content .form-logo {
+.login-content .form-logo, .signup-content .form-logo {
   width: 7rem;
 }
 .login-content input,
-.login-content button {
+.login-content button,
+.login-content select, .signup-content input,
+.signup-content button,
+.signup-content select {
   width: 100%;
 }
-.login-content .errorfield {
+.login-content .errorfield, .signup-content .errorfield {
   margin-top: -1rem;
 }
-.login-content .bigerror {
+.login-content .bigerror, .signup-content .bigerror {
   margin-top: 1rem;
 }
 
@@ -4205,7 +4194,6 @@ div#price_table_notes {
 
 .userlogintrouble-content .col, .resources-content .col {
   min-width: 33.3333%;
-  max-width: 33.3333%;
 }
 
 .cashier-icon {
@@ -4301,12 +4289,12 @@ div#price_table_notes {
 .sidebar ul li {
   list-style-image: none;
   margin: 0;
-  background: #f2f2f2;
+  background: #F2F2F2;
   line-height: 150%;
   border-bottom: 1px solid #fff;
 }
 .sidebar ul li:hover {
-  background: #dedede;
+  background: #DEDEDE;
 }
 .sidebar ul li a {
   font-weight: normal;
@@ -4327,7 +4315,7 @@ div#price_table_notes {
 }
 
 .code-sample {
-  background-color: #f2f2f2;
+  background-color: #F2F2F2;
   overflow-x: auto;
   width: 90%;
   font-family: monospace;
@@ -4363,13 +4351,13 @@ div#price_table_notes {
   text-align: center;
 }
 .timeline .year {
-  background: #f2f2f2;
+  background: #F2F2F2;
   clear: both;
   width: 80px;
   height: 80px;
   border-radius: 50%;
   line-height: 80px;
-  border: 1px solid #dedede;
+  border: 1px solid #DEDEDE;
   font-size: 1.77777rem;
   transition-duration: 0.4s;
   transition-property: -webkit-transform;
@@ -4397,7 +4385,7 @@ div#price_table_notes {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   background: #e98024;
-  color: #f2f2f2;
+  color: #F2F2F2;
 }
 .timeline .event {
   position: relative;
@@ -4409,11 +4397,11 @@ div#price_table_notes {
   margin-bottom: 20px;
 }
 .timeline .event .header {
-  background: #f2f2f2;
+  background: #F2F2F2;
   padding: 12px;
 }
 .timeline .event .event-body {
-  border: 1px solid #f2f2f2;
+  border: 1px solid #F2F2F2;
   padding: 12px;
 }
 .timeline .event.featured .header {
@@ -4442,7 +4430,7 @@ div#price_table_notes {
 }
 .timeline .event.right:after {
   border-left: none;
-  border-right: 14px solid #f2f2f2;
+  border-right: 14px solid #F2F2F2;
   left: -14px;
 }
 @media all and (min-width: 600px) {
@@ -4452,7 +4440,7 @@ div#price_table_notes {
     height: 0;
     border-top: 14px solid transparent;
     border-bottom: 14px solid transparent;
-    border-left: 14px solid #f2f2f2;
+    border-left: 14px solid #F2F2F2;
     position: absolute;
     top: 10px;
     right: -14px;
@@ -4503,6 +4491,10 @@ div#price_table_notes {
 #reality-check-nav span:nth-child(2), #balances-nav span:nth-child(2) {
   display: inline-block;
   width: 5em;
+}
+
+html:lang(JA) .ja-hide {
+  display: none !important;
 }
 
 @media all and (max-width: 759px) {
@@ -4651,12 +4643,16 @@ div#price_table_notes {
   .home-content .hero hgroup, .home-content .trade-desc {
     text-align: center;
   }
+
+  .icon-desc {
+    text-align: center;
+  }
 }
 /* ==========================================================================
    $BASE-PICKER
    ========================================================================== */
 /**
- * Note: the root picker element should *NOT* be styled more than what’s here.
+ * Note: the root picker element should *NOT* be styled more than whatΓÇÖs here.
  */
 .picker {
   font-size: 16px;
@@ -4679,14 +4675,14 @@ div#price_table_notes {
 }
 
 /**
- * When the picker is opened, the input element is “activated”.
+ * When the picker is opened, the input element is ΓÇ£activatedΓÇ¥.
  */
 .picker__input.picker__input--active {
   border-color: #0089ec;
 }
 
 /**
- * The holder is the only “scrollable” top-level container element.
+ * The holder is the only ΓÇ£scrollableΓÇ¥ top-level container element.
  */
 .picker__holder {
   width: 100%;
@@ -4699,7 +4695,7 @@ div#price_table_notes {
  * Demo: http://amsul.github.io/pickadate.js
  */
 /**
- * Note: the root picker element should *NOT* be styled more than what’s here.
+ * Note: the root picker element should *NOT* be styled more than whatΓÇÖs here.
  */
 .picker {
   width: 100%;
@@ -4731,7 +4727,7 @@ div#price_table_notes {
 
 /**
  * The frame and wrap work together to ensure that
- * clicks within the picker don’t reach the holder.
+ * clicks within the picker donΓÇÖt reach the holder.
  */
 .picker__frame {
   padding: 1px;
@@ -5217,7 +5213,7 @@ div#price_table_notes {
    ========================================================================== */
 /**
  * Note: the root picker element should __NOT__ be styled
- * more than what’s here. Style the `.picker__holder` instead.
+ * more than whatΓÇÖs here. Style the `.picker__holder` instead.
  */
 .picker--time {
   min-width: 256px;
