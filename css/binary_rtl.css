@@ -1518,7 +1518,6 @@ ul[role=tabs] li, ul[role=segmented] li {
   -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  padding: .5rem .25rem;
   text-align: center;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1532,6 +1531,7 @@ ul[role=tabs] li, ul[role=segmented] li {
   cursor: pointer;
 }
 ul[role=tabs] a, ul[role=segmented] a {
+  padding: .5rem .25rem;
   text-decoration: none;
   font-weight: normal;
 }
