@@ -664,8 +664,9 @@ option {
 }
 
 textarea {
-  height: 8em;
-  width: 25em;
+  padding: .5rem;
+  height: 8rem;
+  width: 25rem;
 }
 
 input[type=text],
@@ -679,7 +680,6 @@ input[type=date] {
 }
 
 select,
-textarea,
 input[type=text],
 input[type=email],
 input[type=password],
