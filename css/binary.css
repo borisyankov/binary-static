@@ -1507,11 +1507,11 @@ ul[role=tabs], ul[role=segmented] {
   display: flex;
   overflow: hidden;
   margin-bottom: 1rem;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
 }
 ul[role=tabs] li, ul[role=segmented] li {
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
   text-align: center;
   display: -webkit-flex;
   display: -ms-flexbox;
