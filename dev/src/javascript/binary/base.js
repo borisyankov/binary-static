@@ -19,6 +19,7 @@ if (isStorageSupported(window.sessionStorage)) {
     if (!LocalStore) {
         LocalStore = new Store(window.sessionStorage);
     }
+
     SessionStore = new Store(window.sessionStorage);
 }
 
@@ -26,6 +27,7 @@ if (!SessionStore || !LocalStore) {
     if (!LocalStore) {
         LocalStore = new InScriptStore();
     }
+
     if (!SessionStore) {
         SessionStore = new InScriptStore();
     }
@@ -91,80 +93,9 @@ function formEffects() {
     };
 }
 
-function add_click_effect_to_button() {
-    var prefix = function (class_name) {
-        var class_names = class_name.split(/\s+/);
-        
-        var _prefix = 'button';
-        var cn = class_names.shift();
-
-        while (cn) {
-            if (cn && cn != _prefix && !cn.match(/-focus|-hover/)) {
-                _prefix = cn;
-                break;
-            }
-            cn = class_names.shift();
-        }
-
-        return _prefix;
-    };
-
-    var remove_button_class = function (button, class_name) {
-        button.removeClass(class_name).children('.button').removeClass(class_name).end().parent('.button').removeClass(class_name);
-    };
-    var add_button_class = function (button, class_name) {
-        button.addClass(class_name).children('.button').addClass(class_name).end().parent('.button').addClass(class_name);
-    };
-
-    $('#content,#popup')
-        .delegate('.button', 'mousedown', function () {
-            var class_name = prefix(this.className) + '-focus';
-            add_button_class($(this), class_name);
-        })
-        .delegate('.button', 'mouseup', function () {
-            var class_name = prefix(this.className) + '-focus';
-            remove_button_class($(this), class_name);
-        })
-        .delegate('.button', 'mouseover', function () {
-            var class_name = prefix(this.className) + '-hover';
-            add_button_class($(this), class_name);
-        })
-        .delegate('.button', 'mouseout', function () {
-            var class_name = prefix(this.className) + '-hover';
-            remove_button_class($(this), class_name);
-        });
-}
-
-var make_mobile_menu = function () {
-    if ($('#mobile-menu-container').is(':visible')) {
-        $('#mobile-menu').mmenu({
-            position: 'right',
-            zposition: 'front',
-            slidingSubmenus: false,
-            searchfield: true,
-            onClick: {
-                close: true
-            },
-        }, {
-            selectedClass: 'active',
-        });
-    }
-};
-
 onLoad.queue(function () {
-    $('.tm-ul > li').hover(
-        function () {
-            $(this).addClass('hover');
-        },
-        function () {
-            $(this).removeClass('hover');
-        }
-    );
 
-    MenuContent.init($('.content-tab-container').find('.tm-ul'));
-
-    add_click_effect_to_button();
-    make_mobile_menu();
+    MenuContent.init($('#betsBottomPage'));
 
     // attach the class to account form's div/fieldset for CSS visual effects
     var objFormEffect = new formEffects();
@@ -183,20 +114,7 @@ onLoad.queue(function () {
 });
 
 onLoad.queue(function () {
-    attach_date_picker('.has-date-picker');
-    attach_time_picker('.has-time-picker');
     attach_inpage_popup('.has-inpage-popup');
-    attach_tabs('.has-tabs');
-});
-
-// this event is fired when there is change in localStorage
-// that looks for active_loginid key change, this was needed for
-// scenario where client has multiple tab/window open and switch
-// account on one tab then we need to load all the open tab/window
-$(window).on('storage', function (jq_event) {
-    if (jq_event.originalEvent.key !== 'active_loginid') return;
-    // wait for 2 seconds as cookie is being set else it will show login screen
-    window.setTimeout(function () {
-        location.href = page.url.url_for('user/my_account?loginid=' + LocalStore.get('active_loginid'));
-    }, 2000);
+    initTabs();
+    initDateTimePicker();
 });

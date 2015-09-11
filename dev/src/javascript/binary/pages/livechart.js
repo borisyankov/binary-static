@@ -2,11 +2,13 @@ var minDT = new Date();
 minDT.setUTCFullYear(minDT.getUTCFullYear - 3);
 var liveChartsFromDT, liveChartsToDT, liveChartConfig;
 
+var $liveChartFromDate, $liveChartToDate;
+
 var updateDatesFromConfig = function(config) {
     var duration = $('#live_chart_duration li[data-live=' + config.live + ']').attr('id');
-    var now = new Date();
-    liveChartsFromDT.setDateTime(new Date(now.getTime() - (duration * 1000)));
-    liveChartsToDT.setDateTime(now);
+
+    $liveChartFromDate.set('value', moment().subtract(duration, 'seconds').toDate());
+    $liveChartToDate.set('value', moment().toDate());
 };
 
 var show_chart_for_instrument = function() {
@@ -63,17 +65,27 @@ var build_instrument_select = function() {
 };
 
 var init_live_chart = function () {
-    liveChartsFromDT = new DateTimePicker({
-        id: "live_charts_from",
-        onChange: function(date) { liveChartsToDT.setMinDateTime(date); }
+
+    $liveChartFromDate = $('#live_charts_from_date').pickadate().pickadate('picker');
+    $liveChartToDate = $('#live_charts_to_date').pickadate().pickadate('picker');
+
+/*
+    $('#live_charts_from').pickadate({
+        onSet: function(context) {
+            $('#live_charts_from').pickadate({
+                max: $('#live_charts_to').pickadate().val()
+            });
+        }
     });
 
-    liveChartsToDT = new DateTimePicker({
-        id: "live_charts_to",
-        onChange: function(date) { liveChartsFromDT.setMaxDateTime(date); }
+    $('#live_charts_to').pickadate({
+        onSet: function(context) {
+            $('#live_charts_from').pickadate({
+                max: $('#live_charts_from').pickadate().val()
+            });
+        }
     });
-
-
+*/
     liveChartConfig = new LiveChartConfig({
         renderTo: 'live_chart_div',
     });
@@ -83,11 +95,6 @@ var init_live_chart = function () {
 
 
     $(".notice").hide();
-    $("#live_chart_extended_options").hide();
-    $("#live_charts_show_extended_options").on('click', function(e){
-        e.preventDefault();
-        $("#live_chart_extended_options").toggle();
-    });
     $("#live_charts_high_barrier").change(function(){
         var val = $(this).val();
         if(liveChartConfig.has_indicator('high') || !val) {
@@ -131,8 +138,8 @@ var init_live_chart = function () {
     $("#live_charts_show_interval").on('click', function() {
         liveChartConfig.update({
             interval: {
-                from: liveChartsFromDT.getDateTime(),
-                to: liveChartsToDT.getDateTime()
+                from: $liveChartFromDate.get('value'),
+                to: $liveChartToDate.get('value')
             },
             update_url: 1
         });
@@ -155,12 +162,11 @@ pjax_config_page('livechart', function() {
         },
         onUnload: function() {
             live_chart.close_chart();
-            live_chart = null;
         }
     };
 });
 
-//The first time some one loads live chart in the session, the script might not have finished loading by the time onLoad.fire() was called.
+//The first time someone loads live chart in the session, the script might not have finished loading by the time onLoad.fire() was called.
 //So we check if livechart was not configured when we loaded this script then we initialize it manually.
 $(function() {
     if(!live_chart && /livechart/.test(window.location.pathname)) {

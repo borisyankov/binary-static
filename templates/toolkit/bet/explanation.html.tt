@@ -14,55 +14,31 @@
     flash.staysinout      = static_url.copy.append("flash/betguide-staysinout.swf")
     flash.endsinout       = static_url.copy.append("flash/betguide-endsinout.swf")
     flash.updown          = static_url.copy.append("flash/betguide-updown.swf")
-    image.spreads          = [ request.url_for('images/pages/get-started/spreadbet-long.png'),request.url_for('images/pages/get-started/spreadbet-short.png') ]
 %]
 
-<div class='grd-grid-12 grd-parent'>
-
-    [% IF show_flash %]
-        [% IF flash.$form_name %]
-        <div class='grd-grid-4 grd-grid-mobile-12'>
-            <div id="bet-guide-demo">
-                <object width="245" height="160" type="application/x-shockwave-flash" data="[% flash.$form_name %]">
-                    <param name="movie" value="[% flash.$form_name %]" />
-                    <param name="menu" value="false" />
-                    <param name="quality" value="high" />
-                    <param name="bgcolor" value="#FFFFFF" />
-                    <param name="wMode" value="transparent" />
-                </object>
-            </div>
-        </div>
-        [% END %]
-    [% END %]
-
-    [% IF show_image %]
-        <div class='grd-grid-4'>
-            [% FOREACH img_url IN image.$form_name %]
-            <img class="responsive" src="[% img_url %]"/>
+<div class="row">
+    [% IF !no_flash %]
+        <div class="col">
+            [% IF !no_winning %]
+                <h3>[% l("Winning the contract") %]</h3>
+                [% INCLUDE "$winning" %]
+            [% END %]
+            [% IF flash.$form_name %]
+                <div id="bet-guide-demo">
+                    <object width="245" height="160" type="application/x-shockwave-flash" data="[% flash.$form_name %]">
+                        <param name="movie" value="[% flash.$form_name %]" />
+                        <param name="menu" value="false" />
+                        <param name="quality" value="high" />
+                        <param name="bgcolor" value="#FFFFFF" />
+                        <param name="wMode" value="transparent" />
+                    </object>
+                </div>
             [% END %]
         </div>
     [% END %]
-
-    [% IF show_winning && show_flash && flash.$form_name  %]
-        <div class='grd-grid-8 grd-grid-mobile-12'>
-            <h4>
-                [% l("Winning the contract") %]
-            </h4>
-            [% INCLUDE "$winning" %]
-        </div>
-    [% ELSIF show_winning %]
-        <div class="[% IF show_image %]grd-grid-8[% ELSE %]grd-grid-12[% END %]">
-            <h4>
-                [% l("Winning the contract") %]
-            </h4>
-            [% INCLUDE "$winning" %]
-        </div>
-    [% END %]
-    [% IF show_explain %]
-    <div class='grd-grid-12'>
+    <div class="col">
         <div id='explanation-content'>
             [% INCLUDE "$explanation" %]
         </div>
     </div>
-    [% END %]
-</div><!-- grd-parent closes -->
+</div>

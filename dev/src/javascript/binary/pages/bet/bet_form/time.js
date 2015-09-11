@@ -11,25 +11,22 @@ BetForm.Time = function() {
 
 BetForm.Time.prototype = {
     init: function() {
-        // spreads doesn't have any concept of expiry
-        if (BetForm.attributes.model.form_name() != "spreads") {
-            this.trading_time.init();
-            this.duration.init();
-            this.end_time.init();
-            this.register();
-            if (BetForm.attributes.model.form_name() == "digits" || BetForm.attributes.model.form_name() == "asian") {
-                var expiry_val = 'duration';
-                $('#expiry_type').val(expiry_val);
-                page.url.invalidate();
-                LocalStore.set('bet_page.expiry_type', expiry_val);
-                BetForm.attributes.model.expiry_type(expiry_val);
-                this.model.expiry_type = expiry_val;
-                $('#duration_amount').val(this.trading_time.min_unit().min);
-            } else {
-                $('#expiry_type').val(this.model.expiry_type);
-            }
-            this.update_ui();
+        this.trading_time.init();
+        this.duration.init();
+        this.end_time.init();
+        this.register();
+        if (BetForm.attributes.model.form_name() == "digits" || BetForm.attributes.model.form_name() == "asian") {
+            var expiry_val = 'duration';
+            $('#expiry_type').val(expiry_val);
+            page.url.invalidate();
+            LocalStore.set('bet_page.expiry_type', expiry_val);
+            BetForm.attributes.model.expiry_type(expiry_val);
+            this.model.expiry_type = expiry_val;
+            $('#duration_amount').val(this.trading_time.min_unit().min);
+        } else {
+            $('#expiry_type').val(this.model.expiry_type);
         }
+        this.update_ui();
     },
     register: function() {
         this.on_expiry_type_change();
@@ -449,7 +446,7 @@ BetForm.TradingTime.prototype = {
 */
 BetForm.Time.Duration = function(trading_time) {
     this.trading_time = trading_time;
-    this.date_picker = new DatePicker.SelectedDates('duration_amount', 'diff');
+    //this.date_picker = new DatePicker.SelectedDates('duration_amount', 'diff');
 };
 
 BetForm.Time.Duration.prototype = {
@@ -577,8 +574,8 @@ BetForm.Time.Duration.prototype = {
 */
 BetForm.Time.EndTime = function(trading_time) {
     this.trading_time = trading_time;
-    this.time_picker = new TimePicker('expiry_time');
-    this.date_picker = new DatePicker.SelectedDates('expiry_date');
+//    this.time_picker = new TimePicker('expiry_time');
+//    this.date_picker = new DatePicker.SelectedDates('expiry_date');
 };
 
 BetForm.Time.EndTime.prototype = {

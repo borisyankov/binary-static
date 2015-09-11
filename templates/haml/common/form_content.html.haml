@@ -1,8 +1,7 @@
 - if (stash->{client_message}) {
-    #client_message.rbox.errorbox
-      .rbox-wrap
-        #client_message_content.rbox-content
-            = stash->{client_message}
+    #client_message.errorbox
+      #client_message_content
+        = stash->{client_message}
 - }
 - if (stash->{success_message}) {
     %p.success-msg

@@ -17,7 +17,7 @@ var toggleStreaming = function() {
    }
 };
 
-pjax_config_page('/trade.cgi', function() {
+pjax_config_page('/trade', function() {
     return {
         onLoad: function() {
             trade_contract_back();
@@ -134,20 +134,6 @@ pjax_config_page('chart_application', function () {
     return {
         onLoad: function () {
             load_chart_app();
-        }
-    };
-});
-
-pjax_config_page('trading', function () {
-    return {
-        onLoad: function () {
-            Content.populate();
-            TradeSocket.init();
-            Symbols.currentSymbol('');
-            Symbols.getSymbols();
-        },
-        onUnload: function() {
-            TradeSocket.close();
         }
     };
 });

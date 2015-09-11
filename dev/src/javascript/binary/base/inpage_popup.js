@@ -15,7 +15,6 @@ var InPagePopup = function(conf) {
     this._container = null;
     this.width = conf.width || null;
     this.close_on_escape = typeof conf.close_on_escape == 'undefined' ? true : conf.close_on_escape;
-    this.draggable = typeof conf.draggable == 'undefined' ? true : conf.draggable;
     this.drag_handle = conf.drag_handle || '.drag-handle';
     this.ajax_conf = conf.ajax_conf || null;
     this._content = conf.content || '';
@@ -28,7 +27,6 @@ var InPagePopup = function(conf) {
 InPagePopup.prototype.config = function(conf) {
     if (conf.width) this.width = conf.width;
     if (typeof conf.close_on_escape != 'undefined') this.close_on_escape = !!conf.close_on_escape;
-    if (typeof conf.draggable != 'undefined') this.draggable = !!conf.draggable;
     if (conf.drag_handle) this.drag_handle = conf.drag_handle;
     if (conf.ajax_conf) this.ajax_conf = conf.ajax_conf;
 };
@@ -137,14 +135,6 @@ InPagePopup.prototype._init_container = function() {
         $(document).on('keydown', function(e) {
             if (e.which == 27) me.close();
         });
-    }
-    if (this.draggable) {
-        handle = this.drag_handle;
-        drag_opts = {};
-        if ( $(handle, container).length ) {
-            drag_opts['handle'] = handle;
-        }
-        container.draggable(drag_opts);
     }
     this.reposition();
     return container;

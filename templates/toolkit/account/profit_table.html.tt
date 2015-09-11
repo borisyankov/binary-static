@@ -1,30 +1,21 @@
 [%- MACRO pagination_links BLOCK -%]
-<div class="grd-grid-12 grd-row-padding">
-        <div class="grd-grid-2 grd-grid-mobile-6 grd-grid-phablet-6 left-aligned">
-                [% IF has_newer %]
-                <a class="pjaxload button" href="[% request.url_for('/user/profit_table', { after => sold_contracts.first.purchase_time }) %]"><span>&laquo;[% l('Newer') %]</span></a>
-                [% END %]
-        </div>
 
-        <span class="grd-grid-8 grd-hide-mobile grd-hide-phablet center-aligned" [% IF position != 'top' %] style="visibility:hidden" [% END %]>
-            <form action="[% request.url_for('/user/profit_table') %]">
-                <div class="grd-row-padding grd-parent grd-grid-7 right-aligned">
-                    <label for='before' class='left-aligned'>[% l('Jump to') %]</label>
-                    <input id='profit-table-date' class='has-date-picker' name='before' value='[% before %]'/>
-                    <input type='hidden' name='jump_to' value='1'/>
-                </div>
-                <span id="submit-date" class="invisible button grd-grid-5 left-aligned">
-                    <button class="button">[% l('Go') %]</button>
-                </span>
-            </form>
+    [% IF has_newer %]
+    <a class="button" href="[% request.url_for('/user/profit_table', { after => sold_contracts.first.purchase_time }) %]"><span>&laquo;[% l('Newer') %]</span></a>
+    [% END %]
+
+    <form action="[% request.url_for('/user/profit_table') %]" [% IF position != 'top' %] style="visibility:hidden" [% END %]>
+        <input id="profit-table-date" type="date" name="before" value="[% before %]" type="text"/>
+        <input type='hidden' name='jump_to' value='1'/>
+        <span id="submit-date" class="invisible">
+            <button class="button">[% l('Go') %]</button>
         </span>
+    </form>
 
-        <div class="grd-grid-2 grd-grid-mobile-6 grd-grid-phablet-6 right-aligned">
-                [% IF has_older %]
-                <a class="pjaxload button" href="[% request.url_for('/user/profit_table', { before => sold_contracts.last.purchase_time }) %]"><span>[% l('Older') %]&raquo;</span></a>
-                [% END %]
-        </div>
-</div>
+    [% IF has_older %]
+    <a class="button" href="[% request.url_for('/user/profit_table', { before => sold_contracts.last.purchase_time }) %]"><span>[% l('Older') %]&raquo;</span></a>
+    [% END %]
+
 [%- END -%]
 
 [%- MACRO display_amount(amount) BLOCK -%]
@@ -36,84 +27,49 @@
 [%- END -%]
 
 [%- MACRO display_contract(contract) BLOCK -%]
-    <div class="grd-parent grd-grid-12 table-body table-body-lines grd-row-padding">
-        <div class="grd-grid-4 grd-hide-mobile grd-grid-phablet-3">
-            <div class="grd-grid-6 grd-hide-phablet">[% contract.purchase_date.datetime %]</div>
-            <div class="grd-grid-6 grd-grid-phablet-12">[% contract.txn_id %]</div>
-            <div class="grd-hide grd-show-phablet grd-grid-phablet-12">
-                    <br/>[% l('Purchase Date'); %]:
-            </div>
-            <div class="grd-hide grd-show-phablet grd-grid-phablet-12">[% contract.purchase_date.datetime %]</div>
-            <div class="grd-hide grd-show-phablet grd-grid-phablet-12">
-                    <br/>[% l('Sale Date'); %]:
-            </div>
-            <div class="grd-hide grd-show-phablet grd-grid-phablet-12">[% contract.sale_date.datetime %]</div>
-        </div>
-        <div class="grd-grid-3 grd-grid-mobile-8 grd-grid-phablet-6">[% bet_info(contract, currency, request.broker.code).description %]</div>
-        <div class="grd-grid-5 grd-grid-mobile-4 grd-grid-phablet-3">
-            <div class="grd-hide grd-show-mobile grd-grid-mobile-12 grd-show-phablet grd-grid-phablet-12">
-                    [% l('Purchase Price') %]:
-            </div>
-            <div class="grd-grid-3 grd-grid-mobile-12 grd-grid-phablet-12 right-aligned">
-                    [% to_monetary_number_format(contract.buy_price) %]
-            </div>
-            <div class="grd-grid-5 grd-hide-mobile grd-hide-phablet">[% contract.sale_date.datetime %]</div>
-            <div class="grd-hide grd-show-mobile grd-grid-mobile-12 grd-show-phablet grd-grid-phablet-12">
-                    <br />[% l('Sale Price') %]:
-            </div>
-            <div class="grd-grid-2 grd-grid-mobile-12 grd-grid-phablet-12 right-aligned">
-                    [% to_monetary_number_format(contract.sell_price) %]
-            </div>
-            <div class="grd-hide grd-show-mobile grd-grid-mobile-12 grd-show-phablet grd-grid-phablet-12">
-                    <br />[% l('Profit/Loss') %]:
-            </div>
-            <div class="grd-grid-2 grd-grid-mobile-12 grd-grid-phablet-12 right-aligned">
-                    [% display_amount(contract.sell_price - contract.buy_price) %]
-            </div>
-        </div>
-    </div>
+    <tr>
+        <td>[% contract.purchase_date.datetime %]</td>
+        <td>[% contract.txn_id %]</td>
+        <td>[% bet_info(contract, currency).description %]</td>
+        <td>[% to_monetary_number_format(contract.buy_price) %]</td>
+        <td>[% contract.sale_date.datetime %]</td>
+        <td>[% to_monetary_number_format(contract.sell_price) %]</td>
+        <td>[% display_amount(contract.sell_price - contract.buy_price) %]</td>
+    </tr>
 [%- END -%]
 
-<div class="grd-grid-12">
-    <h1>[% l('Profit Table') %]</h1><br>
+<h1>[% l('Profit Table') %]</h1>
 
-    <div id="profit-table">
-    [% pagination_links(position='top') %]
-    [% IF sold_contracts.size == 0 %]
-        <p>[% l('There are no items during this period') %]</p>
-    [% ELSE %]
-            <div class="grd-parent grd-grid-12 table-header grd-row-padding">
-                <div class="grd-grid-4 grd-hide-mobile grd-grid-phablet-3">
-                    <div class="grd-grid-6 grd-hide-phablet">[% l("Purchase Date") %]</div>
-                    <div class="grd-grid-6 grd-grid-phablet-12">[% l("Ref.") %]</div>
-                </div>
-                <div class="grd-grid-3 grd-grid-mobile-8 grd-grid-phablet-6">[% l("Contract") %]</div>
-                <div class="grd-grid-5 grd-hide-mobile grd-hide-phablet">
-                    <div class="grd-grid-3 grd-no-gutter">[% l("Purchase Price") %]</div>
-                    <div class="grd-grid-5 ">[% l("Sale Date") %]</div>
-                    <div class="grd-grid-2 grd-no-gutter">[% l("Sale Price") %]</div>
-                    <div class="grd-grid-2 grd-no-gutter">[% l("Profit/<wbr/>Loss") %]</div>
-                </div>
-            </div>
+[% pagination_links(position='top') %]
+[% IF sold_contracts.size == 0 %]
+    <p>[% l('There are no items during this period') %]</p>
+[% ELSE %]
+    <table id="profit-table">
+        <thead>
+            <tr>
+                <th>[% l("Purchase Date") %]</th>
+                <th>[% l("Ref.") %]</th>
+                <th>[% l("Contract") %]</th>
+                <th>[% l("Purchase Price") %]</th>
+                <th>[% l("Sale Date") %]</th>
+                <th>[% l("Sale Price") %]</th>
+                <th>[% l("Profit/<wbr/>Loss") %]</th>
+            </tr>
+        </thead>
+        <tbody>
         [% total_pl = 0 %]
         [% FOREACH contract IN sold_contracts %]
-                [% display_contract(contract) %]
-                [% total_pl = total_pl + (contract.sell_price - contract.buy_price) %]
+            [% display_contract(contract) %]
+            [% total_pl = total_pl + (contract.sell_price - contract.buy_price) %]
         [% END %]
-        <div class="grd-parent grd-grid-12 table-header grd-row-padding">
-                <div class="grd-grid-8 grd-grid-mobile-12 grd-grid-phablet-12">
-                    [% sold_contracts.first.purchase_date.date_yyyymmdd %] - [% sold_contracts.last.purchase_date.date_yyyymmdd %]
-                </div>
-                <div class="grd-grid-4 grd-grid-mobile-12 grd-grid-phablet-12">
-                    <div class="grd-grid-8 grd-grid-mobile-6 grd-grid-phablet-6 right-aligned">
-                        [% l("Total Profit/Loss") %]
-                    </div>
-                    <div class="grd-grid-4 grd-grid-mobile-6 grd-grid-phablet-6 right-aligned">
-                        [% display_amount(total_pl) %]
-                    </div>
-                </div>
-        </div>
-    [% END %]
-    [% pagination_links(position='bottom') %]
-    </div>
-</div>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="3">[% sold_contracts.first.purchase_date.date_yyyymmdd %] - [% sold_contracts.last.purchase_date.date_yyyymmdd %]</th>
+                <th colspan="3">[% l("Total Profit/Loss") %]</td>
+                <th>[% display_amount(total_pl) %]</th>
+            </tr>
+        </tfoot>
+    </table>
+[% END %]
+[% pagination_links(position='bottom') %]

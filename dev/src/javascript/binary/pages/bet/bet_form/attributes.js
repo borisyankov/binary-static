@@ -203,38 +203,6 @@ BetForm.attributes = function() {
 
                         return this.get_setting_or_param('bet_page.start_time', 'date_start');
                     },
-                    stop_type: function(stop_type) {
-                        if (stop_type) {
-                            LocalStore.set('bet_page.stop_type', stop_type);
-                            page.url.invalidate();
-                        }
-
-                        return page.url.param_if_valid('stop_type') || LocalStore.get('bet_page.stop_type') || 'point';
-                    },
-                    stop_loss: function(stop_loss) {
-                        if (stop_loss) {
-                            LocalStore.set('bet_page.stop_loss', stop_loss);
-                            page.url.invalidate();
-                        }
-
-                        return page.url.param_if_valid('stop_loss') || LocalStore.get('bet_page.stop_loss') || 10;
-                    },
-                    stop_profit: function(stop_profit) {
-                        if (stop_profit) {
-                            LocalStore.set('bet_page.stop_profit', stop_profit);
-                            page.url.invalidate();
-                        }
-
-                        return page.url.param_if_valid('stop_profit') || LocalStore.get('bet_page.stop_profit') || 10;
-                    },
-                    amount_per_point: function(amount_per_point) {
-                        if (amount_per_point) {
-                            LocalStore.set('bet_page.amount_per_point', amount_per_point);
-                            page.url.invalidate();
-                        }
-
-                        return page.url.param_if_valid('amount_per_point') || LocalStore.get('bet_page.amount_per_point') || 1;
-                    },
                     expiry_type: function(expiry_type) {
                         if (expiry_type) {
                             LocalStore.set('bet_page.expiry_type', expiry_type);

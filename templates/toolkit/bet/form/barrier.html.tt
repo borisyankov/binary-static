@@ -10,7 +10,7 @@
 
 [% IF H %]
 <div>
-    <span class='grd-grid-5 form_label'>
+    <span class='form_label'>
         <label for="bet_H" class="barrier_text_relative" style="[% relative_style %]">
             <abbr rel="tooltip" title="[% barrier_tooltip %]">[% IF two_barriers %][% l("High barrier offset") %][% ELSE %][% l("Barrier offset") %][% END %]:</abbr>
         </label>
@@ -18,7 +18,7 @@
             [% IF two_barriers %][% l("High barrier") %][% ELSE %][% l("Barrier") %][% END %]:
         </label>
     </span>
-    <span class='grd-grid-7'>
+    <span>
         <input id="bet_H" type="text" name="H" maxlength="40" size="8" value="[% H %]" class="barrierbox"/>
         <abbr rel="tooltip" title="[% l("This is an indicative barrier. Actual barrier will be the entry spot plus the barrier offset.") %]">
             <span class="calculated_barrier_from_relative_high non_input" style="[% relative_style %]"></span>
@@ -29,7 +29,7 @@
 
 [% IF L && two_barriers %]
 <div>
-    <span class='grd-grid-5 form_label'>
+    <span class='form_label'>
         <label for="bet_L" class="barrier_text_relative" style="[% relative_style %]">
             <abbr rel="tooltip" title="[% barrier_tooltip %]">[% l("Low barrier offset") %]:</abbr>
         </label>
@@ -37,7 +37,7 @@
             [% l("Low barrier") %]:
         </label>
     </span>
-    <span class='grd-grid-7'>
+    <span>
         <input id="bet_L" type="text" name="L" maxlength="40" size="8" value="[% L %]" class="barrierbox"/>
         <abbr rel="tooltip" title="[% l("This is an indicative barrier. Actual barrier will be the entry spot plus the barrier offset.") %]">
         <span class="calculated_barrier_from_relative_low non_input" style="[% relative_style %]"></span>

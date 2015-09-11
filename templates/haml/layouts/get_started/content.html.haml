@@ -1,12 +1,10 @@
 - my $content_class = current_route.'-content';
-#content.$content_class
-  != google_tag_tracking_code
-  = include('layouts/default/page_info')
-  .grd-container
-    .get-started
-      .grd-grid-3.grd-hide-mobile
-        = include('layouts/get_started/nav')
-      .grd-grid-6.grd-grid-mobile-12.grd-parent
-        = content
-      .grd-grid-3.grd-hide-mobile
-        = include('layouts/get_started/more')
+!= google_tag_tracking_code
+
+.$content_class
+    #content
+        = include('layouts/page_info')
+        .row
+            = include('layouts/get_started/nav')
+            .get-started-content
+                = content

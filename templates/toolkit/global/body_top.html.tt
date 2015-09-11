@@ -1,17 +1,15 @@
 [% UNLESS is_pjax_request %]
 <body[% IF body_id %] id="[% body_id %]"[% END %][% IF lang %] class="[% language %]"[% END %]>
-      [% INCLUDE global/header.html.tt %]
-      [% INCLUDE global/main_menu.html.tt %]
-      [% INCLUDE global/mobile_menu.html.tt %]
-      <!-- FlushHead -->
+    [% INCLUDE global/header.html.tt %]
+    <div id='page-wrapper'>
+        [% INCLUDE global/topbar.html.tt %]
+        <div id="content-holder">
+        <!-- FlushHead -->
 [% END %]
-      <div id="content"[% IF h.current_route +%] class="[% h.current_route %]-content"[% END %]>
-          [% google_tag_tracking_code %]
-          [% google_tag_declaration_code %]
-          <div id="page_info" style="display:none;">
-              <title>[% title %]</title>
-              <div id="body_id">[% body_id %]</div>
-          </div>
-          [% IF !full_width %]
-          <div class="grd-container">
-          [% END %]
+
+[% google_tag_tracking_code %]
+[% google_tag_declaration_code %]
+
+[% IF h.current_route +%]<div class="[% h.current_route %]-content">[% END %]
+    <div id="content">
+    [% INCLUDE layouts/page_info.html.tt %]

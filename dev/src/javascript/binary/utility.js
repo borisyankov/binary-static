@@ -7,7 +7,7 @@ function showLoadingImage(container)
 {
     var image_link = page.settings.get('image_link');
 
-    container.empty().append('<div id="std_loading_img"><p>'+text.localize('loading...')+'</p><img src="'+image_link['hourglass']+'" /></div>');
+    container.html('<div class="progress"></div>');
 }
 
 /////////////////////////////////////////////////////////////////
@@ -136,6 +136,18 @@ function get_highest_zindex(selector) {
     return all.length ? Math.max.apply(Math, all) : null;
 }
 
+var user_country;
+var get_user_country = function(callback) {
+    if(user_country) {
+            callback.call(user_country);
+    } else {
+        $.ajax({ crossDomain: true, url: page.url.url_for('country'), async: true, dataType: "json" }).done(function(response) {
+            user_country = response;
+            callback.call(response);
+        });
+    }
+};
+
 /**
  * Returns a stylized price for a value as units and cents.
  * this could be used anywhere we need to show a float value
@@ -261,86 +273,6 @@ function snake_case_to_camel_case(snake, lower_case_first_char, chars) {
 }
 
 /**
- * attaches a datepicker to the specified element
- * This is a thin wrapper for datepicker, helps to keep a unique site-wide
- * default configurations for the datepicker.
- *
- * @param element any jquery selector or DOM/jQuery object to attach the datepicker to
- * @param config custom configurations for the datepicker
- */
-function attach_date_picker(element, conf) {
-    var k,
-        target = $(element);
-    if (!target || !target.length) return false;
-    var today = new Date();
-    var next_year = new Date();
-    next_year.setDate(today.getDate() + 365);
-    var options = {
-        dateFormat: 'yy-mm-dd',
-        maxDate: next_year,
-    };
-    for (k in conf) if (conf.hasOwnProperty(k)) {
-        options[k] = conf[k];
-    }
-    return target.datepicker(options);
-}
-
-/**
- * attaches a timepicker to the specified element.
- * This is a thin wrapper for timepicker, helps to keep a unique site-wide
- * default configurations for the timepicker.
- *
- * @param element any jquery selector or DOM/jQuery object to attach the timepicker to
- * @param config custom configurations for the timepicker
- */
-function attach_time_picker(element, conf) {
-    var attr, k, target = $(element);
-    if (!target || !target.length) return false;
-    var opts = {
-        timeSeparator: ':',
-        showLeadingZero: true,
-        howMinutesLeadingZero: true,
-        hourText: text.localize("Hour"),
-        minuteText: text.localize("Minute"),
-        minTime: {},
-        maxTime: {},
-    };
-    var data_attrs = element_data_attrs(target);
-    var regex = /^time\:(.+)/;
-    for (attr in data_attrs) if (data_attrs.hasOwnProperty(attr)) {
-        var matched = attr.match(regex);
-        if (matched) {
-            var data = data_attrs[attr];
-            var opt_name = matched[1].trim();
-            if (data == 'true') {
-                data = true;
-            } else if (data == 'false') {
-                data = false;
-            }
-            opt_name = snake_case_to_camel_case(opt_name, true).toLowerCase();
-            switch (opt_name) {
-                case 'mintimehour':
-                    opts.minTime.hour = data;
-                    break;
-                case 'mintimeminute':
-                    opts.minTime.minute = data;
-                    break;
-                case 'maxtimehour':
-                    opts.maxTime.hour = data;
-                    break;
-                case 'maxtimeminute':
-                    opts.maxTime.minute = data;
-                    break;
-            }
-        }
-    }
-    for (k in conf) if (conf.hasOwnProperty(k)) {
-        opts[k] = conf[k];
-    }
-    return target.timepicker(opts);
-}
-
-/**
  * attaches an inpage popup to the specified element.
  *
  * @param element any jquery selector or DOM/jQuery object to attach the inpage popups to
@@ -367,19 +299,13 @@ function attach_inpage_popup(element) {
     return popups;
 }
 
-/** 
+/**
  * Calculate container width for chart as of now but can
  * be used to get current container width
  */
 
 function get_container_width() {
-    var width = 960;
-    if ($('.chart_holder').length > 0) {
-        width = $('.chart_holder').width();
-    } else {
-        width = $('.grd-container').width();
-    }
-    return width;
+    return $('.chart_holder').length > 0 ? $('.chart_holder') : $('#content').width();
 }
 
 /**
@@ -406,28 +332,96 @@ function find_active_jqtab(el) {
     return 0;
 }
 
-/**
- * attaches tabs to the specified element selector
- *
- * @param element any jquery selector or DOM/jQuery object
- */
-function attach_tabs(element) {
-    var targets = $(element);
-    targets.each(function () {
-        var jqel = $(this);
-        var conf = {};
-        var active = 0;
-        try {
-            active = find_active_jqtab(jqel);
-        } catch (e) {
-            console.log(e);
-            console.log(jqel);
+
+function initTabs() {
+
+    function updateTabs($tabs) {
+
+        $tabs.each(function() {
+            var $tab = $(this);
+                href = $tab.find('a').attr('href');
+            try {
+                $(href).toggle($tab.hasClass('active'));
+            }
+            catch(err) {}
+        });
+    }
+
+    var tabSelector = '*[role=tabs] li,*[role=segmented] li',
+        $tabs = $(tabSelector);
+
+    if (!$tabs.hasClass('active')) $tabs.first().addClass('active');
+
+    updateTabs($tabs);
+
+    $('body').on('click', tabSelector, function(e) {
+        var elm = $(this);
+        var $tabs = elm.parent().find('li');
+        $tabs.removeClass('active');
+        elm.addClass('active');
+        updateTabs($tabs);
+        if(!elm.find('a:first').data('doredirect')) {
+            e.preventDefault();
         }
-        if (active) {
-            conf['active'] = active;
-            $('li.active', jqel).removeClass('active');
-        }
-        jqel.tabs(conf);
     });
-    return targets;
+}
+
+function initDateTimePicker() {
+    $('input[type=date]').pickadate({
+        monthsFull: [
+            text.localize('January'),
+            text.localize('February'),
+            text.localize('March'),
+            text.localize('April'),
+            text.localize('May'),
+            text.localize('June'),
+            text.localize('July'),
+            text.localize('August'),
+            text.localize('September'),
+            text.localize('October'),
+            text.localize('November'),
+            text.localize('December')
+        ],
+        monthsShort: [
+            text.localize('Jan'),
+            text.localize('Feb'),
+            text.localize('Mar'),
+            text.localize('Apr'),
+            text.localize('May'),
+            text.localize('Jun'),
+            text.localize('Jul'),
+            text.localize('Aug'),
+            text.localize('Sep'),
+            text.localize('Oct'),
+            text.localize('Nov'),
+            text.localize('Dec')
+        ],
+        weekdaysFull: [
+            text.localize('Sunday'),
+            text.localize('Moonday'),
+            text.localize('Tuesday'),
+            text.localize('Wednesday'),
+            text.localize('Thursday'),
+            text.localize('Friday'),
+            text.localize('Saturday')
+        ],
+        weekdaysShort: [
+            text.localize('Su'),
+            text.localize('Mo'),
+            text.localize('Tu'),
+            text.localize('We'),
+            text.localize('Th'),
+            text.localize('Fr'),
+            text.localize('Sa')
+        ],
+        today: text.localize('Today'),
+        clear: text.localize('Clear'),
+        firstDay: 1,
+        //format: moment().localeData().longDateFormat('L'), // ?? 'yy-mm-dd'
+        formatSubmit: 'yyyy/mm/dd'
+    });
+
+    $('input[type=time]').pickatime({
+        clear: text.localize('Clear'),
+    }); // .has-time-picker
 }

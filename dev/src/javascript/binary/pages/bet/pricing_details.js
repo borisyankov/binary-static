@@ -10,11 +10,7 @@ var PricingDetails = function() {
             var that = this;
             $('a.pricing-details').on('click', function (event) {
                 var popup = that.popup();
-                $('.draggable').draggable(); // This is overkill, but nobody cares.
                 popup.toggleClass('invisible');
-
-                $('#' + popup.children(':first').attr('id')).tabs();
-
                 event.preventDefault();
             }).addClass('unbind_later');
         },
