@@ -1,30 +1,37 @@
-<h1>[% l('Welcome!') %]</h1>
-<p>[% welcome_text %] <span class="clientid">([% client.loginid %]).</span></p>
-
-[% IF show_authenticate_button %]
-    <a class="button" href="[% request.url_for('/cashier/authenticate') %]">
-        [% l('Authenticate your account') %]
-    </a>
-[% END %]
-
-[% IF client.is_virtual %]
-    [% IF virtual_topup_link %]
-        <p>
-            <a href="[% virtual_topup_link %]">[% l('Deposit [_1] virtual money into your account', virtual_topup_amount) %]</a>
-        </p>
+<div class="grd-grid-12">
+    <h1>[% l('Welcome!') %]</h1>
+    <p>
+        [% welcome_text %] <span class="clientid">([% client.loginid %]).</span>
+    </p>
+    [% IF show_authenticate_button %]
+        <div class="center-aligned">
+            <a class="button pjaxload" href="[% request.url_for('/cashier/authenticate') %]">
+                  <span>[% l('Authenticate your account') %]</span>
+            </a>
+        </div>
     [% END %]
-[% ELSE %]
-    [% IF client.payment_agent && client.payment_agent.is_authenticated %]
-        <p>
-        [% l('Your account is registered as a Payment Agent.') %]
-        <a class="with_login_cookies" href="[% request.url_for('paymentagent_transfer.cgi') %]">[% l('Transfer to client') %]</a>
-        </p>
-    [% END %]
+    [% IF client.is_virtual %]
+        [% IF virtual_topup_link %]
+            <p>
+                <a href="[% virtual_topup_link %]">[% l('Deposit [_1] virtual money into your account', virtual_topup_amount) %]</a>
+            </p>
+        [% END %]
+    [% ELSE %]
+        [% IF client.payment_agent && client.payment_agent.is_authenticated %]
+            <p>
+            [% l('Your account is registered as a Payment Agent.') %]
+            <a class="pjaxload with_login_cookies" href="[% request.url_for('/paymentagent/transfer') %]">[% l('Transfer to client') %]</a>
+            </p>
+        [% END %]
 
-    [% IF promo_messages %]
-    <div class="notice-msg">
-        [% FOREACH message IN promo_messages %]
-        <p>[% message %]</p>
+        [% IF promo_messages %]
+        <div class='notice-msg'>
+            [% FOREACH message IN promo_messages %]
+            <p>
+                [% message %]
+            </p>
+            [% END %]
+        </div>
         [% END %]
 
         <div class='notice-msg invisible' id="investment_message">
@@ -39,61 +46,68 @@
             </div>
         </div>
     [% END %]
-    <div class='notice-msg invisible' id="investment_message">
-        <img class="responsive" src="[% request.url_for('images/pages/cashier/protection-icon.svg') %]"/>
-        <p>
-            [% l('Due to changes in regulation within the European Union, binary options on financial indices are now considered to be an investment activity.') %]
-        </p>
-        <p>
-            [% l('Accordingly, to continue trading binary options on forex/stock indices/commodities, please <a href="[_1]">open an account with Binary Investments (Europe) Ltd</a>., which is regulated by the Malta Financial Services Authority.', request.url_for('user/upgrade/financial')) %]
-        </p>
-    </div>
-[% END %]
-
-
-<div class="row">
-    <div class="col cashier-link">
-        <p class="media">
-            <a href="[% request.url_for('/cashier') %]">
-                <img src="[% request.url_for('images/icons/cashier.svg') %]"/>
+</div>
+<div class='grd-grid-6 grd-grid-mobile-12 grd-parent'>
+    <div class='grd-grid-6 grd-parent'>
+        <div class='grd-grid-8 grd-with-padding'>
+            <a href="[% request.url_for('/cashier') %]" class="pjaxload">
+                <img class='responsive' src="[% request.url_for('images/pages/my_account/cashier-icon.svg') %]"/>
             </a>
-        </p>
-        <p class="media">
-            <a class="button" href="[% request.url_for('/cashier') %]">[% l('Cashier') %]</a>
-        </p>
-        <p class="media">[% l('Make a deposit or withdraw') %]</p>
+        </div>
+        <div class='grd-grid-12'>
+            <h4>
+                <a href="[% request.url_for('/cashier') %]" class="pjaxload">[% l('Cashier') %]</a>
+            </h4>
+            <p>
+                [% l('Make a deposit or withdraw') %]
+            </p>
+        </div>
     </div>
-    <div class="col">
-        <p class="media">
-            <a href="[% request.url_for('/user/portfolio') %]">
-                <img src="[% request.url_for('images/icons/portfolio.svg') %]"/>
+    <div class='grd-grid-6 grd-parent'>
+        <div class='grd-grid-8 grd-with-padding'>
+            <a href="[% request.url_for('/user/portfolio') %]" class="pjaxload">
+                <img class='responsive' src="[% request.url_for('images/pages/my_account/portfolio-icon.svg') %]"/>
             </a>
-        </p>
-        <p class="media">
-            <a class="button" href="[% request.url_for('/user/portfolio') %]">[% l('Portfolio') %]</a>
-        </p>
-        <p class="media">[% l('View your open positions.') %]</p>
+        </div>
+        <div class='grd-grid-12'>
+            <h4>
+                <a href="[% request.url_for('/user/portfolio') %]" class="pjaxload">[% l('Portfolio') %]</a>
+            </h4>
+            <p>
+                [% l('View your open positions.') %]
+            </p>
+        </div>
     </div>
-    <div class="col">
-        <p class="media">
-            <a href="[% request.url_for('/user/profit_table') %]">
-                <img src="[% request.url_for('images/icons/profit-table.svg') %]"/>
+</div>
+<div class='grd-grid-6 grd-grid-mobile-12 grd-parent'>
+    <div class='grd-grid-6 grd-parent'>
+        <div class='grd-grid-8 grd-with-padding'>
+            <a href="[% request.url_for('/user/profit_table') %]" class="pjaxload">
+                <img class='responsive' src="[% request.url_for('images/pages/my_account/profit-table-icon.svg') %]"/>
             </a>
-        </p>
-        <p class="media">
-            <a class="button" href="[% request.url_for('/user/profit_table') %]">[% l('Profit Table') %]</a>
-        </p>
-        <p class="media">[% l('View your trading profit/loss.') %]</p>
+        </div>
+        <div class='grd-grid-12'>
+            <h4>
+                <a href="[% request.url_for('/user/profit_table') %]" class="pjaxload">[% l('Profit Table') %]</a>
+            </h4>
+            <p>
+                [% l('View your trading profit/loss.') %]
+            </p>
+        </div>
     </div>
-    <div class="col">
-        <p class="media">
-            <a href="[% request.url_for('/user/statement') %]">
-                <img src="[% request.url_for('images/icons/statement.svg') %]"/>
+    <div class='grd-grid-6 grd-parent'>
+        <div class='grd-grid-8 grd-with-padding'>
+            <a href="[% request.url_for('/user/statement') %]" class="pjaxload">
+                <img class='responsive' src="[% request.url_for('images/pages/my_account/statement-icon.svg') %]"/>
             </a>
-        </p>
-        <p class="media">
-            <a class="button" href="[% request.url_for('/user/statement') %]">[% l('Statement') %]</a>
-        </p>
-        <p class="media">[% l('View your historical transactions.') %]</p>
+        </div>
+        <div class='grd-grid-12'>
+            <h4>
+                <a href="[% request.url_for('/user/statement') %]" class="pjaxload">[% l('Statement') %]</a>
+            </h4>
+            <p>
+                [% l('View your historical transactions.') %]
+            </p>
+        </div>
     </div>
 </div>

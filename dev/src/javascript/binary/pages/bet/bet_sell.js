@@ -193,13 +193,12 @@ var BetSell = function() {
             button.removeAttr('disabled');
             button.fadeTo(0, 1);
         },
-        disable_sell_button: function (hide) {
-            var btn = this.sell_button();
+        disable_sell_button: function (button_id, hide) {
+            var btn = $(button_id);
             var that = this;
             btn.attr('disabled', 'disabled');
             if (hide) {
                 btn.hide();
-                $('#sell_contract_form', that.container()).hide();
             }
             this._sell_button_disabled = true;
         },
@@ -214,7 +213,7 @@ var BetSell = function() {
         },
         get_loading_html: function() {
             var image_link = page.settings.get('image_link');
-            return '<div class="progress"></div>';
+            return '<span class="loading">'+text.localize('loading...')+'&nbsp;<img src="'+image_link['hourglass']+'" /></span>';
         },
         show_inpage_popup: function (data) {
             var con = this.container(true);
@@ -225,6 +224,14 @@ var BetSell = function() {
             con.css('position', 'fixed').css('z-index', get_highest_zindex() + 100);
             body.append(con);
             con.show();
+            // push_data_layer();
+            if ($('#sell_bet_desc', con).length > 0) {
+                con.draggable({
+                    handle: '#sell_bet_desc'
+                });
+            } else {
+                con.draggable();
+            }
             this.reposition_confirmation();
             return con;
         },
@@ -259,12 +266,12 @@ var BetSell = function() {
             if (typeof price == 'object') {
                 if (typeof price.price != 'undefined') {
                     price = price.price;
-                } else if (typeof price.prob != 'undefined') {
+                } else if (typeof price.value != 'undefined') {
                     var payout = this.model.payout();
                     if (isNaN(payout)) {
                         throw new Error("Invalid payout " + payout);
                     }
-                    price = price.prob * payout;
+                    price = price.value * payout;
                 }
             }
             if (isNaN(price)) {
@@ -520,7 +527,7 @@ var BetSell = function() {
                     }
                     if (con.find($('#sell_price_container')).length > 0) {
                         that.sparkline.init(55);
-                        con.on('click', '#sell_at_market', function (e) { e.preventDefault(); that.on_sell_button_click(e.target, element); return false; });
+                        con.on('click', '#sell_at_market', function (e) { e.preventDefault(); that.on_sell_button_click('#sell_at_market', element); return false; });
                     }
                     that.update_high_low(true);
                     that.reposition_confirmation();
@@ -620,7 +627,7 @@ var BetSell = function() {
             return this.show_inpage_popup('<div class="inpage_popup_content_box">' + data + '</div>');
         },
         on_sell_button_click: function (target, element) {
-            this.disable_sell_button(true);
+            this.disable_sell_button(target, true);
             this.streaming.stop();
             this.model.reload_page_on_close(true);
             this.show_loading();
@@ -638,7 +645,7 @@ var BetSell = function() {
         },
         show_loading: function () {
             var con = this.container();
-            var sell_info = $( con.find('#sell_info')[0] );
+            var sell_info = $( con.find('.sell_info')[0] );
             var loading = this.get_loading_html();
             loading = $(loading);
             loading.show();
@@ -709,12 +716,60 @@ var BetSell = function() {
                 that.disable_button($this);
                 if (that.data_attr(this).model.tick_expiry()) {
                     that.only_show_chart(this);
+                } else if (that.data_attr(this).model.spread_bet()) {
+                    that.show_buy_sell(this);
                 } else {
                     that.sell_at_market(this);
                 }
                 that.enable_button($this);
                 return false;
             });
+        },
+        show_buy_sell: function(element) {
+            var that = this;
+            var dom_element = $(element);
+            this.cancel_previous_analyse_request();
+            var attr = this.data_attr(element);
+            var params = this.get_params(element);
+            _analyse_request = $.ajax(ajax_loggedin({
+                url     : attr.url(),
+                type    : 'POST',
+                async   : true,
+                data    : params,
+                success : function (data) {
+                    var con = that.show_spread_popup(data);
+                    var contract_status = con.find('#status').text();
+                    if (contract_status === 'Open') {
+                        BetPrice.spread.stream(attr.model.sell_channel());
+                    }
+               },
+            })).always(function () {
+                that.enable_button(dom_element);
+            });
+        },
+        show_spread_popup: function(data) {
+            var that = this;
+
+            var con = that.container(true);
+            con.addClass('spread_popup');
+            data = '<div class="inpage_popup_content_box">' + data + '</div>';
+            if (data) {
+                $('.inpage_popup_content', con).html(data);
+            }
+            var body = $(document.body);
+            con.css('position', 'fixed').css('z-index', get_highest_zindex() + 100);
+            body.append(con);
+            con.show();
+            // push_data_layer();
+            if ($('#sell_bet_desc', con).length > 0) {
+                con.draggable({
+                    handle: '#sell_bet_desc'
+                });
+            } else {
+                con.draggable();
+            }
+            this.reposition_confirmation();
+            return con;
         },
         only_show_chart: function(element) {
             var that = this;
@@ -748,7 +803,9 @@ var BetSell = function() {
                     payout: function() { return dom_element.attr('payout'); },
                     sell_channel: function() { return dom_element.attr('sell_channel'); },
                     controller_action: function () { return dom_element.attr('controller_action'); },
-                    tick_expiry: function() { return dom_element.attr('tick_expiry') || 0; }
+                    tick_expiry: function() { return dom_element.attr('tick_expiry') || 0; },
+                    spread_bet: function() { return dom_element.attr('spread_bet') || 0; },
+                    is_expired: function() { return dom_element.attr('is_expired') || 0; }
                 }, // data_attr.model
             };
         }, // data_attr
@@ -792,29 +849,30 @@ var BetSell = function() {
                 process_message: function(data) {
                     if (_update_from_stream) {
                         var bet = JSON.parse(data);
-                        var prices_len = bet.prices.length;
-                        var spot = bet.spot;
                         var no_error = true;
-                        for (var i = 0; i < prices_len; i++) {
-                            prices = bet.prices[i];
-                            if (!prices || prices.id != 'sell') {
-                                continue;
-                            }
-                            if (prices.err) {
-                                BetSell.show_warning(prices.err, true);
-                                BetSell.disable_sell_button(true);
-                                no_error = false;
-                            } else {
-                                BetSell.clear_warnings();
-                                BetSell.enable_sell_button();
-                            }
-                            BetSell.update_price(prices);
-                            BetSell.update_barriers(bet.barriers);
-                            break; // just find the 'sell' id and then stop iteratiin on other prices
-                        } // for
-                        BetSell.update_spot(spot);
+                        this.update_price(bet);
                     }
                 }, // process_message
+                update_price: function(bet) {
+                    var prices = bet.prices;
+                    var spot = bet.spot;
+                    for (var i = 0; i < prices.length; i++) {
+                        if (!prices[i] || prices[i].id != 'sell') {
+                            continue;
+                        }
+                        if (prices[i].err) {
+                            BetSell.show_warning(prices[i].err, true);
+                            BetSell.disable_sell_button('#sell_at_market', true);
+                            no_error = false;
+                        } else {
+                            BetSell.clear_warnings();
+                            BetSell.enable_sell_button();
+                        }
+                        BetSell.update_price(prices[i]);
+                        BetSell.update_barriers(bet.barriers);
+                    } // for
+                    BetSell.update_spot(spot);
+                },
                 url: function(val) {
                     if (val !== undefined) {
                         this._url = val;
@@ -1055,7 +1113,7 @@ var BetSell = function() {
                 if (liveChartConfig.has_indicator('entry_spot_time')) {
                     live_chart.remove_indicator('entry_spot_time');
                 }
-
+                
                 if (start_time && entry_spot_time < start_time) {
                     indicator = new LiveChartIndicator.Barrier({ name: "entry_spot_time", label: 'Entry Spot', value: that.get_date_from_seconds(parseInt(entry_spot_time)), color: '#e98024', axis: 'x'});
                 } else {

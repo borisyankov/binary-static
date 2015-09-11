@@ -1,9 +1,14 @@
-[% google_tag_tracking_code %]
-[% google_tag_declaration_code %]
+      <div id="content"[% IF h.current_route +%] class="[% h.current_route %]-content"[% END %]>
+          [% google_tag_tracking_code %]
+          [% google_tag_declaration_code %]
+          <div id="page_info" style="display:none;">
+              <title>[% title %]</title>
+              <div id="body_id">[% body_id %]</div>
+          </div>
+          [% IF !full_width %]
+          <div class="grd-container">
+          [% END %]
 
-[% IF h.current_route +%]<div class="[% h.current_route %]-content">[% END %]
-    <div id="content">
-        [% INCLUDE layouts/page_info.html.tt %]
-        [% content %]
-    </div>
-</div>
+          [% content %]
+          </div>
+      </div>

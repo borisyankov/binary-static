@@ -1,12 +1,15 @@
-<h1>[% l('Trading and Withdrawal Limits') %]</h1>
 
+<div class="grd-grid-12 grd-row-padding">
+    <h1>[% l('Trading and Withdrawal Limits') %]</h1>
+</div>
 [% INCLUDE 'cashier/betting_limits.html.tt' %]
 
-
-<h2>[% client.loginid %] - [% l('Withdrawal limits') %]</h2>
-
+<div class="grd-grid-12 grd-row-padding">
+    <h2>[% client.loginid %] - [% l('Withdrawal limits') %]</h2>
 [% IF client.client_fully_authenticated %]
-    <p>[% l('Your account is fully authenticated and your withdrawal limits have been lifted.') %]</p>
+    <p>
+        [% l('Your account is fully authenticated and your withdrawal limits have been lifted.') %]
+    </p>
 [% ELSE %]
     [% IF num_of_days_limit == lifetime_limit %]
         <p>
@@ -81,3 +84,5 @@
         [% END %]
     [% END %]
 [% END %]
+</div>
+

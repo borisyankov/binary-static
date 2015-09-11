@@ -1,18 +1,11 @@
 - stash(title => l('Email Verification'));
-
-- if (stash->{client_message}) {
-    %h1= l('Email Verification')
-    %p= stash->{client_message}
-    %p.center-aligned
-      %a.button{:href => url_for("/user/resend_verification")}
-        %span= l('Send Verification Email')
-- } else {
-    %h1= l('Verification Successful')
-    %p= l("Thank you for verifying your email.")
-    - if ($is_real) {
+%div.grd-grid-12
+    - if (stash->{client_message}) {
+        %h1= l('Email Verification')
+        %p= stash->{client_message}
         %p.center-aligned
-          %a.button{:href => url_for("/user/my_account")}
-            %span= l('Proceed')
+          %a.button.pjaxload{:href => url_for("/user/resend_verification")}
+            %span= l('Send Verification Email')
     - } else {
         %h1= l('Verification Successful')
         %p= l("Thank you for verifying your email.")
@@ -22,8 +15,7 @@
                 %span= l('Proceed')
         - } else {
             %p.center-aligned
-              %a.button.pjaxload{:href => url_for("new_real")}
+              %a.button.pjaxload{:href => $upgrade_url}
                 %span= l('Proceed')
         - }
     - }
-- }

@@ -17,7 +17,7 @@ var calculate_button_event = function() {
             page.url.update(url);
             $('#pricingtable_calculating').hide();
             $('#pricingtable_calculate').show();
-            initTabs();
+            attach_tabs('#pricing_table_tabs');
         });
     });
 };
@@ -103,12 +103,32 @@ var select_strike_type = function() {
     }).change();
 };
 
+var expiry_date_picker = function() {
+    var today = new Date();
+    var three_month = new Date();
+    three_month.setDate(today.getDate() + 60);
+
+    var id = $('#from_expiry');
+    id.datepicker({
+        dateFormat: 'yy-mm-dd',
+        monthNames: [text.localize('January'), text.localize('February'), text.localize('March'), text.localize('April'), text.localize('May'), text.localize('June'),
+            text.localize('July'), text.localize('August'), text.localize('September'), text.localize('October'), text.localize('November'), text.localize('December')],
+        dayNamesShort: [text.localize('Su'), text.localize('Mo'), text.localize('Tu'), text.localize('We'),
+            text.localize('Th'), text.localize('Fr'), text.localize('Sa')],
+        minDate: today,
+        maxDate: three_month,
+        onSelect: function(dateText, inst) {
+            id.attr("value", dateText);
+        },
+    }).datepicker('setDate', "0");
+};
 
 function initialize_pricing_table() {
     calculate_button_event();
     bet_type_select();
     select_underlying_change();
     select_strike_type();
+    expiry_date_picker();
 }
 
 onLoad.queue_for_url(initialize_pricing_table, 'pricing_table');

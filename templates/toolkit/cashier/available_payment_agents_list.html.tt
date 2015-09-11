@@ -1,23 +1,17 @@
-<table>
-    <thead>
-        <tr>
-            <th>[% l('Name') %]</th>
-            <th>[% l('Summary') %]</th>
-            <th>[% l('Depo./With. commission') %]</th>
-            <th>[% l('Further information') %]</th>
-        </tr>
-    </thead>
-    <tbody>
-    [% FOREACH payment_agent IN payment_agent_table_row %]
-    <tr>
-        <td>[% payment_agent.name %]</td>
-        <td>[% payment_agent.summary %]</td>
-        <td>[% payment_agent.commission %]</td>
-        <td>
-            <a href="#">[% l('Further information') %]</a>
-            [% INCLUDE 'cashier/payment_agent_further_info.html.tt' %]
-        </td>
-     </tr>
-    [% END %]
-    </tbody>
-</table>
+<div class="grd-parent grd-grid-12 grd-row-padding table-header">
+    <div class="grd-grid-3">[% l('Name') %]</div>
+    <div class="grd-grid-2">[% l('Summary') %]</div>
+    <div class="grd-grid-2">[% l('Depo./With. commission') %]</div>
+    <div class="grd-grid-5">[% l('Further information') %]</div>
+</div>
+[% FOREACH payment_agent IN payment_agent_table_row %]
+<div class="grd-parent grd-grid-12 grd-row-padding table-body table-body-lines">
+    <div class="grd-grid-3">[% payment_agent.name %]</div>
+    <div class="grd-grid-2">[% payment_agent.summary %]</div>
+    <div class="grd-grid-2">[% payment_agent.commission %]</div>
+    <div class="grd-grid-5 further-info">
+        <a href="#">[% l('Further information') %]</a>
+        [% INCLUDE 'cashier/payment_agent_further_info.html.tt' %]
+    </div>
+ </div>
+[% END %]

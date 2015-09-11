@@ -1,0 +1,88 @@
+- stash(
+-  title => l('Bulk Trader Facility'),
+- );
+.grd-container.grd-default-container
+  .bulk-trader-facility.static_full
+    .grd-grid-3.grd-hide-mobile
+      .sidebar
+        %ul#sidebar-nav
+          %li#sidebar-link-section-1.selected
+            %a{:href => "#bulk-trader-facility"}= l('Bulk trader facility')
+          %li#sidebar-link-section-2
+            %a{:href => "#client-guide"}= l("[_1] client's guide", stash->{website_name})
+          %li#sidebar-link-section-3
+            %a{:href => "#account-manager-guide"}= l("Account manager's guide")
+          %li#sidebar-link-section-4
+            %a{:href => "#commisions-account-manager"}= l('Commissions for account managers')
+          %li#sidebar-link-section-5
+            %a{:href => "#want-to-find-out-more"}= l('Want to find out more?')
+        .sidebar-button
+          %a.pjaxload{:href => url_for('contact')}= l('Contact Us')
+    .grd-grid-9.grd-grid-mobile-12.grd-parent
+      .section
+        %a#bulk-trader-facility
+        .section-content
+          #section-1
+            .grd-grid-12
+              %h1= stash->{title}
+              %p
+                %h2= l('Enjoy the benefits of our bulk trader facility')
+              %p!= l("<a href='#account-manager-guide'>Account managers</a> can now place trades for their clients with [_1]’s bulk trader facility.", stash->{website_name})
+              %p!= l("This is very helpful for <a href='#client-guide'>clients</a> who don’t always have enough time, or expertise, to follow market trends.")
+              %p!= l("It’s also a plus for account managers, who are paid a <a href='#''>commission</a> when they refer new clients to [_1].", stash->{website_name})
+            .clearfix
+      .section
+        %a#client-guide
+        .section-content
+          #section-2
+            .grd-grid-12
+              %h1= l("[_1] client's guide", stash->{website_name})
+              %p= l('If you’d like to use an account manager to trade for you, you first need to authorize them. All you need to do is get an API token, which will be unique to you.')
+              %p!= l("<strong>To get your API token:</strong>")
+              %ol
+                %li= l('Log in to your [_1] account.', stash->{website_name})
+                %li!= l("Access the <strong>Settings</strong> section on the account.")
+                %li= l('Get the API token located at the bottom of the page.')
+                %p
+                  %img.responsive{:src => url_for('images/pages/bulk_trade/api-token.png')}
+                %li= l('Email the token to your account manager.')
+            .clearfix
+      .section
+        %a#account-manager-guide
+        .section-content
+          #section-3
+            .grd-grid-12
+              %h1= l("Account manager's guide")
+              %p= l('You can place simultaneous trades for multiple clients once they authorize you. Note that all trades must have the same value and be placed in the same currency.')
+              %p= l('To trade for your clients:')
+              %ol
+                %li= l('Contact each client to get their unique API token. (The API token authorizes you to place trades for your clients using funds in their [_1] account)', stash->{website_name})
+                %li!= l("Go to <a href='https://www.binarybulktrader.com' target='_blank'>https://www.binarybulktrader.com</a> and log in to the system using your [_1] trading account.", stash->{website_name})
+                %li= l('Select Configure Bulk Clients at the top of the page.')
+                %li= l('Insert your client’s name or login ID (under Party Name), and their token as shown in the image below. This will activate their API token.')
+                %p
+                  %img.responsive{:src => url_for('images/pages/bulk_trade/acc-manager-guide-1.png')}
+                %li= l("Select Trading, at the top of the page, to purchase a contract. At the top left, you will see your client’s name and details. Always confirm the client's details before buying a trade on their behalf.")
+                %p
+                  %img.responsive{:src => url_for('images/pages/bulk_trade/acc-manager-guide-2.png')}
+                %li= l('Select the contract that you want to place. Wait for the price details to be displayed and then click Buy.')
+                %p
+                  %img.responsive{:src => url_for('images/pages/bulk_trade/acc-manager-guide-3.png')}
+            .clearfix
+      .section
+        %a#commisions-account-manager
+        .section-content
+          #section-4
+            .grd-grid-12
+              %h1= l('Commissions for account managers')
+              %p= l('When you refer a new client to [_1] through your affiliate link, we will record your affiliate ID in the client’s records in our database. We will then pay you a commission for all activity in the bulk trading facility – just like when you refer clients who trade for themselves.', stash->{website_name});
+              %p!= l("Just sign up via <a href='http://affiliates.binary.com' target='_blank'>http://affiliates.binary.com</a> to get your commissions.")
+            .clearfix
+      .section
+        %a#want-to-find-out-more
+        .section-content.grd-parent.grd-grid-12
+          #section-5
+            .grd-grid-12
+              %h1= l('Want to find out more?')
+              %p!= l("If you have clients who would like to authorize you to place trades on their behalf, feel free to contact our affiliate managers via <a href='mailto:affiliates\@binary.com'>affiliates\@binary.com</a> to ask questions or set things up.")
+            .clearfix

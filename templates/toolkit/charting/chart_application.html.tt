@@ -1,18 +1,30 @@
-<h1>[% l('Chart Application') %]</h1>
-
-[% l('Download the Binary.com charting application with an extensive range of Indicators, Price Bands, Overlays, and your own customizable Workspace supporting different languages!') %]
-
-<img class="appshot" src="[% request.url_for('images/pages/charting/chart-screenshot.png') %]"/>
-
-<p class="center">
-    <a id="download-app" class="button " href="https://download.binary.com/binary-charts.jnlp">
-        [% l('Download')%]
-    </a>
-    <a id="install-java" class="button" href="http://java.com/en/download/" style="display: none">
-        [% l('Install Java')%]
-    </a>
-</p>
-
-<p>
-    [% l('Click <a href="[_1]" target="_blank">here</a> to try the beta-release of the application. Kindly report issues found to <a href="mailto:[_2]">[_2]</a>.', "https://download.binary.com/binary-charts-beta.jnlp", "arnab@binary.com") %]
-</p>
+<div id="chartApplicationContainer" class="grd-grid-12">
+    <h1>[% l('Java charts') %]</h1>
+    <div class='grd-row-padding'>
+        <fieldset>
+            <legend>[% l('Downloadable application') %]</legend>
+            <div class="grd-grid-10 grd-centered">
+                <p>
+                    [% l('Download the Binary.com charting application with an extensive range of Indicators, Price Bands, Overlays, and your own customizable Workspace
+                    supporting different languages!') %]
+                </p>
+            </div>
+            <div id="screenshotContainer" class="grd-grid-6 grd-centered">
+                <img class='responsive' src="[% request.url_for('images/pages/charting/chart-screenshot.png') %]"/>
+            </div>
+            <div class="grd-with-padding grd-centered center">
+                <a id="download-app" class="button" href="https://download.binary.com/binary-charts.jnlp">
+                    <span>[% l('Download')%]</span>
+                </a>
+                <a id="install-java" class="button" href="http://java.com/en/download/" style="display: none">
+                    <span>[% l('Install Java')%]</span>
+                </a>
+            </div>
+        </fieldset>
+    </div>
+    <div class='grd-row-padding'>
+        <p>
+        [% l('Click <a href="[_1]" target="_blank">here</a> to try the beta-release of the application. Kindly report issues found to <a href="mailto:[_2]">[_2]</a>.', "https://download.binary.com/binary-charts-beta.jnlp", "arnab@binary.com") %]
+        </p>
+    </div>
+</div>

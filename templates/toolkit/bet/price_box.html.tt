@@ -1,6 +1,6 @@
 <div class="price_box [% price_box_class %]">
-    [% WRAPPER 'container/rounded_box.html.tt' heading=heading class=header_class %]
-        <div id="bet_cost_container">
+    [% WRAPPER 'container/rounded_box.html.tt' heading=heading class=header_class show_heading=show_heading %]
+        <div id="bet_cost_container" class="rbox-lowpad" [% IF NOT(show_heading) %]style="padding-top: 4px"[% END %]>
             <div id="amount_for_[% contract_type_id %]" class="bet_cost div_wrapper default">
                 [% cost_of_contract %]
             </div>

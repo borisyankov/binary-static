@@ -10,7 +10,7 @@
 
 [% ELSE %]
 
-<div>
+<div class="grd-row-padding">
 [% IF form %]
 [% form.build() %]
 [% END %]

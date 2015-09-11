@@ -72,6 +72,20 @@ var BetPrice = function() {
                 if (typeof e.preventDefault == 'function') {
                     e.preventDefault();
                 }
+                BetPrice.order_form.disable_buy_buttons();
+                that.hide_buy_buttons();
+                var form = $(e.target).parents('form');
+                that.buy_bet(form);
+                return false;
+            }).addClass('unbind_later');
+            $('a.spread_250, a.spread_260').on('click', function (e) {
+                e = e || window.event;
+                if (typeof e.preventDefault == 'function') {
+                    e.preventDefault();
+                }
+                var target = $(e.target);
+                var button = target.parents('a[class^="spread"]');
+                that.spread.disable(button);
                 var form = $(e.target).parents('form');
                 that.buy_bet(form);
                 return false;
@@ -80,8 +94,6 @@ var BetPrice = function() {
         buy_bet: function (form) {
             var that = this;
             var timeout = 60000;
-            BetPrice.order_form.disable_buy_buttons();
-            that.hide_buy_buttons();
 
             if(!$.cookie('login')) {
                 page.client.is_logged_in = false;
@@ -177,6 +189,178 @@ var BetPrice = function() {
             var _clear_results = function () { that.clear_buy_results(); };
             con.find('a.close').on('click', _clear_results).css('cursor', 'pointer').addClass('unbind_later');
         },
+        spread: function() {
+            var that = this;
+            return {
+                reset: function() {
+                    if (typeof this._stream !== 'undefined') {
+                        this._stream.close();
+                        this._stream.onmessage = function() {};
+                    }
+                },
+                validate_change: function(target) {
+                    var current = target.attr('value');
+                    var new_value = target.val();
+                    if (!new_value.toString().match(/^[0-9.]*$/)) {
+                        new_value = current;
+                    }
+
+                    return new_value;
+                },
+                disable: function(target) {
+                    var that = this;
+                    target.unbind('click');
+                },
+                on_sell: function(form) {
+                    var that = this;
+                    $('button.close_position').on('click', function (e) {
+                        e = e || window.event;
+                        if (typeof e.preventDefault == 'function') {
+                            e.preventDefault();
+                        }
+                        var target = $(e.target);
+                        BetSell.model.reload_page_on_close(true);
+                        that.spread_con().find('#sell_level').parent().hide();
+                        that.sell_bet(target);
+                        return false;
+                    }).addClass('unbind_later');
+                },
+                sell_bet: function(target) {
+                    var that = this;
+                    that.reset();
+                    target.attr('disabled','disabled').hide();
+                    var form = target.parents('form');
+                    var timeout = 60000;
+
+                    if(!$.cookie('login')) {
+                        page.client.is_logged_in = false;
+                        window.location.href = page.url.url_for('login');
+                        return;
+                    }
+
+                    // pass the DOM form object wrapped in jQuery form object to getFormParams
+                    var data = getFormParams(form.get(0)) + '&ajax_only=1';
+                    $.ajax(ajax_loggedin({
+                        url     : form.attr('action'),
+                        type    : 'POST',
+                        async   : true,
+                        data    : data,
+                        timeout : timeout,
+                        success : function (resp, resp_status, jqXHR) { that.on_sell_success(form, resp, resp_status, jqXHR); },
+                        error   : function (jqXHR, resp_status, exp) { that.on_sell_error(form, jqXHR, resp_status, exp); },
+                    }));
+                    $('.price_box').fadeTo(200, 0.6);
+                },
+                on_sell_error: function(form, resp, resp_status, jqXHR) {
+                    var that = this;
+
+                    if (typeof(resp.error) !== 'undefined') {
+                        that.err_con().find('p').text(resp.error);
+                        that.err_con().show();
+                    }
+                },
+                on_sell_success: function(form, resp, resp_status, jqXHR) {
+                    var that = this;
+
+                    var con = that.spread_con();
+                    if (typeof(resp.error) !== 'undefined') {
+                        that.err_con().find('p').text(resp.error);
+                        that.err_con().show();
+                    } else {
+                        con.find('#status').addClass('loss').text(text.localize('Closed'));
+                        that.paint_it(resp.value.dollar, con.find('#pnl_value').text(resp.value.dollar));
+                        con.find('#pnl_point').text(resp.value.point);
+                        con.find('#exit_level').text(resp.exit_level).parents('tr').show();
+                    }
+                },
+                paint_it: function(value, target) {
+                    var color = value > 0 ? 'profit' : 'loss';
+                    $(target).removeClass().addClass(color);
+                },
+                stream: function(channel) {
+                    var that = this;
+                    that.on_sell();
+                    var url = window.location.protocol + '//' + page.settings.get('streaming_server')+'/push/price/'+channel;
+                    that._stream = new EventSource(url, { withCredentials: true });
+                    that._stream.onmessage = function(e) {
+                        var data = JSON.parse(e.data);
+                        var prices = data.prices;
+                        var con = that.spread_con();
+                        var err_con = that.err_con();
+                        for (var i = 0; i < prices.length; i++) {
+                            var id = prices[i].id;
+                            var level = parseFloat(prices[i].level);
+
+                            if (typeof(prices[i].value) !== 'undefined') {
+                                if (prices[i].err !== null) {
+                                    con.find('.close_position').hide();
+                                    err_con.find('p').text(prices[i].err);
+                                    err_con.show();
+                                    break;
+                                } else {
+                                    err_con.hide();
+                                    con.find('.close_position').show();
+                                    con.find('#sell_level').text(level);
+                                    var current_value = that.round(parseFloat(prices[i].value.dollar),2);
+                                    that.paint_it(current_value, con.find('#pnl_value').text(current_value));
+                                    con.find('#pnl_point').text(prices[i].value.point);
+                                }
+                            }
+
+                            var higher_stop_level;
+                            var lower_stop_level;
+                            if (that.stop_loss_level() > that.stop_profit_level()) {
+                                higher_stop_level = that.stop_loss_level();
+                                lower_stop_level = that.stop_profit_level();
+                            } else {
+                                lower_stop_level = that.stop_loss_level();
+                                higher_stop_level = that.stop_profit_level();
+                            }
+
+                            if (level >= higher_stop_level || level <= lower_stop_level) {
+                                var sell_button = con.find('.close_position');
+                                sell_button.click();
+                                break;
+                            }
+                        }
+                    };
+                    that._stream.onerror = function() {
+                        that._stream.close();
+                    };
+                },
+                err_con: function() {
+                    var that = this;
+                    return that.spread_con().find('#error_box');
+                },
+                spread_con: function() {
+                    return $('#sell_content_wrapper');
+                },
+                split_level: function(level) {
+                    var that = this;
+                    var matches = level.toString().match(/[0-9]+/g);
+                    var point_val = matches[0];
+                    var cents_val = matches[1] || '00';
+
+                    return {
+                        point: point_val,
+                        decimal: cents_val,
+                    };
+                },
+                stop_loss_level: function() {
+                    var that = this;
+                    return parseFloat(that.spread_con().find('#stop_loss_level').text());
+                },
+                stop_profit_level: function() {
+                    var that = this;
+                    return parseFloat(that.spread_con().find('#stop_profit_level').text());
+                },
+                round: function(number,number_after_dec) {
+                    var result = Math.round(number * Math.pow(10,number_after_dec)) / Math.pow(10,number_after_dec);
+                    result = result.toFixed(number_after_dec);
+                    return result;
+                },
+            };
+        }(),
         digit: function() {
             return {
                 reset: function() {
@@ -315,6 +499,11 @@ var BetPrice = function() {
             if ($('#is-digit').data('is-digit')) {
                 this.digit.reset();
             }
+
+            if ($('a[class^=spread]').length > 0) {
+                this.spread.reset();
+            }
+
             con.hide().remove();
             _buy_response_container = null;
         },
@@ -328,7 +517,7 @@ var BetPrice = function() {
         },
         show_loading: function() {
             var image_link = page.settings.get('image_link');
-            var loading_html = '<div class="progress"></div>';
+            var loading_html = '<p id="loading-price">'+text.localize('loading...')+'<br /><img src="'+image_link['hourglass']+'" /></p>';
             this.container().find('div.rbox-lowpad:first').show().html('<div class="rbox rbox-bg-alt"><div class="rbox-wrap"><div class="rbox-content">'+loading_html+'</div></div><span class="tl">&nbsp;</span><span class="tr">&nbsp;</span><span class="bl">&nbsp;</span><span class="br">&nbsp;</span></div></div>');
             this.container().show();
         },
@@ -340,7 +529,8 @@ var BetPrice = function() {
                     BetForm.spot.clear_sparkline();
                     this.stop();
                     update_from_stream = true;
-                    var url = this.url();
+                    var stream_channel = this.stream_channel();
+                    var url = window.location.protocol + '//' + page.settings.get('streaming_server')+'/push/price/'+stream_channel;
                     if(url && typeof (EventSource) !== "undefined") {
                         price_stream = new EventSource(url, { retry: 18000000 });
                         var that = this;
@@ -361,8 +551,8 @@ var BetPrice = function() {
                 ignore_updates: function() {
                     update_from_stream = false;
                 },
-                url: function() {
-                    return $('#stream_url').html();
+                stream_channel: function() {
+                    return $('#stream_channel').html();
                 },
                 process_message: function(data) {
                     if(data == 'stop_bet') {
@@ -374,7 +564,7 @@ var BetPrice = function() {
                     if(update_from_stream) {
                         var bet = JSON.parse(data);
                         BetForm.spot.update(bet.spot);
-                        BetPrice.order_form.update_from_stream(bet.prices);
+                        BetPrice.order_form.update_from_stream(bet);
                         BetAnalysis.tab_last_digit.update(BetForm.attributes.underlying(), bet.spot);
                     }
                 },
@@ -402,11 +592,18 @@ var BetPrice = function() {
                     $('button[name^="btn_buybet"]').attr('disabled','disabled');
                 },
                 enable_buy_buttons: function() {
+                    $('a[id^="spread"]').removeAttr('disabled');
                     $('button[name^="btn_buybet"]').removeAttr('disabled');
                 },
                 update_from_stream: function(stream) {
-                    var prices = this.prices_from_stream(stream);
-                    this.update(prices);
+                    var type = stream.type;
+                    if (type === 'spread') {
+                        this.update_spread_ui(stream.prices);
+                    } else if (type === 'price') {
+                        var prices = this.prices_from_stream(stream.prices);
+                        this.update_form(prices);
+                        this.update_ui(prices);
+                    }
                 },
                 update: function(prices) {
                     prices = typeof prices !== 'undefined' ? prices : this.prices_from_form();
@@ -417,18 +614,16 @@ var BetPrice = function() {
                     var prices = [];
                     for (var i = 0; i < stream.length; i++) {
                         var id = stream[i].id || undefined;
-                        var prob = stream[i].prob || undefined;
+                        var prob = stream[i].value || undefined;
                         if (!id || prob === undefined) {
                             continue;
                         }
-
                         prices.push(this.calculate_price(id, prob, stream[i].err));
                     }
 
                     return prices;
                 },
                 prices_from_form: function () {
-
                     var prices = [],
                         order_forms = $('.orderform'),
                         order_forms_count = order_forms ? order_forms.length : 0,
@@ -436,7 +631,6 @@ var BetPrice = function() {
                         id,
                         prob,
                         error;
-
                     if (order_forms_count > 0 ) {
                         for (i = 0; i < order_forms_count; i++) {
                             id = $('input[name="display_id"]', form).val();
@@ -500,6 +694,7 @@ var BetPrice = function() {
                     price = price ? price : this.virgule_amount(0);
 
                     return {
+                        type: 'price',
                         id: id,
                         prob: prob,
                         err: error,
@@ -544,6 +739,19 @@ var BetPrice = function() {
                         this.update_profit_roi(prices[i].id, prices[i].profit, prices[i].roi);
                     }
                 },
+                update_spread_ui: function(spread) {
+                    var that = this;
+
+                    for (var i = 0; i < spread.length; i++) {
+                        var id = spread[i].id;
+                        var level = spread[i].level;
+                        var chunks = BetPrice.spread.split_level(level);
+
+                        var con = $('.spread_'+id);
+                        con.find('.spread_point_' + id).text(chunks.point);
+                        con.find('.spread_decimal_' + id).text('.'+chunks.decimal);
+                    }
+                },
                 update_price: function(id, price, old_price) {
                     var units_box = $('#units_for_' + id);
                     var cents_box = $('#cents_for_' + id);
@@ -556,9 +764,17 @@ var BetPrice = function() {
                 },
                 update_description: function(id, payout, old_payout) {
                     $('#amount_for_' + id).siblings('.bet_description').each(function () {
-                            var payout_element = $('strong:first-child', $(this));
-                            payout_element.html(payout.value);
-                            price_moved(payout_element, old_payout.raw, payout.raw);
+                            var elm = $(this);
+                            if (elm) {
+                                var desc = elm.text();
+                                if (desc) {
+                                    desc = desc.trim();
+                                    if(/^([A-Z]{3}) \d+\.\d+/.test(desc)) {
+                                        desc = desc.replace(/\d+\.\d+/, payout.value);
+                                        elm.text(desc);
+                                    }
+                                }
+                            }
                     });
                 },
                 update_profit_roi: function(id, profit, roi) {

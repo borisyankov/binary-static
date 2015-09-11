@@ -1,5 +1,6 @@
 BetAnalysis.tab_live_chart = function () {
     var live_chart_initialized = false;
+    var invoked_for_websocket  = false;
     return {
         reset: function() {
             if(typeof live_chart !== "undefined") {
@@ -9,7 +10,8 @@ BetAnalysis.tab_live_chart = function () {
                 }
             }
         },
-        render: function(hours_to_chart) {
+        render: function(calledForWebsocketTrading) {
+            invoked_for_websocket = calledForWebsocketTrading || false;
             if (live_chart_initialized && $('#live_chart_div').length > 0) {
                 this.update_live_chart();
             } else {
@@ -51,10 +53,12 @@ BetAnalysis.tab_live_chart = function () {
 
             this.add_spot();
             var that = this;
-            BetForm.barriers.each(function(barrier) { that.add_barrier(barrier); });
+            if (!invoked_for_websocket) {
+                BetForm.barriers.each(function(barrier) { that.add_barrier(barrier); });
+            }
         },
         update_chart_config: function() {
-            var symbol = BetForm.attributes.underlying();
+            var symbol = invoked_for_websocket ? sessionStorage.getItem('underlying') : BetForm.attributes.underlying();
             var live = SessionStore.get('live_chart_duration') || this.get_duration() || '10min';
             if(!this.live_chart_config) {
                 this.live_chart_config = new LiveChartConfig({ renderTo: 'live_chart_div', symbol: symbol, live: live});
@@ -98,7 +102,7 @@ BetAnalysis.tab_live_chart = function () {
             live_chart.add_indicator(barrier);
         },
         get_duration: function () {
-            var duration_in_seconds = BetForm.attributes.duration_seconds();
+            var duration_in_seconds = invoked_for_websocket ? '600' : BetForm.attributes.duration_seconds();
             return $('#live_chart_duration').find('#' + this.corrected_hours_to_chart(duration_in_seconds)).data('live');
         },
         corrected_hours_to_chart: function(chart_duration) {

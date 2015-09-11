@@ -1,20 +1,13 @@
-%nav
-    %ul.nav1st
-        %li.submenu
-            .nav-trade
-                %a{:href => url_for('trade.cgi')}
-                    %img{:src => url_for('images/pages/binary-symbol-logo.svg')}
-                    = l('Trade')
-        %li.submenu
-            = include('layouts/default/nav_cashier')
-        %li.submenu
-            = include('layouts/default/nav_resources')
-        %li.submenu
-            = include('layouts/default/nav_help')
-        %li.nav-spacer
-        %li.submenu
-            = include('layouts/default/nav_languages')
-        %li.login-container
-            %a.button.login-btn{:href=>url_for('login')}!= l('Log&nbsp;in')
-        %li.submenu.account-container
-            = include('layouts/default/account_menu')
+#main-navigation
+  %ul#menu-top
+    - my @nav = ({route => '/why-us',      text => l('Why us?')},
+    -            {route => '/get-started', text => l('Get started')},
+    -            {route => '/tour',        text => l('Tour')});
+    - foreach my $item (@nav) {
+      - my ($route, $text) = ($item->{route}, $item->{text});
+      - my $class = (index(url_for, $route) != -1) ? 'active' : '';
+      %li.$class
+        %a.smaller-font{:href=>url_for($route), :class => 'pjaxload'}= $text
+    - }
+    %li
+      %a.smaller-font{:href=>url_for('trade.cgi'), :class => 'pjaxload'}= l('Trade')

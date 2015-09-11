@@ -1,4 +1,4 @@
-<div>
+<div class="grd-grid-12">
 <h1>[% l('Payment Agent transfer') %]</h1>
 
 [% IF show_process_button %]

@@ -2,37 +2,56 @@
 var trade_event_bindings = {};
 
 function contract_guide_popup() {
-    $('.contract-guide-content').on('click', '.bet_demo_link', function (e){
+    $('#bet_guide_content').on('click', 'a.bet_demo_link', function (e){
         e.preventDefault();
         var ip = new InPagePopup();
         ip.ajax_conf = { url: this.href, data: 'ajax_only=1' };
         ip.fetch_remote_content(true, '', function (data) {
+            attach_tabs('#contract_demo_container');
             return data;
         });
     });
 }
 
 var trading_times_init = function() {
-     var url = page.url.url_for('resources/trading_times', 'date=' + dateText, 'cached'),
-         oneYearLater = moment().add(1, 'year').toDate();
+      var tabset_name = "#trading-tabs";
 
-     $("#tradingdate" ).pickadate({
-         max: oneYearLater,
-         onSet: function(context) {
-             showLoadingImage($('#trading-tabs'));
-             $.ajax({
-                url: url,
-                data:  { 'ajax_only': 1 },
-                success: function(html){
-                    $("#trading-tabs").replaceWith(html);
-                    page.url.update(url);
-                },
-                error: function(xhr, textStatus, errorThrown){
-                    trading_times.empty().append(textStatus);
-                },
-            });
-        }
-    });
+     var trading_times = $(tabset_name);
+     trading_times.tabs();
+     var url = location.href;
+     $( "#tradingdate" ).datepicker({ minDate: 0, maxDate:'+1y', dateFormat: "yy-mm-dd", autoSize: true,
+     onSelect: function( dateText, picker ){
+         trading_times.tabs( "destroy" );
+         showLoadingImage(trading_times);
+         url = page.url.url_for('resources/trading_times', 'date=' + dateText, 'cached');
+         $.ajax({
+                  url: url,
+                  data:  { 'ajax_only': 1 },
+                  success: function(html){
+                            trading_times.replaceWith(html);
+                            trading_times = $("#trading-tabs");
+			                      
+                            if (page.language() === 'JA') {	
+                              trading_times.tabs("disable");
+			    } 
+			    else {
+			      trading_times.tabs();
+			    }
+                            
+                            page.url.update(url);
+                         },
+                  error: function(xhr, textStatus, errorThrown){
+                          trading_times.empty().append(textStatus);
+                       },
+                });
+         }
+     });
+};
+
+var asset_index_init = function() {
+    var tabset_name = "#asset-tabs";
+    // jQueryUI tabs
+    $(tabset_name).tabs();
 };
 
 function confirm_popup_action() {
@@ -74,6 +93,7 @@ function get_login_page_url() {
 
 onLoad.queue_for_url(contract_guide_popup, 'contract_guide');
 onLoad.queue_for_url(trading_times_init, 'trading_times');
+onLoad.queue_for_url(asset_index_init, 'asset_index');
 onLoad.queue_for_url(confirm_popup_action, 'my_account|confirm_popup');
 onLoad.queue_for_url(hide_payment_agents, 'cashier');
 
@@ -85,93 +105,3 @@ onLoad.queue_for_url(function() {
         return false;
     });
 }, '/c/paymentagent_list');
-
-$('.login-content button').on('click', function() {
-    $('.form-logo').addClass('spinner');
-});
-
-$('.nav2nd a').on('click', function() {
-    var nav2nd = $(this).parent().parent();
-    nav2nd.hide();
-    setTimeout(function() { nav2nd.show(); });
-});
-
-if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
-    $(header).css('position', 'sticky');
-}
-
-$('.exhaustive-icon-list').html(function() {
-    var icons = [
-        'account-transfer',
-        'address',
-        'api-token',
-        'asset-index',
-        'cashier',
-        'chat',
-        'contact-us',
-        'customer-service',
-        'directions',
-        'financial-assessment',
-        'get-started-icon-1',
-        'get-started-icon-2',
-        'get-started-icon-3',
-        'get-started-icon-4',
-        'get-started-icon-5',
-        'get-started-icon-6',
-        'get-started-icon-7',
-        'get-started-icon-8',
-        'get-started-icon-9',
-        'help',
-        'highcharts',
-        'javacharts',
-        'limits',
-        'live-chat',
-        'livecharts',
-        'myaccount',
-        'payment-agents',
-        'payment-methods',
-        'portfolio',
-        'pricing-table',
-        'prize',
-        'profit-table',
-        'protection',
-        'resources',
-        'rise-fall-table',
-        'safety',
-        'security',
-        'self-exclusion',
-        'sharp-prices',
-        'skype',
-        'statement',
-        'telephone',
-        'trade-asian-down',
-        'trade-asian-up',
-        'trade-differs',
-        'trade-ends-between',
-        'trade-ends-outside',
-        'trade-fall',
-        'trade-goes-outside',
-        'trade-higher',
-        'trade-lower',
-        'trade-match',
-        'trade-notouch',
-        'trade-rise',
-        'trade-stays-between',
-        'trade-touch',
-        'trade',
-        'trading-guide',
-        'trading-times',
-        'user'
-    ];
-
-    var iconList = icons.map(function(i) {
-            return '<div style="float: left; width: 10rem; height: 10rem">' +
-                        '<div class="icon">' +
-                            '<img src="https://borisyankov.github.io/binary-static/images/icons/' + i + '.svg">' +
-                        '</div>' +
-                        '<div style="text-align: center; margin-top: .5rem">' + i + '</div>' +
-                    '</div>';
-        }).join('');
-
-    return iconList;
-});
