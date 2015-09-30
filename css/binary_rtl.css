@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@charset "IBM437";
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -350,8 +350,8 @@ abbr {
 }
 
 .button.button-disabled button.button-disabled {
-  color: #DEDEDE;
-  background: #F2F2F2;
+  color: #dedede;
+  background: #f2f2f2;
   cursor: default;
 }
 
@@ -385,7 +385,7 @@ form {
 .errorfield,
 .error-msg {
   color: white;
-  background: #c03;
+  background: #cc0033;
   border-radius: 2px;
   padding: .125rem;
 }
@@ -514,7 +514,7 @@ a.close:hover {
 }
 
 .separator-line {
-  border-bottom: 1px solid #DEDEDE;
+  border-bottom: 1px solid #dedede;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -563,6 +563,7 @@ a.external {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
+
   to {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
@@ -573,6 +574,7 @@ a.external {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
+
   to {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
@@ -587,9 +589,11 @@ a.external {
   0% {
     opacity: 1;
   }
+
   50% {
     opacity: .5;
   }
+
   100% {
     opacity: 1;
   }
@@ -598,9 +602,11 @@ a.external {
   0% {
     opacity: 1;
   }
+
   50% {
     opacity: .5;
   }
+
   100% {
     opacity: 1;
   }
@@ -1183,7 +1189,7 @@ nav a:hover {
 #appcache-reload-message .message {
   margin: 12px;
   font-style: italic;
-  color: #c03;
+  color: #cc0033;
 }
 
 #suspend-message {
@@ -1197,7 +1203,7 @@ nav a:hover {
 #suspend-message .message {
   margin: 12px;
   font-style: italic;
-  color: #c03;
+  color: #cc0033;
 }
 
 *,
@@ -1602,7 +1608,7 @@ ul[role=segmented] li.active a {
   line-height: 1.5;
   background: #FFF1CF;
   border-radius: 2px;
-  border: 1px solid #DEDEDE;
+  border: 1px solid #dedede;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
   position: absolute;
   z-index: 100;
@@ -1614,7 +1620,7 @@ ul[role=segmented] li.active a {
   height: 0;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-top: 10px solid #DEDEDE;
+  border-top: 10px solid #dedede;
   border-top-color: #FFF1CF;
   content: '';
   position: absolute;
@@ -1625,8 +1631,8 @@ ul[role=segmented] li.active a {
 
 #tooltip.top:after {
   border-top-color: transparent;
-  border-bottom: 10px solid #DEDEDE;
-  border-bottom-color: #DEDEDE;
+  border-bottom: 10px solid #dedede;
+  border-bottom-color: #dedede;
   top: -20px;
   bottom: auto;
 }
@@ -1665,6 +1671,11 @@ abbr {
 .client-logged-in .account-container,
 .client-is-real .cashier-link {
   display: block;
+}
+
+.inverse {
+  background: #2a3052;
+  color: #eee;
 }
 
 button,
@@ -1711,8 +1722,8 @@ a.button {
 
 button:disabled,
 .button-disabled {
-  color: #DEDEDE;
-  background: #F2F2F2;
+  color: #dedede;
+  background: #f2f2f2;
 }
 
 .home-content {
@@ -1768,7 +1779,7 @@ blockquote {
   text-align: center;
 }
 blockquote p {
-  quotes: "“" "”" "‘" "’";
+  quotes: "\201C" "\201D" "\2018" "\2019";
   margin: 0 2rem 1rem 2rem;
   text-indent: 3rem;
 }
@@ -1886,7 +1897,7 @@ blockquote p:after {
 }
 .ad-content #open-account input[type=submit]:hover {
   text-decoration: none;
-  background-color: #2E8836;
+  background-color: #2e8836;
 }
 .ad-content #open-account form {
   font-size: 100%;
@@ -1905,7 +1916,7 @@ blockquote p:after {
   margin: 1em 0 0;
 }
 .ad-content #xsection1 li span {
-  color: #2E8836;
+  color: #2e8836;
   font-weight: 700;
 }
 .ad-content #xsection1 li i {
@@ -1917,7 +1928,7 @@ blockquote p:after {
 .ad-content #xreason {
   padding-top: 20px;
   padding-bottom: 20px;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   padding-bottom: 40px;
 }
 .ad-content #xtop {
@@ -1941,7 +1952,7 @@ blockquote p:after {
   margin-bottom: 20px;
   margin-top: 30px;
   padding-bottom: 15px;
-  border-bottom: 1px solid #DEDEDE;
+  border-bottom: 1px solid #dedede;
 }
 .ad-content .inlined {
   display: inline-block;
@@ -1950,7 +1961,7 @@ blockquote p:after {
   margin-top: 0px;
   margin-bottom: 20px;
   padding-bottom: 15px;
-  border-bottom: 1px solid #DEDEDE;
+  border-bottom: 1px solid #dedede;
 }
 .ad-content .xlist1 {
   background: url(../images/pages/home/xicon-1.png) no-repeat;
@@ -1993,13 +2004,13 @@ blockquote p:after {
 }
 .ad-content .xcta .xvirtual span:hover {
   text-decoration: none;
-  background-color: #2E8836;
+  background-color: #2e8836;
 }
 .ad-content #xtestimonial {
   padding-top: 40px;
 }
 .ad-content .xquote {
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   padding: 20px 40px;
 }
 .ad-content .xquote p {
@@ -2011,7 +2022,7 @@ blockquote p:after {
   height: 0px;
   border-style: solid;
   border-width: 25px 5px 0 10px;
-  border-color: #F2F2F2 transparent transparent transparent;
+  border-color: #f2f2f2 transparent transparent transparent;
   position: relative;
   left: 80%;
 }
@@ -2021,7 +2032,7 @@ blockquote p:after {
   height: 0px;
   border-style: solid;
   border-width: 25px 10px 0 5px;
-  border-color: #F2F2F2 transparent transparent transparent;
+  border-color: #f2f2f2 transparent transparent transparent;
   position: relative;
   left: 10%;
 }
@@ -2148,7 +2159,7 @@ blockquote p:after {
 }
 .ad1-content #open-account input[type=submit]:hover {
   text-decoration: none;
-  background-color: #2E8836;
+  background-color: #2e8836;
 }
 .ad1-content #open-account form {
   font-size: 100%;
@@ -2167,7 +2178,7 @@ blockquote p:after {
   margin: 1em 0 0;
 }
 .ad1-content #xsection1 li span {
-  color: #2E8836;
+  color: #2e8836;
   font-weight: 700;
 }
 .ad1-content #xsection1 li i {
@@ -2179,7 +2190,7 @@ blockquote p:after {
 .ad1-content #xreason {
   padding-top: 20px;
   padding-bottom: 20px;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   padding-bottom: 40px;
 }
 .ad1-content #xtop {
@@ -2203,7 +2214,7 @@ blockquote p:after {
   margin-bottom: 20px;
   margin-top: 30px;
   padding-bottom: 15px;
-  border-bottom: 1px solid #DEDEDE;
+  border-bottom: 1px solid #dedede;
 }
 .ad1-content .inlined {
   display: inline-block;
@@ -2212,7 +2223,7 @@ blockquote p:after {
   margin-top: 0px;
   margin-bottom: 20px;
   padding-bottom: 15px;
-  border-bottom: 1px solid #DEDEDE;
+  border-bottom: 1px solid #dedede;
 }
 .ad1-content .xlist1 {
   background: url(../images/pages/home/xicon-1.png) no-repeat;
@@ -2255,13 +2266,13 @@ blockquote p:after {
 }
 .ad1-content .xcta .xvirtual span:hover {
   text-decoration: none;
-  background-color: #2E8836;
+  background-color: #2e8836;
 }
 .ad1-content #xtestimonial {
   padding-top: 40px;
 }
 .ad1-content .xquote {
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   padding: 20px 40px;
 }
 .ad1-content .xquote p {
@@ -2273,7 +2284,7 @@ blockquote p:after {
   height: 0px;
   border-style: solid;
   border-width: 25px 5px 0 10px;
-  border-color: #F2F2F2 transparent transparent transparent;
+  border-color: #f2f2f2 transparent transparent transparent;
   position: relative;
   left: 80%;
 }
@@ -2283,7 +2294,7 @@ blockquote p:after {
   height: 0px;
   border-style: solid;
   border-width: 25px 10px 0 5px;
-  border-color: #F2F2F2 transparent transparent transparent;
+  border-color: #f2f2f2 transparent transparent transparent;
   position: relative;
   left: 10%;
 }
@@ -2410,7 +2421,7 @@ blockquote p:after {
 }
 .ad2-content #open-account input[type=submit]:hover {
   text-decoration: none;
-  background-color: #2E8836;
+  background-color: #2e8836;
 }
 .ad2-content #open-account form {
   font-size: 100%;
@@ -2429,7 +2440,7 @@ blockquote p:after {
   margin: 1em 0 0;
 }
 .ad2-content #xsection1 li span {
-  color: #2E8836;
+  color: #2e8836;
   font-weight: 700;
 }
 .ad2-content #xsection1 li i {
@@ -2441,7 +2452,7 @@ blockquote p:after {
 .ad2-content #xreason {
   padding-top: 20px;
   padding-bottom: 20px;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   padding-bottom: 40px;
 }
 .ad2-content #xtop {
@@ -2465,7 +2476,7 @@ blockquote p:after {
   margin-bottom: 20px;
   margin-top: 30px;
   padding-bottom: 15px;
-  border-bottom: 1px solid #DEDEDE;
+  border-bottom: 1px solid #dedede;
 }
 .ad2-content .inlined {
   display: inline-block;
@@ -2474,7 +2485,7 @@ blockquote p:after {
   margin-top: 0px;
   margin-bottom: 20px;
   padding-bottom: 15px;
-  border-bottom: 1px solid #DEDEDE;
+  border-bottom: 1px solid #dedede;
 }
 .ad2-content .xlist1 {
   background: url(../images/pages/home/xicon-1.png) no-repeat;
@@ -2517,13 +2528,13 @@ blockquote p:after {
 }
 .ad2-content .xcta .xvirtual span:hover {
   text-decoration: none;
-  background-color: #2E8836;
+  background-color: #2e8836;
 }
 .ad2-content #xtestimonial {
   padding-top: 40px;
 }
 .ad2-content .xquote {
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   padding: 20px 40px;
 }
 .ad2-content .xquote p {
@@ -2535,7 +2546,7 @@ blockquote p:after {
   height: 0px;
   border-style: solid;
   border-width: 25px 5px 0 10px;
-  border-color: #F2F2F2 transparent transparent transparent;
+  border-color: #f2f2f2 transparent transparent transparent;
   position: relative;
   left: 80%;
 }
@@ -2545,7 +2556,7 @@ blockquote p:after {
   height: 0px;
   border-style: solid;
   border-width: 25px 10px 0 5px;
-  border-color: #F2F2F2 transparent transparent transparent;
+  border-color: #f2f2f2 transparent transparent transparent;
   position: relative;
   left: 10%;
 }
@@ -2672,7 +2683,7 @@ blockquote p:after {
 }
 .ad3-content #open-account input[type=submit]:hover {
   text-decoration: none;
-  background-color: #2E8836;
+  background-color: #2e8836;
 }
 .ad3-content #open-account form {
   font-size: 100%;
@@ -2691,7 +2702,7 @@ blockquote p:after {
   margin: 1em 0 0;
 }
 .ad3-content #xsection1 li span {
-  color: #2E8836;
+  color: #2e8836;
   font-weight: 700;
 }
 .ad3-content #xsection1 li i {
@@ -2703,7 +2714,7 @@ blockquote p:after {
 .ad3-content #xreason {
   padding-top: 20px;
   padding-bottom: 20px;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   padding-bottom: 40px;
 }
 .ad3-content #xtop {
@@ -2727,7 +2738,7 @@ blockquote p:after {
   margin-bottom: 20px;
   margin-top: 30px;
   padding-bottom: 15px;
-  border-bottom: 1px solid #DEDEDE;
+  border-bottom: 1px solid #dedede;
 }
 .ad3-content .inlined {
   display: inline-block;
@@ -2736,7 +2747,7 @@ blockquote p:after {
   margin-top: 0px;
   margin-bottom: 20px;
   padding-bottom: 15px;
-  border-bottom: 1px solid #DEDEDE;
+  border-bottom: 1px solid #dedede;
 }
 .ad3-content .xlist1 {
   background: url(../images/pages/home/xicon-1.png) no-repeat;
@@ -2779,13 +2790,13 @@ blockquote p:after {
 }
 .ad3-content .xcta .xvirtual span:hover {
   text-decoration: none;
-  background-color: #2E8836;
+  background-color: #2e8836;
 }
 .ad3-content #xtestimonial {
   padding-top: 40px;
 }
 .ad3-content .xquote {
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   padding: 20px 40px;
 }
 .ad3-content .xquote p {
@@ -2797,7 +2808,7 @@ blockquote p:after {
   height: 0px;
   border-style: solid;
   border-width: 25px 5px 0 10px;
-  border-color: #F2F2F2 transparent transparent transparent;
+  border-color: #f2f2f2 transparent transparent transparent;
   position: relative;
   left: 80%;
 }
@@ -2807,7 +2818,7 @@ blockquote p:after {
   height: 0px;
   border-style: solid;
   border-width: 25px 10px 0 5px;
-  border-color: #F2F2F2 transparent transparent transparent;
+  border-color: #f2f2f2 transparent transparent transparent;
   position: relative;
   left: 10%;
 }
@@ -2991,7 +3002,7 @@ blockquote p:after {
 }
 #bestpage #content-holder #content > .content-tab-container .tab-content-wrapper #tab_ohlc-content #prices_statistics_table .daily_price_stats_head .table_heading {
   text-align: center;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   font-weight: bold;
   font-size: 1.1em;
 }
@@ -3016,7 +3027,7 @@ blockquote p:after {
   margin: 0;
 }
 #bestpage #content-holder #content #bet_container #betInputBox_container .tab-content {
-  border: 1px solid #DEDEDE;
+  border: 1px solid #dedede;
   min-height: 369px;
 }
 #bestpage #content-holder #content #bet_container #betInputBox_container .tab-content-wrapper, #bestpage #content-holder #content #bet_container #betInputBox_container .tab-content {
@@ -3090,7 +3101,7 @@ blockquote p:after {
   /* Pricing Table */
 }
 #bestpage #content-holder #content #bet_container #bet_cost_container .rbox-wrap {
-  border-bottom: 1px solid #F2F2F2;
+  border-bottom: 1px solid #f2f2f2;
 }
 #bestpage #content-holder #content #bet_container #bet_cost_container form {
   width: 40%;
@@ -3103,20 +3114,20 @@ blockquote p:after {
   width: auto;
 }
 #bestpage #content-holder #content #bet_container #bet_cost_container .draggable .odd {
-  background: #F2F2F2;
+  background: #f2f2f2;
 }
 #bestpage #content-holder #content #bet_container #bet_cost_container .draggable .rbox {
-  border: 1px solid #DEDEDE;
+  border: 1px solid #dedede;
   position: relative;
 }
 #bestpage #content-holder #content #bet_container #bet_cost_container .draggable .rbox-table-full {
-  border: 1px solid #F2F2F2;
+  border: 1px solid #f2f2f2;
   font-size: 93%;
   text-align: left;
 }
 #bestpage #content-holder #content #bet_container #bet_cost_container .draggable .rbox-table-full td {
   text-align: left;
-  border: 1px solid #F2F2F2;
+  border: 1px solid #f2f2f2;
   border-width: 0 1px;
 }
 #bestpage #content-holder #content #bet_container #loading-price {
@@ -3183,7 +3194,7 @@ blockquote p:after {
 }
 
 .price_moved_down {
-  background-color: #c03;
+  background-color: #cc0033;
   color: white;
 }
 
@@ -3216,7 +3227,7 @@ blockquote p:after {
   text-align: center;
   width: 100%;
   margin: auto;
-  background-color: #DEDEDE;
+  background-color: #dedede;
   line-height: 1.8em;
   font-size: 0.7em;
   white-space: nowrap;
@@ -3226,7 +3237,7 @@ blockquote p:after {
 .price_box {
   padding: 0;
   margin-top: 20;
-  border: 1px solid #F2F2F2;
+  border: 1px solid #f2f2f2;
 }
 .price_box a {
   color: #2a3052;
@@ -3234,7 +3245,7 @@ blockquote p:after {
 
 /* added for the underlying highlight */
 .is_intraday {
-  background-color: #DEDEDE;
+  background-color: #dedede;
 }
 
 .trade_confirm_container {
@@ -3242,8 +3253,8 @@ blockquote p:after {
   margin: 0;
   padding: 0;
   text-align: center;
-  border: solid 1px #F2F2F2;
-  background: #F2F2F2;
+  border: solid 1px #f2f2f2;
+  background: #f2f2f2;
 }
 
 .bet_confirm_wrapper {
@@ -3268,7 +3279,7 @@ blockquote p:after {
   margin: 0 10px;
   padding: 10px 5px;
   text-align: justify;
-  border: solid 2px #DEDEDE;
+  border: solid 2px #dedede;
   background: white;
 }
 .bet_confirm_wrapper .account_balance {
@@ -3331,11 +3342,11 @@ blockquote p:after {
 }
 
 .profit {
-  color: #2E8836;
+  color: #2e8836;
 }
 
 .loss {
-  color: #c03;
+  color: #cc0033;
 }
 
 .with_right_border {
@@ -3557,7 +3568,7 @@ blockquote p:after {
   padding: 3px;
 }
 #content .rbox-heading {
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
 }
 #content .rbox-heading h4 {
   margin: 0;
@@ -3623,7 +3634,7 @@ blockquote p:after {
 }
 
 .disabled {
-  color: #DEDEDE;
+  color: #dedede;
 }
 
 .bigger {
@@ -3638,12 +3649,12 @@ blockquote p:after {
 
 .flipper.focus.win,
 .flipper.win {
-  background: linear-gradient(to bottom, transparent, #2E8836);
+  background: linear-gradient(to bottom, transparent, #2e8836);
 }
 
 .flipper.focus.lose,
 .flipper.lose {
-  background: linear-gradient(to bottom, transparent, #c03);
+  background: linear-gradient(to bottom, transparent, #cc0033);
 }
 
 #digit-contract-details .sign {
@@ -3651,7 +3662,7 @@ blockquote p:after {
 }
 
 .disabled-link {
-  color: #DEDEDE !important;
+  color: #dedede !important;
   pointer-events: none;
 }
 
@@ -3733,7 +3744,7 @@ blockquote p:after {
 }
 
 .half-1.with-separator {
-  border-right: 1px solid #DEDEDE;
+  border-right: 1px solid #dedede;
 }
 
 table.half-1,
@@ -3749,7 +3760,7 @@ table.half-2 {
 
 #WhiteBoxMessage.errorbox {
   text-align: center;
-  border: 1px solid #DEDEDE;
+  border: 1px solid #dedede;
   background-image: none;
 }
 #WhiteBoxMessage.errorbox .rbox-content {
@@ -3789,7 +3800,7 @@ table.half-2 {
 }
 
 .errorbox h3 {
-  color: #c03;
+  color: #cc0033;
 }
 
 .errorbox h3 {
@@ -3806,11 +3817,11 @@ table.half-2 {
 }
 
 .rbox-wrap .rbox-wrap {
-  border: 1px solid #DEDEDE !important;
+  border: 1px solid #dedede !important;
 }
 
 .errorbox h3 {
-  color: #c03;
+  color: #cc0033;
 }
 
 .popupbox {
@@ -3947,7 +3958,7 @@ h2.finder {
   padding: 0.4em 50px 0.4em 0;
   margin-right: 3px;
   margin-left: 3px;
-  border-top: 1px solid #DEDEDE;
+  border-top: 1px solid #dedede;
   color: #2a3052;
 }
 
@@ -3972,10 +3983,10 @@ h2.finder {
   padding-top: 2px;
 }
 #changeAccountForm input {
-  border: 1px solid #DEDEDE;
+  border: 1px solid #dedede;
 }
 #changeAccountForm select {
-  border: 1px solid #DEDEDE;
+  border: 1px solid #dedede;
   background: white;
 }
 
@@ -4297,12 +4308,12 @@ div#price_table_notes {
 .sidebar ul li {
   list-style-image: none;
   margin: 0;
-  background: #F2F2F2;
+  background: #f2f2f2;
   line-height: 150%;
   border-bottom: 1px solid #fff;
 }
 .sidebar ul li:hover {
-  background: #DEDEDE;
+  background: #dedede;
 }
 .sidebar ul li a {
   font-weight: normal;
@@ -4323,7 +4334,7 @@ div#price_table_notes {
 }
 
 .code-sample {
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   overflow-x: auto;
   width: 90%;
   font-family: monospace;
@@ -4359,13 +4370,13 @@ div#price_table_notes {
   text-align: center;
 }
 .timeline .year {
-  background: #F2F2F2;
+  background: #f2f2f2;
   clear: both;
   width: 80px;
   height: 80px;
   border-radius: 50%;
   line-height: 80px;
-  border: 1px solid #DEDEDE;
+  border: 1px solid #dedede;
   font-size: 1.77777rem;
   transition-duration: 0.4s;
   transition-property: -webkit-transform;
@@ -4393,7 +4404,7 @@ div#price_table_notes {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   background: #e98024;
-  color: #F2F2F2;
+  color: #f2f2f2;
 }
 .timeline .event {
   position: relative;
@@ -4405,11 +4416,11 @@ div#price_table_notes {
   margin-bottom: 20px;
 }
 .timeline .event .header {
-  background: #F2F2F2;
+  background: #f2f2f2;
   padding: 12px;
 }
 .timeline .event .event-body {
-  border: 1px solid #F2F2F2;
+  border: 1px solid #f2f2f2;
   padding: 12px;
 }
 .timeline .event.featured .header {
@@ -4438,7 +4449,7 @@ div#price_table_notes {
 }
 .timeline .event.right:after {
   border-left: none;
-  border-right: 14px solid #F2F2F2;
+  border-right: 14px solid #f2f2f2;
   left: -14px;
 }
 @media all and (min-width: 600px) {
@@ -4448,7 +4459,7 @@ div#price_table_notes {
     height: 0;
     border-top: 14px solid transparent;
     border-bottom: 14px solid transparent;
-    border-left: 14px solid #F2F2F2;
+    border-left: 14px solid #f2f2f2;
     position: absolute;
     top: 10px;
     right: -14px;
@@ -4660,7 +4671,7 @@ html:lang(JA) .ja-hide {
    $BASE-PICKER
    ========================================================================== */
 /**
- * Note: the root picker element should *NOT* be styled more than whatΓÇÖs here.
+ * Note: the root picker element should *NOT* be styled more than what’s here.
  */
 .picker {
   font-size: 16px;
@@ -4683,14 +4694,14 @@ html:lang(JA) .ja-hide {
 }
 
 /**
- * When the picker is opened, the input element is ΓÇ£activatedΓÇ¥.
+ * When the picker is opened, the input element is “activated”.
  */
 .picker__input.picker__input--active {
   border-color: #0089ec;
 }
 
 /**
- * The holder is the only ΓÇ£scrollableΓÇ¥ top-level container element.
+ * The holder is the only “scrollable” top-level container element.
  */
 .picker__holder {
   width: 100%;
@@ -4703,7 +4714,7 @@ html:lang(JA) .ja-hide {
  * Demo: http://amsul.github.io/pickadate.js
  */
 /**
- * Note: the root picker element should *NOT* be styled more than whatΓÇÖs here.
+ * Note: the root picker element should *NOT* be styled more than what’s here.
  */
 .picker {
   width: 100%;
@@ -4735,7 +4746,7 @@ html:lang(JA) .ja-hide {
 
 /**
  * The frame and wrap work together to ensure that
- * clicks within the picker donΓÇÖt reach the holder.
+ * clicks within the picker don’t reach the holder.
  */
 .picker__frame {
   padding: 1px;
@@ -5221,7 +5232,7 @@ html:lang(JA) .ja-hide {
    ========================================================================== */
 /**
  * Note: the root picker element should __NOT__ be styled
- * more than whatΓÇÖs here. Style the `.picker__holder` instead.
+ * more than what’s here. Style the `.picker__holder` instead.
  */
 .picker--time {
   min-width: 256px;
