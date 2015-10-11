@@ -907,6 +907,28 @@ fieldset .error-msg {
   border-radius: 0 2px 2px 0;
 }
 
+input[type=range] {
+  -webkit-appearance: none;
+  width: 15rem;
+  height: .2rem;
+  background: #2a3052;
+  cursor: pointer;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 100%;
+  background: #2a3052;
+  box-shadow: 0px 0px 0px 0.5rem rgba(42, 48, 82, 0.1);
+  cursor: pointer;
+}
+
 .row {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1683,6 +1705,10 @@ abbr {
   color: #eee;
 }
 
+.inverse a {
+  color: #eee;
+}
+
 button,
 input[type=submit],
 input[type=button],
@@ -1710,13 +1736,6 @@ input[type=button]:hover,
 a.button:hover {
   border: 1px solid rgba(0, 0, 0, 0.3);
   background: linear-gradient(#e77817, #d97116);
-}
-
-.inverse {
-  background: linear-gradient(#2f365c, #252a48) !important;
-}
-.inverse:hover {
-  background: linear-gradient(#252a48, #20243e) !important;
 }
 
 a.button {
