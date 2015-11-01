@@ -79,14 +79,6 @@ table {
     text-align: center;
   }
 
-  input, button, select {
-    height: 3rem !important;
-  }
-
-  a.button {
-    padding: 0.75rem 1rem !important;
-  }
-
   #logo {
     width: auto;
   }
@@ -179,15 +171,6 @@ table {
   .overlay .dialog {
     padding-left: .5em;
     padding-right: .5em;
-  }
-
-  .row {
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .row * {
-    margin-bottom: 1rem;
   }
 
   ul[role=tabs], ul[role=segmented] {
@@ -4566,14 +4549,6 @@ html:lang(JA) .ja-hide {
     text-align: center;
   }
 
-  input, button, select {
-    height: 3rem !important;
-  }
-
-  a.button {
-    padding: 0.75rem 1rem !important;
-  }
-
   #logo {
     width: auto;
   }
@@ -4666,15 +4641,6 @@ html:lang(JA) .ja-hide {
   .overlay .dialog {
     padding-left: .5em;
     padding-right: .5em;
-  }
-
-  .row {
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .row * {
-    margin-bottom: 1rem;
   }
 
   ul[role=tabs], ul[role=segmented] {
